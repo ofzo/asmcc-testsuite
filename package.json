@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "build": "mkdir output && node src/main.js"
+    "build": "bash build.sh"
   },
   "dependencies": {
     "handlebars": "^4.7.7",
