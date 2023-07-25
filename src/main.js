@@ -25,5 +25,5 @@ fs.readdirSync(path.resolve("testsuite/valid"))
             hex: fs.readFileSync(`output/spec/${filename}/${name}.hex`),
             wat: fs.readFileSync(`output/spec/${filename}/${name}.wat`),
         })
-        fs.writeFileSync(`output/${name}.html`, html)
+        fs.writeFileSync(`output/${basename}.html`, html)
     })

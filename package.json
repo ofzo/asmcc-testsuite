@@ -6,6 +6,7 @@
     "build": "mkdir output && node src/main.js"
   },
   "dependencies": {
-    "handlebars": "^4.7.7"
+    "handlebars": "^4.7.7",
+    "vercel": "^31.1.0"
   }
 }
