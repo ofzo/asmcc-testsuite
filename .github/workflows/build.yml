@@ -27,4 +27,4 @@ jobs:
       working-directory: testsuite
       run: git submodule update --init && bash ./extract-parts.sh
     - name: Generate page
-      run: npm run build
+      run: npm i && npm run build
