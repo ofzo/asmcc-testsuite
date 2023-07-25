@@ -1,4 +1,4 @@
-sudo apt-get install -y cmake ninja-build
+apt-get install -y cmake ninja-build
 git clone https://github.com/WebAssembly/wabt
 cd wabt
 git submodule update --init &&  mkdir build && cd build && cmake .. && cmake --build .
