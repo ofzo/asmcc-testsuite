@@ -4,26 +4,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Asmcc {{name}}</title>
-
-    <link rel="stylesheet" href="//unpkg.com/@highlightjs/cdn-assets@11.7.0/styles/github.min.css">
-    <script src="//unpkg.com/@highlightjs/cdn-assets@11.7.0/highlight.min.js"></script>
-    <script>
-        hljs.configure({
-            noHighlightRe: /^do-not-highlightme$/i,
-        });
-    </script>
-    <script>hljs.highlightAll();</script>
+    <title>WebAssembly</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body class="text-sm p-2">
-    <h1 class="text-2xl  w-full mb-4">{{name}}.wasm anylizer</h1>
-    <div class="flex justify-evenly">
-        <pre class="p-4 border-2"><code>{{dump}}</code></pre>
-        <pre class="p-4 border-2"><code>{{debug}}</code></pre>
-        <pre class="p-4 border-2 do-not-highlightme"><code>{{hex}}</code></pre>
-        <pre class="p-4 border-2"><code>{{wat}}</code></pre>
+<body class="p-8">
+    <h1 class="text-2xl blod mb-6">WebAssembly Test Suite Anaylzer</h1>
+    <div class="columns-3 p-4">
+        {{#each files}}
+        <h2 class="text-xl">{{@key}}</h2>
+        <ul class="mb-4">
+            {{#each this}}
+            <li class="ml-2 text-blue-400 underline"><a href="/{{this}}" class="">{{this}}</a></li>
+            {{/each}}
+        </ul>
+        {{/each}}
     </div>
 </body>
 
