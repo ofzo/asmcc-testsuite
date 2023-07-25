@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "build": "bash build.sh"
+    "build": "mkdir output && node src/main.js && cp -r output/*.html src/"
   },
   "dependencies": {
     "handlebars": "^4.7.7",
