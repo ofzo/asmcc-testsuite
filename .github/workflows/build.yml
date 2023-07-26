@@ -30,7 +30,7 @@ jobs:
       working-directory: testsuite
       run: git submodule update --init && bash ./extract-parts.sh
     - name: Generate page
-      run: npm ci && npm run build
+      run: npm i && npm run build
     - uses: EndBug/add-and-commit@v9
       with:
         add: 'src/*.html'
