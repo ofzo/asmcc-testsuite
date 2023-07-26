@@ -2,6 +2,7 @@ name: Build
 
 on:
   push:
+    branches: [ master ]
   pull_request:
   schedule:
     - cron: '0 9 * * *'
@@ -17,6 +18,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+      with:
+        token: ${{ secrets.PUSH_TOKEN }}
     - name: Install dependence
       run: sudo apt-get install -y cmake ninja-build nodejs
     - name: Update wabt
