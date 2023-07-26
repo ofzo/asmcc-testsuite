@@ -11,12 +11,12 @@
 
 <body class="p-8">
     <h1 class="text-2xl blod mb-6">WebAssembly Test Suite Anaylzer</h1>
-    <div class="columns-3 p-4">
+    <div class="p-4">
         {{#each files}}
         <h2 class="text-xl">{{@key}}</h2>
         <ul class="mb-4">
             {{#each this}}
-            <li class="ml-2 text-blue-400 underline"><a href="/{{this}}" class="">{{this}}</a></li>
+            <li class="ml-2 text-blue-400 underline"><a href="/{{this}}.html" class="">{{this}}</a></li>
             {{/each}}
         </ul>
         {{/each}}
