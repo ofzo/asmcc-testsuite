@@ -41,4 +41,4 @@ jobs:
         message: build by github action
         committer_name: GitHub Actions
         committer_email: 41898282+github-actions[bot]@users.noreply.github.com
-        push: origin --force release
+        push: origin release --force
