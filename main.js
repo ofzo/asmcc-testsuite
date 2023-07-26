@@ -17,6 +17,8 @@ const files = fs.readdirSync(path.resolve("testsuite/valid"))
         execSync(`./wabt/bin/wasm2wat ${f} -o spec/${filename}/${name}.wat`)
         execSync(`./wabt/bin/wasm-objdump ${f} -x -s -h --debug 1> spec/${filename}/${name}.dump 2> spec/${filename}/${name}.debug`)
         execSync(`xxd  -u -g1 -c8 ${f} > spec/${filename}/${name}.hex`)
+        execSync(`mkdir -p src/`)
+        execSync(`cp ${f} src/`)
 
         const html = detail({
             name,
@@ -25,14 +27,14 @@ const files = fs.readdirSync(path.resolve("testsuite/valid"))
             hex: fs.readFileSync(`spec/${filename}/${name}.hex`),
             wat: fs.readFileSync(`spec/${filename}/${name}.wat`),
         })
-        fs.writeFileSync(`output/${basename}.html`, html)
-        return { filename, basename }
+        fs.writeFileSync(`src/${name}.html`, html)
+        return { filename, name }
     }).reduce((r, file) => {
         r[file.filename] ||= []
-        r[file.filename].push(file.basename)
+        r[file.filename].push(file.name)
         return r
     }, {})
 
 const index = handlebars.compile(fs.readFileSync("index.hbs", { encoding: "utf-8" }))
 const html = index({ files })
-fs.writeFileSync(`output/index.html`, html)
+fs.writeFileSync(`src/index.html`, html)
