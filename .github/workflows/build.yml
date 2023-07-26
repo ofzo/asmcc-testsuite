@@ -33,10 +33,11 @@ jobs:
       working-directory: testsuite
       run: git submodule update --init && bash ./extract-parts.sh
     - name: Generate page
-      run:   npm i && npm run build
+      run:  npm i && npm run build
     - uses: EndBug/add-and-commit@v9
       with:
         add: src/*.html
+        new_branch: release
         message: build by github action
         committer_name: GitHub Actions
         committer_email: 41898282+github-actions[bot]@users.noreply.github.com
