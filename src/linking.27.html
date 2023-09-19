@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asmcc linking.27</title>
+
+    <link rel="stylesheet" href="//unpkg.com/@highlightjs/cdn-assets@11.7.0/styles/github.min.css">
+    <script src="//unpkg.com/@highlightjs/cdn-assets@11.7.0/highlight.min.js"></script>
+    <script>
+        hljs.configure({
+            noHighlightRe: /^do-not-highlightme$/i,
+        });
+    </script>
+    <script>hljs.highlightAll();</script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="/_vercel/insights/script.js"></script>
+</head>
+
+<body class="text-sm p-2">
+    <h1 class="text-2xl  w-full mb-4">Anaylzer: <a href="/linking.27.wasm">linking.27.wasm</a></h1>
+    <div class="flex justify-evenly">
+        <pre class="p-4 overflow-scroll border-2"><code>
+linking.27.wasm:	file format wasm 0x1
+
+Sections:
+
+   Import start&#x3D;0x0000000a end&#x3D;0x00000020 (size&#x3D;0x00000016) count: 1
+
+Section Details:
+
+Import[1]:
+ - table[0] type&#x3D;externref initial&#x3D;1 &lt;- Mtable_ex.t-func
+
+Contents of section Import:
+000000a: 0109 4d74 6162 6c65 5f65 7806 742d 6675  ..Mtable_ex.t-fu
+000001a: 6e63 016f 0001                           nc.o..
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2"><code>BeginModule(version: 1)
+  BeginImportSection(22)
+    OnImportCount(1)
+    OnImport(index: 0, kind: table, module: &quot;Mtable_ex&quot;, field: &quot;t-func&quot;)
+    OnImportTable(import_index: 0, table_index: 0, elem_type: externref, initial: 1)
+  EndImportSection
+EndModule
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2 do-not-highlightme"><code>00000000: 00 61 73 6D 01 00 00 00  .asm....
+00000008: 02 16 01 09 4D 74 61 62  ....Mtab
+00000010: 6C 65 5F 65 78 06 74 2D  le_ex.t-
+00000018: 66 75 6E 63 01 6F 00 01  func.o..
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2"><code>(module
+  (import &quot;Mtable_ex&quot; &quot;t-func&quot; (table (;0;) 1 externref)))
+</code></pre>
+    </div>
+</body>
+
+</html>

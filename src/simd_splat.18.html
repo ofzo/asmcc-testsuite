@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asmcc simd_splat.18</title>
+
+    <link rel="stylesheet" href="//unpkg.com/@highlightjs/cdn-assets@11.7.0/styles/github.min.css">
+    <script src="//unpkg.com/@highlightjs/cdn-assets@11.7.0/highlight.min.js"></script>
+    <script>
+        hljs.configure({
+            noHighlightRe: /^do-not-highlightme$/i,
+        });
+    </script>
+    <script>hljs.highlightAll();</script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="/_vercel/insights/script.js"></script>
+</head>
+
+<body class="text-sm p-2">
+    <h1 class="text-2xl  w-full mb-4">Anaylzer: <a href="/simd_splat.18.wasm">simd_splat.18.wasm</a></h1>
+    <div class="flex justify-evenly">
+        <pre class="p-4 overflow-scroll border-2"><code>
+simd_splat.18.wasm:	file format wasm 0x1
+
+Sections:
+
+     Type start&#x3D;0x0000000a end&#x3D;0x0000001a (size&#x3D;0x00000010) count: 3
+ Function start&#x3D;0x0000001c end&#x3D;0x00000022 (size&#x3D;0x00000006) count: 5
+   Memory start&#x3D;0x00000024 end&#x3D;0x00000027 (size&#x3D;0x00000003) count: 1
+   Export start&#x3D;0x0000002a end&#x3D;0x000000ad (size&#x3D;0x00000083) count: 5
+     Code start&#x3D;0x000000af end&#x3D;0x0000010f (size&#x3D;0x00000060) count: 5
+
+Section Details:
+
+Type[3]:
+ - type[0] (i32) -&gt; v128
+ - type[1] (i64) -&gt; v128
+ - type[2] (f64) -&gt; v128
+Function[5]:
+ - func[0] sig&#x3D;0 &lt;as-v128_store-operand-1&gt;
+ - func[1] sig&#x3D;0 &lt;as-v128_store-operand-2&gt;
+ - func[2] sig&#x3D;0 &lt;as-v128_store-operand-3&gt;
+ - func[3] sig&#x3D;1 &lt;as-v128_store-operand-4&gt;
+ - func[4] sig&#x3D;2 &lt;as-v128_store-operand-5&gt;
+Memory[1]:
+ - memory[0] pages: initial&#x3D;1
+Export[5]:
+ - func[0] &lt;as-v128_store-operand-1&gt; -&gt; &quot;as-v128_store-operand-1&quot;
+ - func[1] &lt;as-v128_store-operand-2&gt; -&gt; &quot;as-v128_store-operand-2&quot;
+ - func[2] &lt;as-v128_store-operand-3&gt; -&gt; &quot;as-v128_store-operand-3&quot;
+ - func[3] &lt;as-v128_store-operand-4&gt; -&gt; &quot;as-v128_store-operand-4&quot;
+ - func[4] &lt;as-v128_store-operand-5&gt; -&gt; &quot;as-v128_store-operand-5&quot;
+Code[5]:
+ - func[0] size&#x3D;18 &lt;as-v128_store-operand-1&gt;
+ - func[1] size&#x3D;18 &lt;as-v128_store-operand-2&gt;
+ - func[2] size&#x3D;18 &lt;as-v128_store-operand-3&gt;
+ - func[3] size&#x3D;18 &lt;as-v128_store-operand-4&gt;
+ - func[4] size&#x3D;18 &lt;as-v128_store-operand-5&gt;
+
+Contents of section Type:
+000000a: 0360 017f 017b 6001 7e01 7b60 017c 017b  .&#x60;...{&#x60;.~.{&#x60;.|.{
+
+Contents of section Function:
+000001c: 0500 0000 0102                           ......
+
+Contents of section Memory:
+0000024: 0100 01                                  ...
+
+Contents of section Export:
+000002a: 0517 6173 2d76 3132 385f 7374 6f72 652d  ..as-v128_store-
+000003a: 6f70 6572 616e 642d 3100 0017 6173 2d76  operand-1...as-v
+000004a: 3132 385f 7374 6f72 652d 6f70 6572 616e  128_store-operan
+000005a: 642d 3200 0117 6173 2d76 3132 385f 7374  d-2...as-v128_st
+000006a: 6f72 652d 6f70 6572 616e 642d 3300 0217  ore-operand-3...
+000007a: 6173 2d76 3132 385f 7374 6f72 652d 6f70  as-v128_store-op
+000008a: 6572 616e 642d 3400 0317 6173 2d76 3132  erand-4...as-v12
+000009a: 385f 7374 6f72 652d 6f70 6572 616e 642d  8_store-operand-
+00000aa: 3500 04                                  5..
+
+Contents of section Code:
+00000af: 0512 0041 0020 00fd 0ffd 0b04 0041 00fd  ...A. .......A..
+00000bf: 0004 000b 1200 4100 2000 fd10 fd0b 0400  ......A. .......
+00000cf: 4100 fd00 0400 0b12 0041 0020 00fd 11fd  A........A. ....
+00000df: 0b04 0041 00fd 0004 000b 1200 4100 2000  ...A........A. .
+00000ef: fd12 fd0b 0400 4100 fd00 0400 0b12 0041  ......A........A
+00000ff: 0020 00fd 14fd 0b04 0041 00fd 0004 000b  . .......A......
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2"><code>BeginModule(version: 1)
+  BeginTypeSection(16)
+    OnTypeCount(3)
+    OnFuncType(index: 0, params: [i32], results: [v128])
+    OnFuncType(index: 1, params: [i64], results: [v128])
+    OnFuncType(index: 2, params: [f64], results: [v128])
+  EndTypeSection
+  BeginFunctionSection(6)
+    OnFunctionCount(5)
+    OnFunction(index: 0, sig_index: 0)
+    OnFunction(index: 1, sig_index: 0)
+    OnFunction(index: 2, sig_index: 0)
+    OnFunction(index: 3, sig_index: 1)
+    OnFunction(index: 4, sig_index: 2)
+  EndFunctionSection
+  BeginMemorySection(3)
+    OnMemoryCount(1)
+    OnMemory(index: 0, initial: 1)
+  EndMemorySection
+  BeginExportSection(131)
+    OnExportCount(5)
+    OnExport(index: 0, kind: func, item_index: 0, name: &quot;as-v128_store-operand-1&quot;)
+    OnExport(index: 1, kind: func, item_index: 1, name: &quot;as-v128_store-operand-2&quot;)
+    OnExport(index: 2, kind: func, item_index: 2, name: &quot;as-v128_store-operand-3&quot;)
+    OnExport(index: 3, kind: func, item_index: 3, name: &quot;as-v128_store-operand-4&quot;)
+    OnExport(index: 4, kind: func, item_index: 4, name: &quot;as-v128_store-operand-5&quot;)
+  EndExportSection
+  BeginCodeSection(96)
+    OnFunctionBodyCount(5)
+    BeginFunctionBody(0, size:18)
+    OnLocalDeclCount(0)
+    EndFunctionBody(0)
+    BeginFunctionBody(1, size:18)
+    OnLocalDeclCount(0)
+    EndFunctionBody(1)
+    BeginFunctionBody(2, size:18)
+    OnLocalDeclCount(0)
+    EndFunctionBody(2)
+    BeginFunctionBody(3, size:18)
+    OnLocalDeclCount(0)
+    EndFunctionBody(3)
+    BeginFunctionBody(4, size:18)
+    OnLocalDeclCount(0)
+    EndFunctionBody(4)
+  EndCodeSection
+EndModule
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2 do-not-highlightme"><code>00000000: 00 61 73 6D 01 00 00 00  .asm....
+00000008: 01 10 03 60 01 7F 01 7B  ...&#x60;...{
+00000010: 60 01 7E 01 7B 60 01 7C  &#x60;.~.{&#x60;.|
+00000018: 01 7B 03 06 05 00 00 00  .{......
+00000020: 01 02 05 03 01 00 01 07  ........
+00000028: 83 01 05 17 61 73 2D 76  ....as-v
+00000030: 31 32 38 5F 73 74 6F 72  128_stor
+00000038: 65 2D 6F 70 65 72 61 6E  e-operan
+00000040: 64 2D 31 00 00 17 61 73  d-1...as
+00000048: 2D 76 31 32 38 5F 73 74  -v128_st
+00000050: 6F 72 65 2D 6F 70 65 72  ore-oper
+00000058: 61 6E 64 2D 32 00 01 17  and-2...
+00000060: 61 73 2D 76 31 32 38 5F  as-v128_
+00000068: 73 74 6F 72 65 2D 6F 70  store-op
+00000070: 65 72 61 6E 64 2D 33 00  erand-3.
+00000078: 02 17 61 73 2D 76 31 32  ..as-v12
+00000080: 38 5F 73 74 6F 72 65 2D  8_store-
+00000088: 6F 70 65 72 61 6E 64 2D  operand-
+00000090: 34 00 03 17 61 73 2D 76  4...as-v
+00000098: 31 32 38 5F 73 74 6F 72  128_stor
+000000a0: 65 2D 6F 70 65 72 61 6E  e-operan
+000000a8: 64 2D 35 00 04 0A 60 05  d-5...&#x60;.
+000000b0: 12 00 41 00 20 00 FD 0F  ..A. ...
+000000b8: FD 0B 04 00 41 00 FD 00  ....A...
+000000c0: 04 00 0B 12 00 41 00 20  .....A. 
+000000c8: 00 FD 10 FD 0B 04 00 41  .......A
+000000d0: 00 FD 00 04 00 0B 12 00  ........
+000000d8: 41 00 20 00 FD 11 FD 0B  A. .....
+000000e0: 04 00 41 00 FD 00 04 00  ..A.....
+000000e8: 0B 12 00 41 00 20 00 FD  ...A. ..
+000000f0: 12 FD 0B 04 00 41 00 FD  .....A..
+000000f8: 00 04 00 0B 12 00 41 00  ......A.
+00000100: 20 00 FD 14 FD 0B 04 00   .......
+00000108: 41 00 FD 00 04 00 0B     A......
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2"><code>(module
+  (type (;0;) (func (param i32) (result v128)))
+  (type (;1;) (func (param i64) (result v128)))
+  (type (;2;) (func (param f64) (result v128)))
+  (func (;0;) (type 0) (param i32) (result v128)
+    i32.const 0
+    local.get 0
+    i8x16.splat
+    v128.store
+    i32.const 0
+    v128.load)
+  (func (;1;) (type 0) (param i32) (result v128)
+    i32.const 0
+    local.get 0
+    i16x8.splat
+    v128.store
+    i32.const 0
+    v128.load)
+  (func (;2;) (type 0) (param i32) (result v128)
+    i32.const 0
+    local.get 0
+    i32x4.splat
+    v128.store
+    i32.const 0
+    v128.load)
+  (func (;3;) (type 1) (param i64) (result v128)
+    i32.const 0
+    local.get 0
+    i64x2.splat
+    v128.store
+    i32.const 0
+    v128.load)
+  (func (;4;) (type 2) (param f64) (result v128)
+    i32.const 0
+    local.get 0
+    f64x2.splat
+    v128.store
+    i32.const 0
+    v128.load)
+  (memory (;0;) 1)
+  (export &quot;as-v128_store-operand-1&quot; (func 0))
+  (export &quot;as-v128_store-operand-2&quot; (func 1))
+  (export &quot;as-v128_store-operand-3&quot; (func 2))
+  (export &quot;as-v128_store-operand-4&quot; (func 3))
+  (export &quot;as-v128_store-operand-5&quot; (func 4)))
+</code></pre>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asmcc custom.0</title>
+
+    <link rel="stylesheet" href="//unpkg.com/@highlightjs/cdn-assets@11.7.0/styles/github.min.css">
+    <script src="//unpkg.com/@highlightjs/cdn-assets@11.7.0/highlight.min.js"></script>
+    <script>
+        hljs.configure({
+            noHighlightRe: /^do-not-highlightme$/i,
+        });
+    </script>
+    <script>hljs.highlightAll();</script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="/_vercel/insights/script.js"></script>
+</head>
+
+<body class="text-sm p-2">
+    <h1 class="text-2xl  w-full mb-4">Anaylzer: <a href="/custom.0.wasm">custom.0.wasm</a></h1>
+    <div class="flex justify-evenly">
+        <pre class="p-4 overflow-scroll border-2"><code>
+custom.0.wasm:	file format wasm 0x1
+
+Sections:
+
+   Custom start&#x3D;0x0000000a end&#x3D;0x0000002e (size&#x3D;0x00000024) &quot;a custom section&quot;
+   Custom start&#x3D;0x00000030 end&#x3D;0x00000050 (size&#x3D;0x00000020) &quot;a custom section&quot;
+   Custom start&#x3D;0x00000052 end&#x3D;0x00000063 (size&#x3D;0x00000011) &quot;a custom section&quot;
+   Custom start&#x3D;0x00000065 end&#x3D;0x00000075 (size&#x3D;0x00000010) &quot;&quot;
+   Custom start&#x3D;0x00000077 end&#x3D;0x00000078 (size&#x3D;0x00000001) &quot;&quot;
+   Custom start&#x3D;0x0000007a end&#x3D;0x0000009e (size&#x3D;0x00000024) &quot;&quot;
+   Custom start&#x3D;0x000000a0 end&#x3D;0x000000c4 (size&#x3D;0x00000024) &quot;﻿a custom sect&quot;
+   Custom start&#x3D;0x000000c6 end&#x3D;0x000000ea (size&#x3D;0x00000024) &quot;a custom sect⌣&quot;
+   Custom start&#x3D;0x000000ec end&#x3D;0x0000010b (size&#x3D;0x0000001f) &quot;module within a module&quot;
+
+Section Details:
+
+Custom:
+ - name: &quot;a custom section&quot;
+Custom:
+ - name: &quot;a custom section&quot;
+Custom:
+ - name: &quot;a custom section&quot;
+Custom:
+ - name: &quot;&quot;
+Custom:
+ - name: &quot;&quot;
+Custom:
+ - name: &quot;&quot;
+Custom:
+ - name: &quot;﻿a custom sect&quot;
+Custom:
+ - name: &quot;a custom sect⌣&quot;
+Custom:
+ - name: &quot;module within a module&quot;
+
+Contents of section Custom:
+000000a: 1061 2063 7573 746f 6d20 7365 6374 696f  .a custom sectio
+000001a: 6e74 6869 7320 6973 2074 6865 2070 6179  nthis is the pay
+000002a: 6c6f 6164                                load
+
+Contents of section Custom:
+0000030: 1061 2063 7573 746f 6d20 7365 6374 696f  .a custom sectio
+0000040: 6e74 6869 7320 6973 2070 6179 6c6f 6164  nthis is payload
+
+Contents of section Custom:
+0000052: 1061 2063 7573 746f 6d20 7365 6374 696f  .a custom sectio
+0000062: 6e                                       n
+
+Contents of section Custom:
+0000065: 0074 6869 7320 6973 2070 6179 6c6f 6164  .this is payload
+
+Contents of section Custom:
+0000077: 00                                       .
+
+Contents of section Custom:
+000007a: 1000 0063 7573 746f 6d20 7365 6374 696f  ...custom sectio
+000008a: 0074 6869 7320 6973 2074 6865 2070 6179  .this is the pay
+000009a: 6c6f 6164                                load
+
+Contents of section Custom:
+00000a0: 10ef bbbf 6120 6375 7374 6f6d 2073 6563  ....a custom sec
+00000b0: 7474 6869 7320 6973 2074 6865 2070 6179  tthis is the pay
+00000c0: 6c6f 6164                                load
+
+Contents of section Custom:
+00000c6: 1061 2063 7573 746f 6d20 7365 6374 e28c  .a custom sect..
+00000d6: a374 6869 7320 6973 2074 6865 2070 6179  .this is the pay
+00000e6: 6c6f 6164                                load
+
+Contents of section Custom:
+00000ec: 166d 6f64 756c 6520 7769 7468 696e 2061  .module within a
+00000fc: 206d 6f64 756c 6500 6173 6d01 0000 00     module.asm....
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2"><code>BeginModule(version: 1)
+  BeginCustomSection(&#x27;a custom section&#x27;, size: 36)
+    BeginGenericCustomSection(36)
+      OnGenericCustomSection(name: &quot;a custom section&quot;, size: 19)
+    EndGenericCustomSection
+  EndCustomSection
+  BeginCustomSection(&#x27;a custom section&#x27;, size: 32)
+    BeginGenericCustomSection(32)
+      OnGenericCustomSection(name: &quot;a custom section&quot;, size: 15)
+    EndGenericCustomSection
+  EndCustomSection
+  BeginCustomSection(&#x27;a custom section&#x27;, size: 17)
+    BeginGenericCustomSection(17)
+      OnGenericCustomSection(name: &quot;a custom section&quot;, size: 0)
+    EndGenericCustomSection
+  EndCustomSection
+  BeginCustomSection(&#x27;&#x27;, size: 16)
+    BeginGenericCustomSection(16)
+      OnGenericCustomSection(name: &quot;&quot;, size: 15)
+    EndGenericCustomSection
+  EndCustomSection
+  BeginCustomSection(&#x27;&#x27;, size: 1)
+    BeginGenericCustomSection(1)
+      OnGenericCustomSection(name: &quot;&quot;, size: 0)
+    EndGenericCustomSection
+  EndCustomSection
+  BeginCustomSection(&#x27;&#x27;, size: 36)
+    BeginGenericCustomSection(36)
+      OnGenericCustomSection(name: &quot;&quot;, size: 19)
+    EndGenericCustomSection
+  EndCustomSection
+  BeginCustomSection(&#x27;﻿a custom sect&#x27;, size: 36)
+    BeginGenericCustomSection(36)
+      OnGenericCustomSection(name: &quot;﻿a custom sect&quot;, size: 19)
+    EndGenericCustomSection
+  EndCustomSection
+  BeginCustomSection(&#x27;a custom sect⌣&#x27;, size: 36)
+    BeginGenericCustomSection(36)
+      OnGenericCustomSection(name: &quot;a custom sect⌣&quot;, size: 19)
+    EndGenericCustomSection
+  EndCustomSection
+  BeginCustomSection(&#x27;module within a module&#x27;, size: 31)
+    BeginGenericCustomSection(31)
+      OnGenericCustomSection(name: &quot;module within a module&quot;, size: 8)
+    EndGenericCustomSection
+  EndCustomSection
+EndModule
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2 do-not-highlightme"><code>00000000: 00 61 73 6D 01 00 00 00  .asm....
+00000008: 00 24 10 61 20 63 75 73  .$.a cus
+00000010: 74 6F 6D 20 73 65 63 74  tom sect
+00000018: 69 6F 6E 74 68 69 73 20  ionthis 
+00000020: 69 73 20 74 68 65 20 70  is the p
+00000028: 61 79 6C 6F 61 64 00 20  ayload. 
+00000030: 10 61 20 63 75 73 74 6F  .a custo
+00000038: 6D 20 73 65 63 74 69 6F  m sectio
+00000040: 6E 74 68 69 73 20 69 73  nthis is
+00000048: 20 70 61 79 6C 6F 61 64   payload
+00000050: 00 11 10 61 20 63 75 73  ...a cus
+00000058: 74 6F 6D 20 73 65 63 74  tom sect
+00000060: 69 6F 6E 00 10 00 74 68  ion...th
+00000068: 69 73 20 69 73 20 70 61  is is pa
+00000070: 79 6C 6F 61 64 00 01 00  yload...
+00000078: 00 24 10 00 00 63 75 73  .$...cus
+00000080: 74 6F 6D 20 73 65 63 74  tom sect
+00000088: 69 6F 00 74 68 69 73 20  io.this 
+00000090: 69 73 20 74 68 65 20 70  is the p
+00000098: 61 79 6C 6F 61 64 00 24  ayload.$
+000000a0: 10 EF BB BF 61 20 63 75  ....a cu
+000000a8: 73 74 6F 6D 20 73 65 63  stom sec
+000000b0: 74 74 68 69 73 20 69 73  tthis is
+000000b8: 20 74 68 65 20 70 61 79   the pay
+000000c0: 6C 6F 61 64 00 24 10 61  load.$.a
+000000c8: 20 63 75 73 74 6F 6D 20   custom 
+000000d0: 73 65 63 74 E2 8C A3 74  sect...t
+000000d8: 68 69 73 20 69 73 20 74  his is t
+000000e0: 68 65 20 70 61 79 6C 6F  he paylo
+000000e8: 61 64 00 1F 16 6D 6F 64  ad...mod
+000000f0: 75 6C 65 20 77 69 74 68  ule with
+000000f8: 69 6E 20 61 20 6D 6F 64  in a mod
+00000100: 75 6C 65 00 61 73 6D 01  ule.asm.
+00000108: 00 00 00                 ...
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2"><code>(module)
+</code></pre>
+    </div>
+</body>
+
+</html>

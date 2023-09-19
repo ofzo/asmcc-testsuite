@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asmcc simd_i32x4_cmp.11</title>
+
+    <link rel="stylesheet" href="//unpkg.com/@highlightjs/cdn-assets@11.7.0/styles/github.min.css">
+    <script src="//unpkg.com/@highlightjs/cdn-assets@11.7.0/highlight.min.js"></script>
+    <script>
+        hljs.configure({
+            noHighlightRe: /^do-not-highlightme$/i,
+        });
+    </script>
+    <script>hljs.highlightAll();</script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="/_vercel/insights/script.js"></script>
+</head>
+
+<body class="text-sm p-2">
+    <h1 class="text-2xl  w-full mb-4">Anaylzer: <a href="/simd_i32x4_cmp.11.wasm">simd_i32x4_cmp.11.wasm</a></h1>
+    <div class="flex justify-evenly">
+        <pre class="p-4 overflow-scroll border-2"><code>
+simd_i32x4_cmp.11.wasm:	file format wasm 0x1
+
+Sections:
+
+     Type start&#x3D;0x0000000a end&#x3D;0x0000000e (size&#x3D;0x00000004) count: 1
+ Function start&#x3D;0x00000010 end&#x3D;0x0000001e (size&#x3D;0x0000000e) count: 13
+   Memory start&#x3D;0x00000020 end&#x3D;0x00000023 (size&#x3D;0x00000003) count: 1
+   Export start&#x3D;0x00000026 end&#x3D;0x000000de (size&#x3D;0x000000b8) count: 13
+     Code start&#x3D;0x000000e1 end&#x3D;0x00000364 (size&#x3D;0x00000283) count: 13
+
+Section Details:
+
+Type[1]:
+ - type[0] () -&gt; nil
+Function[13]:
+ - func[0] sig&#x3D;0 &lt;eq-in-block&gt;
+ - func[1] sig&#x3D;0 &lt;ne-in-block&gt;
+ - func[2] sig&#x3D;0 &lt;lt_s-in-block&gt;
+ - func[3] sig&#x3D;0 &lt;le_u-in-block&gt;
+ - func[4] sig&#x3D;0 &lt;gt_u-in-block&gt;
+ - func[5] sig&#x3D;0 &lt;ge_s-in-block&gt;
+ - func[6] sig&#x3D;0 &lt;nested-eq&gt;
+ - func[7] sig&#x3D;0 &lt;nested-ne&gt;
+ - func[8] sig&#x3D;0 &lt;nested-lt_s&gt;
+ - func[9] sig&#x3D;0 &lt;nested-le_u&gt;
+ - func[10] sig&#x3D;0 &lt;nested-gt_u&gt;
+ - func[11] sig&#x3D;0 &lt;nested-ge_s&gt;
+ - func[12] sig&#x3D;0 &lt;as-param&gt;
+Memory[1]:
+ - memory[0] pages: initial&#x3D;1
+Export[13]:
+ - func[0] &lt;eq-in-block&gt; -&gt; &quot;eq-in-block&quot;
+ - func[1] &lt;ne-in-block&gt; -&gt; &quot;ne-in-block&quot;
+ - func[2] &lt;lt_s-in-block&gt; -&gt; &quot;lt_s-in-block&quot;
+ - func[3] &lt;le_u-in-block&gt; -&gt; &quot;le_u-in-block&quot;
+ - func[4] &lt;gt_u-in-block&gt; -&gt; &quot;gt_u-in-block&quot;
+ - func[5] &lt;ge_s-in-block&gt; -&gt; &quot;ge_s-in-block&quot;
+ - func[6] &lt;nested-eq&gt; -&gt; &quot;nested-eq&quot;
+ - func[7] &lt;nested-ne&gt; -&gt; &quot;nested-ne&quot;
+ - func[8] &lt;nested-lt_s&gt; -&gt; &quot;nested-lt_s&quot;
+ - func[9] &lt;nested-le_u&gt; -&gt; &quot;nested-le_u&quot;
+ - func[10] &lt;nested-gt_u&gt; -&gt; &quot;nested-gt_u&quot;
+ - func[11] &lt;nested-ge_s&gt; -&gt; &quot;nested-ge_s&quot;
+ - func[12] &lt;as-param&gt; -&gt; &quot;as-param&quot;
+Code[13]:
+ - func[0] size&#x3D;29 &lt;eq-in-block&gt;
+ - func[1] size&#x3D;29 &lt;ne-in-block&gt;
+ - func[2] size&#x3D;29 &lt;lt_s-in-block&gt;
+ - func[3] size&#x3D;29 &lt;le_u-in-block&gt;
+ - func[4] size&#x3D;29 &lt;gt_u-in-block&gt;
+ - func[5] size&#x3D;29 &lt;ge_s-in-block&gt;
+ - func[6] size&#x3D;65 &lt;nested-eq&gt;
+ - func[7] size&#x3D;65 &lt;nested-ne&gt;
+ - func[8] size&#x3D;65 &lt;nested-lt_s&gt;
+ - func[9] size&#x3D;65 &lt;nested-le_u&gt;
+ - func[10] size&#x3D;65 &lt;nested-gt_u&gt;
+ - func[11] size&#x3D;65 &lt;nested-ge_s&gt;
+ - func[12] size&#x3D;65 &lt;as-param&gt;
+
+Contents of section Type:
+000000a: 0160 0000                                .&#x60;..
+
+Contents of section Function:
+0000010: 0d00 0000 0000 0000 0000 0000 0000       ..............
+
+Contents of section Memory:
+0000020: 0100 01                                  ...
+
+Contents of section Export:
+0000026: 0d0b 6571 2d69 6e2d 626c 6f63 6b00 000b  ..eq-in-block...
+0000036: 6e65 2d69 6e2d 626c 6f63 6b00 010d 6c74  ne-in-block...lt
+0000046: 5f73 2d69 6e2d 626c 6f63 6b00 020d 6c65  _s-in-block...le
+0000056: 5f75 2d69 6e2d 626c 6f63 6b00 030d 6774  _u-in-block...gt
+0000066: 5f75 2d69 6e2d 626c 6f63 6b00 040d 6765  _u-in-block...ge
+0000076: 5f73 2d69 6e2d 626c 6f63 6b00 0509 6e65  _s-in-block...ne
+0000086: 7374 6564 2d65 7100 0609 6e65 7374 6564  sted-eq...nested
+0000096: 2d6e 6500 070b 6e65 7374 6564 2d6c 745f  -ne...nested-lt_
+00000a6: 7300 080b 6e65 7374 6564 2d6c 655f 7500  s...nested-le_u.
+00000b6: 090b 6e65 7374 6564 2d67 745f 7500 0a0b  ..nested-gt_u...
+00000c6: 6e65 7374 6564 2d67 655f 7300 0b08 6173  nested-ge_s...as
+00000d6: 2d70 6172 616d 000c                      -param..
+
+Contents of section Code:
+00000e1: 0d1d 0002 4002 7b02 7b41 00fd 0004 000b  ....@.{.{A......
+00000f1: 027b 4101 fd00 0400 0bfd 370b 1a0b 0b1d  .{A.......7.....
+0000101: 0002 4002 7b02 7b41 00fd 0004 000b 027b  ..@.{.{A.......{
+0000111: 4101 fd00 0400 0bfd 380b 1a0b 0b1d 0002  A.......8.......
+0000121: 4002 7b02 7b41 00fd 0004 000b 027b 4101  @.{.{A.......{A.
+0000131: fd00 0400 0bfd 390b 1a0b 0b1d 0002 4002  ......9.......@.
+0000141: 7b02 7b41 00fd 0004 000b 027b 4101 fd00  {.{A.......{A...
+0000151: 0400 0bfd 3e0b 1a0b 0b1d 0002 4002 7b02  ....&gt;.......@.{.
+0000161: 7b41 00fd 0004 000b 027b 4101 fd00 0400  {A.......{A.....
+0000171: 0bfd 3c0b 1a0b 0b1d 0002 4002 7b02 7b41  ..&lt;.......@.{.{A
+0000181: 00fd 0004 000b 027b 4101 fd00 0400 0bfd  .......{A.......
+0000191: 3f0b 1a0b 0b41 0041 00fd 0004 0041 01fd  ?....A.A.....A..
+00001a1: 0004 00fd 3741 02fd 0004 0041 03fd 0004  ....7A.....A....
+00001b1: 00fd 37fd 3741 00fd 0004 0041 01fd 0004  ..7.7A.....A....
+00001c1: 00fd 3741 02fd 0004 0041 03fd 0004 00fd  ..7A.....A......
+00001d1: 37fd 37fd 371a 0b41 0041 00fd 0004 0041  7.7.7..A.A.....A
+00001e1: 01fd 0004 00fd 3841 02fd 0004 0041 03fd  ......8A.....A..
+00001f1: 0004 00fd 38fd 3841 00fd 0004 0041 01fd  ....8.8A.....A..
+0000201: 0004 00fd 3841 02fd 0004 0041 03fd 0004  ....8A.....A....
+0000211: 00fd 38fd 38fd 381a 0b41 0041 00fd 0004  ..8.8.8..A.A....
+0000221: 0041 01fd 0004 00fd 3941 02fd 0004 0041  .A......9A.....A
+0000231: 03fd 0004 00fd 39fd 3941 00fd 0004 0041  ......9.9A.....A
+0000241: 01fd 0004 00fd 3941 02fd 0004 0041 03fd  ......9A.....A..
+0000251: 0004 00fd 39fd 39fd 391a 0b41 0041 00fd  ....9.9.9..A.A..
+0000261: 0004 0041 01fd 0004 00fd 3e41 02fd 0004  ...A......&gt;A....
+0000271: 0041 03fd 0004 00fd 3efd 3e41 00fd 0004  .A......&gt;.&gt;A....
+0000281: 0041 01fd 0004 00fd 3e41 02fd 0004 0041  .A......&gt;A.....A
+0000291: 03fd 0004 00fd 3efd 3efd 3e1a 0b41 0041  ......&gt;.&gt;.&gt;..A.A
+00002a1: 00fd 0004 0041 01fd 0004 00fd 3c41 02fd  .....A......&lt;A..
+00002b1: 0004 0041 03fd 0004 00fd 3cfd 3c41 00fd  ...A......&lt;.&lt;A..
+00002c1: 0004 0041 01fd 0004 00fd 3c41 02fd 0004  ...A......&lt;A....
+00002d1: 0041 03fd 0004 00fd 3cfd 3cfd 3c1a 0b41  .A......&lt;.&lt;.&lt;..A
+00002e1: 0041 00fd 0004 0041 01fd 0004 00fd 3f41  .A.....A......?A
+00002f1: 02fd 0004 0041 03fd 0004 00fd 3ffd 3f41  .....A......?.?A
+0000301: 00fd 0004 0041 01fd 0004 00fd 3f41 02fd  .....A......?A..
+0000311: 0004 0041 03fd 0004 00fd 3ffd 3ffd 3f1a  ...A......?.?.?.
+0000321: 0b41 0041 00fd 0004 0041 01fd 0004 00fd  .A.A.....A......
+0000331: 3941 02fd 0004 0041 03fd 0004 00fd 3efd  9A.....A......&gt;.
+0000341: 3741 00fd 0004 0041 01fd 0004 00fd 3b41  7A.....A......;A
+0000351: 02fd 0004 0041 03fd 0004 00fd 3afd 38fd  .....A......:.8.
+0000361: 401a 0b                                  @..
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2"><code>BeginModule(version: 1)
+  BeginTypeSection(4)
+    OnTypeCount(1)
+    OnFuncType(index: 0, params: [], results: [])
+  EndTypeSection
+  BeginFunctionSection(14)
+    OnFunctionCount(13)
+    OnFunction(index: 0, sig_index: 0)
+    OnFunction(index: 1, sig_index: 0)
+    OnFunction(index: 2, sig_index: 0)
+    OnFunction(index: 3, sig_index: 0)
+    OnFunction(index: 4, sig_index: 0)
+    OnFunction(index: 5, sig_index: 0)
+    OnFunction(index: 6, sig_index: 0)
+    OnFunction(index: 7, sig_index: 0)
+    OnFunction(index: 8, sig_index: 0)
+    OnFunction(index: 9, sig_index: 0)
+    OnFunction(index: 10, sig_index: 0)
+    OnFunction(index: 11, sig_index: 0)
+    OnFunction(index: 12, sig_index: 0)
+  EndFunctionSection
+  BeginMemorySection(3)
+    OnMemoryCount(1)
+    OnMemory(index: 0, initial: 1)
+  EndMemorySection
+  BeginExportSection(184)
+    OnExportCount(13)
+    OnExport(index: 0, kind: func, item_index: 0, name: &quot;eq-in-block&quot;)
+    OnExport(index: 1, kind: func, item_index: 1, name: &quot;ne-in-block&quot;)
+    OnExport(index: 2, kind: func, item_index: 2, name: &quot;lt_s-in-block&quot;)
+    OnExport(index: 3, kind: func, item_index: 3, name: &quot;le_u-in-block&quot;)
+    OnExport(index: 4, kind: func, item_index: 4, name: &quot;gt_u-in-block&quot;)
+    OnExport(index: 5, kind: func, item_index: 5, name: &quot;ge_s-in-block&quot;)
+    OnExport(index: 6, kind: func, item_index: 6, name: &quot;nested-eq&quot;)
+    OnExport(index: 7, kind: func, item_index: 7, name: &quot;nested-ne&quot;)
+    OnExport(index: 8, kind: func, item_index: 8, name: &quot;nested-lt_s&quot;)
+    OnExport(index: 9, kind: func, item_index: 9, name: &quot;nested-le_u&quot;)
+    OnExport(index: 10, kind: func, item_index: 10, name: &quot;nested-gt_u&quot;)
+    OnExport(index: 11, kind: func, item_index: 11, name: &quot;nested-ge_s&quot;)
+    OnExport(index: 12, kind: func, item_index: 12, name: &quot;as-param&quot;)
+  EndExportSection
+  BeginCodeSection(643)
+    OnFunctionBodyCount(13)
+    BeginFunctionBody(0, size:29)
+    OnLocalDeclCount(0)
+    EndFunctionBody(0)
+    BeginFunctionBody(1, size:29)
+    OnLocalDeclCount(0)
+    EndFunctionBody(1)
+    BeginFunctionBody(2, size:29)
+    OnLocalDeclCount(0)
+    EndFunctionBody(2)
+    BeginFunctionBody(3, size:29)
+    OnLocalDeclCount(0)
+    EndFunctionBody(3)
+    BeginFunctionBody(4, size:29)
+    OnLocalDeclCount(0)
+    EndFunctionBody(4)
+    BeginFunctionBody(5, size:29)
+    OnLocalDeclCount(0)
+    EndFunctionBody(5)
+    BeginFunctionBody(6, size:65)
+    OnLocalDeclCount(0)
+    EndFunctionBody(6)
+    BeginFunctionBody(7, size:65)
+    OnLocalDeclCount(0)
+    EndFunctionBody(7)
+    BeginFunctionBody(8, size:65)
+    OnLocalDeclCount(0)
+    EndFunctionBody(8)
+    BeginFunctionBody(9, size:65)
+    OnLocalDeclCount(0)
+    EndFunctionBody(9)
+    BeginFunctionBody(10, size:65)
+    OnLocalDeclCount(0)
+    EndFunctionBody(10)
+    BeginFunctionBody(11, size:65)
+    OnLocalDeclCount(0)
+    EndFunctionBody(11)
+    BeginFunctionBody(12, size:65)
+    OnLocalDeclCount(0)
+    EndFunctionBody(12)
+  EndCodeSection
+EndModule
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2 do-not-highlightme"><code>00000000: 00 61 73 6D 01 00 00 00  .asm....
+00000008: 01 04 01 60 00 00 03 0E  ...&#x60;....
+00000010: 0D 00 00 00 00 00 00 00  ........
+00000018: 00 00 00 00 00 00 05 03  ........
+00000020: 01 00 01 07 B8 01 0D 0B  ........
+00000028: 65 71 2D 69 6E 2D 62 6C  eq-in-bl
+00000030: 6F 63 6B 00 00 0B 6E 65  ock...ne
+00000038: 2D 69 6E 2D 62 6C 6F 63  -in-bloc
+00000040: 6B 00 01 0D 6C 74 5F 73  k...lt_s
+00000048: 2D 69 6E 2D 62 6C 6F 63  -in-bloc
+00000050: 6B 00 02 0D 6C 65 5F 75  k...le_u
+00000058: 2D 69 6E 2D 62 6C 6F 63  -in-bloc
+00000060: 6B 00 03 0D 67 74 5F 75  k...gt_u
+00000068: 2D 69 6E 2D 62 6C 6F 63  -in-bloc
+00000070: 6B 00 04 0D 67 65 5F 73  k...ge_s
+00000078: 2D 69 6E 2D 62 6C 6F 63  -in-bloc
+00000080: 6B 00 05 09 6E 65 73 74  k...nest
+00000088: 65 64 2D 65 71 00 06 09  ed-eq...
+00000090: 6E 65 73 74 65 64 2D 6E  nested-n
+00000098: 65 00 07 0B 6E 65 73 74  e...nest
+000000a0: 65 64 2D 6C 74 5F 73 00  ed-lt_s.
+000000a8: 08 0B 6E 65 73 74 65 64  ..nested
+000000b0: 2D 6C 65 5F 75 00 09 0B  -le_u...
+000000b8: 6E 65 73 74 65 64 2D 67  nested-g
+000000c0: 74 5F 75 00 0A 0B 6E 65  t_u...ne
+000000c8: 73 74 65 64 2D 67 65 5F  sted-ge_
+000000d0: 73 00 0B 08 61 73 2D 70  s...as-p
+000000d8: 61 72 61 6D 00 0C 0A 83  aram....
+000000e0: 05 0D 1D 00 02 40 02 7B  .....@.{
+000000e8: 02 7B 41 00 FD 00 04 00  .{A.....
+000000f0: 0B 02 7B 41 01 FD 00 04  ..{A....
+000000f8: 00 0B FD 37 0B 1A 0B 0B  ...7....
+00000100: 1D 00 02 40 02 7B 02 7B  ...@.{.{
+00000108: 41 00 FD 00 04 00 0B 02  A.......
+00000110: 7B 41 01 FD 00 04 00 0B  {A......
+00000118: FD 38 0B 1A 0B 0B 1D 00  .8......
+00000120: 02 40 02 7B 02 7B 41 00  .@.{.{A.
+00000128: FD 00 04 00 0B 02 7B 41  ......{A
+00000130: 01 FD 00 04 00 0B FD 39  .......9
+00000138: 0B 1A 0B 0B 1D 00 02 40  .......@
+00000140: 02 7B 02 7B 41 00 FD 00  .{.{A...
+00000148: 04 00 0B 02 7B 41 01 FD  ....{A..
+00000150: 00 04 00 0B FD 3E 0B 1A  .....&gt;..
+00000158: 0B 0B 1D 00 02 40 02 7B  .....@.{
+00000160: 02 7B 41 00 FD 00 04 00  .{A.....
+00000168: 0B 02 7B 41 01 FD 00 04  ..{A....
+00000170: 00 0B FD 3C 0B 1A 0B 0B  ...&lt;....
+00000178: 1D 00 02 40 02 7B 02 7B  ...@.{.{
+00000180: 41 00 FD 00 04 00 0B 02  A.......
+00000188: 7B 41 01 FD 00 04 00 0B  {A......
+00000190: FD 3F 0B 1A 0B 0B 41 00  .?....A.
+00000198: 41 00 FD 00 04 00 41 01  A.....A.
+000001a0: FD 00 04 00 FD 37 41 02  .....7A.
+000001a8: FD 00 04 00 41 03 FD 00  ....A...
+000001b0: 04 00 FD 37 FD 37 41 00  ...7.7A.
+000001b8: FD 00 04 00 41 01 FD 00  ....A...
+000001c0: 04 00 FD 37 41 02 FD 00  ...7A...
+000001c8: 04 00 41 03 FD 00 04 00  ..A.....
+000001d0: FD 37 FD 37 FD 37 1A 0B  .7.7.7..
+000001d8: 41 00 41 00 FD 00 04 00  A.A.....
+000001e0: 41 01 FD 00 04 00 FD 38  A......8
+000001e8: 41 02 FD 00 04 00 41 03  A.....A.
+000001f0: FD 00 04 00 FD 38 FD 38  .....8.8
+000001f8: 41 00 FD 00 04 00 41 01  A.....A.
+00000200: FD 00 04 00 FD 38 41 02  .....8A.
+00000208: FD 00 04 00 41 03 FD 00  ....A...
+00000210: 04 00 FD 38 FD 38 FD 38  ...8.8.8
+00000218: 1A 0B 41 00 41 00 FD 00  ..A.A...
+00000220: 04 00 41 01 FD 00 04 00  ..A.....
+00000228: FD 39 41 02 FD 00 04 00  .9A.....
+00000230: 41 03 FD 00 04 00 FD 39  A......9
+00000238: FD 39 41 00 FD 00 04 00  .9A.....
+00000240: 41 01 FD 00 04 00 FD 39  A......9
+00000248: 41 02 FD 00 04 00 41 03  A.....A.
+00000250: FD 00 04 00 FD 39 FD 39  .....9.9
+00000258: FD 39 1A 0B 41 00 41 00  .9..A.A.
+00000260: FD 00 04 00 41 01 FD 00  ....A...
+00000268: 04 00 FD 3E 41 02 FD 00  ...&gt;A...
+00000270: 04 00 41 03 FD 00 04 00  ..A.....
+00000278: FD 3E FD 3E 41 00 FD 00  .&gt;.&gt;A...
+00000280: 04 00 41 01 FD 00 04 00  ..A.....
+00000288: FD 3E 41 02 FD 00 04 00  .&gt;A.....
+00000290: 41 03 FD 00 04 00 FD 3E  A......&gt;
+00000298: FD 3E FD 3E 1A 0B 41 00  .&gt;.&gt;..A.
+000002a0: 41 00 FD 00 04 00 41 01  A.....A.
+000002a8: FD 00 04 00 FD 3C 41 02  .....&lt;A.
+000002b0: FD 00 04 00 41 03 FD 00  ....A...
+000002b8: 04 00 FD 3C FD 3C 41 00  ...&lt;.&lt;A.
+000002c0: FD 00 04 00 41 01 FD 00  ....A...
+000002c8: 04 00 FD 3C 41 02 FD 00  ...&lt;A...
+000002d0: 04 00 41 03 FD 00 04 00  ..A.....
+000002d8: FD 3C FD 3C FD 3C 1A 0B  .&lt;.&lt;.&lt;..
+000002e0: 41 00 41 00 FD 00 04 00  A.A.....
+000002e8: 41 01 FD 00 04 00 FD 3F  A......?
+000002f0: 41 02 FD 00 04 00 41 03  A.....A.
+000002f8: FD 00 04 00 FD 3F FD 3F  .....?.?
+00000300: 41 00 FD 00 04 00 41 01  A.....A.
+00000308: FD 00 04 00 FD 3F 41 02  .....?A.
+00000310: FD 00 04 00 41 03 FD 00  ....A...
+00000318: 04 00 FD 3F FD 3F FD 3F  ...?.?.?
+00000320: 1A 0B 41 00 41 00 FD 00  ..A.A...
+00000328: 04 00 41 01 FD 00 04 00  ..A.....
+00000330: FD 39 41 02 FD 00 04 00  .9A.....
+00000338: 41 03 FD 00 04 00 FD 3E  A......&gt;
+00000340: FD 37 41 00 FD 00 04 00  .7A.....
+00000348: 41 01 FD 00 04 00 FD 3B  A......;
+00000350: 41 02 FD 00 04 00 41 03  A.....A.
+00000358: FD 00 04 00 FD 3A FD 38  .....:.8
+00000360: FD 40 1A 0B              .@..
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2"><code>(module
+  (type (;0;) (func))
+  (func (;0;) (type 0)
+    block  ;; label &#x3D; @1
+      block (result v128)  ;; label &#x3D; @2
+        block (result v128)  ;; label &#x3D; @3
+          i32.const 0
+          v128.load
+        end
+        block (result v128)  ;; label &#x3D; @3
+          i32.const 1
+          v128.load
+        end
+        i32x4.eq
+      end
+      drop
+    end)
+  (func (;1;) (type 0)
+    block  ;; label &#x3D; @1
+      block (result v128)  ;; label &#x3D; @2
+        block (result v128)  ;; label &#x3D; @3
+          i32.const 0
+          v128.load
+        end
+        block (result v128)  ;; label &#x3D; @3
+          i32.const 1
+          v128.load
+        end
+        i32x4.ne
+      end
+      drop
+    end)
+  (func (;2;) (type 0)
+    block  ;; label &#x3D; @1
+      block (result v128)  ;; label &#x3D; @2
+        block (result v128)  ;; label &#x3D; @3
+          i32.const 0
+          v128.load
+        end
+        block (result v128)  ;; label &#x3D; @3
+          i32.const 1
+          v128.load
+        end
+        i32x4.lt_s
+      end
+      drop
+    end)
+  (func (;3;) (type 0)
+    block  ;; label &#x3D; @1
+      block (result v128)  ;; label &#x3D; @2
+        block (result v128)  ;; label &#x3D; @3
+          i32.const 0
+          v128.load
+        end
+        block (result v128)  ;; label &#x3D; @3
+          i32.const 1
+          v128.load
+        end
+        i32x4.le_u
+      end
+      drop
+    end)
+  (func (;4;) (type 0)
+    block  ;; label &#x3D; @1
+      block (result v128)  ;; label &#x3D; @2
+        block (result v128)  ;; label &#x3D; @3
+          i32.const 0
+          v128.load
+        end
+        block (result v128)  ;; label &#x3D; @3
+          i32.const 1
+          v128.load
+        end
+        i32x4.gt_u
+      end
+      drop
+    end)
+  (func (;5;) (type 0)
+    block  ;; label &#x3D; @1
+      block (result v128)  ;; label &#x3D; @2
+        block (result v128)  ;; label &#x3D; @3
+          i32.const 0
+          v128.load
+        end
+        block (result v128)  ;; label &#x3D; @3
+          i32.const 1
+          v128.load
+        end
+        i32x4.ge_s
+      end
+      drop
+    end)
+  (func (;6;) (type 0)
+    i32.const 0
+    v128.load
+    i32.const 1
+    v128.load
+    i32x4.eq
+    i32.const 2
+    v128.load
+    i32.const 3
+    v128.load
+    i32x4.eq
+    i32x4.eq
+    i32.const 0
+    v128.load
+    i32.const 1
+    v128.load
+    i32x4.eq
+    i32.const 2
+    v128.load
+    i32.const 3
+    v128.load
+    i32x4.eq
+    i32x4.eq
+    i32x4.eq
+    drop)
+  (func (;7;) (type 0)
+    i32.const 0
+    v128.load
+    i32.const 1
+    v128.load
+    i32x4.ne
+    i32.const 2
+    v128.load
+    i32.const 3
+    v128.load
+    i32x4.ne
+    i32x4.ne
+    i32.const 0
+    v128.load
+    i32.const 1
+    v128.load
+    i32x4.ne
+    i32.const 2
+    v128.load
+    i32.const 3
+    v128.load
+    i32x4.ne
+    i32x4.ne
+    i32x4.ne
+    drop)
+  (func (;8;) (type 0)
+    i32.const 0
+    v128.load
+    i32.const 1
+    v128.load
+    i32x4.lt_s
+    i32.const 2
+    v128.load
+    i32.const 3
+    v128.load
+    i32x4.lt_s
+    i32x4.lt_s
+    i32.const 0
+    v128.load
+    i32.const 1
+    v128.load
+    i32x4.lt_s
+    i32.const 2
+    v128.load
+    i32.const 3
+    v128.load
+    i32x4.lt_s
+    i32x4.lt_s
+    i32x4.lt_s
+    drop)
+  (func (;9;) (type 0)
+    i32.const 0
+    v128.load
+    i32.const 1
+    v128.load
+    i32x4.le_u
+    i32.const 2
+    v128.load
+    i32.const 3
+    v128.load
+    i32x4.le_u
+    i32x4.le_u
+    i32.const 0
+    v128.load
+    i32.const 1
+    v128.load
+    i32x4.le_u
+    i32.const 2
+    v128.load
+    i32.const 3
+    v128.load
+    i32x4.le_u
+    i32x4.le_u
+    i32x4.le_u
+    drop)
+  (func (;10;) (type 0)
+    i32.const 0
+    v128.load
+    i32.const 1
+    v128.load
+    i32x4.gt_u
+    i32.const 2
+    v128.load
+    i32.const 3
+    v128.load
+    i32x4.gt_u
+    i32x4.gt_u
+    i32.const 0
+    v128.load
+    i32.const 1
+    v128.load
+    i32x4.gt_u
+    i32.const 2
+    v128.load
+    i32.const 3
+    v128.load
+    i32x4.gt_u
+    i32x4.gt_u
+    i32x4.gt_u
+    drop)
+  (func (;11;) (type 0)
+    i32.const 0
+    v128.load
+    i32.const 1
+    v128.load
+    i32x4.ge_s
+    i32.const 2
+    v128.load
+    i32.const 3
+    v128.load
+    i32x4.ge_s
+    i32x4.ge_s
+    i32.const 0
+    v128.load
+    i32.const 1
+    v128.load
+    i32x4.ge_s
+    i32.const 2
+    v128.load
+    i32.const 3
+    v128.load
+    i32x4.ge_s
+    i32x4.ge_s
+    i32x4.ge_s
+    drop)
+  (func (;12;) (type 0)
+    i32.const 0
+    v128.load
+    i32.const 1
+    v128.load
+    i32x4.lt_s
+    i32.const 2
+    v128.load
+    i32.const 3
+    v128.load
+    i32x4.le_u
+    i32x4.eq
+    i32.const 0
+    v128.load
+    i32.const 1
+    v128.load
+    i32x4.gt_s
+    i32.const 2
+    v128.load
+    i32.const 3
+    v128.load
+    i32x4.lt_u
+    i32x4.ne
+    i32x4.ge_u
+    drop)
+  (memory (;0;) 1)
+  (export &quot;eq-in-block&quot; (func 0))
+  (export &quot;ne-in-block&quot; (func 1))
+  (export &quot;lt_s-in-block&quot; (func 2))
+  (export &quot;le_u-in-block&quot; (func 3))
+  (export &quot;gt_u-in-block&quot; (func 4))
+  (export &quot;ge_s-in-block&quot; (func 5))
+  (export &quot;nested-eq&quot; (func 6))
+  (export &quot;nested-ne&quot; (func 7))
+  (export &quot;nested-lt_s&quot; (func 8))
+  (export &quot;nested-le_u&quot; (func 9))
+  (export &quot;nested-gt_u&quot; (func 10))
+  (export &quot;nested-ge_s&quot; (func 11))
+  (export &quot;as-param&quot; (func 12)))
+</code></pre>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asmcc simd_const.201</title>
+
+    <link rel="stylesheet" href="//unpkg.com/@highlightjs/cdn-assets@11.7.0/styles/github.min.css">
+    <script src="//unpkg.com/@highlightjs/cdn-assets@11.7.0/highlight.min.js"></script>
+    <script>
+        hljs.configure({
+            noHighlightRe: /^do-not-highlightme$/i,
+        });
+    </script>
+    <script>hljs.highlightAll();</script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="/_vercel/insights/script.js"></script>
+</head>
+
+<body class="text-sm p-2">
+    <h1 class="text-2xl  w-full mb-4">Anaylzer: <a href="/simd_const.201.wasm">simd_const.201.wasm</a></h1>
+    <div class="flex justify-evenly">
+        <pre class="p-4 overflow-scroll border-2"><code>
+simd_const.201.wasm:	file format wasm 0x1
+
+Sections:
+
+     Type start&#x3D;0x0000000a end&#x3D;0x0000000f (size&#x3D;0x00000005) count: 1
+ Function start&#x3D;0x00000011 end&#x3D;0x00000013 (size&#x3D;0x00000002) count: 1
+   Export start&#x3D;0x00000015 end&#x3D;0x0000001a (size&#x3D;0x00000005) count: 1
+     Code start&#x3D;0x0000001c end&#x3D;0x00000032 (size&#x3D;0x00000016) count: 1
+
+Section Details:
+
+Type[1]:
+ - type[0] () -&gt; v128
+Function[1]:
+ - func[0] sig&#x3D;0 &lt;f&gt;
+Export[1]:
+ - func[0] &lt;f&gt; -&gt; &quot;f&quot;
+Code[1]:
+ - func[0] size&#x3D;20 &lt;f&gt;
+
+Contents of section Type:
+000000a: 0160 0001 7b                             .&#x60;..{
+
+Contents of section Function:
+0000011: 0100                                     ..
+
+Contents of section Export:
+0000015: 0101 6600 00                             ..f..
+
+Contents of section Code:
+000001c: 0114 00fd 0c00 0080 2600 0080 2600 0080  ........&amp;...&amp;...
+000002c: 2600 0080 260b                           &amp;...&amp;.
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2"><code>BeginModule(version: 1)
+  BeginTypeSection(5)
+    OnTypeCount(1)
+    OnFuncType(index: 0, params: [], results: [v128])
+  EndTypeSection
+  BeginFunctionSection(2)
+    OnFunctionCount(1)
+    OnFunction(index: 0, sig_index: 0)
+  EndFunctionSection
+  BeginExportSection(5)
+    OnExportCount(1)
+    OnExport(index: 0, kind: func, item_index: 0, name: &quot;f&quot;)
+  EndExportSection
+  BeginCodeSection(22)
+    OnFunctionBodyCount(1)
+    BeginFunctionBody(0, size:20)
+    OnLocalDeclCount(0)
+    EndFunctionBody(0)
+  EndCodeSection
+EndModule
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2 do-not-highlightme"><code>00000000: 00 61 73 6D 01 00 00 00  .asm....
+00000008: 01 05 01 60 00 01 7B 03  ...&#x60;..{.
+00000010: 02 01 00 07 05 01 01 66  .......f
+00000018: 00 00 0A 16 01 14 00 FD  ........
+00000020: 0C 00 00 80 26 00 00 80  ....&amp;...
+00000028: 26 00 00 80 26 00 00 80  &amp;...&amp;...
+00000030: 26 0B                    &amp;.
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2"><code>(module
+  (type (;0;) (func (result v128)))
+  (func (;0;) (type 0) (result v128)
+    v128.const i32x4 0x26800000 0x26800000 0x26800000 0x26800000)
+  (export &quot;f&quot; (func 0)))
+</code></pre>
+    </div>
+</body>
+
+</html>

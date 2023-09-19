@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asmcc bulk.2</title>
+
+    <link rel="stylesheet" href="//unpkg.com/@highlightjs/cdn-assets@11.7.0/styles/github.min.css">
+    <script src="//unpkg.com/@highlightjs/cdn-assets@11.7.0/highlight.min.js"></script>
+    <script>
+        hljs.configure({
+            noHighlightRe: /^do-not-highlightme$/i,
+        });
+    </script>
+    <script>hljs.highlightAll();</script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="/_vercel/insights/script.js"></script>
+</head>
+
+<body class="text-sm p-2">
+    <h1 class="text-2xl  w-full mb-4">Anaylzer: <a href="/bulk.2.wasm">bulk.2.wasm</a></h1>
+    <div class="flex justify-evenly">
+        <pre class="p-4 overflow-scroll border-2"><code>
+bulk.2.wasm:	file format wasm 0x1
+
+Sections:
+
+     Type start&#x3D;0x0000000a end&#x3D;0x00000016 (size&#x3D;0x0000000c) count: 2
+ Function start&#x3D;0x00000018 end&#x3D;0x0000001b (size&#x3D;0x00000003) count: 2
+   Memory start&#x3D;0x0000001d end&#x3D;0x00000020 (size&#x3D;0x00000003) count: 1
+   Export start&#x3D;0x00000022 end&#x3D;0x00000034 (size&#x3D;0x00000012) count: 2
+     Code start&#x3D;0x00000036 end&#x3D;0x0000004b (size&#x3D;0x00000015) count: 2
+
+Section Details:
+
+Type[2]:
+ - type[0] (i32, i32, i32) -&gt; nil
+ - type[1] (i32) -&gt; i32
+Function[2]:
+ - func[0] sig&#x3D;0 &lt;fill&gt;
+ - func[1] sig&#x3D;1 &lt;load8_u&gt;
+Memory[1]:
+ - memory[0] pages: initial&#x3D;1
+Export[2]:
+ - func[0] &lt;fill&gt; -&gt; &quot;fill&quot;
+ - func[1] &lt;load8_u&gt; -&gt; &quot;load8_u&quot;
+Code[2]:
+ - func[0] size&#x3D;11 &lt;fill&gt;
+ - func[1] size&#x3D;7 &lt;load8_u&gt;
+
+Contents of section Type:
+000000a: 0260 037f 7f7f 0060 017f 017f            .&#x60;.....&#x60;....
+
+Contents of section Function:
+0000018: 0200 01                                  ...
+
+Contents of section Memory:
+000001d: 0100 01                                  ...
+
+Contents of section Export:
+0000022: 0204 6669 6c6c 0000 076c 6f61 6438 5f75  ..fill...load8_u
+0000032: 0001                                     ..
+
+Contents of section Code:
+0000036: 020b 0020 0020 0120 02fc 0b00 0b07 0020  ... . . ....... 
+0000046: 002d 0000 0b                             .-...
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2"><code>BeginModule(version: 1)
+  BeginTypeSection(12)
+    OnTypeCount(2)
+    OnFuncType(index: 0, params: [i32, i32, i32], results: [])
+    OnFuncType(index: 1, params: [i32], results: [i32])
+  EndTypeSection
+  BeginFunctionSection(3)
+    OnFunctionCount(2)
+    OnFunction(index: 0, sig_index: 0)
+    OnFunction(index: 1, sig_index: 1)
+  EndFunctionSection
+  BeginMemorySection(3)
+    OnMemoryCount(1)
+    OnMemory(index: 0, initial: 1)
+  EndMemorySection
+  BeginExportSection(18)
+    OnExportCount(2)
+    OnExport(index: 0, kind: func, item_index: 0, name: &quot;fill&quot;)
+    OnExport(index: 1, kind: func, item_index: 1, name: &quot;load8_u&quot;)
+  EndExportSection
+  BeginCodeSection(21)
+    OnFunctionBodyCount(2)
+    BeginFunctionBody(0, size:11)
+    OnLocalDeclCount(0)
+    EndFunctionBody(0)
+    BeginFunctionBody(1, size:7)
+    OnLocalDeclCount(0)
+    EndFunctionBody(1)
+  EndCodeSection
+EndModule
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2 do-not-highlightme"><code>00000000: 00 61 73 6D 01 00 00 00  .asm....
+00000008: 01 0C 02 60 03 7F 7F 7F  ...&#x60;....
+00000010: 00 60 01 7F 01 7F 03 03  .&#x60;......
+00000018: 02 00 01 05 03 01 00 01  ........
+00000020: 07 12 02 04 66 69 6C 6C  ....fill
+00000028: 00 00 07 6C 6F 61 64 38  ...load8
+00000030: 5F 75 00 01 0A 15 02 0B  _u......
+00000038: 00 20 00 20 01 20 02 FC  . . . ..
+00000040: 0B 00 0B 07 00 20 00 2D  ..... .-
+00000048: 00 00 0B                 ...
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2"><code>(module
+  (type (;0;) (func (param i32 i32 i32)))
+  (type (;1;) (func (param i32) (result i32)))
+  (func (;0;) (type 0) (param i32 i32 i32)
+    local.get 0
+    local.get 1
+    local.get 2
+    memory.fill)
+  (func (;1;) (type 1) (param i32) (result i32)
+    local.get 0
+    i32.load8_u)
+  (memory (;0;) 1)
+  (export &quot;fill&quot; (func 0))
+  (export &quot;load8_u&quot; (func 1)))
+</code></pre>
+    </div>
+</body>
+
+</html>

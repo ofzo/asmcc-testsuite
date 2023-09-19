@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asmcc bulk.1</title>
+
+    <link rel="stylesheet" href="//unpkg.com/@highlightjs/cdn-assets@11.7.0/styles/github.min.css">
+    <script src="//unpkg.com/@highlightjs/cdn-assets@11.7.0/highlight.min.js"></script>
+    <script>
+        hljs.configure({
+            noHighlightRe: /^do-not-highlightme$/i,
+        });
+    </script>
+    <script>hljs.highlightAll();</script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="/_vercel/insights/script.js"></script>
+</head>
+
+<body class="text-sm p-2">
+    <h1 class="text-2xl  w-full mb-4">Anaylzer: <a href="/bulk.1.wasm">bulk.1.wasm</a></h1>
+    <div class="flex justify-evenly">
+        <pre class="p-4 overflow-scroll border-2"><code>
+bulk.1.wasm:	file format wasm 0x1
+
+Sections:
+
+     Type start&#x3D;0x0000000a end&#x3D;0x0000000e (size&#x3D;0x00000004) count: 1
+ Function start&#x3D;0x00000010 end&#x3D;0x00000013 (size&#x3D;0x00000003) count: 2
+    Table start&#x3D;0x00000015 end&#x3D;0x00000019 (size&#x3D;0x00000004) count: 1
+     Elem start&#x3D;0x0000001b end&#x3D;0x00000028 (size&#x3D;0x0000000d) count: 1
+     Code start&#x3D;0x0000002a end&#x3D;0x00000031 (size&#x3D;0x00000007) count: 2
+
+Section Details:
+
+Type[1]:
+ - type[0] () -&gt; nil
+Function[2]:
+ - func[0] sig&#x3D;0
+ - func[1] sig&#x3D;0
+Table[1]:
+ - table[0] type&#x3D;funcref initial&#x3D;3
+Elem[1]:
+ - segment[0] flags&#x3D;5 table&#x3D;0 count&#x3D;3
+  - elem[0] &#x3D; ref.func:0
+  - elem[1] &#x3D; ref.null funcref
+  - elem[2] &#x3D; ref.func:1
+Code[2]:
+ - func[0] size&#x3D;2
+ - func[1] size&#x3D;2
+
+Contents of section Type:
+000000a: 0160 0000                                .&#x60;..
+
+Contents of section Function:
+0000010: 0200 00                                  ...
+
+Contents of section Table:
+0000015: 0170 0003                                .p..
+
+Contents of section Elem:
+000001b: 0105 7003 d200 0bd0 700b d201 0b         ..p.....p....
+
+Contents of section Code:
+000002a: 0202 000b 0200 0b                        .......
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2"><code>BeginModule(version: 1)
+  BeginTypeSection(4)
+    OnTypeCount(1)
+    OnFuncType(index: 0, params: [], results: [])
+  EndTypeSection
+  BeginFunctionSection(3)
+    OnFunctionCount(2)
+    OnFunction(index: 0, sig_index: 0)
+    OnFunction(index: 1, sig_index: 0)
+  EndFunctionSection
+  BeginTableSection(4)
+    OnTableCount(1)
+    OnTable(index: 0, elem_type: funcref, initial: 3)
+  EndTableSection
+  BeginElemSection(13)
+    OnElemSegmentCount(1)
+    BeginElemSegment(index: 0, table_index: 0, flags: 5)
+    OnElemSegmentElemType(index: 0, type: funcref)
+    OnElemSegmentElemExprCount(index: 0, count: 3)
+    BeginElemExpr(elem_index: 0, expr_index: 0)
+    OnRefFuncExpr(0)
+    OnEndExpr
+    EndElemExpr(elem_index: 0, expr_index: 0)
+    BeginElemExpr(elem_index: 0, expr_index: 1)
+    OnRefNullExpr(funcref)
+    OnEndExpr
+    EndElemExpr(elem_index: 0, expr_index: 1)
+    BeginElemExpr(elem_index: 0, expr_index: 2)
+    OnRefFuncExpr(1)
+    OnEndExpr
+    EndElemExpr(elem_index: 0, expr_index: 2)
+    EndElemSegment(0)
+  EndElemSection
+  BeginCodeSection(7)
+    OnFunctionBodyCount(2)
+    BeginFunctionBody(0, size:2)
+    OnLocalDeclCount(0)
+    EndFunctionBody(0)
+    BeginFunctionBody(1, size:2)
+    OnLocalDeclCount(0)
+    EndFunctionBody(1)
+  EndCodeSection
+EndModule
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2 do-not-highlightme"><code>00000000: 00 61 73 6D 01 00 00 00  .asm....
+00000008: 01 04 01 60 00 00 03 03  ...&#x60;....
+00000010: 02 00 00 04 04 01 70 00  ......p.
+00000018: 03 09 0D 01 05 70 03 D2  .....p..
+00000020: 00 0B D0 70 0B D2 01 0B  ...p....
+00000028: 0A 07 02 02 00 0B 02 00  ........
+00000030: 0B                       .
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2"><code>(module
+  (type (;0;) (func))
+  (func (;0;) (type 0))
+  (func (;1;) (type 0))
+  (table (;0;) 3 funcref)
+  (elem (;0;) funcref (ref.func 0) (ref.null func) (ref.func 1)))
+</code></pre>
+    </div>
+</body>
+
+</html>

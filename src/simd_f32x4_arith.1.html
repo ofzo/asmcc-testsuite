@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asmcc simd_f32x4_arith.1</title>
+
+    <link rel="stylesheet" href="//unpkg.com/@highlightjs/cdn-assets@11.7.0/styles/github.min.css">
+    <script src="//unpkg.com/@highlightjs/cdn-assets@11.7.0/highlight.min.js"></script>
+    <script>
+        hljs.configure({
+            noHighlightRe: /^do-not-highlightme$/i,
+        });
+    </script>
+    <script>hljs.highlightAll();</script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="/_vercel/insights/script.js"></script>
+</head>
+
+<body class="text-sm p-2">
+    <h1 class="text-2xl  w-full mb-4">Anaylzer: <a href="/simd_f32x4_arith.1.wasm">simd_f32x4_arith.1.wasm</a></h1>
+    <div class="flex justify-evenly">
+        <pre class="p-4 overflow-scroll border-2"><code>
+simd_f32x4_arith.1.wasm:	file format wasm 0x1
+
+Sections:
+
+     Type start&#x3D;0x0000000a end&#x3D;0x0000000f (size&#x3D;0x00000005) count: 1
+ Function start&#x3D;0x00000011 end&#x3D;0x00000015 (size&#x3D;0x00000004) count: 3
+   Export start&#x3D;0x00000017 end&#x3D;0x00000051 (size&#x3D;0x0000003a) count: 3
+     Code start&#x3D;0x00000053 end&#x3D;0x0000009c (size&#x3D;0x00000049) count: 3
+
+Section Details:
+
+Type[1]:
+ - type[0] () -&gt; v128
+Function[3]:
+ - func[0] sig&#x3D;0 &lt;f32x4_sqrt_arith&gt;
+ - func[1] sig&#x3D;0 &lt;f32x4_sqrt_canon&gt;
+ - func[2] sig&#x3D;0 &lt;f32x4_sqrt_mixed&gt;
+Export[3]:
+ - func[0] &lt;f32x4_sqrt_arith&gt; -&gt; &quot;f32x4_sqrt_arith&quot;
+ - func[1] &lt;f32x4_sqrt_canon&gt; -&gt; &quot;f32x4_sqrt_canon&quot;
+ - func[2] &lt;f32x4_sqrt_mixed&gt; -&gt; &quot;f32x4_sqrt_mixed&quot;
+Code[3]:
+ - func[0] size&#x3D;23 &lt;f32x4_sqrt_arith&gt;
+ - func[1] size&#x3D;23 &lt;f32x4_sqrt_canon&gt;
+ - func[2] size&#x3D;23 &lt;f32x4_sqrt_mixed&gt;
+
+Contents of section Type:
+000000a: 0160 0001 7b                             .&#x60;..{
+
+Contents of section Function:
+0000011: 0300 0000                                ....
+
+Contents of section Export:
+0000017: 0310 6633 3278 345f 7371 7274 5f61 7269  ..f32x4_sqrt_ari
+0000027: 7468 0000 1066 3332 7834 5f73 7172 745f  th...f32x4_sqrt_
+0000037: 6361 6e6f 6e00 0110 6633 3278 345f 7371  canon...f32x4_sq
+0000047: 7274 5f6d 6978 6564 0002                 rt_mixed..
+
+Contents of section Code:
+0000053: 0317 00fd 0c00 00a0 7f00 00a0 ff00 0080  ................
+0000063: 4100 00c8 41fd e301 0b17 00fd 0c00 0080  A...A...........
+0000073: bf00 00c0 7f00 0080 4000 0010 41fd e301  ........@...A...
+0000083: 0b17 00fd 0c00 0080 ff00 00a0 7f00 0010  ................
+0000093: 4200 0044 42fd e301 0b                   B..DB....
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2"><code>BeginModule(version: 1)
+  BeginTypeSection(5)
+    OnTypeCount(1)
+    OnFuncType(index: 0, params: [], results: [v128])
+  EndTypeSection
+  BeginFunctionSection(4)
+    OnFunctionCount(3)
+    OnFunction(index: 0, sig_index: 0)
+    OnFunction(index: 1, sig_index: 0)
+    OnFunction(index: 2, sig_index: 0)
+  EndFunctionSection
+  BeginExportSection(58)
+    OnExportCount(3)
+    OnExport(index: 0, kind: func, item_index: 0, name: &quot;f32x4_sqrt_arith&quot;)
+    OnExport(index: 1, kind: func, item_index: 1, name: &quot;f32x4_sqrt_canon&quot;)
+    OnExport(index: 2, kind: func, item_index: 2, name: &quot;f32x4_sqrt_mixed&quot;)
+  EndExportSection
+  BeginCodeSection(73)
+    OnFunctionBodyCount(3)
+    BeginFunctionBody(0, size:23)
+    OnLocalDeclCount(0)
+    EndFunctionBody(0)
+    BeginFunctionBody(1, size:23)
+    OnLocalDeclCount(0)
+    EndFunctionBody(1)
+    BeginFunctionBody(2, size:23)
+    OnLocalDeclCount(0)
+    EndFunctionBody(2)
+  EndCodeSection
+EndModule
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2 do-not-highlightme"><code>00000000: 00 61 73 6D 01 00 00 00  .asm....
+00000008: 01 05 01 60 00 01 7B 03  ...&#x60;..{.
+00000010: 04 03 00 00 00 07 3A 03  ......:.
+00000018: 10 66 33 32 78 34 5F 73  .f32x4_s
+00000020: 71 72 74 5F 61 72 69 74  qrt_arit
+00000028: 68 00 00 10 66 33 32 78  h...f32x
+00000030: 34 5F 73 71 72 74 5F 63  4_sqrt_c
+00000038: 61 6E 6F 6E 00 01 10 66  anon...f
+00000040: 33 32 78 34 5F 73 71 72  32x4_sqr
+00000048: 74 5F 6D 69 78 65 64 00  t_mixed.
+00000050: 02 0A 49 03 17 00 FD 0C  ..I.....
+00000058: 00 00 A0 7F 00 00 A0 FF  ........
+00000060: 00 00 80 41 00 00 C8 41  ...A...A
+00000068: FD E3 01 0B 17 00 FD 0C  ........
+00000070: 00 00 80 BF 00 00 C0 7F  ........
+00000078: 00 00 80 40 00 00 10 41  ...@...A
+00000080: FD E3 01 0B 17 00 FD 0C  ........
+00000088: 00 00 80 FF 00 00 A0 7F  ........
+00000090: 00 00 10 42 00 00 44 42  ...B..DB
+00000098: FD E3 01 0B              ....
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2"><code>(module
+  (type (;0;) (func (result v128)))
+  (func (;0;) (type 0) (result v128)
+    v128.const i32x4 0x7fa00000 0xffa00000 0x41800000 0x41c80000
+    f32x4.sqrt)
+  (func (;1;) (type 0) (result v128)
+    v128.const i32x4 0xbf800000 0x7fc00000 0x40800000 0x41100000
+    f32x4.sqrt)
+  (func (;2;) (type 0) (result v128)
+    v128.const i32x4 0xff800000 0x7fa00000 0x42100000 0x42440000
+    f32x4.sqrt)
+  (export &quot;f32x4_sqrt_arith&quot; (func 0))
+  (export &quot;f32x4_sqrt_canon&quot; (func 1))
+  (export &quot;f32x4_sqrt_mixed&quot; (func 2)))
+</code></pre>
+    </div>
+</body>
+
+</html>

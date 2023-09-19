@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asmcc forward.0</title>
+
+    <link rel="stylesheet" href="//unpkg.com/@highlightjs/cdn-assets@11.7.0/styles/github.min.css">
+    <script src="//unpkg.com/@highlightjs/cdn-assets@11.7.0/highlight.min.js"></script>
+    <script>
+        hljs.configure({
+            noHighlightRe: /^do-not-highlightme$/i,
+        });
+    </script>
+    <script>hljs.highlightAll();</script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="/_vercel/insights/script.js"></script>
+</head>
+
+<body class="text-sm p-2">
+    <h1 class="text-2xl  w-full mb-4">Anaylzer: <a href="/forward.0.wasm">forward.0.wasm</a></h1>
+    <div class="flex justify-evenly">
+        <pre class="p-4 overflow-scroll border-2"><code>
+forward.0.wasm:	file format wasm 0x1
+
+Sections:
+
+     Type start&#x3D;0x0000000a end&#x3D;0x00000010 (size&#x3D;0x00000006) count: 1
+ Function start&#x3D;0x00000012 end&#x3D;0x00000015 (size&#x3D;0x00000003) count: 2
+   Export start&#x3D;0x00000017 end&#x3D;0x00000025 (size&#x3D;0x0000000e) count: 2
+     Code start&#x3D;0x00000027 end&#x3D;0x00000052 (size&#x3D;0x0000002b) count: 2
+
+Section Details:
+
+Type[1]:
+ - type[0] (i32) -&gt; i32
+Function[2]:
+ - func[0] sig&#x3D;0 &lt;even&gt;
+ - func[1] sig&#x3D;0 &lt;odd&gt;
+Export[2]:
+ - func[0] &lt;even&gt; -&gt; &quot;even&quot;
+ - func[1] &lt;odd&gt; -&gt; &quot;odd&quot;
+Code[2]:
+ - func[0] size&#x3D;20 &lt;even&gt;
+ - func[1] size&#x3D;20 &lt;odd&gt;
+
+Contents of section Type:
+000000a: 0160 017f 017f                           .&#x60;....
+
+Contents of section Function:
+0000012: 0200 00                                  ...
+
+Contents of section Export:
+0000017: 0204 6576 656e 0000 036f 6464 0001       ..even...odd..
+
+Contents of section Code:
+0000027: 0214 0020 0041 0046 047f 4101 0520 0041  ... .A.F..A.. .A
+0000037: 016b 1001 0b0b 1400 2000 4100 4604 7f41  .k...... .A.F..A
+0000047: 0005 2000 4101 6b10 000b 0b              .. .A.k....
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2"><code>BeginModule(version: 1)
+  BeginTypeSection(6)
+    OnTypeCount(1)
+    OnFuncType(index: 0, params: [i32], results: [i32])
+  EndTypeSection
+  BeginFunctionSection(3)
+    OnFunctionCount(2)
+    OnFunction(index: 0, sig_index: 0)
+    OnFunction(index: 1, sig_index: 0)
+  EndFunctionSection
+  BeginExportSection(14)
+    OnExportCount(2)
+    OnExport(index: 0, kind: func, item_index: 0, name: &quot;even&quot;)
+    OnExport(index: 1, kind: func, item_index: 1, name: &quot;odd&quot;)
+  EndExportSection
+  BeginCodeSection(43)
+    OnFunctionBodyCount(2)
+    BeginFunctionBody(0, size:20)
+    OnLocalDeclCount(0)
+    EndFunctionBody(0)
+    BeginFunctionBody(1, size:20)
+    OnLocalDeclCount(0)
+    EndFunctionBody(1)
+  EndCodeSection
+EndModule
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2 do-not-highlightme"><code>00000000: 00 61 73 6D 01 00 00 00  .asm....
+00000008: 01 06 01 60 01 7F 01 7F  ...&#x60;....
+00000010: 03 03 02 00 00 07 0E 02  ........
+00000018: 04 65 76 65 6E 00 00 03  .even...
+00000020: 6F 64 64 00 01 0A 2B 02  odd...+.
+00000028: 14 00 20 00 41 00 46 04  .. .A.F.
+00000030: 7F 41 01 05 20 00 41 01  .A.. .A.
+00000038: 6B 10 01 0B 0B 14 00 20  k...... 
+00000040: 00 41 00 46 04 7F 41 00  .A.F..A.
+00000048: 05 20 00 41 01 6B 10 00  . .A.k..
+00000050: 0B 0B                    ..
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2"><code>(module
+  (type (;0;) (func (param i32) (result i32)))
+  (func (;0;) (type 0) (param i32) (result i32)
+    local.get 0
+    i32.const 0
+    i32.eq
+    if (result i32)  ;; label &#x3D; @1
+      i32.const 1
+    else
+      local.get 0
+      i32.const 1
+      i32.sub
+      call 1
+    end)
+  (func (;1;) (type 0) (param i32) (result i32)
+    local.get 0
+    i32.const 0
+    i32.eq
+    if (result i32)  ;; label &#x3D; @1
+      i32.const 0
+    else
+      local.get 0
+      i32.const 1
+      i32.sub
+      call 0
+    end)
+  (export &quot;even&quot; (func 0))
+  (export &quot;odd&quot; (func 1)))
+</code></pre>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asmcc imports.94</title>
+
+    <link rel="stylesheet" href="//unpkg.com/@highlightjs/cdn-assets@11.7.0/styles/github.min.css">
+    <script src="//unpkg.com/@highlightjs/cdn-assets@11.7.0/highlight.min.js"></script>
+    <script>
+        hljs.configure({
+            noHighlightRe: /^do-not-highlightme$/i,
+        });
+    </script>
+    <script>hljs.highlightAll();</script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="/_vercel/insights/script.js"></script>
+</head>
+
+<body class="text-sm p-2">
+    <h1 class="text-2xl  w-full mb-4">Anaylzer: <a href="/imports.94.wasm">imports.94.wasm</a></h1>
+    <div class="flex justify-evenly">
+        <pre class="p-4 overflow-scroll border-2"><code>
+imports.94.wasm:	file format wasm 0x1
+
+Sections:
+
+   Import start&#x3D;0x0000000a end&#x3D;0x00000022 (size&#x3D;0x00000018) count: 1
+
+Section Details:
+
+Import[1]:
+ - table[0] type&#x3D;funcref initial&#x3D;10 &lt;- spectest.print_i32
+
+Contents of section Import:
+000000a: 0108 7370 6563 7465 7374 0970 7269 6e74  ..spectest.print
+000001a: 5f69 3332 0170 000a                      _i32.p..
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2"><code>BeginModule(version: 1)
+  BeginImportSection(24)
+    OnImportCount(1)
+    OnImport(index: 0, kind: table, module: &quot;spectest&quot;, field: &quot;print_i32&quot;)
+    OnImportTable(import_index: 0, table_index: 0, elem_type: funcref, initial: 10)
+  EndImportSection
+EndModule
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2 do-not-highlightme"><code>00000000: 00 61 73 6D 01 00 00 00  .asm....
+00000008: 02 18 01 08 73 70 65 63  ....spec
+00000010: 74 65 73 74 09 70 72 69  test.pri
+00000018: 6E 74 5F 69 33 32 01 70  nt_i32.p
+00000020: 00 0A                    ..
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2"><code>(module
+  (import &quot;spectest&quot; &quot;print_i32&quot; (table (;0;) 10 funcref)))
+</code></pre>
+    </div>
+</body>
+
+</html>

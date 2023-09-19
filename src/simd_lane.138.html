@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asmcc simd_lane.138</title>
+
+    <link rel="stylesheet" href="//unpkg.com/@highlightjs/cdn-assets@11.7.0/styles/github.min.css">
+    <script src="//unpkg.com/@highlightjs/cdn-assets@11.7.0/highlight.min.js"></script>
+    <script>
+        hljs.configure({
+            noHighlightRe: /^do-not-highlightme$/i,
+        });
+    </script>
+    <script>hljs.highlightAll();</script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="/_vercel/insights/script.js"></script>
+</head>
+
+<body class="text-sm p-2">
+    <h1 class="text-2xl  w-full mb-4">Anaylzer: <a href="/simd_lane.138.wasm">simd_lane.138.wasm</a></h1>
+    <div class="flex justify-evenly">
+        <pre class="p-4 overflow-scroll border-2"><code>
+simd_lane.138.wasm:	file format wasm 0x1
+
+Sections:
+
+     Type start&#x3D;0x0000000a end&#x3D;0x0000003a (size&#x3D;0x00000030) count: 7
+ Function start&#x3D;0x0000003c end&#x3D;0x0000004f (size&#x3D;0x00000013) count: 18
+   Export start&#x3D;0x00000052 end&#x3D;0x00000245 (size&#x3D;0x000001f3) count: 18
+     Code start&#x3D;0x00000248 end&#x3D;0x0000036c (size&#x3D;0x00000124) count: 18
+
+Section Details:
+
+Type[7]:
+ - type[0] (v128) -&gt; v128
+ - type[1] (v128, i32, v128, i32) -&gt; v128
+ - type[2] (v128, i64, v128, i64) -&gt; v128
+ - type[3] (v128, v128, v128, v128) -&gt; v128
+ - type[4] (v128, i32) -&gt; i32
+ - type[5] (v128, i64) -&gt; i32
+ - type[6] (v128, v128) -&gt; i32
+Function[18]:
+ - func[0] sig&#x3D;0 &lt;as-i8x16_splat-operand&gt;
+ - func[1] sig&#x3D;0 &lt;as-i16x8_splat-operand&gt;
+ - func[2] sig&#x3D;0 &lt;as-i32x4_splat-operand&gt;
+ - func[3] sig&#x3D;0 &lt;as-f32x4_splat-operand&gt;
+ - func[4] sig&#x3D;0 &lt;as-i64x2_splat-operand&gt;
+ - func[5] sig&#x3D;0 &lt;as-f64x2_splat-operand&gt;
+ - func[6] sig&#x3D;1 &lt;as-i8x16_add-operands&gt;
+ - func[7] sig&#x3D;1 &lt;as-i16x8_add-operands&gt;
+ - func[8] sig&#x3D;1 &lt;as-i32x4_add-operands&gt;
+ - func[9] sig&#x3D;2 &lt;as-i64x2_add-operands&gt;
+ - func[10] sig&#x3D;3 &lt;swizzle-as-i8x16_add-operands&gt;
+ - func[11] sig&#x3D;3 &lt;shuffle-as-i8x16_sub-operands&gt;
+ - func[12] sig&#x3D;4 &lt;as-i8x16_any_true-operand&gt;
+ - func[13] sig&#x3D;4 &lt;as-i16x8_any_true-operand&gt;
+ - func[14] sig&#x3D;4 &lt;as-i32x4_any_true-operand1&gt;
+ - func[15] sig&#x3D;5 &lt;as-i32x4_any_true-operand2&gt;
+ - func[16] sig&#x3D;6 &lt;swizzle-as-i8x16_all_true-operands&gt;
+ - func[17] sig&#x3D;6 &lt;shuffle-as-i8x16_any_true-operands&gt;
+Export[18]:
+ - func[0] &lt;as-i8x16_splat-operand&gt; -&gt; &quot;as-i8x16_splat-operand&quot;
+ - func[1] &lt;as-i16x8_splat-operand&gt; -&gt; &quot;as-i16x8_splat-operand&quot;
+ - func[2] &lt;as-i32x4_splat-operand&gt; -&gt; &quot;as-i32x4_splat-operand&quot;
+ - func[3] &lt;as-f32x4_splat-operand&gt; -&gt; &quot;as-f32x4_splat-operand&quot;
+ - func[4] &lt;as-i64x2_splat-operand&gt; -&gt; &quot;as-i64x2_splat-operand&quot;
+ - func[5] &lt;as-f64x2_splat-operand&gt; -&gt; &quot;as-f64x2_splat-operand&quot;
+ - func[6] &lt;as-i8x16_add-operands&gt; -&gt; &quot;as-i8x16_add-operands&quot;
+ - func[7] &lt;as-i16x8_add-operands&gt; -&gt; &quot;as-i16x8_add-operands&quot;
+ - func[8] &lt;as-i32x4_add-operands&gt; -&gt; &quot;as-i32x4_add-operands&quot;
+ - func[9] &lt;as-i64x2_add-operands&gt; -&gt; &quot;as-i64x2_add-operands&quot;
+ - func[10] &lt;swizzle-as-i8x16_add-operands&gt; -&gt; &quot;swizzle-as-i8x16_add-operands&quot;
+ - func[11] &lt;shuffle-as-i8x16_sub-operands&gt; -&gt; &quot;shuffle-as-i8x16_sub-operands&quot;
+ - func[12] &lt;as-i8x16_any_true-operand&gt; -&gt; &quot;as-i8x16_any_true-operand&quot;
+ - func[13] &lt;as-i16x8_any_true-operand&gt; -&gt; &quot;as-i16x8_any_true-operand&quot;
+ - func[14] &lt;as-i32x4_any_true-operand1&gt; -&gt; &quot;as-i32x4_any_true-operand1&quot;
+ - func[15] &lt;as-i32x4_any_true-operand2&gt; -&gt; &quot;as-i32x4_any_true-operand2&quot;
+ - func[16] &lt;swizzle-as-i8x16_all_true-operands&gt; -&gt; &quot;swizzle-as-i8x16_all_true-operands&quot;
+ - func[17] &lt;shuffle-as-i8x16_any_true-operands&gt; -&gt; &quot;shuffle-as-i8x16_any_true-operands&quot;
+Code[18]:
+ - func[0] size&#x3D;9 &lt;as-i8x16_splat-operand&gt;
+ - func[1] size&#x3D;9 &lt;as-i16x8_splat-operand&gt;
+ - func[2] size&#x3D;9 &lt;as-i32x4_splat-operand&gt;
+ - func[3] size&#x3D;9 &lt;as-f32x4_splat-operand&gt;
+ - func[4] size&#x3D;9 &lt;as-i64x2_splat-operand&gt;
+ - func[5] size&#x3D;9 &lt;as-f64x2_splat-operand&gt;
+ - func[6] size&#x3D;18 &lt;as-i8x16_add-operands&gt;
+ - func[7] size&#x3D;19 &lt;as-i16x8_add-operands&gt;
+ - func[8] size&#x3D;19 &lt;as-i32x4_add-operands&gt;
+ - func[9] size&#x3D;19 &lt;as-i64x2_add-operands&gt;
+ - func[10] size&#x3D;16 &lt;swizzle-as-i8x16_add-operands&gt;
+ - func[11] size&#x3D;48 &lt;shuffle-as-i8x16_sub-operands&gt;
+ - func[12] size&#x3D;11 &lt;as-i8x16_any_true-operand&gt;
+ - func[13] size&#x3D;11 &lt;as-i16x8_any_true-operand&gt;
+ - func[14] size&#x3D;11 &lt;as-i32x4_any_true-operand1&gt;
+ - func[15] size&#x3D;11 &lt;as-i32x4_any_true-operand2&gt;
+ - func[16] size&#x3D;10 &lt;swizzle-as-i8x16_all_true-operands&gt;
+ - func[17] size&#x3D;26 &lt;shuffle-as-i8x16_any_true-operands&gt;
+
+Contents of section Type:
+000000a: 0760 017b 017b 6004 7b7f 7b7f 017b 6004  .&#x60;.{.{&#x60;.{.{..{&#x60;.
+000001a: 7b7e 7b7e 017b 6004 7b7b 7b7b 017b 6002  {~{~.{&#x60;.{{{{.{&#x60;.
+000002a: 7b7f 017f 6002 7b7e 017f 6002 7b7b 017f  {...&#x60;.{~..&#x60;.{{..
+
+Contents of section Function:
+000003c: 1200 0000 0000 0001 0101 0203 0304 0404  ................
+000004c: 0506 06                                  ...
+
+Contents of section Export:
+0000052: 1216 6173 2d69 3878 3136 5f73 706c 6174  ..as-i8x16_splat
+0000062: 2d6f 7065 7261 6e64 0000 1661 732d 6931  -operand...as-i1
+0000072: 3678 385f 7370 6c61 742d 6f70 6572 616e  6x8_splat-operan
+0000082: 6400 0116 6173 2d69 3332 7834 5f73 706c  d...as-i32x4_spl
+0000092: 6174 2d6f 7065 7261 6e64 0002 1661 732d  at-operand...as-
+00000a2: 6633 3278 345f 7370 6c61 742d 6f70 6572  f32x4_splat-oper
+00000b2: 616e 6400 0316 6173 2d69 3634 7832 5f73  and...as-i64x2_s
+00000c2: 706c 6174 2d6f 7065 7261 6e64 0004 1661  plat-operand...a
+00000d2: 732d 6636 3478 325f 7370 6c61 742d 6f70  s-f64x2_splat-op
+00000e2: 6572 616e 6400 0515 6173 2d69 3878 3136  erand...as-i8x16
+00000f2: 5f61 6464 2d6f 7065 7261 6e64 7300 0615  _add-operands...
+0000102: 6173 2d69 3136 7838 5f61 6464 2d6f 7065  as-i16x8_add-ope
+0000112: 7261 6e64 7300 0715 6173 2d69 3332 7834  rands...as-i32x4
+0000122: 5f61 6464 2d6f 7065 7261 6e64 7300 0815  _add-operands...
+0000132: 6173 2d69 3634 7832 5f61 6464 2d6f 7065  as-i64x2_add-ope
+0000142: 7261 6e64 7300 091d 7377 697a 7a6c 652d  rands...swizzle-
+0000152: 6173 2d69 3878 3136 5f61 6464 2d6f 7065  as-i8x16_add-ope
+0000162: 7261 6e64 7300 0a1d 7368 7566 666c 652d  rands...shuffle-
+0000172: 6173 2d69 3878 3136 5f73 7562 2d6f 7065  as-i8x16_sub-ope
+0000182: 7261 6e64 7300 0b19 6173 2d69 3878 3136  rands...as-i8x16
+0000192: 5f61 6e79 5f74 7275 652d 6f70 6572 616e  _any_true-operan
+00001a2: 6400 0c19 6173 2d69 3136 7838 5f61 6e79  d...as-i16x8_any
+00001b2: 5f74 7275 652d 6f70 6572 616e 6400 0d1a  _true-operand...
+00001c2: 6173 2d69 3332 7834 5f61 6e79 5f74 7275  as-i32x4_any_tru
+00001d2: 652d 6f70 6572 616e 6431 000e 1a61 732d  e-operand1...as-
+00001e2: 6933 3278 345f 616e 795f 7472 7565 2d6f  i32x4_any_true-o
+00001f2: 7065 7261 6e64 3200 0f22 7377 697a 7a6c  perand2..&quot;swizzl
+0000202: 652d 6173 2d69 3878 3136 5f61 6c6c 5f74  e-as-i8x16_all_t
+0000212: 7275 652d 6f70 6572 616e 6473 0010 2273  rue-operands..&quot;s
+0000222: 6875 6666 6c65 2d61 732d 6938 7831 365f  huffle-as-i8x16_
+0000232: 616e 795f 7472 7565 2d6f 7065 7261 6e64  any_true-operand
+0000242: 7300 11                                  s..
+
+Contents of section Code:
+0000248: 1209 0020 00fd 1500 fd0f 0b09 0020 00fd  ... ......... ..
+0000258: 1900 fd10 0b09 0020 00fd 1b00 fd11 0b09  ....... ........
+0000268: 0020 00fd 1f00 fd13 0b09 0020 00fd 1d00  . ......... ....
+0000278: fd12 0b09 0020 00fd 2100 fd14 0b12 0020  ..... ..!...... 
+0000288: 0020 01fd 1700 2002 2003 fd17 0ffd 6e0b  . .... . .....n.
+0000298: 1300 2000 2001 fd1a 0020 0220 03fd 1a07  .. . .... . ....
+00002a8: fd8e 010b 1300 2000 2001 fd1c 0020 0220  ...... . .... . 
+00002b8: 03fd 1c03 fdae 010b 1300 2000 2001 fd1e  .......... . ...
+00002c8: 0020 0220 03fd 1e01 fdce 010b 1000 2000  . . .......... .
+00002d8: 2001 fd0e 2002 2003 fd0e fd6e 0b30 0020   ... . ....n.0. 
+00002e8: 0020 01fd 0d00 0102 0304 0506 0708 090a  . ..............
+00002f8: 0b0c 0d0e 0f20 0220 03fd 0d10 1112 1314  ..... . ........
+0000308: 1516 1718 191a 1b1c 1d1e 1ffd 710b 0b00  ............q...
+0000318: 2000 2001 fd17 00fd 530b 0b00 2000 2001   . .....S... . .
+0000328: fd1a 00fd 530b 0b00 2000 2001 fd1c 00fd  ....S... . .....
+0000338: 530b 0b00 2000 2001 fd1e 00fd 530b 0a00  S... . .....S...
+0000348: 2000 2001 fd0e fd63 0b1a 0020 0020 01fd   . ....c... . ..
+0000358: 0d00 0102 0304 0506 0708 090a 0b0c 0d0e  ................
+0000368: 0ffd 530b                                ..S.
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2"><code>BeginModule(version: 1)
+  BeginTypeSection(48)
+    OnTypeCount(7)
+    OnFuncType(index: 0, params: [v128], results: [v128])
+    OnFuncType(index: 1, params: [v128, i32, v128, i32], results: [v128])
+    OnFuncType(index: 2, params: [v128, i64, v128, i64], results: [v128])
+    OnFuncType(index: 3, params: [v128, v128, v128, v128], results: [v128])
+    OnFuncType(index: 4, params: [v128, i32], results: [i32])
+    OnFuncType(index: 5, params: [v128, i64], results: [i32])
+    OnFuncType(index: 6, params: [v128, v128], results: [i32])
+  EndTypeSection
+  BeginFunctionSection(19)
+    OnFunctionCount(18)
+    OnFunction(index: 0, sig_index: 0)
+    OnFunction(index: 1, sig_index: 0)
+    OnFunction(index: 2, sig_index: 0)
+    OnFunction(index: 3, sig_index: 0)
+    OnFunction(index: 4, sig_index: 0)
+    OnFunction(index: 5, sig_index: 0)
+    OnFunction(index: 6, sig_index: 1)
+    OnFunction(index: 7, sig_index: 1)
+    OnFunction(index: 8, sig_index: 1)
+    OnFunction(index: 9, sig_index: 2)
+    OnFunction(index: 10, sig_index: 3)
+    OnFunction(index: 11, sig_index: 3)
+    OnFunction(index: 12, sig_index: 4)
+    OnFunction(index: 13, sig_index: 4)
+    OnFunction(index: 14, sig_index: 4)
+    OnFunction(index: 15, sig_index: 5)
+    OnFunction(index: 16, sig_index: 6)
+    OnFunction(index: 17, sig_index: 6)
+  EndFunctionSection
+  BeginExportSection(499)
+    OnExportCount(18)
+    OnExport(index: 0, kind: func, item_index: 0, name: &quot;as-i8x16_splat-operand&quot;)
+    OnExport(index: 1, kind: func, item_index: 1, name: &quot;as-i16x8_splat-operand&quot;)
+    OnExport(index: 2, kind: func, item_index: 2, name: &quot;as-i32x4_splat-operand&quot;)
+    OnExport(index: 3, kind: func, item_index: 3, name: &quot;as-f32x4_splat-operand&quot;)
+    OnExport(index: 4, kind: func, item_index: 4, name: &quot;as-i64x2_splat-operand&quot;)
+    OnExport(index: 5, kind: func, item_index: 5, name: &quot;as-f64x2_splat-operand&quot;)
+    OnExport(index: 6, kind: func, item_index: 6, name: &quot;as-i8x16_add-operands&quot;)
+    OnExport(index: 7, kind: func, item_index: 7, name: &quot;as-i16x8_add-operands&quot;)
+    OnExport(index: 8, kind: func, item_index: 8, name: &quot;as-i32x4_add-operands&quot;)
+    OnExport(index: 9, kind: func, item_index: 9, name: &quot;as-i64x2_add-operands&quot;)
+    OnExport(index: 10, kind: func, item_index: 10, name: &quot;swizzle-as-i8x16_add-operands&quot;)
+    OnExport(index: 11, kind: func, item_index: 11, name: &quot;shuffle-as-i8x16_sub-operands&quot;)
+    OnExport(index: 12, kind: func, item_index: 12, name: &quot;as-i8x16_any_true-operand&quot;)
+    OnExport(index: 13, kind: func, item_index: 13, name: &quot;as-i16x8_any_true-operand&quot;)
+    OnExport(index: 14, kind: func, item_index: 14, name: &quot;as-i32x4_any_true-operand1&quot;)
+    OnExport(index: 15, kind: func, item_index: 15, name: &quot;as-i32x4_any_true-operand2&quot;)
+    OnExport(index: 16, kind: func, item_index: 16, name: &quot;swizzle-as-i8x16_all_true-operands&quot;)
+    OnExport(index: 17, kind: func, item_index: 17, name: &quot;shuffle-as-i8x16_any_true-operands&quot;)
+  EndExportSection
+  BeginCodeSection(292)
+    OnFunctionBodyCount(18)
+    BeginFunctionBody(0, size:9)
+    OnLocalDeclCount(0)
+    EndFunctionBody(0)
+    BeginFunctionBody(1, size:9)
+    OnLocalDeclCount(0)
+    EndFunctionBody(1)
+    BeginFunctionBody(2, size:9)
+    OnLocalDeclCount(0)
+    EndFunctionBody(2)
+    BeginFunctionBody(3, size:9)
+    OnLocalDeclCount(0)
+    EndFunctionBody(3)
+    BeginFunctionBody(4, size:9)
+    OnLocalDeclCount(0)
+    EndFunctionBody(4)
+    BeginFunctionBody(5, size:9)
+    OnLocalDeclCount(0)
+    EndFunctionBody(5)
+    BeginFunctionBody(6, size:18)
+    OnLocalDeclCount(0)
+    EndFunctionBody(6)
+    BeginFunctionBody(7, size:19)
+    OnLocalDeclCount(0)
+    EndFunctionBody(7)
+    BeginFunctionBody(8, size:19)
+    OnLocalDeclCount(0)
+    EndFunctionBody(8)
+    BeginFunctionBody(9, size:19)
+    OnLocalDeclCount(0)
+    EndFunctionBody(9)
+    BeginFunctionBody(10, size:16)
+    OnLocalDeclCount(0)
+    EndFunctionBody(10)
+    BeginFunctionBody(11, size:48)
+    OnLocalDeclCount(0)
+    EndFunctionBody(11)
+    BeginFunctionBody(12, size:11)
+    OnLocalDeclCount(0)
+    EndFunctionBody(12)
+    BeginFunctionBody(13, size:11)
+    OnLocalDeclCount(0)
+    EndFunctionBody(13)
+    BeginFunctionBody(14, size:11)
+    OnLocalDeclCount(0)
+    EndFunctionBody(14)
+    BeginFunctionBody(15, size:11)
+    OnLocalDeclCount(0)
+    EndFunctionBody(15)
+    BeginFunctionBody(16, size:10)
+    OnLocalDeclCount(0)
+    EndFunctionBody(16)
+    BeginFunctionBody(17, size:26)
+    OnLocalDeclCount(0)
+    EndFunctionBody(17)
+  EndCodeSection
+EndModule
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2 do-not-highlightme"><code>00000000: 00 61 73 6D 01 00 00 00  .asm....
+00000008: 01 30 07 60 01 7B 01 7B  .0.&#x60;.{.{
+00000010: 60 04 7B 7F 7B 7F 01 7B  &#x60;.{.{..{
+00000018: 60 04 7B 7E 7B 7E 01 7B  &#x60;.{~{~.{
+00000020: 60 04 7B 7B 7B 7B 01 7B  &#x60;.{{{{.{
+00000028: 60 02 7B 7F 01 7F 60 02  &#x60;.{...&#x60;.
+00000030: 7B 7E 01 7F 60 02 7B 7B  {~..&#x60;.{{
+00000038: 01 7F 03 13 12 00 00 00  ........
+00000040: 00 00 00 01 01 01 02 03  ........
+00000048: 03 04 04 04 05 06 06 07  ........
+00000050: F3 03 12 16 61 73 2D 69  ....as-i
+00000058: 38 78 31 36 5F 73 70 6C  8x16_spl
+00000060: 61 74 2D 6F 70 65 72 61  at-opera
+00000068: 6E 64 00 00 16 61 73 2D  nd...as-
+00000070: 69 31 36 78 38 5F 73 70  i16x8_sp
+00000078: 6C 61 74 2D 6F 70 65 72  lat-oper
+00000080: 61 6E 64 00 01 16 61 73  and...as
+00000088: 2D 69 33 32 78 34 5F 73  -i32x4_s
+00000090: 70 6C 61 74 2D 6F 70 65  plat-ope
+00000098: 72 61 6E 64 00 02 16 61  rand...a
+000000a0: 73 2D 66 33 32 78 34 5F  s-f32x4_
+000000a8: 73 70 6C 61 74 2D 6F 70  splat-op
+000000b0: 65 72 61 6E 64 00 03 16  erand...
+000000b8: 61 73 2D 69 36 34 78 32  as-i64x2
+000000c0: 5F 73 70 6C 61 74 2D 6F  _splat-o
+000000c8: 70 65 72 61 6E 64 00 04  perand..
+000000d0: 16 61 73 2D 66 36 34 78  .as-f64x
+000000d8: 32 5F 73 70 6C 61 74 2D  2_splat-
+000000e0: 6F 70 65 72 61 6E 64 00  operand.
+000000e8: 05 15 61 73 2D 69 38 78  ..as-i8x
+000000f0: 31 36 5F 61 64 64 2D 6F  16_add-o
+000000f8: 70 65 72 61 6E 64 73 00  perands.
+00000100: 06 15 61 73 2D 69 31 36  ..as-i16
+00000108: 78 38 5F 61 64 64 2D 6F  x8_add-o
+00000110: 70 65 72 61 6E 64 73 00  perands.
+00000118: 07 15 61 73 2D 69 33 32  ..as-i32
+00000120: 78 34 5F 61 64 64 2D 6F  x4_add-o
+00000128: 70 65 72 61 6E 64 73 00  perands.
+00000130: 08 15 61 73 2D 69 36 34  ..as-i64
+00000138: 78 32 5F 61 64 64 2D 6F  x2_add-o
+00000140: 70 65 72 61 6E 64 73 00  perands.
+00000148: 09 1D 73 77 69 7A 7A 6C  ..swizzl
+00000150: 65 2D 61 73 2D 69 38 78  e-as-i8x
+00000158: 31 36 5F 61 64 64 2D 6F  16_add-o
+00000160: 70 65 72 61 6E 64 73 00  perands.
+00000168: 0A 1D 73 68 75 66 66 6C  ..shuffl
+00000170: 65 2D 61 73 2D 69 38 78  e-as-i8x
+00000178: 31 36 5F 73 75 62 2D 6F  16_sub-o
+00000180: 70 65 72 61 6E 64 73 00  perands.
+00000188: 0B 19 61 73 2D 69 38 78  ..as-i8x
+00000190: 31 36 5F 61 6E 79 5F 74  16_any_t
+00000198: 72 75 65 2D 6F 70 65 72  rue-oper
+000001a0: 61 6E 64 00 0C 19 61 73  and...as
+000001a8: 2D 69 31 36 78 38 5F 61  -i16x8_a
+000001b0: 6E 79 5F 74 72 75 65 2D  ny_true-
+000001b8: 6F 70 65 72 61 6E 64 00  operand.
+000001c0: 0D 1A 61 73 2D 69 33 32  ..as-i32
+000001c8: 78 34 5F 61 6E 79 5F 74  x4_any_t
+000001d0: 72 75 65 2D 6F 70 65 72  rue-oper
+000001d8: 61 6E 64 31 00 0E 1A 61  and1...a
+000001e0: 73 2D 69 33 32 78 34 5F  s-i32x4_
+000001e8: 61 6E 79 5F 74 72 75 65  any_true
+000001f0: 2D 6F 70 65 72 61 6E 64  -operand
+000001f8: 32 00 0F 22 73 77 69 7A  2..&quot;swiz
+00000200: 7A 6C 65 2D 61 73 2D 69  zle-as-i
+00000208: 38 78 31 36 5F 61 6C 6C  8x16_all
+00000210: 5F 74 72 75 65 2D 6F 70  _true-op
+00000218: 65 72 61 6E 64 73 00 10  erands..
+00000220: 22 73 68 75 66 66 6C 65  &quot;shuffle
+00000228: 2D 61 73 2D 69 38 78 31  -as-i8x1
+00000230: 36 5F 61 6E 79 5F 74 72  6_any_tr
+00000238: 75 65 2D 6F 70 65 72 61  ue-opera
+00000240: 6E 64 73 00 11 0A A4 02  nds.....
+00000248: 12 09 00 20 00 FD 15 00  ... ....
+00000250: FD 0F 0B 09 00 20 00 FD  ..... ..
+00000258: 19 00 FD 10 0B 09 00 20  ....... 
+00000260: 00 FD 1B 00 FD 11 0B 09  ........
+00000268: 00 20 00 FD 1F 00 FD 13  . ......
+00000270: 0B 09 00 20 00 FD 1D 00  ... ....
+00000278: FD 12 0B 09 00 20 00 FD  ..... ..
+00000280: 21 00 FD 14 0B 12 00 20  !...... 
+00000288: 00 20 01 FD 17 00 20 02  . .... .
+00000290: 20 03 FD 17 0F FD 6E 0B   .....n.
+00000298: 13 00 20 00 20 01 FD 1A  .. . ...
+000002a0: 00 20 02 20 03 FD 1A 07  . . ....
+000002a8: FD 8E 01 0B 13 00 20 00  ...... .
+000002b0: 20 01 FD 1C 00 20 02 20   .... . 
+000002b8: 03 FD 1C 03 FD AE 01 0B  ........
+000002c0: 13 00 20 00 20 01 FD 1E  .. . ...
+000002c8: 00 20 02 20 03 FD 1E 01  . . ....
+000002d0: FD CE 01 0B 10 00 20 00  ...... .
+000002d8: 20 01 FD 0E 20 02 20 03   ... . .
+000002e0: FD 0E FD 6E 0B 30 00 20  ...n.0. 
+000002e8: 00 20 01 FD 0D 00 01 02  . ......
+000002f0: 03 04 05 06 07 08 09 0A  ........
+000002f8: 0B 0C 0D 0E 0F 20 02 20  ..... . 
+00000300: 03 FD 0D 10 11 12 13 14  ........
+00000308: 15 16 17 18 19 1A 1B 1C  ........
+00000310: 1D 1E 1F FD 71 0B 0B 00  ....q...
+00000318: 20 00 20 01 FD 17 00 FD   . .....
+00000320: 53 0B 0B 00 20 00 20 01  S... . .
+00000328: FD 1A 00 FD 53 0B 0B 00  ....S...
+00000330: 20 00 20 01 FD 1C 00 FD   . .....
+00000338: 53 0B 0B 00 20 00 20 01  S... . .
+00000340: FD 1E 00 FD 53 0B 0A 00  ....S...
+00000348: 20 00 20 01 FD 0E FD 63   . ....c
+00000350: 0B 1A 00 20 00 20 01 FD  ... . ..
+00000358: 0D 00 01 02 03 04 05 06  ........
+00000360: 07 08 09 0A 0B 0C 0D 0E  ........
+00000368: 0F FD 53 0B              ..S.
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2"><code>(module
+  (type (;0;) (func (param v128) (result v128)))
+  (type (;1;) (func (param v128 i32 v128 i32) (result v128)))
+  (type (;2;) (func (param v128 i64 v128 i64) (result v128)))
+  (type (;3;) (func (param v128 v128 v128 v128) (result v128)))
+  (type (;4;) (func (param v128 i32) (result i32)))
+  (type (;5;) (func (param v128 i64) (result i32)))
+  (type (;6;) (func (param v128 v128) (result i32)))
+  (func (;0;) (type 0) (param v128) (result v128)
+    local.get 0
+    i8x16.extract_lane_s 0
+    i8x16.splat)
+  (func (;1;) (type 0) (param v128) (result v128)
+    local.get 0
+    i16x8.extract_lane_u 0
+    i16x8.splat)
+  (func (;2;) (type 0) (param v128) (result v128)
+    local.get 0
+    i32x4.extract_lane 0
+    i32x4.splat)
+  (func (;3;) (type 0) (param v128) (result v128)
+    local.get 0
+    f32x4.extract_lane 0
+    f32x4.splat)
+  (func (;4;) (type 0) (param v128) (result v128)
+    local.get 0
+    i64x2.extract_lane 0
+    i64x2.splat)
+  (func (;5;) (type 0) (param v128) (result v128)
+    local.get 0
+    f64x2.extract_lane 0
+    f64x2.splat)
+  (func (;6;) (type 1) (param v128 i32 v128 i32) (result v128)
+    local.get 0
+    local.get 1
+    i8x16.replace_lane 0
+    local.get 2
+    local.get 3
+    i8x16.replace_lane 15
+    i8x16.add)
+  (func (;7;) (type 1) (param v128 i32 v128 i32) (result v128)
+    local.get 0
+    local.get 1
+    i16x8.replace_lane 0
+    local.get 2
+    local.get 3
+    i16x8.replace_lane 7
+    i16x8.add)
+  (func (;8;) (type 1) (param v128 i32 v128 i32) (result v128)
+    local.get 0
+    local.get 1
+    i32x4.replace_lane 0
+    local.get 2
+    local.get 3
+    i32x4.replace_lane 3
+    i32x4.add)
+  (func (;9;) (type 2) (param v128 i64 v128 i64) (result v128)
+    local.get 0
+    local.get 1
+    i64x2.replace_lane 0
+    local.get 2
+    local.get 3
+    i64x2.replace_lane 1
+    i64x2.add)
+  (func (;10;) (type 3) (param v128 v128 v128 v128) (result v128)
+    local.get 0
+    local.get 1
+    i8x16.swizzle
+    local.get 2
+    local.get 3
+    i8x16.swizzle
+    i8x16.add)
+  (func (;11;) (type 3) (param v128 v128 v128 v128) (result v128)
+    local.get 0
+    local.get 1
+    i8x16.shuffle 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15
+    local.get 2
+    local.get 3
+    i8x16.shuffle 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31
+    i8x16.sub)
+  (func (;12;) (type 4) (param v128 i32) (result i32)
+    local.get 0
+    local.get 1
+    i8x16.replace_lane 0
+    v128.any_true)
+  (func (;13;) (type 4) (param v128 i32) (result i32)
+    local.get 0
+    local.get 1
+    i16x8.replace_lane 0
+    v128.any_true)
+  (func (;14;) (type 4) (param v128 i32) (result i32)
+    local.get 0
+    local.get 1
+    i32x4.replace_lane 0
+    v128.any_true)
+  (func (;15;) (type 5) (param v128 i64) (result i32)
+    local.get 0
+    local.get 1
+    i64x2.replace_lane 0
+    v128.any_true)
+  (func (;16;) (type 6) (param v128 v128) (result i32)
+    local.get 0
+    local.get 1
+    i8x16.swizzle
+    i8x16.all_true)
+  (func (;17;) (type 6) (param v128 v128) (result i32)
+    local.get 0
+    local.get 1
+    i8x16.shuffle 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15
+    v128.any_true)
+  (export &quot;as-i8x16_splat-operand&quot; (func 0))
+  (export &quot;as-i16x8_splat-operand&quot; (func 1))
+  (export &quot;as-i32x4_splat-operand&quot; (func 2))
+  (export &quot;as-f32x4_splat-operand&quot; (func 3))
+  (export &quot;as-i64x2_splat-operand&quot; (func 4))
+  (export &quot;as-f64x2_splat-operand&quot; (func 5))
+  (export &quot;as-i8x16_add-operands&quot; (func 6))
+  (export &quot;as-i16x8_add-operands&quot; (func 7))
+  (export &quot;as-i32x4_add-operands&quot; (func 8))
+  (export &quot;as-i64x2_add-operands&quot; (func 9))
+  (export &quot;swizzle-as-i8x16_add-operands&quot; (func 10))
+  (export &quot;shuffle-as-i8x16_sub-operands&quot; (func 11))
+  (export &quot;as-i8x16_any_true-operand&quot; (func 12))
+  (export &quot;as-i16x8_any_true-operand&quot; (func 13))
+  (export &quot;as-i32x4_any_true-operand1&quot; (func 14))
+  (export &quot;as-i32x4_any_true-operand2&quot; (func 15))
+  (export &quot;swizzle-as-i8x16_all_true-operands&quot; (func 16))
+  (export &quot;shuffle-as-i8x16_any_true-operands&quot; (func 17)))
+</code></pre>
+    </div>
+</body>
+
+</html>

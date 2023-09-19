@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asmcc float_exprs.57</title>
+
+    <link rel="stylesheet" href="//unpkg.com/@highlightjs/cdn-assets@11.7.0/styles/github.min.css">
+    <script src="//unpkg.com/@highlightjs/cdn-assets@11.7.0/highlight.min.js"></script>
+    <script>
+        hljs.configure({
+            noHighlightRe: /^do-not-highlightme$/i,
+        });
+    </script>
+    <script>hljs.highlightAll();</script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="/_vercel/insights/script.js"></script>
+</head>
+
+<body class="text-sm p-2">
+    <h1 class="text-2xl  w-full mb-4">Anaylzer: <a href="/float_exprs.57.wasm">float_exprs.57.wasm</a></h1>
+    <div class="flex justify-evenly">
+        <pre class="p-4 overflow-scroll border-2"><code>
+float_exprs.57.wasm:	file format wasm 0x1
+
+Sections:
+
+     Type start&#x3D;0x0000000a end&#x3D;0x00000017 (size&#x3D;0x0000000d) count: 2
+ Function start&#x3D;0x00000019 end&#x3D;0x0000001c (size&#x3D;0x00000003) count: 2
+   Export start&#x3D;0x0000001e end&#x3D;0x00000059 (size&#x3D;0x0000003b) count: 2
+     Code start&#x3D;0x0000005b end&#x3D;0x00000078 (size&#x3D;0x0000001d) count: 2
+
+Section Details:
+
+Type[2]:
+ - type[0] (f32, f32) -&gt; f32
+ - type[1] (f64, f64) -&gt; f64
+Function[2]:
+ - func[0] sig&#x3D;0 &lt;f32.no_algebraic_factoring&gt;
+ - func[1] sig&#x3D;1 &lt;f64.no_algebraic_factoring&gt;
+Export[2]:
+ - func[0] &lt;f32.no_algebraic_factoring&gt; -&gt; &quot;f32.no_algebraic_factoring&quot;
+ - func[1] &lt;f64.no_algebraic_factoring&gt; -&gt; &quot;f64.no_algebraic_factoring&quot;
+Code[2]:
+ - func[0] size&#x3D;13 &lt;f32.no_algebraic_factoring&gt;
+ - func[1] size&#x3D;13 &lt;f64.no_algebraic_factoring&gt;
+
+Contents of section Type:
+000000a: 0260 027d 7d01 7d60 027c 7c01 7c         .&#x60;.}}.}&#x60;.||.|
+
+Contents of section Function:
+0000019: 0200 01                                  ...
+
+Contents of section Export:
+000001e: 021a 6633 322e 6e6f 5f61 6c67 6562 7261  ..f32.no_algebra
+000002e: 6963 5f66 6163 746f 7269 6e67 0000 1a66  ic_factoring...f
+000003e: 3634 2e6e 6f5f 616c 6765 6272 6169 635f  64.no_algebraic_
+000004e: 6661 6374 6f72 696e 6700 01              factoring..
+
+Contents of section Code:
+000005b: 020d 0020 0020 0192 2000 2001 9394 0b0d  ... . .. . .....
+000006b: 0020 0020 01a0 2000 2001 a1a2 0b         . . .. . ....
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2"><code>BeginModule(version: 1)
+  BeginTypeSection(13)
+    OnTypeCount(2)
+    OnFuncType(index: 0, params: [f32, f32], results: [f32])
+    OnFuncType(index: 1, params: [f64, f64], results: [f64])
+  EndTypeSection
+  BeginFunctionSection(3)
+    OnFunctionCount(2)
+    OnFunction(index: 0, sig_index: 0)
+    OnFunction(index: 1, sig_index: 1)
+  EndFunctionSection
+  BeginExportSection(59)
+    OnExportCount(2)
+    OnExport(index: 0, kind: func, item_index: 0, name: &quot;f32.no_algebraic_factoring&quot;)
+    OnExport(index: 1, kind: func, item_index: 1, name: &quot;f64.no_algebraic_factoring&quot;)
+  EndExportSection
+  BeginCodeSection(29)
+    OnFunctionBodyCount(2)
+    BeginFunctionBody(0, size:13)
+    OnLocalDeclCount(0)
+    EndFunctionBody(0)
+    BeginFunctionBody(1, size:13)
+    OnLocalDeclCount(0)
+    EndFunctionBody(1)
+  EndCodeSection
+EndModule
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2 do-not-highlightme"><code>00000000: 00 61 73 6D 01 00 00 00  .asm....
+00000008: 01 0D 02 60 02 7D 7D 01  ...&#x60;.}}.
+00000010: 7D 60 02 7C 7C 01 7C 03  }&#x60;.||.|.
+00000018: 03 02 00 01 07 3B 02 1A  .....;..
+00000020: 66 33 32 2E 6E 6F 5F 61  f32.no_a
+00000028: 6C 67 65 62 72 61 69 63  lgebraic
+00000030: 5F 66 61 63 74 6F 72 69  _factori
+00000038: 6E 67 00 00 1A 66 36 34  ng...f64
+00000040: 2E 6E 6F 5F 61 6C 67 65  .no_alge
+00000048: 62 72 61 69 63 5F 66 61  braic_fa
+00000050: 63 74 6F 72 69 6E 67 00  ctoring.
+00000058: 01 0A 1D 02 0D 00 20 00  ...... .
+00000060: 20 01 92 20 00 20 01 93   .. . ..
+00000068: 94 0B 0D 00 20 00 20 01  .... . .
+00000070: A0 20 00 20 01 A1 A2 0B  . . ....
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2"><code>(module
+  (type (;0;) (func (param f32 f32) (result f32)))
+  (type (;1;) (func (param f64 f64) (result f64)))
+  (func (;0;) (type 0) (param f32 f32) (result f32)
+    local.get 0
+    local.get 1
+    f32.add
+    local.get 0
+    local.get 1
+    f32.sub
+    f32.mul)
+  (func (;1;) (type 1) (param f64 f64) (result f64)
+    local.get 0
+    local.get 1
+    f64.add
+    local.get 0
+    local.get 1
+    f64.sub
+    f64.mul)
+  (export &quot;f32.no_algebraic_factoring&quot; (func 0))
+  (export &quot;f64.no_algebraic_factoring&quot; (func 1)))
+</code></pre>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asmcc simd_linking.1</title>
+
+    <link rel="stylesheet" href="//unpkg.com/@highlightjs/cdn-assets@11.7.0/styles/github.min.css">
+    <script src="//unpkg.com/@highlightjs/cdn-assets@11.7.0/highlight.min.js"></script>
+    <script>
+        hljs.configure({
+            noHighlightRe: /^do-not-highlightme$/i,
+        });
+    </script>
+    <script>hljs.highlightAll();</script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="/_vercel/insights/script.js"></script>
+</head>
+
+<body class="text-sm p-2">
+    <h1 class="text-2xl  w-full mb-4">Anaylzer: <a href="/simd_linking.1.wasm">simd_linking.1.wasm</a></h1>
+    <div class="flex justify-evenly">
+        <pre class="p-4 overflow-scroll border-2"><code>
+simd_linking.1.wasm:	file format wasm 0x1
+
+Sections:
+
+   Import start&#x3D;0x0000000a end&#x3D;0x0000001c (size&#x3D;0x00000012) count: 1
+
+Section Details:
+
+Import[1]:
+ - global[0] v128 mutable&#x3D;1 &lt;- Mv128.mg-v128
+
+Contents of section Import:
+000000a: 0105 4d76 3132 3807 6d67 2d76 3132 3803  ..Mv128.mg-v128.
+000001a: 7b01                                     {.
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2"><code>BeginModule(version: 1)
+  BeginImportSection(18)
+    OnImportCount(1)
+    OnImport(index: 0, kind: global, module: &quot;Mv128&quot;, field: &quot;mg-v128&quot;)
+    OnImportGlobal(import_index: 0, global_index: 0, type: v128, mutable: true)
+  EndImportSection
+EndModule
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2 do-not-highlightme"><code>00000000: 00 61 73 6D 01 00 00 00  .asm....
+00000008: 02 12 01 05 4D 76 31 32  ....Mv12
+00000010: 38 07 6D 67 2D 76 31 32  8.mg-v12
+00000018: 38 03 7B 01              8.{.
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2"><code>(module
+  (import &quot;Mv128&quot; &quot;mg-v128&quot; (global (;0;) (mut v128))))
+</code></pre>
+    </div>
+</body>
+
+</html>

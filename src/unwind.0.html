@@ -1,0 +1,1304 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asmcc unwind.0</title>
+
+    <link rel="stylesheet" href="//unpkg.com/@highlightjs/cdn-assets@11.7.0/styles/github.min.css">
+    <script src="//unpkg.com/@highlightjs/cdn-assets@11.7.0/highlight.min.js"></script>
+    <script>
+        hljs.configure({
+            noHighlightRe: /^do-not-highlightme$/i,
+        });
+    </script>
+    <script>hljs.highlightAll();</script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="/_vercel/insights/script.js"></script>
+</head>
+
+<body class="text-sm p-2">
+    <h1 class="text-2xl  w-full mb-4">Anaylzer: <a href="/unwind.0.wasm">unwind.0.wasm</a></h1>
+    <div class="flex justify-evenly">
+        <pre class="p-4 overflow-scroll border-2"><code>
+unwind.0.wasm:	file format wasm 0x1
+
+Sections:
+
+     Type start&#x3D;0x0000000a end&#x3D;0x00000012 (size&#x3D;0x00000008) count: 2
+ Function start&#x3D;0x00000014 end&#x3D;0x00000046 (size&#x3D;0x00000032) count: 49
+   Export start&#x3D;0x00000049 end&#x3D;0x0000055d (size&#x3D;0x00000514) count: 49
+     Code start&#x3D;0x00000560 end&#x3D;0x0000089c (size&#x3D;0x0000033c) count: 49
+
+Section Details:
+
+Type[2]:
+ - type[0] () -&gt; nil
+ - type[1] () -&gt; i32
+Function[49]:
+ - func[0] sig&#x3D;0 &lt;func-unwind-by-unreachable&gt;
+ - func[1] sig&#x3D;0 &lt;func-unwind-by-br&gt;
+ - func[2] sig&#x3D;1 &lt;func-unwind-by-br-value&gt;
+ - func[3] sig&#x3D;0 &lt;func-unwind-by-br_if&gt;
+ - func[4] sig&#x3D;1 &lt;func-unwind-by-br_if-value&gt;
+ - func[5] sig&#x3D;0 &lt;func-unwind-by-br_table&gt;
+ - func[6] sig&#x3D;1 &lt;func-unwind-by-br_table-value&gt;
+ - func[7] sig&#x3D;1 &lt;func-unwind-by-return&gt;
+ - func[8] sig&#x3D;0 &lt;block-unwind-by-unreachable&gt;
+ - func[9] sig&#x3D;1 &lt;block-unwind-by-br&gt;
+ - func[10] sig&#x3D;1 &lt;block-unwind-by-br-value&gt;
+ - func[11] sig&#x3D;1 &lt;block-unwind-by-br_if&gt;
+ - func[12] sig&#x3D;1 &lt;block-unwind-by-br_if-value&gt;
+ - func[13] sig&#x3D;1 &lt;block-unwind-by-br_table&gt;
+ - func[14] sig&#x3D;1 &lt;block-unwind-by-br_table-value&gt;
+ - func[15] sig&#x3D;1 &lt;block-unwind-by-return&gt;
+ - func[16] sig&#x3D;1 &lt;block-nested-unwind-by-unreachable&gt;
+ - func[17] sig&#x3D;1 &lt;block-nested-unwind-by-br&gt;
+ - func[18] sig&#x3D;1 &lt;block-nested-unwind-by-br-value&gt;
+ - func[19] sig&#x3D;1 &lt;block-nested-unwind-by-br_if&gt;
+ - func[20] sig&#x3D;1 &lt;block-nested-unwind-by-br_if-value&gt;
+ - func[21] sig&#x3D;1 &lt;block-nested-unwind-by-br_table&gt;
+ - func[22] sig&#x3D;1 &lt;block-nested-unwind-by-br_table-value&gt;
+ - func[23] sig&#x3D;1 &lt;block-nested-unwind-by-return&gt;
+ - func[24] sig&#x3D;1 &lt;unary-after-unreachable&gt;
+ - func[25] sig&#x3D;1 &lt;unary-after-br&gt;
+ - func[26] sig&#x3D;1 &lt;unary-after-br_if&gt;
+ - func[27] sig&#x3D;1 &lt;unary-after-br_table&gt;
+ - func[28] sig&#x3D;1 &lt;unary-after-return&gt;
+ - func[29] sig&#x3D;1 &lt;binary-after-unreachable&gt;
+ - func[30] sig&#x3D;1 &lt;binary-after-br&gt;
+ - func[31] sig&#x3D;1 &lt;binary-after-br_if&gt;
+ - func[32] sig&#x3D;1 &lt;binary-after-br_table&gt;
+ - func[33] sig&#x3D;1 &lt;binary-after-return&gt;
+ - func[34] sig&#x3D;1 &lt;select-after-unreachable&gt;
+ - func[35] sig&#x3D;1 &lt;select-after-br&gt;
+ - func[36] sig&#x3D;1 &lt;select-after-br_if&gt;
+ - func[37] sig&#x3D;1 &lt;select-after-br_table&gt;
+ - func[38] sig&#x3D;1 &lt;select-after-return&gt;
+ - func[39] sig&#x3D;1 &lt;block-value-after-unreachable&gt;
+ - func[40] sig&#x3D;1 &lt;block-value-after-br&gt;
+ - func[41] sig&#x3D;1 &lt;block-value-after-br_if&gt;
+ - func[42] sig&#x3D;1 &lt;block-value-after-br_table&gt;
+ - func[43] sig&#x3D;1 &lt;block-value-after-return&gt;
+ - func[44] sig&#x3D;1 &lt;loop-value-after-unreachable&gt;
+ - func[45] sig&#x3D;1 &lt;loop-value-after-br&gt;
+ - func[46] sig&#x3D;1 &lt;loop-value-after-br_if&gt;
+ - func[47] sig&#x3D;1 &lt;loop-value-after-br_table&gt;
+ - func[48] sig&#x3D;1 &lt;loop-value-after-return&gt;
+Export[49]:
+ - func[0] &lt;func-unwind-by-unreachable&gt; -&gt; &quot;func-unwind-by-unreachable&quot;
+ - func[1] &lt;func-unwind-by-br&gt; -&gt; &quot;func-unwind-by-br&quot;
+ - func[2] &lt;func-unwind-by-br-value&gt; -&gt; &quot;func-unwind-by-br-value&quot;
+ - func[3] &lt;func-unwind-by-br_if&gt; -&gt; &quot;func-unwind-by-br_if&quot;
+ - func[4] &lt;func-unwind-by-br_if-value&gt; -&gt; &quot;func-unwind-by-br_if-value&quot;
+ - func[5] &lt;func-unwind-by-br_table&gt; -&gt; &quot;func-unwind-by-br_table&quot;
+ - func[6] &lt;func-unwind-by-br_table-value&gt; -&gt; &quot;func-unwind-by-br_table-value&quot;
+ - func[7] &lt;func-unwind-by-return&gt; -&gt; &quot;func-unwind-by-return&quot;
+ - func[8] &lt;block-unwind-by-unreachable&gt; -&gt; &quot;block-unwind-by-unreachable&quot;
+ - func[9] &lt;block-unwind-by-br&gt; -&gt; &quot;block-unwind-by-br&quot;
+ - func[10] &lt;block-unwind-by-br-value&gt; -&gt; &quot;block-unwind-by-br-value&quot;
+ - func[11] &lt;block-unwind-by-br_if&gt; -&gt; &quot;block-unwind-by-br_if&quot;
+ - func[12] &lt;block-unwind-by-br_if-value&gt; -&gt; &quot;block-unwind-by-br_if-value&quot;
+ - func[13] &lt;block-unwind-by-br_table&gt; -&gt; &quot;block-unwind-by-br_table&quot;
+ - func[14] &lt;block-unwind-by-br_table-value&gt; -&gt; &quot;block-unwind-by-br_table-value&quot;
+ - func[15] &lt;block-unwind-by-return&gt; -&gt; &quot;block-unwind-by-return&quot;
+ - func[16] &lt;block-nested-unwind-by-unreachable&gt; -&gt; &quot;block-nested-unwind-by-unreachable&quot;
+ - func[17] &lt;block-nested-unwind-by-br&gt; -&gt; &quot;block-nested-unwind-by-br&quot;
+ - func[18] &lt;block-nested-unwind-by-br-value&gt; -&gt; &quot;block-nested-unwind-by-br-value&quot;
+ - func[19] &lt;block-nested-unwind-by-br_if&gt; -&gt; &quot;block-nested-unwind-by-br_if&quot;
+ - func[20] &lt;block-nested-unwind-by-br_if-value&gt; -&gt; &quot;block-nested-unwind-by-br_if-value&quot;
+ - func[21] &lt;block-nested-unwind-by-br_table&gt; -&gt; &quot;block-nested-unwind-by-br_table&quot;
+ - func[22] &lt;block-nested-unwind-by-br_table-value&gt; -&gt; &quot;block-nested-unwind-by-br_table-value&quot;
+ - func[23] &lt;block-nested-unwind-by-return&gt; -&gt; &quot;block-nested-unwind-by-return&quot;
+ - func[24] &lt;unary-after-unreachable&gt; -&gt; &quot;unary-after-unreachable&quot;
+ - func[25] &lt;unary-after-br&gt; -&gt; &quot;unary-after-br&quot;
+ - func[26] &lt;unary-after-br_if&gt; -&gt; &quot;unary-after-br_if&quot;
+ - func[27] &lt;unary-after-br_table&gt; -&gt; &quot;unary-after-br_table&quot;
+ - func[28] &lt;unary-after-return&gt; -&gt; &quot;unary-after-return&quot;
+ - func[29] &lt;binary-after-unreachable&gt; -&gt; &quot;binary-after-unreachable&quot;
+ - func[30] &lt;binary-after-br&gt; -&gt; &quot;binary-after-br&quot;
+ - func[31] &lt;binary-after-br_if&gt; -&gt; &quot;binary-after-br_if&quot;
+ - func[32] &lt;binary-after-br_table&gt; -&gt; &quot;binary-after-br_table&quot;
+ - func[33] &lt;binary-after-return&gt; -&gt; &quot;binary-after-return&quot;
+ - func[34] &lt;select-after-unreachable&gt; -&gt; &quot;select-after-unreachable&quot;
+ - func[35] &lt;select-after-br&gt; -&gt; &quot;select-after-br&quot;
+ - func[36] &lt;select-after-br_if&gt; -&gt; &quot;select-after-br_if&quot;
+ - func[37] &lt;select-after-br_table&gt; -&gt; &quot;select-after-br_table&quot;
+ - func[38] &lt;select-after-return&gt; -&gt; &quot;select-after-return&quot;
+ - func[39] &lt;block-value-after-unreachable&gt; -&gt; &quot;block-value-after-unreachable&quot;
+ - func[40] &lt;block-value-after-br&gt; -&gt; &quot;block-value-after-br&quot;
+ - func[41] &lt;block-value-after-br_if&gt; -&gt; &quot;block-value-after-br_if&quot;
+ - func[42] &lt;block-value-after-br_table&gt; -&gt; &quot;block-value-after-br_table&quot;
+ - func[43] &lt;block-value-after-return&gt; -&gt; &quot;block-value-after-return&quot;
+ - func[44] &lt;loop-value-after-unreachable&gt; -&gt; &quot;loop-value-after-unreachable&quot;
+ - func[45] &lt;loop-value-after-br&gt; -&gt; &quot;loop-value-after-br&quot;
+ - func[46] &lt;loop-value-after-br_if&gt; -&gt; &quot;loop-value-after-br_if&quot;
+ - func[47] &lt;loop-value-after-br_table&gt; -&gt; &quot;loop-value-after-br_table&quot;
+ - func[48] &lt;loop-value-after-return&gt; -&gt; &quot;loop-value-after-return&quot;
+Code[49]:
+ - func[0] size&#x3D;7 &lt;func-unwind-by-unreachable&gt;
+ - func[1] size&#x3D;8 &lt;func-unwind-by-br&gt;
+ - func[2] size&#x3D;10 &lt;func-unwind-by-br-value&gt;
+ - func[3] size&#x3D;12 &lt;func-unwind-by-br_if&gt;
+ - func[4] size&#x3D;14 &lt;func-unwind-by-br_if-value&gt;
+ - func[5] size&#x3D;11 &lt;func-unwind-by-br_table&gt;
+ - func[6] size&#x3D;13 &lt;func-unwind-by-br_table-value&gt;
+ - func[7] size&#x3D;9 &lt;func-unwind-by-return&gt;
+ - func[8] size&#x3D;10 &lt;block-unwind-by-unreachable&gt;
+ - func[9] size&#x3D;13 &lt;block-unwind-by-br&gt;
+ - func[10] size&#x3D;13 &lt;block-unwind-by-br-value&gt;
+ - func[11] size&#x3D;17 &lt;block-unwind-by-br_if&gt;
+ - func[12] size&#x3D;17 &lt;block-unwind-by-br_if-value&gt;
+ - func[13] size&#x3D;16 &lt;block-unwind-by-br_table&gt;
+ - func[14] size&#x3D;16 &lt;block-unwind-by-br_table-value&gt;
+ - func[15] size&#x3D;12 &lt;block-unwind-by-return&gt;
+ - func[16] size&#x3D;13 &lt;block-nested-unwind-by-unreachable&gt;
+ - func[17] size&#x3D;17 &lt;block-nested-unwind-by-br&gt;
+ - func[18] size&#x3D;16 &lt;block-nested-unwind-by-br-value&gt;
+ - func[19] size&#x3D;20 &lt;block-nested-unwind-by-br_if&gt;
+ - func[20] size&#x3D;20 &lt;block-nested-unwind-by-br_if-value&gt;
+ - func[21] size&#x3D;20 &lt;block-nested-unwind-by-br_table&gt;
+ - func[22] size&#x3D;19 &lt;block-nested-unwind-by-br_table-value&gt;
+ - func[23] size&#x3D;15 &lt;block-nested-unwind-by-return&gt;
+ - func[24] size&#x3D;9 &lt;unary-after-unreachable&gt;
+ - func[25] size&#x3D;15 &lt;unary-after-br&gt;
+ - func[26] size&#x3D;15 &lt;unary-after-br_if&gt;
+ - func[27] size&#x3D;19 &lt;unary-after-br_table&gt;
+ - func[28] size&#x3D;11 &lt;unary-after-return&gt;
+ - func[29] size&#x3D;18 &lt;binary-after-unreachable&gt;
+ - func[30] size&#x3D;24 &lt;binary-after-br&gt;
+ - func[31] size&#x3D;17 &lt;binary-after-br_if&gt;
+ - func[32] size&#x3D;27 &lt;binary-after-br_table&gt;
+ - func[33] size&#x3D;20 &lt;binary-after-return&gt;
+ - func[34] size&#x3D;20 &lt;select-after-unreachable&gt;
+ - func[35] size&#x3D;26 &lt;select-after-br&gt;
+ - func[36] size&#x3D;19 &lt;select-after-br_if&gt;
+ - func[37] size&#x3D;29 &lt;select-after-br_table&gt;
+ - func[38] size&#x3D;22 &lt;select-after-return&gt;
+ - func[39] size&#x3D;11 &lt;block-value-after-unreachable&gt;
+ - func[40] size&#x3D;14 &lt;block-value-after-br&gt;
+ - func[41] size&#x3D;14 &lt;block-value-after-br_if&gt;
+ - func[42] size&#x3D;18 &lt;block-value-after-br_table&gt;
+ - func[43] size&#x3D;13 &lt;block-value-after-return&gt;
+ - func[44] size&#x3D;11 &lt;loop-value-after-unreachable&gt;
+ - func[45] size&#x3D;17 &lt;loop-value-after-br&gt;
+ - func[46] size&#x3D;17 &lt;loop-value-after-br_if&gt;
+ - func[47] size&#x3D;21 &lt;loop-value-after-br_table&gt;
+ - func[48] size&#x3D;13 &lt;loop-value-after-return&gt;
+
+Contents of section Type:
+000000a: 0260 0000 6000 017f                      .&#x60;..&#x60;...
+
+Contents of section Function:
+0000014: 3100 0001 0001 0001 0100 0101 0101 0101  1...............
+0000024: 0101 0101 0101 0101 0101 0101 0101 0101  ................
+0000034: 0101 0101 0101 0101 0101 0101 0101 0101  ................
+0000044: 0101                                     ..
+
+Contents of section Export:
+0000049: 311a 6675 6e63 2d75 6e77 696e 642d 6279  1.func-unwind-by
+0000059: 2d75 6e72 6561 6368 6162 6c65 0000 1166  -unreachable...f
+0000069: 756e 632d 756e 7769 6e64 2d62 792d 6272  unc-unwind-by-br
+0000079: 0001 1766 756e 632d 756e 7769 6e64 2d62  ...func-unwind-b
+0000089: 792d 6272 2d76 616c 7565 0002 1466 756e  y-br-value...fun
+0000099: 632d 756e 7769 6e64 2d62 792d 6272 5f69  c-unwind-by-br_i
+00000a9: 6600 031a 6675 6e63 2d75 6e77 696e 642d  f...func-unwind-
+00000b9: 6279 2d62 725f 6966 2d76 616c 7565 0004  by-br_if-value..
+00000c9: 1766 756e 632d 756e 7769 6e64 2d62 792d  .func-unwind-by-
+00000d9: 6272 5f74 6162 6c65 0005 1d66 756e 632d  br_table...func-
+00000e9: 756e 7769 6e64 2d62 792d 6272 5f74 6162  unwind-by-br_tab
+00000f9: 6c65 2d76 616c 7565 0006 1566 756e 632d  le-value...func-
+0000109: 756e 7769 6e64 2d62 792d 7265 7475 726e  unwind-by-return
+0000119: 0007 1b62 6c6f 636b 2d75 6e77 696e 642d  ...block-unwind-
+0000129: 6279 2d75 6e72 6561 6368 6162 6c65 0008  by-unreachable..
+0000139: 1262 6c6f 636b 2d75 6e77 696e 642d 6279  .block-unwind-by
+0000149: 2d62 7200 0918 626c 6f63 6b2d 756e 7769  -br...block-unwi
+0000159: 6e64 2d62 792d 6272 2d76 616c 7565 000a  nd-by-br-value..
+0000169: 1562 6c6f 636b 2d75 6e77 696e 642d 6279  .block-unwind-by
+0000179: 2d62 725f 6966 000b 1b62 6c6f 636b 2d75  -br_if...block-u
+0000189: 6e77 696e 642d 6279 2d62 725f 6966 2d76  nwind-by-br_if-v
+0000199: 616c 7565 000c 1862 6c6f 636b 2d75 6e77  alue...block-unw
+00001a9: 696e 642d 6279 2d62 725f 7461 626c 6500  ind-by-br_table.
+00001b9: 0d1e 626c 6f63 6b2d 756e 7769 6e64 2d62  ..block-unwind-b
+00001c9: 792d 6272 5f74 6162 6c65 2d76 616c 7565  y-br_table-value
+00001d9: 000e 1662 6c6f 636b 2d75 6e77 696e 642d  ...block-unwind-
+00001e9: 6279 2d72 6574 7572 6e00 0f22 626c 6f63  by-return..&quot;bloc
+00001f9: 6b2d 6e65 7374 6564 2d75 6e77 696e 642d  k-nested-unwind-
+0000209: 6279 2d75 6e72 6561 6368 6162 6c65 0010  by-unreachable..
+0000219: 1962 6c6f 636b 2d6e 6573 7465 642d 756e  .block-nested-un
+0000229: 7769 6e64 2d62 792d 6272 0011 1f62 6c6f  wind-by-br...blo
+0000239: 636b 2d6e 6573 7465 642d 756e 7769 6e64  ck-nested-unwind
+0000249: 2d62 792d 6272 2d76 616c 7565 0012 1c62  -by-br-value...b
+0000259: 6c6f 636b 2d6e 6573 7465 642d 756e 7769  lock-nested-unwi
+0000269: 6e64 2d62 792d 6272 5f69 6600 1322 626c  nd-by-br_if..&quot;bl
+0000279: 6f63 6b2d 6e65 7374 6564 2d75 6e77 696e  ock-nested-unwin
+0000289: 642d 6279 2d62 725f 6966 2d76 616c 7565  d-by-br_if-value
+0000299: 0014 1f62 6c6f 636b 2d6e 6573 7465 642d  ...block-nested-
+00002a9: 756e 7769 6e64 2d62 792d 6272 5f74 6162  unwind-by-br_tab
+00002b9: 6c65 0015 2562 6c6f 636b 2d6e 6573 7465  le..%block-neste
+00002c9: 642d 756e 7769 6e64 2d62 792d 6272 5f74  d-unwind-by-br_t
+00002d9: 6162 6c65 2d76 616c 7565 0016 1d62 6c6f  able-value...blo
+00002e9: 636b 2d6e 6573 7465 642d 756e 7769 6e64  ck-nested-unwind
+00002f9: 2d62 792d 7265 7475 726e 0017 1775 6e61  -by-return...una
+0000309: 7279 2d61 6674 6572 2d75 6e72 6561 6368  ry-after-unreach
+0000319: 6162 6c65 0018 0e75 6e61 7279 2d61 6674  able...unary-aft
+0000329: 6572 2d62 7200 1911 756e 6172 792d 6166  er-br...unary-af
+0000339: 7465 722d 6272 5f69 6600 1a14 756e 6172  ter-br_if...unar
+0000349: 792d 6166 7465 722d 6272 5f74 6162 6c65  y-after-br_table
+0000359: 001b 1275 6e61 7279 2d61 6674 6572 2d72  ...unary-after-r
+0000369: 6574 7572 6e00 1c18 6269 6e61 7279 2d61  eturn...binary-a
+0000379: 6674 6572 2d75 6e72 6561 6368 6162 6c65  fter-unreachable
+0000389: 001d 0f62 696e 6172 792d 6166 7465 722d  ...binary-after-
+0000399: 6272 001e 1262 696e 6172 792d 6166 7465  br...binary-afte
+00003a9: 722d 6272 5f69 6600 1f15 6269 6e61 7279  r-br_if...binary
+00003b9: 2d61 6674 6572 2d62 725f 7461 626c 6500  -after-br_table.
+00003c9: 2013 6269 6e61 7279 2d61 6674 6572 2d72   .binary-after-r
+00003d9: 6574 7572 6e00 2118 7365 6c65 6374 2d61  eturn.!.select-a
+00003e9: 6674 6572 2d75 6e72 6561 6368 6162 6c65  fter-unreachable
+00003f9: 0022 0f73 656c 6563 742d 6166 7465 722d  .&quot;.select-after-
+0000409: 6272 0023 1273 656c 6563 742d 6166 7465  br.#.select-afte
+0000419: 722d 6272 5f69 6600 2415 7365 6c65 6374  r-br_if.$.select
+0000429: 2d61 6674 6572 2d62 725f 7461 626c 6500  -after-br_table.
+0000439: 2513 7365 6c65 6374 2d61 6674 6572 2d72  %.select-after-r
+0000449: 6574 7572 6e00 261d 626c 6f63 6b2d 7661  eturn.&amp;.block-va
+0000459: 6c75 652d 6166 7465 722d 756e 7265 6163  lue-after-unreac
+0000469: 6861 626c 6500 2714 626c 6f63 6b2d 7661  hable.&#x27;.block-va
+0000479: 6c75 652d 6166 7465 722d 6272 0028 1762  lue-after-br.(.b
+0000489: 6c6f 636b 2d76 616c 7565 2d61 6674 6572  lock-value-after
+0000499: 2d62 725f 6966 0029 1a62 6c6f 636b 2d76  -br_if.).block-v
+00004a9: 616c 7565 2d61 6674 6572 2d62 725f 7461  alue-after-br_ta
+00004b9: 626c 6500 2a18 626c 6f63 6b2d 7661 6c75  ble.*.block-valu
+00004c9: 652d 6166 7465 722d 7265 7475 726e 002b  e-after-return.+
+00004d9: 1c6c 6f6f 702d 7661 6c75 652d 6166 7465  .loop-value-afte
+00004e9: 722d 756e 7265 6163 6861 626c 6500 2c13  r-unreachable.,.
+00004f9: 6c6f 6f70 2d76 616c 7565 2d61 6674 6572  loop-value-after
+0000509: 2d62 7200 2d16 6c6f 6f70 2d76 616c 7565  -br.-.loop-value
+0000519: 2d61 6674 6572 2d62 725f 6966 002e 196c  -after-br_if...l
+0000529: 6f6f 702d 7661 6c75 652d 6166 7465 722d  oop-value-after-
+0000539: 6272 5f74 6162 6c65 002f 176c 6f6f 702d  br_table./.loop-
+0000549: 7661 6c75 652d 6166 7465 722d 7265 7475  value-after-retu
+0000559: 726e 0030                                rn.0
+
+Contents of section Code:
+0000560: 3107 0041 0342 0100 0b08 0041 0342 010c  1..A.B.....A.B..
+0000570: 000b 0a00 4103 4201 4109 0c00 0b0c 0041  ....A.B.A......A
+0000580: 0342 0141 010d 001a 1a0b 0e00 4103 4201  .B.A........A.B.
+0000590: 4109 4101 0d00 1a1a 0b0b 0041 0342 0141  A.A........A.B.A
+00005a0: 000e 0000 0b0d 0041 0342 0141 0941 000e  .......A.B.A.A..
+00005b0: 0000 0b09 0041 0342 0141 090f 0b0a 0002  .....A.B.A......
+00005c0: 4041 0342 0100 0b0b 0d00 0240 4103 4201  @A.B.......@A.B.
+00005d0: 0c00 0b41 090b 0d00 027f 4103 4201 4109  ...A......A.B.A.
+00005e0: 0c00 0b0b 1100 0240 4103 4201 4101 0d00  .......@A.B.A...
+00005f0: 1a1a 0b41 090b 1100 027f 4103 4201 4109  ...A......A.B.A.
+0000600: 4101 0d00 1a1a 0b0b 1000 0240 4103 4201  A..........@A.B.
+0000610: 4100 0e00 000b 4109 0b10 0002 7f41 0342  A.....A......A.B
+0000620: 0141 0941 000e 0000 0b0b 0c00 027f 4103  .A.A..........A.
+0000630: 4201 4109 0f0b 0b0d 0002 7f41 0302 4042  B.A........A..@B
+0000640: 0100 0b0b 0b11 0002 4041 0302 4042 010c  ........@A..@B..
+0000650: 010b 1a0b 4109 0b10 0002 7f41 0302 4042  ....A......A..@B
+0000660: 0141 090c 010b 0b0b 1400 0240 4103 0240  .A.........@A..@
+0000670: 4201 4101 0d01 1a0b 1a0b 4109 0b14 0002  B.A.......A.....
+0000680: 7f41 0302 4042 0141 0941 010d 011a 1a0b  .A..@B.A.A......
+0000690: 0b0b 1400 0240 4103 0240 4201 4101 0e00  .....@A..@B.A...
+00006a0: 010b 1a0b 4109 0b13 0002 7f41 0302 4042  ....A......A..@B
+00006b0: 0141 0941 010e 0001 0b0b 0b0f 0002 7f41  .A.A...........A
+00006c0: 0302 4042 0141 090f 0b0b 0b09 0043 0000  ..@B.A.......C..
+00006d0: 0000 0050 0b0f 0002 7f43 0000 0000 4109  ...P.....C....A.
+00006e0: 0c00 500b 0b0f 0002 7f42 0041 0941 010d  ..P......B.A.A..
+00006f0: 001a 500b 0b13 0002 7f43 0000 0000 4109  ..P......C....A.
+0000700: 4100 0e01 0000 500b 0b0b 0043 0000 0000  A.....P....C....
+0000710: 4109 0f50 0b12 0043 0000 0000 4400 0000  A..P...C....D...
+0000720: 0000 00f0 3f00 510b 1800 027f 4300 0000  ....?.Q.....C...
+0000730: 0044 0000 0000 0000 f03f 4109 0c00 510b  .D.......?A...Q.
+0000740: 0b11 0002 7f42 0042 0141 0941 010d 001a  .....B.B.A.A....
+0000750: 510b 0b1b 0002 7f43 0000 0000 4400 0000  Q......C....D...
+0000760: 0000 00f0 3f41 0941 000e 0000 510b 0b14  ....?A.A....Q...
+0000770: 0043 0000 0000 4400 0000 0000 00f0 3f41  .C....D.......?A
+0000780: 090f 510b 1400 4300 0000 0044 0000 0000  ..Q...C....D....
+0000790: 0000 f03f 4200 001b 0b1a 0002 7f43 0000  ...?B........C..
+00007a0: 0000 4400 0000 0000 00f0 3f42 0041 090c  ..D.......?B.A..
+00007b0: 001b 0b0b 1300 027f 4100 4101 4100 4109  ........A.A.A.A.
+00007c0: 4101 0d00 1a1b 0b0b 1d00 027f 4300 0000  A...........C...
+00007d0: 0044 0000 0000 0000 f03f 4200 4109 4100  .D.......?B.A.A.
+00007e0: 0e00 001b 0b0b 1600 4300 0000 0044 0000  ........C....D..
+00007f0: 0000 0000 f03f 4201 4109 0f1b 0b0b 0002  .....?B.A.......
+0000800: 7f43 0000 0000 000b 0b0e 0002 7f43 0000  .C...........C..
+0000810: 0000 4109 0c00 0b0b 0e00 027f 4100 4109  ..A.........A.A.
+0000820: 4101 0d00 1a0b 0b12 0002 7f43 0000 0000  A..........C....
+0000830: 4109 4100 0e01 0000 0b0b 0d00 027f 4300  A.A...........C.
+0000840: 0000 0041 090f 0b0b 0b00 037f 4300 0000  ...A........C...
+0000850: 0000 0b0b 1100 027f 037f 4300 0000 0041  ..........C....A
+0000860: 090c 010b 0b0b 1100 027f 037f 4100 4109  ............A.A.
+0000870: 4101 0d01 1a0b 0b0b 1500 027f 037f 4300  A.............C.
+0000880: 0000 0041 0941 000e 0101 010b 0b0b 0d00  ...A.A..........
+0000890: 037f 4300 0000 0041 090f 0b0b            ..C....A....
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2"><code>BeginModule(version: 1)
+  BeginTypeSection(8)
+    OnTypeCount(2)
+    OnFuncType(index: 0, params: [], results: [])
+    OnFuncType(index: 1, params: [], results: [i32])
+  EndTypeSection
+  BeginFunctionSection(50)
+    OnFunctionCount(49)
+    OnFunction(index: 0, sig_index: 0)
+    OnFunction(index: 1, sig_index: 0)
+    OnFunction(index: 2, sig_index: 1)
+    OnFunction(index: 3, sig_index: 0)
+    OnFunction(index: 4, sig_index: 1)
+    OnFunction(index: 5, sig_index: 0)
+    OnFunction(index: 6, sig_index: 1)
+    OnFunction(index: 7, sig_index: 1)
+    OnFunction(index: 8, sig_index: 0)
+    OnFunction(index: 9, sig_index: 1)
+    OnFunction(index: 10, sig_index: 1)
+    OnFunction(index: 11, sig_index: 1)
+    OnFunction(index: 12, sig_index: 1)
+    OnFunction(index: 13, sig_index: 1)
+    OnFunction(index: 14, sig_index: 1)
+    OnFunction(index: 15, sig_index: 1)
+    OnFunction(index: 16, sig_index: 1)
+    OnFunction(index: 17, sig_index: 1)
+    OnFunction(index: 18, sig_index: 1)
+    OnFunction(index: 19, sig_index: 1)
+    OnFunction(index: 20, sig_index: 1)
+    OnFunction(index: 21, sig_index: 1)
+    OnFunction(index: 22, sig_index: 1)
+    OnFunction(index: 23, sig_index: 1)
+    OnFunction(index: 24, sig_index: 1)
+    OnFunction(index: 25, sig_index: 1)
+    OnFunction(index: 26, sig_index: 1)
+    OnFunction(index: 27, sig_index: 1)
+    OnFunction(index: 28, sig_index: 1)
+    OnFunction(index: 29, sig_index: 1)
+    OnFunction(index: 30, sig_index: 1)
+    OnFunction(index: 31, sig_index: 1)
+    OnFunction(index: 32, sig_index: 1)
+    OnFunction(index: 33, sig_index: 1)
+    OnFunction(index: 34, sig_index: 1)
+    OnFunction(index: 35, sig_index: 1)
+    OnFunction(index: 36, sig_index: 1)
+    OnFunction(index: 37, sig_index: 1)
+    OnFunction(index: 38, sig_index: 1)
+    OnFunction(index: 39, sig_index: 1)
+    OnFunction(index: 40, sig_index: 1)
+    OnFunction(index: 41, sig_index: 1)
+    OnFunction(index: 42, sig_index: 1)
+    OnFunction(index: 43, sig_index: 1)
+    OnFunction(index: 44, sig_index: 1)
+    OnFunction(index: 45, sig_index: 1)
+    OnFunction(index: 46, sig_index: 1)
+    OnFunction(index: 47, sig_index: 1)
+    OnFunction(index: 48, sig_index: 1)
+  EndFunctionSection
+  BeginExportSection(1300)
+    OnExportCount(49)
+    OnExport(index: 0, kind: func, item_index: 0, name: &quot;func-unwind-by-unreachable&quot;)
+    OnExport(index: 1, kind: func, item_index: 1, name: &quot;func-unwind-by-br&quot;)
+    OnExport(index: 2, kind: func, item_index: 2, name: &quot;func-unwind-by-br-value&quot;)
+    OnExport(index: 3, kind: func, item_index: 3, name: &quot;func-unwind-by-br_if&quot;)
+    OnExport(index: 4, kind: func, item_index: 4, name: &quot;func-unwind-by-br_if-value&quot;)
+    OnExport(index: 5, kind: func, item_index: 5, name: &quot;func-unwind-by-br_table&quot;)
+    OnExport(index: 6, kind: func, item_index: 6, name: &quot;func-unwind-by-br_table-value&quot;)
+    OnExport(index: 7, kind: func, item_index: 7, name: &quot;func-unwind-by-return&quot;)
+    OnExport(index: 8, kind: func, item_index: 8, name: &quot;block-unwind-by-unreachable&quot;)
+    OnExport(index: 9, kind: func, item_index: 9, name: &quot;block-unwind-by-br&quot;)
+    OnExport(index: 10, kind: func, item_index: 10, name: &quot;block-unwind-by-br-value&quot;)
+    OnExport(index: 11, kind: func, item_index: 11, name: &quot;block-unwind-by-br_if&quot;)
+    OnExport(index: 12, kind: func, item_index: 12, name: &quot;block-unwind-by-br_if-value&quot;)
+    OnExport(index: 13, kind: func, item_index: 13, name: &quot;block-unwind-by-br_table&quot;)
+    OnExport(index: 14, kind: func, item_index: 14, name: &quot;block-unwind-by-br_table-value&quot;)
+    OnExport(index: 15, kind: func, item_index: 15, name: &quot;block-unwind-by-return&quot;)
+    OnExport(index: 16, kind: func, item_index: 16, name: &quot;block-nested-unwind-by-unreachable&quot;)
+    OnExport(index: 17, kind: func, item_index: 17, name: &quot;block-nested-unwind-by-br&quot;)
+    OnExport(index: 18, kind: func, item_index: 18, name: &quot;block-nested-unwind-by-br-value&quot;)
+    OnExport(index: 19, kind: func, item_index: 19, name: &quot;block-nested-unwind-by-br_if&quot;)
+    OnExport(index: 20, kind: func, item_index: 20, name: &quot;block-nested-unwind-by-br_if-value&quot;)
+    OnExport(index: 21, kind: func, item_index: 21, name: &quot;block-nested-unwind-by-br_table&quot;)
+    OnExport(index: 22, kind: func, item_index: 22, name: &quot;block-nested-unwind-by-br_table-value&quot;)
+    OnExport(index: 23, kind: func, item_index: 23, name: &quot;block-nested-unwind-by-return&quot;)
+    OnExport(index: 24, kind: func, item_index: 24, name: &quot;unary-after-unreachable&quot;)
+    OnExport(index: 25, kind: func, item_index: 25, name: &quot;unary-after-br&quot;)
+    OnExport(index: 26, kind: func, item_index: 26, name: &quot;unary-after-br_if&quot;)
+    OnExport(index: 27, kind: func, item_index: 27, name: &quot;unary-after-br_table&quot;)
+    OnExport(index: 28, kind: func, item_index: 28, name: &quot;unary-after-return&quot;)
+    OnExport(index: 29, kind: func, item_index: 29, name: &quot;binary-after-unreachable&quot;)
+    OnExport(index: 30, kind: func, item_index: 30, name: &quot;binary-after-br&quot;)
+    OnExport(index: 31, kind: func, item_index: 31, name: &quot;binary-after-br_if&quot;)
+    OnExport(index: 32, kind: func, item_index: 32, name: &quot;binary-after-br_table&quot;)
+    OnExport(index: 33, kind: func, item_index: 33, name: &quot;binary-after-return&quot;)
+    OnExport(index: 34, kind: func, item_index: 34, name: &quot;select-after-unreachable&quot;)
+    OnExport(index: 35, kind: func, item_index: 35, name: &quot;select-after-br&quot;)
+    OnExport(index: 36, kind: func, item_index: 36, name: &quot;select-after-br_if&quot;)
+    OnExport(index: 37, kind: func, item_index: 37, name: &quot;select-after-br_table&quot;)
+    OnExport(index: 38, kind: func, item_index: 38, name: &quot;select-after-return&quot;)
+    OnExport(index: 39, kind: func, item_index: 39, name: &quot;block-value-after-unreachable&quot;)
+    OnExport(index: 40, kind: func, item_index: 40, name: &quot;block-value-after-br&quot;)
+    OnExport(index: 41, kind: func, item_index: 41, name: &quot;block-value-after-br_if&quot;)
+    OnExport(index: 42, kind: func, item_index: 42, name: &quot;block-value-after-br_table&quot;)
+    OnExport(index: 43, kind: func, item_index: 43, name: &quot;block-value-after-return&quot;)
+    OnExport(index: 44, kind: func, item_index: 44, name: &quot;loop-value-after-unreachable&quot;)
+    OnExport(index: 45, kind: func, item_index: 45, name: &quot;loop-value-after-br&quot;)
+    OnExport(index: 46, kind: func, item_index: 46, name: &quot;loop-value-after-br_if&quot;)
+    OnExport(index: 47, kind: func, item_index: 47, name: &quot;loop-value-after-br_table&quot;)
+    OnExport(index: 48, kind: func, item_index: 48, name: &quot;loop-value-after-return&quot;)
+  EndExportSection
+  BeginCodeSection(828)
+    OnFunctionBodyCount(49)
+    BeginFunctionBody(0, size:7)
+    OnLocalDeclCount(0)
+    EndFunctionBody(0)
+    BeginFunctionBody(1, size:8)
+    OnLocalDeclCount(0)
+    EndFunctionBody(1)
+    BeginFunctionBody(2, size:10)
+    OnLocalDeclCount(0)
+    EndFunctionBody(2)
+    BeginFunctionBody(3, size:12)
+    OnLocalDeclCount(0)
+    EndFunctionBody(3)
+    BeginFunctionBody(4, size:14)
+    OnLocalDeclCount(0)
+    EndFunctionBody(4)
+    BeginFunctionBody(5, size:11)
+    OnLocalDeclCount(0)
+    EndFunctionBody(5)
+    BeginFunctionBody(6, size:13)
+    OnLocalDeclCount(0)
+    EndFunctionBody(6)
+    BeginFunctionBody(7, size:9)
+    OnLocalDeclCount(0)
+    EndFunctionBody(7)
+    BeginFunctionBody(8, size:10)
+    OnLocalDeclCount(0)
+    EndFunctionBody(8)
+    BeginFunctionBody(9, size:13)
+    OnLocalDeclCount(0)
+    EndFunctionBody(9)
+    BeginFunctionBody(10, size:13)
+    OnLocalDeclCount(0)
+    EndFunctionBody(10)
+    BeginFunctionBody(11, size:17)
+    OnLocalDeclCount(0)
+    EndFunctionBody(11)
+    BeginFunctionBody(12, size:17)
+    OnLocalDeclCount(0)
+    EndFunctionBody(12)
+    BeginFunctionBody(13, size:16)
+    OnLocalDeclCount(0)
+    EndFunctionBody(13)
+    BeginFunctionBody(14, size:16)
+    OnLocalDeclCount(0)
+    EndFunctionBody(14)
+    BeginFunctionBody(15, size:12)
+    OnLocalDeclCount(0)
+    EndFunctionBody(15)
+    BeginFunctionBody(16, size:13)
+    OnLocalDeclCount(0)
+    EndFunctionBody(16)
+    BeginFunctionBody(17, size:17)
+    OnLocalDeclCount(0)
+    EndFunctionBody(17)
+    BeginFunctionBody(18, size:16)
+    OnLocalDeclCount(0)
+    EndFunctionBody(18)
+    BeginFunctionBody(19, size:20)
+    OnLocalDeclCount(0)
+    EndFunctionBody(19)
+    BeginFunctionBody(20, size:20)
+    OnLocalDeclCount(0)
+    EndFunctionBody(20)
+    BeginFunctionBody(21, size:20)
+    OnLocalDeclCount(0)
+    EndFunctionBody(21)
+    BeginFunctionBody(22, size:19)
+    OnLocalDeclCount(0)
+    EndFunctionBody(22)
+    BeginFunctionBody(23, size:15)
+    OnLocalDeclCount(0)
+    EndFunctionBody(23)
+    BeginFunctionBody(24, size:9)
+    OnLocalDeclCount(0)
+    EndFunctionBody(24)
+    BeginFunctionBody(25, size:15)
+    OnLocalDeclCount(0)
+    EndFunctionBody(25)
+    BeginFunctionBody(26, size:15)
+    OnLocalDeclCount(0)
+    EndFunctionBody(26)
+    BeginFunctionBody(27, size:19)
+    OnLocalDeclCount(0)
+    EndFunctionBody(27)
+    BeginFunctionBody(28, size:11)
+    OnLocalDeclCount(0)
+    EndFunctionBody(28)
+    BeginFunctionBody(29, size:18)
+    OnLocalDeclCount(0)
+    EndFunctionBody(29)
+    BeginFunctionBody(30, size:24)
+    OnLocalDeclCount(0)
+    EndFunctionBody(30)
+    BeginFunctionBody(31, size:17)
+    OnLocalDeclCount(0)
+    EndFunctionBody(31)
+    BeginFunctionBody(32, size:27)
+    OnLocalDeclCount(0)
+    EndFunctionBody(32)
+    BeginFunctionBody(33, size:20)
+    OnLocalDeclCount(0)
+    EndFunctionBody(33)
+    BeginFunctionBody(34, size:20)
+    OnLocalDeclCount(0)
+    EndFunctionBody(34)
+    BeginFunctionBody(35, size:26)
+    OnLocalDeclCount(0)
+    EndFunctionBody(35)
+    BeginFunctionBody(36, size:19)
+    OnLocalDeclCount(0)
+    EndFunctionBody(36)
+    BeginFunctionBody(37, size:29)
+    OnLocalDeclCount(0)
+    EndFunctionBody(37)
+    BeginFunctionBody(38, size:22)
+    OnLocalDeclCount(0)
+    EndFunctionBody(38)
+    BeginFunctionBody(39, size:11)
+    OnLocalDeclCount(0)
+    EndFunctionBody(39)
+    BeginFunctionBody(40, size:14)
+    OnLocalDeclCount(0)
+    EndFunctionBody(40)
+    BeginFunctionBody(41, size:14)
+    OnLocalDeclCount(0)
+    EndFunctionBody(41)
+    BeginFunctionBody(42, size:18)
+    OnLocalDeclCount(0)
+    EndFunctionBody(42)
+    BeginFunctionBody(43, size:13)
+    OnLocalDeclCount(0)
+    EndFunctionBody(43)
+    BeginFunctionBody(44, size:11)
+    OnLocalDeclCount(0)
+    EndFunctionBody(44)
+    BeginFunctionBody(45, size:17)
+    OnLocalDeclCount(0)
+    EndFunctionBody(45)
+    BeginFunctionBody(46, size:17)
+    OnLocalDeclCount(0)
+    EndFunctionBody(46)
+    BeginFunctionBody(47, size:21)
+    OnLocalDeclCount(0)
+    EndFunctionBody(47)
+    BeginFunctionBody(48, size:13)
+    OnLocalDeclCount(0)
+    EndFunctionBody(48)
+  EndCodeSection
+EndModule
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2 do-not-highlightme"><code>00000000: 00 61 73 6D 01 00 00 00  .asm....
+00000008: 01 08 02 60 00 00 60 00  ...&#x60;..&#x60;.
+00000010: 01 7F 03 32 31 00 00 01  ...21...
+00000018: 00 01 00 01 01 00 01 01  ........
+00000020: 01 01 01 01 01 01 01 01  ........
+00000028: 01 01 01 01 01 01 01 01  ........
+00000030: 01 01 01 01 01 01 01 01  ........
+00000038: 01 01 01 01 01 01 01 01  ........
+00000040: 01 01 01 01 01 01 07 94  ........
+00000048: 0A 31 1A 66 75 6E 63 2D  .1.func-
+00000050: 75 6E 77 69 6E 64 2D 62  unwind-b
+00000058: 79 2D 75 6E 72 65 61 63  y-unreac
+00000060: 68 61 62 6C 65 00 00 11  hable...
+00000068: 66 75 6E 63 2D 75 6E 77  func-unw
+00000070: 69 6E 64 2D 62 79 2D 62  ind-by-b
+00000078: 72 00 01 17 66 75 6E 63  r...func
+00000080: 2D 75 6E 77 69 6E 64 2D  -unwind-
+00000088: 62 79 2D 62 72 2D 76 61  by-br-va
+00000090: 6C 75 65 00 02 14 66 75  lue...fu
+00000098: 6E 63 2D 75 6E 77 69 6E  nc-unwin
+000000a0: 64 2D 62 79 2D 62 72 5F  d-by-br_
+000000a8: 69 66 00 03 1A 66 75 6E  if...fun
+000000b0: 63 2D 75 6E 77 69 6E 64  c-unwind
+000000b8: 2D 62 79 2D 62 72 5F 69  -by-br_i
+000000c0: 66 2D 76 61 6C 75 65 00  f-value.
+000000c8: 04 17 66 75 6E 63 2D 75  ..func-u
+000000d0: 6E 77 69 6E 64 2D 62 79  nwind-by
+000000d8: 2D 62 72 5F 74 61 62 6C  -br_tabl
+000000e0: 65 00 05 1D 66 75 6E 63  e...func
+000000e8: 2D 75 6E 77 69 6E 64 2D  -unwind-
+000000f0: 62 79 2D 62 72 5F 74 61  by-br_ta
+000000f8: 62 6C 65 2D 76 61 6C 75  ble-valu
+00000100: 65 00 06 15 66 75 6E 63  e...func
+00000108: 2D 75 6E 77 69 6E 64 2D  -unwind-
+00000110: 62 79 2D 72 65 74 75 72  by-retur
+00000118: 6E 00 07 1B 62 6C 6F 63  n...bloc
+00000120: 6B 2D 75 6E 77 69 6E 64  k-unwind
+00000128: 2D 62 79 2D 75 6E 72 65  -by-unre
+00000130: 61 63 68 61 62 6C 65 00  achable.
+00000138: 08 12 62 6C 6F 63 6B 2D  ..block-
+00000140: 75 6E 77 69 6E 64 2D 62  unwind-b
+00000148: 79 2D 62 72 00 09 18 62  y-br...b
+00000150: 6C 6F 63 6B 2D 75 6E 77  lock-unw
+00000158: 69 6E 64 2D 62 79 2D 62  ind-by-b
+00000160: 72 2D 76 61 6C 75 65 00  r-value.
+00000168: 0A 15 62 6C 6F 63 6B 2D  ..block-
+00000170: 75 6E 77 69 6E 64 2D 62  unwind-b
+00000178: 79 2D 62 72 5F 69 66 00  y-br_if.
+00000180: 0B 1B 62 6C 6F 63 6B 2D  ..block-
+00000188: 75 6E 77 69 6E 64 2D 62  unwind-b
+00000190: 79 2D 62 72 5F 69 66 2D  y-br_if-
+00000198: 76 61 6C 75 65 00 0C 18  value...
+000001a0: 62 6C 6F 63 6B 2D 75 6E  block-un
+000001a8: 77 69 6E 64 2D 62 79 2D  wind-by-
+000001b0: 62 72 5F 74 61 62 6C 65  br_table
+000001b8: 00 0D 1E 62 6C 6F 63 6B  ...block
+000001c0: 2D 75 6E 77 69 6E 64 2D  -unwind-
+000001c8: 62 79 2D 62 72 5F 74 61  by-br_ta
+000001d0: 62 6C 65 2D 76 61 6C 75  ble-valu
+000001d8: 65 00 0E 16 62 6C 6F 63  e...bloc
+000001e0: 6B 2D 75 6E 77 69 6E 64  k-unwind
+000001e8: 2D 62 79 2D 72 65 74 75  -by-retu
+000001f0: 72 6E 00 0F 22 62 6C 6F  rn..&quot;blo
+000001f8: 63 6B 2D 6E 65 73 74 65  ck-neste
+00000200: 64 2D 75 6E 77 69 6E 64  d-unwind
+00000208: 2D 62 79 2D 75 6E 72 65  -by-unre
+00000210: 61 63 68 61 62 6C 65 00  achable.
+00000218: 10 19 62 6C 6F 63 6B 2D  ..block-
+00000220: 6E 65 73 74 65 64 2D 75  nested-u
+00000228: 6E 77 69 6E 64 2D 62 79  nwind-by
+00000230: 2D 62 72 00 11 1F 62 6C  -br...bl
+00000238: 6F 63 6B 2D 6E 65 73 74  ock-nest
+00000240: 65 64 2D 75 6E 77 69 6E  ed-unwin
+00000248: 64 2D 62 79 2D 62 72 2D  d-by-br-
+00000250: 76 61 6C 75 65 00 12 1C  value...
+00000258: 62 6C 6F 63 6B 2D 6E 65  block-ne
+00000260: 73 74 65 64 2D 75 6E 77  sted-unw
+00000268: 69 6E 64 2D 62 79 2D 62  ind-by-b
+00000270: 72 5F 69 66 00 13 22 62  r_if..&quot;b
+00000278: 6C 6F 63 6B 2D 6E 65 73  lock-nes
+00000280: 74 65 64 2D 75 6E 77 69  ted-unwi
+00000288: 6E 64 2D 62 79 2D 62 72  nd-by-br
+00000290: 5F 69 66 2D 76 61 6C 75  _if-valu
+00000298: 65 00 14 1F 62 6C 6F 63  e...bloc
+000002a0: 6B 2D 6E 65 73 74 65 64  k-nested
+000002a8: 2D 75 6E 77 69 6E 64 2D  -unwind-
+000002b0: 62 79 2D 62 72 5F 74 61  by-br_ta
+000002b8: 62 6C 65 00 15 25 62 6C  ble..%bl
+000002c0: 6F 63 6B 2D 6E 65 73 74  ock-nest
+000002c8: 65 64 2D 75 6E 77 69 6E  ed-unwin
+000002d0: 64 2D 62 79 2D 62 72 5F  d-by-br_
+000002d8: 74 61 62 6C 65 2D 76 61  table-va
+000002e0: 6C 75 65 00 16 1D 62 6C  lue...bl
+000002e8: 6F 63 6B 2D 6E 65 73 74  ock-nest
+000002f0: 65 64 2D 75 6E 77 69 6E  ed-unwin
+000002f8: 64 2D 62 79 2D 72 65 74  d-by-ret
+00000300: 75 72 6E 00 17 17 75 6E  urn...un
+00000308: 61 72 79 2D 61 66 74 65  ary-afte
+00000310: 72 2D 75 6E 72 65 61 63  r-unreac
+00000318: 68 61 62 6C 65 00 18 0E  hable...
+00000320: 75 6E 61 72 79 2D 61 66  unary-af
+00000328: 74 65 72 2D 62 72 00 19  ter-br..
+00000330: 11 75 6E 61 72 79 2D 61  .unary-a
+00000338: 66 74 65 72 2D 62 72 5F  fter-br_
+00000340: 69 66 00 1A 14 75 6E 61  if...una
+00000348: 72 79 2D 61 66 74 65 72  ry-after
+00000350: 2D 62 72 5F 74 61 62 6C  -br_tabl
+00000358: 65 00 1B 12 75 6E 61 72  e...unar
+00000360: 79 2D 61 66 74 65 72 2D  y-after-
+00000368: 72 65 74 75 72 6E 00 1C  return..
+00000370: 18 62 69 6E 61 72 79 2D  .binary-
+00000378: 61 66 74 65 72 2D 75 6E  after-un
+00000380: 72 65 61 63 68 61 62 6C  reachabl
+00000388: 65 00 1D 0F 62 69 6E 61  e...bina
+00000390: 72 79 2D 61 66 74 65 72  ry-after
+00000398: 2D 62 72 00 1E 12 62 69  -br...bi
+000003a0: 6E 61 72 79 2D 61 66 74  nary-aft
+000003a8: 65 72 2D 62 72 5F 69 66  er-br_if
+000003b0: 00 1F 15 62 69 6E 61 72  ...binar
+000003b8: 79 2D 61 66 74 65 72 2D  y-after-
+000003c0: 62 72 5F 74 61 62 6C 65  br_table
+000003c8: 00 20 13 62 69 6E 61 72  . .binar
+000003d0: 79 2D 61 66 74 65 72 2D  y-after-
+000003d8: 72 65 74 75 72 6E 00 21  return.!
+000003e0: 18 73 65 6C 65 63 74 2D  .select-
+000003e8: 61 66 74 65 72 2D 75 6E  after-un
+000003f0: 72 65 61 63 68 61 62 6C  reachabl
+000003f8: 65 00 22 0F 73 65 6C 65  e.&quot;.sele
+00000400: 63 74 2D 61 66 74 65 72  ct-after
+00000408: 2D 62 72 00 23 12 73 65  -br.#.se
+00000410: 6C 65 63 74 2D 61 66 74  lect-aft
+00000418: 65 72 2D 62 72 5F 69 66  er-br_if
+00000420: 00 24 15 73 65 6C 65 63  .$.selec
+00000428: 74 2D 61 66 74 65 72 2D  t-after-
+00000430: 62 72 5F 74 61 62 6C 65  br_table
+00000438: 00 25 13 73 65 6C 65 63  .%.selec
+00000440: 74 2D 61 66 74 65 72 2D  t-after-
+00000448: 72 65 74 75 72 6E 00 26  return.&amp;
+00000450: 1D 62 6C 6F 63 6B 2D 76  .block-v
+00000458: 61 6C 75 65 2D 61 66 74  alue-aft
+00000460: 65 72 2D 75 6E 72 65 61  er-unrea
+00000468: 63 68 61 62 6C 65 00 27  chable.&#x27;
+00000470: 14 62 6C 6F 63 6B 2D 76  .block-v
+00000478: 61 6C 75 65 2D 61 66 74  alue-aft
+00000480: 65 72 2D 62 72 00 28 17  er-br.(.
+00000488: 62 6C 6F 63 6B 2D 76 61  block-va
+00000490: 6C 75 65 2D 61 66 74 65  lue-afte
+00000498: 72 2D 62 72 5F 69 66 00  r-br_if.
+000004a0: 29 1A 62 6C 6F 63 6B 2D  ).block-
+000004a8: 76 61 6C 75 65 2D 61 66  value-af
+000004b0: 74 65 72 2D 62 72 5F 74  ter-br_t
+000004b8: 61 62 6C 65 00 2A 18 62  able.*.b
+000004c0: 6C 6F 63 6B 2D 76 61 6C  lock-val
+000004c8: 75 65 2D 61 66 74 65 72  ue-after
+000004d0: 2D 72 65 74 75 72 6E 00  -return.
+000004d8: 2B 1C 6C 6F 6F 70 2D 76  +.loop-v
+000004e0: 61 6C 75 65 2D 61 66 74  alue-aft
+000004e8: 65 72 2D 75 6E 72 65 61  er-unrea
+000004f0: 63 68 61 62 6C 65 00 2C  chable.,
+000004f8: 13 6C 6F 6F 70 2D 76 61  .loop-va
+00000500: 6C 75 65 2D 61 66 74 65  lue-afte
+00000508: 72 2D 62 72 00 2D 16 6C  r-br.-.l
+00000510: 6F 6F 70 2D 76 61 6C 75  oop-valu
+00000518: 65 2D 61 66 74 65 72 2D  e-after-
+00000520: 62 72 5F 69 66 00 2E 19  br_if...
+00000528: 6C 6F 6F 70 2D 76 61 6C  loop-val
+00000530: 75 65 2D 61 66 74 65 72  ue-after
+00000538: 2D 62 72 5F 74 61 62 6C  -br_tabl
+00000540: 65 00 2F 17 6C 6F 6F 70  e./.loop
+00000548: 2D 76 61 6C 75 65 2D 61  -value-a
+00000550: 66 74 65 72 2D 72 65 74  fter-ret
+00000558: 75 72 6E 00 30 0A BC 06  urn.0...
+00000560: 31 07 00 41 03 42 01 00  1..A.B..
+00000568: 0B 08 00 41 03 42 01 0C  ...A.B..
+00000570: 00 0B 0A 00 41 03 42 01  ....A.B.
+00000578: 41 09 0C 00 0B 0C 00 41  A......A
+00000580: 03 42 01 41 01 0D 00 1A  .B.A....
+00000588: 1A 0B 0E 00 41 03 42 01  ....A.B.
+00000590: 41 09 41 01 0D 00 1A 1A  A.A.....
+00000598: 0B 0B 00 41 03 42 01 41  ...A.B.A
+000005a0: 00 0E 00 00 0B 0D 00 41  .......A
+000005a8: 03 42 01 41 09 41 00 0E  .B.A.A..
+000005b0: 00 00 0B 09 00 41 03 42  .....A.B
+000005b8: 01 41 09 0F 0B 0A 00 02  .A......
+000005c0: 40 41 03 42 01 00 0B 0B  @A.B....
+000005c8: 0D 00 02 40 41 03 42 01  ...@A.B.
+000005d0: 0C 00 0B 41 09 0B 0D 00  ...A....
+000005d8: 02 7F 41 03 42 01 41 09  ..A.B.A.
+000005e0: 0C 00 0B 0B 11 00 02 40  .......@
+000005e8: 41 03 42 01 41 01 0D 00  A.B.A...
+000005f0: 1A 1A 0B 41 09 0B 11 00  ...A....
+000005f8: 02 7F 41 03 42 01 41 09  ..A.B.A.
+00000600: 41 01 0D 00 1A 1A 0B 0B  A.......
+00000608: 10 00 02 40 41 03 42 01  ...@A.B.
+00000610: 41 00 0E 00 00 0B 41 09  A.....A.
+00000618: 0B 10 00 02 7F 41 03 42  .....A.B
+00000620: 01 41 09 41 00 0E 00 00  .A.A....
+00000628: 0B 0B 0C 00 02 7F 41 03  ......A.
+00000630: 42 01 41 09 0F 0B 0B 0D  B.A.....
+00000638: 00 02 7F 41 03 02 40 42  ...A..@B
+00000640: 01 00 0B 0B 0B 11 00 02  ........
+00000648: 40 41 03 02 40 42 01 0C  @A..@B..
+00000650: 01 0B 1A 0B 41 09 0B 10  ....A...
+00000658: 00 02 7F 41 03 02 40 42  ...A..@B
+00000660: 01 41 09 0C 01 0B 0B 0B  .A......
+00000668: 14 00 02 40 41 03 02 40  ...@A..@
+00000670: 42 01 41 01 0D 01 1A 0B  B.A.....
+00000678: 1A 0B 41 09 0B 14 00 02  ..A.....
+00000680: 7F 41 03 02 40 42 01 41  .A..@B.A
+00000688: 09 41 01 0D 01 1A 1A 0B  .A......
+00000690: 0B 0B 14 00 02 40 41 03  .....@A.
+00000698: 02 40 42 01 41 01 0E 00  .@B.A...
+000006a0: 01 0B 1A 0B 41 09 0B 13  ....A...
+000006a8: 00 02 7F 41 03 02 40 42  ...A..@B
+000006b0: 01 41 09 41 01 0E 00 01  .A.A....
+000006b8: 0B 0B 0B 0F 00 02 7F 41  .......A
+000006c0: 03 02 40 42 01 41 09 0F  ..@B.A..
+000006c8: 0B 0B 0B 09 00 43 00 00  .....C..
+000006d0: 00 00 00 50 0B 0F 00 02  ...P....
+000006d8: 7F 43 00 00 00 00 41 09  .C....A.
+000006e0: 0C 00 50 0B 0B 0F 00 02  ..P.....
+000006e8: 7F 42 00 41 09 41 01 0D  .B.A.A..
+000006f0: 00 1A 50 0B 0B 13 00 02  ..P.....
+000006f8: 7F 43 00 00 00 00 41 09  .C....A.
+00000700: 41 00 0E 01 00 00 50 0B  A.....P.
+00000708: 0B 0B 00 43 00 00 00 00  ...C....
+00000710: 41 09 0F 50 0B 12 00 43  A..P...C
+00000718: 00 00 00 00 44 00 00 00  ....D...
+00000720: 00 00 00 F0 3F 00 51 0B  ....?.Q.
+00000728: 18 00 02 7F 43 00 00 00  ....C...
+00000730: 00 44 00 00 00 00 00 00  .D......
+00000738: F0 3F 41 09 0C 00 51 0B  .?A...Q.
+00000740: 0B 11 00 02 7F 42 00 42  .....B.B
+00000748: 01 41 09 41 01 0D 00 1A  .A.A....
+00000750: 51 0B 0B 1B 00 02 7F 43  Q......C
+00000758: 00 00 00 00 44 00 00 00  ....D...
+00000760: 00 00 00 F0 3F 41 09 41  ....?A.A
+00000768: 00 0E 00 00 51 0B 0B 14  ....Q...
+00000770: 00 43 00 00 00 00 44 00  .C....D.
+00000778: 00 00 00 00 00 F0 3F 41  ......?A
+00000780: 09 0F 51 0B 14 00 43 00  ..Q...C.
+00000788: 00 00 00 44 00 00 00 00  ...D....
+00000790: 00 00 F0 3F 42 00 00 1B  ...?B...
+00000798: 0B 1A 00 02 7F 43 00 00  .....C..
+000007a0: 00 00 44 00 00 00 00 00  ..D.....
+000007a8: 00 F0 3F 42 00 41 09 0C  ..?B.A..
+000007b0: 00 1B 0B 0B 13 00 02 7F  ........
+000007b8: 41 00 41 01 41 00 41 09  A.A.A.A.
+000007c0: 41 01 0D 00 1A 1B 0B 0B  A.......
+000007c8: 1D 00 02 7F 43 00 00 00  ....C...
+000007d0: 00 44 00 00 00 00 00 00  .D......
+000007d8: F0 3F 42 00 41 09 41 00  .?B.A.A.
+000007e0: 0E 00 00 1B 0B 0B 16 00  ........
+000007e8: 43 00 00 00 00 44 00 00  C....D..
+000007f0: 00 00 00 00 F0 3F 42 01  .....?B.
+000007f8: 41 09 0F 1B 0B 0B 00 02  A.......
+00000800: 7F 43 00 00 00 00 00 0B  .C......
+00000808: 0B 0E 00 02 7F 43 00 00  .....C..
+00000810: 00 00 41 09 0C 00 0B 0B  ..A.....
+00000818: 0E 00 02 7F 41 00 41 09  ....A.A.
+00000820: 41 01 0D 00 1A 0B 0B 12  A.......
+00000828: 00 02 7F 43 00 00 00 00  ...C....
+00000830: 41 09 41 00 0E 01 00 00  A.A.....
+00000838: 0B 0B 0D 00 02 7F 43 00  ......C.
+00000840: 00 00 00 41 09 0F 0B 0B  ...A....
+00000848: 0B 00 03 7F 43 00 00 00  ....C...
+00000850: 00 00 0B 0B 11 00 02 7F  ........
+00000858: 03 7F 43 00 00 00 00 41  ..C....A
+00000860: 09 0C 01 0B 0B 0B 11 00  ........
+00000868: 02 7F 03 7F 41 00 41 09  ....A.A.
+00000870: 41 01 0D 01 1A 0B 0B 0B  A.......
+00000878: 15 00 02 7F 03 7F 43 00  ......C.
+00000880: 00 00 00 41 09 41 00 0E  ...A.A..
+00000888: 01 01 01 0B 0B 0B 0D 00  ........
+00000890: 03 7F 43 00 00 00 00 41  ..C....A
+00000898: 09 0F 0B 0B              ....
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2"><code>(module
+  (type (;0;) (func))
+  (type (;1;) (func (result i32)))
+  (func (;0;) (type 0)
+    i32.const 3
+    i64.const 1
+    unreachable)
+  (func (;1;) (type 0)
+    i32.const 3
+    i64.const 1
+    br 0 (;@0;))
+  (func (;2;) (type 1) (result i32)
+    i32.const 3
+    i64.const 1
+    i32.const 9
+    br 0 (;@0;))
+  (func (;3;) (type 0)
+    i32.const 3
+    i64.const 1
+    i32.const 1
+    br_if 0 (;@0;)
+    drop
+    drop)
+  (func (;4;) (type 1) (result i32)
+    i32.const 3
+    i64.const 1
+    i32.const 9
+    i32.const 1
+    br_if 0 (;@0;)
+    drop
+    drop)
+  (func (;5;) (type 0)
+    i32.const 3
+    i64.const 1
+    i32.const 0
+    br_table 0 (;@0;))
+  (func (;6;) (type 1) (result i32)
+    i32.const 3
+    i64.const 1
+    i32.const 9
+    i32.const 0
+    br_table 0 (;@0;))
+  (func (;7;) (type 1) (result i32)
+    i32.const 3
+    i64.const 1
+    i32.const 9
+    return)
+  (func (;8;) (type 0)
+    block  ;; label &#x3D; @1
+      i32.const 3
+      i64.const 1
+      unreachable
+    end)
+  (func (;9;) (type 1) (result i32)
+    block  ;; label &#x3D; @1
+      i32.const 3
+      i64.const 1
+      br 0 (;@1;)
+    end
+    i32.const 9)
+  (func (;10;) (type 1) (result i32)
+    block (result i32)  ;; label &#x3D; @1
+      i32.const 3
+      i64.const 1
+      i32.const 9
+      br 0 (;@1;)
+    end)
+  (func (;11;) (type 1) (result i32)
+    block  ;; label &#x3D; @1
+      i32.const 3
+      i64.const 1
+      i32.const 1
+      br_if 0 (;@1;)
+      drop
+      drop
+    end
+    i32.const 9)
+  (func (;12;) (type 1) (result i32)
+    block (result i32)  ;; label &#x3D; @1
+      i32.const 3
+      i64.const 1
+      i32.const 9
+      i32.const 1
+      br_if 0 (;@1;)
+      drop
+      drop
+    end)
+  (func (;13;) (type 1) (result i32)
+    block  ;; label &#x3D; @1
+      i32.const 3
+      i64.const 1
+      i32.const 0
+      br_table 0 (;@1;)
+    end
+    i32.const 9)
+  (func (;14;) (type 1) (result i32)
+    block (result i32)  ;; label &#x3D; @1
+      i32.const 3
+      i64.const 1
+      i32.const 9
+      i32.const 0
+      br_table 0 (;@1;)
+    end)
+  (func (;15;) (type 1) (result i32)
+    block (result i32)  ;; label &#x3D; @1
+      i32.const 3
+      i64.const 1
+      i32.const 9
+      return
+    end)
+  (func (;16;) (type 1) (result i32)
+    block (result i32)  ;; label &#x3D; @1
+      i32.const 3
+      block  ;; label &#x3D; @2
+        i64.const 1
+        unreachable
+      end
+    end)
+  (func (;17;) (type 1) (result i32)
+    block  ;; label &#x3D; @1
+      i32.const 3
+      block  ;; label &#x3D; @2
+        i64.const 1
+        br 1 (;@1;)
+      end
+      drop
+    end
+    i32.const 9)
+  (func (;18;) (type 1) (result i32)
+    block (result i32)  ;; label &#x3D; @1
+      i32.const 3
+      block  ;; label &#x3D; @2
+        i64.const 1
+        i32.const 9
+        br 1 (;@1;)
+      end
+    end)
+  (func (;19;) (type 1) (result i32)
+    block  ;; label &#x3D; @1
+      i32.const 3
+      block  ;; label &#x3D; @2
+        i64.const 1
+        i32.const 1
+        br_if 1 (;@1;)
+        drop
+      end
+      drop
+    end
+    i32.const 9)
+  (func (;20;) (type 1) (result i32)
+    block (result i32)  ;; label &#x3D; @1
+      i32.const 3
+      block  ;; label &#x3D; @2
+        i64.const 1
+        i32.const 9
+        i32.const 1
+        br_if 1 (;@1;)
+        drop
+        drop
+      end
+    end)
+  (func (;21;) (type 1) (result i32)
+    block  ;; label &#x3D; @1
+      i32.const 3
+      block  ;; label &#x3D; @2
+        i64.const 1
+        i32.const 1
+        br_table 1 (;@1;)
+      end
+      drop
+    end
+    i32.const 9)
+  (func (;22;) (type 1) (result i32)
+    block (result i32)  ;; label &#x3D; @1
+      i32.const 3
+      block  ;; label &#x3D; @2
+        i64.const 1
+        i32.const 9
+        i32.const 1
+        br_table 1 (;@1;)
+      end
+    end)
+  (func (;23;) (type 1) (result i32)
+    block (result i32)  ;; label &#x3D; @1
+      i32.const 3
+      block  ;; label &#x3D; @2
+        i64.const 1
+        i32.const 9
+        return
+      end
+    end)
+  (func (;24;) (type 1) (result i32)
+    f32.const 0x0p+0 (;&#x3D;0;)
+    unreachable
+    i64.eqz)
+  (func (;25;) (type 1) (result i32)
+    block (result i32)  ;; label &#x3D; @1
+      f32.const 0x0p+0 (;&#x3D;0;)
+      i32.const 9
+      br 0 (;@1;)
+      i64.eqz
+    end)
+  (func (;26;) (type 1) (result i32)
+    block (result i32)  ;; label &#x3D; @1
+      i64.const 0
+      i32.const 9
+      i32.const 1
+      br_if 0 (;@1;)
+      drop
+      i64.eqz
+    end)
+  (func (;27;) (type 1) (result i32)
+    block (result i32)  ;; label &#x3D; @1
+      f32.const 0x0p+0 (;&#x3D;0;)
+      i32.const 9
+      i32.const 0
+      br_table 0 (;@1;) 0 (;@1;)
+      i64.eqz
+    end)
+  (func (;28;) (type 1) (result i32)
+    f32.const 0x0p+0 (;&#x3D;0;)
+    i32.const 9
+    return
+    i64.eqz)
+  (func (;29;) (type 1) (result i32)
+    f32.const 0x0p+0 (;&#x3D;0;)
+    f64.const 0x1p+0 (;&#x3D;1;)
+    unreachable
+    i64.eq)
+  (func (;30;) (type 1) (result i32)
+    block (result i32)  ;; label &#x3D; @1
+      f32.const 0x0p+0 (;&#x3D;0;)
+      f64.const 0x1p+0 (;&#x3D;1;)
+      i32.const 9
+      br 0 (;@1;)
+      i64.eq
+    end)
+  (func (;31;) (type 1) (result i32)
+    block (result i32)  ;; label &#x3D; @1
+      i64.const 0
+      i64.const 1
+      i32.const 9
+      i32.const 1
+      br_if 0 (;@1;)
+      drop
+      i64.eq
+    end)
+  (func (;32;) (type 1) (result i32)
+    block (result i32)  ;; label &#x3D; @1
+      f32.const 0x0p+0 (;&#x3D;0;)
+      f64.const 0x1p+0 (;&#x3D;1;)
+      i32.const 9
+      i32.const 0
+      br_table 0 (;@1;)
+      i64.eq
+    end)
+  (func (;33;) (type 1) (result i32)
+    f32.const 0x0p+0 (;&#x3D;0;)
+    f64.const 0x1p+0 (;&#x3D;1;)
+    i32.const 9
+    return
+    i64.eq)
+  (func (;34;) (type 1) (result i32)
+    f32.const 0x0p+0 (;&#x3D;0;)
+    f64.const 0x1p+0 (;&#x3D;1;)
+    i64.const 0
+    unreachable
+    select)
+  (func (;35;) (type 1) (result i32)
+    block (result i32)  ;; label &#x3D; @1
+      f32.const 0x0p+0 (;&#x3D;0;)
+      f64.const 0x1p+0 (;&#x3D;1;)
+      i64.const 0
+      i32.const 9
+      br 0 (;@1;)
+      select
+    end)
+  (func (;36;) (type 1) (result i32)
+    block (result i32)  ;; label &#x3D; @1
+      i32.const 0
+      i32.const 1
+      i32.const 0
+      i32.const 9
+      i32.const 1
+      br_if 0 (;@1;)
+      drop
+      select
+    end)
+  (func (;37;) (type 1) (result i32)
+    block (result i32)  ;; label &#x3D; @1
+      f32.const 0x0p+0 (;&#x3D;0;)
+      f64.const 0x1p+0 (;&#x3D;1;)
+      i64.const 0
+      i32.const 9
+      i32.const 0
+      br_table 0 (;@1;)
+      select
+    end)
+  (func (;38;) (type 1) (result i32)
+    f32.const 0x0p+0 (;&#x3D;0;)
+    f64.const 0x1p+0 (;&#x3D;1;)
+    i64.const 1
+    i32.const 9
+    return
+    select)
+  (func (;39;) (type 1) (result i32)
+    block (result i32)  ;; label &#x3D; @1
+      f32.const 0x0p+0 (;&#x3D;0;)
+      unreachable
+    end)
+  (func (;40;) (type 1) (result i32)
+    block (result i32)  ;; label &#x3D; @1
+      f32.const 0x0p+0 (;&#x3D;0;)
+      i32.const 9
+      br 0 (;@1;)
+    end)
+  (func (;41;) (type 1) (result i32)
+    block (result i32)  ;; label &#x3D; @1
+      i32.const 0
+      i32.const 9
+      i32.const 1
+      br_if 0 (;@1;)
+      drop
+    end)
+  (func (;42;) (type 1) (result i32)
+    block (result i32)  ;; label &#x3D; @1
+      f32.const 0x0p+0 (;&#x3D;0;)
+      i32.const 9
+      i32.const 0
+      br_table 0 (;@1;) 0 (;@1;)
+    end)
+  (func (;43;) (type 1) (result i32)
+    block (result i32)  ;; label &#x3D; @1
+      f32.const 0x0p+0 (;&#x3D;0;)
+      i32.const 9
+      return
+    end)
+  (func (;44;) (type 1) (result i32)
+    loop (result i32)  ;; label &#x3D; @1
+      f32.const 0x0p+0 (;&#x3D;0;)
+      unreachable
+    end)
+  (func (;45;) (type 1) (result i32)
+    block (result i32)  ;; label &#x3D; @1
+      loop (result i32)  ;; label &#x3D; @2
+        f32.const 0x0p+0 (;&#x3D;0;)
+        i32.const 9
+        br 1 (;@1;)
+      end
+    end)
+  (func (;46;) (type 1) (result i32)
+    block (result i32)  ;; label &#x3D; @1
+      loop (result i32)  ;; label &#x3D; @2
+        i32.const 0
+        i32.const 9
+        i32.const 1
+        br_if 1 (;@1;)
+        drop
+      end
+    end)
+  (func (;47;) (type 1) (result i32)
+    block (result i32)  ;; label &#x3D; @1
+      loop (result i32)  ;; label &#x3D; @2
+        f32.const 0x0p+0 (;&#x3D;0;)
+        i32.const 9
+        i32.const 0
+        br_table 1 (;@1;) 1 (;@1;)
+      end
+    end)
+  (func (;48;) (type 1) (result i32)
+    loop (result i32)  ;; label &#x3D; @1
+      f32.const 0x0p+0 (;&#x3D;0;)
+      i32.const 9
+      return
+    end)
+  (export &quot;func-unwind-by-unreachable&quot; (func 0))
+  (export &quot;func-unwind-by-br&quot; (func 1))
+  (export &quot;func-unwind-by-br-value&quot; (func 2))
+  (export &quot;func-unwind-by-br_if&quot; (func 3))
+  (export &quot;func-unwind-by-br_if-value&quot; (func 4))
+  (export &quot;func-unwind-by-br_table&quot; (func 5))
+  (export &quot;func-unwind-by-br_table-value&quot; (func 6))
+  (export &quot;func-unwind-by-return&quot; (func 7))
+  (export &quot;block-unwind-by-unreachable&quot; (func 8))
+  (export &quot;block-unwind-by-br&quot; (func 9))
+  (export &quot;block-unwind-by-br-value&quot; (func 10))
+  (export &quot;block-unwind-by-br_if&quot; (func 11))
+  (export &quot;block-unwind-by-br_if-value&quot; (func 12))
+  (export &quot;block-unwind-by-br_table&quot; (func 13))
+  (export &quot;block-unwind-by-br_table-value&quot; (func 14))
+  (export &quot;block-unwind-by-return&quot; (func 15))
+  (export &quot;block-nested-unwind-by-unreachable&quot; (func 16))
+  (export &quot;block-nested-unwind-by-br&quot; (func 17))
+  (export &quot;block-nested-unwind-by-br-value&quot; (func 18))
+  (export &quot;block-nested-unwind-by-br_if&quot; (func 19))
+  (export &quot;block-nested-unwind-by-br_if-value&quot; (func 20))
+  (export &quot;block-nested-unwind-by-br_table&quot; (func 21))
+  (export &quot;block-nested-unwind-by-br_table-value&quot; (func 22))
+  (export &quot;block-nested-unwind-by-return&quot; (func 23))
+  (export &quot;unary-after-unreachable&quot; (func 24))
+  (export &quot;unary-after-br&quot; (func 25))
+  (export &quot;unary-after-br_if&quot; (func 26))
+  (export &quot;unary-after-br_table&quot; (func 27))
+  (export &quot;unary-after-return&quot; (func 28))
+  (export &quot;binary-after-unreachable&quot; (func 29))
+  (export &quot;binary-after-br&quot; (func 30))
+  (export &quot;binary-after-br_if&quot; (func 31))
+  (export &quot;binary-after-br_table&quot; (func 32))
+  (export &quot;binary-after-return&quot; (func 33))
+  (export &quot;select-after-unreachable&quot; (func 34))
+  (export &quot;select-after-br&quot; (func 35))
+  (export &quot;select-after-br_if&quot; (func 36))
+  (export &quot;select-after-br_table&quot; (func 37))
+  (export &quot;select-after-return&quot; (func 38))
+  (export &quot;block-value-after-unreachable&quot; (func 39))
+  (export &quot;block-value-after-br&quot; (func 40))
+  (export &quot;block-value-after-br_if&quot; (func 41))
+  (export &quot;block-value-after-br_table&quot; (func 42))
+  (export &quot;block-value-after-return&quot; (func 43))
+  (export &quot;loop-value-after-unreachable&quot; (func 44))
+  (export &quot;loop-value-after-br&quot; (func 45))
+  (export &quot;loop-value-after-br_if&quot; (func 46))
+  (export &quot;loop-value-after-br_table&quot; (func 47))
+  (export &quot;loop-value-after-return&quot; (func 48)))
+</code></pre>
+    </div>
+</body>
+
+</html>

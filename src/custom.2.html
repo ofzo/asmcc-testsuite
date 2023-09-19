@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asmcc custom.2</title>
+
+    <link rel="stylesheet" href="//unpkg.com/@highlightjs/cdn-assets@11.7.0/styles/github.min.css">
+    <script src="//unpkg.com/@highlightjs/cdn-assets@11.7.0/highlight.min.js"></script>
+    <script>
+        hljs.configure({
+            noHighlightRe: /^do-not-highlightme$/i,
+        });
+    </script>
+    <script>hljs.highlightAll();</script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="/_vercel/insights/script.js"></script>
+</head>
+
+<body class="text-sm p-2">
+    <h1 class="text-2xl  w-full mb-4">Anaylzer: <a href="/custom.2.wasm">custom.2.wasm</a></h1>
+    <div class="flex justify-evenly">
+        <pre class="p-4 overflow-scroll border-2"><code>
+custom.2.wasm:	file format wasm 0x1
+
+Sections:
+
+     Type start&#x3D;0x0000000a end&#x3D;0x00000011 (size&#x3D;0x00000007) count: 1
+   Custom start&#x3D;0x00000013 end&#x3D;0x0000002d (size&#x3D;0x0000001a) &quot;custom&quot;
+ Function start&#x3D;0x0000002f end&#x3D;0x00000031 (size&#x3D;0x00000002) count: 1
+   Export start&#x3D;0x00000033 end&#x3D;0x0000003d (size&#x3D;0x0000000a) count: 1
+     Code start&#x3D;0x0000003f end&#x3D;0x00000048 (size&#x3D;0x00000009) count: 1
+   Custom start&#x3D;0x0000004a end&#x3D;0x00000065 (size&#x3D;0x0000001b) &quot;custom2&quot;
+
+Section Details:
+
+Type[1]:
+ - type[0] (i32, i32) -&gt; i32
+Custom:
+ - name: &quot;custom&quot;
+Function[1]:
+ - func[0] sig&#x3D;0 &lt;addTwo&gt;
+Export[1]:
+ - func[0] &lt;addTwo&gt; -&gt; &quot;addTwo&quot;
+Code[1]:
+ - func[0] size&#x3D;7 &lt;addTwo&gt;
+Custom:
+ - name: &quot;custom2&quot;
+
+Contents of section Type:
+000000a: 0160 027f 7f01 7f                        .&#x60;.....
+
+Contents of section Custom:
+0000013: 0663 7573 746f 6d74 6869 7320 6973 2074  .customthis is t
+0000023: 6865 2070 6179 6c6f 6164                 he payload
+
+Contents of section Function:
+000002f: 0100                                     ..
+
+Contents of section Export:
+0000033: 0106 6164 6454 776f 0000                 ..addTwo..
+
+Contents of section Code:
+000003f: 0107 0020 0020 016a 0b                   ... . .j.
+
+Contents of section Custom:
+000004a: 0763 7573 746f 6d32 7468 6973 2069 7320  .custom2this is 
+000005a: 7468 6520 7061 796c 6f61 64              the payload
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2"><code>BeginModule(version: 1)
+  BeginTypeSection(7)
+    OnTypeCount(1)
+    OnFuncType(index: 0, params: [i32, i32], results: [i32])
+  EndTypeSection
+  BeginCustomSection(&#x27;custom&#x27;, size: 26)
+    BeginGenericCustomSection(26)
+      OnGenericCustomSection(name: &quot;custom&quot;, size: 19)
+    EndGenericCustomSection
+  EndCustomSection
+  BeginFunctionSection(2)
+    OnFunctionCount(1)
+    OnFunction(index: 0, sig_index: 0)
+  EndFunctionSection
+  BeginExportSection(10)
+    OnExportCount(1)
+    OnExport(index: 0, kind: func, item_index: 0, name: &quot;addTwo&quot;)
+  EndExportSection
+  BeginCodeSection(9)
+    OnFunctionBodyCount(1)
+    BeginFunctionBody(0, size:7)
+    OnLocalDeclCount(0)
+    EndFunctionBody(0)
+  EndCodeSection
+  BeginCustomSection(&#x27;custom2&#x27;, size: 27)
+    BeginGenericCustomSection(27)
+      OnGenericCustomSection(name: &quot;custom2&quot;, size: 19)
+    EndGenericCustomSection
+  EndCustomSection
+EndModule
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2 do-not-highlightme"><code>00000000: 00 61 73 6D 01 00 00 00  .asm....
+00000008: 01 07 01 60 02 7F 7F 01  ...&#x60;....
+00000010: 7F 00 1A 06 63 75 73 74  ....cust
+00000018: 6F 6D 74 68 69 73 20 69  omthis i
+00000020: 73 20 74 68 65 20 70 61  s the pa
+00000028: 79 6C 6F 61 64 03 02 01  yload...
+00000030: 00 07 0A 01 06 61 64 64  .....add
+00000038: 54 77 6F 00 00 0A 09 01  Two.....
+00000040: 07 00 20 00 20 01 6A 0B  .. . .j.
+00000048: 00 1B 07 63 75 73 74 6F  ...custo
+00000050: 6D 32 74 68 69 73 20 69  m2this i
+00000058: 73 20 74 68 65 20 70 61  s the pa
+00000060: 79 6C 6F 61 64           yload
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2"><code>(module
+  (type (;0;) (func (param i32 i32) (result i32)))
+  (func (;0;) (type 0) (param i32 i32) (result i32)
+    local.get 0
+    local.get 1
+    i32.add)
+  (export &quot;addTwo&quot; (func 0)))
+</code></pre>
+    </div>
+</body>
+
+</html>

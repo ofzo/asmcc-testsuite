@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asmcc linking.14</title>
+
+    <link rel="stylesheet" href="//unpkg.com/@highlightjs/cdn-assets@11.7.0/styles/github.min.css">
+    <script src="//unpkg.com/@highlightjs/cdn-assets@11.7.0/highlight.min.js"></script>
+    <script>
+        hljs.configure({
+            noHighlightRe: /^do-not-highlightme$/i,
+        });
+    </script>
+    <script>hljs.highlightAll();</script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="/_vercel/insights/script.js"></script>
+</head>
+
+<body class="text-sm p-2">
+    <h1 class="text-2xl  w-full mb-4">Anaylzer: <a href="/linking.14.wasm">linking.14.wasm</a></h1>
+    <div class="flex justify-evenly">
+        <pre class="p-4 overflow-scroll border-2"><code>
+linking.14.wasm:	file format wasm 0x1
+
+Sections:
+
+   Import start&#x3D;0x0000000a end&#x3D;0x00000023 (size&#x3D;0x00000019) count: 1
+
+Section Details:
+
+Import[1]:
+ - global[0] funcref mutable&#x3D;1 &lt;- Mref_ex.g-var-extern
+
+Contents of section Import:
+000000a: 0107 4d72 6566 5f65 780c 672d 7661 722d  ..Mref_ex.g-var-
+000001a: 6578 7465 726e 0370 01                   extern.p.
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2"><code>BeginModule(version: 1)
+  BeginImportSection(25)
+    OnImportCount(1)
+    OnImport(index: 0, kind: global, module: &quot;Mref_ex&quot;, field: &quot;g-var-extern&quot;)
+    OnImportGlobal(import_index: 0, global_index: 0, type: funcref, mutable: true)
+  EndImportSection
+EndModule
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2 do-not-highlightme"><code>00000000: 00 61 73 6D 01 00 00 00  .asm....
+00000008: 02 19 01 07 4D 72 65 66  ....Mref
+00000010: 5F 65 78 0C 67 2D 76 61  _ex.g-va
+00000018: 72 2D 65 78 74 65 72 6E  r-extern
+00000020: 03 70 01                 .p.
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2"><code>(module
+  (import &quot;Mref_ex&quot; &quot;g-var-extern&quot; (global (;0;) (mut funcref))))
+</code></pre>
+    </div>
+</body>
+
+</html>

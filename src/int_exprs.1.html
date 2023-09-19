@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asmcc int_exprs.1</title>
+
+    <link rel="stylesheet" href="//unpkg.com/@highlightjs/cdn-assets@11.7.0/styles/github.min.css">
+    <script src="//unpkg.com/@highlightjs/cdn-assets@11.7.0/highlight.min.js"></script>
+    <script>
+        hljs.configure({
+            noHighlightRe: /^do-not-highlightme$/i,
+        });
+    </script>
+    <script>hljs.highlightAll();</script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="/_vercel/insights/script.js"></script>
+</head>
+
+<body class="text-sm p-2">
+    <h1 class="text-2xl  w-full mb-4">Anaylzer: <a href="/int_exprs.1.wasm">int_exprs.1.wasm</a></h1>
+    <div class="flex justify-evenly">
+        <pre class="p-4 overflow-scroll border-2"><code>
+int_exprs.1.wasm:	file format wasm 0x1
+
+Sections:
+
+     Type start&#x3D;0x0000000a end&#x3D;0x00000010 (size&#x3D;0x00000006) count: 1
+ Function start&#x3D;0x00000012 end&#x3D;0x00000014 (size&#x3D;0x00000002) count: 1
+   Export start&#x3D;0x00000016 end&#x3D;0x00000033 (size&#x3D;0x0000001d) count: 1
+     Code start&#x3D;0x00000035 end&#x3D;0x0000003d (size&#x3D;0x00000008) count: 1
+
+Section Details:
+
+Type[1]:
+ - type[0] (i64) -&gt; i64
+Function[1]:
+ - func[0] sig&#x3D;0 &lt;i64.no_fold_wrap_extend_s&gt;
+Export[1]:
+ - func[0] &lt;i64.no_fold_wrap_extend_s&gt; -&gt; &quot;i64.no_fold_wrap_extend_s&quot;
+Code[1]:
+ - func[0] size&#x3D;6 &lt;i64.no_fold_wrap_extend_s&gt;
+
+Contents of section Type:
+000000a: 0160 017e 017e                           .&#x60;.~.~
+
+Contents of section Function:
+0000012: 0100                                     ..
+
+Contents of section Export:
+0000016: 0119 6936 342e 6e6f 5f66 6f6c 645f 7772  ..i64.no_fold_wr
+0000026: 6170 5f65 7874 656e 645f 7300 00         ap_extend_s..
+
+Contents of section Code:
+0000035: 0106 0020 00a7 ac0b                      ... ....
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2"><code>BeginModule(version: 1)
+  BeginTypeSection(6)
+    OnTypeCount(1)
+    OnFuncType(index: 0, params: [i64], results: [i64])
+  EndTypeSection
+  BeginFunctionSection(2)
+    OnFunctionCount(1)
+    OnFunction(index: 0, sig_index: 0)
+  EndFunctionSection
+  BeginExportSection(29)
+    OnExportCount(1)
+    OnExport(index: 0, kind: func, item_index: 0, name: &quot;i64.no_fold_wrap_extend_s&quot;)
+  EndExportSection
+  BeginCodeSection(8)
+    OnFunctionBodyCount(1)
+    BeginFunctionBody(0, size:6)
+    OnLocalDeclCount(0)
+    EndFunctionBody(0)
+  EndCodeSection
+EndModule
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2 do-not-highlightme"><code>00000000: 00 61 73 6D 01 00 00 00  .asm....
+00000008: 01 06 01 60 01 7E 01 7E  ...&#x60;.~.~
+00000010: 03 02 01 00 07 1D 01 19  ........
+00000018: 69 36 34 2E 6E 6F 5F 66  i64.no_f
+00000020: 6F 6C 64 5F 77 72 61 70  old_wrap
+00000028: 5F 65 78 74 65 6E 64 5F  _extend_
+00000030: 73 00 00 0A 08 01 06 00  s.......
+00000038: 20 00 A7 AC 0B            ....
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2"><code>(module
+  (type (;0;) (func (param i64) (result i64)))
+  (func (;0;) (type 0) (param i64) (result i64)
+    local.get 0
+    i32.wrap_i64
+    i64.extend_i32_s)
+  (export &quot;i64.no_fold_wrap_extend_s&quot; (func 0)))
+</code></pre>
+    </div>
+</body>
+
+</html>

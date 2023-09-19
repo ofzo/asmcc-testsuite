@@ -1,0 +1,929 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asmcc align.106</title>
+
+    <link rel="stylesheet" href="//unpkg.com/@highlightjs/cdn-assets@11.7.0/styles/github.min.css">
+    <script src="//unpkg.com/@highlightjs/cdn-assets@11.7.0/highlight.min.js"></script>
+    <script>
+        hljs.configure({
+            noHighlightRe: /^do-not-highlightme$/i,
+        });
+    </script>
+    <script>hljs.highlightAll();</script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="/_vercel/insights/script.js"></script>
+</head>
+
+<body class="text-sm p-2">
+    <h1 class="text-2xl  w-full mb-4">Anaylzer: <a href="/align.106.wasm">align.106.wasm</a></h1>
+    <div class="flex justify-evenly">
+        <pre class="p-4 overflow-scroll border-2"><code>
+align.106.wasm:	file format wasm 0x1
+
+Sections:
+
+     Type start&#x3D;0x0000000a end&#x3D;0x00000021 (size&#x3D;0x00000017) count: 4
+ Function start&#x3D;0x00000023 end&#x3D;0x00000028 (size&#x3D;0x00000005) count: 4
+   Memory start&#x3D;0x0000002a end&#x3D;0x0000002d (size&#x3D;0x00000003) count: 1
+   Export start&#x3D;0x0000002f end&#x3D;0x0000007c (size&#x3D;0x0000004d) count: 4
+     Code start&#x3D;0x0000007f end&#x3D;0x000004fa (size&#x3D;0x0000047b) count: 4
+
+Section Details:
+
+Type[4]:
+ - type[0] (i32) -&gt; f32
+ - type[1] (i32) -&gt; f64
+ - type[2] (i32, i32) -&gt; i32
+ - type[3] (i32, i32) -&gt; i64
+Function[4]:
+ - func[0] sig&#x3D;0 &lt;f32_align_switch&gt;
+ - func[1] sig&#x3D;1 &lt;f64_align_switch&gt;
+ - func[2] sig&#x3D;2 &lt;i32_align_switch&gt;
+ - func[3] sig&#x3D;3 &lt;i64_align_switch&gt;
+Memory[1]:
+ - memory[0] pages: initial&#x3D;1
+Export[4]:
+ - func[0] &lt;f32_align_switch&gt; -&gt; &quot;f32_align_switch&quot;
+ - func[1] &lt;f64_align_switch&gt; -&gt; &quot;f64_align_switch&quot;
+ - func[2] &lt;i32_align_switch&gt; -&gt; &quot;i32_align_switch&quot;
+ - func[3] &lt;i64_align_switch&gt; -&gt; &quot;i64_align_switch&quot;
+Code[4]:
+ - func[0] size&#x3D;99 &lt;f32_align_switch&gt;
+ - func[1] size&#x3D;123 &lt;f64_align_switch&gt;
+ - func[2] size&#x3D;354 &lt;i32_align_switch&gt;
+ - func[3] size&#x3D;564 &lt;i64_align_switch&gt;
+
+Contents of section Type:
+000000a: 0460 017f 017d 6001 7f01 7c60 027f 7f01  .&#x60;...}&#x60;...|&#x60;....
+000001a: 7f60 027f 7f01 7e                        .&#x60;....~
+
+Contents of section Function:
+0000023: 0400 0102 03                             .....
+
+Contents of section Memory:
+000002a: 0100 01                                  ...
+
+Contents of section Export:
+000002f: 0410 6633 325f 616c 6967 6e5f 7377 6974  ..f32_align_swit
+000003f: 6368 0000 1066 3634 5f61 6c69 676e 5f73  ch...f64_align_s
+000004f: 7769 7463 6800 0110 6933 325f 616c 6967  witch...i32_alig
+000005f: 6e5f 7377 6974 6368 0002 1069 3634 5f61  n_switch...i64_a
+000006f: 6c69 676e 5f73 7769 7463 6800 03         lign_switch..
+
+Contents of section Code:
+000007f: 0463 0102 7d43 0000 2041 2101 0240 0240  .c..}C.. A!..@.@
+000008f: 0240 0240 0240 2000 0e04 0001 0203 040b  .@.@.@ .........
+000009f: 4100 2001 3802 0041 002a 0200 2102 0c03  A. .8..A.*..!...
+00000af: 0b41 0020 0138 0000 4100 2a00 0021 020c  .A. .8..A.*..!..
+00000bf: 020b 4100 2001 3801 0041 002a 0100 2102  ..A. .8..A.*..!.
+00000cf: 0c01 0b41 0020 0138 0200 4100 2a02 0021  ...A. .8..A.*..!
+00000df: 020b 2002 0b7b 0102 7c44 0000 0000 0000  .. ..{..|D......
+00000ef: 2440 2101 0240 0240 0240 0240 0240 0240  $@!..@.@.@.@.@.@
+00000ff: 2000 0e05 0001 0203 0405 0b41 0020 0139   ..........A. .9
+000010f: 0300 4100 2b03 0021 020c 040b 4100 2001  ..A.+..!....A. .
+000011f: 3900 0041 002b 0000 2102 0c03 0b41 0020  9..A.+..!....A. 
+000012f: 0139 0100 4100 2b01 0021 020c 020b 4100  .9..A.+..!....A.
+000013f: 2001 3902 0041 002b 0200 2102 0c01 0b41   .9..A.+..!....A
+000014f: 0020 0139 0300 4100 2b03 0021 020b 2002  . .9..A.+..!.. .
+000015f: 0be2 0201 027f 410a 2102 0240 0240 0240  ......A.!..@.@.@
+000016f: 0240 0240 0240 2000 0e05 0001 0203 0405  .@.@.@ .........
+000017f: 0b20 0141 0046 0440 4100 2002 3a00 0041  . .A.F.@A. .:..A
+000018f: 002c 0000 2103 0b20 0141 0146 0440 4100  .,..!.. .A.F.@A.
+000019f: 2002 3a00 0041 002c 0000 2103 0b0c 040b   .:..A.,..!.....
+00001af: 2001 4100 4604 4041 0020 023a 0000 4100   .A.F.@A. .:..A.
+00001bf: 2d00 0021 030b 2001 4101 4604 4041 0020  -..!.. .A.F.@A. 
+00001cf: 023a 0000 4100 2d00 0021 030b 0c03 0b20  .:..A.-..!..... 
+00001df: 0141 0046 0440 4100 2002 3b01 0041 002e  .A.F.@A. .;..A..
+00001ef: 0100 2103 0b20 0141 0146 0440 4100 2002  ..!.. .A.F.@A. .
+00001ff: 3b00 0041 002e 0000 2103 0b20 0141 0246  ;..A....!.. .A.F
+000020f: 0440 4100 2002 3b01 0041 002e 0100 2103  .@A. .;..A....!.
+000021f: 0b0c 020b 2001 4100 4604 4041 0020 023b  .... .A.F.@A. .;
+000022f: 0100 4100 2f01 0021 030b 2001 4101 4604  ..A./..!.. .A.F.
+000023f: 4041 0020 023b 0000 4100 2f00 0021 030b  @A. .;..A./..!..
+000024f: 2001 4102 4604 4041 0020 023b 0100 4100   .A.F.@A. .;..A.
+000025f: 2f01 0021 030b 0c01 0b20 0141 0046 0440  /..!..... .A.F.@
+000026f: 4100 2002 3602 0041 0028 0200 2103 0b20  A. .6..A.(..!.. 
+000027f: 0141 0146 0440 4100 2002 3600 0041 0028  .A.F.@A. .6..A.(
+000028f: 0000 2103 0b20 0141 0246 0440 4100 2002  ..!.. .A.F.@A. .
+000029f: 3601 0041 0028 0100 2103 0b20 0141 0446  6..A.(..!.. .A.F
+00002af: 0440 4100 2002 3602 0041 0028 0200 2103  .@A. .6..A.(..!.
+00002bf: 0b0b 2003 0bb4 0401 027e 420a 2102 0240  .. ......~B.!..@
+00002cf: 0240 0240 0240 0240 0240 0240 0240 2000  .@.@.@.@.@.@.@ .
+00002df: 0e07 0001 0203 0405 0607 0b20 0141 0046  ........... .A.F
+00002ef: 0440 4100 2002 3c00 0041 0030 0000 2103  .@A. .&lt;..A.0..!.
+00002ff: 0b20 0141 0146 0440 4100 2002 3c00 0041  . .A.F.@A. .&lt;..A
+000030f: 0030 0000 2103 0b0c 060b 2001 4100 4604  .0..!..... .A.F.
+000031f: 4041 0020 023c 0000 4100 3100 0021 030b  @A. .&lt;..A.1..!..
+000032f: 2001 4101 4604 4041 0020 023c 0000 4100   .A.F.@A. .&lt;..A.
+000033f: 3100 0021 030b 0c05 0b20 0141 0046 0440  1..!..... .A.F.@
+000034f: 4100 2002 3d01 0041 0032 0100 2103 0b20  A. .&#x3D;..A.2..!.. 
+000035f: 0141 0146 0440 4100 2002 3d00 0041 0032  .A.F.@A. .&#x3D;..A.2
+000036f: 0000 2103 0b20 0141 0246 0440 4100 2002  ..!.. .A.F.@A. .
+000037f: 3d01 0041 0032 0100 2103 0b0c 040b 2001  &#x3D;..A.2..!..... .
+000038f: 4100 4604 4041 0020 023d 0100 4100 3301  A.F.@A. .&#x3D;..A.3.
+000039f: 0021 030b 2001 4101 4604 4041 0020 023d  .!.. .A.F.@A. .&#x3D;
+00003af: 0000 4100 3300 0021 030b 2001 4102 4604  ..A.3..!.. .A.F.
+00003bf: 4041 0020 023d 0100 4100 3301 0021 030b  @A. .&#x3D;..A.3..!..
+00003cf: 0c03 0b20 0141 0046 0440 4100 2002 3e02  ... .A.F.@A. .&gt;.
+00003df: 0041 0034 0200 2103 0b20 0141 0146 0440  .A.4..!.. .A.F.@
+00003ef: 4100 2002 3e00 0041 0034 0000 2103 0b20  A. .&gt;..A.4..!.. 
+00003ff: 0141 0246 0440 4100 2002 3e01 0041 0034  .A.F.@A. .&gt;..A.4
+000040f: 0100 2103 0b20 0141 0446 0440 4100 2002  ..!.. .A.F.@A. .
+000041f: 3e02 0041 0034 0200 2103 0b0c 020b 2001  &gt;..A.4..!..... .
+000042f: 4100 4604 4041 0020 023e 0200 4100 3502  A.F.@A. .&gt;..A.5.
+000043f: 0021 030b 2001 4101 4604 4041 0020 023e  .!.. .A.F.@A. .&gt;
+000044f: 0000 4100 3500 0021 030b 2001 4102 4604  ..A.5..!.. .A.F.
+000045f: 4041 0020 023e 0100 4100 3501 0021 030b  @A. .&gt;..A.5..!..
+000046f: 2001 4104 4604 4041 0020 023e 0200 4100   .A.F.@A. .&gt;..A.
+000047f: 3502 0021 030b 0c01 0b20 0141 0046 0440  5..!..... .A.F.@
+000048f: 4100 2002 3703 0041 0029 0300 2103 0b20  A. .7..A.)..!.. 
+000049f: 0141 0146 0440 4100 2002 3700 0041 0029  .A.F.@A. .7..A.)
+00004af: 0000 2103 0b20 0141 0246 0440 4100 2002  ..!.. .A.F.@A. .
+00004bf: 3701 0041 0029 0100 2103 0b20 0141 0446  7..A.)..!.. .A.F
+00004cf: 0440 4100 2002 3702 0041 0029 0200 2103  .@A. .7..A.)..!.
+00004df: 0b20 0141 0846 0440 4100 2002 3703 0041  . .A.F.@A. .7..A
+00004ef: 0029 0300 2103 0b0b 2003 0b              .)..!... ..
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2"><code>BeginModule(version: 1)
+  BeginTypeSection(23)
+    OnTypeCount(4)
+    OnFuncType(index: 0, params: [i32], results: [f32])
+    OnFuncType(index: 1, params: [i32], results: [f64])
+    OnFuncType(index: 2, params: [i32, i32], results: [i32])
+    OnFuncType(index: 3, params: [i32, i32], results: [i64])
+  EndTypeSection
+  BeginFunctionSection(5)
+    OnFunctionCount(4)
+    OnFunction(index: 0, sig_index: 0)
+    OnFunction(index: 1, sig_index: 1)
+    OnFunction(index: 2, sig_index: 2)
+    OnFunction(index: 3, sig_index: 3)
+  EndFunctionSection
+  BeginMemorySection(3)
+    OnMemoryCount(1)
+    OnMemory(index: 0, initial: 1)
+  EndMemorySection
+  BeginExportSection(77)
+    OnExportCount(4)
+    OnExport(index: 0, kind: func, item_index: 0, name: &quot;f32_align_switch&quot;)
+    OnExport(index: 1, kind: func, item_index: 1, name: &quot;f64_align_switch&quot;)
+    OnExport(index: 2, kind: func, item_index: 2, name: &quot;i32_align_switch&quot;)
+    OnExport(index: 3, kind: func, item_index: 3, name: &quot;i64_align_switch&quot;)
+  EndExportSection
+  BeginCodeSection(1147)
+    OnFunctionBodyCount(4)
+    BeginFunctionBody(0, size:99)
+    OnLocalDeclCount(1)
+    OnLocalDecl(index: 0, count: 2, type: f32)
+    EndFunctionBody(0)
+    BeginFunctionBody(1, size:123)
+    OnLocalDeclCount(1)
+    OnLocalDecl(index: 0, count: 2, type: f64)
+    EndFunctionBody(1)
+    BeginFunctionBody(2, size:354)
+    OnLocalDeclCount(1)
+    OnLocalDecl(index: 0, count: 2, type: i32)
+    EndFunctionBody(2)
+    BeginFunctionBody(3, size:564)
+    OnLocalDeclCount(1)
+    OnLocalDecl(index: 0, count: 2, type: i64)
+    EndFunctionBody(3)
+  EndCodeSection
+EndModule
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2 do-not-highlightme"><code>00000000: 00 61 73 6D 01 00 00 00  .asm....
+00000008: 01 17 04 60 01 7F 01 7D  ...&#x60;...}
+00000010: 60 01 7F 01 7C 60 02 7F  &#x60;...|&#x60;..
+00000018: 7F 01 7F 60 02 7F 7F 01  ...&#x60;....
+00000020: 7E 03 05 04 00 01 02 03  ~.......
+00000028: 05 03 01 00 01 07 4D 04  ......M.
+00000030: 10 66 33 32 5F 61 6C 69  .f32_ali
+00000038: 67 6E 5F 73 77 69 74 63  gn_switc
+00000040: 68 00 00 10 66 36 34 5F  h...f64_
+00000048: 61 6C 69 67 6E 5F 73 77  align_sw
+00000050: 69 74 63 68 00 01 10 69  itch...i
+00000058: 33 32 5F 61 6C 69 67 6E  32_align
+00000060: 5F 73 77 69 74 63 68 00  _switch.
+00000068: 02 10 69 36 34 5F 61 6C  ..i64_al
+00000070: 69 67 6E 5F 73 77 69 74  ign_swit
+00000078: 63 68 00 03 0A FB 08 04  ch......
+00000080: 63 01 02 7D 43 00 00 20  c..}C.. 
+00000088: 41 21 01 02 40 02 40 02  A!..@.@.
+00000090: 40 02 40 02 40 20 00 0E  @.@.@ ..
+00000098: 04 00 01 02 03 04 0B 41  .......A
+000000a0: 00 20 01 38 02 00 41 00  . .8..A.
+000000a8: 2A 02 00 21 02 0C 03 0B  *..!....
+000000b0: 41 00 20 01 38 00 00 41  A. .8..A
+000000b8: 00 2A 00 00 21 02 0C 02  .*..!...
+000000c0: 0B 41 00 20 01 38 01 00  .A. .8..
+000000c8: 41 00 2A 01 00 21 02 0C  A.*..!..
+000000d0: 01 0B 41 00 20 01 38 02  ..A. .8.
+000000d8: 00 41 00 2A 02 00 21 02  .A.*..!.
+000000e0: 0B 20 02 0B 7B 01 02 7C  . ..{..|
+000000e8: 44 00 00 00 00 00 00 24  D......$
+000000f0: 40 21 01 02 40 02 40 02  @!..@.@.
+000000f8: 40 02 40 02 40 02 40 20  @.@.@.@ 
+00000100: 00 0E 05 00 01 02 03 04  ........
+00000108: 05 0B 41 00 20 01 39 03  ..A. .9.
+00000110: 00 41 00 2B 03 00 21 02  .A.+..!.
+00000118: 0C 04 0B 41 00 20 01 39  ...A. .9
+00000120: 00 00 41 00 2B 00 00 21  ..A.+..!
+00000128: 02 0C 03 0B 41 00 20 01  ....A. .
+00000130: 39 01 00 41 00 2B 01 00  9..A.+..
+00000138: 21 02 0C 02 0B 41 00 20  !....A. 
+00000140: 01 39 02 00 41 00 2B 02  .9..A.+.
+00000148: 00 21 02 0C 01 0B 41 00  .!....A.
+00000150: 20 01 39 03 00 41 00 2B   .9..A.+
+00000158: 03 00 21 02 0B 20 02 0B  ..!.. ..
+00000160: E2 02 01 02 7F 41 0A 21  .....A.!
+00000168: 02 02 40 02 40 02 40 02  ..@.@.@.
+00000170: 40 02 40 02 40 20 00 0E  @.@.@ ..
+00000178: 05 00 01 02 03 04 05 0B  ........
+00000180: 20 01 41 00 46 04 40 41   .A.F.@A
+00000188: 00 20 02 3A 00 00 41 00  . .:..A.
+00000190: 2C 00 00 21 03 0B 20 01  ,..!.. .
+00000198: 41 01 46 04 40 41 00 20  A.F.@A. 
+000001a0: 02 3A 00 00 41 00 2C 00  .:..A.,.
+000001a8: 00 21 03 0B 0C 04 0B 20  .!..... 
+000001b0: 01 41 00 46 04 40 41 00  .A.F.@A.
+000001b8: 20 02 3A 00 00 41 00 2D   .:..A.-
+000001c0: 00 00 21 03 0B 20 01 41  ..!.. .A
+000001c8: 01 46 04 40 41 00 20 02  .F.@A. .
+000001d0: 3A 00 00 41 00 2D 00 00  :..A.-..
+000001d8: 21 03 0B 0C 03 0B 20 01  !..... .
+000001e0: 41 00 46 04 40 41 00 20  A.F.@A. 
+000001e8: 02 3B 01 00 41 00 2E 01  .;..A...
+000001f0: 00 21 03 0B 20 01 41 01  .!.. .A.
+000001f8: 46 04 40 41 00 20 02 3B  F.@A. .;
+00000200: 00 00 41 00 2E 00 00 21  ..A....!
+00000208: 03 0B 20 01 41 02 46 04  .. .A.F.
+00000210: 40 41 00 20 02 3B 01 00  @A. .;..
+00000218: 41 00 2E 01 00 21 03 0B  A....!..
+00000220: 0C 02 0B 20 01 41 00 46  ... .A.F
+00000228: 04 40 41 00 20 02 3B 01  .@A. .;.
+00000230: 00 41 00 2F 01 00 21 03  .A./..!.
+00000238: 0B 20 01 41 01 46 04 40  . .A.F.@
+00000240: 41 00 20 02 3B 00 00 41  A. .;..A
+00000248: 00 2F 00 00 21 03 0B 20  ./..!.. 
+00000250: 01 41 02 46 04 40 41 00  .A.F.@A.
+00000258: 20 02 3B 01 00 41 00 2F   .;..A./
+00000260: 01 00 21 03 0B 0C 01 0B  ..!.....
+00000268: 20 01 41 00 46 04 40 41   .A.F.@A
+00000270: 00 20 02 36 02 00 41 00  . .6..A.
+00000278: 28 02 00 21 03 0B 20 01  (..!.. .
+00000280: 41 01 46 04 40 41 00 20  A.F.@A. 
+00000288: 02 36 00 00 41 00 28 00  .6..A.(.
+00000290: 00 21 03 0B 20 01 41 02  .!.. .A.
+00000298: 46 04 40 41 00 20 02 36  F.@A. .6
+000002a0: 01 00 41 00 28 01 00 21  ..A.(..!
+000002a8: 03 0B 20 01 41 04 46 04  .. .A.F.
+000002b0: 40 41 00 20 02 36 02 00  @A. .6..
+000002b8: 41 00 28 02 00 21 03 0B  A.(..!..
+000002c0: 0B 20 03 0B B4 04 01 02  . ......
+000002c8: 7E 42 0A 21 02 02 40 02  ~B.!..@.
+000002d0: 40 02 40 02 40 02 40 02  @.@.@.@.
+000002d8: 40 02 40 02 40 20 00 0E  @.@.@ ..
+000002e0: 07 00 01 02 03 04 05 06  ........
+000002e8: 07 0B 20 01 41 00 46 04  .. .A.F.
+000002f0: 40 41 00 20 02 3C 00 00  @A. .&lt;..
+000002f8: 41 00 30 00 00 21 03 0B  A.0..!..
+00000300: 20 01 41 01 46 04 40 41   .A.F.@A
+00000308: 00 20 02 3C 00 00 41 00  . .&lt;..A.
+00000310: 30 00 00 21 03 0B 0C 06  0..!....
+00000318: 0B 20 01 41 00 46 04 40  . .A.F.@
+00000320: 41 00 20 02 3C 00 00 41  A. .&lt;..A
+00000328: 00 31 00 00 21 03 0B 20  .1..!.. 
+00000330: 01 41 01 46 04 40 41 00  .A.F.@A.
+00000338: 20 02 3C 00 00 41 00 31   .&lt;..A.1
+00000340: 00 00 21 03 0B 0C 05 0B  ..!.....
+00000348: 20 01 41 00 46 04 40 41   .A.F.@A
+00000350: 00 20 02 3D 01 00 41 00  . .&#x3D;..A.
+00000358: 32 01 00 21 03 0B 20 01  2..!.. .
+00000360: 41 01 46 04 40 41 00 20  A.F.@A. 
+00000368: 02 3D 00 00 41 00 32 00  .&#x3D;..A.2.
+00000370: 00 21 03 0B 20 01 41 02  .!.. .A.
+00000378: 46 04 40 41 00 20 02 3D  F.@A. .&#x3D;
+00000380: 01 00 41 00 32 01 00 21  ..A.2..!
+00000388: 03 0B 0C 04 0B 20 01 41  ..... .A
+00000390: 00 46 04 40 41 00 20 02  .F.@A. .
+00000398: 3D 01 00 41 00 33 01 00  &#x3D;..A.3..
+000003a0: 21 03 0B 20 01 41 01 46  !.. .A.F
+000003a8: 04 40 41 00 20 02 3D 00  .@A. .&#x3D;.
+000003b0: 00 41 00 33 00 00 21 03  .A.3..!.
+000003b8: 0B 20 01 41 02 46 04 40  . .A.F.@
+000003c0: 41 00 20 02 3D 01 00 41  A. .&#x3D;..A
+000003c8: 00 33 01 00 21 03 0B 0C  .3..!...
+000003d0: 03 0B 20 01 41 00 46 04  .. .A.F.
+000003d8: 40 41 00 20 02 3E 02 00  @A. .&gt;..
+000003e0: 41 00 34 02 00 21 03 0B  A.4..!..
+000003e8: 20 01 41 01 46 04 40 41   .A.F.@A
+000003f0: 00 20 02 3E 00 00 41 00  . .&gt;..A.
+000003f8: 34 00 00 21 03 0B 20 01  4..!.. .
+00000400: 41 02 46 04 40 41 00 20  A.F.@A. 
+00000408: 02 3E 01 00 41 00 34 01  .&gt;..A.4.
+00000410: 00 21 03 0B 20 01 41 04  .!.. .A.
+00000418: 46 04 40 41 00 20 02 3E  F.@A. .&gt;
+00000420: 02 00 41 00 34 02 00 21  ..A.4..!
+00000428: 03 0B 0C 02 0B 20 01 41  ..... .A
+00000430: 00 46 04 40 41 00 20 02  .F.@A. .
+00000438: 3E 02 00 41 00 35 02 00  &gt;..A.5..
+00000440: 21 03 0B 20 01 41 01 46  !.. .A.F
+00000448: 04 40 41 00 20 02 3E 00  .@A. .&gt;.
+00000450: 00 41 00 35 00 00 21 03  .A.5..!.
+00000458: 0B 20 01 41 02 46 04 40  . .A.F.@
+00000460: 41 00 20 02 3E 01 00 41  A. .&gt;..A
+00000468: 00 35 01 00 21 03 0B 20  .5..!.. 
+00000470: 01 41 04 46 04 40 41 00  .A.F.@A.
+00000478: 20 02 3E 02 00 41 00 35   .&gt;..A.5
+00000480: 02 00 21 03 0B 0C 01 0B  ..!.....
+00000488: 20 01 41 00 46 04 40 41   .A.F.@A
+00000490: 00 20 02 37 03 00 41 00  . .7..A.
+00000498: 29 03 00 21 03 0B 20 01  )..!.. .
+000004a0: 41 01 46 04 40 41 00 20  A.F.@A. 
+000004a8: 02 37 00 00 41 00 29 00  .7..A.).
+000004b0: 00 21 03 0B 20 01 41 02  .!.. .A.
+000004b8: 46 04 40 41 00 20 02 37  F.@A. .7
+000004c0: 01 00 41 00 29 01 00 21  ..A.)..!
+000004c8: 03 0B 20 01 41 04 46 04  .. .A.F.
+000004d0: 40 41 00 20 02 37 02 00  @A. .7..
+000004d8: 41 00 29 02 00 21 03 0B  A.)..!..
+000004e0: 20 01 41 08 46 04 40 41   .A.F.@A
+000004e8: 00 20 02 37 03 00 41 00  . .7..A.
+000004f0: 29 03 00 21 03 0B 0B 20  )..!... 
+000004f8: 03 0B                    ..
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2"><code>(module
+  (type (;0;) (func (param i32) (result f32)))
+  (type (;1;) (func (param i32) (result f64)))
+  (type (;2;) (func (param i32 i32) (result i32)))
+  (type (;3;) (func (param i32 i32) (result i64)))
+  (func (;0;) (type 0) (param i32) (result f32)
+    (local f32 f32)
+    f32.const 0x1.4p+3 (;&#x3D;10;)
+    local.set 1
+    block  ;; label &#x3D; @1
+      block  ;; label &#x3D; @2
+        block  ;; label &#x3D; @3
+          block  ;; label &#x3D; @4
+            block  ;; label &#x3D; @5
+              local.get 0
+              br_table 0 (;@5;) 1 (;@4;) 2 (;@3;) 3 (;@2;) 4 (;@1;)
+            end
+            i32.const 0
+            local.get 1
+            f32.store
+            i32.const 0
+            f32.load
+            local.set 2
+            br 3 (;@1;)
+          end
+          i32.const 0
+          local.get 1
+          f32.store align&#x3D;1
+          i32.const 0
+          f32.load align&#x3D;1
+          local.set 2
+          br 2 (;@1;)
+        end
+        i32.const 0
+        local.get 1
+        f32.store align&#x3D;2
+        i32.const 0
+        f32.load align&#x3D;2
+        local.set 2
+        br 1 (;@1;)
+      end
+      i32.const 0
+      local.get 1
+      f32.store
+      i32.const 0
+      f32.load
+      local.set 2
+    end
+    local.get 2)
+  (func (;1;) (type 1) (param i32) (result f64)
+    (local f64 f64)
+    f64.const 0x1.4p+3 (;&#x3D;10;)
+    local.set 1
+    block  ;; label &#x3D; @1
+      block  ;; label &#x3D; @2
+        block  ;; label &#x3D; @3
+          block  ;; label &#x3D; @4
+            block  ;; label &#x3D; @5
+              block  ;; label &#x3D; @6
+                local.get 0
+                br_table 0 (;@6;) 1 (;@5;) 2 (;@4;) 3 (;@3;) 4 (;@2;) 5 (;@1;)
+              end
+              i32.const 0
+              local.get 1
+              f64.store
+              i32.const 0
+              f64.load
+              local.set 2
+              br 4 (;@1;)
+            end
+            i32.const 0
+            local.get 1
+            f64.store align&#x3D;1
+            i32.const 0
+            f64.load align&#x3D;1
+            local.set 2
+            br 3 (;@1;)
+          end
+          i32.const 0
+          local.get 1
+          f64.store align&#x3D;2
+          i32.const 0
+          f64.load align&#x3D;2
+          local.set 2
+          br 2 (;@1;)
+        end
+        i32.const 0
+        local.get 1
+        f64.store align&#x3D;4
+        i32.const 0
+        f64.load align&#x3D;4
+        local.set 2
+        br 1 (;@1;)
+      end
+      i32.const 0
+      local.get 1
+      f64.store
+      i32.const 0
+      f64.load
+      local.set 2
+    end
+    local.get 2)
+  (func (;2;) (type 2) (param i32 i32) (result i32)
+    (local i32 i32)
+    i32.const 10
+    local.set 2
+    block  ;; label &#x3D; @1
+      block  ;; label &#x3D; @2
+        block  ;; label &#x3D; @3
+          block  ;; label &#x3D; @4
+            block  ;; label &#x3D; @5
+              block  ;; label &#x3D; @6
+                local.get 0
+                br_table 0 (;@6;) 1 (;@5;) 2 (;@4;) 3 (;@3;) 4 (;@2;) 5 (;@1;)
+              end
+              local.get 1
+              i32.const 0
+              i32.eq
+              if  ;; label &#x3D; @6
+                i32.const 0
+                local.get 2
+                i32.store8
+                i32.const 0
+                i32.load8_s
+                local.set 3
+              end
+              local.get 1
+              i32.const 1
+              i32.eq
+              if  ;; label &#x3D; @6
+                i32.const 0
+                local.get 2
+                i32.store8
+                i32.const 0
+                i32.load8_s
+                local.set 3
+              end
+              br 4 (;@1;)
+            end
+            local.get 1
+            i32.const 0
+            i32.eq
+            if  ;; label &#x3D; @5
+              i32.const 0
+              local.get 2
+              i32.store8
+              i32.const 0
+              i32.load8_u
+              local.set 3
+            end
+            local.get 1
+            i32.const 1
+            i32.eq
+            if  ;; label &#x3D; @5
+              i32.const 0
+              local.get 2
+              i32.store8
+              i32.const 0
+              i32.load8_u
+              local.set 3
+            end
+            br 3 (;@1;)
+          end
+          local.get 1
+          i32.const 0
+          i32.eq
+          if  ;; label &#x3D; @4
+            i32.const 0
+            local.get 2
+            i32.store16
+            i32.const 0
+            i32.load16_s
+            local.set 3
+          end
+          local.get 1
+          i32.const 1
+          i32.eq
+          if  ;; label &#x3D; @4
+            i32.const 0
+            local.get 2
+            i32.store16 align&#x3D;1
+            i32.const 0
+            i32.load16_s align&#x3D;1
+            local.set 3
+          end
+          local.get 1
+          i32.const 2
+          i32.eq
+          if  ;; label &#x3D; @4
+            i32.const 0
+            local.get 2
+            i32.store16
+            i32.const 0
+            i32.load16_s
+            local.set 3
+          end
+          br 2 (;@1;)
+        end
+        local.get 1
+        i32.const 0
+        i32.eq
+        if  ;; label &#x3D; @3
+          i32.const 0
+          local.get 2
+          i32.store16
+          i32.const 0
+          i32.load16_u
+          local.set 3
+        end
+        local.get 1
+        i32.const 1
+        i32.eq
+        if  ;; label &#x3D; @3
+          i32.const 0
+          local.get 2
+          i32.store16 align&#x3D;1
+          i32.const 0
+          i32.load16_u align&#x3D;1
+          local.set 3
+        end
+        local.get 1
+        i32.const 2
+        i32.eq
+        if  ;; label &#x3D; @3
+          i32.const 0
+          local.get 2
+          i32.store16
+          i32.const 0
+          i32.load16_u
+          local.set 3
+        end
+        br 1 (;@1;)
+      end
+      local.get 1
+      i32.const 0
+      i32.eq
+      if  ;; label &#x3D; @2
+        i32.const 0
+        local.get 2
+        i32.store
+        i32.const 0
+        i32.load
+        local.set 3
+      end
+      local.get 1
+      i32.const 1
+      i32.eq
+      if  ;; label &#x3D; @2
+        i32.const 0
+        local.get 2
+        i32.store align&#x3D;1
+        i32.const 0
+        i32.load align&#x3D;1
+        local.set 3
+      end
+      local.get 1
+      i32.const 2
+      i32.eq
+      if  ;; label &#x3D; @2
+        i32.const 0
+        local.get 2
+        i32.store align&#x3D;2
+        i32.const 0
+        i32.load align&#x3D;2
+        local.set 3
+      end
+      local.get 1
+      i32.const 4
+      i32.eq
+      if  ;; label &#x3D; @2
+        i32.const 0
+        local.get 2
+        i32.store
+        i32.const 0
+        i32.load
+        local.set 3
+      end
+    end
+    local.get 3)
+  (func (;3;) (type 3) (param i32 i32) (result i64)
+    (local i64 i64)
+    i64.const 10
+    local.set 2
+    block  ;; label &#x3D; @1
+      block  ;; label &#x3D; @2
+        block  ;; label &#x3D; @3
+          block  ;; label &#x3D; @4
+            block  ;; label &#x3D; @5
+              block  ;; label &#x3D; @6
+                block  ;; label &#x3D; @7
+                  block  ;; label &#x3D; @8
+                    local.get 0
+                    br_table 0 (;@8;) 1 (;@7;) 2 (;@6;) 3 (;@5;) 4 (;@4;) 5 (;@3;) 6 (;@2;) 7 (;@1;)
+                  end
+                  local.get 1
+                  i32.const 0
+                  i32.eq
+                  if  ;; label &#x3D; @8
+                    i32.const 0
+                    local.get 2
+                    i64.store8
+                    i32.const 0
+                    i64.load8_s
+                    local.set 3
+                  end
+                  local.get 1
+                  i32.const 1
+                  i32.eq
+                  if  ;; label &#x3D; @8
+                    i32.const 0
+                    local.get 2
+                    i64.store8
+                    i32.const 0
+                    i64.load8_s
+                    local.set 3
+                  end
+                  br 6 (;@1;)
+                end
+                local.get 1
+                i32.const 0
+                i32.eq
+                if  ;; label &#x3D; @7
+                  i32.const 0
+                  local.get 2
+                  i64.store8
+                  i32.const 0
+                  i64.load8_u
+                  local.set 3
+                end
+                local.get 1
+                i32.const 1
+                i32.eq
+                if  ;; label &#x3D; @7
+                  i32.const 0
+                  local.get 2
+                  i64.store8
+                  i32.const 0
+                  i64.load8_u
+                  local.set 3
+                end
+                br 5 (;@1;)
+              end
+              local.get 1
+              i32.const 0
+              i32.eq
+              if  ;; label &#x3D; @6
+                i32.const 0
+                local.get 2
+                i64.store16
+                i32.const 0
+                i64.load16_s
+                local.set 3
+              end
+              local.get 1
+              i32.const 1
+              i32.eq
+              if  ;; label &#x3D; @6
+                i32.const 0
+                local.get 2
+                i64.store16 align&#x3D;1
+                i32.const 0
+                i64.load16_s align&#x3D;1
+                local.set 3
+              end
+              local.get 1
+              i32.const 2
+              i32.eq
+              if  ;; label &#x3D; @6
+                i32.const 0
+                local.get 2
+                i64.store16
+                i32.const 0
+                i64.load16_s
+                local.set 3
+              end
+              br 4 (;@1;)
+            end
+            local.get 1
+            i32.const 0
+            i32.eq
+            if  ;; label &#x3D; @5
+              i32.const 0
+              local.get 2
+              i64.store16
+              i32.const 0
+              i64.load16_u
+              local.set 3
+            end
+            local.get 1
+            i32.const 1
+            i32.eq
+            if  ;; label &#x3D; @5
+              i32.const 0
+              local.get 2
+              i64.store16 align&#x3D;1
+              i32.const 0
+              i64.load16_u align&#x3D;1
+              local.set 3
+            end
+            local.get 1
+            i32.const 2
+            i32.eq
+            if  ;; label &#x3D; @5
+              i32.const 0
+              local.get 2
+              i64.store16
+              i32.const 0
+              i64.load16_u
+              local.set 3
+            end
+            br 3 (;@1;)
+          end
+          local.get 1
+          i32.const 0
+          i32.eq
+          if  ;; label &#x3D; @4
+            i32.const 0
+            local.get 2
+            i64.store32
+            i32.const 0
+            i64.load32_s
+            local.set 3
+          end
+          local.get 1
+          i32.const 1
+          i32.eq
+          if  ;; label &#x3D; @4
+            i32.const 0
+            local.get 2
+            i64.store32 align&#x3D;1
+            i32.const 0
+            i64.load32_s align&#x3D;1
+            local.set 3
+          end
+          local.get 1
+          i32.const 2
+          i32.eq
+          if  ;; label &#x3D; @4
+            i32.const 0
+            local.get 2
+            i64.store32 align&#x3D;2
+            i32.const 0
+            i64.load32_s align&#x3D;2
+            local.set 3
+          end
+          local.get 1
+          i32.const 4
+          i32.eq
+          if  ;; label &#x3D; @4
+            i32.const 0
+            local.get 2
+            i64.store32
+            i32.const 0
+            i64.load32_s
+            local.set 3
+          end
+          br 2 (;@1;)
+        end
+        local.get 1
+        i32.const 0
+        i32.eq
+        if  ;; label &#x3D; @3
+          i32.const 0
+          local.get 2
+          i64.store32
+          i32.const 0
+          i64.load32_u
+          local.set 3
+        end
+        local.get 1
+        i32.const 1
+        i32.eq
+        if  ;; label &#x3D; @3
+          i32.const 0
+          local.get 2
+          i64.store32 align&#x3D;1
+          i32.const 0
+          i64.load32_u align&#x3D;1
+          local.set 3
+        end
+        local.get 1
+        i32.const 2
+        i32.eq
+        if  ;; label &#x3D; @3
+          i32.const 0
+          local.get 2
+          i64.store32 align&#x3D;2
+          i32.const 0
+          i64.load32_u align&#x3D;2
+          local.set 3
+        end
+        local.get 1
+        i32.const 4
+        i32.eq
+        if  ;; label &#x3D; @3
+          i32.const 0
+          local.get 2
+          i64.store32
+          i32.const 0
+          i64.load32_u
+          local.set 3
+        end
+        br 1 (;@1;)
+      end
+      local.get 1
+      i32.const 0
+      i32.eq
+      if  ;; label &#x3D; @2
+        i32.const 0
+        local.get 2
+        i64.store
+        i32.const 0
+        i64.load
+        local.set 3
+      end
+      local.get 1
+      i32.const 1
+      i32.eq
+      if  ;; label &#x3D; @2
+        i32.const 0
+        local.get 2
+        i64.store align&#x3D;1
+        i32.const 0
+        i64.load align&#x3D;1
+        local.set 3
+      end
+      local.get 1
+      i32.const 2
+      i32.eq
+      if  ;; label &#x3D; @2
+        i32.const 0
+        local.get 2
+        i64.store align&#x3D;2
+        i32.const 0
+        i64.load align&#x3D;2
+        local.set 3
+      end
+      local.get 1
+      i32.const 4
+      i32.eq
+      if  ;; label &#x3D; @2
+        i32.const 0
+        local.get 2
+        i64.store align&#x3D;4
+        i32.const 0
+        i64.load align&#x3D;4
+        local.set 3
+      end
+      local.get 1
+      i32.const 8
+      i32.eq
+      if  ;; label &#x3D; @2
+        i32.const 0
+        local.get 2
+        i64.store
+        i32.const 0
+        i64.load
+        local.set 3
+      end
+    end
+    local.get 3)
+  (memory (;0;) 1)
+  (export &quot;f32_align_switch&quot; (func 0))
+  (export &quot;f64_align_switch&quot; (func 1))
+  (export &quot;i32_align_switch&quot; (func 2))
+  (export &quot;i64_align_switch&quot; (func 3)))
+</code></pre>
+    </div>
+</body>
+
+</html>

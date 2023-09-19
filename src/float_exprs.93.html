@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asmcc float_exprs.93</title>
+
+    <link rel="stylesheet" href="//unpkg.com/@highlightjs/cdn-assets@11.7.0/styles/github.min.css">
+    <script src="//unpkg.com/@highlightjs/cdn-assets@11.7.0/highlight.min.js"></script>
+    <script>
+        hljs.configure({
+            noHighlightRe: /^do-not-highlightme$/i,
+        });
+    </script>
+    <script>hljs.highlightAll();</script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="/_vercel/insights/script.js"></script>
+</head>
+
+<body class="text-sm p-2">
+    <h1 class="text-2xl  w-full mb-4">Anaylzer: <a href="/float_exprs.93.wasm">float_exprs.93.wasm</a></h1>
+    <div class="flex justify-evenly">
+        <pre class="p-4 overflow-scroll border-2"><code>
+float_exprs.93.wasm:	file format wasm 0x1
+
+Sections:
+
+     Type start&#x3D;0x0000000a end&#x3D;0x00000011 (size&#x3D;0x00000007) count: 1
+ Function start&#x3D;0x00000013 end&#x3D;0x00000015 (size&#x3D;0x00000002) count: 1
+   Export start&#x3D;0x00000017 end&#x3D;0x00000025 (size&#x3D;0x0000000e) count: 1
+     Code start&#x3D;0x00000027 end&#x3D;0x0000003a (size&#x3D;0x00000013) count: 1
+
+Section Details:
+
+Type[1]:
+ - type[0] (f64, f64) -&gt; i32
+Function[1]:
+ - func[0] sig&#x3D;0 &lt;point_four&gt;
+Export[1]:
+ - func[0] &lt;point_four&gt; -&gt; &quot;point_four&quot;
+Code[1]:
+ - func[0] size&#x3D;17 &lt;point_four&gt;
+
+Contents of section Type:
+000000a: 0160 027c 7c01 7f                        .&#x60;.||..
+
+Contents of section Function:
+0000013: 0100                                     ..
+
+Contents of section Export:
+0000017: 010a 706f 696e 745f 666f 7572 0000       ..point_four..
+
+Contents of section Code:
+0000027: 0111 0020 0020 01a3 449a 9999 9999 99d9  ... . ..D.......
+0000037: 3f63 0b                                  ?c.
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2"><code>BeginModule(version: 1)
+  BeginTypeSection(7)
+    OnTypeCount(1)
+    OnFuncType(index: 0, params: [f64, f64], results: [i32])
+  EndTypeSection
+  BeginFunctionSection(2)
+    OnFunctionCount(1)
+    OnFunction(index: 0, sig_index: 0)
+  EndFunctionSection
+  BeginExportSection(14)
+    OnExportCount(1)
+    OnExport(index: 0, kind: func, item_index: 0, name: &quot;point_four&quot;)
+  EndExportSection
+  BeginCodeSection(19)
+    OnFunctionBodyCount(1)
+    BeginFunctionBody(0, size:17)
+    OnLocalDeclCount(0)
+    EndFunctionBody(0)
+  EndCodeSection
+EndModule
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2 do-not-highlightme"><code>00000000: 00 61 73 6D 01 00 00 00  .asm....
+00000008: 01 07 01 60 02 7C 7C 01  ...&#x60;.||.
+00000010: 7F 03 02 01 00 07 0E 01  ........
+00000018: 0A 70 6F 69 6E 74 5F 66  .point_f
+00000020: 6F 75 72 00 00 0A 13 01  our.....
+00000028: 11 00 20 00 20 01 A3 44  .. . ..D
+00000030: 9A 99 99 99 99 99 D9 3F  .......?
+00000038: 63 0B                    c.
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2"><code>(module
+  (type (;0;) (func (param f64 f64) (result i32)))
+  (func (;0;) (type 0) (param f64 f64) (result i32)
+    local.get 0
+    local.get 1
+    f64.div
+    f64.const 0x1.999999999999ap-2 (;&#x3D;0.4;)
+    f64.lt)
+  (export &quot;point_four&quot; (func 0)))
+</code></pre>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asmcc simd_address.3</title>
+
+    <link rel="stylesheet" href="//unpkg.com/@highlightjs/cdn-assets@11.7.0/styles/github.min.css">
+    <script src="//unpkg.com/@highlightjs/cdn-assets@11.7.0/highlight.min.js"></script>
+    <script>
+        hljs.configure({
+            noHighlightRe: /^do-not-highlightme$/i,
+        });
+    </script>
+    <script>hljs.highlightAll();</script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="/_vercel/insights/script.js"></script>
+</head>
+
+<body class="text-sm p-2">
+    <h1 class="text-2xl  w-full mb-4">Anaylzer: <a href="/simd_address.3.wasm">simd_address.3.wasm</a></h1>
+    <div class="flex justify-evenly">
+        <pre class="p-4 overflow-scroll border-2"><code>
+simd_address.3.wasm:	file format wasm 0x1
+
+Sections:
+
+     Type start&#x3D;0x0000000a end&#x3D;0x0000000e (size&#x3D;0x00000004) count: 1
+ Function start&#x3D;0x00000010 end&#x3D;0x00000012 (size&#x3D;0x00000002) count: 1
+   Memory start&#x3D;0x00000014 end&#x3D;0x00000017 (size&#x3D;0x00000003) count: 1
+   Export start&#x3D;0x00000019 end&#x3D;0x00000034 (size&#x3D;0x0000001b) count: 1
+     Code start&#x3D;0x00000036 end&#x3D;0x00000054 (size&#x3D;0x0000001e) count: 1
+
+Section Details:
+
+Type[1]:
+ - type[0] () -&gt; nil
+Function[1]:
+ - func[0] sig&#x3D;0 &lt;v128.store_offset_65521&gt;
+Memory[1]:
+ - memory[0] pages: initial&#x3D;1
+Export[1]:
+ - func[0] &lt;v128.store_offset_65521&gt; -&gt; &quot;v128.store_offset_65521&quot;
+Code[1]:
+ - func[0] size&#x3D;28 &lt;v128.store_offset_65521&gt;
+
+Contents of section Type:
+000000a: 0160 0000                                .&#x60;..
+
+Contents of section Function:
+0000010: 0100                                     ..
+
+Contents of section Memory:
+0000014: 0100 01                                  ...
+
+Contents of section Export:
+0000019: 0117 7631 3238 2e73 746f 7265 5f6f 6666  ..v128.store_off
+0000029: 7365 745f 3635 3532 3100 00              set_65521..
+
+Contents of section Code:
+0000036: 011c 0041 00fd 0c00 0000 0000 0000 0000  ...A............
+0000046: 0000 0000 0000 00fd 0b04 f1ff 030b       ..............
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2"><code>BeginModule(version: 1)
+  BeginTypeSection(4)
+    OnTypeCount(1)
+    OnFuncType(index: 0, params: [], results: [])
+  EndTypeSection
+  BeginFunctionSection(2)
+    OnFunctionCount(1)
+    OnFunction(index: 0, sig_index: 0)
+  EndFunctionSection
+  BeginMemorySection(3)
+    OnMemoryCount(1)
+    OnMemory(index: 0, initial: 1)
+  EndMemorySection
+  BeginExportSection(27)
+    OnExportCount(1)
+    OnExport(index: 0, kind: func, item_index: 0, name: &quot;v128.store_offset_65521&quot;)
+  EndExportSection
+  BeginCodeSection(30)
+    OnFunctionBodyCount(1)
+    BeginFunctionBody(0, size:28)
+    OnLocalDeclCount(0)
+    EndFunctionBody(0)
+  EndCodeSection
+EndModule
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2 do-not-highlightme"><code>00000000: 00 61 73 6D 01 00 00 00  .asm....
+00000008: 01 04 01 60 00 00 03 02  ...&#x60;....
+00000010: 01 00 05 03 01 00 01 07  ........
+00000018: 1B 01 17 76 31 32 38 2E  ...v128.
+00000020: 73 74 6F 72 65 5F 6F 66  store_of
+00000028: 66 73 65 74 5F 36 35 35  fset_655
+00000030: 32 31 00 00 0A 1E 01 1C  21......
+00000038: 00 41 00 FD 0C 00 00 00  .A......
+00000040: 00 00 00 00 00 00 00 00  ........
+00000048: 00 00 00 00 00 FD 0B 04  ........
+00000050: F1 FF 03 0B              ....
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2"><code>(module
+  (type (;0;) (func))
+  (func (;0;) (type 0)
+    i32.const 0
+    v128.const i32x4 0x00000000 0x00000000 0x00000000 0x00000000
+    v128.store offset&#x3D;65521)
+  (memory (;0;) 1)
+  (export &quot;v128.store_offset_65521&quot; (func 0)))
+</code></pre>
+    </div>
+</body>
+
+</html>

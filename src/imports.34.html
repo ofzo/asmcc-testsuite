@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asmcc imports.34</title>
+
+    <link rel="stylesheet" href="//unpkg.com/@highlightjs/cdn-assets@11.7.0/styles/github.min.css">
+    <script src="//unpkg.com/@highlightjs/cdn-assets@11.7.0/highlight.min.js"></script>
+    <script>
+        hljs.configure({
+            noHighlightRe: /^do-not-highlightme$/i,
+        });
+    </script>
+    <script>hljs.highlightAll();</script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="/_vercel/insights/script.js"></script>
+</head>
+
+<body class="text-sm p-2">
+    <h1 class="text-2xl  w-full mb-4">Anaylzer: <a href="/imports.34.wasm">imports.34.wasm</a></h1>
+    <div class="flex justify-evenly">
+        <pre class="p-4 overflow-scroll border-2"><code>
+imports.34.wasm:	file format wasm 0x1
+
+Sections:
+
+     Type start&#x3D;0x0000000a end&#x3D;0x0000000e (size&#x3D;0x00000004) count: 1
+   Import start&#x3D;0x00000010 end&#x3D;0x00000022 (size&#x3D;0x00000012) count: 1
+
+Section Details:
+
+Type[1]:
+ - type[0] () -&gt; nil
+Import[1]:
+ - func[0] sig&#x3D;0 &lt;spectest.table&gt; &lt;- spectest.table
+
+Contents of section Type:
+000000a: 0160 0000                                .&#x60;..
+
+Contents of section Import:
+0000010: 0108 7370 6563 7465 7374 0574 6162 6c65  ..spectest.table
+0000020: 0000                                     ..
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2"><code>BeginModule(version: 1)
+  BeginTypeSection(4)
+    OnTypeCount(1)
+    OnFuncType(index: 0, params: [], results: [])
+  EndTypeSection
+  BeginImportSection(18)
+    OnImportCount(1)
+    OnImport(index: 0, kind: func, module: &quot;spectest&quot;, field: &quot;table&quot;)
+    OnImportFunc(import_index: 0, func_index: 0, sig_index: 0)
+  EndImportSection
+EndModule
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2 do-not-highlightme"><code>00000000: 00 61 73 6D 01 00 00 00  .asm....
+00000008: 01 04 01 60 00 00 02 12  ...&#x60;....
+00000010: 01 08 73 70 65 63 74 65  ..specte
+00000018: 73 74 05 74 61 62 6C 65  st.table
+00000020: 00 00                    ..
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2"><code>(module
+  (type (;0;) (func))
+  (import &quot;spectest&quot; &quot;table&quot; (func (;0;) (type 0))))
+</code></pre>
+    </div>
+</body>
+
+</html>

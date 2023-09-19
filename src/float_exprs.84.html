@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asmcc float_exprs.84</title>
+
+    <link rel="stylesheet" href="//unpkg.com/@highlightjs/cdn-assets@11.7.0/styles/github.min.css">
+    <script src="//unpkg.com/@highlightjs/cdn-assets@11.7.0/highlight.min.js"></script>
+    <script>
+        hljs.configure({
+            noHighlightRe: /^do-not-highlightme$/i,
+        });
+    </script>
+    <script>hljs.highlightAll();</script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="/_vercel/insights/script.js"></script>
+</head>
+
+<body class="text-sm p-2">
+    <h1 class="text-2xl  w-full mb-4">Anaylzer: <a href="/float_exprs.84.wasm">float_exprs.84.wasm</a></h1>
+    <div class="flex justify-evenly">
+        <pre class="p-4 overflow-scroll border-2"><code>
+float_exprs.84.wasm:	file format wasm 0x1
+
+Sections:
+
+     Type start&#x3D;0x0000000a end&#x3D;0x00000013 (size&#x3D;0x00000009) count: 2
+ Function start&#x3D;0x00000015 end&#x3D;0x00000018 (size&#x3D;0x00000003) count: 2
+   Export start&#x3D;0x0000001a end&#x3D;0x00000037 (size&#x3D;0x0000001d) count: 2
+     Code start&#x3D;0x00000039 end&#x3D;0x0000008e (size&#x3D;0x00000055) count: 2
+
+Section Details:
+
+Type[2]:
+ - type[0] () -&gt; f32
+ - type[1] () -&gt; f64
+Function[2]:
+ - func[0] sig&#x3D;0 &lt;f32.epsilon&gt;
+ - func[1] sig&#x3D;1 &lt;f64.epsilon&gt;
+Export[2]:
+ - func[0] &lt;f32.epsilon&gt; -&gt; &quot;f32.epsilon&quot;
+ - func[1] &lt;f64.epsilon&gt; -&gt; &quot;f64.epsilon&quot;
+Code[2]:
+ - func[0] size&#x3D;31 &lt;f32.epsilon&gt;
+ - func[1] size&#x3D;51 &lt;f64.epsilon&gt;
+
+Contents of section Type:
+000000a: 0260 0001 7d60 0001 7c                   .&#x60;..}&#x60;..|
+
+Contents of section Function:
+0000015: 0200 01                                  ...
+
+Contents of section Export:
+000001a: 020b 6633 322e 6570 7369 6c6f 6e00 000b  ..f32.epsilon...
+000002a: 6636 342e 6570 7369 6c6f 6e00 01         f64.epsilon..
+
+Contents of section Code:
+0000039: 021f 0043 0000 803f 4300 0040 4043 0000  ...C...?C..@@C..
+0000049: 8040 4300 0040 4095 4300 0080 3f93 9493  .@C..@@.C...?...
+0000059: 0b33 0044 0000 0000 0000 f03f 4400 0000  .3.D.......?D...
+0000069: 0000 0008 4044 0000 0000 0000 1040 4400  ....@D.......@D.
+0000079: 0000 0000 0008 40a3 4400 0000 0000 00f0  ......@.D.......
+0000089: 3fa1 a2a1 0b                             ?....
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2"><code>BeginModule(version: 1)
+  BeginTypeSection(9)
+    OnTypeCount(2)
+    OnFuncType(index: 0, params: [], results: [f32])
+    OnFuncType(index: 1, params: [], results: [f64])
+  EndTypeSection
+  BeginFunctionSection(3)
+    OnFunctionCount(2)
+    OnFunction(index: 0, sig_index: 0)
+    OnFunction(index: 1, sig_index: 1)
+  EndFunctionSection
+  BeginExportSection(29)
+    OnExportCount(2)
+    OnExport(index: 0, kind: func, item_index: 0, name: &quot;f32.epsilon&quot;)
+    OnExport(index: 1, kind: func, item_index: 1, name: &quot;f64.epsilon&quot;)
+  EndExportSection
+  BeginCodeSection(85)
+    OnFunctionBodyCount(2)
+    BeginFunctionBody(0, size:31)
+    OnLocalDeclCount(0)
+    EndFunctionBody(0)
+    BeginFunctionBody(1, size:51)
+    OnLocalDeclCount(0)
+    EndFunctionBody(1)
+  EndCodeSection
+EndModule
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2 do-not-highlightme"><code>00000000: 00 61 73 6D 01 00 00 00  .asm....
+00000008: 01 09 02 60 00 01 7D 60  ...&#x60;..}&#x60;
+00000010: 00 01 7C 03 03 02 00 01  ..|.....
+00000018: 07 1D 02 0B 66 33 32 2E  ....f32.
+00000020: 65 70 73 69 6C 6F 6E 00  epsilon.
+00000028: 00 0B 66 36 34 2E 65 70  ..f64.ep
+00000030: 73 69 6C 6F 6E 00 01 0A  silon...
+00000038: 55 02 1F 00 43 00 00 80  U...C...
+00000040: 3F 43 00 00 40 40 43 00  ?C..@@C.
+00000048: 00 80 40 43 00 00 40 40  ..@C..@@
+00000050: 95 43 00 00 80 3F 93 94  .C...?..
+00000058: 93 0B 33 00 44 00 00 00  ..3.D...
+00000060: 00 00 00 F0 3F 44 00 00  ....?D..
+00000068: 00 00 00 00 08 40 44 00  .....@D.
+00000070: 00 00 00 00 00 10 40 44  ......@D
+00000078: 00 00 00 00 00 00 08 40  .......@
+00000080: A3 44 00 00 00 00 00 00  .D......
+00000088: F0 3F A1 A2 A1 0B        .?....
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2"><code>(module
+  (type (;0;) (func (result f32)))
+  (type (;1;) (func (result f64)))
+  (func (;0;) (type 0) (result f32)
+    f32.const 0x1p+0 (;&#x3D;1;)
+    f32.const 0x1.8p+1 (;&#x3D;3;)
+    f32.const 0x1p+2 (;&#x3D;4;)
+    f32.const 0x1.8p+1 (;&#x3D;3;)
+    f32.div
+    f32.const 0x1p+0 (;&#x3D;1;)
+    f32.sub
+    f32.mul
+    f32.sub)
+  (func (;1;) (type 1) (result f64)
+    f64.const 0x1p+0 (;&#x3D;1;)
+    f64.const 0x1.8p+1 (;&#x3D;3;)
+    f64.const 0x1p+2 (;&#x3D;4;)
+    f64.const 0x1.8p+1 (;&#x3D;3;)
+    f64.div
+    f64.const 0x1p+0 (;&#x3D;1;)
+    f64.sub
+    f64.mul
+    f64.sub)
+  (export &quot;f32.epsilon&quot; (func 0))
+  (export &quot;f64.epsilon&quot; (func 1)))
+</code></pre>
+    </div>
+</body>
+
+</html>

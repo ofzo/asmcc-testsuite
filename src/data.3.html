@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asmcc data.3</title>
+
+    <link rel="stylesheet" href="//unpkg.com/@highlightjs/cdn-assets@11.7.0/styles/github.min.css">
+    <script src="//unpkg.com/@highlightjs/cdn-assets@11.7.0/highlight.min.js"></script>
+    <script>
+        hljs.configure({
+            noHighlightRe: /^do-not-highlightme$/i,
+        });
+    </script>
+    <script>hljs.highlightAll();</script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="/_vercel/insights/script.js"></script>
+</head>
+
+<body class="text-sm p-2">
+    <h1 class="text-2xl  w-full mb-4">Anaylzer: <a href="/data.3.wasm">data.3.wasm</a></h1>
+    <div class="flex justify-evenly">
+        <pre class="p-4 overflow-scroll border-2"><code>
+data.3.wasm:	file format wasm 0x1
+
+Sections:
+
+   Memory start&#x3D;0x0000000a end&#x3D;0x0000000d (size&#x3D;0x00000003) count: 1
+     Data start&#x3D;0x0000000f end&#x3D;0x00000031 (size&#x3D;0x00000022) count: 5
+
+Section Details:
+
+Memory[1]:
+ - memory[0] pages: initial&#x3D;1
+Data[5]:
+ - segment[0] memory&#x3D;0 size&#x3D;1 - init i32&#x3D;0
+  - 0000000: 61                                       a
+ - segment[1] memory&#x3D;0 size&#x3D;1 - init i32&#x3D;3
+  - 0000003: 62                                       b
+ - segment[2] memory&#x3D;0 size&#x3D;3 - init i32&#x3D;100
+  - 0000064: 6364 65                                  cde
+ - segment[3] memory&#x3D;0 size&#x3D;1 - init i32&#x3D;5
+  - 0000005: 78                                       x
+ - segment[4] memory&#x3D;0 size&#x3D;1 - init i32&#x3D;3
+  - 0000003: 63                                       c
+
+Contents of section Memory:
+000000a: 0100 01                                  ...
+
+Contents of section Data:
+000000f: 0500 4100 0b01 6100 4103 0b01 6200 41e4  ..A...a.A...b.A.
+000001f: 000b 0363 6465 0041 050b 0178 0041 030b  ...cde.A...x.A..
+000002f: 0163                                     .c
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2"><code>BeginModule(version: 1)
+  BeginMemorySection(3)
+    OnMemoryCount(1)
+    OnMemory(index: 0, initial: 1)
+  EndMemorySection
+  BeginDataSection(34)
+    OnDataSegmentCount(5)
+    BeginDataSegment(index: 0, memory_index: 0, flags: 0)
+    BeginDataSegmentInitExpr(0)
+    OnI32ConstExpr(0 (0x0))
+    OnEndExpr
+    EndDataSegmentInitExpr(0)
+    OnDataSegmentData(index:0, size:1)
+    EndDataSegment(0)
+    BeginDataSegment(index: 1, memory_index: 0, flags: 0)
+    BeginDataSegmentInitExpr(1)
+    OnI32ConstExpr(3 (0x3))
+    OnEndExpr
+    EndDataSegmentInitExpr(1)
+    OnDataSegmentData(index:1, size:1)
+    EndDataSegment(1)
+    BeginDataSegment(index: 2, memory_index: 0, flags: 0)
+    BeginDataSegmentInitExpr(2)
+    OnI32ConstExpr(100 (0x64))
+    OnEndExpr
+    EndDataSegmentInitExpr(2)
+    OnDataSegmentData(index:2, size:3)
+    EndDataSegment(2)
+    BeginDataSegment(index: 3, memory_index: 0, flags: 0)
+    BeginDataSegmentInitExpr(3)
+    OnI32ConstExpr(5 (0x5))
+    OnEndExpr
+    EndDataSegmentInitExpr(3)
+    OnDataSegmentData(index:3, size:1)
+    EndDataSegment(3)
+    BeginDataSegment(index: 4, memory_index: 0, flags: 0)
+    BeginDataSegmentInitExpr(4)
+    OnI32ConstExpr(3 (0x3))
+    OnEndExpr
+    EndDataSegmentInitExpr(4)
+    OnDataSegmentData(index:4, size:1)
+    EndDataSegment(4)
+  EndDataSection
+EndModule
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2 do-not-highlightme"><code>00000000: 00 61 73 6D 01 00 00 00  .asm....
+00000008: 05 03 01 00 01 0B 22 05  ......&quot;.
+00000010: 00 41 00 0B 01 61 00 41  .A...a.A
+00000018: 03 0B 01 62 00 41 E4 00  ...b.A..
+00000020: 0B 03 63 64 65 00 41 05  ..cde.A.
+00000028: 0B 01 78 00 41 03 0B 01  ..x.A...
+00000030: 63                       c
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2"><code>(module
+  (memory (;0;) 1)
+  (data (;0;) (i32.const 0) &quot;a&quot;)
+  (data (;1;) (i32.const 3) &quot;b&quot;)
+  (data (;2;) (i32.const 100) &quot;cde&quot;)
+  (data (;3;) (i32.const 5) &quot;x&quot;)
+  (data (;4;) (i32.const 3) &quot;c&quot;))
+</code></pre>
+    </div>
+</body>
+
+</html>

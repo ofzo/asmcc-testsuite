@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asmcc simd_address.0</title>
+
+    <link rel="stylesheet" href="//unpkg.com/@highlightjs/cdn-assets@11.7.0/styles/github.min.css">
+    <script src="//unpkg.com/@highlightjs/cdn-assets@11.7.0/highlight.min.js"></script>
+    <script>
+        hljs.configure({
+            noHighlightRe: /^do-not-highlightme$/i,
+        });
+    </script>
+    <script>hljs.highlightAll();</script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="/_vercel/insights/script.js"></script>
+</head>
+
+<body class="text-sm p-2">
+    <h1 class="text-2xl  w-full mb-4">Anaylzer: <a href="/simd_address.0.wasm">simd_address.0.wasm</a></h1>
+    <div class="flex justify-evenly">
+        <pre class="p-4 overflow-scroll border-2"><code>
+simd_address.0.wasm:	file format wasm 0x1
+
+Sections:
+
+     Type start&#x3D;0x0000000a end&#x3D;0x00000018 (size&#x3D;0x0000000e) count: 3
+ Function start&#x3D;0x0000001a end&#x3D;0x00000027 (size&#x3D;0x0000000d) count: 12
+   Memory start&#x3D;0x00000029 end&#x3D;0x0000002c (size&#x3D;0x00000003) count: 1
+   Export start&#x3D;0x0000002f end&#x3D;0x000000df (size&#x3D;0x000000b0) count: 12
+     Code start&#x3D;0x000000e2 end&#x3D;0x000001f5 (size&#x3D;0x00000113) count: 12
+     Data start&#x3D;0x000001f7 end&#x3D;0x00000224 (size&#x3D;0x0000002d) count: 2
+
+Section Details:
+
+Type[3]:
+ - type[0] (i32) -&gt; v128
+ - type[1] () -&gt; v128
+ - type[2] (i32) -&gt; nil
+Function[12]:
+ - func[0] sig&#x3D;0 &lt;load_data_1&gt;
+ - func[1] sig&#x3D;0 &lt;load_data_2&gt;
+ - func[2] sig&#x3D;0 &lt;load_data_3&gt;
+ - func[3] sig&#x3D;0 &lt;load_data_4&gt;
+ - func[4] sig&#x3D;0 &lt;load_data_5&gt;
+ - func[5] sig&#x3D;1 &lt;store_data_0&gt;
+ - func[6] sig&#x3D;1 &lt;store_data_1&gt;
+ - func[7] sig&#x3D;1 &lt;store_data_2&gt;
+ - func[8] sig&#x3D;1 &lt;store_data_3&gt;
+ - func[9] sig&#x3D;1 &lt;store_data_4&gt;
+ - func[10] sig&#x3D;1 &lt;store_data_5&gt;
+ - func[11] sig&#x3D;2 &lt;store_data_6&gt;
+Memory[1]:
+ - memory[0] pages: initial&#x3D;1
+Export[12]:
+ - func[0] &lt;load_data_1&gt; -&gt; &quot;load_data_1&quot;
+ - func[1] &lt;load_data_2&gt; -&gt; &quot;load_data_2&quot;
+ - func[2] &lt;load_data_3&gt; -&gt; &quot;load_data_3&quot;
+ - func[3] &lt;load_data_4&gt; -&gt; &quot;load_data_4&quot;
+ - func[4] &lt;load_data_5&gt; -&gt; &quot;load_data_5&quot;
+ - func[5] &lt;store_data_0&gt; -&gt; &quot;store_data_0&quot;
+ - func[6] &lt;store_data_1&gt; -&gt; &quot;store_data_1&quot;
+ - func[7] &lt;store_data_2&gt; -&gt; &quot;store_data_2&quot;
+ - func[8] &lt;store_data_3&gt; -&gt; &quot;store_data_3&quot;
+ - func[9] &lt;store_data_4&gt; -&gt; &quot;store_data_4&quot;
+ - func[10] &lt;store_data_5&gt; -&gt; &quot;store_data_5&quot;
+ - func[11] &lt;store_data_6&gt; -&gt; &quot;store_data_6&quot;
+Code[12]:
+ - func[0] size&#x3D;8 &lt;load_data_1&gt;
+ - func[1] size&#x3D;8 &lt;load_data_2&gt;
+ - func[2] size&#x3D;8 &lt;load_data_3&gt;
+ - func[3] size&#x3D;8 &lt;load_data_4&gt;
+ - func[4] size&#x3D;8 &lt;load_data_5&gt;
+ - func[5] size&#x3D;32 &lt;store_data_0&gt;
+ - func[6] size&#x3D;32 &lt;store_data_1&gt;
+ - func[7] size&#x3D;32 &lt;store_data_2&gt;
+ - func[8] size&#x3D;32 &lt;store_data_3&gt;
+ - func[9] size&#x3D;32 &lt;store_data_4&gt;
+ - func[10] size&#x3D;36 &lt;store_data_5&gt;
+ - func[11] size&#x3D;26 &lt;store_data_6&gt;
+Data[2]:
+ - segment[0] memory&#x3D;0 size&#x3D;16 - init i32&#x3D;0
+  - 0000000: 0001 0203 0405 0607 0809 1011 1213 1415  ................
+ - segment[1] memory&#x3D;0 size&#x3D;16 - init i32&#x3D;65505
+  - 000ffe1: 1617 1819 2021 2223 2425 2627 2829 3031  .... !&quot;#$%&amp;&#x27;()01
+
+Contents of section Type:
+000000a: 0360 017f 017b 6000 017b 6001 7f00       .&#x60;...{&#x60;..{&#x60;...
+
+Contents of section Function:
+000001a: 0c00 0000 0000 0101 0101 0101 02         .............
+
+Contents of section Memory:
+0000029: 0100 01                                  ...
+
+Contents of section Export:
+000002f: 0c0b 6c6f 6164 5f64 6174 615f 3100 000b  ..load_data_1...
+000003f: 6c6f 6164 5f64 6174 615f 3200 010b 6c6f  load_data_2...lo
+000004f: 6164 5f64 6174 615f 3300 020b 6c6f 6164  ad_data_3...load
+000005f: 5f64 6174 615f 3400 030b 6c6f 6164 5f64  _data_4...load_d
+000006f: 6174 615f 3500 040c 7374 6f72 655f 6461  ata_5...store_da
+000007f: 7461 5f30 0005 0c73 746f 7265 5f64 6174  ta_0...store_dat
+000008f: 615f 3100 060c 7374 6f72 655f 6461 7461  a_1...store_data
+000009f: 5f32 0007 0c73 746f 7265 5f64 6174 615f  _2...store_data_
+00000af: 3300 080c 7374 6f72 655f 6461 7461 5f34  3...store_data_4
+00000bf: 0009 0c73 746f 7265 5f64 6174 615f 3500  ...store_data_5.
+00000cf: 0a0c 7374 6f72 655f 6461 7461 5f36 000b  ..store_data_6..
+
+Contents of section Code:
+00000e2: 0c08 0020 00fd 0004 000b 0800 2000 fd00  ... ........ ...
+00000f2: 0000 0b08 0020 00fd 0000 010b 0800 2000  ..... ........ .
+0000102: fd00 0002 0b08 0020 00fd 0000 0f0b 2000  ....... ...... .
+0000112: 4100 fd0c 0000 0000 0000 803f 0000 0040  A..........?...@
+0000122: 0000 4040 fd0b 0400 4100 fd00 0400 0b20  ..@@....A...... 
+0000132: 0041 00fd 0c00 0000 0001 0000 0002 0000  .A..............
+0000142: 0003 0000 00fd 0b00 0041 00fd 0000 000b  .........A......
+0000152: 2000 4100 fd0c 0000 0100 0200 0300 0400   .A.............
+0000162: 0500 0600 0700 fd0b 0001 4100 fd00 0001  ..........A.....
+0000172: 0b20 0041 00fd 0c00 0102 0304 0506 0708  . .A............
+0000182: 090a 0b0c 0d0e 0ffd 0b00 0241 00fd 0000  ...........A....
+0000192: 020b 2000 4100 fd0c 0000 0000 0100 0000  .. .A...........
+00001a2: 0200 0000 0300 0000 fd0b 000f 4100 fd00  ............A...
+00001b2: 040f 0b24 0041 00fd 0c00 0000 0001 0000  ...$.A..........
+00001c2: 0002 0000 0003 0000 00fd 0b00 f0ff 0341  ...............A
+00001d2: 00fd 0004 f0ff 030b 1a00 2000 fd0c 0000  .......... .....
+00001e2: 0000 0100 0000 0200 0000 0300 0000 fd0b  ................
+00001f2: 0001 0b                                  ...
+
+Contents of section Data:
+00001f7: 0200 4100 0b10 0001 0203 0405 0607 0809  ..A.............
+0000207: 1011 1213 1415 0041 e1ff 030b 1016 1718  .......A........
+0000217: 1920 2122 2324 2526 2728 2930 31         . !&quot;#$%&amp;&#x27;()01
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2"><code>BeginModule(version: 1)
+  BeginTypeSection(14)
+    OnTypeCount(3)
+    OnFuncType(index: 0, params: [i32], results: [v128])
+    OnFuncType(index: 1, params: [], results: [v128])
+    OnFuncType(index: 2, params: [i32], results: [])
+  EndTypeSection
+  BeginFunctionSection(13)
+    OnFunctionCount(12)
+    OnFunction(index: 0, sig_index: 0)
+    OnFunction(index: 1, sig_index: 0)
+    OnFunction(index: 2, sig_index: 0)
+    OnFunction(index: 3, sig_index: 0)
+    OnFunction(index: 4, sig_index: 0)
+    OnFunction(index: 5, sig_index: 1)
+    OnFunction(index: 6, sig_index: 1)
+    OnFunction(index: 7, sig_index: 1)
+    OnFunction(index: 8, sig_index: 1)
+    OnFunction(index: 9, sig_index: 1)
+    OnFunction(index: 10, sig_index: 1)
+    OnFunction(index: 11, sig_index: 2)
+  EndFunctionSection
+  BeginMemorySection(3)
+    OnMemoryCount(1)
+    OnMemory(index: 0, initial: 1)
+  EndMemorySection
+  BeginExportSection(176)
+    OnExportCount(12)
+    OnExport(index: 0, kind: func, item_index: 0, name: &quot;load_data_1&quot;)
+    OnExport(index: 1, kind: func, item_index: 1, name: &quot;load_data_2&quot;)
+    OnExport(index: 2, kind: func, item_index: 2, name: &quot;load_data_3&quot;)
+    OnExport(index: 3, kind: func, item_index: 3, name: &quot;load_data_4&quot;)
+    OnExport(index: 4, kind: func, item_index: 4, name: &quot;load_data_5&quot;)
+    OnExport(index: 5, kind: func, item_index: 5, name: &quot;store_data_0&quot;)
+    OnExport(index: 6, kind: func, item_index: 6, name: &quot;store_data_1&quot;)
+    OnExport(index: 7, kind: func, item_index: 7, name: &quot;store_data_2&quot;)
+    OnExport(index: 8, kind: func, item_index: 8, name: &quot;store_data_3&quot;)
+    OnExport(index: 9, kind: func, item_index: 9, name: &quot;store_data_4&quot;)
+    OnExport(index: 10, kind: func, item_index: 10, name: &quot;store_data_5&quot;)
+    OnExport(index: 11, kind: func, item_index: 11, name: &quot;store_data_6&quot;)
+  EndExportSection
+  BeginCodeSection(275)
+    OnFunctionBodyCount(12)
+    BeginFunctionBody(0, size:8)
+    OnLocalDeclCount(0)
+    EndFunctionBody(0)
+    BeginFunctionBody(1, size:8)
+    OnLocalDeclCount(0)
+    EndFunctionBody(1)
+    BeginFunctionBody(2, size:8)
+    OnLocalDeclCount(0)
+    EndFunctionBody(2)
+    BeginFunctionBody(3, size:8)
+    OnLocalDeclCount(0)
+    EndFunctionBody(3)
+    BeginFunctionBody(4, size:8)
+    OnLocalDeclCount(0)
+    EndFunctionBody(4)
+    BeginFunctionBody(5, size:32)
+    OnLocalDeclCount(0)
+    EndFunctionBody(5)
+    BeginFunctionBody(6, size:32)
+    OnLocalDeclCount(0)
+    EndFunctionBody(6)
+    BeginFunctionBody(7, size:32)
+    OnLocalDeclCount(0)
+    EndFunctionBody(7)
+    BeginFunctionBody(8, size:32)
+    OnLocalDeclCount(0)
+    EndFunctionBody(8)
+    BeginFunctionBody(9, size:32)
+    OnLocalDeclCount(0)
+    EndFunctionBody(9)
+    BeginFunctionBody(10, size:36)
+    OnLocalDeclCount(0)
+    EndFunctionBody(10)
+    BeginFunctionBody(11, size:26)
+    OnLocalDeclCount(0)
+    EndFunctionBody(11)
+  EndCodeSection
+  BeginDataSection(45)
+    OnDataSegmentCount(2)
+    BeginDataSegment(index: 0, memory_index: 0, flags: 0)
+    BeginDataSegmentInitExpr(0)
+    OnI32ConstExpr(0 (0x0))
+    OnEndExpr
+    EndDataSegmentInitExpr(0)
+    OnDataSegmentData(index:0, size:16)
+    EndDataSegment(0)
+    BeginDataSegment(index: 1, memory_index: 0, flags: 0)
+    BeginDataSegmentInitExpr(1)
+    OnI32ConstExpr(65505 (0xffe1))
+    OnEndExpr
+    EndDataSegmentInitExpr(1)
+    OnDataSegmentData(index:1, size:16)
+    EndDataSegment(1)
+  EndDataSection
+EndModule
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2 do-not-highlightme"><code>00000000: 00 61 73 6D 01 00 00 00  .asm....
+00000008: 01 0E 03 60 01 7F 01 7B  ...&#x60;...{
+00000010: 60 00 01 7B 60 01 7F 00  &#x60;..{&#x60;...
+00000018: 03 0D 0C 00 00 00 00 00  ........
+00000020: 01 01 01 01 01 01 02 05  ........
+00000028: 03 01 00 01 07 B0 01 0C  ........
+00000030: 0B 6C 6F 61 64 5F 64 61  .load_da
+00000038: 74 61 5F 31 00 00 0B 6C  ta_1...l
+00000040: 6F 61 64 5F 64 61 74 61  oad_data
+00000048: 5F 32 00 01 0B 6C 6F 61  _2...loa
+00000050: 64 5F 64 61 74 61 5F 33  d_data_3
+00000058: 00 02 0B 6C 6F 61 64 5F  ...load_
+00000060: 64 61 74 61 5F 34 00 03  data_4..
+00000068: 0B 6C 6F 61 64 5F 64 61  .load_da
+00000070: 74 61 5F 35 00 04 0C 73  ta_5...s
+00000078: 74 6F 72 65 5F 64 61 74  tore_dat
+00000080: 61 5F 30 00 05 0C 73 74  a_0...st
+00000088: 6F 72 65 5F 64 61 74 61  ore_data
+00000090: 5F 31 00 06 0C 73 74 6F  _1...sto
+00000098: 72 65 5F 64 61 74 61 5F  re_data_
+000000a0: 32 00 07 0C 73 74 6F 72  2...stor
+000000a8: 65 5F 64 61 74 61 5F 33  e_data_3
+000000b0: 00 08 0C 73 74 6F 72 65  ...store
+000000b8: 5F 64 61 74 61 5F 34 00  _data_4.
+000000c0: 09 0C 73 74 6F 72 65 5F  ..store_
+000000c8: 64 61 74 61 5F 35 00 0A  data_5..
+000000d0: 0C 73 74 6F 72 65 5F 64  .store_d
+000000d8: 61 74 61 5F 36 00 0B 0A  ata_6...
+000000e0: 93 02 0C 08 00 20 00 FD  ..... ..
+000000e8: 00 04 00 0B 08 00 20 00  ...... .
+000000f0: FD 00 00 00 0B 08 00 20  ....... 
+000000f8: 00 FD 00 00 01 0B 08 00  ........
+00000100: 20 00 FD 00 00 02 0B 08   .......
+00000108: 00 20 00 FD 00 00 0F 0B  . ......
+00000110: 20 00 41 00 FD 0C 00 00   .A.....
+00000118: 00 00 00 00 80 3F 00 00  .....?..
+00000120: 00 40 00 00 40 40 FD 0B  .@..@@..
+00000128: 04 00 41 00 FD 00 04 00  ..A.....
+00000130: 0B 20 00 41 00 FD 0C 00  . .A....
+00000138: 00 00 00 01 00 00 00 02  ........
+00000140: 00 00 00 03 00 00 00 FD  ........
+00000148: 0B 00 00 41 00 FD 00 00  ...A....
+00000150: 00 0B 20 00 41 00 FD 0C  .. .A...
+00000158: 00 00 01 00 02 00 03 00  ........
+00000160: 04 00 05 00 06 00 07 00  ........
+00000168: FD 0B 00 01 41 00 FD 00  ....A...
+00000170: 00 01 0B 20 00 41 00 FD  ... .A..
+00000178: 0C 00 01 02 03 04 05 06  ........
+00000180: 07 08 09 0A 0B 0C 0D 0E  ........
+00000188: 0F FD 0B 00 02 41 00 FD  .....A..
+00000190: 00 00 02 0B 20 00 41 00  .... .A.
+00000198: FD 0C 00 00 00 00 01 00  ........
+000001a0: 00 00 02 00 00 00 03 00  ........
+000001a8: 00 00 FD 0B 00 0F 41 00  ......A.
+000001b0: FD 00 04 0F 0B 24 00 41  .....$.A
+000001b8: 00 FD 0C 00 00 00 00 01  ........
+000001c0: 00 00 00 02 00 00 00 03  ........
+000001c8: 00 00 00 FD 0B 00 F0 FF  ........
+000001d0: 03 41 00 FD 00 04 F0 FF  .A......
+000001d8: 03 0B 1A 00 20 00 FD 0C  .... ...
+000001e0: 00 00 00 00 01 00 00 00  ........
+000001e8: 02 00 00 00 03 00 00 00  ........
+000001f0: FD 0B 00 01 0B 0B 2D 02  ......-.
+000001f8: 00 41 00 0B 10 00 01 02  .A......
+00000200: 03 04 05 06 07 08 09 10  ........
+00000208: 11 12 13 14 15 00 41 E1  ......A.
+00000210: FF 03 0B 10 16 17 18 19  ........
+00000218: 20 21 22 23 24 25 26 27   !&quot;#$%&amp;&#x27;
+00000220: 28 29 30 31              ()01
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2"><code>(module
+  (type (;0;) (func (param i32) (result v128)))
+  (type (;1;) (func (result v128)))
+  (type (;2;) (func (param i32)))
+  (func (;0;) (type 0) (param i32) (result v128)
+    local.get 0
+    v128.load)
+  (func (;1;) (type 0) (param i32) (result v128)
+    local.get 0
+    v128.load align&#x3D;1)
+  (func (;2;) (type 0) (param i32) (result v128)
+    local.get 0
+    v128.load offset&#x3D;1 align&#x3D;1)
+  (func (;3;) (type 0) (param i32) (result v128)
+    local.get 0
+    v128.load offset&#x3D;2 align&#x3D;1)
+  (func (;4;) (type 0) (param i32) (result v128)
+    local.get 0
+    v128.load offset&#x3D;15 align&#x3D;1)
+  (func (;5;) (type 1) (result v128)
+    i32.const 0
+    v128.const i32x4 0x00000000 0x3f800000 0x40000000 0x40400000
+    v128.store
+    i32.const 0
+    v128.load)
+  (func (;6;) (type 1) (result v128)
+    i32.const 0
+    v128.const i32x4 0x00000000 0x00000001 0x00000002 0x00000003
+    v128.store align&#x3D;1
+    i32.const 0
+    v128.load align&#x3D;1)
+  (func (;7;) (type 1) (result v128)
+    i32.const 0
+    v128.const i32x4 0x00010000 0x00030002 0x00050004 0x00070006
+    v128.store offset&#x3D;1 align&#x3D;1
+    i32.const 0
+    v128.load offset&#x3D;1 align&#x3D;1)
+  (func (;8;) (type 1) (result v128)
+    i32.const 0
+    v128.const i32x4 0x03020100 0x07060504 0x0b0a0908 0x0f0e0d0c
+    v128.store offset&#x3D;2 align&#x3D;1
+    i32.const 0
+    v128.load offset&#x3D;2 align&#x3D;1)
+  (func (;9;) (type 1) (result v128)
+    i32.const 0
+    v128.const i32x4 0x00000000 0x00000001 0x00000002 0x00000003
+    v128.store offset&#x3D;15 align&#x3D;1
+    i32.const 0
+    v128.load offset&#x3D;15)
+  (func (;10;) (type 1) (result v128)
+    i32.const 0
+    v128.const i32x4 0x00000000 0x00000001 0x00000002 0x00000003
+    v128.store offset&#x3D;65520 align&#x3D;1
+    i32.const 0
+    v128.load offset&#x3D;65520)
+  (func (;11;) (type 2) (param i32)
+    local.get 0
+    v128.const i32x4 0x00000000 0x00000001 0x00000002 0x00000003
+    v128.store offset&#x3D;1 align&#x3D;1)
+  (memory (;0;) 1)
+  (export &quot;load_data_1&quot; (func 0))
+  (export &quot;load_data_2&quot; (func 1))
+  (export &quot;load_data_3&quot; (func 2))
+  (export &quot;load_data_4&quot; (func 3))
+  (export &quot;load_data_5&quot; (func 4))
+  (export &quot;store_data_0&quot; (func 5))
+  (export &quot;store_data_1&quot; (func 6))
+  (export &quot;store_data_2&quot; (func 7))
+  (export &quot;store_data_3&quot; (func 8))
+  (export &quot;store_data_4&quot; (func 9))
+  (export &quot;store_data_5&quot; (func 10))
+  (export &quot;store_data_6&quot; (func 11))
+  (data (;0;) (i32.const 0) &quot;\00\01\02\03\04\05\06\07\08\09\10\11\12\13\14\15&quot;)
+  (data (;1;) (i32.const 65505) &quot;\16\17\18\19 !\22#$%&amp;&#x27;()01&quot;))
+</code></pre>
+    </div>
+</body>
+
+</html>

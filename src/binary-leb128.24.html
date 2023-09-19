@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asmcc binary-leb128.24</title>
+
+    <link rel="stylesheet" href="//unpkg.com/@highlightjs/cdn-assets@11.7.0/styles/github.min.css">
+    <script src="//unpkg.com/@highlightjs/cdn-assets@11.7.0/highlight.min.js"></script>
+    <script>
+        hljs.configure({
+            noHighlightRe: /^do-not-highlightme$/i,
+        });
+    </script>
+    <script>hljs.highlightAll();</script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="/_vercel/insights/script.js"></script>
+</head>
+
+<body class="text-sm p-2">
+    <h1 class="text-2xl  w-full mb-4">Anaylzer: <a href="/binary-leb128.24.wasm">binary-leb128.24.wasm</a></h1>
+    <div class="flex justify-evenly">
+        <pre class="p-4 overflow-scroll border-2"><code>
+binary-leb128.24.wasm:	file format wasm 0x1
+
+Sections:
+
+   Global start&#x3D;0x0000000a end&#x3D;0x00000019 (size&#x3D;0x0000000f) count: 1
+
+Section Details:
+
+Global[1]:
+ - global[0] i64 mutable&#x3D;0 - init i64&#x3D;-1
+
+Contents of section Global:
+000000a: 017e 0042 ffff ffff ffff ffff ff7f 0b    .~.B...........
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2"><code>BeginModule(version: 1)
+  BeginGlobalSection(15)
+    OnGlobalCount(1)
+    BeginGlobal(index: 0, type: i64, mutable: false)
+    BeginGlobalInitExpr(0)
+    OnI64ConstExpr(18446744073709551615 (0xffffffffffffffff))
+    OnEndExpr
+    EndGlobalInitExpr(0)
+    EndGlobal(0)
+  EndGlobalSection
+EndModule
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2 do-not-highlightme"><code>00000000: 00 61 73 6D 01 00 00 00  .asm....
+00000008: 06 0F 01 7E 00 42 FF FF  ...~.B..
+00000010: FF FF FF FF FF FF FF 7F  ........
+00000018: 0B                       .
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2"><code>(module
+  (global (;0;) i64 (i64.const -1)))
+</code></pre>
+    </div>
+</body>
+
+</html>

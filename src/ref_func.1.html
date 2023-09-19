@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asmcc ref_func.1</title>
+
+    <link rel="stylesheet" href="//unpkg.com/@highlightjs/cdn-assets@11.7.0/styles/github.min.css">
+    <script src="//unpkg.com/@highlightjs/cdn-assets@11.7.0/highlight.min.js"></script>
+    <script>
+        hljs.configure({
+            noHighlightRe: /^do-not-highlightme$/i,
+        });
+    </script>
+    <script>hljs.highlightAll();</script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="/_vercel/insights/script.js"></script>
+</head>
+
+<body class="text-sm p-2">
+    <h1 class="text-2xl  w-full mb-4">Anaylzer: <a href="/ref_func.1.wasm">ref_func.1.wasm</a></h1>
+    <div class="flex justify-evenly">
+        <pre class="p-4 overflow-scroll border-2"><code>
+ref_func.1.wasm:	file format wasm 0x1
+
+Sections:
+
+     Type start&#x3D;0x0000000a end&#x3D;0x00000017 (size&#x3D;0x0000000d) count: 3
+   Import start&#x3D;0x00000019 end&#x3D;0x00000020 (size&#x3D;0x00000007) count: 1
+ Function start&#x3D;0x00000022 end&#x3D;0x00000031 (size&#x3D;0x0000000f) count: 14
+    Table start&#x3D;0x00000033 end&#x3D;0x00000037 (size&#x3D;0x00000004) count: 1
+   Global start&#x3D;0x00000039 end&#x3D;0x00000053 (size&#x3D;0x0000001a) count: 5
+   Export start&#x3D;0x00000055 end&#x3D;0x000000a5 (size&#x3D;0x00000050) count: 8
+     Elem start&#x3D;0x000000a7 end&#x3D;0x000000b7 (size&#x3D;0x00000010) count: 3
+     Code start&#x3D;0x000000b9 end&#x3D;0x00000127 (size&#x3D;0x0000006e) count: 14
+
+Section Details:
+
+Type[3]:
+ - type[0] (i32) -&gt; i32
+ - type[1] () -&gt; nil
+ - type[2] () -&gt; i32
+Import[1]:
+ - func[0] sig&#x3D;0 &lt;M.f&gt; &lt;- M.f
+Function[14]:
+ - func[1] sig&#x3D;0
+ - func[2] sig&#x3D;1
+ - func[3] sig&#x3D;1
+ - func[4] sig&#x3D;1
+ - func[5] sig&#x3D;1
+ - func[6] sig&#x3D;1
+ - func[7] sig&#x3D;2 &lt;is_null-f&gt;
+ - func[8] sig&#x3D;2 &lt;is_null-g&gt;
+ - func[9] sig&#x3D;2 &lt;is_null-v&gt;
+ - func[10] sig&#x3D;1 &lt;set-f&gt;
+ - func[11] sig&#x3D;1 &lt;set-g&gt;
+ - func[12] sig&#x3D;0 &lt;call-f&gt;
+ - func[13] sig&#x3D;0 &lt;call-g&gt;
+ - func[14] sig&#x3D;0 &lt;call-v&gt;
+Table[1]:
+ - table[0] type&#x3D;funcref initial&#x3D;1
+Global[5]:
+ - global[0] funcref mutable&#x3D;0 - init ref.func:0 &lt;M.f&gt;
+ - global[1] funcref mutable&#x3D;0 - init ref.func:1
+ - global[2] funcref mutable&#x3D;1 - init ref.func:0 &lt;M.f&gt;
+ - global[3] funcref mutable&#x3D;0 - init ref.func:3
+ - global[4] funcref mutable&#x3D;0 - init ref.func:4
+Export[8]:
+ - func[7] &lt;is_null-f&gt; -&gt; &quot;is_null-f&quot;
+ - func[8] &lt;is_null-g&gt; -&gt; &quot;is_null-g&quot;
+ - func[9] &lt;is_null-v&gt; -&gt; &quot;is_null-v&quot;
+ - func[10] &lt;set-f&gt; -&gt; &quot;set-f&quot;
+ - func[11] &lt;set-g&gt; -&gt; &quot;set-g&quot;
+ - func[12] &lt;call-f&gt; -&gt; &quot;call-f&quot;
+ - func[13] &lt;call-g&gt; -&gt; &quot;call-g&quot;
+ - func[14] &lt;call-v&gt; -&gt; &quot;call-v&quot;
+Elem[3]:
+ - segment[0] flags&#x3D;3 table&#x3D;0 count&#x3D;2
+  - elem[0] &#x3D; ref.func:3
+  - elem[1] &#x3D; ref.func:5
+ - segment[1] flags&#x3D;3 table&#x3D;0 count&#x3D;2
+  - elem[0] &#x3D; ref.func:4
+  - elem[1] &#x3D; ref.func:6
+ - segment[2] flags&#x3D;3 table&#x3D;0 count&#x3D;2
+  - elem[0] &#x3D; ref.func:0 &lt;M.f&gt;
+  - elem[1] &#x3D; ref.func:1
+Code[14]:
+ - func[1] size&#x3D;7
+ - func[2] size&#x3D;8
+ - func[3] size&#x3D;2
+ - func[4] size&#x3D;2
+ - func[5] size&#x3D;2
+ - func[6] size&#x3D;2
+ - func[7] size&#x3D;5 &lt;is_null-f&gt;
+ - func[8] size&#x3D;5 &lt;is_null-g&gt;
+ - func[9] size&#x3D;5 &lt;is_null-v&gt;
+ - func[10] size&#x3D;6 &lt;set-f&gt;
+ - func[11] size&#x3D;6 &lt;set-g&gt;
+ - func[12] size&#x3D;15 &lt;call-f&gt;
+ - func[13] size&#x3D;15 &lt;call-g&gt;
+ - func[14] size&#x3D;15 &lt;call-v&gt;
+
+Contents of section Type:
+000000a: 0360 017f 017f 6000 0060 0001 7f         .&#x60;....&#x60;..&#x60;...
+
+Contents of section Import:
+0000019: 0101 4d01 6600 00                        ..M.f..
+
+Contents of section Function:
+0000022: 0e00 0101 0101 0102 0202 0101 0000 00    ...............
+
+Contents of section Table:
+0000033: 0170 0001                                .p..
+
+Contents of section Global:
+0000039: 0570 00d2 000b 7000 d201 0b70 01d2 000b  .p....p....p....
+0000049: 7000 d203 0b70 00d2 040b                 p....p....
+
+Contents of section Export:
+0000055: 0809 6973 5f6e 756c 6c2d 6600 0709 6973  ..is_null-f...is
+0000065: 5f6e 756c 6c2d 6700 0809 6973 5f6e 756c  _null-g...is_nul
+0000075: 6c2d 7600 0905 7365 742d 6600 0a05 7365  l-v...set-f...se
+0000085: 742d 6700 0b06 6361 6c6c 2d66 000c 0663  t-g...call-f...c
+0000095: 616c 6c2d 6700 0d06 6361 6c6c 2d76 000e  all-g...call-v..
+
+Contents of section Elem:
+00000a7: 0303 0002 0305 0300 0204 0603 0002 0001  ................
+
+Contents of section Code:
+00000b9: 0e07 0020 0041 016a 0b08 00d2 051a d206  ... .A.j........
+00000c9: 1a0b 0200 0b02 000b 0200 0b02 000b 0500  ................
+00000d9: d200 d10b 0500 d201 d10b 0500 2302 d10b  ............#...
+00000e9: 0600 d200 2402 0b06 00d2 0124 020b 0f00  ....$......$....
+00000f9: 4100 d200 2600 2000 4100 1100 000b 0f00  A...&amp;. .A.......
+0000109: 4100 d201 2600 2000 4100 1100 000b 0f00  A...&amp;. .A.......
+0000119: 4100 2302 2600 2000 4100 1100 000b       A.#.&amp;. .A.....
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2"><code>BeginModule(version: 1)
+  BeginTypeSection(13)
+    OnTypeCount(3)
+    OnFuncType(index: 0, params: [i32], results: [i32])
+    OnFuncType(index: 1, params: [], results: [])
+    OnFuncType(index: 2, params: [], results: [i32])
+  EndTypeSection
+  BeginImportSection(7)
+    OnImportCount(1)
+    OnImport(index: 0, kind: func, module: &quot;M&quot;, field: &quot;f&quot;)
+    OnImportFunc(import_index: 0, func_index: 0, sig_index: 0)
+  EndImportSection
+  BeginFunctionSection(15)
+    OnFunctionCount(14)
+    OnFunction(index: 1, sig_index: 0)
+    OnFunction(index: 2, sig_index: 1)
+    OnFunction(index: 3, sig_index: 1)
+    OnFunction(index: 4, sig_index: 1)
+    OnFunction(index: 5, sig_index: 1)
+    OnFunction(index: 6, sig_index: 1)
+    OnFunction(index: 7, sig_index: 2)
+    OnFunction(index: 8, sig_index: 2)
+    OnFunction(index: 9, sig_index: 2)
+    OnFunction(index: 10, sig_index: 1)
+    OnFunction(index: 11, sig_index: 1)
+    OnFunction(index: 12, sig_index: 0)
+    OnFunction(index: 13, sig_index: 0)
+    OnFunction(index: 14, sig_index: 0)
+  EndFunctionSection
+  BeginTableSection(4)
+    OnTableCount(1)
+    OnTable(index: 0, elem_type: funcref, initial: 1)
+  EndTableSection
+  BeginGlobalSection(26)
+    OnGlobalCount(5)
+    BeginGlobal(index: 0, type: funcref, mutable: false)
+    BeginGlobalInitExpr(0)
+    OnRefFuncExpr(0)
+    OnEndExpr
+    EndGlobalInitExpr(0)
+    EndGlobal(0)
+    BeginGlobal(index: 1, type: funcref, mutable: false)
+    BeginGlobalInitExpr(1)
+    OnRefFuncExpr(1)
+    OnEndExpr
+    EndGlobalInitExpr(1)
+    EndGlobal(1)
+    BeginGlobal(index: 2, type: funcref, mutable: true)
+    BeginGlobalInitExpr(2)
+    OnRefFuncExpr(0)
+    OnEndExpr
+    EndGlobalInitExpr(2)
+    EndGlobal(2)
+    BeginGlobal(index: 3, type: funcref, mutable: false)
+    BeginGlobalInitExpr(3)
+    OnRefFuncExpr(3)
+    OnEndExpr
+    EndGlobalInitExpr(3)
+    EndGlobal(3)
+    BeginGlobal(index: 4, type: funcref, mutable: false)
+    BeginGlobalInitExpr(4)
+    OnRefFuncExpr(4)
+    OnEndExpr
+    EndGlobalInitExpr(4)
+    EndGlobal(4)
+  EndGlobalSection
+  BeginExportSection(80)
+    OnExportCount(8)
+    OnExport(index: 0, kind: func, item_index: 7, name: &quot;is_null-f&quot;)
+    OnExport(index: 1, kind: func, item_index: 8, name: &quot;is_null-g&quot;)
+    OnExport(index: 2, kind: func, item_index: 9, name: &quot;is_null-v&quot;)
+    OnExport(index: 3, kind: func, item_index: 10, name: &quot;set-f&quot;)
+    OnExport(index: 4, kind: func, item_index: 11, name: &quot;set-g&quot;)
+    OnExport(index: 5, kind: func, item_index: 12, name: &quot;call-f&quot;)
+    OnExport(index: 6, kind: func, item_index: 13, name: &quot;call-g&quot;)
+    OnExport(index: 7, kind: func, item_index: 14, name: &quot;call-v&quot;)
+  EndExportSection
+  BeginElemSection(16)
+    OnElemSegmentCount(3)
+    BeginElemSegment(index: 0, table_index: 0, flags: 3)
+    OnElemSegmentElemType(index: 0, type: funcref)
+    OnElemSegmentElemExprCount(index: 0, count: 2)
+    BeginElemExpr(elem_index: 0, expr_index: 0)
+    OnRefFuncExpr(3)
+    OnEndExpr
+    EndElemExpr(elem_index: 0, expr_index: 0)
+    BeginElemExpr(elem_index: 0, expr_index: 1)
+    OnRefFuncExpr(5)
+    OnEndExpr
+    EndElemExpr(elem_index: 0, expr_index: 1)
+    EndElemSegment(0)
+    BeginElemSegment(index: 1, table_index: 0, flags: 3)
+    OnElemSegmentElemType(index: 1, type: funcref)
+    OnElemSegmentElemExprCount(index: 1, count: 2)
+    BeginElemExpr(elem_index: 1, expr_index: 0)
+    OnRefFuncExpr(4)
+    OnEndExpr
+    EndElemExpr(elem_index: 1, expr_index: 0)
+    BeginElemExpr(elem_index: 1, expr_index: 1)
+    OnRefFuncExpr(6)
+    OnEndExpr
+    EndElemExpr(elem_index: 1, expr_index: 1)
+    EndElemSegment(1)
+    BeginElemSegment(index: 2, table_index: 0, flags: 3)
+    OnElemSegmentElemType(index: 2, type: funcref)
+    OnElemSegmentElemExprCount(index: 2, count: 2)
+    BeginElemExpr(elem_index: 2, expr_index: 0)
+    OnRefFuncExpr(0)
+    OnEndExpr
+    EndElemExpr(elem_index: 2, expr_index: 0)
+    BeginElemExpr(elem_index: 2, expr_index: 1)
+    OnRefFuncExpr(1)
+    OnEndExpr
+    EndElemExpr(elem_index: 2, expr_index: 1)
+    EndElemSegment(2)
+  EndElemSection
+  BeginCodeSection(110)
+    OnFunctionBodyCount(14)
+    BeginFunctionBody(1, size:7)
+    OnLocalDeclCount(0)
+    EndFunctionBody(1)
+    BeginFunctionBody(2, size:8)
+    OnLocalDeclCount(0)
+    EndFunctionBody(2)
+    BeginFunctionBody(3, size:2)
+    OnLocalDeclCount(0)
+    EndFunctionBody(3)
+    BeginFunctionBody(4, size:2)
+    OnLocalDeclCount(0)
+    EndFunctionBody(4)
+    BeginFunctionBody(5, size:2)
+    OnLocalDeclCount(0)
+    EndFunctionBody(5)
+    BeginFunctionBody(6, size:2)
+    OnLocalDeclCount(0)
+    EndFunctionBody(6)
+    BeginFunctionBody(7, size:5)
+    OnLocalDeclCount(0)
+    EndFunctionBody(7)
+    BeginFunctionBody(8, size:5)
+    OnLocalDeclCount(0)
+    EndFunctionBody(8)
+    BeginFunctionBody(9, size:5)
+    OnLocalDeclCount(0)
+    EndFunctionBody(9)
+    BeginFunctionBody(10, size:6)
+    OnLocalDeclCount(0)
+    EndFunctionBody(10)
+    BeginFunctionBody(11, size:6)
+    OnLocalDeclCount(0)
+    EndFunctionBody(11)
+    BeginFunctionBody(12, size:15)
+    OnLocalDeclCount(0)
+    EndFunctionBody(12)
+    BeginFunctionBody(13, size:15)
+    OnLocalDeclCount(0)
+    EndFunctionBody(13)
+    BeginFunctionBody(14, size:15)
+    OnLocalDeclCount(0)
+    EndFunctionBody(14)
+  EndCodeSection
+EndModule
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2 do-not-highlightme"><code>00000000: 00 61 73 6D 01 00 00 00  .asm....
+00000008: 01 0D 03 60 01 7F 01 7F  ...&#x60;....
+00000010: 60 00 00 60 00 01 7F 02  &#x60;..&#x60;....
+00000018: 07 01 01 4D 01 66 00 00  ...M.f..
+00000020: 03 0F 0E 00 01 01 01 01  ........
+00000028: 01 02 02 02 01 01 00 00  ........
+00000030: 00 04 04 01 70 00 01 06  ....p...
+00000038: 1A 05 70 00 D2 00 0B 70  ..p....p
+00000040: 00 D2 01 0B 70 01 D2 00  ....p...
+00000048: 0B 70 00 D2 03 0B 70 00  .p....p.
+00000050: D2 04 0B 07 50 08 09 69  ....P..i
+00000058: 73 5F 6E 75 6C 6C 2D 66  s_null-f
+00000060: 00 07 09 69 73 5F 6E 75  ...is_nu
+00000068: 6C 6C 2D 67 00 08 09 69  ll-g...i
+00000070: 73 5F 6E 75 6C 6C 2D 76  s_null-v
+00000078: 00 09 05 73 65 74 2D 66  ...set-f
+00000080: 00 0A 05 73 65 74 2D 67  ...set-g
+00000088: 00 0B 06 63 61 6C 6C 2D  ...call-
+00000090: 66 00 0C 06 63 61 6C 6C  f...call
+00000098: 2D 67 00 0D 06 63 61 6C  -g...cal
+000000a0: 6C 2D 76 00 0E 09 10 03  l-v.....
+000000a8: 03 00 02 03 05 03 00 02  ........
+000000b0: 04 06 03 00 02 00 01 0A  ........
+000000b8: 6E 0E 07 00 20 00 41 01  n... .A.
+000000c0: 6A 0B 08 00 D2 05 1A D2  j.......
+000000c8: 06 1A 0B 02 00 0B 02 00  ........
+000000d0: 0B 02 00 0B 02 00 0B 05  ........
+000000d8: 00 D2 00 D1 0B 05 00 D2  ........
+000000e0: 01 D1 0B 05 00 23 02 D1  .....#..
+000000e8: 0B 06 00 D2 00 24 02 0B  .....$..
+000000f0: 06 00 D2 01 24 02 0B 0F  ....$...
+000000f8: 00 41 00 D2 00 26 00 20  .A...&amp;. 
+00000100: 00 41 00 11 00 00 0B 0F  .A......
+00000108: 00 41 00 D2 01 26 00 20  .A...&amp;. 
+00000110: 00 41 00 11 00 00 0B 0F  .A......
+00000118: 00 41 00 23 02 26 00 20  .A.#.&amp;. 
+00000120: 00 41 00 11 00 00 0B     .A.....
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2"><code>(module
+  (type (;0;) (func (param i32) (result i32)))
+  (type (;1;) (func))
+  (type (;2;) (func (result i32)))
+  (import &quot;M&quot; &quot;f&quot; (func (;0;) (type 0)))
+  (func (;1;) (type 0) (param i32) (result i32)
+    local.get 0
+    i32.const 1
+    i32.add)
+  (func (;2;) (type 1)
+    ref.func 5
+    drop
+    ref.func 6
+    drop)
+  (func (;3;) (type 1))
+  (func (;4;) (type 1))
+  (func (;5;) (type 1))
+  (func (;6;) (type 1))
+  (func (;7;) (type 2) (result i32)
+    ref.func 0
+    ref.is_null)
+  (func (;8;) (type 2) (result i32)
+    ref.func 1
+    ref.is_null)
+  (func (;9;) (type 2) (result i32)
+    global.get 2
+    ref.is_null)
+  (func (;10;) (type 1)
+    ref.func 0
+    global.set 2)
+  (func (;11;) (type 1)
+    ref.func 1
+    global.set 2)
+  (func (;12;) (type 0) (param i32) (result i32)
+    i32.const 0
+    ref.func 0
+    table.set 0
+    local.get 0
+    i32.const 0
+    call_indirect (type 0))
+  (func (;13;) (type 0) (param i32) (result i32)
+    i32.const 0
+    ref.func 1
+    table.set 0
+    local.get 0
+    i32.const 0
+    call_indirect (type 0))
+  (func (;14;) (type 0) (param i32) (result i32)
+    i32.const 0
+    global.get 2
+    table.set 0
+    local.get 0
+    i32.const 0
+    call_indirect (type 0))
+  (table (;0;) 1 funcref)
+  (global (;0;) funcref (ref.func 0))
+  (global (;1;) funcref (ref.func 1))
+  (global (;2;) (mut funcref) (ref.func 0))
+  (global (;3;) funcref (ref.func 3))
+  (global (;4;) funcref (ref.func 4))
+  (export &quot;is_null-f&quot; (func 7))
+  (export &quot;is_null-g&quot; (func 8))
+  (export &quot;is_null-v&quot; (func 9))
+  (export &quot;set-f&quot; (func 10))
+  (export &quot;set-g&quot; (func 11))
+  (export &quot;call-f&quot; (func 12))
+  (export &quot;call-g&quot; (func 13))
+  (export &quot;call-v&quot; (func 14))
+  (elem (;0;) declare func 3 5)
+  (elem (;1;) declare func 4 6)
+  (elem (;2;) declare func 0 1))
+</code></pre>
+    </div>
+</body>
+
+</html>

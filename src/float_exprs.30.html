@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asmcc float_exprs.30</title>
+
+    <link rel="stylesheet" href="//unpkg.com/@highlightjs/cdn-assets@11.7.0/styles/github.min.css">
+    <script src="//unpkg.com/@highlightjs/cdn-assets@11.7.0/highlight.min.js"></script>
+    <script>
+        hljs.configure({
+            noHighlightRe: /^do-not-highlightme$/i,
+        });
+    </script>
+    <script>hljs.highlightAll();</script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="/_vercel/insights/script.js"></script>
+</head>
+
+<body class="text-sm p-2">
+    <h1 class="text-2xl  w-full mb-4">Anaylzer: <a href="/float_exprs.30.wasm">float_exprs.30.wasm</a></h1>
+    <div class="flex justify-evenly">
+        <pre class="p-4 overflow-scroll border-2"><code>
+float_exprs.30.wasm:	file format wasm 0x1
+
+Sections:
+
+     Type start&#x3D;0x0000000a end&#x3D;0x00000017 (size&#x3D;0x0000000d) count: 2
+ Function start&#x3D;0x00000019 end&#x3D;0x0000001c (size&#x3D;0x00000003) count: 2
+   Export start&#x3D;0x0000001e end&#x3D;0x0000004b (size&#x3D;0x0000002d) count: 2
+     Code start&#x3D;0x0000004d end&#x3D;0x00000064 (size&#x3D;0x00000017) count: 2
+
+Section Details:
+
+Type[2]:
+ - type[0] (f32, f32) -&gt; f32
+ - type[1] (f64, f64) -&gt; f64
+Function[2]:
+ - func[0] sig&#x3D;0 &lt;f32.no_fold_add_sub&gt;
+ - func[1] sig&#x3D;1 &lt;f64.no_fold_add_sub&gt;
+Export[2]:
+ - func[0] &lt;f32.no_fold_add_sub&gt; -&gt; &quot;f32.no_fold_add_sub&quot;
+ - func[1] &lt;f64.no_fold_add_sub&gt; -&gt; &quot;f64.no_fold_add_sub&quot;
+Code[2]:
+ - func[0] size&#x3D;10 &lt;f32.no_fold_add_sub&gt;
+ - func[1] size&#x3D;10 &lt;f64.no_fold_add_sub&gt;
+
+Contents of section Type:
+000000a: 0260 027d 7d01 7d60 027c 7c01 7c         .&#x60;.}}.}&#x60;.||.|
+
+Contents of section Function:
+0000019: 0200 01                                  ...
+
+Contents of section Export:
+000001e: 0213 6633 322e 6e6f 5f66 6f6c 645f 6164  ..f32.no_fold_ad
+000002e: 645f 7375 6200 0013 6636 342e 6e6f 5f66  d_sub...f64.no_f
+000003e: 6f6c 645f 6164 645f 7375 6200 01         old_add_sub..
+
+Contents of section Code:
+000004d: 020a 0020 0020 0192 2001 930b 0a00 2000  ... . .. ..... .
+000005d: 2001 a020 01a1 0b                         .. ...
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2"><code>BeginModule(version: 1)
+  BeginTypeSection(13)
+    OnTypeCount(2)
+    OnFuncType(index: 0, params: [f32, f32], results: [f32])
+    OnFuncType(index: 1, params: [f64, f64], results: [f64])
+  EndTypeSection
+  BeginFunctionSection(3)
+    OnFunctionCount(2)
+    OnFunction(index: 0, sig_index: 0)
+    OnFunction(index: 1, sig_index: 1)
+  EndFunctionSection
+  BeginExportSection(45)
+    OnExportCount(2)
+    OnExport(index: 0, kind: func, item_index: 0, name: &quot;f32.no_fold_add_sub&quot;)
+    OnExport(index: 1, kind: func, item_index: 1, name: &quot;f64.no_fold_add_sub&quot;)
+  EndExportSection
+  BeginCodeSection(23)
+    OnFunctionBodyCount(2)
+    BeginFunctionBody(0, size:10)
+    OnLocalDeclCount(0)
+    EndFunctionBody(0)
+    BeginFunctionBody(1, size:10)
+    OnLocalDeclCount(0)
+    EndFunctionBody(1)
+  EndCodeSection
+EndModule
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2 do-not-highlightme"><code>00000000: 00 61 73 6D 01 00 00 00  .asm....
+00000008: 01 0D 02 60 02 7D 7D 01  ...&#x60;.}}.
+00000010: 7D 60 02 7C 7C 01 7C 03  }&#x60;.||.|.
+00000018: 03 02 00 01 07 2D 02 13  .....-..
+00000020: 66 33 32 2E 6E 6F 5F 66  f32.no_f
+00000028: 6F 6C 64 5F 61 64 64 5F  old_add_
+00000030: 73 75 62 00 00 13 66 36  sub...f6
+00000038: 34 2E 6E 6F 5F 66 6F 6C  4.no_fol
+00000040: 64 5F 61 64 64 5F 73 75  d_add_su
+00000048: 62 00 01 0A 17 02 0A 00  b.......
+00000050: 20 00 20 01 92 20 01 93   . .. ..
+00000058: 0B 0A 00 20 00 20 01 A0  ... . ..
+00000060: 20 01 A1 0B               ...
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2"><code>(module
+  (type (;0;) (func (param f32 f32) (result f32)))
+  (type (;1;) (func (param f64 f64) (result f64)))
+  (func (;0;) (type 0) (param f32 f32) (result f32)
+    local.get 0
+    local.get 1
+    f32.add
+    local.get 1
+    f32.sub)
+  (func (;1;) (type 1) (param f64 f64) (result f64)
+    local.get 0
+    local.get 1
+    f64.add
+    local.get 1
+    f64.sub)
+  (export &quot;f32.no_fold_add_sub&quot; (func 0))
+  (export &quot;f64.no_fold_add_sub&quot; (func 1)))
+</code></pre>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asmcc simd_i32x4_dot_i16x8.0</title>
+
+    <link rel="stylesheet" href="//unpkg.com/@highlightjs/cdn-assets@11.7.0/styles/github.min.css">
+    <script src="//unpkg.com/@highlightjs/cdn-assets@11.7.0/highlight.min.js"></script>
+    <script>
+        hljs.configure({
+            noHighlightRe: /^do-not-highlightme$/i,
+        });
+    </script>
+    <script>hljs.highlightAll();</script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="/_vercel/insights/script.js"></script>
+</head>
+
+<body class="text-sm p-2">
+    <h1 class="text-2xl  w-full mb-4">Anaylzer: <a href="/simd_i32x4_dot_i16x8.0.wasm">simd_i32x4_dot_i16x8.0.wasm</a></h1>
+    <div class="flex justify-evenly">
+        <pre class="p-4 overflow-scroll border-2"><code>
+simd_i32x4_dot_i16x8.0.wasm:	file format wasm 0x1
+
+Sections:
+
+     Type start&#x3D;0x0000000a end&#x3D;0x00000011 (size&#x3D;0x00000007) count: 1
+ Function start&#x3D;0x00000013 end&#x3D;0x00000015 (size&#x3D;0x00000002) count: 1
+   Export start&#x3D;0x00000017 end&#x3D;0x0000002c (size&#x3D;0x00000015) count: 1
+     Code start&#x3D;0x0000002e end&#x3D;0x00000039 (size&#x3D;0x0000000b) count: 1
+
+Section Details:
+
+Type[1]:
+ - type[0] (v128, v128) -&gt; v128
+Function[1]:
+ - func[0] sig&#x3D;0 &lt;i32x4.dot_i16x8_s&gt;
+Export[1]:
+ - func[0] &lt;i32x4.dot_i16x8_s&gt; -&gt; &quot;i32x4.dot_i16x8_s&quot;
+Code[1]:
+ - func[0] size&#x3D;9 &lt;i32x4.dot_i16x8_s&gt;
+
+Contents of section Type:
+000000a: 0160 027b 7b01 7b                        .&#x60;.{{.{
+
+Contents of section Function:
+0000013: 0100                                     ..
+
+Contents of section Export:
+0000017: 0111 6933 3278 342e 646f 745f 6931 3678  ..i32x4.dot_i16x
+0000027: 385f 7300 00                             8_s..
+
+Contents of section Code:
+000002e: 0109 0020 0020 01fd ba01 0b              ... . .....
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2"><code>BeginModule(version: 1)
+  BeginTypeSection(7)
+    OnTypeCount(1)
+    OnFuncType(index: 0, params: [v128, v128], results: [v128])
+  EndTypeSection
+  BeginFunctionSection(2)
+    OnFunctionCount(1)
+    OnFunction(index: 0, sig_index: 0)
+  EndFunctionSection
+  BeginExportSection(21)
+    OnExportCount(1)
+    OnExport(index: 0, kind: func, item_index: 0, name: &quot;i32x4.dot_i16x8_s&quot;)
+  EndExportSection
+  BeginCodeSection(11)
+    OnFunctionBodyCount(1)
+    BeginFunctionBody(0, size:9)
+    OnLocalDeclCount(0)
+    EndFunctionBody(0)
+  EndCodeSection
+EndModule
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2 do-not-highlightme"><code>00000000: 00 61 73 6D 01 00 00 00  .asm....
+00000008: 01 07 01 60 02 7B 7B 01  ...&#x60;.{{.
+00000010: 7B 03 02 01 00 07 15 01  {.......
+00000018: 11 69 33 32 78 34 2E 64  .i32x4.d
+00000020: 6F 74 5F 69 31 36 78 38  ot_i16x8
+00000028: 5F 73 00 00 0A 0B 01 09  _s......
+00000030: 00 20 00 20 01 FD BA 01  . . ....
+00000038: 0B                       .
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2"><code>(module
+  (type (;0;) (func (param v128 v128) (result v128)))
+  (func (;0;) (type 0) (param v128 v128) (result v128)
+    local.get 0
+    local.get 1
+    i32x4.dot_i16x8_s)
+  (export &quot;i32x4.dot_i16x8_s&quot; (func 0)))
+</code></pre>
+    </div>
+</body>
+
+</html>

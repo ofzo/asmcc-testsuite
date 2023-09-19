@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asmcc float_exprs.38</title>
+
+    <link rel="stylesheet" href="//unpkg.com/@highlightjs/cdn-assets@11.7.0/styles/github.min.css">
+    <script src="//unpkg.com/@highlightjs/cdn-assets@11.7.0/highlight.min.js"></script>
+    <script>
+        hljs.configure({
+            noHighlightRe: /^do-not-highlightme$/i,
+        });
+    </script>
+    <script>hljs.highlightAll();</script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="/_vercel/insights/script.js"></script>
+</head>
+
+<body class="text-sm p-2">
+    <h1 class="text-2xl  w-full mb-4">Anaylzer: <a href="/float_exprs.38.wasm">float_exprs.38.wasm</a></h1>
+    <div class="flex justify-evenly">
+        <pre class="p-4 overflow-scroll border-2"><code>
+float_exprs.38.wasm:	file format wasm 0x1
+
+Sections:
+
+     Type start&#x3D;0x0000000a end&#x3D;0x00000011 (size&#x3D;0x00000007) count: 1
+ Function start&#x3D;0x00000013 end&#x3D;0x00000015 (size&#x3D;0x00000002) count: 1
+   Export start&#x3D;0x00000017 end&#x3D;0x0000002e (size&#x3D;0x00000017) count: 1
+     Code start&#x3D;0x00000030 end&#x3D;0x0000003b (size&#x3D;0x0000000b) count: 1
+
+Section Details:
+
+Type[1]:
+ - type[0] (f64, f32) -&gt; f32
+Function[1]:
+ - func[0] sig&#x3D;0 &lt;no_demote_mixed_sub&gt;
+Export[1]:
+ - func[0] &lt;no_demote_mixed_sub&gt; -&gt; &quot;no_demote_mixed_sub&quot;
+Code[1]:
+ - func[0] size&#x3D;9 &lt;no_demote_mixed_sub&gt;
+
+Contents of section Type:
+000000a: 0160 027c 7d01 7d                        .&#x60;.|}.}
+
+Contents of section Function:
+0000013: 0100                                     ..
+
+Contents of section Export:
+0000017: 0113 6e6f 5f64 656d 6f74 655f 6d69 7865  ..no_demote_mixe
+0000027: 645f 7375 6200 00                        d_sub..
+
+Contents of section Code:
+0000030: 0109 0020 0020 01bb a1b6 0b              ... . .....
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2"><code>BeginModule(version: 1)
+  BeginTypeSection(7)
+    OnTypeCount(1)
+    OnFuncType(index: 0, params: [f64, f32], results: [f32])
+  EndTypeSection
+  BeginFunctionSection(2)
+    OnFunctionCount(1)
+    OnFunction(index: 0, sig_index: 0)
+  EndFunctionSection
+  BeginExportSection(23)
+    OnExportCount(1)
+    OnExport(index: 0, kind: func, item_index: 0, name: &quot;no_demote_mixed_sub&quot;)
+  EndExportSection
+  BeginCodeSection(11)
+    OnFunctionBodyCount(1)
+    BeginFunctionBody(0, size:9)
+    OnLocalDeclCount(0)
+    EndFunctionBody(0)
+  EndCodeSection
+EndModule
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2 do-not-highlightme"><code>00000000: 00 61 73 6D 01 00 00 00  .asm....
+00000008: 01 07 01 60 02 7C 7D 01  ...&#x60;.|}.
+00000010: 7D 03 02 01 00 07 17 01  }.......
+00000018: 13 6E 6F 5F 64 65 6D 6F  .no_demo
+00000020: 74 65 5F 6D 69 78 65 64  te_mixed
+00000028: 5F 73 75 62 00 00 0A 0B  _sub....
+00000030: 01 09 00 20 00 20 01 BB  ... . ..
+00000038: A1 B6 0B                 ...
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2"><code>(module
+  (type (;0;) (func (param f64 f32) (result f32)))
+  (func (;0;) (type 0) (param f64 f32) (result f32)
+    local.get 0
+    local.get 1
+    f64.promote_f32
+    f64.sub
+    f32.demote_f64)
+  (export &quot;no_demote_mixed_sub&quot; (func 0)))
+</code></pre>
+    </div>
+</body>
+
+</html>

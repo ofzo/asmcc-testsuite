@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asmcc memory_size.0</title>
+
+    <link rel="stylesheet" href="//unpkg.com/@highlightjs/cdn-assets@11.7.0/styles/github.min.css">
+    <script src="//unpkg.com/@highlightjs/cdn-assets@11.7.0/highlight.min.js"></script>
+    <script>
+        hljs.configure({
+            noHighlightRe: /^do-not-highlightme$/i,
+        });
+    </script>
+    <script>hljs.highlightAll();</script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="/_vercel/insights/script.js"></script>
+</head>
+
+<body class="text-sm p-2">
+    <h1 class="text-2xl  w-full mb-4">Anaylzer: <a href="/memory_size.0.wasm">memory_size.0.wasm</a></h1>
+    <div class="flex justify-evenly">
+        <pre class="p-4 overflow-scroll border-2"><code>
+memory_size.0.wasm:	file format wasm 0x1
+
+Sections:
+
+     Type start&#x3D;0x0000000a end&#x3D;0x00000013 (size&#x3D;0x00000009) count: 2
+ Function start&#x3D;0x00000015 end&#x3D;0x00000018 (size&#x3D;0x00000003) count: 2
+   Memory start&#x3D;0x0000001a end&#x3D;0x0000001d (size&#x3D;0x00000003) count: 1
+   Export start&#x3D;0x0000001f end&#x3D;0x0000002e (size&#x3D;0x0000000f) count: 2
+     Code start&#x3D;0x00000030 end&#x3D;0x0000003e (size&#x3D;0x0000000e) count: 2
+
+Section Details:
+
+Type[2]:
+ - type[0] () -&gt; i32
+ - type[1] (i32) -&gt; nil
+Function[2]:
+ - func[0] sig&#x3D;0 &lt;size&gt;
+ - func[1] sig&#x3D;1 &lt;grow&gt;
+Memory[1]:
+ - memory[0] pages: initial&#x3D;0
+Export[2]:
+ - func[0] &lt;size&gt; -&gt; &quot;size&quot;
+ - func[1] &lt;grow&gt; -&gt; &quot;grow&quot;
+Code[2]:
+ - func[0] size&#x3D;4 &lt;size&gt;
+ - func[1] size&#x3D;7 &lt;grow&gt;
+
+Contents of section Type:
+000000a: 0260 0001 7f60 017f 00                   .&#x60;...&#x60;...
+
+Contents of section Function:
+0000015: 0200 01                                  ...
+
+Contents of section Memory:
+000001a: 0100 00                                  ...
+
+Contents of section Export:
+000001f: 0204 7369 7a65 0000 0467 726f 7700 01    ..size...grow..
+
+Contents of section Code:
+0000030: 0204 003f 000b 0700 2000 4000 1a0b       ...?.... .@...
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2"><code>BeginModule(version: 1)
+  BeginTypeSection(9)
+    OnTypeCount(2)
+    OnFuncType(index: 0, params: [], results: [i32])
+    OnFuncType(index: 1, params: [i32], results: [])
+  EndTypeSection
+  BeginFunctionSection(3)
+    OnFunctionCount(2)
+    OnFunction(index: 0, sig_index: 0)
+    OnFunction(index: 1, sig_index: 1)
+  EndFunctionSection
+  BeginMemorySection(3)
+    OnMemoryCount(1)
+    OnMemory(index: 0, initial: 0)
+  EndMemorySection
+  BeginExportSection(15)
+    OnExportCount(2)
+    OnExport(index: 0, kind: func, item_index: 0, name: &quot;size&quot;)
+    OnExport(index: 1, kind: func, item_index: 1, name: &quot;grow&quot;)
+  EndExportSection
+  BeginCodeSection(14)
+    OnFunctionBodyCount(2)
+    BeginFunctionBody(0, size:4)
+    OnLocalDeclCount(0)
+    EndFunctionBody(0)
+    BeginFunctionBody(1, size:7)
+    OnLocalDeclCount(0)
+    EndFunctionBody(1)
+  EndCodeSection
+EndModule
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2 do-not-highlightme"><code>00000000: 00 61 73 6D 01 00 00 00  .asm....
+00000008: 01 09 02 60 00 01 7F 60  ...&#x60;...&#x60;
+00000010: 01 7F 00 03 03 02 00 01  ........
+00000018: 05 03 01 00 00 07 0F 02  ........
+00000020: 04 73 69 7A 65 00 00 04  .size...
+00000028: 67 72 6F 77 00 01 0A 0E  grow....
+00000030: 02 04 00 3F 00 0B 07 00  ...?....
+00000038: 20 00 40 00 1A 0B         .@...
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2"><code>(module
+  (type (;0;) (func (result i32)))
+  (type (;1;) (func (param i32)))
+  (func (;0;) (type 0) (result i32)
+    memory.size)
+  (func (;1;) (type 1) (param i32)
+    local.get 0
+    memory.grow
+    drop)
+  (memory (;0;) 0)
+  (export &quot;size&quot; (func 0))
+  (export &quot;grow&quot; (func 1)))
+</code></pre>
+    </div>
+</body>
+
+</html>

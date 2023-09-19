@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asmcc table_init.24</title>
+
+    <link rel="stylesheet" href="//unpkg.com/@highlightjs/cdn-assets@11.7.0/styles/github.min.css">
+    <script src="//unpkg.com/@highlightjs/cdn-assets@11.7.0/highlight.min.js"></script>
+    <script>
+        hljs.configure({
+            noHighlightRe: /^do-not-highlightme$/i,
+        });
+    </script>
+    <script>hljs.highlightAll();</script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="/_vercel/insights/script.js"></script>
+</head>
+
+<body class="text-sm p-2">
+    <h1 class="text-2xl  w-full mb-4">Anaylzer: <a href="/table_init.24.wasm">table_init.24.wasm</a></h1>
+    <div class="flex justify-evenly">
+        <pre class="p-4 overflow-scroll border-2"><code>
+table_init.24.wasm:	file format wasm 0x1
+
+Sections:
+
+     Type start&#x3D;0x0000000a end&#x3D;0x00000012 (size&#x3D;0x00000008) count: 2
+ Function start&#x3D;0x00000014 end&#x3D;0x00000020 (size&#x3D;0x0000000c) count: 11
+    Table start&#x3D;0x00000022 end&#x3D;0x0000002b (size&#x3D;0x00000009) count: 2
+   Export start&#x3D;0x0000002d end&#x3D;0x00000035 (size&#x3D;0x00000008) count: 1
+     Elem start&#x3D;0x00000037 end&#x3D;0x0000005a (size&#x3D;0x00000023) count: 4
+     Code start&#x3D;0x0000005c end&#x3D;0x0000009c (size&#x3D;0x00000040) count: 11
+
+Section Details:
+
+Type[2]:
+ - type[0] () -&gt; i32
+ - type[1] () -&gt; nil
+Function[11]:
+ - func[0] sig&#x3D;0
+ - func[1] sig&#x3D;0
+ - func[2] sig&#x3D;0
+ - func[3] sig&#x3D;0
+ - func[4] sig&#x3D;0
+ - func[5] sig&#x3D;0
+ - func[6] sig&#x3D;0
+ - func[7] sig&#x3D;0
+ - func[8] sig&#x3D;0
+ - func[9] sig&#x3D;0
+ - func[10] sig&#x3D;1 &lt;test&gt;
+Table[2]:
+ - table[0] type&#x3D;funcref initial&#x3D;30 max&#x3D;30
+ - table[1] type&#x3D;funcref initial&#x3D;28 max&#x3D;28
+Export[1]:
+ - func[10] &lt;test&gt; -&gt; &quot;test&quot;
+Elem[4]:
+ - segment[0] flags&#x3D;0 table&#x3D;0 count&#x3D;4 - init i32&#x3D;2
+  - elem[2] &#x3D; ref.func:3
+  - elem[3] &#x3D; ref.func:1
+  - elem[4] &#x3D; ref.func:4
+  - elem[5] &#x3D; ref.func:1
+ - segment[1] flags&#x3D;1 table&#x3D;0 count&#x3D;4
+  - elem[2] &#x3D; ref.func:2
+  - elem[3] &#x3D; ref.func:7
+  - elem[4] &#x3D; ref.func:1
+  - elem[5] &#x3D; ref.func:8
+ - segment[2] flags&#x3D;0 table&#x3D;0 count&#x3D;5 - init i32&#x3D;12
+  - elem[12] &#x3D; ref.func:7
+  - elem[13] &#x3D; ref.func:5
+  - elem[14] &#x3D; ref.func:2
+  - elem[15] &#x3D; ref.func:3
+  - elem[16] &#x3D; ref.func:6
+ - segment[3] flags&#x3D;1 table&#x3D;0 count&#x3D;5
+  - elem[12] &#x3D; ref.func:5
+  - elem[13] &#x3D; ref.func:9
+  - elem[14] &#x3D; ref.func:2
+  - elem[15] &#x3D; ref.func:7
+  - elem[16] &#x3D; ref.func:6
+Code[11]:
+ - func[0] size&#x3D;4
+ - func[1] size&#x3D;4
+ - func[2] size&#x3D;4
+ - func[3] size&#x3D;4
+ - func[4] size&#x3D;4
+ - func[5] size&#x3D;4
+ - func[6] size&#x3D;4
+ - func[7] size&#x3D;4
+ - func[8] size&#x3D;4
+ - func[9] size&#x3D;4
+ - func[10] size&#x3D;12 &lt;test&gt;
+
+Contents of section Type:
+000000a: 0260 0001 7f60 0000                      .&#x60;...&#x60;..
+
+Contents of section Function:
+0000014: 0b00 0000 0000 0000 0000 0001            ............
+
+Contents of section Table:
+0000022: 0270 011e 1e70 011c 1c                   .p...p...
+
+Contents of section Export:
+000002d: 0104 7465 7374 000a                      ..test..
+
+Contents of section Elem:
+0000037: 0400 4102 0b04 0301 0401 0100 0402 0701  ..A.............
+0000047: 0800 410c 0b05 0705 0203 0601 0005 0509  ..A.............
+0000057: 0207 06                                  ...
+
+Contents of section Code:
+000005c: 0b04 0041 000b 0400 4101 0b04 0041 020b  ...A....A....A..
+000006c: 0400 4103 0b04 0041 040b 0400 4105 0b04  ..A....A....A...
+000007c: 0041 060b 0400 4107 0b04 0041 080b 0400  .A....A....A....
+000008c: 4109 0b0c 0041 1f41 0541 00fc 0c01 000b  A....A.A.A......
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2"><code>BeginModule(version: 1)
+  BeginTypeSection(8)
+    OnTypeCount(2)
+    OnFuncType(index: 0, params: [], results: [i32])
+    OnFuncType(index: 1, params: [], results: [])
+  EndTypeSection
+  BeginFunctionSection(12)
+    OnFunctionCount(11)
+    OnFunction(index: 0, sig_index: 0)
+    OnFunction(index: 1, sig_index: 0)
+    OnFunction(index: 2, sig_index: 0)
+    OnFunction(index: 3, sig_index: 0)
+    OnFunction(index: 4, sig_index: 0)
+    OnFunction(index: 5, sig_index: 0)
+    OnFunction(index: 6, sig_index: 0)
+    OnFunction(index: 7, sig_index: 0)
+    OnFunction(index: 8, sig_index: 0)
+    OnFunction(index: 9, sig_index: 0)
+    OnFunction(index: 10, sig_index: 1)
+  EndFunctionSection
+  BeginTableSection(9)
+    OnTableCount(2)
+    OnTable(index: 0, elem_type: funcref, initial: 30, max: 30)
+    OnTable(index: 1, elem_type: funcref, initial: 28, max: 28)
+  EndTableSection
+  BeginExportSection(8)
+    OnExportCount(1)
+    OnExport(index: 0, kind: func, item_index: 10, name: &quot;test&quot;)
+  EndExportSection
+  BeginElemSection(35)
+    OnElemSegmentCount(4)
+    BeginElemSegment(index: 0, table_index: 0, flags: 0)
+    BeginElemSegmentInitExpr(0)
+    OnI32ConstExpr(2 (0x2))
+    OnEndExpr
+    EndElemSegmentInitExpr(0)
+    OnElemSegmentElemType(index: 0, type: funcref)
+    OnElemSegmentElemExprCount(index: 0, count: 4)
+    BeginElemExpr(elem_index: 0, expr_index: 0)
+    OnRefFuncExpr(3)
+    OnEndExpr
+    EndElemExpr(elem_index: 0, expr_index: 0)
+    BeginElemExpr(elem_index: 0, expr_index: 1)
+    OnRefFuncExpr(1)
+    OnEndExpr
+    EndElemExpr(elem_index: 0, expr_index: 1)
+    BeginElemExpr(elem_index: 0, expr_index: 2)
+    OnRefFuncExpr(4)
+    OnEndExpr
+    EndElemExpr(elem_index: 0, expr_index: 2)
+    BeginElemExpr(elem_index: 0, expr_index: 3)
+    OnRefFuncExpr(1)
+    OnEndExpr
+    EndElemExpr(elem_index: 0, expr_index: 3)
+    EndElemSegment(0)
+    BeginElemSegment(index: 1, table_index: 0, flags: 1)
+    OnElemSegmentElemType(index: 1, type: funcref)
+    OnElemSegmentElemExprCount(index: 1, count: 4)
+    BeginElemExpr(elem_index: 1, expr_index: 0)
+    OnRefFuncExpr(2)
+    OnEndExpr
+    EndElemExpr(elem_index: 1, expr_index: 0)
+    BeginElemExpr(elem_index: 1, expr_index: 1)
+    OnRefFuncExpr(7)
+    OnEndExpr
+    EndElemExpr(elem_index: 1, expr_index: 1)
+    BeginElemExpr(elem_index: 1, expr_index: 2)
+    OnRefFuncExpr(1)
+    OnEndExpr
+    EndElemExpr(elem_index: 1, expr_index: 2)
+    BeginElemExpr(elem_index: 1, expr_index: 3)
+    OnRefFuncExpr(8)
+    OnEndExpr
+    EndElemExpr(elem_index: 1, expr_index: 3)
+    EndElemSegment(1)
+    BeginElemSegment(index: 2, table_index: 0, flags: 0)
+    BeginElemSegmentInitExpr(2)
+    OnI32ConstExpr(12 (0xc))
+    OnEndExpr
+    EndElemSegmentInitExpr(2)
+    OnElemSegmentElemType(index: 2, type: funcref)
+    OnElemSegmentElemExprCount(index: 2, count: 5)
+    BeginElemExpr(elem_index: 2, expr_index: 0)
+    OnRefFuncExpr(7)
+    OnEndExpr
+    EndElemExpr(elem_index: 2, expr_index: 0)
+    BeginElemExpr(elem_index: 2, expr_index: 1)
+    OnRefFuncExpr(5)
+    OnEndExpr
+    EndElemExpr(elem_index: 2, expr_index: 1)
+    BeginElemExpr(elem_index: 2, expr_index: 2)
+    OnRefFuncExpr(2)
+    OnEndExpr
+    EndElemExpr(elem_index: 2, expr_index: 2)
+    BeginElemExpr(elem_index: 2, expr_index: 3)
+    OnRefFuncExpr(3)
+    OnEndExpr
+    EndElemExpr(elem_index: 2, expr_index: 3)
+    BeginElemExpr(elem_index: 2, expr_index: 4)
+    OnRefFuncExpr(6)
+    OnEndExpr
+    EndElemExpr(elem_index: 2, expr_index: 4)
+    EndElemSegment(2)
+    BeginElemSegment(index: 3, table_index: 0, flags: 1)
+    OnElemSegmentElemType(index: 3, type: funcref)
+    OnElemSegmentElemExprCount(index: 3, count: 5)
+    BeginElemExpr(elem_index: 3, expr_index: 0)
+    OnRefFuncExpr(5)
+    OnEndExpr
+    EndElemExpr(elem_index: 3, expr_index: 0)
+    BeginElemExpr(elem_index: 3, expr_index: 1)
+    OnRefFuncExpr(9)
+    OnEndExpr
+    EndElemExpr(elem_index: 3, expr_index: 1)
+    BeginElemExpr(elem_index: 3, expr_index: 2)
+    OnRefFuncExpr(2)
+    OnEndExpr
+    EndElemExpr(elem_index: 3, expr_index: 2)
+    BeginElemExpr(elem_index: 3, expr_index: 3)
+    OnRefFuncExpr(7)
+    OnEndExpr
+    EndElemExpr(elem_index: 3, expr_index: 3)
+    BeginElemExpr(elem_index: 3, expr_index: 4)
+    OnRefFuncExpr(6)
+    OnEndExpr
+    EndElemExpr(elem_index: 3, expr_index: 4)
+    EndElemSegment(3)
+  EndElemSection
+  BeginCodeSection(64)
+    OnFunctionBodyCount(11)
+    BeginFunctionBody(0, size:4)
+    OnLocalDeclCount(0)
+    EndFunctionBody(0)
+    BeginFunctionBody(1, size:4)
+    OnLocalDeclCount(0)
+    EndFunctionBody(1)
+    BeginFunctionBody(2, size:4)
+    OnLocalDeclCount(0)
+    EndFunctionBody(2)
+    BeginFunctionBody(3, size:4)
+    OnLocalDeclCount(0)
+    EndFunctionBody(3)
+    BeginFunctionBody(4, size:4)
+    OnLocalDeclCount(0)
+    EndFunctionBody(4)
+    BeginFunctionBody(5, size:4)
+    OnLocalDeclCount(0)
+    EndFunctionBody(5)
+    BeginFunctionBody(6, size:4)
+    OnLocalDeclCount(0)
+    EndFunctionBody(6)
+    BeginFunctionBody(7, size:4)
+    OnLocalDeclCount(0)
+    EndFunctionBody(7)
+    BeginFunctionBody(8, size:4)
+    OnLocalDeclCount(0)
+    EndFunctionBody(8)
+    BeginFunctionBody(9, size:4)
+    OnLocalDeclCount(0)
+    EndFunctionBody(9)
+    BeginFunctionBody(10, size:12)
+    OnLocalDeclCount(0)
+    EndFunctionBody(10)
+  EndCodeSection
+EndModule
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2 do-not-highlightme"><code>00000000: 00 61 73 6D 01 00 00 00  .asm....
+00000008: 01 08 02 60 00 01 7F 60  ...&#x60;...&#x60;
+00000010: 00 00 03 0C 0B 00 00 00  ........
+00000018: 00 00 00 00 00 00 00 01  ........
+00000020: 04 09 02 70 01 1E 1E 70  ...p...p
+00000028: 01 1C 1C 07 08 01 04 74  .......t
+00000030: 65 73 74 00 0A 09 23 04  est...#.
+00000038: 00 41 02 0B 04 03 01 04  .A......
+00000040: 01 01 00 04 02 07 01 08  ........
+00000048: 00 41 0C 0B 05 07 05 02  .A......
+00000050: 03 06 01 00 05 05 09 02  ........
+00000058: 07 06 0A 40 0B 04 00 41  ...@...A
+00000060: 00 0B 04 00 41 01 0B 04  ....A...
+00000068: 00 41 02 0B 04 00 41 03  .A....A.
+00000070: 0B 04 00 41 04 0B 04 00  ...A....
+00000078: 41 05 0B 04 00 41 06 0B  A....A..
+00000080: 04 00 41 07 0B 04 00 41  ..A....A
+00000088: 08 0B 04 00 41 09 0B 0C  ....A...
+00000090: 00 41 1F 41 05 41 00 FC  .A.A.A..
+00000098: 0C 01 00 0B              ....
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2"><code>(module
+  (type (;0;) (func (result i32)))
+  (type (;1;) (func))
+  (func (;0;) (type 0) (result i32)
+    i32.const 0)
+  (func (;1;) (type 0) (result i32)
+    i32.const 1)
+  (func (;2;) (type 0) (result i32)
+    i32.const 2)
+  (func (;3;) (type 0) (result i32)
+    i32.const 3)
+  (func (;4;) (type 0) (result i32)
+    i32.const 4)
+  (func (;5;) (type 0) (result i32)
+    i32.const 5)
+  (func (;6;) (type 0) (result i32)
+    i32.const 6)
+  (func (;7;) (type 0) (result i32)
+    i32.const 7)
+  (func (;8;) (type 0) (result i32)
+    i32.const 8)
+  (func (;9;) (type 0) (result i32)
+    i32.const 9)
+  (func (;10;) (type 1)
+    i32.const 31
+    i32.const 5
+    i32.const 0
+    table.init 1)
+  (table (;0;) 30 30 funcref)
+  (table (;1;) 28 28 funcref)
+  (export &quot;test&quot; (func 10))
+  (elem (;0;) (i32.const 2) func 3 1 4 1)
+  (elem (;1;) func 2 7 1 8)
+  (elem (;2;) (i32.const 12) func 7 5 2 3 6)
+  (elem (;3;) func 5 9 2 7 6))
+</code></pre>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asmcc imports.125</title>
+
+    <link rel="stylesheet" href="//unpkg.com/@highlightjs/cdn-assets@11.7.0/styles/github.min.css">
+    <script src="//unpkg.com/@highlightjs/cdn-assets@11.7.0/highlight.min.js"></script>
+    <script>
+        hljs.configure({
+            noHighlightRe: /^do-not-highlightme$/i,
+        });
+    </script>
+    <script>hljs.highlightAll();</script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="/_vercel/insights/script.js"></script>
+</head>
+
+<body class="text-sm p-2">
+    <h1 class="text-2xl  w-full mb-4">Anaylzer: <a href="/imports.125.wasm">imports.125.wasm</a></h1>
+    <div class="flex justify-evenly">
+        <pre class="p-4 overflow-scroll border-2"><code>
+imports.125.wasm:	file format wasm 0x1
+
+Sections:
+
+     Type start&#x3D;0x0000000a end&#x3D;0x0000000f (size&#x3D;0x00000005) count: 1
+   Import start&#x3D;0x00000011 end&#x3D;0x00000029 (size&#x3D;0x00000018) count: 1
+ Function start&#x3D;0x0000002b end&#x3D;0x0000002d (size&#x3D;0x00000002) count: 1
+   Export start&#x3D;0x0000002f end&#x3D;0x00000040 (size&#x3D;0x00000011) count: 2
+     Code start&#x3D;0x00000042 end&#x3D;0x0000004a (size&#x3D;0x00000008) count: 1
+
+Section Details:
+
+Type[1]:
+ - type[0] () -&gt; i32
+Import[1]:
+ - memory[0] pages: initial&#x3D;2 &lt;- grown-memory.memory
+Function[1]:
+ - func[0] sig&#x3D;0 &lt;grow&gt;
+Export[2]:
+ - memory[0] -&gt; &quot;memory&quot;
+ - func[0] &lt;grow&gt; -&gt; &quot;grow&quot;
+Code[1]:
+ - func[0] size&#x3D;6 &lt;grow&gt;
+
+Contents of section Type:
+000000a: 0160 0001 7f                             .&#x60;...
+
+Contents of section Import:
+0000011: 010c 6772 6f77 6e2d 6d65 6d6f 7279 066d  ..grown-memory.m
+0000021: 656d 6f72 7902 0002                      emory...
+
+Contents of section Function:
+000002b: 0100                                     ..
+
+Contents of section Export:
+000002f: 0206 6d65 6d6f 7279 0200 0467 726f 7700  ..memory...grow.
+000003f: 00                                       .
+
+Contents of section Code:
+0000042: 0106 0041 0140 000b                      ...A.@..
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2"><code>BeginModule(version: 1)
+  BeginTypeSection(5)
+    OnTypeCount(1)
+    OnFuncType(index: 0, params: [], results: [i32])
+  EndTypeSection
+  BeginImportSection(24)
+    OnImportCount(1)
+    OnImport(index: 0, kind: memory, module: &quot;grown-memory&quot;, field: &quot;memory&quot;)
+    OnImportMemory(import_index: 0, memory_index: 0, initial: 2)
+  EndImportSection
+  BeginFunctionSection(2)
+    OnFunctionCount(1)
+    OnFunction(index: 0, sig_index: 0)
+  EndFunctionSection
+  BeginExportSection(17)
+    OnExportCount(2)
+    OnExport(index: 0, kind: memory, item_index: 0, name: &quot;memory&quot;)
+    OnExport(index: 1, kind: func, item_index: 0, name: &quot;grow&quot;)
+  EndExportSection
+  BeginCodeSection(8)
+    OnFunctionBodyCount(1)
+    BeginFunctionBody(0, size:6)
+    OnLocalDeclCount(0)
+    EndFunctionBody(0)
+  EndCodeSection
+EndModule
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2 do-not-highlightme"><code>00000000: 00 61 73 6D 01 00 00 00  .asm....
+00000008: 01 05 01 60 00 01 7F 02  ...&#x60;....
+00000010: 18 01 0C 67 72 6F 77 6E  ...grown
+00000018: 2D 6D 65 6D 6F 72 79 06  -memory.
+00000020: 6D 65 6D 6F 72 79 02 00  memory..
+00000028: 02 03 02 01 00 07 11 02  ........
+00000030: 06 6D 65 6D 6F 72 79 02  .memory.
+00000038: 00 04 67 72 6F 77 00 00  ..grow..
+00000040: 0A 08 01 06 00 41 01 40  .....A.@
+00000048: 00 0B                    ..
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2"><code>(module
+  (type (;0;) (func (result i32)))
+  (import &quot;grown-memory&quot; &quot;memory&quot; (memory (;0;) 2))
+  (func (;0;) (type 0) (result i32)
+    i32.const 1
+    memory.grow)
+  (export &quot;memory&quot; (memory 0))
+  (export &quot;grow&quot; (func 0)))
+</code></pre>
+    </div>
+</body>
+
+</html>

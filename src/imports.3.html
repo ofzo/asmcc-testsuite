@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asmcc imports.3</title>
+
+    <link rel="stylesheet" href="//unpkg.com/@highlightjs/cdn-assets@11.7.0/styles/github.min.css">
+    <script src="//unpkg.com/@highlightjs/cdn-assets@11.7.0/highlight.min.js"></script>
+    <script>
+        hljs.configure({
+            noHighlightRe: /^do-not-highlightme$/i,
+        });
+    </script>
+    <script>hljs.highlightAll();</script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="/_vercel/insights/script.js"></script>
+</head>
+
+<body class="text-sm p-2">
+    <h1 class="text-2xl  w-full mb-4">Anaylzer: <a href="/imports.3.wasm">imports.3.wasm</a></h1>
+    <div class="flex justify-evenly">
+        <pre class="p-4 overflow-scroll border-2"><code>
+imports.3.wasm:	file format wasm 0x1
+
+Sections:
+
+     Type start&#x3D;0x0000000a end&#x3D;0x0000000f (size&#x3D;0x00000005) count: 1
+   Import start&#x3D;0x00000011 end&#x3D;0x00000027 (size&#x3D;0x00000016) count: 1
+ Function start&#x3D;0x00000029 end&#x3D;0x0000002b (size&#x3D;0x00000002) count: 1
+   Export start&#x3D;0x0000002d end&#x3D;0x0000003a (size&#x3D;0x0000000d) count: 1
+     Code start&#x3D;0x0000003c end&#x3D;0x00000044 (size&#x3D;0x00000008) count: 1
+
+Section Details:
+
+Type[1]:
+ - type[0] (i32) -&gt; nil
+Import[1]:
+ - func[0] sig&#x3D;0 &lt;spectest.print_i32&gt; &lt;- spectest.print_i32
+Function[1]:
+ - func[1] sig&#x3D;0 &lt;print_i32&gt;
+Export[1]:
+ - func[1] &lt;print_i32&gt; -&gt; &quot;print_i32&quot;
+Code[1]:
+ - func[1] size&#x3D;6 &lt;print_i32&gt;
+
+Contents of section Type:
+000000a: 0160 017f 00                             .&#x60;...
+
+Contents of section Import:
+0000011: 0108 7370 6563 7465 7374 0970 7269 6e74  ..spectest.print
+0000021: 5f69 3332 0000                           _i32..
+
+Contents of section Function:
+0000029: 0100                                     ..
+
+Contents of section Export:
+000002d: 0109 7072 696e 745f 6933 3200 01         ..print_i32..
+
+Contents of section Code:
+000003c: 0106 0020 0010 000b                      ... ....
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2"><code>BeginModule(version: 1)
+  BeginTypeSection(5)
+    OnTypeCount(1)
+    OnFuncType(index: 0, params: [i32], results: [])
+  EndTypeSection
+  BeginImportSection(22)
+    OnImportCount(1)
+    OnImport(index: 0, kind: func, module: &quot;spectest&quot;, field: &quot;print_i32&quot;)
+    OnImportFunc(import_index: 0, func_index: 0, sig_index: 0)
+  EndImportSection
+  BeginFunctionSection(2)
+    OnFunctionCount(1)
+    OnFunction(index: 1, sig_index: 0)
+  EndFunctionSection
+  BeginExportSection(13)
+    OnExportCount(1)
+    OnExport(index: 0, kind: func, item_index: 1, name: &quot;print_i32&quot;)
+  EndExportSection
+  BeginCodeSection(8)
+    OnFunctionBodyCount(1)
+    BeginFunctionBody(1, size:6)
+    OnLocalDeclCount(0)
+    EndFunctionBody(1)
+  EndCodeSection
+EndModule
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2 do-not-highlightme"><code>00000000: 00 61 73 6D 01 00 00 00  .asm....
+00000008: 01 05 01 60 01 7F 00 02  ...&#x60;....
+00000010: 16 01 08 73 70 65 63 74  ...spect
+00000018: 65 73 74 09 70 72 69 6E  est.prin
+00000020: 74 5F 69 33 32 00 00 03  t_i32...
+00000028: 02 01 00 07 0D 01 09 70  .......p
+00000030: 72 69 6E 74 5F 69 33 32  rint_i32
+00000038: 00 01 0A 08 01 06 00 20  ....... 
+00000040: 00 10 00 0B              ....
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2"><code>(module
+  (type (;0;) (func (param i32)))
+  (import &quot;spectest&quot; &quot;print_i32&quot; (func (;0;) (type 0)))
+  (func (;1;) (type 0) (param i32)
+    local.get 0
+    call 0)
+  (export &quot;print_i32&quot; (func 1)))
+</code></pre>
+    </div>
+</body>
+
+</html>

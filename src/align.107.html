@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asmcc align.107</title>
+
+    <link rel="stylesheet" href="//unpkg.com/@highlightjs/cdn-assets@11.7.0/styles/github.min.css">
+    <script src="//unpkg.com/@highlightjs/cdn-assets@11.7.0/highlight.min.js"></script>
+    <script>
+        hljs.configure({
+            noHighlightRe: /^do-not-highlightme$/i,
+        });
+    </script>
+    <script>hljs.highlightAll();</script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="/_vercel/insights/script.js"></script>
+</head>
+
+<body class="text-sm p-2">
+    <h1 class="text-2xl  w-full mb-4">Anaylzer: <a href="/align.107.wasm">align.107.wasm</a></h1>
+    <div class="flex justify-evenly">
+        <pre class="p-4 overflow-scroll border-2"><code>
+align.107.wasm:	file format wasm 0x1
+
+Sections:
+
+     Type start&#x3D;0x0000000a end&#x3D;0x00000015 (size&#x3D;0x0000000b) count: 2
+ Function start&#x3D;0x00000017 end&#x3D;0x0000001a (size&#x3D;0x00000003) count: 2
+   Memory start&#x3D;0x0000001c end&#x3D;0x0000001f (size&#x3D;0x00000003) count: 1
+   Export start&#x3D;0x00000021 end&#x3D;0x00000031 (size&#x3D;0x00000010) count: 2
+     Code start&#x3D;0x00000033 end&#x3D;0x00000046 (size&#x3D;0x00000013) count: 2
+
+Section Details:
+
+Type[2]:
+ - type[0] (i32, i64) -&gt; nil
+ - type[1] (i32) -&gt; i32
+Function[2]:
+ - func[0] sig&#x3D;0 &lt;store&gt;
+ - func[1] sig&#x3D;1 &lt;load&gt;
+Memory[1]:
+ - memory[0] pages: initial&#x3D;1
+Export[2]:
+ - func[0] &lt;store&gt; -&gt; &quot;store&quot;
+ - func[1] &lt;load&gt; -&gt; &quot;load&quot;
+Code[2]:
+ - func[0] size&#x3D;9 &lt;store&gt;
+ - func[1] size&#x3D;7 &lt;load&gt;
+
+Contents of section Type:
+000000a: 0260 027f 7e00 6001 7f01 7f              .&#x60;..~.&#x60;....
+
+Contents of section Function:
+0000017: 0200 01                                  ...
+
+Contents of section Memory:
+000001c: 0100 01                                  ...
+
+Contents of section Export:
+0000021: 0205 7374 6f72 6500 0004 6c6f 6164 0001  ..store...load..
+
+Contents of section Code:
+0000033: 0209 0020 0020 0137 0200 0b07 0020 0028  ... . .7..... .(
+0000043: 0200 0b                                  ...
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2"><code>BeginModule(version: 1)
+  BeginTypeSection(11)
+    OnTypeCount(2)
+    OnFuncType(index: 0, params: [i32, i64], results: [])
+    OnFuncType(index: 1, params: [i32], results: [i32])
+  EndTypeSection
+  BeginFunctionSection(3)
+    OnFunctionCount(2)
+    OnFunction(index: 0, sig_index: 0)
+    OnFunction(index: 1, sig_index: 1)
+  EndFunctionSection
+  BeginMemorySection(3)
+    OnMemoryCount(1)
+    OnMemory(index: 0, initial: 1)
+  EndMemorySection
+  BeginExportSection(16)
+    OnExportCount(2)
+    OnExport(index: 0, kind: func, item_index: 0, name: &quot;store&quot;)
+    OnExport(index: 1, kind: func, item_index: 1, name: &quot;load&quot;)
+  EndExportSection
+  BeginCodeSection(19)
+    OnFunctionBodyCount(2)
+    BeginFunctionBody(0, size:9)
+    OnLocalDeclCount(0)
+    EndFunctionBody(0)
+    BeginFunctionBody(1, size:7)
+    OnLocalDeclCount(0)
+    EndFunctionBody(1)
+  EndCodeSection
+EndModule
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2 do-not-highlightme"><code>00000000: 00 61 73 6D 01 00 00 00  .asm....
+00000008: 01 0B 02 60 02 7F 7E 00  ...&#x60;..~.
+00000010: 60 01 7F 01 7F 03 03 02  &#x60;.......
+00000018: 00 01 05 03 01 00 01 07  ........
+00000020: 10 02 05 73 74 6F 72 65  ...store
+00000028: 00 00 04 6C 6F 61 64 00  ...load.
+00000030: 01 0A 13 02 09 00 20 00  ...... .
+00000038: 20 01 37 02 00 0B 07 00   .7.....
+00000040: 20 00 28 02 00 0B         .(...
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2"><code>(module
+  (type (;0;) (func (param i32 i64)))
+  (type (;1;) (func (param i32) (result i32)))
+  (func (;0;) (type 0) (param i32 i64)
+    local.get 0
+    local.get 1
+    i64.store align&#x3D;4)
+  (func (;1;) (type 1) (param i32) (result i32)
+    local.get 0
+    i32.load)
+  (memory (;0;) 1)
+  (export &quot;store&quot; (func 0))
+  (export &quot;load&quot; (func 1)))
+</code></pre>
+    </div>
+</body>
+
+</html>

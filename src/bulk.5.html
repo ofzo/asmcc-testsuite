@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asmcc bulk.5</title>
+
+    <link rel="stylesheet" href="//unpkg.com/@highlightjs/cdn-assets@11.7.0/styles/github.min.css">
+    <script src="//unpkg.com/@highlightjs/cdn-assets@11.7.0/highlight.min.js"></script>
+    <script>
+        hljs.configure({
+            noHighlightRe: /^do-not-highlightme$/i,
+        });
+    </script>
+    <script>hljs.highlightAll();</script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="/_vercel/insights/script.js"></script>
+</head>
+
+<body class="text-sm p-2">
+    <h1 class="text-2xl  w-full mb-4">Anaylzer: <a href="/bulk.5.wasm">bulk.5.wasm</a></h1>
+    <div class="flex justify-evenly">
+        <pre class="p-4 overflow-scroll border-2"><code>
+bulk.5.wasm:	file format wasm 0x1
+
+Sections:
+
+     Type start&#x3D;0x0000000a end&#x3D;0x00000012 (size&#x3D;0x00000008) count: 2
+ Function start&#x3D;0x00000014 end&#x3D;0x00000019 (size&#x3D;0x00000005) count: 4
+   Memory start&#x3D;0x0000001b end&#x3D;0x0000001e (size&#x3D;0x00000003) count: 1
+   Export start&#x3D;0x00000020 end&#x3D;0x0000005b (size&#x3D;0x0000003b) count: 4
+DataCount start&#x3D;0x0000005d end&#x3D;0x0000005e (size&#x3D;0x00000001) count: 2
+     Code start&#x3D;0x00000060 end&#x3D;0x00000087 (size&#x3D;0x00000027) count: 4
+     Data start&#x3D;0x00000089 end&#x3D;0x00000093 (size&#x3D;0x0000000a) count: 2
+
+Section Details:
+
+Type[2]:
+ - type[0] () -&gt; nil
+ - type[1] (i32) -&gt; nil
+Function[4]:
+ - func[0] sig&#x3D;0 &lt;drop_passive&gt;
+ - func[1] sig&#x3D;1 &lt;init_passive&gt;
+ - func[2] sig&#x3D;0 &lt;drop_active&gt;
+ - func[3] sig&#x3D;1 &lt;init_active&gt;
+Memory[1]:
+ - memory[0] pages: initial&#x3D;1
+Export[4]:
+ - func[0] &lt;drop_passive&gt; -&gt; &quot;drop_passive&quot;
+ - func[1] &lt;init_passive&gt; -&gt; &quot;init_passive&quot;
+ - func[2] &lt;drop_active&gt; -&gt; &quot;drop_active&quot;
+ - func[3] &lt;init_active&gt; -&gt; &quot;init_active&quot;
+DataCount:
+ - data count: 2
+Code[4]:
+ - func[0] size&#x3D;5 &lt;drop_passive&gt;
+ - func[1] size&#x3D;12 &lt;init_passive&gt;
+ - func[2] size&#x3D;5 &lt;drop_active&gt;
+ - func[3] size&#x3D;12 &lt;init_active&gt;
+Data[2]:
+ - segment[0] passive size&#x3D;1
+  - 0000000: 78                                       x
+ - segment[1] memory&#x3D;0 size&#x3D;1 - init i32&#x3D;0
+  - 0000000: 78                                       x
+
+Contents of section Type:
+000000a: 0260 0000 6001 7f00                      .&#x60;..&#x60;...
+
+Contents of section Function:
+0000014: 0400 0100 01                             .....
+
+Contents of section Memory:
+000001b: 0100 01                                  ...
+
+Contents of section Export:
+0000020: 040c 6472 6f70 5f70 6173 7369 7665 0000  ..drop_passive..
+0000030: 0c69 6e69 745f 7061 7373 6976 6500 010b  .init_passive...
+0000040: 6472 6f70 5f61 6374 6976 6500 020b 696e  drop_active...in
+0000050: 6974 5f61 6374 6976 6500 03              it_active..
+
+Contents of section DataCount:
+000005d: 02                                       .
+
+Contents of section Code:
+0000060: 0405 00fc 0900 0b0c 0041 0041 0020 00fc  .........A.A. ..
+0000070: 0800 000b 0500 fc09 010b 0c00 4100 4100  ............A.A.
+0000080: 2000 fc08 0100 0b                         ......
+
+Contents of section Data:
+0000089: 0201 0178 0041 000b 0178                 ...x.A...x
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2"><code>BeginModule(version: 1)
+  BeginTypeSection(8)
+    OnTypeCount(2)
+    OnFuncType(index: 0, params: [], results: [])
+    OnFuncType(index: 1, params: [i32], results: [])
+  EndTypeSection
+  BeginFunctionSection(5)
+    OnFunctionCount(4)
+    OnFunction(index: 0, sig_index: 0)
+    OnFunction(index: 1, sig_index: 1)
+    OnFunction(index: 2, sig_index: 0)
+    OnFunction(index: 3, sig_index: 1)
+  EndFunctionSection
+  BeginMemorySection(3)
+    OnMemoryCount(1)
+    OnMemory(index: 0, initial: 1)
+  EndMemorySection
+  BeginExportSection(59)
+    OnExportCount(4)
+    OnExport(index: 0, kind: func, item_index: 0, name: &quot;drop_passive&quot;)
+    OnExport(index: 1, kind: func, item_index: 1, name: &quot;init_passive&quot;)
+    OnExport(index: 2, kind: func, item_index: 2, name: &quot;drop_active&quot;)
+    OnExport(index: 3, kind: func, item_index: 3, name: &quot;init_active&quot;)
+  EndExportSection
+  BeginDataCountSection(1)
+    OnDataCount(2)
+  EndDataCountSection
+  BeginCodeSection(39)
+    OnFunctionBodyCount(4)
+    BeginFunctionBody(0, size:5)
+    OnLocalDeclCount(0)
+    EndFunctionBody(0)
+    BeginFunctionBody(1, size:12)
+    OnLocalDeclCount(0)
+    EndFunctionBody(1)
+    BeginFunctionBody(2, size:5)
+    OnLocalDeclCount(0)
+    EndFunctionBody(2)
+    BeginFunctionBody(3, size:12)
+    OnLocalDeclCount(0)
+    EndFunctionBody(3)
+  EndCodeSection
+  BeginDataSection(10)
+    OnDataSegmentCount(2)
+    BeginDataSegment(index: 0, memory_index: 0, flags: 1)
+    OnDataSegmentData(index:0, size:1)
+    EndDataSegment(0)
+    BeginDataSegment(index: 1, memory_index: 0, flags: 0)
+    BeginDataSegmentInitExpr(1)
+    OnI32ConstExpr(0 (0x0))
+    OnEndExpr
+    EndDataSegmentInitExpr(1)
+    OnDataSegmentData(index:1, size:1)
+    EndDataSegment(1)
+  EndDataSection
+EndModule
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2 do-not-highlightme"><code>00000000: 00 61 73 6D 01 00 00 00  .asm....
+00000008: 01 08 02 60 00 00 60 01  ...&#x60;..&#x60;.
+00000010: 7F 00 03 05 04 00 01 00  ........
+00000018: 01 05 03 01 00 01 07 3B  .......;
+00000020: 04 0C 64 72 6F 70 5F 70  ..drop_p
+00000028: 61 73 73 69 76 65 00 00  assive..
+00000030: 0C 69 6E 69 74 5F 70 61  .init_pa
+00000038: 73 73 69 76 65 00 01 0B  ssive...
+00000040: 64 72 6F 70 5F 61 63 74  drop_act
+00000048: 69 76 65 00 02 0B 69 6E  ive...in
+00000050: 69 74 5F 61 63 74 69 76  it_activ
+00000058: 65 00 03 0C 01 02 0A 27  e......&#x27;
+00000060: 04 05 00 FC 09 00 0B 0C  ........
+00000068: 00 41 00 41 00 20 00 FC  .A.A. ..
+00000070: 08 00 00 0B 05 00 FC 09  ........
+00000078: 01 0B 0C 00 41 00 41 00  ....A.A.
+00000080: 20 00 FC 08 01 00 0B 0B   .......
+00000088: 0A 02 01 01 78 00 41 00  ....x.A.
+00000090: 0B 01 78                 ..x
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2"><code>(module
+  (type (;0;) (func))
+  (type (;1;) (func (param i32)))
+  (func (;0;) (type 0)
+    data.drop 0)
+  (func (;1;) (type 1) (param i32)
+    i32.const 0
+    i32.const 0
+    local.get 0
+    memory.init 0)
+  (func (;2;) (type 0)
+    data.drop 1)
+  (func (;3;) (type 1) (param i32)
+    i32.const 0
+    i32.const 0
+    local.get 0
+    memory.init 1)
+  (memory (;0;) 1)
+  (export &quot;drop_passive&quot; (func 0))
+  (export &quot;init_passive&quot; (func 1))
+  (export &quot;drop_active&quot; (func 2))
+  (export &quot;init_active&quot; (func 3))
+  (data (;0;) &quot;x&quot;)
+  (data (;1;) (i32.const 0) &quot;x&quot;))
+</code></pre>
+    </div>
+</body>
+
+</html>

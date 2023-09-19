@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asmcc float_exprs.94</title>
+
+    <link rel="stylesheet" href="//unpkg.com/@highlightjs/cdn-assets@11.7.0/styles/github.min.css">
+    <script src="//unpkg.com/@highlightjs/cdn-assets@11.7.0/highlight.min.js"></script>
+    <script>
+        hljs.configure({
+            noHighlightRe: /^do-not-highlightme$/i,
+        });
+    </script>
+    <script>hljs.highlightAll();</script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="/_vercel/insights/script.js"></script>
+</head>
+
+<body class="text-sm p-2">
+    <h1 class="text-2xl  w-full mb-4">Anaylzer: <a href="/float_exprs.94.wasm">float_exprs.94.wasm</a></h1>
+    <div class="flex justify-evenly">
+        <pre class="p-4 overflow-scroll border-2"><code>
+float_exprs.94.wasm:	file format wasm 0x1
+
+Sections:
+
+     Type start&#x3D;0x0000000a end&#x3D;0x00000010 (size&#x3D;0x00000006) count: 1
+ Function start&#x3D;0x00000012 end&#x3D;0x00000014 (size&#x3D;0x00000002) count: 1
+   Export start&#x3D;0x00000016 end&#x3D;0x0000001d (size&#x3D;0x00000007) count: 1
+     Code start&#x3D;0x00000020 end&#x3D;0x000000eb (size&#x3D;0x000000cb) count: 1
+
+Section Details:
+
+Type[1]:
+ - type[0] (i32) -&gt; f64
+Function[1]:
+ - func[0] sig&#x3D;0 &lt;tau&gt;
+Export[1]:
+ - func[0] &lt;tau&gt; -&gt; &quot;tau&quot;
+Code[1]:
+ - func[0] size&#x3D;200 &lt;tau&gt;
+
+Contents of section Type:
+000000a: 0160 017f 017c                           .&#x60;...|
+
+Contents of section Function:
+0000012: 0100                                     ..
+
+Contents of section Export:
+0000016: 0103 7461 7500 00                        ..tau..
+
+Contents of section Code:
+0000020: 01c8 0101 047c 4400 0000 0000 0000 0021  .....|D........!
+0000030: 0102 4020 0041 0148 0d00 4400 0000 0000  ..@ .A.H..D.....
+0000040: 00f0 3f21 0244 0000 0000 0000 0000 2103  ..?!.D........!.
+0000050: 0340 2001 2002 4400 0000 0000 0020 4020  .@ . .D...... @ 
+0000060: 0344 0000 0000 0000 2040 a222 0444 0000  .D...... @.&quot;.D..
+0000070: 0000 0000 f03f a0a3 4400 0000 0000 0010  .....?..D.......
+0000080: 4020 0444 0000 0000 0000 1040 a0a3 a144  @ .D.......@...D
+0000090: 0000 0000 0000 0040 2004 4400 0000 0000  .......@ .D.....
+00000a0: 0014 40a0 a3a1 4400 0000 0000 0000 4020  ..@...D.......@ 
+00000b0: 0444 0000 0000 0000 1840 a0a3 a1a2 a021  .D.......@.....!
+00000c0: 0120 0344 0000 0000 0000 f03f a021 0320  . .D.......?.!. 
+00000d0: 0244 0000 0000 0000 b03f a221 0220 0041  .D.......?.!. .A
+00000e0: 7f6a 2200 0d00 0b0b 2001 0b              .j&quot;..... ..
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2"><code>BeginModule(version: 1)
+  BeginTypeSection(6)
+    OnTypeCount(1)
+    OnFuncType(index: 0, params: [i32], results: [f64])
+  EndTypeSection
+  BeginFunctionSection(2)
+    OnFunctionCount(1)
+    OnFunction(index: 0, sig_index: 0)
+  EndFunctionSection
+  BeginExportSection(7)
+    OnExportCount(1)
+    OnExport(index: 0, kind: func, item_index: 0, name: &quot;tau&quot;)
+  EndExportSection
+  BeginCodeSection(203)
+    OnFunctionBodyCount(1)
+    BeginFunctionBody(0, size:200)
+    OnLocalDeclCount(1)
+    OnLocalDecl(index: 0, count: 4, type: f64)
+    EndFunctionBody(0)
+  EndCodeSection
+EndModule
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2 do-not-highlightme"><code>00000000: 00 61 73 6D 01 00 00 00  .asm....
+00000008: 01 06 01 60 01 7F 01 7C  ...&#x60;...|
+00000010: 03 02 01 00 07 07 01 03  ........
+00000018: 74 61 75 00 00 0A CB 01  tau.....
+00000020: 01 C8 01 01 04 7C 44 00  .....|D.
+00000028: 00 00 00 00 00 00 00 21  .......!
+00000030: 01 02 40 20 00 41 01 48  ..@ .A.H
+00000038: 0D 00 44 00 00 00 00 00  ..D.....
+00000040: 00 F0 3F 21 02 44 00 00  ..?!.D..
+00000048: 00 00 00 00 00 00 21 03  ......!.
+00000050: 03 40 20 01 20 02 44 00  .@ . .D.
+00000058: 00 00 00 00 00 20 40 20  ..... @ 
+00000060: 03 44 00 00 00 00 00 00  .D......
+00000068: 20 40 A2 22 04 44 00 00   @.&quot;.D..
+00000070: 00 00 00 00 F0 3F A0 A3  .....?..
+00000078: 44 00 00 00 00 00 00 10  D.......
+00000080: 40 20 04 44 00 00 00 00  @ .D....
+00000088: 00 00 10 40 A0 A3 A1 44  ...@...D
+00000090: 00 00 00 00 00 00 00 40  .......@
+00000098: 20 04 44 00 00 00 00 00   .D.....
+000000a0: 00 14 40 A0 A3 A1 44 00  ..@...D.
+000000a8: 00 00 00 00 00 00 40 20  ......@ 
+000000b0: 04 44 00 00 00 00 00 00  .D......
+000000b8: 18 40 A0 A3 A1 A2 A0 21  .@.....!
+000000c0: 01 20 03 44 00 00 00 00  . .D....
+000000c8: 00 00 F0 3F A0 21 03 20  ...?.!. 
+000000d0: 02 44 00 00 00 00 00 00  .D......
+000000d8: B0 3F A2 21 02 20 00 41  .?.!. .A
+000000e0: 7F 6A 22 00 0D 00 0B 0B  .j&quot;.....
+000000e8: 20 01 0B                  ..
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2"><code>(module
+  (type (;0;) (func (param i32) (result f64)))
+  (func (;0;) (type 0) (param i32) (result f64)
+    (local f64 f64 f64 f64)
+    f64.const 0x0p+0 (;&#x3D;0;)
+    local.set 1
+    block  ;; label &#x3D; @1
+      local.get 0
+      i32.const 1
+      i32.lt_s
+      br_if 0 (;@1;)
+      f64.const 0x1p+0 (;&#x3D;1;)
+      local.set 2
+      f64.const 0x0p+0 (;&#x3D;0;)
+      local.set 3
+      loop  ;; label &#x3D; @2
+        local.get 1
+        local.get 2
+        f64.const 0x1p+3 (;&#x3D;8;)
+        local.get 3
+        f64.const 0x1p+3 (;&#x3D;8;)
+        f64.mul
+        local.tee 4
+        f64.const 0x1p+0 (;&#x3D;1;)
+        f64.add
+        f64.div
+        f64.const 0x1p+2 (;&#x3D;4;)
+        local.get 4
+        f64.const 0x1p+2 (;&#x3D;4;)
+        f64.add
+        f64.div
+        f64.sub
+        f64.const 0x1p+1 (;&#x3D;2;)
+        local.get 4
+        f64.const 0x1.4p+2 (;&#x3D;5;)
+        f64.add
+        f64.div
+        f64.sub
+        f64.const 0x1p+1 (;&#x3D;2;)
+        local.get 4
+        f64.const 0x1.8p+2 (;&#x3D;6;)
+        f64.add
+        f64.div
+        f64.sub
+        f64.mul
+        f64.add
+        local.set 1
+        local.get 3
+        f64.const 0x1p+0 (;&#x3D;1;)
+        f64.add
+        local.set 3
+        local.get 2
+        f64.const 0x1p-4 (;&#x3D;0.0625;)
+        f64.mul
+        local.set 2
+        local.get 0
+        i32.const -1
+        i32.add
+        local.tee 0
+        br_if 0 (;@2;)
+      end
+    end
+    local.get 1)
+  (export &quot;tau&quot; (func 0)))
+</code></pre>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asmcc elem.23</title>
+
+    <link rel="stylesheet" href="//unpkg.com/@highlightjs/cdn-assets@11.7.0/styles/github.min.css">
+    <script src="//unpkg.com/@highlightjs/cdn-assets@11.7.0/highlight.min.js"></script>
+    <script>
+        hljs.configure({
+            noHighlightRe: /^do-not-highlightme$/i,
+        });
+    </script>
+    <script>hljs.highlightAll();</script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="/_vercel/insights/script.js"></script>
+</head>
+
+<body class="text-sm p-2">
+    <h1 class="text-2xl  w-full mb-4">Anaylzer: <a href="/elem.23.wasm">elem.23.wasm</a></h1>
+    <div class="flex justify-evenly">
+        <pre class="p-4 overflow-scroll border-2"><code>
+elem.23.wasm:	file format wasm 0x1
+
+Sections:
+
+     Type start&#x3D;0x0000000a end&#x3D;0x0000000e (size&#x3D;0x00000004) count: 1
+ Function start&#x3D;0x00000010 end&#x3D;0x00000012 (size&#x3D;0x00000002) count: 1
+    Table start&#x3D;0x00000014 end&#x3D;0x00000019 (size&#x3D;0x00000005) count: 1
+     Elem start&#x3D;0x0000001b end&#x3D;0x00000022 (size&#x3D;0x00000007) count: 1
+     Code start&#x3D;0x00000024 end&#x3D;0x00000028 (size&#x3D;0x00000004) count: 1
+
+Section Details:
+
+Type[1]:
+ - type[0] () -&gt; nil
+Function[1]:
+ - func[0] sig&#x3D;0
+Table[1]:
+ - table[0] type&#x3D;funcref initial&#x3D;0 max&#x3D;0
+Elem[1]:
+ - segment[0] flags&#x3D;0 table&#x3D;0 count&#x3D;1 - init i32&#x3D;0
+  - elem[0] &#x3D; ref.func:0
+Code[1]:
+ - func[0] size&#x3D;2
+
+Contents of section Type:
+000000a: 0160 0000                                .&#x60;..
+
+Contents of section Function:
+0000010: 0100                                     ..
+
+Contents of section Table:
+0000014: 0170 0100 00                             .p...
+
+Contents of section Elem:
+000001b: 0100 4100 0b01 00                        ..A....
+
+Contents of section Code:
+0000024: 0102 000b                                ....
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2"><code>BeginModule(version: 1)
+  BeginTypeSection(4)
+    OnTypeCount(1)
+    OnFuncType(index: 0, params: [], results: [])
+  EndTypeSection
+  BeginFunctionSection(2)
+    OnFunctionCount(1)
+    OnFunction(index: 0, sig_index: 0)
+  EndFunctionSection
+  BeginTableSection(5)
+    OnTableCount(1)
+    OnTable(index: 0, elem_type: funcref, initial: 0, max: 0)
+  EndTableSection
+  BeginElemSection(7)
+    OnElemSegmentCount(1)
+    BeginElemSegment(index: 0, table_index: 0, flags: 0)
+    BeginElemSegmentInitExpr(0)
+    OnI32ConstExpr(0 (0x0))
+    OnEndExpr
+    EndElemSegmentInitExpr(0)
+    OnElemSegmentElemType(index: 0, type: funcref)
+    OnElemSegmentElemExprCount(index: 0, count: 1)
+    BeginElemExpr(elem_index: 0, expr_index: 0)
+    OnRefFuncExpr(0)
+    OnEndExpr
+    EndElemExpr(elem_index: 0, expr_index: 0)
+    EndElemSegment(0)
+  EndElemSection
+  BeginCodeSection(4)
+    OnFunctionBodyCount(1)
+    BeginFunctionBody(0, size:2)
+    OnLocalDeclCount(0)
+    EndFunctionBody(0)
+  EndCodeSection
+EndModule
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2 do-not-highlightme"><code>00000000: 00 61 73 6D 01 00 00 00  .asm....
+00000008: 01 04 01 60 00 00 03 02  ...&#x60;....
+00000010: 01 00 04 05 01 70 01 00  .....p..
+00000018: 00 09 07 01 00 41 00 0B  .....A..
+00000020: 01 00 0A 04 01 02 00 0B  ........
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2"><code>(module
+  (type (;0;) (func))
+  (func (;0;) (type 0))
+  (table (;0;) 0 0 funcref)
+  (elem (;0;) (i32.const 0) func 0))
+</code></pre>
+    </div>
+</body>
+
+</html>

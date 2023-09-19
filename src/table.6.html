@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asmcc table.6</title>
+
+    <link rel="stylesheet" href="//unpkg.com/@highlightjs/cdn-assets@11.7.0/styles/github.min.css">
+    <script src="//unpkg.com/@highlightjs/cdn-assets@11.7.0/highlight.min.js"></script>
+    <script>
+        hljs.configure({
+            noHighlightRe: /^do-not-highlightme$/i,
+        });
+    </script>
+    <script>hljs.highlightAll();</script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="/_vercel/insights/script.js"></script>
+</head>
+
+<body class="text-sm p-2">
+    <h1 class="text-2xl  w-full mb-4">Anaylzer: <a href="/table.6.wasm">table.6.wasm</a></h1>
+    <div class="flex justify-evenly">
+        <pre class="p-4 overflow-scroll border-2"><code>
+table.6.wasm:	file format wasm 0x1
+
+Sections:
+
+    Table start&#x3D;0x0000000a end&#x3D;0x00000013 (size&#x3D;0x00000009) count: 1
+
+Section Details:
+
+Table[1]:
+ - table[0] type&#x3D;funcref initial&#x3D;0 max&#x3D;4294967295
+
+Contents of section Table:
+000000a: 0170 0100 ffff ffff 0f                   .p.......
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2"><code>BeginModule(version: 1)
+  BeginTableSection(9)
+    OnTableCount(1)
+    OnTable(index: 0, elem_type: funcref, initial: 0, max: 4294967295)
+  EndTableSection
+EndModule
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2 do-not-highlightme"><code>00000000: 00 61 73 6D 01 00 00 00  .asm....
+00000008: 04 09 01 70 01 00 FF FF  ...p....
+00000010: FF FF 0F                 ...
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2"><code>(module
+  (table (;0;) 0 4294967295 funcref))
+</code></pre>
+    </div>
+</body>
+
+</html>

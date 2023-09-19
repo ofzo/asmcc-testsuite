@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asmcc simd_load32_lane.0</title>
+
+    <link rel="stylesheet" href="//unpkg.com/@highlightjs/cdn-assets@11.7.0/styles/github.min.css">
+    <script src="//unpkg.com/@highlightjs/cdn-assets@11.7.0/highlight.min.js"></script>
+    <script>
+        hljs.configure({
+            noHighlightRe: /^do-not-highlightme$/i,
+        });
+    </script>
+    <script>hljs.highlightAll();</script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="/_vercel/insights/script.js"></script>
+</head>
+
+<body class="text-sm p-2">
+    <h1 class="text-2xl  w-full mb-4">Anaylzer: <a href="/simd_load32_lane.0.wasm">simd_load32_lane.0.wasm</a></h1>
+    <div class="flex justify-evenly">
+        <pre class="p-4 overflow-scroll border-2"><code>
+simd_load32_lane.0.wasm:	file format wasm 0x1
+
+Sections:
+
+     Type start&#x3D;0x0000000a end&#x3D;0x00000016 (size&#x3D;0x0000000c) count: 2
+ Function start&#x3D;0x00000018 end&#x3D;0x0000002d (size&#x3D;0x00000015) count: 20
+   Memory start&#x3D;0x0000002f end&#x3D;0x00000032 (size&#x3D;0x00000003) count: 1
+   Export start&#x3D;0x00000035 end&#x3D;0x0000025e (size&#x3D;0x00000229) count: 20
+     Code start&#x3D;0x00000261 end&#x3D;0x00000352 (size&#x3D;0x000000f1) count: 20
+     Data start&#x3D;0x00000354 end&#x3D;0x0000036a (size&#x3D;0x00000016) count: 1
+
+Section Details:
+
+Type[2]:
+ - type[0] (i32, v128) -&gt; v128
+ - type[1] (v128) -&gt; v128
+Function[20]:
+ - func[0] sig&#x3D;0 &lt;v128.load32_lane_0&gt;
+ - func[1] sig&#x3D;0 &lt;v128.load32_lane_1&gt;
+ - func[2] sig&#x3D;0 &lt;v128.load32_lane_2&gt;
+ - func[3] sig&#x3D;0 &lt;v128.load32_lane_3&gt;
+ - func[4] sig&#x3D;1 &lt;v128.load32_lane_0_offset_0&gt;
+ - func[5] sig&#x3D;1 &lt;v128.load32_lane_1_offset_1&gt;
+ - func[6] sig&#x3D;1 &lt;v128.load32_lane_2_offset_2&gt;
+ - func[7] sig&#x3D;1 &lt;v128.load32_lane_3_offset_3&gt;
+ - func[8] sig&#x3D;0 &lt;v128.load32_lane_0_align_1&gt;
+ - func[9] sig&#x3D;0 &lt;v128.load32_lane_0_align_2&gt;
+ - func[10] sig&#x3D;0 &lt;v128.load32_lane_0_align_4&gt;
+ - func[11] sig&#x3D;0 &lt;v128.load32_lane_1_align_1&gt;
+ - func[12] sig&#x3D;0 &lt;v128.load32_lane_1_align_2&gt;
+ - func[13] sig&#x3D;0 &lt;v128.load32_lane_1_align_4&gt;
+ - func[14] sig&#x3D;0 &lt;v128.load32_lane_2_align_1&gt;
+ - func[15] sig&#x3D;0 &lt;v128.load32_lane_2_align_2&gt;
+ - func[16] sig&#x3D;0 &lt;v128.load32_lane_2_align_4&gt;
+ - func[17] sig&#x3D;0 &lt;v128.load32_lane_3_align_1&gt;
+ - func[18] sig&#x3D;0 &lt;v128.load32_lane_3_align_2&gt;
+ - func[19] sig&#x3D;0 &lt;v128.load32_lane_3_align_4&gt;
+Memory[1]:
+ - memory[0] pages: initial&#x3D;1
+Export[20]:
+ - func[0] &lt;v128.load32_lane_0&gt; -&gt; &quot;v128.load32_lane_0&quot;
+ - func[1] &lt;v128.load32_lane_1&gt; -&gt; &quot;v128.load32_lane_1&quot;
+ - func[2] &lt;v128.load32_lane_2&gt; -&gt; &quot;v128.load32_lane_2&quot;
+ - func[3] &lt;v128.load32_lane_3&gt; -&gt; &quot;v128.load32_lane_3&quot;
+ - func[4] &lt;v128.load32_lane_0_offset_0&gt; -&gt; &quot;v128.load32_lane_0_offset_0&quot;
+ - func[5] &lt;v128.load32_lane_1_offset_1&gt; -&gt; &quot;v128.load32_lane_1_offset_1&quot;
+ - func[6] &lt;v128.load32_lane_2_offset_2&gt; -&gt; &quot;v128.load32_lane_2_offset_2&quot;
+ - func[7] &lt;v128.load32_lane_3_offset_3&gt; -&gt; &quot;v128.load32_lane_3_offset_3&quot;
+ - func[8] &lt;v128.load32_lane_0_align_1&gt; -&gt; &quot;v128.load32_lane_0_align_1&quot;
+ - func[9] &lt;v128.load32_lane_0_align_2&gt; -&gt; &quot;v128.load32_lane_0_align_2&quot;
+ - func[10] &lt;v128.load32_lane_0_align_4&gt; -&gt; &quot;v128.load32_lane_0_align_4&quot;
+ - func[11] &lt;v128.load32_lane_1_align_1&gt; -&gt; &quot;v128.load32_lane_1_align_1&quot;
+ - func[12] &lt;v128.load32_lane_1_align_2&gt; -&gt; &quot;v128.load32_lane_1_align_2&quot;
+ - func[13] &lt;v128.load32_lane_1_align_4&gt; -&gt; &quot;v128.load32_lane_1_align_4&quot;
+ - func[14] &lt;v128.load32_lane_2_align_1&gt; -&gt; &quot;v128.load32_lane_2_align_1&quot;
+ - func[15] &lt;v128.load32_lane_2_align_2&gt; -&gt; &quot;v128.load32_lane_2_align_2&quot;
+ - func[16] &lt;v128.load32_lane_2_align_4&gt; -&gt; &quot;v128.load32_lane_2_align_4&quot;
+ - func[17] &lt;v128.load32_lane_3_align_1&gt; -&gt; &quot;v128.load32_lane_3_align_1&quot;
+ - func[18] &lt;v128.load32_lane_3_align_2&gt; -&gt; &quot;v128.load32_lane_3_align_2&quot;
+ - func[19] &lt;v128.load32_lane_3_align_4&gt; -&gt; &quot;v128.load32_lane_3_align_4&quot;
+Code[20]:
+ - func[0] size&#x3D;11 &lt;v128.load32_lane_0&gt;
+ - func[1] size&#x3D;11 &lt;v128.load32_lane_1&gt;
+ - func[2] size&#x3D;11 &lt;v128.load32_lane_2&gt;
+ - func[3] size&#x3D;11 &lt;v128.load32_lane_3&gt;
+ - func[4] size&#x3D;11 &lt;v128.load32_lane_0_offset_0&gt;
+ - func[5] size&#x3D;11 &lt;v128.load32_lane_1_offset_1&gt;
+ - func[6] size&#x3D;11 &lt;v128.load32_lane_2_offset_2&gt;
+ - func[7] size&#x3D;11 &lt;v128.load32_lane_3_offset_3&gt;
+ - func[8] size&#x3D;11 &lt;v128.load32_lane_0_align_1&gt;
+ - func[9] size&#x3D;11 &lt;v128.load32_lane_0_align_2&gt;
+ - func[10] size&#x3D;11 &lt;v128.load32_lane_0_align_4&gt;
+ - func[11] size&#x3D;11 &lt;v128.load32_lane_1_align_1&gt;
+ - func[12] size&#x3D;11 &lt;v128.load32_lane_1_align_2&gt;
+ - func[13] size&#x3D;11 &lt;v128.load32_lane_1_align_4&gt;
+ - func[14] size&#x3D;11 &lt;v128.load32_lane_2_align_1&gt;
+ - func[15] size&#x3D;11 &lt;v128.load32_lane_2_align_2&gt;
+ - func[16] size&#x3D;11 &lt;v128.load32_lane_2_align_4&gt;
+ - func[17] size&#x3D;11 &lt;v128.load32_lane_3_align_1&gt;
+ - func[18] size&#x3D;11 &lt;v128.load32_lane_3_align_2&gt;
+ - func[19] size&#x3D;11 &lt;v128.load32_lane_3_align_4&gt;
+Data[1]:
+ - segment[0] memory&#x3D;0 size&#x3D;16 - init i32&#x3D;0
+  - 0000000: 0001 0203 0405 0607 0809 0a0b 0c0d 0e0f  ................
+
+Contents of section Type:
+000000a: 0260 027f 7b01 7b60 017b 017b            .&#x60;..{.{&#x60;.{.{
+
+Contents of section Function:
+0000018: 1400 0000 0001 0101 0100 0000 0000 0000  ................
+0000028: 0000 0000 00                             .....
+
+Contents of section Memory:
+000002f: 0100 01                                  ...
+
+Contents of section Export:
+0000035: 1412 7631 3238 2e6c 6f61 6433 325f 6c61  ..v128.load32_la
+0000045: 6e65 5f30 0000 1276 3132 382e 6c6f 6164  ne_0...v128.load
+0000055: 3332 5f6c 616e 655f 3100 0112 7631 3238  32_lane_1...v128
+0000065: 2e6c 6f61 6433 325f 6c61 6e65 5f32 0002  .load32_lane_2..
+0000075: 1276 3132 382e 6c6f 6164 3332 5f6c 616e  .v128.load32_lan
+0000085: 655f 3300 031b 7631 3238 2e6c 6f61 6433  e_3...v128.load3
+0000095: 325f 6c61 6e65 5f30 5f6f 6666 7365 745f  2_lane_0_offset_
+00000a5: 3000 041b 7631 3238 2e6c 6f61 6433 325f  0...v128.load32_
+00000b5: 6c61 6e65 5f31 5f6f 6666 7365 745f 3100  lane_1_offset_1.
+00000c5: 051b 7631 3238 2e6c 6f61 6433 325f 6c61  ..v128.load32_la
+00000d5: 6e65 5f32 5f6f 6666 7365 745f 3200 061b  ne_2_offset_2...
+00000e5: 7631 3238 2e6c 6f61 6433 325f 6c61 6e65  v128.load32_lane
+00000f5: 5f33 5f6f 6666 7365 745f 3300 071a 7631  _3_offset_3...v1
+0000105: 3238 2e6c 6f61 6433 325f 6c61 6e65 5f30  28.load32_lane_0
+0000115: 5f61 6c69 676e 5f31 0008 1a76 3132 382e  _align_1...v128.
+0000125: 6c6f 6164 3332 5f6c 616e 655f 305f 616c  load32_lane_0_al
+0000135: 6967 6e5f 3200 091a 7631 3238 2e6c 6f61  ign_2...v128.loa
+0000145: 6433 325f 6c61 6e65 5f30 5f61 6c69 676e  d32_lane_0_align
+0000155: 5f34 000a 1a76 3132 382e 6c6f 6164 3332  _4...v128.load32
+0000165: 5f6c 616e 655f 315f 616c 6967 6e5f 3100  _lane_1_align_1.
+0000175: 0b1a 7631 3238 2e6c 6f61 6433 325f 6c61  ..v128.load32_la
+0000185: 6e65 5f31 5f61 6c69 676e 5f32 000c 1a76  ne_1_align_2...v
+0000195: 3132 382e 6c6f 6164 3332 5f6c 616e 655f  128.load32_lane_
+00001a5: 315f 616c 6967 6e5f 3400 0d1a 7631 3238  1_align_4...v128
+00001b5: 2e6c 6f61 6433 325f 6c61 6e65 5f32 5f61  .load32_lane_2_a
+00001c5: 6c69 676e 5f31 000e 1a76 3132 382e 6c6f  lign_1...v128.lo
+00001d5: 6164 3332 5f6c 616e 655f 325f 616c 6967  ad32_lane_2_alig
+00001e5: 6e5f 3200 0f1a 7631 3238 2e6c 6f61 6433  n_2...v128.load3
+00001f5: 325f 6c61 6e65 5f32 5f61 6c69 676e 5f34  2_lane_2_align_4
+0000205: 0010 1a76 3132 382e 6c6f 6164 3332 5f6c  ...v128.load32_l
+0000215: 616e 655f 335f 616c 6967 6e5f 3100 111a  ane_3_align_1...
+0000225: 7631 3238 2e6c 6f61 6433 325f 6c61 6e65  v128.load32_lane
+0000235: 5f33 5f61 6c69 676e 5f32 0012 1a76 3132  _3_align_2...v12
+0000245: 382e 6c6f 6164 3332 5f6c 616e 655f 335f  8.load32_lane_3_
+0000255: 616c 6967 6e5f 3400 13                   align_4..
+
+Contents of section Code:
+0000261: 140b 0020 0020 01fd 5602 0000 0b0b 0020  ... . ..V...... 
+0000271: 0020 01fd 5602 0001 0b0b 0020 0020 01fd  . ..V...... . ..
+0000281: 5602 0002 0b0b 0020 0020 01fd 5602 0003  V...... . ..V...
+0000291: 0b0b 0041 0020 00fd 5602 0000 0b0b 0041  ...A. ..V......A
+00002a1: 0020 00fd 5602 0101 0b0b 0041 0020 00fd  . ..V......A. ..
+00002b1: 5602 0202 0b0b 0041 0020 00fd 5602 0303  V......A. ..V...
+00002c1: 0b0b 0020 0020 01fd 5600 0000 0b0b 0020  ... . ..V...... 
+00002d1: 0020 01fd 5601 0000 0b0b 0020 0020 01fd  . ..V...... . ..
+00002e1: 5602 0000 0b0b 0020 0020 01fd 5600 0001  V...... . ..V...
+00002f1: 0b0b 0020 0020 01fd 5601 0001 0b0b 0020  ... . ..V...... 
+0000301: 0020 01fd 5602 0001 0b0b 0020 0020 01fd  . ..V...... . ..
+0000311: 5600 0002 0b0b 0020 0020 01fd 5601 0002  V...... . ..V...
+0000321: 0b0b 0020 0020 01fd 5602 0002 0b0b 0020  ... . ..V...... 
+0000331: 0020 01fd 5600 0003 0b0b 0020 0020 01fd  . ..V...... . ..
+0000341: 5601 0003 0b0b 0020 0020 01fd 5602 0003  V...... . ..V...
+0000351: 0b                                       .
+
+Contents of section Data:
+0000354: 0100 4100 0b10 0001 0203 0405 0607 0809  ..A.............
+0000364: 0a0b 0c0d 0e0f                           ......
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2"><code>BeginModule(version: 1)
+  BeginTypeSection(12)
+    OnTypeCount(2)
+    OnFuncType(index: 0, params: [i32, v128], results: [v128])
+    OnFuncType(index: 1, params: [v128], results: [v128])
+  EndTypeSection
+  BeginFunctionSection(21)
+    OnFunctionCount(20)
+    OnFunction(index: 0, sig_index: 0)
+    OnFunction(index: 1, sig_index: 0)
+    OnFunction(index: 2, sig_index: 0)
+    OnFunction(index: 3, sig_index: 0)
+    OnFunction(index: 4, sig_index: 1)
+    OnFunction(index: 5, sig_index: 1)
+    OnFunction(index: 6, sig_index: 1)
+    OnFunction(index: 7, sig_index: 1)
+    OnFunction(index: 8, sig_index: 0)
+    OnFunction(index: 9, sig_index: 0)
+    OnFunction(index: 10, sig_index: 0)
+    OnFunction(index: 11, sig_index: 0)
+    OnFunction(index: 12, sig_index: 0)
+    OnFunction(index: 13, sig_index: 0)
+    OnFunction(index: 14, sig_index: 0)
+    OnFunction(index: 15, sig_index: 0)
+    OnFunction(index: 16, sig_index: 0)
+    OnFunction(index: 17, sig_index: 0)
+    OnFunction(index: 18, sig_index: 0)
+    OnFunction(index: 19, sig_index: 0)
+  EndFunctionSection
+  BeginMemorySection(3)
+    OnMemoryCount(1)
+    OnMemory(index: 0, initial: 1)
+  EndMemorySection
+  BeginExportSection(553)
+    OnExportCount(20)
+    OnExport(index: 0, kind: func, item_index: 0, name: &quot;v128.load32_lane_0&quot;)
+    OnExport(index: 1, kind: func, item_index: 1, name: &quot;v128.load32_lane_1&quot;)
+    OnExport(index: 2, kind: func, item_index: 2, name: &quot;v128.load32_lane_2&quot;)
+    OnExport(index: 3, kind: func, item_index: 3, name: &quot;v128.load32_lane_3&quot;)
+    OnExport(index: 4, kind: func, item_index: 4, name: &quot;v128.load32_lane_0_offset_0&quot;)
+    OnExport(index: 5, kind: func, item_index: 5, name: &quot;v128.load32_lane_1_offset_1&quot;)
+    OnExport(index: 6, kind: func, item_index: 6, name: &quot;v128.load32_lane_2_offset_2&quot;)
+    OnExport(index: 7, kind: func, item_index: 7, name: &quot;v128.load32_lane_3_offset_3&quot;)
+    OnExport(index: 8, kind: func, item_index: 8, name: &quot;v128.load32_lane_0_align_1&quot;)
+    OnExport(index: 9, kind: func, item_index: 9, name: &quot;v128.load32_lane_0_align_2&quot;)
+    OnExport(index: 10, kind: func, item_index: 10, name: &quot;v128.load32_lane_0_align_4&quot;)
+    OnExport(index: 11, kind: func, item_index: 11, name: &quot;v128.load32_lane_1_align_1&quot;)
+    OnExport(index: 12, kind: func, item_index: 12, name: &quot;v128.load32_lane_1_align_2&quot;)
+    OnExport(index: 13, kind: func, item_index: 13, name: &quot;v128.load32_lane_1_align_4&quot;)
+    OnExport(index: 14, kind: func, item_index: 14, name: &quot;v128.load32_lane_2_align_1&quot;)
+    OnExport(index: 15, kind: func, item_index: 15, name: &quot;v128.load32_lane_2_align_2&quot;)
+    OnExport(index: 16, kind: func, item_index: 16, name: &quot;v128.load32_lane_2_align_4&quot;)
+    OnExport(index: 17, kind: func, item_index: 17, name: &quot;v128.load32_lane_3_align_1&quot;)
+    OnExport(index: 18, kind: func, item_index: 18, name: &quot;v128.load32_lane_3_align_2&quot;)
+    OnExport(index: 19, kind: func, item_index: 19, name: &quot;v128.load32_lane_3_align_4&quot;)
+  EndExportSection
+  BeginCodeSection(241)
+    OnFunctionBodyCount(20)
+    BeginFunctionBody(0, size:11)
+    OnLocalDeclCount(0)
+    EndFunctionBody(0)
+    BeginFunctionBody(1, size:11)
+    OnLocalDeclCount(0)
+    EndFunctionBody(1)
+    BeginFunctionBody(2, size:11)
+    OnLocalDeclCount(0)
+    EndFunctionBody(2)
+    BeginFunctionBody(3, size:11)
+    OnLocalDeclCount(0)
+    EndFunctionBody(3)
+    BeginFunctionBody(4, size:11)
+    OnLocalDeclCount(0)
+    EndFunctionBody(4)
+    BeginFunctionBody(5, size:11)
+    OnLocalDeclCount(0)
+    EndFunctionBody(5)
+    BeginFunctionBody(6, size:11)
+    OnLocalDeclCount(0)
+    EndFunctionBody(6)
+    BeginFunctionBody(7, size:11)
+    OnLocalDeclCount(0)
+    EndFunctionBody(7)
+    BeginFunctionBody(8, size:11)
+    OnLocalDeclCount(0)
+    EndFunctionBody(8)
+    BeginFunctionBody(9, size:11)
+    OnLocalDeclCount(0)
+    EndFunctionBody(9)
+    BeginFunctionBody(10, size:11)
+    OnLocalDeclCount(0)
+    EndFunctionBody(10)
+    BeginFunctionBody(11, size:11)
+    OnLocalDeclCount(0)
+    EndFunctionBody(11)
+    BeginFunctionBody(12, size:11)
+    OnLocalDeclCount(0)
+    EndFunctionBody(12)
+    BeginFunctionBody(13, size:11)
+    OnLocalDeclCount(0)
+    EndFunctionBody(13)
+    BeginFunctionBody(14, size:11)
+    OnLocalDeclCount(0)
+    EndFunctionBody(14)
+    BeginFunctionBody(15, size:11)
+    OnLocalDeclCount(0)
+    EndFunctionBody(15)
+    BeginFunctionBody(16, size:11)
+    OnLocalDeclCount(0)
+    EndFunctionBody(16)
+    BeginFunctionBody(17, size:11)
+    OnLocalDeclCount(0)
+    EndFunctionBody(17)
+    BeginFunctionBody(18, size:11)
+    OnLocalDeclCount(0)
+    EndFunctionBody(18)
+    BeginFunctionBody(19, size:11)
+    OnLocalDeclCount(0)
+    EndFunctionBody(19)
+  EndCodeSection
+  BeginDataSection(22)
+    OnDataSegmentCount(1)
+    BeginDataSegment(index: 0, memory_index: 0, flags: 0)
+    BeginDataSegmentInitExpr(0)
+    OnI32ConstExpr(0 (0x0))
+    OnEndExpr
+    EndDataSegmentInitExpr(0)
+    OnDataSegmentData(index:0, size:16)
+    EndDataSegment(0)
+  EndDataSection
+EndModule
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2 do-not-highlightme"><code>00000000: 00 61 73 6D 01 00 00 00  .asm....
+00000008: 01 0C 02 60 02 7F 7B 01  ...&#x60;..{.
+00000010: 7B 60 01 7B 01 7B 03 15  {&#x60;.{.{..
+00000018: 14 00 00 00 00 01 01 01  ........
+00000020: 01 00 00 00 00 00 00 00  ........
+00000028: 00 00 00 00 00 05 03 01  ........
+00000030: 00 01 07 A9 04 14 12 76  .......v
+00000038: 31 32 38 2E 6C 6F 61 64  128.load
+00000040: 33 32 5F 6C 61 6E 65 5F  32_lane_
+00000048: 30 00 00 12 76 31 32 38  0...v128
+00000050: 2E 6C 6F 61 64 33 32 5F  .load32_
+00000058: 6C 61 6E 65 5F 31 00 01  lane_1..
+00000060: 12 76 31 32 38 2E 6C 6F  .v128.lo
+00000068: 61 64 33 32 5F 6C 61 6E  ad32_lan
+00000070: 65 5F 32 00 02 12 76 31  e_2...v1
+00000078: 32 38 2E 6C 6F 61 64 33  28.load3
+00000080: 32 5F 6C 61 6E 65 5F 33  2_lane_3
+00000088: 00 03 1B 76 31 32 38 2E  ...v128.
+00000090: 6C 6F 61 64 33 32 5F 6C  load32_l
+00000098: 61 6E 65 5F 30 5F 6F 66  ane_0_of
+000000a0: 66 73 65 74 5F 30 00 04  fset_0..
+000000a8: 1B 76 31 32 38 2E 6C 6F  .v128.lo
+000000b0: 61 64 33 32 5F 6C 61 6E  ad32_lan
+000000b8: 65 5F 31 5F 6F 66 66 73  e_1_offs
+000000c0: 65 74 5F 31 00 05 1B 76  et_1...v
+000000c8: 31 32 38 2E 6C 6F 61 64  128.load
+000000d0: 33 32 5F 6C 61 6E 65 5F  32_lane_
+000000d8: 32 5F 6F 66 66 73 65 74  2_offset
+000000e0: 5F 32 00 06 1B 76 31 32  _2...v12
+000000e8: 38 2E 6C 6F 61 64 33 32  8.load32
+000000f0: 5F 6C 61 6E 65 5F 33 5F  _lane_3_
+000000f8: 6F 66 66 73 65 74 5F 33  offset_3
+00000100: 00 07 1A 76 31 32 38 2E  ...v128.
+00000108: 6C 6F 61 64 33 32 5F 6C  load32_l
+00000110: 61 6E 65 5F 30 5F 61 6C  ane_0_al
+00000118: 69 67 6E 5F 31 00 08 1A  ign_1...
+00000120: 76 31 32 38 2E 6C 6F 61  v128.loa
+00000128: 64 33 32 5F 6C 61 6E 65  d32_lane
+00000130: 5F 30 5F 61 6C 69 67 6E  _0_align
+00000138: 5F 32 00 09 1A 76 31 32  _2...v12
+00000140: 38 2E 6C 6F 61 64 33 32  8.load32
+00000148: 5F 6C 61 6E 65 5F 30 5F  _lane_0_
+00000150: 61 6C 69 67 6E 5F 34 00  align_4.
+00000158: 0A 1A 76 31 32 38 2E 6C  ..v128.l
+00000160: 6F 61 64 33 32 5F 6C 61  oad32_la
+00000168: 6E 65 5F 31 5F 61 6C 69  ne_1_ali
+00000170: 67 6E 5F 31 00 0B 1A 76  gn_1...v
+00000178: 31 32 38 2E 6C 6F 61 64  128.load
+00000180: 33 32 5F 6C 61 6E 65 5F  32_lane_
+00000188: 31 5F 61 6C 69 67 6E 5F  1_align_
+00000190: 32 00 0C 1A 76 31 32 38  2...v128
+00000198: 2E 6C 6F 61 64 33 32 5F  .load32_
+000001a0: 6C 61 6E 65 5F 31 5F 61  lane_1_a
+000001a8: 6C 69 67 6E 5F 34 00 0D  lign_4..
+000001b0: 1A 76 31 32 38 2E 6C 6F  .v128.lo
+000001b8: 61 64 33 32 5F 6C 61 6E  ad32_lan
+000001c0: 65 5F 32 5F 61 6C 69 67  e_2_alig
+000001c8: 6E 5F 31 00 0E 1A 76 31  n_1...v1
+000001d0: 32 38 2E 6C 6F 61 64 33  28.load3
+000001d8: 32 5F 6C 61 6E 65 5F 32  2_lane_2
+000001e0: 5F 61 6C 69 67 6E 5F 32  _align_2
+000001e8: 00 0F 1A 76 31 32 38 2E  ...v128.
+000001f0: 6C 6F 61 64 33 32 5F 6C  load32_l
+000001f8: 61 6E 65 5F 32 5F 61 6C  ane_2_al
+00000200: 69 67 6E 5F 34 00 10 1A  ign_4...
+00000208: 76 31 32 38 2E 6C 6F 61  v128.loa
+00000210: 64 33 32 5F 6C 61 6E 65  d32_lane
+00000218: 5F 33 5F 61 6C 69 67 6E  _3_align
+00000220: 5F 31 00 11 1A 76 31 32  _1...v12
+00000228: 38 2E 6C 6F 61 64 33 32  8.load32
+00000230: 5F 6C 61 6E 65 5F 33 5F  _lane_3_
+00000238: 61 6C 69 67 6E 5F 32 00  align_2.
+00000240: 12 1A 76 31 32 38 2E 6C  ..v128.l
+00000248: 6F 61 64 33 32 5F 6C 61  oad32_la
+00000250: 6E 65 5F 33 5F 61 6C 69  ne_3_ali
+00000258: 67 6E 5F 34 00 13 0A F1  gn_4....
+00000260: 01 14 0B 00 20 00 20 01  .... . .
+00000268: FD 56 02 00 00 0B 0B 00  .V......
+00000270: 20 00 20 01 FD 56 02 00   . ..V..
+00000278: 01 0B 0B 00 20 00 20 01  .... . .
+00000280: FD 56 02 00 02 0B 0B 00  .V......
+00000288: 20 00 20 01 FD 56 02 00   . ..V..
+00000290: 03 0B 0B 00 41 00 20 00  ....A. .
+00000298: FD 56 02 00 00 0B 0B 00  .V......
+000002a0: 41 00 20 00 FD 56 02 01  A. ..V..
+000002a8: 01 0B 0B 00 41 00 20 00  ....A. .
+000002b0: FD 56 02 02 02 0B 0B 00  .V......
+000002b8: 41 00 20 00 FD 56 02 03  A. ..V..
+000002c0: 03 0B 0B 00 20 00 20 01  .... . .
+000002c8: FD 56 00 00 00 0B 0B 00  .V......
+000002d0: 20 00 20 01 FD 56 01 00   . ..V..
+000002d8: 00 0B 0B 00 20 00 20 01  .... . .
+000002e0: FD 56 02 00 00 0B 0B 00  .V......
+000002e8: 20 00 20 01 FD 56 00 00   . ..V..
+000002f0: 01 0B 0B 00 20 00 20 01  .... . .
+000002f8: FD 56 01 00 01 0B 0B 00  .V......
+00000300: 20 00 20 01 FD 56 02 00   . ..V..
+00000308: 01 0B 0B 00 20 00 20 01  .... . .
+00000310: FD 56 00 00 02 0B 0B 00  .V......
+00000318: 20 00 20 01 FD 56 01 00   . ..V..
+00000320: 02 0B 0B 00 20 00 20 01  .... . .
+00000328: FD 56 02 00 02 0B 0B 00  .V......
+00000330: 20 00 20 01 FD 56 00 00   . ..V..
+00000338: 03 0B 0B 00 20 00 20 01  .... . .
+00000340: FD 56 01 00 03 0B 0B 00  .V......
+00000348: 20 00 20 01 FD 56 02 00   . ..V..
+00000350: 03 0B 0B 16 01 00 41 00  ......A.
+00000358: 0B 10 00 01 02 03 04 05  ........
+00000360: 06 07 08 09 0A 0B 0C 0D  ........
+00000368: 0E 0F                    ..
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2"><code>(module
+  (type (;0;) (func (param i32 v128) (result v128)))
+  (type (;1;) (func (param v128) (result v128)))
+  (func (;0;) (type 0) (param i32 v128) (result v128)
+    local.get 0
+    local.get 1
+    v128.load32_lane 0)
+  (func (;1;) (type 0) (param i32 v128) (result v128)
+    local.get 0
+    local.get 1
+    v128.load32_lane 1)
+  (func (;2;) (type 0) (param i32 v128) (result v128)
+    local.get 0
+    local.get 1
+    v128.load32_lane 2)
+  (func (;3;) (type 0) (param i32 v128) (result v128)
+    local.get 0
+    local.get 1
+    v128.load32_lane 3)
+  (func (;4;) (type 1) (param v128) (result v128)
+    i32.const 0
+    local.get 0
+    v128.load32_lane 0)
+  (func (;5;) (type 1) (param v128) (result v128)
+    i32.const 0
+    local.get 0
+    v128.load32_lane offset&#x3D;1 1)
+  (func (;6;) (type 1) (param v128) (result v128)
+    i32.const 0
+    local.get 0
+    v128.load32_lane offset&#x3D;2 2)
+  (func (;7;) (type 1) (param v128) (result v128)
+    i32.const 0
+    local.get 0
+    v128.load32_lane offset&#x3D;3 3)
+  (func (;8;) (type 0) (param i32 v128) (result v128)
+    local.get 0
+    local.get 1
+    v128.load32_lane align&#x3D;1 0)
+  (func (;9;) (type 0) (param i32 v128) (result v128)
+    local.get 0
+    local.get 1
+    v128.load32_lane align&#x3D;2 0)
+  (func (;10;) (type 0) (param i32 v128) (result v128)
+    local.get 0
+    local.get 1
+    v128.load32_lane 0)
+  (func (;11;) (type 0) (param i32 v128) (result v128)
+    local.get 0
+    local.get 1
+    v128.load32_lane align&#x3D;1 1)
+  (func (;12;) (type 0) (param i32 v128) (result v128)
+    local.get 0
+    local.get 1
+    v128.load32_lane align&#x3D;2 1)
+  (func (;13;) (type 0) (param i32 v128) (result v128)
+    local.get 0
+    local.get 1
+    v128.load32_lane 1)
+  (func (;14;) (type 0) (param i32 v128) (result v128)
+    local.get 0
+    local.get 1
+    v128.load32_lane align&#x3D;1 2)
+  (func (;15;) (type 0) (param i32 v128) (result v128)
+    local.get 0
+    local.get 1
+    v128.load32_lane align&#x3D;2 2)
+  (func (;16;) (type 0) (param i32 v128) (result v128)
+    local.get 0
+    local.get 1
+    v128.load32_lane 2)
+  (func (;17;) (type 0) (param i32 v128) (result v128)
+    local.get 0
+    local.get 1
+    v128.load32_lane align&#x3D;1 3)
+  (func (;18;) (type 0) (param i32 v128) (result v128)
+    local.get 0
+    local.get 1
+    v128.load32_lane align&#x3D;2 3)
+  (func (;19;) (type 0) (param i32 v128) (result v128)
+    local.get 0
+    local.get 1
+    v128.load32_lane 3)
+  (memory (;0;) 1)
+  (export &quot;v128.load32_lane_0&quot; (func 0))
+  (export &quot;v128.load32_lane_1&quot; (func 1))
+  (export &quot;v128.load32_lane_2&quot; (func 2))
+  (export &quot;v128.load32_lane_3&quot; (func 3))
+  (export &quot;v128.load32_lane_0_offset_0&quot; (func 4))
+  (export &quot;v128.load32_lane_1_offset_1&quot; (func 5))
+  (export &quot;v128.load32_lane_2_offset_2&quot; (func 6))
+  (export &quot;v128.load32_lane_3_offset_3&quot; (func 7))
+  (export &quot;v128.load32_lane_0_align_1&quot; (func 8))
+  (export &quot;v128.load32_lane_0_align_2&quot; (func 9))
+  (export &quot;v128.load32_lane_0_align_4&quot; (func 10))
+  (export &quot;v128.load32_lane_1_align_1&quot; (func 11))
+  (export &quot;v128.load32_lane_1_align_2&quot; (func 12))
+  (export &quot;v128.load32_lane_1_align_4&quot; (func 13))
+  (export &quot;v128.load32_lane_2_align_1&quot; (func 14))
+  (export &quot;v128.load32_lane_2_align_2&quot; (func 15))
+  (export &quot;v128.load32_lane_2_align_4&quot; (func 16))
+  (export &quot;v128.load32_lane_3_align_1&quot; (func 17))
+  (export &quot;v128.load32_lane_3_align_2&quot; (func 18))
+  (export &quot;v128.load32_lane_3_align_4&quot; (func 19))
+  (data (;0;) (i32.const 0) &quot;\00\01\02\03\04\05\06\07\08\09\0a\0b\0c\0d\0e\0f&quot;))
+</code></pre>
+    </div>
+</body>
+
+</html>

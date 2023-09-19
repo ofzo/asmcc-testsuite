@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asmcc float_exprs.53</title>
+
+    <link rel="stylesheet" href="//unpkg.com/@highlightjs/cdn-assets@11.7.0/styles/github.min.css">
+    <script src="//unpkg.com/@highlightjs/cdn-assets@11.7.0/highlight.min.js"></script>
+    <script>
+        hljs.configure({
+            noHighlightRe: /^do-not-highlightme$/i,
+        });
+    </script>
+    <script>hljs.highlightAll();</script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="/_vercel/insights/script.js"></script>
+</head>
+
+<body class="text-sm p-2">
+    <h1 class="text-2xl  w-full mb-4">Anaylzer: <a href="/float_exprs.53.wasm">float_exprs.53.wasm</a></h1>
+    <div class="flex justify-evenly">
+        <pre class="p-4 overflow-scroll border-2"><code>
+float_exprs.53.wasm:	file format wasm 0x1
+
+Sections:
+
+     Type start&#x3D;0x0000000a end&#x3D;0x00000021 (size&#x3D;0x00000017) count: 3
+ Function start&#x3D;0x00000023 end&#x3D;0x00000027 (size&#x3D;0x00000004) count: 3
+   Export start&#x3D;0x00000029 end&#x3D;0x0000004b (size&#x3D;0x00000022) count: 3
+     Code start&#x3D;0x0000004d end&#x3D;0x00000072 (size&#x3D;0x00000025) count: 3
+
+Section Details:
+
+Type[3]:
+ - type[0] (f64, f64, f64, f64) -&gt; f64
+ - type[1] (f64, f64, f64) -&gt; f64
+ - type[2] (f32, f32, f32) -&gt; f32
+Function[3]:
+ - func[0] sig&#x3D;0 &lt;thepast0&gt;
+ - func[1] sig&#x3D;1 &lt;thepast1&gt;
+ - func[2] sig&#x3D;2 &lt;thepast2&gt;
+Export[3]:
+ - func[0] &lt;thepast0&gt; -&gt; &quot;thepast0&quot;
+ - func[1] &lt;thepast1&gt; -&gt; &quot;thepast1&quot;
+ - func[2] &lt;thepast2&gt; -&gt; &quot;thepast2&quot;
+Code[3]:
+ - func[0] size&#x3D;13 &lt;thepast0&gt;
+ - func[1] size&#x3D;10 &lt;thepast1&gt;
+ - func[2] size&#x3D;10 &lt;thepast2&gt;
+
+Contents of section Type:
+000000a: 0360 047c 7c7c 7c01 7c60 037c 7c7c 017c  .&#x60;.||||.|&#x60;.|||.|
+000001a: 6003 7d7d 7d01 7d                        &#x60;.}}}.}
+
+Contents of section Function:
+0000023: 0300 0102                                ....
+
+Contents of section Export:
+0000029: 0308 7468 6570 6173 7430 0000 0874 6865  ..thepast0...the
+0000039: 7061 7374 3100 0108 7468 6570 6173 7432  past1...thepast2
+0000049: 0002                                     ..
+
+Contents of section Code:
+000004d: 030d 0020 0020 01a2 2002 2003 a2a3 0b0a  ... . .. . .....
+000005d: 0020 0020 01a2 2002 a10b 0a00 2000 2001  . . .. ..... . .
+000006d: 9420 0294 0b                             . ...
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2"><code>BeginModule(version: 1)
+  BeginTypeSection(23)
+    OnTypeCount(3)
+    OnFuncType(index: 0, params: [f64, f64, f64, f64], results: [f64])
+    OnFuncType(index: 1, params: [f64, f64, f64], results: [f64])
+    OnFuncType(index: 2, params: [f32, f32, f32], results: [f32])
+  EndTypeSection
+  BeginFunctionSection(4)
+    OnFunctionCount(3)
+    OnFunction(index: 0, sig_index: 0)
+    OnFunction(index: 1, sig_index: 1)
+    OnFunction(index: 2, sig_index: 2)
+  EndFunctionSection
+  BeginExportSection(34)
+    OnExportCount(3)
+    OnExport(index: 0, kind: func, item_index: 0, name: &quot;thepast0&quot;)
+    OnExport(index: 1, kind: func, item_index: 1, name: &quot;thepast1&quot;)
+    OnExport(index: 2, kind: func, item_index: 2, name: &quot;thepast2&quot;)
+  EndExportSection
+  BeginCodeSection(37)
+    OnFunctionBodyCount(3)
+    BeginFunctionBody(0, size:13)
+    OnLocalDeclCount(0)
+    EndFunctionBody(0)
+    BeginFunctionBody(1, size:10)
+    OnLocalDeclCount(0)
+    EndFunctionBody(1)
+    BeginFunctionBody(2, size:10)
+    OnLocalDeclCount(0)
+    EndFunctionBody(2)
+  EndCodeSection
+EndModule
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2 do-not-highlightme"><code>00000000: 00 61 73 6D 01 00 00 00  .asm....
+00000008: 01 17 03 60 04 7C 7C 7C  ...&#x60;.|||
+00000010: 7C 01 7C 60 03 7C 7C 7C  |.|&#x60;.|||
+00000018: 01 7C 60 03 7D 7D 7D 01  .|&#x60;.}}}.
+00000020: 7D 03 04 03 00 01 02 07  }.......
+00000028: 22 03 08 74 68 65 70 61  &quot;..thepa
+00000030: 73 74 30 00 00 08 74 68  st0...th
+00000038: 65 70 61 73 74 31 00 01  epast1..
+00000040: 08 74 68 65 70 61 73 74  .thepast
+00000048: 32 00 02 0A 25 03 0D 00  2...%...
+00000050: 20 00 20 01 A2 20 02 20   . .. . 
+00000058: 03 A2 A3 0B 0A 00 20 00  ...... .
+00000060: 20 01 A2 20 02 A1 0B 0A   .. ....
+00000068: 00 20 00 20 01 94 20 02  . . .. .
+00000070: 94 0B                    ..
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2"><code>(module
+  (type (;0;) (func (param f64 f64 f64 f64) (result f64)))
+  (type (;1;) (func (param f64 f64 f64) (result f64)))
+  (type (;2;) (func (param f32 f32 f32) (result f32)))
+  (func (;0;) (type 0) (param f64 f64 f64 f64) (result f64)
+    local.get 0
+    local.get 1
+    f64.mul
+    local.get 2
+    local.get 3
+    f64.mul
+    f64.div)
+  (func (;1;) (type 1) (param f64 f64 f64) (result f64)
+    local.get 0
+    local.get 1
+    f64.mul
+    local.get 2
+    f64.sub)
+  (func (;2;) (type 2) (param f32 f32 f32) (result f32)
+    local.get 0
+    local.get 1
+    f32.mul
+    local.get 2
+    f32.mul)
+  (export &quot;thepast0&quot; (func 0))
+  (export &quot;thepast1&quot; (func 1))
+  (export &quot;thepast2&quot; (func 2)))
+</code></pre>
+    </div>
+</body>
+
+</html>

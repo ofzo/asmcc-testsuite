@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asmcc simd_load.6</title>
+
+    <link rel="stylesheet" href="//unpkg.com/@highlightjs/cdn-assets@11.7.0/styles/github.min.css">
+    <script src="//unpkg.com/@highlightjs/cdn-assets@11.7.0/highlight.min.js"></script>
+    <script>
+        hljs.configure({
+            noHighlightRe: /^do-not-highlightme$/i,
+        });
+    </script>
+    <script>hljs.highlightAll();</script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="/_vercel/insights/script.js"></script>
+</head>
+
+<body class="text-sm p-2">
+    <h1 class="text-2xl  w-full mb-4">Anaylzer: <a href="/simd_load.6.wasm">simd_load.6.wasm</a></h1>
+    <div class="flex justify-evenly">
+        <pre class="p-4 overflow-scroll border-2"><code>
+simd_load.6.wasm:	file format wasm 0x1
+
+Sections:
+
+     Type start&#x3D;0x0000000a end&#x3D;0x0000000f (size&#x3D;0x00000005) count: 1
+ Function start&#x3D;0x00000011 end&#x3D;0x00000013 (size&#x3D;0x00000002) count: 1
+   Memory start&#x3D;0x00000015 end&#x3D;0x00000018 (size&#x3D;0x00000003) count: 1
+   Export start&#x3D;0x0000001a end&#x3D;0x00000030 (size&#x3D;0x00000016) count: 1
+     Code start&#x3D;0x00000032 end&#x3D;0x0000004c (size&#x3D;0x0000001a) count: 1
+     Data start&#x3D;0x0000004e end&#x3D;0x00000079 (size&#x3D;0x0000002b) count: 2
+
+Section Details:
+
+Type[1]:
+ - type[0] () -&gt; v128
+Function[1]:
+ - func[0] sig&#x3D;0 &lt;as-add/sub-operand&gt;
+Memory[1]:
+ - memory[0] pages: initial&#x3D;1
+Export[1]:
+ - func[0] &lt;as-add/sub-operand&gt; -&gt; &quot;as-add/sub-operand&quot;
+Code[1]:
+ - func[0] size&#x3D;24 &lt;as-add/sub-operand&gt;
+Data[2]:
+ - segment[0] memory&#x3D;0 size&#x3D;16 - init i32&#x3D;0
+  - 0000000: 0200 0000 0200 0000 0200 0000 0200 0000  ................
+ - segment[1] memory&#x3D;0 size&#x3D;16 - init i32&#x3D;16
+  - 0000010: 0300 0000 0300 0000 0300 0000 0300 0000  ................
+
+Contents of section Type:
+000000a: 0160 0001 7b                             .&#x60;..{
+
+Contents of section Function:
+0000011: 0100                                     ..
+
+Contents of section Memory:
+0000015: 0100 01                                  ...
+
+Contents of section Export:
+000001a: 0112 6173 2d61 6464 2f73 7562 2d6f 7065  ..as-add/sub-ope
+000002a: 7261 6e64 0000                           rand..
+
+Contents of section Code:
+0000032: 0118 0041 00fd 0004 0041 10fd 0004 00fd  ...A.....A......
+0000042: 6e41 10fd 0004 00fd 710b                 nA......q.
+
+Contents of section Data:
+000004e: 0200 4100 0b10 0200 0000 0200 0000 0200  ..A.............
+000005e: 0000 0200 0000 0041 100b 1003 0000 0003  .......A........
+000006e: 0000 0003 0000 0003 0000 00              ...........
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2"><code>BeginModule(version: 1)
+  BeginTypeSection(5)
+    OnTypeCount(1)
+    OnFuncType(index: 0, params: [], results: [v128])
+  EndTypeSection
+  BeginFunctionSection(2)
+    OnFunctionCount(1)
+    OnFunction(index: 0, sig_index: 0)
+  EndFunctionSection
+  BeginMemorySection(3)
+    OnMemoryCount(1)
+    OnMemory(index: 0, initial: 1)
+  EndMemorySection
+  BeginExportSection(22)
+    OnExportCount(1)
+    OnExport(index: 0, kind: func, item_index: 0, name: &quot;as-add/sub-operand&quot;)
+  EndExportSection
+  BeginCodeSection(26)
+    OnFunctionBodyCount(1)
+    BeginFunctionBody(0, size:24)
+    OnLocalDeclCount(0)
+    EndFunctionBody(0)
+  EndCodeSection
+  BeginDataSection(43)
+    OnDataSegmentCount(2)
+    BeginDataSegment(index: 0, memory_index: 0, flags: 0)
+    BeginDataSegmentInitExpr(0)
+    OnI32ConstExpr(0 (0x0))
+    OnEndExpr
+    EndDataSegmentInitExpr(0)
+    OnDataSegmentData(index:0, size:16)
+    EndDataSegment(0)
+    BeginDataSegment(index: 1, memory_index: 0, flags: 0)
+    BeginDataSegmentInitExpr(1)
+    OnI32ConstExpr(16 (0x10))
+    OnEndExpr
+    EndDataSegmentInitExpr(1)
+    OnDataSegmentData(index:1, size:16)
+    EndDataSegment(1)
+  EndDataSection
+EndModule
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2 do-not-highlightme"><code>00000000: 00 61 73 6D 01 00 00 00  .asm....
+00000008: 01 05 01 60 00 01 7B 03  ...&#x60;..{.
+00000010: 02 01 00 05 03 01 00 01  ........
+00000018: 07 16 01 12 61 73 2D 61  ....as-a
+00000020: 64 64 2F 73 75 62 2D 6F  dd/sub-o
+00000028: 70 65 72 61 6E 64 00 00  perand..
+00000030: 0A 1A 01 18 00 41 00 FD  .....A..
+00000038: 00 04 00 41 10 FD 00 04  ...A....
+00000040: 00 FD 6E 41 10 FD 00 04  ..nA....
+00000048: 00 FD 71 0B 0B 2B 02 00  ..q..+..
+00000050: 41 00 0B 10 02 00 00 00  A.......
+00000058: 02 00 00 00 02 00 00 00  ........
+00000060: 02 00 00 00 00 41 10 0B  .....A..
+00000068: 10 03 00 00 00 03 00 00  ........
+00000070: 00 03 00 00 00 03 00 00  ........
+00000078: 00                       .
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2"><code>(module
+  (type (;0;) (func (result v128)))
+  (func (;0;) (type 0) (result v128)
+    i32.const 0
+    v128.load
+    i32.const 16
+    v128.load
+    i8x16.add
+    i32.const 16
+    v128.load
+    i8x16.sub)
+  (memory (;0;) 1)
+  (export &quot;as-add/sub-operand&quot; (func 0))
+  (data (;0;) (i32.const 0) &quot;\02\00\00\00\02\00\00\00\02\00\00\00\02\00\00\00&quot;)
+  (data (;1;) (i32.const 16) &quot;\03\00\00\00\03\00\00\00\03\00\00\00\03\00\00\00&quot;))
+</code></pre>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asmcc const.227</title>
+
+    <link rel="stylesheet" href="//unpkg.com/@highlightjs/cdn-assets@11.7.0/styles/github.min.css">
+    <script src="//unpkg.com/@highlightjs/cdn-assets@11.7.0/highlight.min.js"></script>
+    <script>
+        hljs.configure({
+            noHighlightRe: /^do-not-highlightme$/i,
+        });
+    </script>
+    <script>hljs.highlightAll();</script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="/_vercel/insights/script.js"></script>
+</head>
+
+<body class="text-sm p-2">
+    <h1 class="text-2xl  w-full mb-4">Anaylzer: <a href="/const.227.wasm">const.227.wasm</a></h1>
+    <div class="flex justify-evenly">
+        <pre class="p-4 overflow-scroll border-2"><code>
+const.227.wasm:	file format wasm 0x1
+
+Sections:
+
+     Type start&#x3D;0x0000000a end&#x3D;0x0000000f (size&#x3D;0x00000005) count: 1
+ Function start&#x3D;0x00000011 end&#x3D;0x00000013 (size&#x3D;0x00000002) count: 1
+   Export start&#x3D;0x00000015 end&#x3D;0x0000001a (size&#x3D;0x00000005) count: 1
+     Code start&#x3D;0x0000001c end&#x3D;0x00000025 (size&#x3D;0x00000009) count: 1
+
+Section Details:
+
+Type[1]:
+ - type[0] () -&gt; f32
+Function[1]:
+ - func[0] sig&#x3D;0 &lt;f&gt;
+Export[1]:
+ - func[0] &lt;f&gt; -&gt; &quot;f&quot;
+Code[1]:
+ - func[0] size&#x3D;7 &lt;f&gt;
+
+Contents of section Type:
+000000a: 0160 0001 7d                             .&#x60;..}
+
+Contents of section Function:
+0000011: 0100                                     ..
+
+Contents of section Export:
+0000015: 0101 6600 00                             ..f..
+
+Contents of section Code:
+000001c: 0107 0043 0200 80a6 0b                   ...C.....
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2"><code>BeginModule(version: 1)
+  BeginTypeSection(5)
+    OnTypeCount(1)
+    OnFuncType(index: 0, params: [], results: [f32])
+  EndTypeSection
+  BeginFunctionSection(2)
+    OnFunctionCount(1)
+    OnFunction(index: 0, sig_index: 0)
+  EndFunctionSection
+  BeginExportSection(5)
+    OnExportCount(1)
+    OnExport(index: 0, kind: func, item_index: 0, name: &quot;f&quot;)
+  EndExportSection
+  BeginCodeSection(9)
+    OnFunctionBodyCount(1)
+    BeginFunctionBody(0, size:7)
+    OnLocalDeclCount(0)
+    EndFunctionBody(0)
+  EndCodeSection
+EndModule
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2 do-not-highlightme"><code>00000000: 00 61 73 6D 01 00 00 00  .asm....
+00000008: 01 05 01 60 00 01 7D 03  ...&#x60;..}.
+00000010: 02 01 00 07 05 01 01 66  .......f
+00000018: 00 00 0A 09 01 07 00 43  .......C
+00000020: 02 00 80 A6 0B           .....
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2"><code>(module
+  (type (;0;) (func (result f32)))
+  (func (;0;) (type 0) (result f32)
+    f32.const -0x1.000004p-50 (;&#x3D;-8.88179e-16;))
+  (export &quot;f&quot; (func 0)))
+</code></pre>
+    </div>
+</body>
+
+</html>

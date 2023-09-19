@@ -1,0 +1,2649 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asmcc left-to-right.0</title>
+
+    <link rel="stylesheet" href="//unpkg.com/@highlightjs/cdn-assets@11.7.0/styles/github.min.css">
+    <script src="//unpkg.com/@highlightjs/cdn-assets@11.7.0/highlight.min.js"></script>
+    <script>
+        hljs.configure({
+            noHighlightRe: /^do-not-highlightme$/i,
+        });
+    </script>
+    <script>hljs.highlightAll();</script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="/_vercel/insights/script.js"></script>
+</head>
+
+<body class="text-sm p-2">
+    <h1 class="text-2xl  w-full mb-4">Anaylzer: <a href="/left-to-right.0.wasm">left-to-right.0.wasm</a></h1>
+    <div class="flex justify-evenly">
+        <pre class="p-4 overflow-scroll border-2"><code>
+left-to-right.0.wasm:	file format wasm 0x1
+
+Sections:
+
+     Type start&#x3D;0x0000000a end&#x3D;0x0000004a (size&#x3D;0x00000040) count: 13
+ Function start&#x3D;0x0000004d end&#x3D;0x000000d1 (size&#x3D;0x00000084) count: 130
+    Table start&#x3D;0x000000d3 end&#x3D;0x000000d8 (size&#x3D;0x00000005) count: 1
+   Memory start&#x3D;0x000000da end&#x3D;0x000000dd (size&#x3D;0x00000003) count: 1
+   Export start&#x3D;0x000000e0 end&#x3D;0x0000050a (size&#x3D;0x0000042a) count: 95
+     Elem start&#x3D;0x0000050c end&#x3D;0x0000051a (size&#x3D;0x0000000e) count: 1
+     Code start&#x3D;0x0000051d end&#x3D;0x00000bc7 (size&#x3D;0x000006aa) count: 130
+
+Section Details:
+
+Type[13]:
+ - type[0] (i32, i32) -&gt; i32
+ - type[1] (i64, i64) -&gt; i32
+ - type[2] (f32, f32) -&gt; i32
+ - type[3] (f64, f64) -&gt; i32
+ - type[4] () -&gt; nil
+ - type[5] () -&gt; i32
+ - type[6] () -&gt; i64
+ - type[7] () -&gt; f32
+ - type[8] () -&gt; f64
+ - type[9] (i32, i32) -&gt; nil
+ - type[10] (i64, i64) -&gt; nil
+ - type[11] (f32, f32) -&gt; nil
+ - type[12] (f64, f64) -&gt; nil
+Function[130]:
+ - func[0] sig&#x3D;0
+ - func[1] sig&#x3D;0
+ - func[2] sig&#x3D;1
+ - func[3] sig&#x3D;1
+ - func[4] sig&#x3D;2
+ - func[5] sig&#x3D;2
+ - func[6] sig&#x3D;3
+ - func[7] sig&#x3D;3
+ - func[8] sig&#x3D;4
+ - func[9] sig&#x3D;4
+ - func[10] sig&#x3D;5
+ - func[11] sig&#x3D;5
+ - func[12] sig&#x3D;5
+ - func[13] sig&#x3D;5
+ - func[14] sig&#x3D;5
+ - func[15] sig&#x3D;5
+ - func[16] sig&#x3D;6
+ - func[17] sig&#x3D;6
+ - func[18] sig&#x3D;6
+ - func[19] sig&#x3D;5
+ - func[20] sig&#x3D;5
+ - func[21] sig&#x3D;7
+ - func[22] sig&#x3D;7
+ - func[23] sig&#x3D;7
+ - func[24] sig&#x3D;5
+ - func[25] sig&#x3D;5
+ - func[26] sig&#x3D;8
+ - func[27] sig&#x3D;8
+ - func[28] sig&#x3D;8
+ - func[29] sig&#x3D;5
+ - func[30] sig&#x3D;5
+ - func[31] sig&#x3D;9
+ - func[32] sig&#x3D;10
+ - func[33] sig&#x3D;11
+ - func[34] sig&#x3D;12
+ - func[35] sig&#x3D;5 &lt;i32_add&gt;
+ - func[36] sig&#x3D;5 &lt;i32_sub&gt;
+ - func[37] sig&#x3D;5 &lt;i32_mul&gt;
+ - func[38] sig&#x3D;5 &lt;i32_div_s&gt;
+ - func[39] sig&#x3D;5 &lt;i32_div_u&gt;
+ - func[40] sig&#x3D;5 &lt;i32_rem_s&gt;
+ - func[41] sig&#x3D;5 &lt;i32_rem_u&gt;
+ - func[42] sig&#x3D;5 &lt;i32_and&gt;
+ - func[43] sig&#x3D;5 &lt;i32_or&gt;
+ - func[44] sig&#x3D;5 &lt;i32_xor&gt;
+ - func[45] sig&#x3D;5 &lt;i32_shl&gt;
+ - func[46] sig&#x3D;5 &lt;i32_shr_u&gt;
+ - func[47] sig&#x3D;5 &lt;i32_shr_s&gt;
+ - func[48] sig&#x3D;5 &lt;i32_eq&gt;
+ - func[49] sig&#x3D;5 &lt;i32_ne&gt;
+ - func[50] sig&#x3D;5 &lt;i32_lt_s&gt;
+ - func[51] sig&#x3D;5 &lt;i32_le_s&gt;
+ - func[52] sig&#x3D;5 &lt;i32_lt_u&gt;
+ - func[53] sig&#x3D;5 &lt;i32_le_u&gt;
+ - func[54] sig&#x3D;5 &lt;i32_gt_s&gt;
+ - func[55] sig&#x3D;5 &lt;i32_ge_s&gt;
+ - func[56] sig&#x3D;5 &lt;i32_gt_u&gt;
+ - func[57] sig&#x3D;5 &lt;i32_ge_u&gt;
+ - func[58] sig&#x3D;5 &lt;i32_store&gt;
+ - func[59] sig&#x3D;5 &lt;i32_store8&gt;
+ - func[60] sig&#x3D;5 &lt;i32_store16&gt;
+ - func[61] sig&#x3D;5 &lt;i32_call&gt;
+ - func[62] sig&#x3D;5 &lt;i32_call_indirect&gt;
+ - func[63] sig&#x3D;5 &lt;i32_select&gt;
+ - func[64] sig&#x3D;5 &lt;i64_add&gt;
+ - func[65] sig&#x3D;5 &lt;i64_sub&gt;
+ - func[66] sig&#x3D;5 &lt;i64_mul&gt;
+ - func[67] sig&#x3D;5 &lt;i64_div_s&gt;
+ - func[68] sig&#x3D;5 &lt;i64_div_u&gt;
+ - func[69] sig&#x3D;5 &lt;i64_rem_s&gt;
+ - func[70] sig&#x3D;5 &lt;i64_rem_u&gt;
+ - func[71] sig&#x3D;5 &lt;i64_and&gt;
+ - func[72] sig&#x3D;5 &lt;i64_or&gt;
+ - func[73] sig&#x3D;5 &lt;i64_xor&gt;
+ - func[74] sig&#x3D;5 &lt;i64_shl&gt;
+ - func[75] sig&#x3D;5 &lt;i64_shr_u&gt;
+ - func[76] sig&#x3D;5 &lt;i64_shr_s&gt;
+ - func[77] sig&#x3D;5 &lt;i64_eq&gt;
+ - func[78] sig&#x3D;5 &lt;i64_ne&gt;
+ - func[79] sig&#x3D;5 &lt;i64_lt_s&gt;
+ - func[80] sig&#x3D;5 &lt;i64_le_s&gt;
+ - func[81] sig&#x3D;5 &lt;i64_lt_u&gt;
+ - func[82] sig&#x3D;5 &lt;i64_le_u&gt;
+ - func[83] sig&#x3D;5 &lt;i64_gt_s&gt;
+ - func[84] sig&#x3D;5 &lt;i64_ge_s&gt;
+ - func[85] sig&#x3D;5 &lt;i64_gt_u&gt;
+ - func[86] sig&#x3D;5 &lt;i64_ge_u&gt;
+ - func[87] sig&#x3D;5 &lt;i64_store&gt;
+ - func[88] sig&#x3D;5 &lt;i64_store8&gt;
+ - func[89] sig&#x3D;5 &lt;i64_store16&gt;
+ - func[90] sig&#x3D;5 &lt;i64_store32&gt;
+ - func[91] sig&#x3D;5 &lt;i64_call&gt;
+ - func[92] sig&#x3D;5 &lt;i64_call_indirect&gt;
+ - func[93] sig&#x3D;5 &lt;i64_select&gt;
+ - func[94] sig&#x3D;5 &lt;f32_add&gt;
+ - func[95] sig&#x3D;5 &lt;f32_sub&gt;
+ - func[96] sig&#x3D;5 &lt;f32_mul&gt;
+ - func[97] sig&#x3D;5 &lt;f32_div&gt;
+ - func[98] sig&#x3D;5 &lt;f32_copysign&gt;
+ - func[99] sig&#x3D;5 &lt;f32_eq&gt;
+ - func[100] sig&#x3D;5 &lt;f32_ne&gt;
+ - func[101] sig&#x3D;5 &lt;f32_lt&gt;
+ - func[102] sig&#x3D;5 &lt;f32_le&gt;
+ - func[103] sig&#x3D;5 &lt;f32_gt&gt;
+ - func[104] sig&#x3D;5 &lt;f32_ge&gt;
+ - func[105] sig&#x3D;5 &lt;f32_min&gt;
+ - func[106] sig&#x3D;5 &lt;f32_max&gt;
+ - func[107] sig&#x3D;5 &lt;f32_store&gt;
+ - func[108] sig&#x3D;5 &lt;f32_call&gt;
+ - func[109] sig&#x3D;5 &lt;f32_call_indirect&gt;
+ - func[110] sig&#x3D;5 &lt;f32_select&gt;
+ - func[111] sig&#x3D;5 &lt;f64_add&gt;
+ - func[112] sig&#x3D;5 &lt;f64_sub&gt;
+ - func[113] sig&#x3D;5 &lt;f64_mul&gt;
+ - func[114] sig&#x3D;5 &lt;f64_div&gt;
+ - func[115] sig&#x3D;5 &lt;f64_copysign&gt;
+ - func[116] sig&#x3D;5 &lt;f64_eq&gt;
+ - func[117] sig&#x3D;5 &lt;f64_ne&gt;
+ - func[118] sig&#x3D;5 &lt;f64_lt&gt;
+ - func[119] sig&#x3D;5 &lt;f64_le&gt;
+ - func[120] sig&#x3D;5 &lt;f64_gt&gt;
+ - func[121] sig&#x3D;5 &lt;f64_ge&gt;
+ - func[122] sig&#x3D;5 &lt;f64_min&gt;
+ - func[123] sig&#x3D;5 &lt;f64_max&gt;
+ - func[124] sig&#x3D;5 &lt;f64_store&gt;
+ - func[125] sig&#x3D;5 &lt;f64_call&gt;
+ - func[126] sig&#x3D;5 &lt;f64_call_indirect&gt;
+ - func[127] sig&#x3D;5 &lt;f64_select&gt;
+ - func[128] sig&#x3D;5 &lt;br_if&gt;
+ - func[129] sig&#x3D;5 &lt;br_table&gt;
+Table[1]:
+ - table[0] type&#x3D;funcref initial&#x3D;8 max&#x3D;8
+Memory[1]:
+ - memory[0] pages: initial&#x3D;1
+Export[95]:
+ - func[35] &lt;i32_add&gt; -&gt; &quot;i32_add&quot;
+ - func[36] &lt;i32_sub&gt; -&gt; &quot;i32_sub&quot;
+ - func[37] &lt;i32_mul&gt; -&gt; &quot;i32_mul&quot;
+ - func[38] &lt;i32_div_s&gt; -&gt; &quot;i32_div_s&quot;
+ - func[39] &lt;i32_div_u&gt; -&gt; &quot;i32_div_u&quot;
+ - func[40] &lt;i32_rem_s&gt; -&gt; &quot;i32_rem_s&quot;
+ - func[41] &lt;i32_rem_u&gt; -&gt; &quot;i32_rem_u&quot;
+ - func[42] &lt;i32_and&gt; -&gt; &quot;i32_and&quot;
+ - func[43] &lt;i32_or&gt; -&gt; &quot;i32_or&quot;
+ - func[44] &lt;i32_xor&gt; -&gt; &quot;i32_xor&quot;
+ - func[45] &lt;i32_shl&gt; -&gt; &quot;i32_shl&quot;
+ - func[46] &lt;i32_shr_u&gt; -&gt; &quot;i32_shr_u&quot;
+ - func[47] &lt;i32_shr_s&gt; -&gt; &quot;i32_shr_s&quot;
+ - func[48] &lt;i32_eq&gt; -&gt; &quot;i32_eq&quot;
+ - func[49] &lt;i32_ne&gt; -&gt; &quot;i32_ne&quot;
+ - func[50] &lt;i32_lt_s&gt; -&gt; &quot;i32_lt_s&quot;
+ - func[51] &lt;i32_le_s&gt; -&gt; &quot;i32_le_s&quot;
+ - func[52] &lt;i32_lt_u&gt; -&gt; &quot;i32_lt_u&quot;
+ - func[53] &lt;i32_le_u&gt; -&gt; &quot;i32_le_u&quot;
+ - func[54] &lt;i32_gt_s&gt; -&gt; &quot;i32_gt_s&quot;
+ - func[55] &lt;i32_ge_s&gt; -&gt; &quot;i32_ge_s&quot;
+ - func[56] &lt;i32_gt_u&gt; -&gt; &quot;i32_gt_u&quot;
+ - func[57] &lt;i32_ge_u&gt; -&gt; &quot;i32_ge_u&quot;
+ - func[58] &lt;i32_store&gt; -&gt; &quot;i32_store&quot;
+ - func[59] &lt;i32_store8&gt; -&gt; &quot;i32_store8&quot;
+ - func[60] &lt;i32_store16&gt; -&gt; &quot;i32_store16&quot;
+ - func[61] &lt;i32_call&gt; -&gt; &quot;i32_call&quot;
+ - func[62] &lt;i32_call_indirect&gt; -&gt; &quot;i32_call_indirect&quot;
+ - func[63] &lt;i32_select&gt; -&gt; &quot;i32_select&quot;
+ - func[64] &lt;i64_add&gt; -&gt; &quot;i64_add&quot;
+ - func[65] &lt;i64_sub&gt; -&gt; &quot;i64_sub&quot;
+ - func[66] &lt;i64_mul&gt; -&gt; &quot;i64_mul&quot;
+ - func[67] &lt;i64_div_s&gt; -&gt; &quot;i64_div_s&quot;
+ - func[68] &lt;i64_div_u&gt; -&gt; &quot;i64_div_u&quot;
+ - func[69] &lt;i64_rem_s&gt; -&gt; &quot;i64_rem_s&quot;
+ - func[70] &lt;i64_rem_u&gt; -&gt; &quot;i64_rem_u&quot;
+ - func[71] &lt;i64_and&gt; -&gt; &quot;i64_and&quot;
+ - func[72] &lt;i64_or&gt; -&gt; &quot;i64_or&quot;
+ - func[73] &lt;i64_xor&gt; -&gt; &quot;i64_xor&quot;
+ - func[74] &lt;i64_shl&gt; -&gt; &quot;i64_shl&quot;
+ - func[75] &lt;i64_shr_u&gt; -&gt; &quot;i64_shr_u&quot;
+ - func[76] &lt;i64_shr_s&gt; -&gt; &quot;i64_shr_s&quot;
+ - func[77] &lt;i64_eq&gt; -&gt; &quot;i64_eq&quot;
+ - func[78] &lt;i64_ne&gt; -&gt; &quot;i64_ne&quot;
+ - func[79] &lt;i64_lt_s&gt; -&gt; &quot;i64_lt_s&quot;
+ - func[80] &lt;i64_le_s&gt; -&gt; &quot;i64_le_s&quot;
+ - func[81] &lt;i64_lt_u&gt; -&gt; &quot;i64_lt_u&quot;
+ - func[82] &lt;i64_le_u&gt; -&gt; &quot;i64_le_u&quot;
+ - func[83] &lt;i64_gt_s&gt; -&gt; &quot;i64_gt_s&quot;
+ - func[84] &lt;i64_ge_s&gt; -&gt; &quot;i64_ge_s&quot;
+ - func[85] &lt;i64_gt_u&gt; -&gt; &quot;i64_gt_u&quot;
+ - func[86] &lt;i64_ge_u&gt; -&gt; &quot;i64_ge_u&quot;
+ - func[87] &lt;i64_store&gt; -&gt; &quot;i64_store&quot;
+ - func[88] &lt;i64_store8&gt; -&gt; &quot;i64_store8&quot;
+ - func[89] &lt;i64_store16&gt; -&gt; &quot;i64_store16&quot;
+ - func[90] &lt;i64_store32&gt; -&gt; &quot;i64_store32&quot;
+ - func[91] &lt;i64_call&gt; -&gt; &quot;i64_call&quot;
+ - func[92] &lt;i64_call_indirect&gt; -&gt; &quot;i64_call_indirect&quot;
+ - func[93] &lt;i64_select&gt; -&gt; &quot;i64_select&quot;
+ - func[94] &lt;f32_add&gt; -&gt; &quot;f32_add&quot;
+ - func[95] &lt;f32_sub&gt; -&gt; &quot;f32_sub&quot;
+ - func[96] &lt;f32_mul&gt; -&gt; &quot;f32_mul&quot;
+ - func[97] &lt;f32_div&gt; -&gt; &quot;f32_div&quot;
+ - func[98] &lt;f32_copysign&gt; -&gt; &quot;f32_copysign&quot;
+ - func[99] &lt;f32_eq&gt; -&gt; &quot;f32_eq&quot;
+ - func[100] &lt;f32_ne&gt; -&gt; &quot;f32_ne&quot;
+ - func[101] &lt;f32_lt&gt; -&gt; &quot;f32_lt&quot;
+ - func[102] &lt;f32_le&gt; -&gt; &quot;f32_le&quot;
+ - func[103] &lt;f32_gt&gt; -&gt; &quot;f32_gt&quot;
+ - func[104] &lt;f32_ge&gt; -&gt; &quot;f32_ge&quot;
+ - func[105] &lt;f32_min&gt; -&gt; &quot;f32_min&quot;
+ - func[106] &lt;f32_max&gt; -&gt; &quot;f32_max&quot;
+ - func[107] &lt;f32_store&gt; -&gt; &quot;f32_store&quot;
+ - func[108] &lt;f32_call&gt; -&gt; &quot;f32_call&quot;
+ - func[109] &lt;f32_call_indirect&gt; -&gt; &quot;f32_call_indirect&quot;
+ - func[110] &lt;f32_select&gt; -&gt; &quot;f32_select&quot;
+ - func[111] &lt;f64_add&gt; -&gt; &quot;f64_add&quot;
+ - func[112] &lt;f64_sub&gt; -&gt; &quot;f64_sub&quot;
+ - func[113] &lt;f64_mul&gt; -&gt; &quot;f64_mul&quot;
+ - func[114] &lt;f64_div&gt; -&gt; &quot;f64_div&quot;
+ - func[115] &lt;f64_copysign&gt; -&gt; &quot;f64_copysign&quot;
+ - func[116] &lt;f64_eq&gt; -&gt; &quot;f64_eq&quot;
+ - func[117] &lt;f64_ne&gt; -&gt; &quot;f64_ne&quot;
+ - func[118] &lt;f64_lt&gt; -&gt; &quot;f64_lt&quot;
+ - func[119] &lt;f64_le&gt; -&gt; &quot;f64_le&quot;
+ - func[120] &lt;f64_gt&gt; -&gt; &quot;f64_gt&quot;
+ - func[121] &lt;f64_ge&gt; -&gt; &quot;f64_ge&quot;
+ - func[122] &lt;f64_min&gt; -&gt; &quot;f64_min&quot;
+ - func[123] &lt;f64_max&gt; -&gt; &quot;f64_max&quot;
+ - func[124] &lt;f64_store&gt; -&gt; &quot;f64_store&quot;
+ - func[125] &lt;f64_call&gt; -&gt; &quot;f64_call&quot;
+ - func[126] &lt;f64_call_indirect&gt; -&gt; &quot;f64_call_indirect&quot;
+ - func[127] &lt;f64_select&gt; -&gt; &quot;f64_select&quot;
+ - func[128] &lt;br_if&gt; -&gt; &quot;br_if&quot;
+ - func[129] &lt;br_table&gt; -&gt; &quot;br_table&quot;
+Elem[1]:
+ - segment[0] flags&#x3D;0 table&#x3D;0 count&#x3D;8 - init i32&#x3D;0
+  - elem[0] &#x3D; ref.func:0
+  - elem[1] &#x3D; ref.func:1
+  - elem[2] &#x3D; ref.func:2
+  - elem[3] &#x3D; ref.func:3
+  - elem[4] &#x3D; ref.func:4
+  - elem[5] &#x3D; ref.func:5
+  - elem[6] &#x3D; ref.func:6
+  - elem[7] &#x3D; ref.func:7
+Code[130]:
+ - func[0] size&#x3D;4
+ - func[1] size&#x3D;4
+ - func[2] size&#x3D;4
+ - func[3] size&#x3D;4
+ - func[4] size&#x3D;4
+ - func[5] size&#x3D;4
+ - func[6] size&#x3D;4
+ - func[7] size&#x3D;4
+ - func[8] size&#x3D;9
+ - func[9] size&#x3D;39
+ - func[10] size&#x3D;7
+ - func[11] size&#x3D;13
+ - func[12] size&#x3D;13
+ - func[13] size&#x3D;13
+ - func[14] size&#x3D;13
+ - func[15] size&#x3D;13
+ - func[16] size&#x3D;13
+ - func[17] size&#x3D;13
+ - func[18] size&#x3D;13
+ - func[19] size&#x3D;13
+ - func[20] size&#x3D;13
+ - func[21] size&#x3D;16
+ - func[22] size&#x3D;16
+ - func[23] size&#x3D;16
+ - func[24] size&#x3D;13
+ - func[25] size&#x3D;13
+ - func[26] size&#x3D;20
+ - func[27] size&#x3D;20
+ - func[28] size&#x3D;20
+ - func[29] size&#x3D;13
+ - func[30] size&#x3D;13
+ - func[31] size&#x3D;2
+ - func[32] size&#x3D;2
+ - func[33] size&#x3D;2
+ - func[34] size&#x3D;2
+ - func[35] size&#x3D;12 &lt;i32_add&gt;
+ - func[36] size&#x3D;12 &lt;i32_sub&gt;
+ - func[37] size&#x3D;12 &lt;i32_mul&gt;
+ - func[38] size&#x3D;12 &lt;i32_div_s&gt;
+ - func[39] size&#x3D;12 &lt;i32_div_u&gt;
+ - func[40] size&#x3D;12 &lt;i32_rem_s&gt;
+ - func[41] size&#x3D;12 &lt;i32_rem_u&gt;
+ - func[42] size&#x3D;12 &lt;i32_and&gt;
+ - func[43] size&#x3D;12 &lt;i32_or&gt;
+ - func[44] size&#x3D;12 &lt;i32_xor&gt;
+ - func[45] size&#x3D;12 &lt;i32_shl&gt;
+ - func[46] size&#x3D;12 &lt;i32_shr_u&gt;
+ - func[47] size&#x3D;12 &lt;i32_shr_s&gt;
+ - func[48] size&#x3D;12 &lt;i32_eq&gt;
+ - func[49] size&#x3D;12 &lt;i32_ne&gt;
+ - func[50] size&#x3D;12 &lt;i32_lt_s&gt;
+ - func[51] size&#x3D;12 &lt;i32_le_s&gt;
+ - func[52] size&#x3D;12 &lt;i32_lt_u&gt;
+ - func[53] size&#x3D;12 &lt;i32_le_u&gt;
+ - func[54] size&#x3D;12 &lt;i32_gt_s&gt;
+ - func[55] size&#x3D;12 &lt;i32_ge_s&gt;
+ - func[56] size&#x3D;12 &lt;i32_gt_u&gt;
+ - func[57] size&#x3D;12 &lt;i32_ge_u&gt;
+ - func[58] size&#x3D;13 &lt;i32_store&gt;
+ - func[59] size&#x3D;13 &lt;i32_store8&gt;
+ - func[60] size&#x3D;13 &lt;i32_store16&gt;
+ - func[61] size&#x3D;12 &lt;i32_call&gt;
+ - func[62] size&#x3D;16 &lt;i32_call_indirect&gt;
+ - func[63] size&#x3D;14 &lt;i32_select&gt;
+ - func[64] size&#x3D;12 &lt;i64_add&gt;
+ - func[65] size&#x3D;12 &lt;i64_sub&gt;
+ - func[66] size&#x3D;12 &lt;i64_mul&gt;
+ - func[67] size&#x3D;12 &lt;i64_div_s&gt;
+ - func[68] size&#x3D;12 &lt;i64_div_u&gt;
+ - func[69] size&#x3D;12 &lt;i64_rem_s&gt;
+ - func[70] size&#x3D;12 &lt;i64_rem_u&gt;
+ - func[71] size&#x3D;12 &lt;i64_and&gt;
+ - func[72] size&#x3D;12 &lt;i64_or&gt;
+ - func[73] size&#x3D;12 &lt;i64_xor&gt;
+ - func[74] size&#x3D;12 &lt;i64_shl&gt;
+ - func[75] size&#x3D;12 &lt;i64_shr_u&gt;
+ - func[76] size&#x3D;12 &lt;i64_shr_s&gt;
+ - func[77] size&#x3D;12 &lt;i64_eq&gt;
+ - func[78] size&#x3D;12 &lt;i64_ne&gt;
+ - func[79] size&#x3D;12 &lt;i64_lt_s&gt;
+ - func[80] size&#x3D;12 &lt;i64_le_s&gt;
+ - func[81] size&#x3D;12 &lt;i64_lt_u&gt;
+ - func[82] size&#x3D;12 &lt;i64_le_u&gt;
+ - func[83] size&#x3D;12 &lt;i64_gt_s&gt;
+ - func[84] size&#x3D;12 &lt;i64_ge_s&gt;
+ - func[85] size&#x3D;12 &lt;i64_gt_u&gt;
+ - func[86] size&#x3D;12 &lt;i64_ge_u&gt;
+ - func[87] size&#x3D;13 &lt;i64_store&gt;
+ - func[88] size&#x3D;13 &lt;i64_store8&gt;
+ - func[89] size&#x3D;13 &lt;i64_store16&gt;
+ - func[90] size&#x3D;13 &lt;i64_store32&gt;
+ - func[91] size&#x3D;12 &lt;i64_call&gt;
+ - func[92] size&#x3D;16 &lt;i64_call_indirect&gt;
+ - func[93] size&#x3D;14 &lt;i64_select&gt;
+ - func[94] size&#x3D;12 &lt;f32_add&gt;
+ - func[95] size&#x3D;12 &lt;f32_sub&gt;
+ - func[96] size&#x3D;12 &lt;f32_mul&gt;
+ - func[97] size&#x3D;12 &lt;f32_div&gt;
+ - func[98] size&#x3D;12 &lt;f32_copysign&gt;
+ - func[99] size&#x3D;12 &lt;f32_eq&gt;
+ - func[100] size&#x3D;12 &lt;f32_ne&gt;
+ - func[101] size&#x3D;12 &lt;f32_lt&gt;
+ - func[102] size&#x3D;12 &lt;f32_le&gt;
+ - func[103] size&#x3D;12 &lt;f32_gt&gt;
+ - func[104] size&#x3D;12 &lt;f32_ge&gt;
+ - func[105] size&#x3D;12 &lt;f32_min&gt;
+ - func[106] size&#x3D;12 &lt;f32_max&gt;
+ - func[107] size&#x3D;13 &lt;f32_store&gt;
+ - func[108] size&#x3D;12 &lt;f32_call&gt;
+ - func[109] size&#x3D;16 &lt;f32_call_indirect&gt;
+ - func[110] size&#x3D;14 &lt;f32_select&gt;
+ - func[111] size&#x3D;12 &lt;f64_add&gt;
+ - func[112] size&#x3D;12 &lt;f64_sub&gt;
+ - func[113] size&#x3D;12 &lt;f64_mul&gt;
+ - func[114] size&#x3D;12 &lt;f64_div&gt;
+ - func[115] size&#x3D;12 &lt;f64_copysign&gt;
+ - func[116] size&#x3D;12 &lt;f64_eq&gt;
+ - func[117] size&#x3D;12 &lt;f64_ne&gt;
+ - func[118] size&#x3D;12 &lt;f64_lt&gt;
+ - func[119] size&#x3D;12 &lt;f64_le&gt;
+ - func[120] size&#x3D;12 &lt;f64_gt&gt;
+ - func[121] size&#x3D;12 &lt;f64_ge&gt;
+ - func[122] size&#x3D;12 &lt;f64_min&gt;
+ - func[123] size&#x3D;12 &lt;f64_max&gt;
+ - func[124] size&#x3D;13 &lt;f64_store&gt;
+ - func[125] size&#x3D;12 &lt;f64_call&gt;
+ - func[126] size&#x3D;16 &lt;f64_call_indirect&gt;
+ - func[127] size&#x3D;14 &lt;f64_select&gt;
+ - func[128] size&#x3D;19 &lt;br_if&gt;
+ - func[129] size&#x3D;21 &lt;br_table&gt;
+
+Contents of section Type:
+000000a: 0d60 027f 7f01 7f60 027e 7e01 7f60 027d  .&#x60;.....&#x60;.~~..&#x60;.}
+000001a: 7d01 7f60 027c 7c01 7f60 0000 6000 017f  }..&#x60;.||..&#x60;..&#x60;...
+000002a: 6000 017e 6000 017d 6000 017c 6002 7f7f  &#x60;..~&#x60;..}&#x60;..|&#x60;...
+000003a: 0060 027e 7e00 6002 7d7d 0060 027c 7c00  .&#x60;.~~.&#x60;.}}.&#x60;.||.
+
+Contents of section Function:
+000004d: 8201 0000 0101 0202 0303 0404 0505 0505  ................
+000005d: 0505 0606 0605 0507 0707 0505 0808 0805  ................
+000006d: 0509 0a0b 0c05 0505 0505 0505 0505 0505  ................
+000007d: 0505 0505 0505 0505 0505 0505 0505 0505  ................
+000008d: 0505 0505 0505 0505 0505 0505 0505 0505  ................
+000009d: 0505 0505 0505 0505 0505 0505 0505 0505  ................
+00000ad: 0505 0505 0505 0505 0505 0505 0505 0505  ................
+00000bd: 0505 0505 0505 0505 0505 0505 0505 0505  ................
+00000cd: 0505 0505                                ....
+
+Contents of section Table:
+00000d3: 0170 0108 08                             .p...
+
+Contents of section Memory:
+00000da: 0100 01                                  ...
+
+Contents of section Export:
+00000e0: 5f07 6933 325f 6164 6400 2307 6933 325f  _.i32_add.#.i32_
+00000f0: 7375 6200 2407 6933 325f 6d75 6c00 2509  sub.$.i32_mul.%.
+0000100: 6933 325f 6469 765f 7300 2609 6933 325f  i32_div_s.&amp;.i32_
+0000110: 6469 765f 7500 2709 6933 325f 7265 6d5f  div_u.&#x27;.i32_rem_
+0000120: 7300 2809 6933 325f 7265 6d5f 7500 2907  s.(.i32_rem_u.).
+0000130: 6933 325f 616e 6400 2a06 6933 325f 6f72  i32_and.*.i32_or
+0000140: 002b 0769 3332 5f78 6f72 002c 0769 3332  .+.i32_xor.,.i32
+0000150: 5f73 686c 002d 0969 3332 5f73 6872 5f75  _shl.-.i32_shr_u
+0000160: 002e 0969 3332 5f73 6872 5f73 002f 0669  ...i32_shr_s./.i
+0000170: 3332 5f65 7100 3006 6933 325f 6e65 0031  32_eq.0.i32_ne.1
+0000180: 0869 3332 5f6c 745f 7300 3208 6933 325f  .i32_lt_s.2.i32_
+0000190: 6c65 5f73 0033 0869 3332 5f6c 745f 7500  le_s.3.i32_lt_u.
+00001a0: 3408 6933 325f 6c65 5f75 0035 0869 3332  4.i32_le_u.5.i32
+00001b0: 5f67 745f 7300 3608 6933 325f 6765 5f73  _gt_s.6.i32_ge_s
+00001c0: 0037 0869 3332 5f67 745f 7500 3808 6933  .7.i32_gt_u.8.i3
+00001d0: 325f 6765 5f75 0039 0969 3332 5f73 746f  2_ge_u.9.i32_sto
+00001e0: 7265 003a 0a69 3332 5f73 746f 7265 3800  re.:.i32_store8.
+00001f0: 3b0b 6933 325f 7374 6f72 6531 3600 3c08  ;.i32_store16.&lt;.
+0000200: 6933 325f 6361 6c6c 003d 1169 3332 5f63  i32_call.&#x3D;.i32_c
+0000210: 616c 6c5f 696e 6469 7265 6374 003e 0a69  all_indirect.&gt;.i
+0000220: 3332 5f73 656c 6563 7400 3f07 6936 345f  32_select.?.i64_
+0000230: 6164 6400 4007 6936 345f 7375 6200 4107  add.@.i64_sub.A.
+0000240: 6936 345f 6d75 6c00 4209 6936 345f 6469  i64_mul.B.i64_di
+0000250: 765f 7300 4309 6936 345f 6469 765f 7500  v_s.C.i64_div_u.
+0000260: 4409 6936 345f 7265 6d5f 7300 4509 6936  D.i64_rem_s.E.i6
+0000270: 345f 7265 6d5f 7500 4607 6936 345f 616e  4_rem_u.F.i64_an
+0000280: 6400 4706 6936 345f 6f72 0048 0769 3634  d.G.i64_or.H.i64
+0000290: 5f78 6f72 0049 0769 3634 5f73 686c 004a  _xor.I.i64_shl.J
+00002a0: 0969 3634 5f73 6872 5f75 004b 0969 3634  .i64_shr_u.K.i64
+00002b0: 5f73 6872 5f73 004c 0669 3634 5f65 7100  _shr_s.L.i64_eq.
+00002c0: 4d06 6936 345f 6e65 004e 0869 3634 5f6c  M.i64_ne.N.i64_l
+00002d0: 745f 7300 4f08 6936 345f 6c65 5f73 0050  t_s.O.i64_le_s.P
+00002e0: 0869 3634 5f6c 745f 7500 5108 6936 345f  .i64_lt_u.Q.i64_
+00002f0: 6c65 5f75 0052 0869 3634 5f67 745f 7300  le_u.R.i64_gt_s.
+0000300: 5308 6936 345f 6765 5f73 0054 0869 3634  S.i64_ge_s.T.i64
+0000310: 5f67 745f 7500 5508 6936 345f 6765 5f75  _gt_u.U.i64_ge_u
+0000320: 0056 0969 3634 5f73 746f 7265 0057 0a69  .V.i64_store.W.i
+0000330: 3634 5f73 746f 7265 3800 580b 6936 345f  64_store8.X.i64_
+0000340: 7374 6f72 6531 3600 590b 6936 345f 7374  store16.Y.i64_st
+0000350: 6f72 6533 3200 5a08 6936 345f 6361 6c6c  ore32.Z.i64_call
+0000360: 005b 1169 3634 5f63 616c 6c5f 696e 6469  .[.i64_call_indi
+0000370: 7265 6374 005c 0a69 3634 5f73 656c 6563  rect.\.i64_selec
+0000380: 7400 5d07 6633 325f 6164 6400 5e07 6633  t.].f32_add.^.f3
+0000390: 325f 7375 6200 5f07 6633 325f 6d75 6c00  2_sub._.f32_mul.
+00003a0: 6007 6633 325f 6469 7600 610c 6633 325f  &#x60;.f32_div.a.f32_
+00003b0: 636f 7079 7369 676e 0062 0666 3332 5f65  copysign.b.f32_e
+00003c0: 7100 6306 6633 325f 6e65 0064 0666 3332  q.c.f32_ne.d.f32
+00003d0: 5f6c 7400 6506 6633 325f 6c65 0066 0666  _lt.e.f32_le.f.f
+00003e0: 3332 5f67 7400 6706 6633 325f 6765 0068  32_gt.g.f32_ge.h
+00003f0: 0766 3332 5f6d 696e 0069 0766 3332 5f6d  .f32_min.i.f32_m
+0000400: 6178 006a 0966 3332 5f73 746f 7265 006b  ax.j.f32_store.k
+0000410: 0866 3332 5f63 616c 6c00 6c11 6633 325f  .f32_call.l.f32_
+0000420: 6361 6c6c 5f69 6e64 6972 6563 7400 6d0a  call_indirect.m.
+0000430: 6633 325f 7365 6c65 6374 006e 0766 3634  f32_select.n.f64
+0000440: 5f61 6464 006f 0766 3634 5f73 7562 0070  _add.o.f64_sub.p
+0000450: 0766 3634 5f6d 756c 0071 0766 3634 5f64  .f64_mul.q.f64_d
+0000460: 6976 0072 0c66 3634 5f63 6f70 7973 6967  iv.r.f64_copysig
+0000470: 6e00 7306 6636 345f 6571 0074 0666 3634  n.s.f64_eq.t.f64
+0000480: 5f6e 6500 7506 6636 345f 6c74 0076 0666  _ne.u.f64_lt.v.f
+0000490: 3634 5f6c 6500 7706 6636 345f 6774 0078  64_le.w.f64_gt.x
+00004a0: 0666 3634 5f67 6500 7907 6636 345f 6d69  .f64_ge.y.f64_mi
+00004b0: 6e00 7a07 6636 345f 6d61 7800 7b09 6636  n.z.f64_max.{.f6
+00004c0: 345f 7374 6f72 6500 7c08 6636 345f 6361  4_store.|.f64_ca
+00004d0: 6c6c 007d 1166 3634 5f63 616c 6c5f 696e  ll.}.f64_call_in
+00004e0: 6469 7265 6374 007e 0a66 3634 5f73 656c  direct.~.f64_sel
+00004f0: 6563 7400 7f05 6272 5f69 6600 8001 0862  ect...br_if....b
+0000500: 725f 7461 626c 6500 8101                 r_table...
+
+Contents of section Elem:
+000050c: 0100 4100 0b08 0001 0203 0405 0607       ..A...........
+
+Contents of section Code:
+000051d: 8201 0400 417f 0b04 0041 7e0b 0400 417f  ....A....A~...A.
+000052d: 0b04 0041 7e0b 0400 417f 0b04 0041 7e0b  ...A~...A....A~.
+000053d: 0400 417f 0b04 0041 7e0b 0900 4108 4100  ..A....A~...A.A.
+000054d: 3602 000b 2700 410b 410a 2d00 003a 0000  6...&#x27;.A.A.-..:..
+000055d: 410a 4109 2d00 003a 0000 4109 4108 2d00  A.A.-..:..A.A.-.
+000056d: 003a 0000 4108 417d 3a00 000b 0700 4108  .:..A.A}:.....A.
+000057d: 2802 000b 0d00 1009 4108 4101 3a00 0041  (.......A.A.:..A
+000058d: 000b 0d00 1009 4108 4102 3a00 0041 010b  ......A.A.:..A..
+000059d: 0d00 1009 4108 4103 3a00 0041 010b 0d00  ....A.A.:..A....
+00005ad: 1009 4108 4104 3a00 0041 000b 0d00 1009  ..A.A.:..A......
+00005bd: 4108 4105 3a00 0041 000b 0d00 1009 4108  A.A.:..A......A.
+00005cd: 4101 3a00 0042 000b 0d00 1009 4108 4102  A.:..B......A.A.
+00005dd: 3a00 0042 010b 0d00 1009 4108 4103 3a00  :..B......A.A.:.
+00005ed: 0042 010b 0d00 1009 4108 4104 3a00 0041  .B......A.A.:..A
+00005fd: 020b 0d00 1009 4108 4105 3a00 0041 000b  ......A.A.:..A..
+000060d: 1000 1009 4108 4101 3a00 0043 0000 0000  ....A.A.:..C....
+000061d: 0b10 0010 0941 0841 023a 0000 4300 0080  .....A.A.:..C...
+000062d: 3f0b 1000 1009 4108 4103 3a00 0043 0000  ?.....A.A.:..C..
+000063d: 803f 0b0d 0010 0941 0841 043a 0000 4104  .?.....A.A.:..A.
+000064d: 0b0d 0010 0941 0841 053a 0000 4100 0b14  .....A.A.:..A...
+000065d: 0010 0941 0841 013a 0000 4400 0000 0000  ...A.A.:..D.....
+000066d: 0000 000b 1400 1009 4108 4102 3a00 0044  ........A.A.:..D
+000067d: 0000 0000 0000 f03f 0b14 0010 0941 0841  .......?.....A.A
+000068d: 033a 0000 4400 0000 0000 00f0 3f0b 0d00  .:..D.......?...
+000069d: 1009 4108 4104 3a00 0041 060b 0d00 1009  ..A.A.:..A......
+00006ad: 4108 4105 3a00 0041 000b 0200 0b02 000b  A.A.:..A........
+00006bd: 0200 0b02 000b 0c00 1008 100b 100c 6a1a  ..............j.
+00006cd: 100a 0b0c 0010 0810 0b10 0c6b 1a10 0a0b  ...........k....
+00006dd: 0c00 1008 100b 100c 6c1a 100a 0b0c 0010  ........l.......
+00006ed: 0810 0b10 0c6d 1a10 0a0b 0c00 1008 100b  .....m..........
+00006fd: 100c 6e1a 100a 0b0c 0010 0810 0b10 0c6f  ..n............o
+000070d: 1a10 0a0b 0c00 1008 100b 100c 701a 100a  ............p...
+000071d: 0b0c 0010 0810 0b10 0c71 1a10 0a0b 0c00  .........q......
+000072d: 1008 100b 100c 721a 100a 0b0c 0010 0810  ......r.........
+000073d: 0b10 0c73 1a10 0a0b 0c00 1008 100b 100c  ...s............
+000074d: 741a 100a 0b0c 0010 0810 0b10 0c76 1a10  t............v..
+000075d: 0a0b 0c00 1008 100b 100c 751a 100a 0b0c  ..........u.....
+000076d: 0010 0810 0b10 0c46 1a10 0a0b 0c00 1008  .......F........
+000077d: 100b 100c 471a 100a 0b0c 0010 0810 0b10  ....G...........
+000078d: 0c48 1a10 0a0b 0c00 1008 100b 100c 4c1a  .H............L.
+000079d: 100a 0b0c 0010 0810 0b10 0c49 1a10 0a0b  ...........I....
+00007ad: 0c00 1008 100b 100c 4d1a 100a 0b0c 0010  ........M.......
+00007bd: 0810 0b10 0c4a 1a10 0a0b 0c00 1008 100b  .....J..........
+00007cd: 100c 4e1a 100a 0b0c 0010 0810 0b10 0c4b  ..N............K
+00007dd: 1a10 0a0b 0c00 1008 100b 100c 4f1a 100a  ............O...
+00007ed: 0b0d 0010 0810 0b10 0c36 0200 100a 0b0d  .........6......
+00007fd: 0010 0810 0b10 0c3a 0000 100a 0b0d 0010  .......:........
+000080d: 0810 0b10 0c3b 0100 100a 0b0c 0010 0810  .....;..........
+000081d: 0b10 0c10 1f10 0a0b 1000 1008 100b 100c  ................
+000082d: 100e 1100 001a 100a 0b0e 0010 0810 0b10  ................
+000083d: 0c10 0f1b 1a10 0a0b 0c00 1008 1010 1011  ................
+000084d: 7c1a 100a 0b0c 0010 0810 1010 117d 1a10  |............}..
+000085d: 0a0b 0c00 1008 1010 1011 7e1a 100a 0b0c  ..........~.....
+000086d: 0010 0810 1010 117f 1a10 0a0b 0c00 1008  ................
+000087d: 1010 1011 801a 100a 0b0c 0010 0810 1010  ................
+000088d: 1181 1a10 0a0b 0c00 1008 1010 1011 821a  ................
+000089d: 100a 0b0c 0010 0810 1010 1183 1a10 0a0b  ................
+00008ad: 0c00 1008 1010 1011 841a 100a 0b0c 0010  ................
+00008bd: 0810 1010 1185 1a10 0a0b 0c00 1008 1010  ................
+00008cd: 1011 861a 100a 0b0c 0010 0810 1010 1188  ................
+00008dd: 1a10 0a0b 0c00 1008 1010 1011 871a 100a  ................
+00008ed: 0b0c 0010 0810 1010 1151 1a10 0a0b 0c00  .........Q......
+00008fd: 1008 1010 1011 521a 100a 0b0c 0010 0810  ......R.........
+000090d: 1010 1153 1a10 0a0b 0c00 1008 1010 1011  ...S............
+000091d: 571a 100a 0b0c 0010 0810 1010 1154 1a10  W............T..
+000092d: 0a0b 0c00 1008 1010 1011 581a 100a 0b0c  ..........X.....
+000093d: 0010 0810 1010 1155 1a10 0a0b 0c00 1008  .......U........
+000094d: 1010 1011 591a 100a 0b0c 0010 0810 1010  ....Y...........
+000095d: 1156 1a10 0a0b 0c00 1008 1010 1011 5a1a  .V............Z.
+000096d: 100a 0b0d 0010 0810 0b10 1137 0300 100a  ...........7....
+000097d: 0b0d 0010 0810 0b10 113c 0000 100a 0b0d  .........&lt;......
+000098d: 0010 0810 0b10 113d 0100 100a 0b0d 0010  .......&#x3D;........
+000099d: 0810 0b10 113e 0200 100a 0b0c 0010 0810  .....&gt;..........
+00009ad: 1010 1110 2010 0a0b 1000 1008 1010 1011  .... ...........
+00009bd: 1013 1101 001a 100a 0b0e 0010 0810 1010  ................
+00009cd: 1110 141b 1a10 0a0b 0c00 1008 1015 1016  ................
+00009dd: 921a 100a 0b0c 0010 0810 1510 1693 1a10  ................
+00009ed: 0a0b 0c00 1008 1015 1016 941a 100a 0b0c  ................
+00009fd: 0010 0810 1510 1695 1a10 0a0b 0c00 1008  ................
+0000a0d: 1015 1016 981a 100a 0b0c 0010 0810 1510  ................
+0000a1d: 165b 1a10 0a0b 0c00 1008 1015 1016 5c1a  .[............\.
+0000a2d: 100a 0b0c 0010 0810 1510 165d 1a10 0a0b  ...........]....
+0000a3d: 0c00 1008 1015 1016 5f1a 100a 0b0c 0010  ........_.......
+0000a4d: 0810 1510 165e 1a10 0a0b 0c00 1008 1015  .....^..........
+0000a5d: 1016 601a 100a 0b0c 0010 0810 1510 1696  ..&#x60;.............
+0000a6d: 1a10 0a0b 0c00 1008 1015 1016 971a 100a  ................
+0000a7d: 0b0d 0010 0810 0b10 1638 0200 100a 0b0c  .........8......
+0000a8d: 0010 0810 1510 1610 2110 0a0b 1000 1008  ........!.......
+0000a9d: 1015 1016 1018 1102 001a 100a 0b0e 0010  ................
+0000aad: 0810 1510 1610 191b 1a10 0a0b 0c00 1008  ................
+0000abd: 101a 101b a01a 100a 0b0c 0010 0810 1a10  ................
+0000acd: 1ba1 1a10 0a0b 0c00 1008 101a 101b a21a  ................
+0000add: 100a 0b0c 0010 0810 1a10 1ba3 1a10 0a0b  ................
+0000aed: 0c00 1008 101a 101b a61a 100a 0b0c 0010  ................
+0000afd: 0810 1a10 1b61 1a10 0a0b 0c00 1008 101a  .....a..........
+0000b0d: 101b 621a 100a 0b0c 0010 0810 1a10 1b63  ..b............c
+0000b1d: 1a10 0a0b 0c00 1008 101a 101b 651a 100a  ............e...
+0000b2d: 0b0c 0010 0810 1a10 1b64 1a10 0a0b 0c00  .........d......
+0000b3d: 1008 101a 101b 661a 100a 0b0c 0010 0810  ......f.........
+0000b4d: 1a10 1ba4 1a10 0a0b 0c00 1008 101a 101b  ................
+0000b5d: a51a 100a 0b0d 0010 0810 0b10 1b39 0300  .............9..
+0000b6d: 100a 0b0c 0010 0810 1a10 1b10 2210 0a0b  ............&quot;...
+0000b7d: 1000 1008 101a 101b 101d 1103 001a 100a  ................
+0000b8d: 0b0e 0010 0810 1a10 1b10 1e1b 1a10 0a0b  ................
+0000b9d: 1300 027f 1008 100b 100c 4100 710d 001a  ..........A.q...
+0000bad: 100a 0b0b 1500 027f 1008 027f 100b 100c  ................
+0000bbd: 0e01 0100 0b1a 100a 0b0b                 ..........
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2"><code>BeginModule(version: 1)
+  BeginTypeSection(64)
+    OnTypeCount(13)
+    OnFuncType(index: 0, params: [i32, i32], results: [i32])
+    OnFuncType(index: 1, params: [i64, i64], results: [i32])
+    OnFuncType(index: 2, params: [f32, f32], results: [i32])
+    OnFuncType(index: 3, params: [f64, f64], results: [i32])
+    OnFuncType(index: 4, params: [], results: [])
+    OnFuncType(index: 5, params: [], results: [i32])
+    OnFuncType(index: 6, params: [], results: [i64])
+    OnFuncType(index: 7, params: [], results: [f32])
+    OnFuncType(index: 8, params: [], results: [f64])
+    OnFuncType(index: 9, params: [i32, i32], results: [])
+    OnFuncType(index: 10, params: [i64, i64], results: [])
+    OnFuncType(index: 11, params: [f32, f32], results: [])
+    OnFuncType(index: 12, params: [f64, f64], results: [])
+  EndTypeSection
+  BeginFunctionSection(132)
+    OnFunctionCount(130)
+    OnFunction(index: 0, sig_index: 0)
+    OnFunction(index: 1, sig_index: 0)
+    OnFunction(index: 2, sig_index: 1)
+    OnFunction(index: 3, sig_index: 1)
+    OnFunction(index: 4, sig_index: 2)
+    OnFunction(index: 5, sig_index: 2)
+    OnFunction(index: 6, sig_index: 3)
+    OnFunction(index: 7, sig_index: 3)
+    OnFunction(index: 8, sig_index: 4)
+    OnFunction(index: 9, sig_index: 4)
+    OnFunction(index: 10, sig_index: 5)
+    OnFunction(index: 11, sig_index: 5)
+    OnFunction(index: 12, sig_index: 5)
+    OnFunction(index: 13, sig_index: 5)
+    OnFunction(index: 14, sig_index: 5)
+    OnFunction(index: 15, sig_index: 5)
+    OnFunction(index: 16, sig_index: 6)
+    OnFunction(index: 17, sig_index: 6)
+    OnFunction(index: 18, sig_index: 6)
+    OnFunction(index: 19, sig_index: 5)
+    OnFunction(index: 20, sig_index: 5)
+    OnFunction(index: 21, sig_index: 7)
+    OnFunction(index: 22, sig_index: 7)
+    OnFunction(index: 23, sig_index: 7)
+    OnFunction(index: 24, sig_index: 5)
+    OnFunction(index: 25, sig_index: 5)
+    OnFunction(index: 26, sig_index: 8)
+    OnFunction(index: 27, sig_index: 8)
+    OnFunction(index: 28, sig_index: 8)
+    OnFunction(index: 29, sig_index: 5)
+    OnFunction(index: 30, sig_index: 5)
+    OnFunction(index: 31, sig_index: 9)
+    OnFunction(index: 32, sig_index: 10)
+    OnFunction(index: 33, sig_index: 11)
+    OnFunction(index: 34, sig_index: 12)
+    OnFunction(index: 35, sig_index: 5)
+    OnFunction(index: 36, sig_index: 5)
+    OnFunction(index: 37, sig_index: 5)
+    OnFunction(index: 38, sig_index: 5)
+    OnFunction(index: 39, sig_index: 5)
+    OnFunction(index: 40, sig_index: 5)
+    OnFunction(index: 41, sig_index: 5)
+    OnFunction(index: 42, sig_index: 5)
+    OnFunction(index: 43, sig_index: 5)
+    OnFunction(index: 44, sig_index: 5)
+    OnFunction(index: 45, sig_index: 5)
+    OnFunction(index: 46, sig_index: 5)
+    OnFunction(index: 47, sig_index: 5)
+    OnFunction(index: 48, sig_index: 5)
+    OnFunction(index: 49, sig_index: 5)
+    OnFunction(index: 50, sig_index: 5)
+    OnFunction(index: 51, sig_index: 5)
+    OnFunction(index: 52, sig_index: 5)
+    OnFunction(index: 53, sig_index: 5)
+    OnFunction(index: 54, sig_index: 5)
+    OnFunction(index: 55, sig_index: 5)
+    OnFunction(index: 56, sig_index: 5)
+    OnFunction(index: 57, sig_index: 5)
+    OnFunction(index: 58, sig_index: 5)
+    OnFunction(index: 59, sig_index: 5)
+    OnFunction(index: 60, sig_index: 5)
+    OnFunction(index: 61, sig_index: 5)
+    OnFunction(index: 62, sig_index: 5)
+    OnFunction(index: 63, sig_index: 5)
+    OnFunction(index: 64, sig_index: 5)
+    OnFunction(index: 65, sig_index: 5)
+    OnFunction(index: 66, sig_index: 5)
+    OnFunction(index: 67, sig_index: 5)
+    OnFunction(index: 68, sig_index: 5)
+    OnFunction(index: 69, sig_index: 5)
+    OnFunction(index: 70, sig_index: 5)
+    OnFunction(index: 71, sig_index: 5)
+    OnFunction(index: 72, sig_index: 5)
+    OnFunction(index: 73, sig_index: 5)
+    OnFunction(index: 74, sig_index: 5)
+    OnFunction(index: 75, sig_index: 5)
+    OnFunction(index: 76, sig_index: 5)
+    OnFunction(index: 77, sig_index: 5)
+    OnFunction(index: 78, sig_index: 5)
+    OnFunction(index: 79, sig_index: 5)
+    OnFunction(index: 80, sig_index: 5)
+    OnFunction(index: 81, sig_index: 5)
+    OnFunction(index: 82, sig_index: 5)
+    OnFunction(index: 83, sig_index: 5)
+    OnFunction(index: 84, sig_index: 5)
+    OnFunction(index: 85, sig_index: 5)
+    OnFunction(index: 86, sig_index: 5)
+    OnFunction(index: 87, sig_index: 5)
+    OnFunction(index: 88, sig_index: 5)
+    OnFunction(index: 89, sig_index: 5)
+    OnFunction(index: 90, sig_index: 5)
+    OnFunction(index: 91, sig_index: 5)
+    OnFunction(index: 92, sig_index: 5)
+    OnFunction(index: 93, sig_index: 5)
+    OnFunction(index: 94, sig_index: 5)
+    OnFunction(index: 95, sig_index: 5)
+    OnFunction(index: 96, sig_index: 5)
+    OnFunction(index: 97, sig_index: 5)
+    OnFunction(index: 98, sig_index: 5)
+    OnFunction(index: 99, sig_index: 5)
+    OnFunction(index: 100, sig_index: 5)
+    OnFunction(index: 101, sig_index: 5)
+    OnFunction(index: 102, sig_index: 5)
+    OnFunction(index: 103, sig_index: 5)
+    OnFunction(index: 104, sig_index: 5)
+    OnFunction(index: 105, sig_index: 5)
+    OnFunction(index: 106, sig_index: 5)
+    OnFunction(index: 107, sig_index: 5)
+    OnFunction(index: 108, sig_index: 5)
+    OnFunction(index: 109, sig_index: 5)
+    OnFunction(index: 110, sig_index: 5)
+    OnFunction(index: 111, sig_index: 5)
+    OnFunction(index: 112, sig_index: 5)
+    OnFunction(index: 113, sig_index: 5)
+    OnFunction(index: 114, sig_index: 5)
+    OnFunction(index: 115, sig_index: 5)
+    OnFunction(index: 116, sig_index: 5)
+    OnFunction(index: 117, sig_index: 5)
+    OnFunction(index: 118, sig_index: 5)
+    OnFunction(index: 119, sig_index: 5)
+    OnFunction(index: 120, sig_index: 5)
+    OnFunction(index: 121, sig_index: 5)
+    OnFunction(index: 122, sig_index: 5)
+    OnFunction(index: 123, sig_index: 5)
+    OnFunction(index: 124, sig_index: 5)
+    OnFunction(index: 125, sig_index: 5)
+    OnFunction(index: 126, sig_index: 5)
+    OnFunction(index: 127, sig_index: 5)
+    OnFunction(index: 128, sig_index: 5)
+    OnFunction(index: 129, sig_index: 5)
+  EndFunctionSection
+  BeginTableSection(5)
+    OnTableCount(1)
+    OnTable(index: 0, elem_type: funcref, initial: 8, max: 8)
+  EndTableSection
+  BeginMemorySection(3)
+    OnMemoryCount(1)
+    OnMemory(index: 0, initial: 1)
+  EndMemorySection
+  BeginExportSection(1066)
+    OnExportCount(95)
+    OnExport(index: 0, kind: func, item_index: 35, name: &quot;i32_add&quot;)
+    OnExport(index: 1, kind: func, item_index: 36, name: &quot;i32_sub&quot;)
+    OnExport(index: 2, kind: func, item_index: 37, name: &quot;i32_mul&quot;)
+    OnExport(index: 3, kind: func, item_index: 38, name: &quot;i32_div_s&quot;)
+    OnExport(index: 4, kind: func, item_index: 39, name: &quot;i32_div_u&quot;)
+    OnExport(index: 5, kind: func, item_index: 40, name: &quot;i32_rem_s&quot;)
+    OnExport(index: 6, kind: func, item_index: 41, name: &quot;i32_rem_u&quot;)
+    OnExport(index: 7, kind: func, item_index: 42, name: &quot;i32_and&quot;)
+    OnExport(index: 8, kind: func, item_index: 43, name: &quot;i32_or&quot;)
+    OnExport(index: 9, kind: func, item_index: 44, name: &quot;i32_xor&quot;)
+    OnExport(index: 10, kind: func, item_index: 45, name: &quot;i32_shl&quot;)
+    OnExport(index: 11, kind: func, item_index: 46, name: &quot;i32_shr_u&quot;)
+    OnExport(index: 12, kind: func, item_index: 47, name: &quot;i32_shr_s&quot;)
+    OnExport(index: 13, kind: func, item_index: 48, name: &quot;i32_eq&quot;)
+    OnExport(index: 14, kind: func, item_index: 49, name: &quot;i32_ne&quot;)
+    OnExport(index: 15, kind: func, item_index: 50, name: &quot;i32_lt_s&quot;)
+    OnExport(index: 16, kind: func, item_index: 51, name: &quot;i32_le_s&quot;)
+    OnExport(index: 17, kind: func, item_index: 52, name: &quot;i32_lt_u&quot;)
+    OnExport(index: 18, kind: func, item_index: 53, name: &quot;i32_le_u&quot;)
+    OnExport(index: 19, kind: func, item_index: 54, name: &quot;i32_gt_s&quot;)
+    OnExport(index: 20, kind: func, item_index: 55, name: &quot;i32_ge_s&quot;)
+    OnExport(index: 21, kind: func, item_index: 56, name: &quot;i32_gt_u&quot;)
+    OnExport(index: 22, kind: func, item_index: 57, name: &quot;i32_ge_u&quot;)
+    OnExport(index: 23, kind: func, item_index: 58, name: &quot;i32_store&quot;)
+    OnExport(index: 24, kind: func, item_index: 59, name: &quot;i32_store8&quot;)
+    OnExport(index: 25, kind: func, item_index: 60, name: &quot;i32_store16&quot;)
+    OnExport(index: 26, kind: func, item_index: 61, name: &quot;i32_call&quot;)
+    OnExport(index: 27, kind: func, item_index: 62, name: &quot;i32_call_indirect&quot;)
+    OnExport(index: 28, kind: func, item_index: 63, name: &quot;i32_select&quot;)
+    OnExport(index: 29, kind: func, item_index: 64, name: &quot;i64_add&quot;)
+    OnExport(index: 30, kind: func, item_index: 65, name: &quot;i64_sub&quot;)
+    OnExport(index: 31, kind: func, item_index: 66, name: &quot;i64_mul&quot;)
+    OnExport(index: 32, kind: func, item_index: 67, name: &quot;i64_div_s&quot;)
+    OnExport(index: 33, kind: func, item_index: 68, name: &quot;i64_div_u&quot;)
+    OnExport(index: 34, kind: func, item_index: 69, name: &quot;i64_rem_s&quot;)
+    OnExport(index: 35, kind: func, item_index: 70, name: &quot;i64_rem_u&quot;)
+    OnExport(index: 36, kind: func, item_index: 71, name: &quot;i64_and&quot;)
+    OnExport(index: 37, kind: func, item_index: 72, name: &quot;i64_or&quot;)
+    OnExport(index: 38, kind: func, item_index: 73, name: &quot;i64_xor&quot;)
+    OnExport(index: 39, kind: func, item_index: 74, name: &quot;i64_shl&quot;)
+    OnExport(index: 40, kind: func, item_index: 75, name: &quot;i64_shr_u&quot;)
+    OnExport(index: 41, kind: func, item_index: 76, name: &quot;i64_shr_s&quot;)
+    OnExport(index: 42, kind: func, item_index: 77, name: &quot;i64_eq&quot;)
+    OnExport(index: 43, kind: func, item_index: 78, name: &quot;i64_ne&quot;)
+    OnExport(index: 44, kind: func, item_index: 79, name: &quot;i64_lt_s&quot;)
+    OnExport(index: 45, kind: func, item_index: 80, name: &quot;i64_le_s&quot;)
+    OnExport(index: 46, kind: func, item_index: 81, name: &quot;i64_lt_u&quot;)
+    OnExport(index: 47, kind: func, item_index: 82, name: &quot;i64_le_u&quot;)
+    OnExport(index: 48, kind: func, item_index: 83, name: &quot;i64_gt_s&quot;)
+    OnExport(index: 49, kind: func, item_index: 84, name: &quot;i64_ge_s&quot;)
+    OnExport(index: 50, kind: func, item_index: 85, name: &quot;i64_gt_u&quot;)
+    OnExport(index: 51, kind: func, item_index: 86, name: &quot;i64_ge_u&quot;)
+    OnExport(index: 52, kind: func, item_index: 87, name: &quot;i64_store&quot;)
+    OnExport(index: 53, kind: func, item_index: 88, name: &quot;i64_store8&quot;)
+    OnExport(index: 54, kind: func, item_index: 89, name: &quot;i64_store16&quot;)
+    OnExport(index: 55, kind: func, item_index: 90, name: &quot;i64_store32&quot;)
+    OnExport(index: 56, kind: func, item_index: 91, name: &quot;i64_call&quot;)
+    OnExport(index: 57, kind: func, item_index: 92, name: &quot;i64_call_indirect&quot;)
+    OnExport(index: 58, kind: func, item_index: 93, name: &quot;i64_select&quot;)
+    OnExport(index: 59, kind: func, item_index: 94, name: &quot;f32_add&quot;)
+    OnExport(index: 60, kind: func, item_index: 95, name: &quot;f32_sub&quot;)
+    OnExport(index: 61, kind: func, item_index: 96, name: &quot;f32_mul&quot;)
+    OnExport(index: 62, kind: func, item_index: 97, name: &quot;f32_div&quot;)
+    OnExport(index: 63, kind: func, item_index: 98, name: &quot;f32_copysign&quot;)
+    OnExport(index: 64, kind: func, item_index: 99, name: &quot;f32_eq&quot;)
+    OnExport(index: 65, kind: func, item_index: 100, name: &quot;f32_ne&quot;)
+    OnExport(index: 66, kind: func, item_index: 101, name: &quot;f32_lt&quot;)
+    OnExport(index: 67, kind: func, item_index: 102, name: &quot;f32_le&quot;)
+    OnExport(index: 68, kind: func, item_index: 103, name: &quot;f32_gt&quot;)
+    OnExport(index: 69, kind: func, item_index: 104, name: &quot;f32_ge&quot;)
+    OnExport(index: 70, kind: func, item_index: 105, name: &quot;f32_min&quot;)
+    OnExport(index: 71, kind: func, item_index: 106, name: &quot;f32_max&quot;)
+    OnExport(index: 72, kind: func, item_index: 107, name: &quot;f32_store&quot;)
+    OnExport(index: 73, kind: func, item_index: 108, name: &quot;f32_call&quot;)
+    OnExport(index: 74, kind: func, item_index: 109, name: &quot;f32_call_indirect&quot;)
+    OnExport(index: 75, kind: func, item_index: 110, name: &quot;f32_select&quot;)
+    OnExport(index: 76, kind: func, item_index: 111, name: &quot;f64_add&quot;)
+    OnExport(index: 77, kind: func, item_index: 112, name: &quot;f64_sub&quot;)
+    OnExport(index: 78, kind: func, item_index: 113, name: &quot;f64_mul&quot;)
+    OnExport(index: 79, kind: func, item_index: 114, name: &quot;f64_div&quot;)
+    OnExport(index: 80, kind: func, item_index: 115, name: &quot;f64_copysign&quot;)
+    OnExport(index: 81, kind: func, item_index: 116, name: &quot;f64_eq&quot;)
+    OnExport(index: 82, kind: func, item_index: 117, name: &quot;f64_ne&quot;)
+    OnExport(index: 83, kind: func, item_index: 118, name: &quot;f64_lt&quot;)
+    OnExport(index: 84, kind: func, item_index: 119, name: &quot;f64_le&quot;)
+    OnExport(index: 85, kind: func, item_index: 120, name: &quot;f64_gt&quot;)
+    OnExport(index: 86, kind: func, item_index: 121, name: &quot;f64_ge&quot;)
+    OnExport(index: 87, kind: func, item_index: 122, name: &quot;f64_min&quot;)
+    OnExport(index: 88, kind: func, item_index: 123, name: &quot;f64_max&quot;)
+    OnExport(index: 89, kind: func, item_index: 124, name: &quot;f64_store&quot;)
+    OnExport(index: 90, kind: func, item_index: 125, name: &quot;f64_call&quot;)
+    OnExport(index: 91, kind: func, item_index: 126, name: &quot;f64_call_indirect&quot;)
+    OnExport(index: 92, kind: func, item_index: 127, name: &quot;f64_select&quot;)
+    OnExport(index: 93, kind: func, item_index: 128, name: &quot;br_if&quot;)
+    OnExport(index: 94, kind: func, item_index: 129, name: &quot;br_table&quot;)
+  EndExportSection
+  BeginElemSection(14)
+    OnElemSegmentCount(1)
+    BeginElemSegment(index: 0, table_index: 0, flags: 0)
+    BeginElemSegmentInitExpr(0)
+    OnI32ConstExpr(0 (0x0))
+    OnEndExpr
+    EndElemSegmentInitExpr(0)
+    OnElemSegmentElemType(index: 0, type: funcref)
+    OnElemSegmentElemExprCount(index: 0, count: 8)
+    BeginElemExpr(elem_index: 0, expr_index: 0)
+    OnRefFuncExpr(0)
+    OnEndExpr
+    EndElemExpr(elem_index: 0, expr_index: 0)
+    BeginElemExpr(elem_index: 0, expr_index: 1)
+    OnRefFuncExpr(1)
+    OnEndExpr
+    EndElemExpr(elem_index: 0, expr_index: 1)
+    BeginElemExpr(elem_index: 0, expr_index: 2)
+    OnRefFuncExpr(2)
+    OnEndExpr
+    EndElemExpr(elem_index: 0, expr_index: 2)
+    BeginElemExpr(elem_index: 0, expr_index: 3)
+    OnRefFuncExpr(3)
+    OnEndExpr
+    EndElemExpr(elem_index: 0, expr_index: 3)
+    BeginElemExpr(elem_index: 0, expr_index: 4)
+    OnRefFuncExpr(4)
+    OnEndExpr
+    EndElemExpr(elem_index: 0, expr_index: 4)
+    BeginElemExpr(elem_index: 0, expr_index: 5)
+    OnRefFuncExpr(5)
+    OnEndExpr
+    EndElemExpr(elem_index: 0, expr_index: 5)
+    BeginElemExpr(elem_index: 0, expr_index: 6)
+    OnRefFuncExpr(6)
+    OnEndExpr
+    EndElemExpr(elem_index: 0, expr_index: 6)
+    BeginElemExpr(elem_index: 0, expr_index: 7)
+    OnRefFuncExpr(7)
+    OnEndExpr
+    EndElemExpr(elem_index: 0, expr_index: 7)
+    EndElemSegment(0)
+  EndElemSection
+  BeginCodeSection(1706)
+    OnFunctionBodyCount(130)
+    BeginFunctionBody(0, size:4)
+    OnLocalDeclCount(0)
+    EndFunctionBody(0)
+    BeginFunctionBody(1, size:4)
+    OnLocalDeclCount(0)
+    EndFunctionBody(1)
+    BeginFunctionBody(2, size:4)
+    OnLocalDeclCount(0)
+    EndFunctionBody(2)
+    BeginFunctionBody(3, size:4)
+    OnLocalDeclCount(0)
+    EndFunctionBody(3)
+    BeginFunctionBody(4, size:4)
+    OnLocalDeclCount(0)
+    EndFunctionBody(4)
+    BeginFunctionBody(5, size:4)
+    OnLocalDeclCount(0)
+    EndFunctionBody(5)
+    BeginFunctionBody(6, size:4)
+    OnLocalDeclCount(0)
+    EndFunctionBody(6)
+    BeginFunctionBody(7, size:4)
+    OnLocalDeclCount(0)
+    EndFunctionBody(7)
+    BeginFunctionBody(8, size:9)
+    OnLocalDeclCount(0)
+    EndFunctionBody(8)
+    BeginFunctionBody(9, size:39)
+    OnLocalDeclCount(0)
+    EndFunctionBody(9)
+    BeginFunctionBody(10, size:7)
+    OnLocalDeclCount(0)
+    EndFunctionBody(10)
+    BeginFunctionBody(11, size:13)
+    OnLocalDeclCount(0)
+    EndFunctionBody(11)
+    BeginFunctionBody(12, size:13)
+    OnLocalDeclCount(0)
+    EndFunctionBody(12)
+    BeginFunctionBody(13, size:13)
+    OnLocalDeclCount(0)
+    EndFunctionBody(13)
+    BeginFunctionBody(14, size:13)
+    OnLocalDeclCount(0)
+    EndFunctionBody(14)
+    BeginFunctionBody(15, size:13)
+    OnLocalDeclCount(0)
+    EndFunctionBody(15)
+    BeginFunctionBody(16, size:13)
+    OnLocalDeclCount(0)
+    EndFunctionBody(16)
+    BeginFunctionBody(17, size:13)
+    OnLocalDeclCount(0)
+    EndFunctionBody(17)
+    BeginFunctionBody(18, size:13)
+    OnLocalDeclCount(0)
+    EndFunctionBody(18)
+    BeginFunctionBody(19, size:13)
+    OnLocalDeclCount(0)
+    EndFunctionBody(19)
+    BeginFunctionBody(20, size:13)
+    OnLocalDeclCount(0)
+    EndFunctionBody(20)
+    BeginFunctionBody(21, size:16)
+    OnLocalDeclCount(0)
+    EndFunctionBody(21)
+    BeginFunctionBody(22, size:16)
+    OnLocalDeclCount(0)
+    EndFunctionBody(22)
+    BeginFunctionBody(23, size:16)
+    OnLocalDeclCount(0)
+    EndFunctionBody(23)
+    BeginFunctionBody(24, size:13)
+    OnLocalDeclCount(0)
+    EndFunctionBody(24)
+    BeginFunctionBody(25, size:13)
+    OnLocalDeclCount(0)
+    EndFunctionBody(25)
+    BeginFunctionBody(26, size:20)
+    OnLocalDeclCount(0)
+    EndFunctionBody(26)
+    BeginFunctionBody(27, size:20)
+    OnLocalDeclCount(0)
+    EndFunctionBody(27)
+    BeginFunctionBody(28, size:20)
+    OnLocalDeclCount(0)
+    EndFunctionBody(28)
+    BeginFunctionBody(29, size:13)
+    OnLocalDeclCount(0)
+    EndFunctionBody(29)
+    BeginFunctionBody(30, size:13)
+    OnLocalDeclCount(0)
+    EndFunctionBody(30)
+    BeginFunctionBody(31, size:2)
+    OnLocalDeclCount(0)
+    EndFunctionBody(31)
+    BeginFunctionBody(32, size:2)
+    OnLocalDeclCount(0)
+    EndFunctionBody(32)
+    BeginFunctionBody(33, size:2)
+    OnLocalDeclCount(0)
+    EndFunctionBody(33)
+    BeginFunctionBody(34, size:2)
+    OnLocalDeclCount(0)
+    EndFunctionBody(34)
+    BeginFunctionBody(35, size:12)
+    OnLocalDeclCount(0)
+    EndFunctionBody(35)
+    BeginFunctionBody(36, size:12)
+    OnLocalDeclCount(0)
+    EndFunctionBody(36)
+    BeginFunctionBody(37, size:12)
+    OnLocalDeclCount(0)
+    EndFunctionBody(37)
+    BeginFunctionBody(38, size:12)
+    OnLocalDeclCount(0)
+    EndFunctionBody(38)
+    BeginFunctionBody(39, size:12)
+    OnLocalDeclCount(0)
+    EndFunctionBody(39)
+    BeginFunctionBody(40, size:12)
+    OnLocalDeclCount(0)
+    EndFunctionBody(40)
+    BeginFunctionBody(41, size:12)
+    OnLocalDeclCount(0)
+    EndFunctionBody(41)
+    BeginFunctionBody(42, size:12)
+    OnLocalDeclCount(0)
+    EndFunctionBody(42)
+    BeginFunctionBody(43, size:12)
+    OnLocalDeclCount(0)
+    EndFunctionBody(43)
+    BeginFunctionBody(44, size:12)
+    OnLocalDeclCount(0)
+    EndFunctionBody(44)
+    BeginFunctionBody(45, size:12)
+    OnLocalDeclCount(0)
+    EndFunctionBody(45)
+    BeginFunctionBody(46, size:12)
+    OnLocalDeclCount(0)
+    EndFunctionBody(46)
+    BeginFunctionBody(47, size:12)
+    OnLocalDeclCount(0)
+    EndFunctionBody(47)
+    BeginFunctionBody(48, size:12)
+    OnLocalDeclCount(0)
+    EndFunctionBody(48)
+    BeginFunctionBody(49, size:12)
+    OnLocalDeclCount(0)
+    EndFunctionBody(49)
+    BeginFunctionBody(50, size:12)
+    OnLocalDeclCount(0)
+    EndFunctionBody(50)
+    BeginFunctionBody(51, size:12)
+    OnLocalDeclCount(0)
+    EndFunctionBody(51)
+    BeginFunctionBody(52, size:12)
+    OnLocalDeclCount(0)
+    EndFunctionBody(52)
+    BeginFunctionBody(53, size:12)
+    OnLocalDeclCount(0)
+    EndFunctionBody(53)
+    BeginFunctionBody(54, size:12)
+    OnLocalDeclCount(0)
+    EndFunctionBody(54)
+    BeginFunctionBody(55, size:12)
+    OnLocalDeclCount(0)
+    EndFunctionBody(55)
+    BeginFunctionBody(56, size:12)
+    OnLocalDeclCount(0)
+    EndFunctionBody(56)
+    BeginFunctionBody(57, size:12)
+    OnLocalDeclCount(0)
+    EndFunctionBody(57)
+    BeginFunctionBody(58, size:13)
+    OnLocalDeclCount(0)
+    EndFunctionBody(58)
+    BeginFunctionBody(59, size:13)
+    OnLocalDeclCount(0)
+    EndFunctionBody(59)
+    BeginFunctionBody(60, size:13)
+    OnLocalDeclCount(0)
+    EndFunctionBody(60)
+    BeginFunctionBody(61, size:12)
+    OnLocalDeclCount(0)
+    EndFunctionBody(61)
+    BeginFunctionBody(62, size:16)
+    OnLocalDeclCount(0)
+    EndFunctionBody(62)
+    BeginFunctionBody(63, size:14)
+    OnLocalDeclCount(0)
+    EndFunctionBody(63)
+    BeginFunctionBody(64, size:12)
+    OnLocalDeclCount(0)
+    EndFunctionBody(64)
+    BeginFunctionBody(65, size:12)
+    OnLocalDeclCount(0)
+    EndFunctionBody(65)
+    BeginFunctionBody(66, size:12)
+    OnLocalDeclCount(0)
+    EndFunctionBody(66)
+    BeginFunctionBody(67, size:12)
+    OnLocalDeclCount(0)
+    EndFunctionBody(67)
+    BeginFunctionBody(68, size:12)
+    OnLocalDeclCount(0)
+    EndFunctionBody(68)
+    BeginFunctionBody(69, size:12)
+    OnLocalDeclCount(0)
+    EndFunctionBody(69)
+    BeginFunctionBody(70, size:12)
+    OnLocalDeclCount(0)
+    EndFunctionBody(70)
+    BeginFunctionBody(71, size:12)
+    OnLocalDeclCount(0)
+    EndFunctionBody(71)
+    BeginFunctionBody(72, size:12)
+    OnLocalDeclCount(0)
+    EndFunctionBody(72)
+    BeginFunctionBody(73, size:12)
+    OnLocalDeclCount(0)
+    EndFunctionBody(73)
+    BeginFunctionBody(74, size:12)
+    OnLocalDeclCount(0)
+    EndFunctionBody(74)
+    BeginFunctionBody(75, size:12)
+    OnLocalDeclCount(0)
+    EndFunctionBody(75)
+    BeginFunctionBody(76, size:12)
+    OnLocalDeclCount(0)
+    EndFunctionBody(76)
+    BeginFunctionBody(77, size:12)
+    OnLocalDeclCount(0)
+    EndFunctionBody(77)
+    BeginFunctionBody(78, size:12)
+    OnLocalDeclCount(0)
+    EndFunctionBody(78)
+    BeginFunctionBody(79, size:12)
+    OnLocalDeclCount(0)
+    EndFunctionBody(79)
+    BeginFunctionBody(80, size:12)
+    OnLocalDeclCount(0)
+    EndFunctionBody(80)
+    BeginFunctionBody(81, size:12)
+    OnLocalDeclCount(0)
+    EndFunctionBody(81)
+    BeginFunctionBody(82, size:12)
+    OnLocalDeclCount(0)
+    EndFunctionBody(82)
+    BeginFunctionBody(83, size:12)
+    OnLocalDeclCount(0)
+    EndFunctionBody(83)
+    BeginFunctionBody(84, size:12)
+    OnLocalDeclCount(0)
+    EndFunctionBody(84)
+    BeginFunctionBody(85, size:12)
+    OnLocalDeclCount(0)
+    EndFunctionBody(85)
+    BeginFunctionBody(86, size:12)
+    OnLocalDeclCount(0)
+    EndFunctionBody(86)
+    BeginFunctionBody(87, size:13)
+    OnLocalDeclCount(0)
+    EndFunctionBody(87)
+    BeginFunctionBody(88, size:13)
+    OnLocalDeclCount(0)
+    EndFunctionBody(88)
+    BeginFunctionBody(89, size:13)
+    OnLocalDeclCount(0)
+    EndFunctionBody(89)
+    BeginFunctionBody(90, size:13)
+    OnLocalDeclCount(0)
+    EndFunctionBody(90)
+    BeginFunctionBody(91, size:12)
+    OnLocalDeclCount(0)
+    EndFunctionBody(91)
+    BeginFunctionBody(92, size:16)
+    OnLocalDeclCount(0)
+    EndFunctionBody(92)
+    BeginFunctionBody(93, size:14)
+    OnLocalDeclCount(0)
+    EndFunctionBody(93)
+    BeginFunctionBody(94, size:12)
+    OnLocalDeclCount(0)
+    EndFunctionBody(94)
+    BeginFunctionBody(95, size:12)
+    OnLocalDeclCount(0)
+    EndFunctionBody(95)
+    BeginFunctionBody(96, size:12)
+    OnLocalDeclCount(0)
+    EndFunctionBody(96)
+    BeginFunctionBody(97, size:12)
+    OnLocalDeclCount(0)
+    EndFunctionBody(97)
+    BeginFunctionBody(98, size:12)
+    OnLocalDeclCount(0)
+    EndFunctionBody(98)
+    BeginFunctionBody(99, size:12)
+    OnLocalDeclCount(0)
+    EndFunctionBody(99)
+    BeginFunctionBody(100, size:12)
+    OnLocalDeclCount(0)
+    EndFunctionBody(100)
+    BeginFunctionBody(101, size:12)
+    OnLocalDeclCount(0)
+    EndFunctionBody(101)
+    BeginFunctionBody(102, size:12)
+    OnLocalDeclCount(0)
+    EndFunctionBody(102)
+    BeginFunctionBody(103, size:12)
+    OnLocalDeclCount(0)
+    EndFunctionBody(103)
+    BeginFunctionBody(104, size:12)
+    OnLocalDeclCount(0)
+    EndFunctionBody(104)
+    BeginFunctionBody(105, size:12)
+    OnLocalDeclCount(0)
+    EndFunctionBody(105)
+    BeginFunctionBody(106, size:12)
+    OnLocalDeclCount(0)
+    EndFunctionBody(106)
+    BeginFunctionBody(107, size:13)
+    OnLocalDeclCount(0)
+    EndFunctionBody(107)
+    BeginFunctionBody(108, size:12)
+    OnLocalDeclCount(0)
+    EndFunctionBody(108)
+    BeginFunctionBody(109, size:16)
+    OnLocalDeclCount(0)
+    EndFunctionBody(109)
+    BeginFunctionBody(110, size:14)
+    OnLocalDeclCount(0)
+    EndFunctionBody(110)
+    BeginFunctionBody(111, size:12)
+    OnLocalDeclCount(0)
+    EndFunctionBody(111)
+    BeginFunctionBody(112, size:12)
+    OnLocalDeclCount(0)
+    EndFunctionBody(112)
+    BeginFunctionBody(113, size:12)
+    OnLocalDeclCount(0)
+    EndFunctionBody(113)
+    BeginFunctionBody(114, size:12)
+    OnLocalDeclCount(0)
+    EndFunctionBody(114)
+    BeginFunctionBody(115, size:12)
+    OnLocalDeclCount(0)
+    EndFunctionBody(115)
+    BeginFunctionBody(116, size:12)
+    OnLocalDeclCount(0)
+    EndFunctionBody(116)
+    BeginFunctionBody(117, size:12)
+    OnLocalDeclCount(0)
+    EndFunctionBody(117)
+    BeginFunctionBody(118, size:12)
+    OnLocalDeclCount(0)
+    EndFunctionBody(118)
+    BeginFunctionBody(119, size:12)
+    OnLocalDeclCount(0)
+    EndFunctionBody(119)
+    BeginFunctionBody(120, size:12)
+    OnLocalDeclCount(0)
+    EndFunctionBody(120)
+    BeginFunctionBody(121, size:12)
+    OnLocalDeclCount(0)
+    EndFunctionBody(121)
+    BeginFunctionBody(122, size:12)
+    OnLocalDeclCount(0)
+    EndFunctionBody(122)
+    BeginFunctionBody(123, size:12)
+    OnLocalDeclCount(0)
+    EndFunctionBody(123)
+    BeginFunctionBody(124, size:13)
+    OnLocalDeclCount(0)
+    EndFunctionBody(124)
+    BeginFunctionBody(125, size:12)
+    OnLocalDeclCount(0)
+    EndFunctionBody(125)
+    BeginFunctionBody(126, size:16)
+    OnLocalDeclCount(0)
+    EndFunctionBody(126)
+    BeginFunctionBody(127, size:14)
+    OnLocalDeclCount(0)
+    EndFunctionBody(127)
+    BeginFunctionBody(128, size:19)
+    OnLocalDeclCount(0)
+    EndFunctionBody(128)
+    BeginFunctionBody(129, size:21)
+    OnLocalDeclCount(0)
+    EndFunctionBody(129)
+  EndCodeSection
+EndModule
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2 do-not-highlightme"><code>00000000: 00 61 73 6D 01 00 00 00  .asm....
+00000008: 01 40 0D 60 02 7F 7F 01  .@.&#x60;....
+00000010: 7F 60 02 7E 7E 01 7F 60  .&#x60;.~~..&#x60;
+00000018: 02 7D 7D 01 7F 60 02 7C  .}}..&#x60;.|
+00000020: 7C 01 7F 60 00 00 60 00  |..&#x60;..&#x60;.
+00000028: 01 7F 60 00 01 7E 60 00  ..&#x60;..~&#x60;.
+00000030: 01 7D 60 00 01 7C 60 02  .}&#x60;..|&#x60;.
+00000038: 7F 7F 00 60 02 7E 7E 00  ...&#x60;.~~.
+00000040: 60 02 7D 7D 00 60 02 7C  &#x60;.}}.&#x60;.|
+00000048: 7C 00 03 84 01 82 01 00  |.......
+00000050: 00 01 01 02 02 03 03 04  ........
+00000058: 04 05 05 05 05 05 05 06  ........
+00000060: 06 06 05 05 07 07 07 05  ........
+00000068: 05 08 08 08 05 05 09 0A  ........
+00000070: 0B 0C 05 05 05 05 05 05  ........
+00000078: 05 05 05 05 05 05 05 05  ........
+00000080: 05 05 05 05 05 05 05 05  ........
+00000088: 05 05 05 05 05 05 05 05  ........
+00000090: 05 05 05 05 05 05 05 05  ........
+00000098: 05 05 05 05 05 05 05 05  ........
+000000a0: 05 05 05 05 05 05 05 05  ........
+000000a8: 05 05 05 05 05 05 05 05  ........
+000000b0: 05 05 05 05 05 05 05 05  ........
+000000b8: 05 05 05 05 05 05 05 05  ........
+000000c0: 05 05 05 05 05 05 05 05  ........
+000000c8: 05 05 05 05 05 05 05 05  ........
+000000d0: 05 04 05 01 70 01 08 08  ....p...
+000000d8: 05 03 01 00 01 07 AA 08  ........
+000000e0: 5F 07 69 33 32 5F 61 64  _.i32_ad
+000000e8: 64 00 23 07 69 33 32 5F  d.#.i32_
+000000f0: 73 75 62 00 24 07 69 33  sub.$.i3
+000000f8: 32 5F 6D 75 6C 00 25 09  2_mul.%.
+00000100: 69 33 32 5F 64 69 76 5F  i32_div_
+00000108: 73 00 26 09 69 33 32 5F  s.&amp;.i32_
+00000110: 64 69 76 5F 75 00 27 09  div_u.&#x27;.
+00000118: 69 33 32 5F 72 65 6D 5F  i32_rem_
+00000120: 73 00 28 09 69 33 32 5F  s.(.i32_
+00000128: 72 65 6D 5F 75 00 29 07  rem_u.).
+00000130: 69 33 32 5F 61 6E 64 00  i32_and.
+00000138: 2A 06 69 33 32 5F 6F 72  *.i32_or
+00000140: 00 2B 07 69 33 32 5F 78  .+.i32_x
+00000148: 6F 72 00 2C 07 69 33 32  or.,.i32
+00000150: 5F 73 68 6C 00 2D 09 69  _shl.-.i
+00000158: 33 32 5F 73 68 72 5F 75  32_shr_u
+00000160: 00 2E 09 69 33 32 5F 73  ...i32_s
+00000168: 68 72 5F 73 00 2F 06 69  hr_s./.i
+00000170: 33 32 5F 65 71 00 30 06  32_eq.0.
+00000178: 69 33 32 5F 6E 65 00 31  i32_ne.1
+00000180: 08 69 33 32 5F 6C 74 5F  .i32_lt_
+00000188: 73 00 32 08 69 33 32 5F  s.2.i32_
+00000190: 6C 65 5F 73 00 33 08 69  le_s.3.i
+00000198: 33 32 5F 6C 74 5F 75 00  32_lt_u.
+000001a0: 34 08 69 33 32 5F 6C 65  4.i32_le
+000001a8: 5F 75 00 35 08 69 33 32  _u.5.i32
+000001b0: 5F 67 74 5F 73 00 36 08  _gt_s.6.
+000001b8: 69 33 32 5F 67 65 5F 73  i32_ge_s
+000001c0: 00 37 08 69 33 32 5F 67  .7.i32_g
+000001c8: 74 5F 75 00 38 08 69 33  t_u.8.i3
+000001d0: 32 5F 67 65 5F 75 00 39  2_ge_u.9
+000001d8: 09 69 33 32 5F 73 74 6F  .i32_sto
+000001e0: 72 65 00 3A 0A 69 33 32  re.:.i32
+000001e8: 5F 73 74 6F 72 65 38 00  _store8.
+000001f0: 3B 0B 69 33 32 5F 73 74  ;.i32_st
+000001f8: 6F 72 65 31 36 00 3C 08  ore16.&lt;.
+00000200: 69 33 32 5F 63 61 6C 6C  i32_call
+00000208: 00 3D 11 69 33 32 5F 63  .&#x3D;.i32_c
+00000210: 61 6C 6C 5F 69 6E 64 69  all_indi
+00000218: 72 65 63 74 00 3E 0A 69  rect.&gt;.i
+00000220: 33 32 5F 73 65 6C 65 63  32_selec
+00000228: 74 00 3F 07 69 36 34 5F  t.?.i64_
+00000230: 61 64 64 00 40 07 69 36  add.@.i6
+00000238: 34 5F 73 75 62 00 41 07  4_sub.A.
+00000240: 69 36 34 5F 6D 75 6C 00  i64_mul.
+00000248: 42 09 69 36 34 5F 64 69  B.i64_di
+00000250: 76 5F 73 00 43 09 69 36  v_s.C.i6
+00000258: 34 5F 64 69 76 5F 75 00  4_div_u.
+00000260: 44 09 69 36 34 5F 72 65  D.i64_re
+00000268: 6D 5F 73 00 45 09 69 36  m_s.E.i6
+00000270: 34 5F 72 65 6D 5F 75 00  4_rem_u.
+00000278: 46 07 69 36 34 5F 61 6E  F.i64_an
+00000280: 64 00 47 06 69 36 34 5F  d.G.i64_
+00000288: 6F 72 00 48 07 69 36 34  or.H.i64
+00000290: 5F 78 6F 72 00 49 07 69  _xor.I.i
+00000298: 36 34 5F 73 68 6C 00 4A  64_shl.J
+000002a0: 09 69 36 34 5F 73 68 72  .i64_shr
+000002a8: 5F 75 00 4B 09 69 36 34  _u.K.i64
+000002b0: 5F 73 68 72 5F 73 00 4C  _shr_s.L
+000002b8: 06 69 36 34 5F 65 71 00  .i64_eq.
+000002c0: 4D 06 69 36 34 5F 6E 65  M.i64_ne
+000002c8: 00 4E 08 69 36 34 5F 6C  .N.i64_l
+000002d0: 74 5F 73 00 4F 08 69 36  t_s.O.i6
+000002d8: 34 5F 6C 65 5F 73 00 50  4_le_s.P
+000002e0: 08 69 36 34 5F 6C 74 5F  .i64_lt_
+000002e8: 75 00 51 08 69 36 34 5F  u.Q.i64_
+000002f0: 6C 65 5F 75 00 52 08 69  le_u.R.i
+000002f8: 36 34 5F 67 74 5F 73 00  64_gt_s.
+00000300: 53 08 69 36 34 5F 67 65  S.i64_ge
+00000308: 5F 73 00 54 08 69 36 34  _s.T.i64
+00000310: 5F 67 74 5F 75 00 55 08  _gt_u.U.
+00000318: 69 36 34 5F 67 65 5F 75  i64_ge_u
+00000320: 00 56 09 69 36 34 5F 73  .V.i64_s
+00000328: 74 6F 72 65 00 57 0A 69  tore.W.i
+00000330: 36 34 5F 73 74 6F 72 65  64_store
+00000338: 38 00 58 0B 69 36 34 5F  8.X.i64_
+00000340: 73 74 6F 72 65 31 36 00  store16.
+00000348: 59 0B 69 36 34 5F 73 74  Y.i64_st
+00000350: 6F 72 65 33 32 00 5A 08  ore32.Z.
+00000358: 69 36 34 5F 63 61 6C 6C  i64_call
+00000360: 00 5B 11 69 36 34 5F 63  .[.i64_c
+00000368: 61 6C 6C 5F 69 6E 64 69  all_indi
+00000370: 72 65 63 74 00 5C 0A 69  rect.\.i
+00000378: 36 34 5F 73 65 6C 65 63  64_selec
+00000380: 74 00 5D 07 66 33 32 5F  t.].f32_
+00000388: 61 64 64 00 5E 07 66 33  add.^.f3
+00000390: 32 5F 73 75 62 00 5F 07  2_sub._.
+00000398: 66 33 32 5F 6D 75 6C 00  f32_mul.
+000003a0: 60 07 66 33 32 5F 64 69  &#x60;.f32_di
+000003a8: 76 00 61 0C 66 33 32 5F  v.a.f32_
+000003b0: 63 6F 70 79 73 69 67 6E  copysign
+000003b8: 00 62 06 66 33 32 5F 65  .b.f32_e
+000003c0: 71 00 63 06 66 33 32 5F  q.c.f32_
+000003c8: 6E 65 00 64 06 66 33 32  ne.d.f32
+000003d0: 5F 6C 74 00 65 06 66 33  _lt.e.f3
+000003d8: 32 5F 6C 65 00 66 06 66  2_le.f.f
+000003e0: 33 32 5F 67 74 00 67 06  32_gt.g.
+000003e8: 66 33 32 5F 67 65 00 68  f32_ge.h
+000003f0: 07 66 33 32 5F 6D 69 6E  .f32_min
+000003f8: 00 69 07 66 33 32 5F 6D  .i.f32_m
+00000400: 61 78 00 6A 09 66 33 32  ax.j.f32
+00000408: 5F 73 74 6F 72 65 00 6B  _store.k
+00000410: 08 66 33 32 5F 63 61 6C  .f32_cal
+00000418: 6C 00 6C 11 66 33 32 5F  l.l.f32_
+00000420: 63 61 6C 6C 5F 69 6E 64  call_ind
+00000428: 69 72 65 63 74 00 6D 0A  irect.m.
+00000430: 66 33 32 5F 73 65 6C 65  f32_sele
+00000438: 63 74 00 6E 07 66 36 34  ct.n.f64
+00000440: 5F 61 64 64 00 6F 07 66  _add.o.f
+00000448: 36 34 5F 73 75 62 00 70  64_sub.p
+00000450: 07 66 36 34 5F 6D 75 6C  .f64_mul
+00000458: 00 71 07 66 36 34 5F 64  .q.f64_d
+00000460: 69 76 00 72 0C 66 36 34  iv.r.f64
+00000468: 5F 63 6F 70 79 73 69 67  _copysig
+00000470: 6E 00 73 06 66 36 34 5F  n.s.f64_
+00000478: 65 71 00 74 06 66 36 34  eq.t.f64
+00000480: 5F 6E 65 00 75 06 66 36  _ne.u.f6
+00000488: 34 5F 6C 74 00 76 06 66  4_lt.v.f
+00000490: 36 34 5F 6C 65 00 77 06  64_le.w.
+00000498: 66 36 34 5F 67 74 00 78  f64_gt.x
+000004a0: 06 66 36 34 5F 67 65 00  .f64_ge.
+000004a8: 79 07 66 36 34 5F 6D 69  y.f64_mi
+000004b0: 6E 00 7A 07 66 36 34 5F  n.z.f64_
+000004b8: 6D 61 78 00 7B 09 66 36  max.{.f6
+000004c0: 34 5F 73 74 6F 72 65 00  4_store.
+000004c8: 7C 08 66 36 34 5F 63 61  |.f64_ca
+000004d0: 6C 6C 00 7D 11 66 36 34  ll.}.f64
+000004d8: 5F 63 61 6C 6C 5F 69 6E  _call_in
+000004e0: 64 69 72 65 63 74 00 7E  direct.~
+000004e8: 0A 66 36 34 5F 73 65 6C  .f64_sel
+000004f0: 65 63 74 00 7F 05 62 72  ect...br
+000004f8: 5F 69 66 00 80 01 08 62  _if....b
+00000500: 72 5F 74 61 62 6C 65 00  r_table.
+00000508: 81 01 09 0E 01 00 41 00  ......A.
+00000510: 0B 08 00 01 02 03 04 05  ........
+00000518: 06 07 0A AA 0D 82 01 04  ........
+00000520: 00 41 7F 0B 04 00 41 7E  .A....A~
+00000528: 0B 04 00 41 7F 0B 04 00  ...A....
+00000530: 41 7E 0B 04 00 41 7F 0B  A~...A..
+00000538: 04 00 41 7E 0B 04 00 41  ..A~...A
+00000540: 7F 0B 04 00 41 7E 0B 09  ....A~..
+00000548: 00 41 08 41 00 36 02 00  .A.A.6..
+00000550: 0B 27 00 41 0B 41 0A 2D  .&#x27;.A.A.-
+00000558: 00 00 3A 00 00 41 0A 41  ..:..A.A
+00000560: 09 2D 00 00 3A 00 00 41  .-..:..A
+00000568: 09 41 08 2D 00 00 3A 00  .A.-..:.
+00000570: 00 41 08 41 7D 3A 00 00  .A.A}:..
+00000578: 0B 07 00 41 08 28 02 00  ...A.(..
+00000580: 0B 0D 00 10 09 41 08 41  .....A.A
+00000588: 01 3A 00 00 41 00 0B 0D  .:..A...
+00000590: 00 10 09 41 08 41 02 3A  ...A.A.:
+00000598: 00 00 41 01 0B 0D 00 10  ..A.....
+000005a0: 09 41 08 41 03 3A 00 00  .A.A.:..
+000005a8: 41 01 0B 0D 00 10 09 41  A......A
+000005b0: 08 41 04 3A 00 00 41 00  .A.:..A.
+000005b8: 0B 0D 00 10 09 41 08 41  .....A.A
+000005c0: 05 3A 00 00 41 00 0B 0D  .:..A...
+000005c8: 00 10 09 41 08 41 01 3A  ...A.A.:
+000005d0: 00 00 42 00 0B 0D 00 10  ..B.....
+000005d8: 09 41 08 41 02 3A 00 00  .A.A.:..
+000005e0: 42 01 0B 0D 00 10 09 41  B......A
+000005e8: 08 41 03 3A 00 00 42 01  .A.:..B.
+000005f0: 0B 0D 00 10 09 41 08 41  .....A.A
+000005f8: 04 3A 00 00 41 02 0B 0D  .:..A...
+00000600: 00 10 09 41 08 41 05 3A  ...A.A.:
+00000608: 00 00 41 00 0B 10 00 10  ..A.....
+00000610: 09 41 08 41 01 3A 00 00  .A.A.:..
+00000618: 43 00 00 00 00 0B 10 00  C.......
+00000620: 10 09 41 08 41 02 3A 00  ..A.A.:.
+00000628: 00 43 00 00 80 3F 0B 10  .C...?..
+00000630: 00 10 09 41 08 41 03 3A  ...A.A.:
+00000638: 00 00 43 00 00 80 3F 0B  ..C...?.
+00000640: 0D 00 10 09 41 08 41 04  ....A.A.
+00000648: 3A 00 00 41 04 0B 0D 00  :..A....
+00000650: 10 09 41 08 41 05 3A 00  ..A.A.:.
+00000658: 00 41 00 0B 14 00 10 09  .A......
+00000660: 41 08 41 01 3A 00 00 44  A.A.:..D
+00000668: 00 00 00 00 00 00 00 00  ........
+00000670: 0B 14 00 10 09 41 08 41  .....A.A
+00000678: 02 3A 00 00 44 00 00 00  .:..D...
+00000680: 00 00 00 F0 3F 0B 14 00  ....?...
+00000688: 10 09 41 08 41 03 3A 00  ..A.A.:.
+00000690: 00 44 00 00 00 00 00 00  .D......
+00000698: F0 3F 0B 0D 00 10 09 41  .?.....A
+000006a0: 08 41 04 3A 00 00 41 06  .A.:..A.
+000006a8: 0B 0D 00 10 09 41 08 41  .....A.A
+000006b0: 05 3A 00 00 41 00 0B 02  .:..A...
+000006b8: 00 0B 02 00 0B 02 00 0B  ........
+000006c0: 02 00 0B 0C 00 10 08 10  ........
+000006c8: 0B 10 0C 6A 1A 10 0A 0B  ...j....
+000006d0: 0C 00 10 08 10 0B 10 0C  ........
+000006d8: 6B 1A 10 0A 0B 0C 00 10  k.......
+000006e0: 08 10 0B 10 0C 6C 1A 10  .....l..
+000006e8: 0A 0B 0C 00 10 08 10 0B  ........
+000006f0: 10 0C 6D 1A 10 0A 0B 0C  ..m.....
+000006f8: 00 10 08 10 0B 10 0C 6E  .......n
+00000700: 1A 10 0A 0B 0C 00 10 08  ........
+00000708: 10 0B 10 0C 6F 1A 10 0A  ....o...
+00000710: 0B 0C 00 10 08 10 0B 10  ........
+00000718: 0C 70 1A 10 0A 0B 0C 00  .p......
+00000720: 10 08 10 0B 10 0C 71 1A  ......q.
+00000728: 10 0A 0B 0C 00 10 08 10  ........
+00000730: 0B 10 0C 72 1A 10 0A 0B  ...r....
+00000738: 0C 00 10 08 10 0B 10 0C  ........
+00000740: 73 1A 10 0A 0B 0C 00 10  s.......
+00000748: 08 10 0B 10 0C 74 1A 10  .....t..
+00000750: 0A 0B 0C 00 10 08 10 0B  ........
+00000758: 10 0C 76 1A 10 0A 0B 0C  ..v.....
+00000760: 00 10 08 10 0B 10 0C 75  .......u
+00000768: 1A 10 0A 0B 0C 00 10 08  ........
+00000770: 10 0B 10 0C 46 1A 10 0A  ....F...
+00000778: 0B 0C 00 10 08 10 0B 10  ........
+00000780: 0C 47 1A 10 0A 0B 0C 00  .G......
+00000788: 10 08 10 0B 10 0C 48 1A  ......H.
+00000790: 10 0A 0B 0C 00 10 08 10  ........
+00000798: 0B 10 0C 4C 1A 10 0A 0B  ...L....
+000007a0: 0C 00 10 08 10 0B 10 0C  ........
+000007a8: 49 1A 10 0A 0B 0C 00 10  I.......
+000007b0: 08 10 0B 10 0C 4D 1A 10  .....M..
+000007b8: 0A 0B 0C 00 10 08 10 0B  ........
+000007c0: 10 0C 4A 1A 10 0A 0B 0C  ..J.....
+000007c8: 00 10 08 10 0B 10 0C 4E  .......N
+000007d0: 1A 10 0A 0B 0C 00 10 08  ........
+000007d8: 10 0B 10 0C 4B 1A 10 0A  ....K...
+000007e0: 0B 0C 00 10 08 10 0B 10  ........
+000007e8: 0C 4F 1A 10 0A 0B 0D 00  .O......
+000007f0: 10 08 10 0B 10 0C 36 02  ......6.
+000007f8: 00 10 0A 0B 0D 00 10 08  ........
+00000800: 10 0B 10 0C 3A 00 00 10  ....:...
+00000808: 0A 0B 0D 00 10 08 10 0B  ........
+00000810: 10 0C 3B 01 00 10 0A 0B  ..;.....
+00000818: 0C 00 10 08 10 0B 10 0C  ........
+00000820: 10 1F 10 0A 0B 10 00 10  ........
+00000828: 08 10 0B 10 0C 10 0E 11  ........
+00000830: 00 00 1A 10 0A 0B 0E 00  ........
+00000838: 10 08 10 0B 10 0C 10 0F  ........
+00000840: 1B 1A 10 0A 0B 0C 00 10  ........
+00000848: 08 10 10 10 11 7C 1A 10  .....|..
+00000850: 0A 0B 0C 00 10 08 10 10  ........
+00000858: 10 11 7D 1A 10 0A 0B 0C  ..}.....
+00000860: 00 10 08 10 10 10 11 7E  .......~
+00000868: 1A 10 0A 0B 0C 00 10 08  ........
+00000870: 10 10 10 11 7F 1A 10 0A  ........
+00000878: 0B 0C 00 10 08 10 10 10  ........
+00000880: 11 80 1A 10 0A 0B 0C 00  ........
+00000888: 10 08 10 10 10 11 81 1A  ........
+00000890: 10 0A 0B 0C 00 10 08 10  ........
+00000898: 10 10 11 82 1A 10 0A 0B  ........
+000008a0: 0C 00 10 08 10 10 10 11  ........
+000008a8: 83 1A 10 0A 0B 0C 00 10  ........
+000008b0: 08 10 10 10 11 84 1A 10  ........
+000008b8: 0A 0B 0C 00 10 08 10 10  ........
+000008c0: 10 11 85 1A 10 0A 0B 0C  ........
+000008c8: 00 10 08 10 10 10 11 86  ........
+000008d0: 1A 10 0A 0B 0C 00 10 08  ........
+000008d8: 10 10 10 11 88 1A 10 0A  ........
+000008e0: 0B 0C 00 10 08 10 10 10  ........
+000008e8: 11 87 1A 10 0A 0B 0C 00  ........
+000008f0: 10 08 10 10 10 11 51 1A  ......Q.
+000008f8: 10 0A 0B 0C 00 10 08 10  ........
+00000900: 10 10 11 52 1A 10 0A 0B  ...R....
+00000908: 0C 00 10 08 10 10 10 11  ........
+00000910: 53 1A 10 0A 0B 0C 00 10  S.......
+00000918: 08 10 10 10 11 57 1A 10  .....W..
+00000920: 0A 0B 0C 00 10 08 10 10  ........
+00000928: 10 11 54 1A 10 0A 0B 0C  ..T.....
+00000930: 00 10 08 10 10 10 11 58  .......X
+00000938: 1A 10 0A 0B 0C 00 10 08  ........
+00000940: 10 10 10 11 55 1A 10 0A  ....U...
+00000948: 0B 0C 00 10 08 10 10 10  ........
+00000950: 11 59 1A 10 0A 0B 0C 00  .Y......
+00000958: 10 08 10 10 10 11 56 1A  ......V.
+00000960: 10 0A 0B 0C 00 10 08 10  ........
+00000968: 10 10 11 5A 1A 10 0A 0B  ...Z....
+00000970: 0D 00 10 08 10 0B 10 11  ........
+00000978: 37 03 00 10 0A 0B 0D 00  7.......
+00000980: 10 08 10 0B 10 11 3C 00  ......&lt;.
+00000988: 00 10 0A 0B 0D 00 10 08  ........
+00000990: 10 0B 10 11 3D 01 00 10  ....&#x3D;...
+00000998: 0A 0B 0D 00 10 08 10 0B  ........
+000009a0: 10 11 3E 02 00 10 0A 0B  ..&gt;.....
+000009a8: 0C 00 10 08 10 10 10 11  ........
+000009b0: 10 20 10 0A 0B 10 00 10  . ......
+000009b8: 08 10 10 10 11 10 13 11  ........
+000009c0: 01 00 1A 10 0A 0B 0E 00  ........
+000009c8: 10 08 10 10 10 11 10 14  ........
+000009d0: 1B 1A 10 0A 0B 0C 00 10  ........
+000009d8: 08 10 15 10 16 92 1A 10  ........
+000009e0: 0A 0B 0C 00 10 08 10 15  ........
+000009e8: 10 16 93 1A 10 0A 0B 0C  ........
+000009f0: 00 10 08 10 15 10 16 94  ........
+000009f8: 1A 10 0A 0B 0C 00 10 08  ........
+00000a00: 10 15 10 16 95 1A 10 0A  ........
+00000a08: 0B 0C 00 10 08 10 15 10  ........
+00000a10: 16 98 1A 10 0A 0B 0C 00  ........
+00000a18: 10 08 10 15 10 16 5B 1A  ......[.
+00000a20: 10 0A 0B 0C 00 10 08 10  ........
+00000a28: 15 10 16 5C 1A 10 0A 0B  ...\....
+00000a30: 0C 00 10 08 10 15 10 16  ........
+00000a38: 5D 1A 10 0A 0B 0C 00 10  ].......
+00000a40: 08 10 15 10 16 5F 1A 10  ....._..
+00000a48: 0A 0B 0C 00 10 08 10 15  ........
+00000a50: 10 16 5E 1A 10 0A 0B 0C  ..^.....
+00000a58: 00 10 08 10 15 10 16 60  .......&#x60;
+00000a60: 1A 10 0A 0B 0C 00 10 08  ........
+00000a68: 10 15 10 16 96 1A 10 0A  ........
+00000a70: 0B 0C 00 10 08 10 15 10  ........
+00000a78: 16 97 1A 10 0A 0B 0D 00  ........
+00000a80: 10 08 10 0B 10 16 38 02  ......8.
+00000a88: 00 10 0A 0B 0C 00 10 08  ........
+00000a90: 10 15 10 16 10 21 10 0A  .....!..
+00000a98: 0B 10 00 10 08 10 15 10  ........
+00000aa0: 16 10 18 11 02 00 1A 10  ........
+00000aa8: 0A 0B 0E 00 10 08 10 15  ........
+00000ab0: 10 16 10 19 1B 1A 10 0A  ........
+00000ab8: 0B 0C 00 10 08 10 1A 10  ........
+00000ac0: 1B A0 1A 10 0A 0B 0C 00  ........
+00000ac8: 10 08 10 1A 10 1B A1 1A  ........
+00000ad0: 10 0A 0B 0C 00 10 08 10  ........
+00000ad8: 1A 10 1B A2 1A 10 0A 0B  ........
+00000ae0: 0C 00 10 08 10 1A 10 1B  ........
+00000ae8: A3 1A 10 0A 0B 0C 00 10  ........
+00000af0: 08 10 1A 10 1B A6 1A 10  ........
+00000af8: 0A 0B 0C 00 10 08 10 1A  ........
+00000b00: 10 1B 61 1A 10 0A 0B 0C  ..a.....
+00000b08: 00 10 08 10 1A 10 1B 62  .......b
+00000b10: 1A 10 0A 0B 0C 00 10 08  ........
+00000b18: 10 1A 10 1B 63 1A 10 0A  ....c...
+00000b20: 0B 0C 00 10 08 10 1A 10  ........
+00000b28: 1B 65 1A 10 0A 0B 0C 00  .e......
+00000b30: 10 08 10 1A 10 1B 64 1A  ......d.
+00000b38: 10 0A 0B 0C 00 10 08 10  ........
+00000b40: 1A 10 1B 66 1A 10 0A 0B  ...f....
+00000b48: 0C 00 10 08 10 1A 10 1B  ........
+00000b50: A4 1A 10 0A 0B 0C 00 10  ........
+00000b58: 08 10 1A 10 1B A5 1A 10  ........
+00000b60: 0A 0B 0D 00 10 08 10 0B  ........
+00000b68: 10 1B 39 03 00 10 0A 0B  ..9.....
+00000b70: 0C 00 10 08 10 1A 10 1B  ........
+00000b78: 10 22 10 0A 0B 10 00 10  .&quot;......
+00000b80: 08 10 1A 10 1B 10 1D 11  ........
+00000b88: 03 00 1A 10 0A 0B 0E 00  ........
+00000b90: 10 08 10 1A 10 1B 10 1E  ........
+00000b98: 1B 1A 10 0A 0B 13 00 02  ........
+00000ba0: 7F 10 08 10 0B 10 0C 41  .......A
+00000ba8: 00 71 0D 00 1A 10 0A 0B  .q......
+00000bb0: 0B 15 00 02 7F 10 08 02  ........
+00000bb8: 7F 10 0B 10 0C 0E 01 01  ........
+00000bc0: 00 0B 1A 10 0A 0B 0B     .......
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2"><code>(module
+  (type (;0;) (func (param i32 i32) (result i32)))
+  (type (;1;) (func (param i64 i64) (result i32)))
+  (type (;2;) (func (param f32 f32) (result i32)))
+  (type (;3;) (func (param f64 f64) (result i32)))
+  (type (;4;) (func))
+  (type (;5;) (func (result i32)))
+  (type (;6;) (func (result i64)))
+  (type (;7;) (func (result f32)))
+  (type (;8;) (func (result f64)))
+  (type (;9;) (func (param i32 i32)))
+  (type (;10;) (func (param i64 i64)))
+  (type (;11;) (func (param f32 f32)))
+  (type (;12;) (func (param f64 f64)))
+  (func (;0;) (type 0) (param i32 i32) (result i32)
+    i32.const -1)
+  (func (;1;) (type 0) (param i32 i32) (result i32)
+    i32.const -2)
+  (func (;2;) (type 1) (param i64 i64) (result i32)
+    i32.const -1)
+  (func (;3;) (type 1) (param i64 i64) (result i32)
+    i32.const -2)
+  (func (;4;) (type 2) (param f32 f32) (result i32)
+    i32.const -1)
+  (func (;5;) (type 2) (param f32 f32) (result i32)
+    i32.const -2)
+  (func (;6;) (type 3) (param f64 f64) (result i32)
+    i32.const -1)
+  (func (;7;) (type 3) (param f64 f64) (result i32)
+    i32.const -2)
+  (func (;8;) (type 4)
+    i32.const 8
+    i32.const 0
+    i32.store)
+  (func (;9;) (type 4)
+    i32.const 11
+    i32.const 10
+    i32.load8_u
+    i32.store8
+    i32.const 10
+    i32.const 9
+    i32.load8_u
+    i32.store8
+    i32.const 9
+    i32.const 8
+    i32.load8_u
+    i32.store8
+    i32.const 8
+    i32.const -3
+    i32.store8)
+  (func (;10;) (type 5) (result i32)
+    i32.const 8
+    i32.load)
+  (func (;11;) (type 5) (result i32)
+    call 9
+    i32.const 8
+    i32.const 1
+    i32.store8
+    i32.const 0)
+  (func (;12;) (type 5) (result i32)
+    call 9
+    i32.const 8
+    i32.const 2
+    i32.store8
+    i32.const 1)
+  (func (;13;) (type 5) (result i32)
+    call 9
+    i32.const 8
+    i32.const 3
+    i32.store8
+    i32.const 1)
+  (func (;14;) (type 5) (result i32)
+    call 9
+    i32.const 8
+    i32.const 4
+    i32.store8
+    i32.const 0)
+  (func (;15;) (type 5) (result i32)
+    call 9
+    i32.const 8
+    i32.const 5
+    i32.store8
+    i32.const 0)
+  (func (;16;) (type 6) (result i64)
+    call 9
+    i32.const 8
+    i32.const 1
+    i32.store8
+    i64.const 0)
+  (func (;17;) (type 6) (result i64)
+    call 9
+    i32.const 8
+    i32.const 2
+    i32.store8
+    i64.const 1)
+  (func (;18;) (type 6) (result i64)
+    call 9
+    i32.const 8
+    i32.const 3
+    i32.store8
+    i64.const 1)
+  (func (;19;) (type 5) (result i32)
+    call 9
+    i32.const 8
+    i32.const 4
+    i32.store8
+    i32.const 2)
+  (func (;20;) (type 5) (result i32)
+    call 9
+    i32.const 8
+    i32.const 5
+    i32.store8
+    i32.const 0)
+  (func (;21;) (type 7) (result f32)
+    call 9
+    i32.const 8
+    i32.const 1
+    i32.store8
+    f32.const 0x0p+0 (;&#x3D;0;))
+  (func (;22;) (type 7) (result f32)
+    call 9
+    i32.const 8
+    i32.const 2
+    i32.store8
+    f32.const 0x1p+0 (;&#x3D;1;))
+  (func (;23;) (type 7) (result f32)
+    call 9
+    i32.const 8
+    i32.const 3
+    i32.store8
+    f32.const 0x1p+0 (;&#x3D;1;))
+  (func (;24;) (type 5) (result i32)
+    call 9
+    i32.const 8
+    i32.const 4
+    i32.store8
+    i32.const 4)
+  (func (;25;) (type 5) (result i32)
+    call 9
+    i32.const 8
+    i32.const 5
+    i32.store8
+    i32.const 0)
+  (func (;26;) (type 8) (result f64)
+    call 9
+    i32.const 8
+    i32.const 1
+    i32.store8
+    f64.const 0x0p+0 (;&#x3D;0;))
+  (func (;27;) (type 8) (result f64)
+    call 9
+    i32.const 8
+    i32.const 2
+    i32.store8
+    f64.const 0x1p+0 (;&#x3D;1;))
+  (func (;28;) (type 8) (result f64)
+    call 9
+    i32.const 8
+    i32.const 3
+    i32.store8
+    f64.const 0x1p+0 (;&#x3D;1;))
+  (func (;29;) (type 5) (result i32)
+    call 9
+    i32.const 8
+    i32.const 4
+    i32.store8
+    i32.const 6)
+  (func (;30;) (type 5) (result i32)
+    call 9
+    i32.const 8
+    i32.const 5
+    i32.store8
+    i32.const 0)
+  (func (;31;) (type 9) (param i32 i32))
+  (func (;32;) (type 10) (param i64 i64))
+  (func (;33;) (type 11) (param f32 f32))
+  (func (;34;) (type 12) (param f64 f64))
+  (func (;35;) (type 5) (result i32)
+    call 8
+    call 11
+    call 12
+    i32.add
+    drop
+    call 10)
+  (func (;36;) (type 5) (result i32)
+    call 8
+    call 11
+    call 12
+    i32.sub
+    drop
+    call 10)
+  (func (;37;) (type 5) (result i32)
+    call 8
+    call 11
+    call 12
+    i32.mul
+    drop
+    call 10)
+  (func (;38;) (type 5) (result i32)
+    call 8
+    call 11
+    call 12
+    i32.div_s
+    drop
+    call 10)
+  (func (;39;) (type 5) (result i32)
+    call 8
+    call 11
+    call 12
+    i32.div_u
+    drop
+    call 10)
+  (func (;40;) (type 5) (result i32)
+    call 8
+    call 11
+    call 12
+    i32.rem_s
+    drop
+    call 10)
+  (func (;41;) (type 5) (result i32)
+    call 8
+    call 11
+    call 12
+    i32.rem_u
+    drop
+    call 10)
+  (func (;42;) (type 5) (result i32)
+    call 8
+    call 11
+    call 12
+    i32.and
+    drop
+    call 10)
+  (func (;43;) (type 5) (result i32)
+    call 8
+    call 11
+    call 12
+    i32.or
+    drop
+    call 10)
+  (func (;44;) (type 5) (result i32)
+    call 8
+    call 11
+    call 12
+    i32.xor
+    drop
+    call 10)
+  (func (;45;) (type 5) (result i32)
+    call 8
+    call 11
+    call 12
+    i32.shl
+    drop
+    call 10)
+  (func (;46;) (type 5) (result i32)
+    call 8
+    call 11
+    call 12
+    i32.shr_u
+    drop
+    call 10)
+  (func (;47;) (type 5) (result i32)
+    call 8
+    call 11
+    call 12
+    i32.shr_s
+    drop
+    call 10)
+  (func (;48;) (type 5) (result i32)
+    call 8
+    call 11
+    call 12
+    i32.eq
+    drop
+    call 10)
+  (func (;49;) (type 5) (result i32)
+    call 8
+    call 11
+    call 12
+    i32.ne
+    drop
+    call 10)
+  (func (;50;) (type 5) (result i32)
+    call 8
+    call 11
+    call 12
+    i32.lt_s
+    drop
+    call 10)
+  (func (;51;) (type 5) (result i32)
+    call 8
+    call 11
+    call 12
+    i32.le_s
+    drop
+    call 10)
+  (func (;52;) (type 5) (result i32)
+    call 8
+    call 11
+    call 12
+    i32.lt_u
+    drop
+    call 10)
+  (func (;53;) (type 5) (result i32)
+    call 8
+    call 11
+    call 12
+    i32.le_u
+    drop
+    call 10)
+  (func (;54;) (type 5) (result i32)
+    call 8
+    call 11
+    call 12
+    i32.gt_s
+    drop
+    call 10)
+  (func (;55;) (type 5) (result i32)
+    call 8
+    call 11
+    call 12
+    i32.ge_s
+    drop
+    call 10)
+  (func (;56;) (type 5) (result i32)
+    call 8
+    call 11
+    call 12
+    i32.gt_u
+    drop
+    call 10)
+  (func (;57;) (type 5) (result i32)
+    call 8
+    call 11
+    call 12
+    i32.ge_u
+    drop
+    call 10)
+  (func (;58;) (type 5) (result i32)
+    call 8
+    call 11
+    call 12
+    i32.store
+    call 10)
+  (func (;59;) (type 5) (result i32)
+    call 8
+    call 11
+    call 12
+    i32.store8
+    call 10)
+  (func (;60;) (type 5) (result i32)
+    call 8
+    call 11
+    call 12
+    i32.store16
+    call 10)
+  (func (;61;) (type 5) (result i32)
+    call 8
+    call 11
+    call 12
+    call 31
+    call 10)
+  (func (;62;) (type 5) (result i32)
+    call 8
+    call 11
+    call 12
+    call 14
+    call_indirect (type 0)
+    drop
+    call 10)
+  (func (;63;) (type 5) (result i32)
+    call 8
+    call 11
+    call 12
+    call 15
+    select
+    drop
+    call 10)
+  (func (;64;) (type 5) (result i32)
+    call 8
+    call 16
+    call 17
+    i64.add
+    drop
+    call 10)
+  (func (;65;) (type 5) (result i32)
+    call 8
+    call 16
+    call 17
+    i64.sub
+    drop
+    call 10)
+  (func (;66;) (type 5) (result i32)
+    call 8
+    call 16
+    call 17
+    i64.mul
+    drop
+    call 10)
+  (func (;67;) (type 5) (result i32)
+    call 8
+    call 16
+    call 17
+    i64.div_s
+    drop
+    call 10)
+  (func (;68;) (type 5) (result i32)
+    call 8
+    call 16
+    call 17
+    i64.div_u
+    drop
+    call 10)
+  (func (;69;) (type 5) (result i32)
+    call 8
+    call 16
+    call 17
+    i64.rem_s
+    drop
+    call 10)
+  (func (;70;) (type 5) (result i32)
+    call 8
+    call 16
+    call 17
+    i64.rem_u
+    drop
+    call 10)
+  (func (;71;) (type 5) (result i32)
+    call 8
+    call 16
+    call 17
+    i64.and
+    drop
+    call 10)
+  (func (;72;) (type 5) (result i32)
+    call 8
+    call 16
+    call 17
+    i64.or
+    drop
+    call 10)
+  (func (;73;) (type 5) (result i32)
+    call 8
+    call 16
+    call 17
+    i64.xor
+    drop
+    call 10)
+  (func (;74;) (type 5) (result i32)
+    call 8
+    call 16
+    call 17
+    i64.shl
+    drop
+    call 10)
+  (func (;75;) (type 5) (result i32)
+    call 8
+    call 16
+    call 17
+    i64.shr_u
+    drop
+    call 10)
+  (func (;76;) (type 5) (result i32)
+    call 8
+    call 16
+    call 17
+    i64.shr_s
+    drop
+    call 10)
+  (func (;77;) (type 5) (result i32)
+    call 8
+    call 16
+    call 17
+    i64.eq
+    drop
+    call 10)
+  (func (;78;) (type 5) (result i32)
+    call 8
+    call 16
+    call 17
+    i64.ne
+    drop
+    call 10)
+  (func (;79;) (type 5) (result i32)
+    call 8
+    call 16
+    call 17
+    i64.lt_s
+    drop
+    call 10)
+  (func (;80;) (type 5) (result i32)
+    call 8
+    call 16
+    call 17
+    i64.le_s
+    drop
+    call 10)
+  (func (;81;) (type 5) (result i32)
+    call 8
+    call 16
+    call 17
+    i64.lt_u
+    drop
+    call 10)
+  (func (;82;) (type 5) (result i32)
+    call 8
+    call 16
+    call 17
+    i64.le_u
+    drop
+    call 10)
+  (func (;83;) (type 5) (result i32)
+    call 8
+    call 16
+    call 17
+    i64.gt_s
+    drop
+    call 10)
+  (func (;84;) (type 5) (result i32)
+    call 8
+    call 16
+    call 17
+    i64.ge_s
+    drop
+    call 10)
+  (func (;85;) (type 5) (result i32)
+    call 8
+    call 16
+    call 17
+    i64.gt_u
+    drop
+    call 10)
+  (func (;86;) (type 5) (result i32)
+    call 8
+    call 16
+    call 17
+    i64.ge_u
+    drop
+    call 10)
+  (func (;87;) (type 5) (result i32)
+    call 8
+    call 11
+    call 17
+    i64.store
+    call 10)
+  (func (;88;) (type 5) (result i32)
+    call 8
+    call 11
+    call 17
+    i64.store8
+    call 10)
+  (func (;89;) (type 5) (result i32)
+    call 8
+    call 11
+    call 17
+    i64.store16
+    call 10)
+  (func (;90;) (type 5) (result i32)
+    call 8
+    call 11
+    call 17
+    i64.store32
+    call 10)
+  (func (;91;) (type 5) (result i32)
+    call 8
+    call 16
+    call 17
+    call 32
+    call 10)
+  (func (;92;) (type 5) (result i32)
+    call 8
+    call 16
+    call 17
+    call 19
+    call_indirect (type 1)
+    drop
+    call 10)
+  (func (;93;) (type 5) (result i32)
+    call 8
+    call 16
+    call 17
+    call 20
+    select
+    drop
+    call 10)
+  (func (;94;) (type 5) (result i32)
+    call 8
+    call 21
+    call 22
+    f32.add
+    drop
+    call 10)
+  (func (;95;) (type 5) (result i32)
+    call 8
+    call 21
+    call 22
+    f32.sub
+    drop
+    call 10)
+  (func (;96;) (type 5) (result i32)
+    call 8
+    call 21
+    call 22
+    f32.mul
+    drop
+    call 10)
+  (func (;97;) (type 5) (result i32)
+    call 8
+    call 21
+    call 22
+    f32.div
+    drop
+    call 10)
+  (func (;98;) (type 5) (result i32)
+    call 8
+    call 21
+    call 22
+    f32.copysign
+    drop
+    call 10)
+  (func (;99;) (type 5) (result i32)
+    call 8
+    call 21
+    call 22
+    f32.eq
+    drop
+    call 10)
+  (func (;100;) (type 5) (result i32)
+    call 8
+    call 21
+    call 22
+    f32.ne
+    drop
+    call 10)
+  (func (;101;) (type 5) (result i32)
+    call 8
+    call 21
+    call 22
+    f32.lt
+    drop
+    call 10)
+  (func (;102;) (type 5) (result i32)
+    call 8
+    call 21
+    call 22
+    f32.le
+    drop
+    call 10)
+  (func (;103;) (type 5) (result i32)
+    call 8
+    call 21
+    call 22
+    f32.gt
+    drop
+    call 10)
+  (func (;104;) (type 5) (result i32)
+    call 8
+    call 21
+    call 22
+    f32.ge
+    drop
+    call 10)
+  (func (;105;) (type 5) (result i32)
+    call 8
+    call 21
+    call 22
+    f32.min
+    drop
+    call 10)
+  (func (;106;) (type 5) (result i32)
+    call 8
+    call 21
+    call 22
+    f32.max
+    drop
+    call 10)
+  (func (;107;) (type 5) (result i32)
+    call 8
+    call 11
+    call 22
+    f32.store
+    call 10)
+  (func (;108;) (type 5) (result i32)
+    call 8
+    call 21
+    call 22
+    call 33
+    call 10)
+  (func (;109;) (type 5) (result i32)
+    call 8
+    call 21
+    call 22
+    call 24
+    call_indirect (type 2)
+    drop
+    call 10)
+  (func (;110;) (type 5) (result i32)
+    call 8
+    call 21
+    call 22
+    call 25
+    select
+    drop
+    call 10)
+  (func (;111;) (type 5) (result i32)
+    call 8
+    call 26
+    call 27
+    f64.add
+    drop
+    call 10)
+  (func (;112;) (type 5) (result i32)
+    call 8
+    call 26
+    call 27
+    f64.sub
+    drop
+    call 10)
+  (func (;113;) (type 5) (result i32)
+    call 8
+    call 26
+    call 27
+    f64.mul
+    drop
+    call 10)
+  (func (;114;) (type 5) (result i32)
+    call 8
+    call 26
+    call 27
+    f64.div
+    drop
+    call 10)
+  (func (;115;) (type 5) (result i32)
+    call 8
+    call 26
+    call 27
+    f64.copysign
+    drop
+    call 10)
+  (func (;116;) (type 5) (result i32)
+    call 8
+    call 26
+    call 27
+    f64.eq
+    drop
+    call 10)
+  (func (;117;) (type 5) (result i32)
+    call 8
+    call 26
+    call 27
+    f64.ne
+    drop
+    call 10)
+  (func (;118;) (type 5) (result i32)
+    call 8
+    call 26
+    call 27
+    f64.lt
+    drop
+    call 10)
+  (func (;119;) (type 5) (result i32)
+    call 8
+    call 26
+    call 27
+    f64.le
+    drop
+    call 10)
+  (func (;120;) (type 5) (result i32)
+    call 8
+    call 26
+    call 27
+    f64.gt
+    drop
+    call 10)
+  (func (;121;) (type 5) (result i32)
+    call 8
+    call 26
+    call 27
+    f64.ge
+    drop
+    call 10)
+  (func (;122;) (type 5) (result i32)
+    call 8
+    call 26
+    call 27
+    f64.min
+    drop
+    call 10)
+  (func (;123;) (type 5) (result i32)
+    call 8
+    call 26
+    call 27
+    f64.max
+    drop
+    call 10)
+  (func (;124;) (type 5) (result i32)
+    call 8
+    call 11
+    call 27
+    f64.store
+    call 10)
+  (func (;125;) (type 5) (result i32)
+    call 8
+    call 26
+    call 27
+    call 34
+    call 10)
+  (func (;126;) (type 5) (result i32)
+    call 8
+    call 26
+    call 27
+    call 29
+    call_indirect (type 3)
+    drop
+    call 10)
+  (func (;127;) (type 5) (result i32)
+    call 8
+    call 26
+    call 27
+    call 30
+    select
+    drop
+    call 10)
+  (func (;128;) (type 5) (result i32)
+    block (result i32)  ;; label &#x3D; @1
+      call 8
+      call 11
+      call 12
+      i32.const 0
+      i32.and
+      br_if 0 (;@1;)
+      drop
+      call 10
+    end)
+  (func (;129;) (type 5) (result i32)
+    block (result i32)  ;; label &#x3D; @1
+      call 8
+      block (result i32)  ;; label &#x3D; @2
+        call 11
+        call 12
+        br_table 1 (;@1;) 0 (;@2;)
+      end
+      drop
+      call 10
+    end)
+  (table (;0;) 8 8 funcref)
+  (memory (;0;) 1)
+  (export &quot;i32_add&quot; (func 35))
+  (export &quot;i32_sub&quot; (func 36))
+  (export &quot;i32_mul&quot; (func 37))
+  (export &quot;i32_div_s&quot; (func 38))
+  (export &quot;i32_div_u&quot; (func 39))
+  (export &quot;i32_rem_s&quot; (func 40))
+  (export &quot;i32_rem_u&quot; (func 41))
+  (export &quot;i32_and&quot; (func 42))
+  (export &quot;i32_or&quot; (func 43))
+  (export &quot;i32_xor&quot; (func 44))
+  (export &quot;i32_shl&quot; (func 45))
+  (export &quot;i32_shr_u&quot; (func 46))
+  (export &quot;i32_shr_s&quot; (func 47))
+  (export &quot;i32_eq&quot; (func 48))
+  (export &quot;i32_ne&quot; (func 49))
+  (export &quot;i32_lt_s&quot; (func 50))
+  (export &quot;i32_le_s&quot; (func 51))
+  (export &quot;i32_lt_u&quot; (func 52))
+  (export &quot;i32_le_u&quot; (func 53))
+  (export &quot;i32_gt_s&quot; (func 54))
+  (export &quot;i32_ge_s&quot; (func 55))
+  (export &quot;i32_gt_u&quot; (func 56))
+  (export &quot;i32_ge_u&quot; (func 57))
+  (export &quot;i32_store&quot; (func 58))
+  (export &quot;i32_store8&quot; (func 59))
+  (export &quot;i32_store16&quot; (func 60))
+  (export &quot;i32_call&quot; (func 61))
+  (export &quot;i32_call_indirect&quot; (func 62))
+  (export &quot;i32_select&quot; (func 63))
+  (export &quot;i64_add&quot; (func 64))
+  (export &quot;i64_sub&quot; (func 65))
+  (export &quot;i64_mul&quot; (func 66))
+  (export &quot;i64_div_s&quot; (func 67))
+  (export &quot;i64_div_u&quot; (func 68))
+  (export &quot;i64_rem_s&quot; (func 69))
+  (export &quot;i64_rem_u&quot; (func 70))
+  (export &quot;i64_and&quot; (func 71))
+  (export &quot;i64_or&quot; (func 72))
+  (export &quot;i64_xor&quot; (func 73))
+  (export &quot;i64_shl&quot; (func 74))
+  (export &quot;i64_shr_u&quot; (func 75))
+  (export &quot;i64_shr_s&quot; (func 76))
+  (export &quot;i64_eq&quot; (func 77))
+  (export &quot;i64_ne&quot; (func 78))
+  (export &quot;i64_lt_s&quot; (func 79))
+  (export &quot;i64_le_s&quot; (func 80))
+  (export &quot;i64_lt_u&quot; (func 81))
+  (export &quot;i64_le_u&quot; (func 82))
+  (export &quot;i64_gt_s&quot; (func 83))
+  (export &quot;i64_ge_s&quot; (func 84))
+  (export &quot;i64_gt_u&quot; (func 85))
+  (export &quot;i64_ge_u&quot; (func 86))
+  (export &quot;i64_store&quot; (func 87))
+  (export &quot;i64_store8&quot; (func 88))
+  (export &quot;i64_store16&quot; (func 89))
+  (export &quot;i64_store32&quot; (func 90))
+  (export &quot;i64_call&quot; (func 91))
+  (export &quot;i64_call_indirect&quot; (func 92))
+  (export &quot;i64_select&quot; (func 93))
+  (export &quot;f32_add&quot; (func 94))
+  (export &quot;f32_sub&quot; (func 95))
+  (export &quot;f32_mul&quot; (func 96))
+  (export &quot;f32_div&quot; (func 97))
+  (export &quot;f32_copysign&quot; (func 98))
+  (export &quot;f32_eq&quot; (func 99))
+  (export &quot;f32_ne&quot; (func 100))
+  (export &quot;f32_lt&quot; (func 101))
+  (export &quot;f32_le&quot; (func 102))
+  (export &quot;f32_gt&quot; (func 103))
+  (export &quot;f32_ge&quot; (func 104))
+  (export &quot;f32_min&quot; (func 105))
+  (export &quot;f32_max&quot; (func 106))
+  (export &quot;f32_store&quot; (func 107))
+  (export &quot;f32_call&quot; (func 108))
+  (export &quot;f32_call_indirect&quot; (func 109))
+  (export &quot;f32_select&quot; (func 110))
+  (export &quot;f64_add&quot; (func 111))
+  (export &quot;f64_sub&quot; (func 112))
+  (export &quot;f64_mul&quot; (func 113))
+  (export &quot;f64_div&quot; (func 114))
+  (export &quot;f64_copysign&quot; (func 115))
+  (export &quot;f64_eq&quot; (func 116))
+  (export &quot;f64_ne&quot; (func 117))
+  (export &quot;f64_lt&quot; (func 118))
+  (export &quot;f64_le&quot; (func 119))
+  (export &quot;f64_gt&quot; (func 120))
+  (export &quot;f64_ge&quot; (func 121))
+  (export &quot;f64_min&quot; (func 122))
+  (export &quot;f64_max&quot; (func 123))
+  (export &quot;f64_store&quot; (func 124))
+  (export &quot;f64_call&quot; (func 125))
+  (export &quot;f64_call_indirect&quot; (func 126))
+  (export &quot;f64_select&quot; (func 127))
+  (export &quot;br_if&quot; (func 128))
+  (export &quot;br_table&quot; (func 129))
+  (elem (;0;) (i32.const 0) func 0 1 2 3 4 5 6 7))
+</code></pre>
+    </div>
+</body>
+
+</html>

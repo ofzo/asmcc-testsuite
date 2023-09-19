@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asmcc imports.119</title>
+
+    <link rel="stylesheet" href="//unpkg.com/@highlightjs/cdn-assets@11.7.0/styles/github.min.css">
+    <script src="//unpkg.com/@highlightjs/cdn-assets@11.7.0/highlight.min.js"></script>
+    <script>
+        hljs.configure({
+            noHighlightRe: /^do-not-highlightme$/i,
+        });
+    </script>
+    <script>hljs.highlightAll();</script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="/_vercel/insights/script.js"></script>
+</head>
+
+<body class="text-sm p-2">
+    <h1 class="text-2xl  w-full mb-4">Anaylzer: <a href="/imports.119.wasm">imports.119.wasm</a></h1>
+    <div class="flex justify-evenly">
+        <pre class="p-4 overflow-scroll border-2"><code>
+imports.119.wasm:	file format wasm 0x1
+
+Sections:
+
+   Import start&#x3D;0x0000000a end&#x3D;0x00000022 (size&#x3D;0x00000018) count: 1
+
+Section Details:
+
+Import[1]:
+ - memory[0] pages: initial&#x3D;1 &lt;- spectest.global_i32
+
+Contents of section Import:
+000000a: 0108 7370 6563 7465 7374 0a67 6c6f 6261  ..spectest.globa
+000001a: 6c5f 6933 3202 0001                      l_i32...
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2"><code>BeginModule(version: 1)
+  BeginImportSection(24)
+    OnImportCount(1)
+    OnImport(index: 0, kind: memory, module: &quot;spectest&quot;, field: &quot;global_i32&quot;)
+    OnImportMemory(import_index: 0, memory_index: 0, initial: 1)
+  EndImportSection
+EndModule
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2 do-not-highlightme"><code>00000000: 00 61 73 6D 01 00 00 00  .asm....
+00000008: 02 18 01 08 73 70 65 63  ....spec
+00000010: 74 65 73 74 0A 67 6C 6F  test.glo
+00000018: 62 61 6C 5F 69 33 32 02  bal_i32.
+00000020: 00 01                    ..
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2"><code>(module
+  (import &quot;spectest&quot; &quot;global_i32&quot; (memory (;0;) 1)))
+</code></pre>
+    </div>
+</body>
+
+</html>

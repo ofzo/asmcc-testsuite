@@ -1,0 +1,1152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asmcc simd_i8x16_arith2.26</title>
+
+    <link rel="stylesheet" href="//unpkg.com/@highlightjs/cdn-assets@11.7.0/styles/github.min.css">
+    <script src="//unpkg.com/@highlightjs/cdn-assets@11.7.0/highlight.min.js"></script>
+    <script>
+        hljs.configure({
+            noHighlightRe: /^do-not-highlightme$/i,
+        });
+    </script>
+    <script>hljs.highlightAll();</script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="/_vercel/insights/script.js"></script>
+</head>
+
+<body class="text-sm p-2">
+    <h1 class="text-2xl  w-full mb-4">Anaylzer: <a href="/simd_i8x16_arith2.26.wasm">simd_i8x16_arith2.26.wasm</a></h1>
+    <div class="flex justify-evenly">
+        <pre class="p-4 overflow-scroll border-2"><code>
+simd_i8x16_arith2.26.wasm:	file format wasm 0x1
+
+Sections:
+
+     Type start&#x3D;0x0000000a end&#x3D;0x0000001d (size&#x3D;0x00000013) count: 3
+ Function start&#x3D;0x0000001f end&#x3D;0x00000051 (size&#x3D;0x00000032) count: 49
+   Export start&#x3D;0x00000054 end&#x3D;0x0000054f (size&#x3D;0x000004fb) count: 49
+     Code start&#x3D;0x00000552 end&#x3D;0x00000798 (size&#x3D;0x00000246) count: 49
+
+Section Details:
+
+Type[3]:
+ - type[0] (v128, v128, v128) -&gt; v128
+ - type[1] (v128, v128) -&gt; v128
+ - type[2] (v128) -&gt; v128
+Function[49]:
+ - func[0] sig&#x3D;0 &lt;i8x16.min_s-i8x16.avgr_u&gt;
+ - func[1] sig&#x3D;0 &lt;i8x16.min_s-i8x16.max_u&gt;
+ - func[2] sig&#x3D;0 &lt;i8x16.min_s-i8x16.max_s&gt;
+ - func[3] sig&#x3D;0 &lt;i8x16.min_s-i8x16.min_u&gt;
+ - func[4] sig&#x3D;0 &lt;i8x16.min_s-i8x16.min_s&gt;
+ - func[5] sig&#x3D;1 &lt;i8x16.min_s-i8x16.abs&gt;
+ - func[6] sig&#x3D;1 &lt;i8x16.abs-i8x16.min_s&gt;
+ - func[7] sig&#x3D;1 &lt;i8x16.min_s-i8x16.popcnt&gt;
+ - func[8] sig&#x3D;1 &lt;i8x16.popcnt-i8x16.min_s&gt;
+ - func[9] sig&#x3D;0 &lt;i8x16.min_u-i8x16.avgr_u&gt;
+ - func[10] sig&#x3D;0 &lt;i8x16.min_u-i8x16.max_u&gt;
+ - func[11] sig&#x3D;0 &lt;i8x16.min_u-i8x16.max_s&gt;
+ - func[12] sig&#x3D;0 &lt;i8x16.min_u-i8x16.min_u&gt;
+ - func[13] sig&#x3D;0 &lt;i8x16.min_u-i8x16.min_s&gt;
+ - func[14] sig&#x3D;1 &lt;i8x16.min_u-i8x16.abs&gt;
+ - func[15] sig&#x3D;1 &lt;i8x16.abs-i8x16.min_u&gt;
+ - func[16] sig&#x3D;1 &lt;i8x16.min_u-i8x16.popcnt&gt;
+ - func[17] sig&#x3D;1 &lt;i8x16.popcnt-i8x16.min_u&gt;
+ - func[18] sig&#x3D;0 &lt;i8x16.max_s-i8x16.avgr_u&gt;
+ - func[19] sig&#x3D;0 &lt;i8x16.max_s-i8x16.max_u&gt;
+ - func[20] sig&#x3D;0 &lt;i8x16.max_s-i8x16.max_s&gt;
+ - func[21] sig&#x3D;0 &lt;i8x16.max_s-i8x16.min_u&gt;
+ - func[22] sig&#x3D;0 &lt;i8x16.max_s-i8x16.min_s&gt;
+ - func[23] sig&#x3D;1 &lt;i8x16.max_s-i8x16.abs&gt;
+ - func[24] sig&#x3D;1 &lt;i8x16.abs-i8x16.max_s&gt;
+ - func[25] sig&#x3D;1 &lt;i8x16.max_s-i8x16.popcnt&gt;
+ - func[26] sig&#x3D;1 &lt;i8x16.popcnt-i8x16.max_s&gt;
+ - func[27] sig&#x3D;0 &lt;i8x16.max_u-i8x16.avgr_u&gt;
+ - func[28] sig&#x3D;0 &lt;i8x16.max_u-i8x16.max_u&gt;
+ - func[29] sig&#x3D;0 &lt;i8x16.max_u-i8x16.max_s&gt;
+ - func[30] sig&#x3D;0 &lt;i8x16.max_u-i8x16.min_u&gt;
+ - func[31] sig&#x3D;0 &lt;i8x16.max_u-i8x16.min_s&gt;
+ - func[32] sig&#x3D;1 &lt;i8x16.max_u-i8x16.abs&gt;
+ - func[33] sig&#x3D;1 &lt;i8x16.abs-i8x16.max_u&gt;
+ - func[34] sig&#x3D;1 &lt;i8x16.max_u-i8x16.popcnt&gt;
+ - func[35] sig&#x3D;1 &lt;i8x16.popcnt-i8x16.max_u&gt;
+ - func[36] sig&#x3D;0 &lt;i8x16.avgr_u-i8x16.avgr_u&gt;
+ - func[37] sig&#x3D;0 &lt;i8x16.avgr_u-i8x16.max_u&gt;
+ - func[38] sig&#x3D;0 &lt;i8x16.avgr_u-i8x16.max_s&gt;
+ - func[39] sig&#x3D;0 &lt;i8x16.avgr_u-i8x16.min_u&gt;
+ - func[40] sig&#x3D;0 &lt;i8x16.avgr_u-i8x16.min_s&gt;
+ - func[41] sig&#x3D;1 &lt;i8x16.avgr_u-i8x16.abs&gt;
+ - func[42] sig&#x3D;1 &lt;i8x16.abs-i8x16.avgr_u&gt;
+ - func[43] sig&#x3D;1 &lt;i8x16.avgr_u-i8x16.popcnt&gt;
+ - func[44] sig&#x3D;1 &lt;i8x16.popcnt-i8x16.avgr_u&gt;
+ - func[45] sig&#x3D;2 &lt;i8x16.abs-i8x16.popcnt&gt;
+ - func[46] sig&#x3D;2 &lt;i8x16.abs-i8x16.abs&gt;
+ - func[47] sig&#x3D;2 &lt;i8x16.popcnt-i8x16.popcnt&gt;
+ - func[48] sig&#x3D;2 &lt;i8x16.popcnt-i8x16.abs&gt;
+Export[49]:
+ - func[0] &lt;i8x16.min_s-i8x16.avgr_u&gt; -&gt; &quot;i8x16.min_s-i8x16.avgr_u&quot;
+ - func[1] &lt;i8x16.min_s-i8x16.max_u&gt; -&gt; &quot;i8x16.min_s-i8x16.max_u&quot;
+ - func[2] &lt;i8x16.min_s-i8x16.max_s&gt; -&gt; &quot;i8x16.min_s-i8x16.max_s&quot;
+ - func[3] &lt;i8x16.min_s-i8x16.min_u&gt; -&gt; &quot;i8x16.min_s-i8x16.min_u&quot;
+ - func[4] &lt;i8x16.min_s-i8x16.min_s&gt; -&gt; &quot;i8x16.min_s-i8x16.min_s&quot;
+ - func[5] &lt;i8x16.min_s-i8x16.abs&gt; -&gt; &quot;i8x16.min_s-i8x16.abs&quot;
+ - func[6] &lt;i8x16.abs-i8x16.min_s&gt; -&gt; &quot;i8x16.abs-i8x16.min_s&quot;
+ - func[7] &lt;i8x16.min_s-i8x16.popcnt&gt; -&gt; &quot;i8x16.min_s-i8x16.popcnt&quot;
+ - func[8] &lt;i8x16.popcnt-i8x16.min_s&gt; -&gt; &quot;i8x16.popcnt-i8x16.min_s&quot;
+ - func[9] &lt;i8x16.min_u-i8x16.avgr_u&gt; -&gt; &quot;i8x16.min_u-i8x16.avgr_u&quot;
+ - func[10] &lt;i8x16.min_u-i8x16.max_u&gt; -&gt; &quot;i8x16.min_u-i8x16.max_u&quot;
+ - func[11] &lt;i8x16.min_u-i8x16.max_s&gt; -&gt; &quot;i8x16.min_u-i8x16.max_s&quot;
+ - func[12] &lt;i8x16.min_u-i8x16.min_u&gt; -&gt; &quot;i8x16.min_u-i8x16.min_u&quot;
+ - func[13] &lt;i8x16.min_u-i8x16.min_s&gt; -&gt; &quot;i8x16.min_u-i8x16.min_s&quot;
+ - func[14] &lt;i8x16.min_u-i8x16.abs&gt; -&gt; &quot;i8x16.min_u-i8x16.abs&quot;
+ - func[15] &lt;i8x16.abs-i8x16.min_u&gt; -&gt; &quot;i8x16.abs-i8x16.min_u&quot;
+ - func[16] &lt;i8x16.min_u-i8x16.popcnt&gt; -&gt; &quot;i8x16.min_u-i8x16.popcnt&quot;
+ - func[17] &lt;i8x16.popcnt-i8x16.min_u&gt; -&gt; &quot;i8x16.popcnt-i8x16.min_u&quot;
+ - func[18] &lt;i8x16.max_s-i8x16.avgr_u&gt; -&gt; &quot;i8x16.max_s-i8x16.avgr_u&quot;
+ - func[19] &lt;i8x16.max_s-i8x16.max_u&gt; -&gt; &quot;i8x16.max_s-i8x16.max_u&quot;
+ - func[20] &lt;i8x16.max_s-i8x16.max_s&gt; -&gt; &quot;i8x16.max_s-i8x16.max_s&quot;
+ - func[21] &lt;i8x16.max_s-i8x16.min_u&gt; -&gt; &quot;i8x16.max_s-i8x16.min_u&quot;
+ - func[22] &lt;i8x16.max_s-i8x16.min_s&gt; -&gt; &quot;i8x16.max_s-i8x16.min_s&quot;
+ - func[23] &lt;i8x16.max_s-i8x16.abs&gt; -&gt; &quot;i8x16.max_s-i8x16.abs&quot;
+ - func[24] &lt;i8x16.abs-i8x16.max_s&gt; -&gt; &quot;i8x16.abs-i8x16.max_s&quot;
+ - func[25] &lt;i8x16.max_s-i8x16.popcnt&gt; -&gt; &quot;i8x16.max_s-i8x16.popcnt&quot;
+ - func[26] &lt;i8x16.popcnt-i8x16.max_s&gt; -&gt; &quot;i8x16.popcnt-i8x16.max_s&quot;
+ - func[27] &lt;i8x16.max_u-i8x16.avgr_u&gt; -&gt; &quot;i8x16.max_u-i8x16.avgr_u&quot;
+ - func[28] &lt;i8x16.max_u-i8x16.max_u&gt; -&gt; &quot;i8x16.max_u-i8x16.max_u&quot;
+ - func[29] &lt;i8x16.max_u-i8x16.max_s&gt; -&gt; &quot;i8x16.max_u-i8x16.max_s&quot;
+ - func[30] &lt;i8x16.max_u-i8x16.min_u&gt; -&gt; &quot;i8x16.max_u-i8x16.min_u&quot;
+ - func[31] &lt;i8x16.max_u-i8x16.min_s&gt; -&gt; &quot;i8x16.max_u-i8x16.min_s&quot;
+ - func[32] &lt;i8x16.max_u-i8x16.abs&gt; -&gt; &quot;i8x16.max_u-i8x16.abs&quot;
+ - func[33] &lt;i8x16.abs-i8x16.max_u&gt; -&gt; &quot;i8x16.abs-i8x16.max_u&quot;
+ - func[34] &lt;i8x16.max_u-i8x16.popcnt&gt; -&gt; &quot;i8x16.max_u-i8x16.popcnt&quot;
+ - func[35] &lt;i8x16.popcnt-i8x16.max_u&gt; -&gt; &quot;i8x16.popcnt-i8x16.max_u&quot;
+ - func[36] &lt;i8x16.avgr_u-i8x16.avgr_u&gt; -&gt; &quot;i8x16.avgr_u-i8x16.avgr_u&quot;
+ - func[37] &lt;i8x16.avgr_u-i8x16.max_u&gt; -&gt; &quot;i8x16.avgr_u-i8x16.max_u&quot;
+ - func[38] &lt;i8x16.avgr_u-i8x16.max_s&gt; -&gt; &quot;i8x16.avgr_u-i8x16.max_s&quot;
+ - func[39] &lt;i8x16.avgr_u-i8x16.min_u&gt; -&gt; &quot;i8x16.avgr_u-i8x16.min_u&quot;
+ - func[40] &lt;i8x16.avgr_u-i8x16.min_s&gt; -&gt; &quot;i8x16.avgr_u-i8x16.min_s&quot;
+ - func[41] &lt;i8x16.avgr_u-i8x16.abs&gt; -&gt; &quot;i8x16.avgr_u-i8x16.abs&quot;
+ - func[42] &lt;i8x16.abs-i8x16.avgr_u&gt; -&gt; &quot;i8x16.abs-i8x16.avgr_u&quot;
+ - func[43] &lt;i8x16.avgr_u-i8x16.popcnt&gt; -&gt; &quot;i8x16.avgr_u-i8x16.popcnt&quot;
+ - func[44] &lt;i8x16.popcnt-i8x16.avgr_u&gt; -&gt; &quot;i8x16.popcnt-i8x16.avgr_u&quot;
+ - func[45] &lt;i8x16.abs-i8x16.popcnt&gt; -&gt; &quot;i8x16.abs-i8x16.popcnt&quot;
+ - func[46] &lt;i8x16.abs-i8x16.abs&gt; -&gt; &quot;i8x16.abs-i8x16.abs&quot;
+ - func[47] &lt;i8x16.popcnt-i8x16.popcnt&gt; -&gt; &quot;i8x16.popcnt-i8x16.popcnt&quot;
+ - func[48] &lt;i8x16.popcnt-i8x16.abs&gt; -&gt; &quot;i8x16.popcnt-i8x16.abs&quot;
+Code[49]:
+ - func[0] size&#x3D;12 &lt;i8x16.min_s-i8x16.avgr_u&gt;
+ - func[1] size&#x3D;12 &lt;i8x16.min_s-i8x16.max_u&gt;
+ - func[2] size&#x3D;12 &lt;i8x16.min_s-i8x16.max_s&gt;
+ - func[3] size&#x3D;12 &lt;i8x16.min_s-i8x16.min_u&gt;
+ - func[4] size&#x3D;12 &lt;i8x16.min_s-i8x16.min_s&gt;
+ - func[5] size&#x3D;10 &lt;i8x16.min_s-i8x16.abs&gt;
+ - func[6] size&#x3D;10 &lt;i8x16.abs-i8x16.min_s&gt;
+ - func[7] size&#x3D;10 &lt;i8x16.min_s-i8x16.popcnt&gt;
+ - func[8] size&#x3D;10 &lt;i8x16.popcnt-i8x16.min_s&gt;
+ - func[9] size&#x3D;12 &lt;i8x16.min_u-i8x16.avgr_u&gt;
+ - func[10] size&#x3D;12 &lt;i8x16.min_u-i8x16.max_u&gt;
+ - func[11] size&#x3D;12 &lt;i8x16.min_u-i8x16.max_s&gt;
+ - func[12] size&#x3D;12 &lt;i8x16.min_u-i8x16.min_u&gt;
+ - func[13] size&#x3D;12 &lt;i8x16.min_u-i8x16.min_s&gt;
+ - func[14] size&#x3D;10 &lt;i8x16.min_u-i8x16.abs&gt;
+ - func[15] size&#x3D;10 &lt;i8x16.abs-i8x16.min_u&gt;
+ - func[16] size&#x3D;10 &lt;i8x16.min_u-i8x16.popcnt&gt;
+ - func[17] size&#x3D;10 &lt;i8x16.popcnt-i8x16.min_u&gt;
+ - func[18] size&#x3D;12 &lt;i8x16.max_s-i8x16.avgr_u&gt;
+ - func[19] size&#x3D;12 &lt;i8x16.max_s-i8x16.max_u&gt;
+ - func[20] size&#x3D;12 &lt;i8x16.max_s-i8x16.max_s&gt;
+ - func[21] size&#x3D;12 &lt;i8x16.max_s-i8x16.min_u&gt;
+ - func[22] size&#x3D;12 &lt;i8x16.max_s-i8x16.min_s&gt;
+ - func[23] size&#x3D;10 &lt;i8x16.max_s-i8x16.abs&gt;
+ - func[24] size&#x3D;10 &lt;i8x16.abs-i8x16.max_s&gt;
+ - func[25] size&#x3D;10 &lt;i8x16.max_s-i8x16.popcnt&gt;
+ - func[26] size&#x3D;10 &lt;i8x16.popcnt-i8x16.max_s&gt;
+ - func[27] size&#x3D;12 &lt;i8x16.max_u-i8x16.avgr_u&gt;
+ - func[28] size&#x3D;12 &lt;i8x16.max_u-i8x16.max_u&gt;
+ - func[29] size&#x3D;12 &lt;i8x16.max_u-i8x16.max_s&gt;
+ - func[30] size&#x3D;12 &lt;i8x16.max_u-i8x16.min_u&gt;
+ - func[31] size&#x3D;12 &lt;i8x16.max_u-i8x16.min_s&gt;
+ - func[32] size&#x3D;10 &lt;i8x16.max_u-i8x16.abs&gt;
+ - func[33] size&#x3D;10 &lt;i8x16.abs-i8x16.max_u&gt;
+ - func[34] size&#x3D;10 &lt;i8x16.max_u-i8x16.popcnt&gt;
+ - func[35] size&#x3D;10 &lt;i8x16.popcnt-i8x16.max_u&gt;
+ - func[36] size&#x3D;12 &lt;i8x16.avgr_u-i8x16.avgr_u&gt;
+ - func[37] size&#x3D;12 &lt;i8x16.avgr_u-i8x16.max_u&gt;
+ - func[38] size&#x3D;12 &lt;i8x16.avgr_u-i8x16.max_s&gt;
+ - func[39] size&#x3D;12 &lt;i8x16.avgr_u-i8x16.min_u&gt;
+ - func[40] size&#x3D;12 &lt;i8x16.avgr_u-i8x16.min_s&gt;
+ - func[41] size&#x3D;10 &lt;i8x16.avgr_u-i8x16.abs&gt;
+ - func[42] size&#x3D;10 &lt;i8x16.abs-i8x16.avgr_u&gt;
+ - func[43] size&#x3D;10 &lt;i8x16.avgr_u-i8x16.popcnt&gt;
+ - func[44] size&#x3D;10 &lt;i8x16.popcnt-i8x16.avgr_u&gt;
+ - func[45] size&#x3D;8 &lt;i8x16.abs-i8x16.popcnt&gt;
+ - func[46] size&#x3D;8 &lt;i8x16.abs-i8x16.abs&gt;
+ - func[47] size&#x3D;8 &lt;i8x16.popcnt-i8x16.popcnt&gt;
+ - func[48] size&#x3D;8 &lt;i8x16.popcnt-i8x16.abs&gt;
+
+Contents of section Type:
+000000a: 0360 037b 7b7b 017b 6002 7b7b 017b 6001  .&#x60;.{{{.{&#x60;.{{.{&#x60;.
+000001a: 7b01 7b                                  {.{
+
+Contents of section Function:
+000001f: 3100 0000 0000 0101 0101 0000 0000 0001  1...............
+000002f: 0101 0100 0000 0000 0101 0101 0000 0000  ................
+000003f: 0001 0101 0100 0000 0000 0101 0101 0202  ................
+000004f: 0202                                     ..
+
+Contents of section Export:
+0000054: 3118 6938 7831 362e 6d69 6e5f 732d 6938  1.i8x16.min_s-i8
+0000064: 7831 362e 6176 6772 5f75 0000 1769 3878  x16.avgr_u...i8x
+0000074: 3136 2e6d 696e 5f73 2d69 3878 3136 2e6d  16.min_s-i8x16.m
+0000084: 6178 5f75 0001 1769 3878 3136 2e6d 696e  ax_u...i8x16.min
+0000094: 5f73 2d69 3878 3136 2e6d 6178 5f73 0002  _s-i8x16.max_s..
+00000a4: 1769 3878 3136 2e6d 696e 5f73 2d69 3878  .i8x16.min_s-i8x
+00000b4: 3136 2e6d 696e 5f75 0003 1769 3878 3136  16.min_u...i8x16
+00000c4: 2e6d 696e 5f73 2d69 3878 3136 2e6d 696e  .min_s-i8x16.min
+00000d4: 5f73 0004 1569 3878 3136 2e6d 696e 5f73  _s...i8x16.min_s
+00000e4: 2d69 3878 3136 2e61 6273 0005 1569 3878  -i8x16.abs...i8x
+00000f4: 3136 2e61 6273 2d69 3878 3136 2e6d 696e  16.abs-i8x16.min
+0000104: 5f73 0006 1869 3878 3136 2e6d 696e 5f73  _s...i8x16.min_s
+0000114: 2d69 3878 3136 2e70 6f70 636e 7400 0718  -i8x16.popcnt...
+0000124: 6938 7831 362e 706f 7063 6e74 2d69 3878  i8x16.popcnt-i8x
+0000134: 3136 2e6d 696e 5f73 0008 1869 3878 3136  16.min_s...i8x16
+0000144: 2e6d 696e 5f75 2d69 3878 3136 2e61 7667  .min_u-i8x16.avg
+0000154: 725f 7500 0917 6938 7831 362e 6d69 6e5f  r_u...i8x16.min_
+0000164: 752d 6938 7831 362e 6d61 785f 7500 0a17  u-i8x16.max_u...
+0000174: 6938 7831 362e 6d69 6e5f 752d 6938 7831  i8x16.min_u-i8x1
+0000184: 362e 6d61 785f 7300 0b17 6938 7831 362e  6.max_s...i8x16.
+0000194: 6d69 6e5f 752d 6938 7831 362e 6d69 6e5f  min_u-i8x16.min_
+00001a4: 7500 0c17 6938 7831 362e 6d69 6e5f 752d  u...i8x16.min_u-
+00001b4: 6938 7831 362e 6d69 6e5f 7300 0d15 6938  i8x16.min_s...i8
+00001c4: 7831 362e 6d69 6e5f 752d 6938 7831 362e  x16.min_u-i8x16.
+00001d4: 6162 7300 0e15 6938 7831 362e 6162 732d  abs...i8x16.abs-
+00001e4: 6938 7831 362e 6d69 6e5f 7500 0f18 6938  i8x16.min_u...i8
+00001f4: 7831 362e 6d69 6e5f 752d 6938 7831 362e  x16.min_u-i8x16.
+0000204: 706f 7063 6e74 0010 1869 3878 3136 2e70  popcnt...i8x16.p
+0000214: 6f70 636e 742d 6938 7831 362e 6d69 6e5f  opcnt-i8x16.min_
+0000224: 7500 1118 6938 7831 362e 6d61 785f 732d  u...i8x16.max_s-
+0000234: 6938 7831 362e 6176 6772 5f75 0012 1769  i8x16.avgr_u...i
+0000244: 3878 3136 2e6d 6178 5f73 2d69 3878 3136  8x16.max_s-i8x16
+0000254: 2e6d 6178 5f75 0013 1769 3878 3136 2e6d  .max_u...i8x16.m
+0000264: 6178 5f73 2d69 3878 3136 2e6d 6178 5f73  ax_s-i8x16.max_s
+0000274: 0014 1769 3878 3136 2e6d 6178 5f73 2d69  ...i8x16.max_s-i
+0000284: 3878 3136 2e6d 696e 5f75 0015 1769 3878  8x16.min_u...i8x
+0000294: 3136 2e6d 6178 5f73 2d69 3878 3136 2e6d  16.max_s-i8x16.m
+00002a4: 696e 5f73 0016 1569 3878 3136 2e6d 6178  in_s...i8x16.max
+00002b4: 5f73 2d69 3878 3136 2e61 6273 0017 1569  _s-i8x16.abs...i
+00002c4: 3878 3136 2e61 6273 2d69 3878 3136 2e6d  8x16.abs-i8x16.m
+00002d4: 6178 5f73 0018 1869 3878 3136 2e6d 6178  ax_s...i8x16.max
+00002e4: 5f73 2d69 3878 3136 2e70 6f70 636e 7400  _s-i8x16.popcnt.
+00002f4: 1918 6938 7831 362e 706f 7063 6e74 2d69  ..i8x16.popcnt-i
+0000304: 3878 3136 2e6d 6178 5f73 001a 1869 3878  8x16.max_s...i8x
+0000314: 3136 2e6d 6178 5f75 2d69 3878 3136 2e61  16.max_u-i8x16.a
+0000324: 7667 725f 7500 1b17 6938 7831 362e 6d61  vgr_u...i8x16.ma
+0000334: 785f 752d 6938 7831 362e 6d61 785f 7500  x_u-i8x16.max_u.
+0000344: 1c17 6938 7831 362e 6d61 785f 752d 6938  ..i8x16.max_u-i8
+0000354: 7831 362e 6d61 785f 7300 1d17 6938 7831  x16.max_s...i8x1
+0000364: 362e 6d61 785f 752d 6938 7831 362e 6d69  6.max_u-i8x16.mi
+0000374: 6e5f 7500 1e17 6938 7831 362e 6d61 785f  n_u...i8x16.max_
+0000384: 752d 6938 7831 362e 6d69 6e5f 7300 1f15  u-i8x16.min_s...
+0000394: 6938 7831 362e 6d61 785f 752d 6938 7831  i8x16.max_u-i8x1
+00003a4: 362e 6162 7300 2015 6938 7831 362e 6162  6.abs. .i8x16.ab
+00003b4: 732d 6938 7831 362e 6d61 785f 7500 2118  s-i8x16.max_u.!.
+00003c4: 6938 7831 362e 6d61 785f 752d 6938 7831  i8x16.max_u-i8x1
+00003d4: 362e 706f 7063 6e74 0022 1869 3878 3136  6.popcnt.&quot;.i8x16
+00003e4: 2e70 6f70 636e 742d 6938 7831 362e 6d61  .popcnt-i8x16.ma
+00003f4: 785f 7500 2319 6938 7831 362e 6176 6772  x_u.#.i8x16.avgr
+0000404: 5f75 2d69 3878 3136 2e61 7667 725f 7500  _u-i8x16.avgr_u.
+0000414: 2418 6938 7831 362e 6176 6772 5f75 2d69  $.i8x16.avgr_u-i
+0000424: 3878 3136 2e6d 6178 5f75 0025 1869 3878  8x16.max_u.%.i8x
+0000434: 3136 2e61 7667 725f 752d 6938 7831 362e  16.avgr_u-i8x16.
+0000444: 6d61 785f 7300 2618 6938 7831 362e 6176  max_s.&amp;.i8x16.av
+0000454: 6772 5f75 2d69 3878 3136 2e6d 696e 5f75  gr_u-i8x16.min_u
+0000464: 0027 1869 3878 3136 2e61 7667 725f 752d  .&#x27;.i8x16.avgr_u-
+0000474: 6938 7831 362e 6d69 6e5f 7300 2816 6938  i8x16.min_s.(.i8
+0000484: 7831 362e 6176 6772 5f75 2d69 3878 3136  x16.avgr_u-i8x16
+0000494: 2e61 6273 0029 1669 3878 3136 2e61 6273  .abs.).i8x16.abs
+00004a4: 2d69 3878 3136 2e61 7667 725f 7500 2a19  -i8x16.avgr_u.*.
+00004b4: 6938 7831 362e 6176 6772 5f75 2d69 3878  i8x16.avgr_u-i8x
+00004c4: 3136 2e70 6f70 636e 7400 2b19 6938 7831  16.popcnt.+.i8x1
+00004d4: 362e 706f 7063 6e74 2d69 3878 3136 2e61  6.popcnt-i8x16.a
+00004e4: 7667 725f 7500 2c16 6938 7831 362e 6162  vgr_u.,.i8x16.ab
+00004f4: 732d 6938 7831 362e 706f 7063 6e74 002d  s-i8x16.popcnt.-
+0000504: 1369 3878 3136 2e61 6273 2d69 3878 3136  .i8x16.abs-i8x16
+0000514: 2e61 6273 002e 1969 3878 3136 2e70 6f70  .abs...i8x16.pop
+0000524: 636e 742d 6938 7831 362e 706f 7063 6e74  cnt-i8x16.popcnt
+0000534: 002f 1669 3878 3136 2e70 6f70 636e 742d  ./.i8x16.popcnt-
+0000544: 6938 7831 362e 6162 7300 30              i8x16.abs.0
+
+Contents of section Code:
+0000552: 310c 0020 0020 01fd 7b20 02fd 760b 0c00  1.. . ..{ ..v...
+0000562: 2000 2001 fd79 2002 fd76 0b0c 0020 0020   . ..y ..v... . 
+0000572: 01fd 7820 02fd 760b 0c00 2000 2001 fd77  ..x ..v... . ..w
+0000582: 2002 fd76 0b0c 0020 0020 01fd 7620 02fd   ..v... . ..v ..
+0000592: 760b 0a00 2000 fd60 2001 fd76 0b0a 0020  v... ..&#x60; ..v... 
+00005a2: 0020 01fd 76fd 600b 0a00 2000 fd62 2001  . ..v.&#x60;... ..b .
+00005b2: fd76 0b0a 0020 0020 01fd 76fd 620b 0c00  .v... . ..v.b...
+00005c2: 2000 2001 fd7b 2002 fd77 0b0c 0020 0020   . ..{ ..w... . 
+00005d2: 01fd 7920 02fd 770b 0c00 2000 2001 fd78  ..y ..w... . ..x
+00005e2: 2002 fd77 0b0c 0020 0020 01fd 7720 02fd   ..w... . ..w ..
+00005f2: 770b 0c00 2000 2001 fd76 2002 fd77 0b0a  w... . ..v ..w..
+0000602: 0020 00fd 6020 01fd 770b 0a00 2000 2001  . ..&#x60; ..w... . .
+0000612: fd77 fd60 0b0a 0020 00fd 6220 01fd 770b  .w.&#x60;... ..b ..w.
+0000622: 0a00 2000 2001 fd77 fd62 0b0c 0020 0020  .. . ..w.b... . 
+0000632: 01fd 7b20 02fd 780b 0c00 2000 2001 fd79  ..{ ..x... . ..y
+0000642: 2002 fd78 0b0c 0020 0020 01fd 7820 02fd   ..x... . ..x ..
+0000652: 780b 0c00 2000 2001 fd77 2002 fd78 0b0c  x... . ..w ..x..
+0000662: 0020 0020 01fd 7620 02fd 780b 0a00 2000  . . ..v ..x... .
+0000672: fd60 2001 fd78 0b0a 0020 0020 01fd 78fd  .&#x60; ..x... . ..x.
+0000682: 600b 0a00 2000 fd62 2001 fd78 0b0a 0020  &#x60;... ..b ..x... 
+0000692: 0020 01fd 78fd 620b 0c00 2000 2001 fd7b  . ..x.b... . ..{
+00006a2: 2002 fd79 0b0c 0020 0020 01fd 7920 02fd   ..y... . ..y ..
+00006b2: 790b 0c00 2000 2001 fd78 2002 fd79 0b0c  y... . ..x ..y..
+00006c2: 0020 0020 01fd 7720 02fd 790b 0c00 2000  . . ..w ..y... .
+00006d2: 2001 fd76 2002 fd79 0b0a 0020 00fd 6020   ..v ..y... ..&#x60; 
+00006e2: 01fd 790b 0a00 2000 2001 fd79 fd60 0b0a  ..y... . ..y.&#x60;..
+00006f2: 0020 00fd 6220 01fd 790b 0a00 2000 2001  . ..b ..y... . .
+0000702: fd79 fd62 0b0c 0020 0020 01fd 7b20 02fd  .y.b... . ..{ ..
+0000712: 7b0b 0c00 2000 2001 fd79 2002 fd7b 0b0c  {... . ..y ..{..
+0000722: 0020 0020 01fd 7820 02fd 7b0b 0c00 2000  . . ..x ..{... .
+0000732: 2001 fd77 2002 fd7b 0b0c 0020 0020 01fd   ..w ..{... . ..
+0000742: 7620 02fd 7b0b 0a00 2000 fd60 2001 fd7b  v ..{... ..&#x60; ..{
+0000752: 0b0a 0020 0020 01fd 7bfd 600b 0a00 2000  ... . ..{.&#x60;... .
+0000762: fd62 2001 fd7b 0b0a 0020 0020 01fd 7bfd  .b ..{... . ..{.
+0000772: 620b 0800 2000 fd62 fd60 0b08 0020 00fd  b... ..b.&#x60;... ..
+0000782: 60fd 600b 0800 2000 fd62 fd62 0b08 0020  &#x60;.&#x60;... ..b.b... 
+0000792: 00fd 60fd 620b                           ..&#x60;.b.
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2"><code>BeginModule(version: 1)
+  BeginTypeSection(19)
+    OnTypeCount(3)
+    OnFuncType(index: 0, params: [v128, v128, v128], results: [v128])
+    OnFuncType(index: 1, params: [v128, v128], results: [v128])
+    OnFuncType(index: 2, params: [v128], results: [v128])
+  EndTypeSection
+  BeginFunctionSection(50)
+    OnFunctionCount(49)
+    OnFunction(index: 0, sig_index: 0)
+    OnFunction(index: 1, sig_index: 0)
+    OnFunction(index: 2, sig_index: 0)
+    OnFunction(index: 3, sig_index: 0)
+    OnFunction(index: 4, sig_index: 0)
+    OnFunction(index: 5, sig_index: 1)
+    OnFunction(index: 6, sig_index: 1)
+    OnFunction(index: 7, sig_index: 1)
+    OnFunction(index: 8, sig_index: 1)
+    OnFunction(index: 9, sig_index: 0)
+    OnFunction(index: 10, sig_index: 0)
+    OnFunction(index: 11, sig_index: 0)
+    OnFunction(index: 12, sig_index: 0)
+    OnFunction(index: 13, sig_index: 0)
+    OnFunction(index: 14, sig_index: 1)
+    OnFunction(index: 15, sig_index: 1)
+    OnFunction(index: 16, sig_index: 1)
+    OnFunction(index: 17, sig_index: 1)
+    OnFunction(index: 18, sig_index: 0)
+    OnFunction(index: 19, sig_index: 0)
+    OnFunction(index: 20, sig_index: 0)
+    OnFunction(index: 21, sig_index: 0)
+    OnFunction(index: 22, sig_index: 0)
+    OnFunction(index: 23, sig_index: 1)
+    OnFunction(index: 24, sig_index: 1)
+    OnFunction(index: 25, sig_index: 1)
+    OnFunction(index: 26, sig_index: 1)
+    OnFunction(index: 27, sig_index: 0)
+    OnFunction(index: 28, sig_index: 0)
+    OnFunction(index: 29, sig_index: 0)
+    OnFunction(index: 30, sig_index: 0)
+    OnFunction(index: 31, sig_index: 0)
+    OnFunction(index: 32, sig_index: 1)
+    OnFunction(index: 33, sig_index: 1)
+    OnFunction(index: 34, sig_index: 1)
+    OnFunction(index: 35, sig_index: 1)
+    OnFunction(index: 36, sig_index: 0)
+    OnFunction(index: 37, sig_index: 0)
+    OnFunction(index: 38, sig_index: 0)
+    OnFunction(index: 39, sig_index: 0)
+    OnFunction(index: 40, sig_index: 0)
+    OnFunction(index: 41, sig_index: 1)
+    OnFunction(index: 42, sig_index: 1)
+    OnFunction(index: 43, sig_index: 1)
+    OnFunction(index: 44, sig_index: 1)
+    OnFunction(index: 45, sig_index: 2)
+    OnFunction(index: 46, sig_index: 2)
+    OnFunction(index: 47, sig_index: 2)
+    OnFunction(index: 48, sig_index: 2)
+  EndFunctionSection
+  BeginExportSection(1275)
+    OnExportCount(49)
+    OnExport(index: 0, kind: func, item_index: 0, name: &quot;i8x16.min_s-i8x16.avgr_u&quot;)
+    OnExport(index: 1, kind: func, item_index: 1, name: &quot;i8x16.min_s-i8x16.max_u&quot;)
+    OnExport(index: 2, kind: func, item_index: 2, name: &quot;i8x16.min_s-i8x16.max_s&quot;)
+    OnExport(index: 3, kind: func, item_index: 3, name: &quot;i8x16.min_s-i8x16.min_u&quot;)
+    OnExport(index: 4, kind: func, item_index: 4, name: &quot;i8x16.min_s-i8x16.min_s&quot;)
+    OnExport(index: 5, kind: func, item_index: 5, name: &quot;i8x16.min_s-i8x16.abs&quot;)
+    OnExport(index: 6, kind: func, item_index: 6, name: &quot;i8x16.abs-i8x16.min_s&quot;)
+    OnExport(index: 7, kind: func, item_index: 7, name: &quot;i8x16.min_s-i8x16.popcnt&quot;)
+    OnExport(index: 8, kind: func, item_index: 8, name: &quot;i8x16.popcnt-i8x16.min_s&quot;)
+    OnExport(index: 9, kind: func, item_index: 9, name: &quot;i8x16.min_u-i8x16.avgr_u&quot;)
+    OnExport(index: 10, kind: func, item_index: 10, name: &quot;i8x16.min_u-i8x16.max_u&quot;)
+    OnExport(index: 11, kind: func, item_index: 11, name: &quot;i8x16.min_u-i8x16.max_s&quot;)
+    OnExport(index: 12, kind: func, item_index: 12, name: &quot;i8x16.min_u-i8x16.min_u&quot;)
+    OnExport(index: 13, kind: func, item_index: 13, name: &quot;i8x16.min_u-i8x16.min_s&quot;)
+    OnExport(index: 14, kind: func, item_index: 14, name: &quot;i8x16.min_u-i8x16.abs&quot;)
+    OnExport(index: 15, kind: func, item_index: 15, name: &quot;i8x16.abs-i8x16.min_u&quot;)
+    OnExport(index: 16, kind: func, item_index: 16, name: &quot;i8x16.min_u-i8x16.popcnt&quot;)
+    OnExport(index: 17, kind: func, item_index: 17, name: &quot;i8x16.popcnt-i8x16.min_u&quot;)
+    OnExport(index: 18, kind: func, item_index: 18, name: &quot;i8x16.max_s-i8x16.avgr_u&quot;)
+    OnExport(index: 19, kind: func, item_index: 19, name: &quot;i8x16.max_s-i8x16.max_u&quot;)
+    OnExport(index: 20, kind: func, item_index: 20, name: &quot;i8x16.max_s-i8x16.max_s&quot;)
+    OnExport(index: 21, kind: func, item_index: 21, name: &quot;i8x16.max_s-i8x16.min_u&quot;)
+    OnExport(index: 22, kind: func, item_index: 22, name: &quot;i8x16.max_s-i8x16.min_s&quot;)
+    OnExport(index: 23, kind: func, item_index: 23, name: &quot;i8x16.max_s-i8x16.abs&quot;)
+    OnExport(index: 24, kind: func, item_index: 24, name: &quot;i8x16.abs-i8x16.max_s&quot;)
+    OnExport(index: 25, kind: func, item_index: 25, name: &quot;i8x16.max_s-i8x16.popcnt&quot;)
+    OnExport(index: 26, kind: func, item_index: 26, name: &quot;i8x16.popcnt-i8x16.max_s&quot;)
+    OnExport(index: 27, kind: func, item_index: 27, name: &quot;i8x16.max_u-i8x16.avgr_u&quot;)
+    OnExport(index: 28, kind: func, item_index: 28, name: &quot;i8x16.max_u-i8x16.max_u&quot;)
+    OnExport(index: 29, kind: func, item_index: 29, name: &quot;i8x16.max_u-i8x16.max_s&quot;)
+    OnExport(index: 30, kind: func, item_index: 30, name: &quot;i8x16.max_u-i8x16.min_u&quot;)
+    OnExport(index: 31, kind: func, item_index: 31, name: &quot;i8x16.max_u-i8x16.min_s&quot;)
+    OnExport(index: 32, kind: func, item_index: 32, name: &quot;i8x16.max_u-i8x16.abs&quot;)
+    OnExport(index: 33, kind: func, item_index: 33, name: &quot;i8x16.abs-i8x16.max_u&quot;)
+    OnExport(index: 34, kind: func, item_index: 34, name: &quot;i8x16.max_u-i8x16.popcnt&quot;)
+    OnExport(index: 35, kind: func, item_index: 35, name: &quot;i8x16.popcnt-i8x16.max_u&quot;)
+    OnExport(index: 36, kind: func, item_index: 36, name: &quot;i8x16.avgr_u-i8x16.avgr_u&quot;)
+    OnExport(index: 37, kind: func, item_index: 37, name: &quot;i8x16.avgr_u-i8x16.max_u&quot;)
+    OnExport(index: 38, kind: func, item_index: 38, name: &quot;i8x16.avgr_u-i8x16.max_s&quot;)
+    OnExport(index: 39, kind: func, item_index: 39, name: &quot;i8x16.avgr_u-i8x16.min_u&quot;)
+    OnExport(index: 40, kind: func, item_index: 40, name: &quot;i8x16.avgr_u-i8x16.min_s&quot;)
+    OnExport(index: 41, kind: func, item_index: 41, name: &quot;i8x16.avgr_u-i8x16.abs&quot;)
+    OnExport(index: 42, kind: func, item_index: 42, name: &quot;i8x16.abs-i8x16.avgr_u&quot;)
+    OnExport(index: 43, kind: func, item_index: 43, name: &quot;i8x16.avgr_u-i8x16.popcnt&quot;)
+    OnExport(index: 44, kind: func, item_index: 44, name: &quot;i8x16.popcnt-i8x16.avgr_u&quot;)
+    OnExport(index: 45, kind: func, item_index: 45, name: &quot;i8x16.abs-i8x16.popcnt&quot;)
+    OnExport(index: 46, kind: func, item_index: 46, name: &quot;i8x16.abs-i8x16.abs&quot;)
+    OnExport(index: 47, kind: func, item_index: 47, name: &quot;i8x16.popcnt-i8x16.popcnt&quot;)
+    OnExport(index: 48, kind: func, item_index: 48, name: &quot;i8x16.popcnt-i8x16.abs&quot;)
+  EndExportSection
+  BeginCodeSection(582)
+    OnFunctionBodyCount(49)
+    BeginFunctionBody(0, size:12)
+    OnLocalDeclCount(0)
+    EndFunctionBody(0)
+    BeginFunctionBody(1, size:12)
+    OnLocalDeclCount(0)
+    EndFunctionBody(1)
+    BeginFunctionBody(2, size:12)
+    OnLocalDeclCount(0)
+    EndFunctionBody(2)
+    BeginFunctionBody(3, size:12)
+    OnLocalDeclCount(0)
+    EndFunctionBody(3)
+    BeginFunctionBody(4, size:12)
+    OnLocalDeclCount(0)
+    EndFunctionBody(4)
+    BeginFunctionBody(5, size:10)
+    OnLocalDeclCount(0)
+    EndFunctionBody(5)
+    BeginFunctionBody(6, size:10)
+    OnLocalDeclCount(0)
+    EndFunctionBody(6)
+    BeginFunctionBody(7, size:10)
+    OnLocalDeclCount(0)
+    EndFunctionBody(7)
+    BeginFunctionBody(8, size:10)
+    OnLocalDeclCount(0)
+    EndFunctionBody(8)
+    BeginFunctionBody(9, size:12)
+    OnLocalDeclCount(0)
+    EndFunctionBody(9)
+    BeginFunctionBody(10, size:12)
+    OnLocalDeclCount(0)
+    EndFunctionBody(10)
+    BeginFunctionBody(11, size:12)
+    OnLocalDeclCount(0)
+    EndFunctionBody(11)
+    BeginFunctionBody(12, size:12)
+    OnLocalDeclCount(0)
+    EndFunctionBody(12)
+    BeginFunctionBody(13, size:12)
+    OnLocalDeclCount(0)
+    EndFunctionBody(13)
+    BeginFunctionBody(14, size:10)
+    OnLocalDeclCount(0)
+    EndFunctionBody(14)
+    BeginFunctionBody(15, size:10)
+    OnLocalDeclCount(0)
+    EndFunctionBody(15)
+    BeginFunctionBody(16, size:10)
+    OnLocalDeclCount(0)
+    EndFunctionBody(16)
+    BeginFunctionBody(17, size:10)
+    OnLocalDeclCount(0)
+    EndFunctionBody(17)
+    BeginFunctionBody(18, size:12)
+    OnLocalDeclCount(0)
+    EndFunctionBody(18)
+    BeginFunctionBody(19, size:12)
+    OnLocalDeclCount(0)
+    EndFunctionBody(19)
+    BeginFunctionBody(20, size:12)
+    OnLocalDeclCount(0)
+    EndFunctionBody(20)
+    BeginFunctionBody(21, size:12)
+    OnLocalDeclCount(0)
+    EndFunctionBody(21)
+    BeginFunctionBody(22, size:12)
+    OnLocalDeclCount(0)
+    EndFunctionBody(22)
+    BeginFunctionBody(23, size:10)
+    OnLocalDeclCount(0)
+    EndFunctionBody(23)
+    BeginFunctionBody(24, size:10)
+    OnLocalDeclCount(0)
+    EndFunctionBody(24)
+    BeginFunctionBody(25, size:10)
+    OnLocalDeclCount(0)
+    EndFunctionBody(25)
+    BeginFunctionBody(26, size:10)
+    OnLocalDeclCount(0)
+    EndFunctionBody(26)
+    BeginFunctionBody(27, size:12)
+    OnLocalDeclCount(0)
+    EndFunctionBody(27)
+    BeginFunctionBody(28, size:12)
+    OnLocalDeclCount(0)
+    EndFunctionBody(28)
+    BeginFunctionBody(29, size:12)
+    OnLocalDeclCount(0)
+    EndFunctionBody(29)
+    BeginFunctionBody(30, size:12)
+    OnLocalDeclCount(0)
+    EndFunctionBody(30)
+    BeginFunctionBody(31, size:12)
+    OnLocalDeclCount(0)
+    EndFunctionBody(31)
+    BeginFunctionBody(32, size:10)
+    OnLocalDeclCount(0)
+    EndFunctionBody(32)
+    BeginFunctionBody(33, size:10)
+    OnLocalDeclCount(0)
+    EndFunctionBody(33)
+    BeginFunctionBody(34, size:10)
+    OnLocalDeclCount(0)
+    EndFunctionBody(34)
+    BeginFunctionBody(35, size:10)
+    OnLocalDeclCount(0)
+    EndFunctionBody(35)
+    BeginFunctionBody(36, size:12)
+    OnLocalDeclCount(0)
+    EndFunctionBody(36)
+    BeginFunctionBody(37, size:12)
+    OnLocalDeclCount(0)
+    EndFunctionBody(37)
+    BeginFunctionBody(38, size:12)
+    OnLocalDeclCount(0)
+    EndFunctionBody(38)
+    BeginFunctionBody(39, size:12)
+    OnLocalDeclCount(0)
+    EndFunctionBody(39)
+    BeginFunctionBody(40, size:12)
+    OnLocalDeclCount(0)
+    EndFunctionBody(40)
+    BeginFunctionBody(41, size:10)
+    OnLocalDeclCount(0)
+    EndFunctionBody(41)
+    BeginFunctionBody(42, size:10)
+    OnLocalDeclCount(0)
+    EndFunctionBody(42)
+    BeginFunctionBody(43, size:10)
+    OnLocalDeclCount(0)
+    EndFunctionBody(43)
+    BeginFunctionBody(44, size:10)
+    OnLocalDeclCount(0)
+    EndFunctionBody(44)
+    BeginFunctionBody(45, size:8)
+    OnLocalDeclCount(0)
+    EndFunctionBody(45)
+    BeginFunctionBody(46, size:8)
+    OnLocalDeclCount(0)
+    EndFunctionBody(46)
+    BeginFunctionBody(47, size:8)
+    OnLocalDeclCount(0)
+    EndFunctionBody(47)
+    BeginFunctionBody(48, size:8)
+    OnLocalDeclCount(0)
+    EndFunctionBody(48)
+  EndCodeSection
+EndModule
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2 do-not-highlightme"><code>00000000: 00 61 73 6D 01 00 00 00  .asm....
+00000008: 01 13 03 60 03 7B 7B 7B  ...&#x60;.{{{
+00000010: 01 7B 60 02 7B 7B 01 7B  .{&#x60;.{{.{
+00000018: 60 01 7B 01 7B 03 32 31  &#x60;.{.{.21
+00000020: 00 00 00 00 00 01 01 01  ........
+00000028: 01 00 00 00 00 00 01 01  ........
+00000030: 01 01 00 00 00 00 00 01  ........
+00000038: 01 01 01 00 00 00 00 00  ........
+00000040: 01 01 01 01 00 00 00 00  ........
+00000048: 00 01 01 01 01 02 02 02  ........
+00000050: 02 07 FB 09 31 18 69 38  ....1.i8
+00000058: 78 31 36 2E 6D 69 6E 5F  x16.min_
+00000060: 73 2D 69 38 78 31 36 2E  s-i8x16.
+00000068: 61 76 67 72 5F 75 00 00  avgr_u..
+00000070: 17 69 38 78 31 36 2E 6D  .i8x16.m
+00000078: 69 6E 5F 73 2D 69 38 78  in_s-i8x
+00000080: 31 36 2E 6D 61 78 5F 75  16.max_u
+00000088: 00 01 17 69 38 78 31 36  ...i8x16
+00000090: 2E 6D 69 6E 5F 73 2D 69  .min_s-i
+00000098: 38 78 31 36 2E 6D 61 78  8x16.max
+000000a0: 5F 73 00 02 17 69 38 78  _s...i8x
+000000a8: 31 36 2E 6D 69 6E 5F 73  16.min_s
+000000b0: 2D 69 38 78 31 36 2E 6D  -i8x16.m
+000000b8: 69 6E 5F 75 00 03 17 69  in_u...i
+000000c0: 38 78 31 36 2E 6D 69 6E  8x16.min
+000000c8: 5F 73 2D 69 38 78 31 36  _s-i8x16
+000000d0: 2E 6D 69 6E 5F 73 00 04  .min_s..
+000000d8: 15 69 38 78 31 36 2E 6D  .i8x16.m
+000000e0: 69 6E 5F 73 2D 69 38 78  in_s-i8x
+000000e8: 31 36 2E 61 62 73 00 05  16.abs..
+000000f0: 15 69 38 78 31 36 2E 61  .i8x16.a
+000000f8: 62 73 2D 69 38 78 31 36  bs-i8x16
+00000100: 2E 6D 69 6E 5F 73 00 06  .min_s..
+00000108: 18 69 38 78 31 36 2E 6D  .i8x16.m
+00000110: 69 6E 5F 73 2D 69 38 78  in_s-i8x
+00000118: 31 36 2E 70 6F 70 63 6E  16.popcn
+00000120: 74 00 07 18 69 38 78 31  t...i8x1
+00000128: 36 2E 70 6F 70 63 6E 74  6.popcnt
+00000130: 2D 69 38 78 31 36 2E 6D  -i8x16.m
+00000138: 69 6E 5F 73 00 08 18 69  in_s...i
+00000140: 38 78 31 36 2E 6D 69 6E  8x16.min
+00000148: 5F 75 2D 69 38 78 31 36  _u-i8x16
+00000150: 2E 61 76 67 72 5F 75 00  .avgr_u.
+00000158: 09 17 69 38 78 31 36 2E  ..i8x16.
+00000160: 6D 69 6E 5F 75 2D 69 38  min_u-i8
+00000168: 78 31 36 2E 6D 61 78 5F  x16.max_
+00000170: 75 00 0A 17 69 38 78 31  u...i8x1
+00000178: 36 2E 6D 69 6E 5F 75 2D  6.min_u-
+00000180: 69 38 78 31 36 2E 6D 61  i8x16.ma
+00000188: 78 5F 73 00 0B 17 69 38  x_s...i8
+00000190: 78 31 36 2E 6D 69 6E 5F  x16.min_
+00000198: 75 2D 69 38 78 31 36 2E  u-i8x16.
+000001a0: 6D 69 6E 5F 75 00 0C 17  min_u...
+000001a8: 69 38 78 31 36 2E 6D 69  i8x16.mi
+000001b0: 6E 5F 75 2D 69 38 78 31  n_u-i8x1
+000001b8: 36 2E 6D 69 6E 5F 73 00  6.min_s.
+000001c0: 0D 15 69 38 78 31 36 2E  ..i8x16.
+000001c8: 6D 69 6E 5F 75 2D 69 38  min_u-i8
+000001d0: 78 31 36 2E 61 62 73 00  x16.abs.
+000001d8: 0E 15 69 38 78 31 36 2E  ..i8x16.
+000001e0: 61 62 73 2D 69 38 78 31  abs-i8x1
+000001e8: 36 2E 6D 69 6E 5F 75 00  6.min_u.
+000001f0: 0F 18 69 38 78 31 36 2E  ..i8x16.
+000001f8: 6D 69 6E 5F 75 2D 69 38  min_u-i8
+00000200: 78 31 36 2E 70 6F 70 63  x16.popc
+00000208: 6E 74 00 10 18 69 38 78  nt...i8x
+00000210: 31 36 2E 70 6F 70 63 6E  16.popcn
+00000218: 74 2D 69 38 78 31 36 2E  t-i8x16.
+00000220: 6D 69 6E 5F 75 00 11 18  min_u...
+00000228: 69 38 78 31 36 2E 6D 61  i8x16.ma
+00000230: 78 5F 73 2D 69 38 78 31  x_s-i8x1
+00000238: 36 2E 61 76 67 72 5F 75  6.avgr_u
+00000240: 00 12 17 69 38 78 31 36  ...i8x16
+00000248: 2E 6D 61 78 5F 73 2D 69  .max_s-i
+00000250: 38 78 31 36 2E 6D 61 78  8x16.max
+00000258: 5F 75 00 13 17 69 38 78  _u...i8x
+00000260: 31 36 2E 6D 61 78 5F 73  16.max_s
+00000268: 2D 69 38 78 31 36 2E 6D  -i8x16.m
+00000270: 61 78 5F 73 00 14 17 69  ax_s...i
+00000278: 38 78 31 36 2E 6D 61 78  8x16.max
+00000280: 5F 73 2D 69 38 78 31 36  _s-i8x16
+00000288: 2E 6D 69 6E 5F 75 00 15  .min_u..
+00000290: 17 69 38 78 31 36 2E 6D  .i8x16.m
+00000298: 61 78 5F 73 2D 69 38 78  ax_s-i8x
+000002a0: 31 36 2E 6D 69 6E 5F 73  16.min_s
+000002a8: 00 16 15 69 38 78 31 36  ...i8x16
+000002b0: 2E 6D 61 78 5F 73 2D 69  .max_s-i
+000002b8: 38 78 31 36 2E 61 62 73  8x16.abs
+000002c0: 00 17 15 69 38 78 31 36  ...i8x16
+000002c8: 2E 61 62 73 2D 69 38 78  .abs-i8x
+000002d0: 31 36 2E 6D 61 78 5F 73  16.max_s
+000002d8: 00 18 18 69 38 78 31 36  ...i8x16
+000002e0: 2E 6D 61 78 5F 73 2D 69  .max_s-i
+000002e8: 38 78 31 36 2E 70 6F 70  8x16.pop
+000002f0: 63 6E 74 00 19 18 69 38  cnt...i8
+000002f8: 78 31 36 2E 70 6F 70 63  x16.popc
+00000300: 6E 74 2D 69 38 78 31 36  nt-i8x16
+00000308: 2E 6D 61 78 5F 73 00 1A  .max_s..
+00000310: 18 69 38 78 31 36 2E 6D  .i8x16.m
+00000318: 61 78 5F 75 2D 69 38 78  ax_u-i8x
+00000320: 31 36 2E 61 76 67 72 5F  16.avgr_
+00000328: 75 00 1B 17 69 38 78 31  u...i8x1
+00000330: 36 2E 6D 61 78 5F 75 2D  6.max_u-
+00000338: 69 38 78 31 36 2E 6D 61  i8x16.ma
+00000340: 78 5F 75 00 1C 17 69 38  x_u...i8
+00000348: 78 31 36 2E 6D 61 78 5F  x16.max_
+00000350: 75 2D 69 38 78 31 36 2E  u-i8x16.
+00000358: 6D 61 78 5F 73 00 1D 17  max_s...
+00000360: 69 38 78 31 36 2E 6D 61  i8x16.ma
+00000368: 78 5F 75 2D 69 38 78 31  x_u-i8x1
+00000370: 36 2E 6D 69 6E 5F 75 00  6.min_u.
+00000378: 1E 17 69 38 78 31 36 2E  ..i8x16.
+00000380: 6D 61 78 5F 75 2D 69 38  max_u-i8
+00000388: 78 31 36 2E 6D 69 6E 5F  x16.min_
+00000390: 73 00 1F 15 69 38 78 31  s...i8x1
+00000398: 36 2E 6D 61 78 5F 75 2D  6.max_u-
+000003a0: 69 38 78 31 36 2E 61 62  i8x16.ab
+000003a8: 73 00 20 15 69 38 78 31  s. .i8x1
+000003b0: 36 2E 61 62 73 2D 69 38  6.abs-i8
+000003b8: 78 31 36 2E 6D 61 78 5F  x16.max_
+000003c0: 75 00 21 18 69 38 78 31  u.!.i8x1
+000003c8: 36 2E 6D 61 78 5F 75 2D  6.max_u-
+000003d0: 69 38 78 31 36 2E 70 6F  i8x16.po
+000003d8: 70 63 6E 74 00 22 18 69  pcnt.&quot;.i
+000003e0: 38 78 31 36 2E 70 6F 70  8x16.pop
+000003e8: 63 6E 74 2D 69 38 78 31  cnt-i8x1
+000003f0: 36 2E 6D 61 78 5F 75 00  6.max_u.
+000003f8: 23 19 69 38 78 31 36 2E  #.i8x16.
+00000400: 61 76 67 72 5F 75 2D 69  avgr_u-i
+00000408: 38 78 31 36 2E 61 76 67  8x16.avg
+00000410: 72 5F 75 00 24 18 69 38  r_u.$.i8
+00000418: 78 31 36 2E 61 76 67 72  x16.avgr
+00000420: 5F 75 2D 69 38 78 31 36  _u-i8x16
+00000428: 2E 6D 61 78 5F 75 00 25  .max_u.%
+00000430: 18 69 38 78 31 36 2E 61  .i8x16.a
+00000438: 76 67 72 5F 75 2D 69 38  vgr_u-i8
+00000440: 78 31 36 2E 6D 61 78 5F  x16.max_
+00000448: 73 00 26 18 69 38 78 31  s.&amp;.i8x1
+00000450: 36 2E 61 76 67 72 5F 75  6.avgr_u
+00000458: 2D 69 38 78 31 36 2E 6D  -i8x16.m
+00000460: 69 6E 5F 75 00 27 18 69  in_u.&#x27;.i
+00000468: 38 78 31 36 2E 61 76 67  8x16.avg
+00000470: 72 5F 75 2D 69 38 78 31  r_u-i8x1
+00000478: 36 2E 6D 69 6E 5F 73 00  6.min_s.
+00000480: 28 16 69 38 78 31 36 2E  (.i8x16.
+00000488: 61 76 67 72 5F 75 2D 69  avgr_u-i
+00000490: 38 78 31 36 2E 61 62 73  8x16.abs
+00000498: 00 29 16 69 38 78 31 36  .).i8x16
+000004a0: 2E 61 62 73 2D 69 38 78  .abs-i8x
+000004a8: 31 36 2E 61 76 67 72 5F  16.avgr_
+000004b0: 75 00 2A 19 69 38 78 31  u.*.i8x1
+000004b8: 36 2E 61 76 67 72 5F 75  6.avgr_u
+000004c0: 2D 69 38 78 31 36 2E 70  -i8x16.p
+000004c8: 6F 70 63 6E 74 00 2B 19  opcnt.+.
+000004d0: 69 38 78 31 36 2E 70 6F  i8x16.po
+000004d8: 70 63 6E 74 2D 69 38 78  pcnt-i8x
+000004e0: 31 36 2E 61 76 67 72 5F  16.avgr_
+000004e8: 75 00 2C 16 69 38 78 31  u.,.i8x1
+000004f0: 36 2E 61 62 73 2D 69 38  6.abs-i8
+000004f8: 78 31 36 2E 70 6F 70 63  x16.popc
+00000500: 6E 74 00 2D 13 69 38 78  nt.-.i8x
+00000508: 31 36 2E 61 62 73 2D 69  16.abs-i
+00000510: 38 78 31 36 2E 61 62 73  8x16.abs
+00000518: 00 2E 19 69 38 78 31 36  ...i8x16
+00000520: 2E 70 6F 70 63 6E 74 2D  .popcnt-
+00000528: 69 38 78 31 36 2E 70 6F  i8x16.po
+00000530: 70 63 6E 74 00 2F 16 69  pcnt./.i
+00000538: 38 78 31 36 2E 70 6F 70  8x16.pop
+00000540: 63 6E 74 2D 69 38 78 31  cnt-i8x1
+00000548: 36 2E 61 62 73 00 30 0A  6.abs.0.
+00000550: C6 04 31 0C 00 20 00 20  ..1.. . 
+00000558: 01 FD 7B 20 02 FD 76 0B  ..{ ..v.
+00000560: 0C 00 20 00 20 01 FD 79  .. . ..y
+00000568: 20 02 FD 76 0B 0C 00 20   ..v... 
+00000570: 00 20 01 FD 78 20 02 FD  . ..x ..
+00000578: 76 0B 0C 00 20 00 20 01  v... . .
+00000580: FD 77 20 02 FD 76 0B 0C  .w ..v..
+00000588: 00 20 00 20 01 FD 76 20  . . ..v 
+00000590: 02 FD 76 0B 0A 00 20 00  ..v... .
+00000598: FD 60 20 01 FD 76 0B 0A  .&#x60; ..v..
+000005a0: 00 20 00 20 01 FD 76 FD  . . ..v.
+000005a8: 60 0B 0A 00 20 00 FD 62  &#x60;... ..b
+000005b0: 20 01 FD 76 0B 0A 00 20   ..v... 
+000005b8: 00 20 01 FD 76 FD 62 0B  . ..v.b.
+000005c0: 0C 00 20 00 20 01 FD 7B  .. . ..{
+000005c8: 20 02 FD 77 0B 0C 00 20   ..w... 
+000005d0: 00 20 01 FD 79 20 02 FD  . ..y ..
+000005d8: 77 0B 0C 00 20 00 20 01  w... . .
+000005e0: FD 78 20 02 FD 77 0B 0C  .x ..w..
+000005e8: 00 20 00 20 01 FD 77 20  . . ..w 
+000005f0: 02 FD 77 0B 0C 00 20 00  ..w... .
+000005f8: 20 01 FD 76 20 02 FD 77   ..v ..w
+00000600: 0B 0A 00 20 00 FD 60 20  ... ..&#x60; 
+00000608: 01 FD 77 0B 0A 00 20 00  ..w... .
+00000610: 20 01 FD 77 FD 60 0B 0A   ..w.&#x60;..
+00000618: 00 20 00 FD 62 20 01 FD  . ..b ..
+00000620: 77 0B 0A 00 20 00 20 01  w... . .
+00000628: FD 77 FD 62 0B 0C 00 20  .w.b... 
+00000630: 00 20 01 FD 7B 20 02 FD  . ..{ ..
+00000638: 78 0B 0C 00 20 00 20 01  x... . .
+00000640: FD 79 20 02 FD 78 0B 0C  .y ..x..
+00000648: 00 20 00 20 01 FD 78 20  . . ..x 
+00000650: 02 FD 78 0B 0C 00 20 00  ..x... .
+00000658: 20 01 FD 77 20 02 FD 78   ..w ..x
+00000660: 0B 0C 00 20 00 20 01 FD  ... . ..
+00000668: 76 20 02 FD 78 0B 0A 00  v ..x...
+00000670: 20 00 FD 60 20 01 FD 78   ..&#x60; ..x
+00000678: 0B 0A 00 20 00 20 01 FD  ... . ..
+00000680: 78 FD 60 0B 0A 00 20 00  x.&#x60;... .
+00000688: FD 62 20 01 FD 78 0B 0A  .b ..x..
+00000690: 00 20 00 20 01 FD 78 FD  . . ..x.
+00000698: 62 0B 0C 00 20 00 20 01  b... . .
+000006a0: FD 7B 20 02 FD 79 0B 0C  .{ ..y..
+000006a8: 00 20 00 20 01 FD 79 20  . . ..y 
+000006b0: 02 FD 79 0B 0C 00 20 00  ..y... .
+000006b8: 20 01 FD 78 20 02 FD 79   ..x ..y
+000006c0: 0B 0C 00 20 00 20 01 FD  ... . ..
+000006c8: 77 20 02 FD 79 0B 0C 00  w ..y...
+000006d0: 20 00 20 01 FD 76 20 02   . ..v .
+000006d8: FD 79 0B 0A 00 20 00 FD  .y... ..
+000006e0: 60 20 01 FD 79 0B 0A 00  &#x60; ..y...
+000006e8: 20 00 20 01 FD 79 FD 60   . ..y.&#x60;
+000006f0: 0B 0A 00 20 00 FD 62 20  ... ..b 
+000006f8: 01 FD 79 0B 0A 00 20 00  ..y... .
+00000700: 20 01 FD 79 FD 62 0B 0C   ..y.b..
+00000708: 00 20 00 20 01 FD 7B 20  . . ..{ 
+00000710: 02 FD 7B 0B 0C 00 20 00  ..{... .
+00000718: 20 01 FD 79 20 02 FD 7B   ..y ..{
+00000720: 0B 0C 00 20 00 20 01 FD  ... . ..
+00000728: 78 20 02 FD 7B 0B 0C 00  x ..{...
+00000730: 20 00 20 01 FD 77 20 02   . ..w .
+00000738: FD 7B 0B 0C 00 20 00 20  .{... . 
+00000740: 01 FD 76 20 02 FD 7B 0B  ..v ..{.
+00000748: 0A 00 20 00 FD 60 20 01  .. ..&#x60; .
+00000750: FD 7B 0B 0A 00 20 00 20  .{... . 
+00000758: 01 FD 7B FD 60 0B 0A 00  ..{.&#x60;...
+00000760: 20 00 FD 62 20 01 FD 7B   ..b ..{
+00000768: 0B 0A 00 20 00 20 01 FD  ... . ..
+00000770: 7B FD 62 0B 08 00 20 00  {.b... .
+00000778: FD 62 FD 60 0B 08 00 20  .b.&#x60;... 
+00000780: 00 FD 60 FD 60 0B 08 00  ..&#x60;.&#x60;...
+00000788: 20 00 FD 62 FD 62 0B 08   ..b.b..
+00000790: 00 20 00 FD 60 FD 62 0B  . ..&#x60;.b.
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2"><code>(module
+  (type (;0;) (func (param v128 v128 v128) (result v128)))
+  (type (;1;) (func (param v128 v128) (result v128)))
+  (type (;2;) (func (param v128) (result v128)))
+  (func (;0;) (type 0) (param v128 v128 v128) (result v128)
+    local.get 0
+    local.get 1
+    i8x16.avgr_u
+    local.get 2
+    i8x16.min_s)
+  (func (;1;) (type 0) (param v128 v128 v128) (result v128)
+    local.get 0
+    local.get 1
+    i8x16.max_u
+    local.get 2
+    i8x16.min_s)
+  (func (;2;) (type 0) (param v128 v128 v128) (result v128)
+    local.get 0
+    local.get 1
+    i8x16.max_s
+    local.get 2
+    i8x16.min_s)
+  (func (;3;) (type 0) (param v128 v128 v128) (result v128)
+    local.get 0
+    local.get 1
+    i8x16.min_u
+    local.get 2
+    i8x16.min_s)
+  (func (;4;) (type 0) (param v128 v128 v128) (result v128)
+    local.get 0
+    local.get 1
+    i8x16.min_s
+    local.get 2
+    i8x16.min_s)
+  (func (;5;) (type 1) (param v128 v128) (result v128)
+    local.get 0
+    i8x16.abs
+    local.get 1
+    i8x16.min_s)
+  (func (;6;) (type 1) (param v128 v128) (result v128)
+    local.get 0
+    local.get 1
+    i8x16.min_s
+    i8x16.abs)
+  (func (;7;) (type 1) (param v128 v128) (result v128)
+    local.get 0
+    i8x16.popcnt
+    local.get 1
+    i8x16.min_s)
+  (func (;8;) (type 1) (param v128 v128) (result v128)
+    local.get 0
+    local.get 1
+    i8x16.min_s
+    i8x16.popcnt)
+  (func (;9;) (type 0) (param v128 v128 v128) (result v128)
+    local.get 0
+    local.get 1
+    i8x16.avgr_u
+    local.get 2
+    i8x16.min_u)
+  (func (;10;) (type 0) (param v128 v128 v128) (result v128)
+    local.get 0
+    local.get 1
+    i8x16.max_u
+    local.get 2
+    i8x16.min_u)
+  (func (;11;) (type 0) (param v128 v128 v128) (result v128)
+    local.get 0
+    local.get 1
+    i8x16.max_s
+    local.get 2
+    i8x16.min_u)
+  (func (;12;) (type 0) (param v128 v128 v128) (result v128)
+    local.get 0
+    local.get 1
+    i8x16.min_u
+    local.get 2
+    i8x16.min_u)
+  (func (;13;) (type 0) (param v128 v128 v128) (result v128)
+    local.get 0
+    local.get 1
+    i8x16.min_s
+    local.get 2
+    i8x16.min_u)
+  (func (;14;) (type 1) (param v128 v128) (result v128)
+    local.get 0
+    i8x16.abs
+    local.get 1
+    i8x16.min_u)
+  (func (;15;) (type 1) (param v128 v128) (result v128)
+    local.get 0
+    local.get 1
+    i8x16.min_u
+    i8x16.abs)
+  (func (;16;) (type 1) (param v128 v128) (result v128)
+    local.get 0
+    i8x16.popcnt
+    local.get 1
+    i8x16.min_u)
+  (func (;17;) (type 1) (param v128 v128) (result v128)
+    local.get 0
+    local.get 1
+    i8x16.min_u
+    i8x16.popcnt)
+  (func (;18;) (type 0) (param v128 v128 v128) (result v128)
+    local.get 0
+    local.get 1
+    i8x16.avgr_u
+    local.get 2
+    i8x16.max_s)
+  (func (;19;) (type 0) (param v128 v128 v128) (result v128)
+    local.get 0
+    local.get 1
+    i8x16.max_u
+    local.get 2
+    i8x16.max_s)
+  (func (;20;) (type 0) (param v128 v128 v128) (result v128)
+    local.get 0
+    local.get 1
+    i8x16.max_s
+    local.get 2
+    i8x16.max_s)
+  (func (;21;) (type 0) (param v128 v128 v128) (result v128)
+    local.get 0
+    local.get 1
+    i8x16.min_u
+    local.get 2
+    i8x16.max_s)
+  (func (;22;) (type 0) (param v128 v128 v128) (result v128)
+    local.get 0
+    local.get 1
+    i8x16.min_s
+    local.get 2
+    i8x16.max_s)
+  (func (;23;) (type 1) (param v128 v128) (result v128)
+    local.get 0
+    i8x16.abs
+    local.get 1
+    i8x16.max_s)
+  (func (;24;) (type 1) (param v128 v128) (result v128)
+    local.get 0
+    local.get 1
+    i8x16.max_s
+    i8x16.abs)
+  (func (;25;) (type 1) (param v128 v128) (result v128)
+    local.get 0
+    i8x16.popcnt
+    local.get 1
+    i8x16.max_s)
+  (func (;26;) (type 1) (param v128 v128) (result v128)
+    local.get 0
+    local.get 1
+    i8x16.max_s
+    i8x16.popcnt)
+  (func (;27;) (type 0) (param v128 v128 v128) (result v128)
+    local.get 0
+    local.get 1
+    i8x16.avgr_u
+    local.get 2
+    i8x16.max_u)
+  (func (;28;) (type 0) (param v128 v128 v128) (result v128)
+    local.get 0
+    local.get 1
+    i8x16.max_u
+    local.get 2
+    i8x16.max_u)
+  (func (;29;) (type 0) (param v128 v128 v128) (result v128)
+    local.get 0
+    local.get 1
+    i8x16.max_s
+    local.get 2
+    i8x16.max_u)
+  (func (;30;) (type 0) (param v128 v128 v128) (result v128)
+    local.get 0
+    local.get 1
+    i8x16.min_u
+    local.get 2
+    i8x16.max_u)
+  (func (;31;) (type 0) (param v128 v128 v128) (result v128)
+    local.get 0
+    local.get 1
+    i8x16.min_s
+    local.get 2
+    i8x16.max_u)
+  (func (;32;) (type 1) (param v128 v128) (result v128)
+    local.get 0
+    i8x16.abs
+    local.get 1
+    i8x16.max_u)
+  (func (;33;) (type 1) (param v128 v128) (result v128)
+    local.get 0
+    local.get 1
+    i8x16.max_u
+    i8x16.abs)
+  (func (;34;) (type 1) (param v128 v128) (result v128)
+    local.get 0
+    i8x16.popcnt
+    local.get 1
+    i8x16.max_u)
+  (func (;35;) (type 1) (param v128 v128) (result v128)
+    local.get 0
+    local.get 1
+    i8x16.max_u
+    i8x16.popcnt)
+  (func (;36;) (type 0) (param v128 v128 v128) (result v128)
+    local.get 0
+    local.get 1
+    i8x16.avgr_u
+    local.get 2
+    i8x16.avgr_u)
+  (func (;37;) (type 0) (param v128 v128 v128) (result v128)
+    local.get 0
+    local.get 1
+    i8x16.max_u
+    local.get 2
+    i8x16.avgr_u)
+  (func (;38;) (type 0) (param v128 v128 v128) (result v128)
+    local.get 0
+    local.get 1
+    i8x16.max_s
+    local.get 2
+    i8x16.avgr_u)
+  (func (;39;) (type 0) (param v128 v128 v128) (result v128)
+    local.get 0
+    local.get 1
+    i8x16.min_u
+    local.get 2
+    i8x16.avgr_u)
+  (func (;40;) (type 0) (param v128 v128 v128) (result v128)
+    local.get 0
+    local.get 1
+    i8x16.min_s
+    local.get 2
+    i8x16.avgr_u)
+  (func (;41;) (type 1) (param v128 v128) (result v128)
+    local.get 0
+    i8x16.abs
+    local.get 1
+    i8x16.avgr_u)
+  (func (;42;) (type 1) (param v128 v128) (result v128)
+    local.get 0
+    local.get 1
+    i8x16.avgr_u
+    i8x16.abs)
+  (func (;43;) (type 1) (param v128 v128) (result v128)
+    local.get 0
+    i8x16.popcnt
+    local.get 1
+    i8x16.avgr_u)
+  (func (;44;) (type 1) (param v128 v128) (result v128)
+    local.get 0
+    local.get 1
+    i8x16.avgr_u
+    i8x16.popcnt)
+  (func (;45;) (type 2) (param v128) (result v128)
+    local.get 0
+    i8x16.popcnt
+    i8x16.abs)
+  (func (;46;) (type 2) (param v128) (result v128)
+    local.get 0
+    i8x16.abs
+    i8x16.abs)
+  (func (;47;) (type 2) (param v128) (result v128)
+    local.get 0
+    i8x16.popcnt
+    i8x16.popcnt)
+  (func (;48;) (type 2) (param v128) (result v128)
+    local.get 0
+    i8x16.abs
+    i8x16.popcnt)
+  (export &quot;i8x16.min_s-i8x16.avgr_u&quot; (func 0))
+  (export &quot;i8x16.min_s-i8x16.max_u&quot; (func 1))
+  (export &quot;i8x16.min_s-i8x16.max_s&quot; (func 2))
+  (export &quot;i8x16.min_s-i8x16.min_u&quot; (func 3))
+  (export &quot;i8x16.min_s-i8x16.min_s&quot; (func 4))
+  (export &quot;i8x16.min_s-i8x16.abs&quot; (func 5))
+  (export &quot;i8x16.abs-i8x16.min_s&quot; (func 6))
+  (export &quot;i8x16.min_s-i8x16.popcnt&quot; (func 7))
+  (export &quot;i8x16.popcnt-i8x16.min_s&quot; (func 8))
+  (export &quot;i8x16.min_u-i8x16.avgr_u&quot; (func 9))
+  (export &quot;i8x16.min_u-i8x16.max_u&quot; (func 10))
+  (export &quot;i8x16.min_u-i8x16.max_s&quot; (func 11))
+  (export &quot;i8x16.min_u-i8x16.min_u&quot; (func 12))
+  (export &quot;i8x16.min_u-i8x16.min_s&quot; (func 13))
+  (export &quot;i8x16.min_u-i8x16.abs&quot; (func 14))
+  (export &quot;i8x16.abs-i8x16.min_u&quot; (func 15))
+  (export &quot;i8x16.min_u-i8x16.popcnt&quot; (func 16))
+  (export &quot;i8x16.popcnt-i8x16.min_u&quot; (func 17))
+  (export &quot;i8x16.max_s-i8x16.avgr_u&quot; (func 18))
+  (export &quot;i8x16.max_s-i8x16.max_u&quot; (func 19))
+  (export &quot;i8x16.max_s-i8x16.max_s&quot; (func 20))
+  (export &quot;i8x16.max_s-i8x16.min_u&quot; (func 21))
+  (export &quot;i8x16.max_s-i8x16.min_s&quot; (func 22))
+  (export &quot;i8x16.max_s-i8x16.abs&quot; (func 23))
+  (export &quot;i8x16.abs-i8x16.max_s&quot; (func 24))
+  (export &quot;i8x16.max_s-i8x16.popcnt&quot; (func 25))
+  (export &quot;i8x16.popcnt-i8x16.max_s&quot; (func 26))
+  (export &quot;i8x16.max_u-i8x16.avgr_u&quot; (func 27))
+  (export &quot;i8x16.max_u-i8x16.max_u&quot; (func 28))
+  (export &quot;i8x16.max_u-i8x16.max_s&quot; (func 29))
+  (export &quot;i8x16.max_u-i8x16.min_u&quot; (func 30))
+  (export &quot;i8x16.max_u-i8x16.min_s&quot; (func 31))
+  (export &quot;i8x16.max_u-i8x16.abs&quot; (func 32))
+  (export &quot;i8x16.abs-i8x16.max_u&quot; (func 33))
+  (export &quot;i8x16.max_u-i8x16.popcnt&quot; (func 34))
+  (export &quot;i8x16.popcnt-i8x16.max_u&quot; (func 35))
+  (export &quot;i8x16.avgr_u-i8x16.avgr_u&quot; (func 36))
+  (export &quot;i8x16.avgr_u-i8x16.max_u&quot; (func 37))
+  (export &quot;i8x16.avgr_u-i8x16.max_s&quot; (func 38))
+  (export &quot;i8x16.avgr_u-i8x16.min_u&quot; (func 39))
+  (export &quot;i8x16.avgr_u-i8x16.min_s&quot; (func 40))
+  (export &quot;i8x16.avgr_u-i8x16.abs&quot; (func 41))
+  (export &quot;i8x16.abs-i8x16.avgr_u&quot; (func 42))
+  (export &quot;i8x16.avgr_u-i8x16.popcnt&quot; (func 43))
+  (export &quot;i8x16.popcnt-i8x16.avgr_u&quot; (func 44))
+  (export &quot;i8x16.abs-i8x16.popcnt&quot; (func 45))
+  (export &quot;i8x16.abs-i8x16.abs&quot; (func 46))
+  (export &quot;i8x16.popcnt-i8x16.popcnt&quot; (func 47))
+  (export &quot;i8x16.popcnt-i8x16.abs&quot; (func 48)))
+</code></pre>
+    </div>
+</body>
+
+</html>

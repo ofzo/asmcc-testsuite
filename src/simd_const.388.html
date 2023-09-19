@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asmcc simd_const.388</title>
+
+    <link rel="stylesheet" href="//unpkg.com/@highlightjs/cdn-assets@11.7.0/styles/github.min.css">
+    <script src="//unpkg.com/@highlightjs/cdn-assets@11.7.0/highlight.min.js"></script>
+    <script>
+        hljs.configure({
+            noHighlightRe: /^do-not-highlightme$/i,
+        });
+    </script>
+    <script>hljs.highlightAll();</script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="/_vercel/insights/script.js"></script>
+</head>
+
+<body class="text-sm p-2">
+    <h1 class="text-2xl  w-full mb-4">Anaylzer: <a href="/simd_const.388.wasm">simd_const.388.wasm</a></h1>
+    <div class="flex justify-evenly">
+        <pre class="p-4 overflow-scroll border-2"><code>
+simd_const.388.wasm:	file format wasm 0x1
+
+Sections:
+
+     Type start&#x3D;0x0000000a end&#x3D;0x0000000f (size&#x3D;0x00000005) count: 1
+ Function start&#x3D;0x00000011 end&#x3D;0x00000028 (size&#x3D;0x00000017) count: 22
+   Export start&#x3D;0x0000002b end&#x3D;0x00000196 (size&#x3D;0x0000016b) count: 22
+     Code start&#x3D;0x00000199 end&#x3D;0x000003a0 (size&#x3D;0x00000207) count: 22
+
+Section Details:
+
+Type[1]:
+ - type[0] () -&gt; v128
+Function[22]:
+ - func[0] sig&#x3D;0 &lt;i32x4.test&gt;
+ - func[1] sig&#x3D;0 &lt;i32x4.smax&gt;
+ - func[2] sig&#x3D;0 &lt;i32x4.neg_smax&gt;
+ - func[3] sig&#x3D;0 &lt;i32x4.inc_smin&gt;
+ - func[4] sig&#x3D;0 &lt;i32x4.neg_zero&gt;
+ - func[5] sig&#x3D;0 &lt;i32x4.not_octal&gt;
+ - func[6] sig&#x3D;0 &lt;i32x4.plus_sign&gt;
+ - func[7] sig&#x3D;0 &lt;i32x4-dec-sep1&gt;
+ - func[8] sig&#x3D;0 &lt;i32x4-dec-sep2&gt;
+ - func[9] sig&#x3D;0 &lt;i32x4-hex-sep1&gt;
+ - func[10] sig&#x3D;0 &lt;i32x4-hex-sep2&gt;
+ - func[11] sig&#x3D;0 &lt;i64x2.test&gt;
+ - func[12] sig&#x3D;0 &lt;i64x2.smax&gt;
+ - func[13] sig&#x3D;0 &lt;i64x2.neg_smax&gt;
+ - func[14] sig&#x3D;0 &lt;i64x2.inc_smin&gt;
+ - func[15] sig&#x3D;0 &lt;i64x2.neg_zero&gt;
+ - func[16] sig&#x3D;0 &lt;i64x2.not_octal&gt;
+ - func[17] sig&#x3D;0 &lt;i64x2.plus_sign&gt;
+ - func[18] sig&#x3D;0 &lt;i64x2-dec-sep1&gt;
+ - func[19] sig&#x3D;0 &lt;i64x2-dec-sep2&gt;
+ - func[20] sig&#x3D;0 &lt;i64x2-hex-sep1&gt;
+ - func[21] sig&#x3D;0 &lt;i64x2-hex-sep2&gt;
+Export[22]:
+ - func[0] &lt;i32x4.test&gt; -&gt; &quot;i32x4.test&quot;
+ - func[1] &lt;i32x4.smax&gt; -&gt; &quot;i32x4.smax&quot;
+ - func[2] &lt;i32x4.neg_smax&gt; -&gt; &quot;i32x4.neg_smax&quot;
+ - func[3] &lt;i32x4.inc_smin&gt; -&gt; &quot;i32x4.inc_smin&quot;
+ - func[4] &lt;i32x4.neg_zero&gt; -&gt; &quot;i32x4.neg_zero&quot;
+ - func[5] &lt;i32x4.not_octal&gt; -&gt; &quot;i32x4.not_octal&quot;
+ - func[6] &lt;i32x4.plus_sign&gt; -&gt; &quot;i32x4.plus_sign&quot;
+ - func[7] &lt;i32x4-dec-sep1&gt; -&gt; &quot;i32x4-dec-sep1&quot;
+ - func[8] &lt;i32x4-dec-sep2&gt; -&gt; &quot;i32x4-dec-sep2&quot;
+ - func[9] &lt;i32x4-hex-sep1&gt; -&gt; &quot;i32x4-hex-sep1&quot;
+ - func[10] &lt;i32x4-hex-sep2&gt; -&gt; &quot;i32x4-hex-sep2&quot;
+ - func[11] &lt;i64x2.test&gt; -&gt; &quot;i64x2.test&quot;
+ - func[12] &lt;i64x2.smax&gt; -&gt; &quot;i64x2.smax&quot;
+ - func[13] &lt;i64x2.neg_smax&gt; -&gt; &quot;i64x2.neg_smax&quot;
+ - func[14] &lt;i64x2.inc_smin&gt; -&gt; &quot;i64x2.inc_smin&quot;
+ - func[15] &lt;i64x2.neg_zero&gt; -&gt; &quot;i64x2.neg_zero&quot;
+ - func[16] &lt;i64x2.not_octal&gt; -&gt; &quot;i64x2.not_octal&quot;
+ - func[17] &lt;i64x2.plus_sign&gt; -&gt; &quot;i64x2.plus_sign&quot;
+ - func[18] &lt;i64x2-dec-sep1&gt; -&gt; &quot;i64x2-dec-sep1&quot;
+ - func[19] &lt;i64x2-dec-sep2&gt; -&gt; &quot;i64x2-dec-sep2&quot;
+ - func[20] &lt;i64x2-hex-sep1&gt; -&gt; &quot;i64x2-hex-sep1&quot;
+ - func[21] &lt;i64x2-hex-sep2&gt; -&gt; &quot;i64x2-hex-sep2&quot;
+Code[22]:
+ - func[0] size&#x3D;21 &lt;i32x4.test&gt;
+ - func[1] size&#x3D;21 &lt;i32x4.smax&gt;
+ - func[2] size&#x3D;21 &lt;i32x4.neg_smax&gt;
+ - func[3] size&#x3D;42 &lt;i32x4.inc_smin&gt;
+ - func[4] size&#x3D;21 &lt;i32x4.neg_zero&gt;
+ - func[5] size&#x3D;21 &lt;i32x4.not_octal&gt;
+ - func[6] size&#x3D;21 &lt;i32x4.plus_sign&gt;
+ - func[7] size&#x3D;20 &lt;i32x4-dec-sep1&gt;
+ - func[8] size&#x3D;20 &lt;i32x4-dec-sep2&gt;
+ - func[9] size&#x3D;20 &lt;i32x4-hex-sep1&gt;
+ - func[10] size&#x3D;20 &lt;i32x4-hex-sep2&gt;
+ - func[11] size&#x3D;21 &lt;i64x2.test&gt;
+ - func[12] size&#x3D;21 &lt;i64x2.smax&gt;
+ - func[13] size&#x3D;21 &lt;i64x2.neg_smax&gt;
+ - func[14] size&#x3D;42 &lt;i64x2.inc_smin&gt;
+ - func[15] size&#x3D;21 &lt;i64x2.neg_zero&gt;
+ - func[16] size&#x3D;21 &lt;i64x2.not_octal&gt;
+ - func[17] size&#x3D;21 &lt;i64x2.plus_sign&gt;
+ - func[18] size&#x3D;20 &lt;i64x2-dec-sep1&gt;
+ - func[19] size&#x3D;20 &lt;i64x2-dec-sep2&gt;
+ - func[20] size&#x3D;20 &lt;i64x2-hex-sep1&gt;
+ - func[21] size&#x3D;20 &lt;i64x2-hex-sep2&gt;
+
+Contents of section Type:
+000000a: 0160 0001 7b                             .&#x60;..{
+
+Contents of section Function:
+0000011: 1600 0000 0000 0000 0000 0000 0000 0000  ................
+0000021: 0000 0000 0000 00                        .......
+
+Contents of section Export:
+000002b: 160a 6933 3278 342e 7465 7374 0000 0a69  ..i32x4.test...i
+000003b: 3332 7834 2e73 6d61 7800 010e 6933 3278  32x4.smax...i32x
+000004b: 342e 6e65 675f 736d 6178 0002 0e69 3332  4.neg_smax...i32
+000005b: 7834 2e69 6e63 5f73 6d69 6e00 030e 6933  x4.inc_smin...i3
+000006b: 3278 342e 6e65 675f 7a65 726f 0004 0f69  2x4.neg_zero...i
+000007b: 3332 7834 2e6e 6f74 5f6f 6374 616c 0005  32x4.not_octal..
+000008b: 0f69 3332 7834 2e70 6c75 735f 7369 676e  .i32x4.plus_sign
+000009b: 0006 0e69 3332 7834 2d64 6563 2d73 6570  ...i32x4-dec-sep
+00000ab: 3100 070e 6933 3278 342d 6465 632d 7365  1...i32x4-dec-se
+00000bb: 7032 0008 0e69 3332 7834 2d68 6578 2d73  p2...i32x4-hex-s
+00000cb: 6570 3100 090e 6933 3278 342d 6865 782d  ep1...i32x4-hex-
+00000db: 7365 7032 000a 0a69 3634 7832 2e74 6573  sep2...i64x2.tes
+00000eb: 7400 0b0a 6936 3478 322e 736d 6178 000c  t...i64x2.smax..
+00000fb: 0e69 3634 7832 2e6e 6567 5f73 6d61 7800  .i64x2.neg_smax.
+000010b: 0d0e 6936 3478 322e 696e 635f 736d 696e  ..i64x2.inc_smin
+000011b: 000e 0e69 3634 7832 2e6e 6567 5f7a 6572  ...i64x2.neg_zer
+000012b: 6f00 0f0f 6936 3478 322e 6e6f 745f 6f63  o...i64x2.not_oc
+000013b: 7461 6c00 100f 6936 3478 322e 706c 7573  tal...i64x2.plus
+000014b: 5f73 6967 6e00 110e 6936 3478 322d 6465  _sign...i64x2-de
+000015b: 632d 7365 7031 0012 0e69 3634 7832 2d64  c-sep1...i64x2-d
+000016b: 6563 2d73 6570 3200 130e 6936 3478 322d  ec-sep2...i64x2-
+000017b: 6865 782d 7365 7031 0014 0e69 3634 7832  hex-sep1...i64x2
+000018b: 2d68 6578 2d73 6570 3200 15              -hex-sep2..
+
+Contents of section Code:
+0000199: 1615 00fd 0c0d d0ad 0b0d d0ad 0b0d d0ad  ................
+00001a9: 0b0d d0ad 0b0f 0b15 00fd 0cff ffff 7fff  ................
+00001b9: ffff 7fff ffff 7fff ffff 7f0f 0b15 00fd  ................
+00001c9: 0c01 0000 8001 0000 8001 0000 8001 0000  ................
+00001d9: 800f 0b2a 00fd 0c00 0000 8000 0000 8000  ...*............
+00001e9: 0000 8000 0000 80fd 0c01 0000 0001 0000  ................
+00001f9: 0001 0000 0001 0000 00fd ae01 0f0b 1500  ................
+0000209: fd0c 0000 0000 0000 0000 0000 0000 0000  ................
+0000219: 0000 0f0b 1500 fd0c 0a00 0000 0a00 0000  ................
+0000229: 0a00 0000 0a00 0000 0f0b 1500 fd0c 2a00  ..............*.
+0000239: 0000 2a00 0000 2a00 0000 2a00 0000 0f0b  ..*...*...*.....
+0000249: 1400 fd0c 4042 0f00 4042 0f00 4042 0f00  ....@B..@B..@B..
+0000259: 4042 0f00 0b14 00fd 0ce8 0300 00e8 0300  @B..............
+0000269: 00e8 0300 00e8 0300 000b 1400 fd0c 9900  ................
+0000279: 0f0a 9900 0f0a 9900 0f0a 9900 0f0a 0b14  ................
+0000289: 00fd 0c0f aa01 000f aa01 000f aa01 000f  ................
+0000299: aa01 000b 1500 fd0c 0dd0 ad0b 0dd0 ad0b  ................
+00002a9: 0dd0 ad0b 0dd0 ad0b 0f0b 1500 fd0c ffff  ................
+00002b9: ffff ffff ff7f ffff ffff ffff ff7f 0f0b  ................
+00002c9: 1500 fd0c 0100 0000 0000 0080 0100 0000  ................
+00002d9: 0000 0080 0f0b 2a00 fd0c 0000 0000 0000  ......*.........
+00002e9: 0080 0000 0000 0000 0080 fd0c 0100 0000  ................
+00002f9: 0000 0000 0100 0000 0000 0000 fdce 010f  ................
+0000309: 0b15 00fd 0c00 0000 0000 0000 0000 0000  ................
+0000319: 0000 0000 000f 0b15 00fd 0c1a 2700 0000  ............&#x27;...
+0000329: 0000 001a 2700 0000 0000 000f 0b15 00fd  ....&#x27;...........
+0000339: 0c2a 0000 0000 0000 002a 0000 0000 0000  .*.......*......
+0000349: 000f 0b14 00fd 0c00 a072 4e18 0900 0000  .........rN.....
+0000359: a072 4e18 0900 000b 1400 fd0c 8096 9800  .rN.............
+0000369: 0000 0000 8096 9800 0000 0000 0b14 00fd  ................
+0000379: 0c99 000f 0a99 000f 0a99 000f 0a99 000f  ................
+0000389: 0a0b 1400 fd0c 0faa f1a0 1a00 0000 0faa  ................
+0000399: f1a0 1a00 0000 0b                        .......
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2"><code>BeginModule(version: 1)
+  BeginTypeSection(5)
+    OnTypeCount(1)
+    OnFuncType(index: 0, params: [], results: [v128])
+  EndTypeSection
+  BeginFunctionSection(23)
+    OnFunctionCount(22)
+    OnFunction(index: 0, sig_index: 0)
+    OnFunction(index: 1, sig_index: 0)
+    OnFunction(index: 2, sig_index: 0)
+    OnFunction(index: 3, sig_index: 0)
+    OnFunction(index: 4, sig_index: 0)
+    OnFunction(index: 5, sig_index: 0)
+    OnFunction(index: 6, sig_index: 0)
+    OnFunction(index: 7, sig_index: 0)
+    OnFunction(index: 8, sig_index: 0)
+    OnFunction(index: 9, sig_index: 0)
+    OnFunction(index: 10, sig_index: 0)
+    OnFunction(index: 11, sig_index: 0)
+    OnFunction(index: 12, sig_index: 0)
+    OnFunction(index: 13, sig_index: 0)
+    OnFunction(index: 14, sig_index: 0)
+    OnFunction(index: 15, sig_index: 0)
+    OnFunction(index: 16, sig_index: 0)
+    OnFunction(index: 17, sig_index: 0)
+    OnFunction(index: 18, sig_index: 0)
+    OnFunction(index: 19, sig_index: 0)
+    OnFunction(index: 20, sig_index: 0)
+    OnFunction(index: 21, sig_index: 0)
+  EndFunctionSection
+  BeginExportSection(363)
+    OnExportCount(22)
+    OnExport(index: 0, kind: func, item_index: 0, name: &quot;i32x4.test&quot;)
+    OnExport(index: 1, kind: func, item_index: 1, name: &quot;i32x4.smax&quot;)
+    OnExport(index: 2, kind: func, item_index: 2, name: &quot;i32x4.neg_smax&quot;)
+    OnExport(index: 3, kind: func, item_index: 3, name: &quot;i32x4.inc_smin&quot;)
+    OnExport(index: 4, kind: func, item_index: 4, name: &quot;i32x4.neg_zero&quot;)
+    OnExport(index: 5, kind: func, item_index: 5, name: &quot;i32x4.not_octal&quot;)
+    OnExport(index: 6, kind: func, item_index: 6, name: &quot;i32x4.plus_sign&quot;)
+    OnExport(index: 7, kind: func, item_index: 7, name: &quot;i32x4-dec-sep1&quot;)
+    OnExport(index: 8, kind: func, item_index: 8, name: &quot;i32x4-dec-sep2&quot;)
+    OnExport(index: 9, kind: func, item_index: 9, name: &quot;i32x4-hex-sep1&quot;)
+    OnExport(index: 10, kind: func, item_index: 10, name: &quot;i32x4-hex-sep2&quot;)
+    OnExport(index: 11, kind: func, item_index: 11, name: &quot;i64x2.test&quot;)
+    OnExport(index: 12, kind: func, item_index: 12, name: &quot;i64x2.smax&quot;)
+    OnExport(index: 13, kind: func, item_index: 13, name: &quot;i64x2.neg_smax&quot;)
+    OnExport(index: 14, kind: func, item_index: 14, name: &quot;i64x2.inc_smin&quot;)
+    OnExport(index: 15, kind: func, item_index: 15, name: &quot;i64x2.neg_zero&quot;)
+    OnExport(index: 16, kind: func, item_index: 16, name: &quot;i64x2.not_octal&quot;)
+    OnExport(index: 17, kind: func, item_index: 17, name: &quot;i64x2.plus_sign&quot;)
+    OnExport(index: 18, kind: func, item_index: 18, name: &quot;i64x2-dec-sep1&quot;)
+    OnExport(index: 19, kind: func, item_index: 19, name: &quot;i64x2-dec-sep2&quot;)
+    OnExport(index: 20, kind: func, item_index: 20, name: &quot;i64x2-hex-sep1&quot;)
+    OnExport(index: 21, kind: func, item_index: 21, name: &quot;i64x2-hex-sep2&quot;)
+  EndExportSection
+  BeginCodeSection(519)
+    OnFunctionBodyCount(22)
+    BeginFunctionBody(0, size:21)
+    OnLocalDeclCount(0)
+    EndFunctionBody(0)
+    BeginFunctionBody(1, size:21)
+    OnLocalDeclCount(0)
+    EndFunctionBody(1)
+    BeginFunctionBody(2, size:21)
+    OnLocalDeclCount(0)
+    EndFunctionBody(2)
+    BeginFunctionBody(3, size:42)
+    OnLocalDeclCount(0)
+    EndFunctionBody(3)
+    BeginFunctionBody(4, size:21)
+    OnLocalDeclCount(0)
+    EndFunctionBody(4)
+    BeginFunctionBody(5, size:21)
+    OnLocalDeclCount(0)
+    EndFunctionBody(5)
+    BeginFunctionBody(6, size:21)
+    OnLocalDeclCount(0)
+    EndFunctionBody(6)
+    BeginFunctionBody(7, size:20)
+    OnLocalDeclCount(0)
+    EndFunctionBody(7)
+    BeginFunctionBody(8, size:20)
+    OnLocalDeclCount(0)
+    EndFunctionBody(8)
+    BeginFunctionBody(9, size:20)
+    OnLocalDeclCount(0)
+    EndFunctionBody(9)
+    BeginFunctionBody(10, size:20)
+    OnLocalDeclCount(0)
+    EndFunctionBody(10)
+    BeginFunctionBody(11, size:21)
+    OnLocalDeclCount(0)
+    EndFunctionBody(11)
+    BeginFunctionBody(12, size:21)
+    OnLocalDeclCount(0)
+    EndFunctionBody(12)
+    BeginFunctionBody(13, size:21)
+    OnLocalDeclCount(0)
+    EndFunctionBody(13)
+    BeginFunctionBody(14, size:42)
+    OnLocalDeclCount(0)
+    EndFunctionBody(14)
+    BeginFunctionBody(15, size:21)
+    OnLocalDeclCount(0)
+    EndFunctionBody(15)
+    BeginFunctionBody(16, size:21)
+    OnLocalDeclCount(0)
+    EndFunctionBody(16)
+    BeginFunctionBody(17, size:21)
+    OnLocalDeclCount(0)
+    EndFunctionBody(17)
+    BeginFunctionBody(18, size:20)
+    OnLocalDeclCount(0)
+    EndFunctionBody(18)
+    BeginFunctionBody(19, size:20)
+    OnLocalDeclCount(0)
+    EndFunctionBody(19)
+    BeginFunctionBody(20, size:20)
+    OnLocalDeclCount(0)
+    EndFunctionBody(20)
+    BeginFunctionBody(21, size:20)
+    OnLocalDeclCount(0)
+    EndFunctionBody(21)
+  EndCodeSection
+EndModule
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2 do-not-highlightme"><code>00000000: 00 61 73 6D 01 00 00 00  .asm....
+00000008: 01 05 01 60 00 01 7B 03  ...&#x60;..{.
+00000010: 17 16 00 00 00 00 00 00  ........
+00000018: 00 00 00 00 00 00 00 00  ........
+00000020: 00 00 00 00 00 00 00 00  ........
+00000028: 07 EB 02 16 0A 69 33 32  .....i32
+00000030: 78 34 2E 74 65 73 74 00  x4.test.
+00000038: 00 0A 69 33 32 78 34 2E  ..i32x4.
+00000040: 73 6D 61 78 00 01 0E 69  smax...i
+00000048: 33 32 78 34 2E 6E 65 67  32x4.neg
+00000050: 5F 73 6D 61 78 00 02 0E  _smax...
+00000058: 69 33 32 78 34 2E 69 6E  i32x4.in
+00000060: 63 5F 73 6D 69 6E 00 03  c_smin..
+00000068: 0E 69 33 32 78 34 2E 6E  .i32x4.n
+00000070: 65 67 5F 7A 65 72 6F 00  eg_zero.
+00000078: 04 0F 69 33 32 78 34 2E  ..i32x4.
+00000080: 6E 6F 74 5F 6F 63 74 61  not_octa
+00000088: 6C 00 05 0F 69 33 32 78  l...i32x
+00000090: 34 2E 70 6C 75 73 5F 73  4.plus_s
+00000098: 69 67 6E 00 06 0E 69 33  ign...i3
+000000a0: 32 78 34 2D 64 65 63 2D  2x4-dec-
+000000a8: 73 65 70 31 00 07 0E 69  sep1...i
+000000b0: 33 32 78 34 2D 64 65 63  32x4-dec
+000000b8: 2D 73 65 70 32 00 08 0E  -sep2...
+000000c0: 69 33 32 78 34 2D 68 65  i32x4-he
+000000c8: 78 2D 73 65 70 31 00 09  x-sep1..
+000000d0: 0E 69 33 32 78 34 2D 68  .i32x4-h
+000000d8: 65 78 2D 73 65 70 32 00  ex-sep2.
+000000e0: 0A 0A 69 36 34 78 32 2E  ..i64x2.
+000000e8: 74 65 73 74 00 0B 0A 69  test...i
+000000f0: 36 34 78 32 2E 73 6D 61  64x2.sma
+000000f8: 78 00 0C 0E 69 36 34 78  x...i64x
+00000100: 32 2E 6E 65 67 5F 73 6D  2.neg_sm
+00000108: 61 78 00 0D 0E 69 36 34  ax...i64
+00000110: 78 32 2E 69 6E 63 5F 73  x2.inc_s
+00000118: 6D 69 6E 00 0E 0E 69 36  min...i6
+00000120: 34 78 32 2E 6E 65 67 5F  4x2.neg_
+00000128: 7A 65 72 6F 00 0F 0F 69  zero...i
+00000130: 36 34 78 32 2E 6E 6F 74  64x2.not
+00000138: 5F 6F 63 74 61 6C 00 10  _octal..
+00000140: 0F 69 36 34 78 32 2E 70  .i64x2.p
+00000148: 6C 75 73 5F 73 69 67 6E  lus_sign
+00000150: 00 11 0E 69 36 34 78 32  ...i64x2
+00000158: 2D 64 65 63 2D 73 65 70  -dec-sep
+00000160: 31 00 12 0E 69 36 34 78  1...i64x
+00000168: 32 2D 64 65 63 2D 73 65  2-dec-se
+00000170: 70 32 00 13 0E 69 36 34  p2...i64
+00000178: 78 32 2D 68 65 78 2D 73  x2-hex-s
+00000180: 65 70 31 00 14 0E 69 36  ep1...i6
+00000188: 34 78 32 2D 68 65 78 2D  4x2-hex-
+00000190: 73 65 70 32 00 15 0A 87  sep2....
+00000198: 04 16 15 00 FD 0C 0D D0  ........
+000001a0: AD 0B 0D D0 AD 0B 0D D0  ........
+000001a8: AD 0B 0D D0 AD 0B 0F 0B  ........
+000001b0: 15 00 FD 0C FF FF FF 7F  ........
+000001b8: FF FF FF 7F FF FF FF 7F  ........
+000001c0: FF FF FF 7F 0F 0B 15 00  ........
+000001c8: FD 0C 01 00 00 80 01 00  ........
+000001d0: 00 80 01 00 00 80 01 00  ........
+000001d8: 00 80 0F 0B 2A 00 FD 0C  ....*...
+000001e0: 00 00 00 80 00 00 00 80  ........
+000001e8: 00 00 00 80 00 00 00 80  ........
+000001f0: FD 0C 01 00 00 00 01 00  ........
+000001f8: 00 00 01 00 00 00 01 00  ........
+00000200: 00 00 FD AE 01 0F 0B 15  ........
+00000208: 00 FD 0C 00 00 00 00 00  ........
+00000210: 00 00 00 00 00 00 00 00  ........
+00000218: 00 00 00 0F 0B 15 00 FD  ........
+00000220: 0C 0A 00 00 00 0A 00 00  ........
+00000228: 00 0A 00 00 00 0A 00 00  ........
+00000230: 00 0F 0B 15 00 FD 0C 2A  .......*
+00000238: 00 00 00 2A 00 00 00 2A  ...*...*
+00000240: 00 00 00 2A 00 00 00 0F  ...*....
+00000248: 0B 14 00 FD 0C 40 42 0F  .....@B.
+00000250: 00 40 42 0F 00 40 42 0F  .@B..@B.
+00000258: 00 40 42 0F 00 0B 14 00  .@B.....
+00000260: FD 0C E8 03 00 00 E8 03  ........
+00000268: 00 00 E8 03 00 00 E8 03  ........
+00000270: 00 00 0B 14 00 FD 0C 99  ........
+00000278: 00 0F 0A 99 00 0F 0A 99  ........
+00000280: 00 0F 0A 99 00 0F 0A 0B  ........
+00000288: 14 00 FD 0C 0F AA 01 00  ........
+00000290: 0F AA 01 00 0F AA 01 00  ........
+00000298: 0F AA 01 00 0B 15 00 FD  ........
+000002a0: 0C 0D D0 AD 0B 0D D0 AD  ........
+000002a8: 0B 0D D0 AD 0B 0D D0 AD  ........
+000002b0: 0B 0F 0B 15 00 FD 0C FF  ........
+000002b8: FF FF FF FF FF FF 7F FF  ........
+000002c0: FF FF FF FF FF FF 7F 0F  ........
+000002c8: 0B 15 00 FD 0C 01 00 00  ........
+000002d0: 00 00 00 00 80 01 00 00  ........
+000002d8: 00 00 00 00 80 0F 0B 2A  .......*
+000002e0: 00 FD 0C 00 00 00 00 00  ........
+000002e8: 00 00 80 00 00 00 00 00  ........
+000002f0: 00 00 80 FD 0C 01 00 00  ........
+000002f8: 00 00 00 00 00 01 00 00  ........
+00000300: 00 00 00 00 00 FD CE 01  ........
+00000308: 0F 0B 15 00 FD 0C 00 00  ........
+00000310: 00 00 00 00 00 00 00 00  ........
+00000318: 00 00 00 00 00 00 0F 0B  ........
+00000320: 15 00 FD 0C 1A 27 00 00  .....&#x27;..
+00000328: 00 00 00 00 1A 27 00 00  .....&#x27;..
+00000330: 00 00 00 00 0F 0B 15 00  ........
+00000338: FD 0C 2A 00 00 00 00 00  ..*.....
+00000340: 00 00 2A 00 00 00 00 00  ..*.....
+00000348: 00 00 0F 0B 14 00 FD 0C  ........
+00000350: 00 A0 72 4E 18 09 00 00  ..rN....
+00000358: 00 A0 72 4E 18 09 00 00  ..rN....
+00000360: 0B 14 00 FD 0C 80 96 98  ........
+00000368: 00 00 00 00 00 80 96 98  ........
+00000370: 00 00 00 00 00 0B 14 00  ........
+00000378: FD 0C 99 00 0F 0A 99 00  ........
+00000380: 0F 0A 99 00 0F 0A 99 00  ........
+00000388: 0F 0A 0B 14 00 FD 0C 0F  ........
+00000390: AA F1 A0 1A 00 00 00 0F  ........
+00000398: AA F1 A0 1A 00 00 00 0B  ........
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2"><code>(module
+  (type (;0;) (func (result v128)))
+  (func (;0;) (type 0) (result v128)
+    v128.const i32x4 0x0badd00d 0x0badd00d 0x0badd00d 0x0badd00d
+    return)
+  (func (;1;) (type 0) (result v128)
+    v128.const i32x4 0x7fffffff 0x7fffffff 0x7fffffff 0x7fffffff
+    return)
+  (func (;2;) (type 0) (result v128)
+    v128.const i32x4 0x80000001 0x80000001 0x80000001 0x80000001
+    return)
+  (func (;3;) (type 0) (result v128)
+    v128.const i32x4 0x80000000 0x80000000 0x80000000 0x80000000
+    v128.const i32x4 0x00000001 0x00000001 0x00000001 0x00000001
+    i32x4.add
+    return)
+  (func (;4;) (type 0) (result v128)
+    v128.const i32x4 0x00000000 0x00000000 0x00000000 0x00000000
+    return)
+  (func (;5;) (type 0) (result v128)
+    v128.const i32x4 0x0000000a 0x0000000a 0x0000000a 0x0000000a
+    return)
+  (func (;6;) (type 0) (result v128)
+    v128.const i32x4 0x0000002a 0x0000002a 0x0000002a 0x0000002a
+    return)
+  (func (;7;) (type 0) (result v128)
+    v128.const i32x4 0x000f4240 0x000f4240 0x000f4240 0x000f4240)
+  (func (;8;) (type 0) (result v128)
+    v128.const i32x4 0x000003e8 0x000003e8 0x000003e8 0x000003e8)
+  (func (;9;) (type 0) (result v128)
+    v128.const i32x4 0x0a0f0099 0x0a0f0099 0x0a0f0099 0x0a0f0099)
+  (func (;10;) (type 0) (result v128)
+    v128.const i32x4 0x0001aa0f 0x0001aa0f 0x0001aa0f 0x0001aa0f)
+  (func (;11;) (type 0) (result v128)
+    v128.const i32x4 0x0badd00d 0x0badd00d 0x0badd00d 0x0badd00d
+    return)
+  (func (;12;) (type 0) (result v128)
+    v128.const i32x4 0xffffffff 0x7fffffff 0xffffffff 0x7fffffff
+    return)
+  (func (;13;) (type 0) (result v128)
+    v128.const i32x4 0x00000001 0x80000000 0x00000001 0x80000000
+    return)
+  (func (;14;) (type 0) (result v128)
+    v128.const i32x4 0x00000000 0x80000000 0x00000000 0x80000000
+    v128.const i32x4 0x00000001 0x00000000 0x00000001 0x00000000
+    i64x2.add
+    return)
+  (func (;15;) (type 0) (result v128)
+    v128.const i32x4 0x00000000 0x00000000 0x00000000 0x00000000
+    return)
+  (func (;16;) (type 0) (result v128)
+    v128.const i32x4 0x0000271a 0x00000000 0x0000271a 0x00000000
+    return)
+  (func (;17;) (type 0) (result v128)
+    v128.const i32x4 0x0000002a 0x00000000 0x0000002a 0x00000000
+    return)
+  (func (;18;) (type 0) (result v128)
+    v128.const i32x4 0x4e72a000 0x00000918 0x4e72a000 0x00000918)
+  (func (;19;) (type 0) (result v128)
+    v128.const i32x4 0x00989680 0x00000000 0x00989680 0x00000000)
+  (func (;20;) (type 0) (result v128)
+    v128.const i32x4 0x0a0f0099 0x0a0f0099 0x0a0f0099 0x0a0f0099)
+  (func (;21;) (type 0) (result v128)
+    v128.const i32x4 0xa0f1aa0f 0x0000001a 0xa0f1aa0f 0x0000001a)
+  (export &quot;i32x4.test&quot; (func 0))
+  (export &quot;i32x4.smax&quot; (func 1))
+  (export &quot;i32x4.neg_smax&quot; (func 2))
+  (export &quot;i32x4.inc_smin&quot; (func 3))
+  (export &quot;i32x4.neg_zero&quot; (func 4))
+  (export &quot;i32x4.not_octal&quot; (func 5))
+  (export &quot;i32x4.plus_sign&quot; (func 6))
+  (export &quot;i32x4-dec-sep1&quot; (func 7))
+  (export &quot;i32x4-dec-sep2&quot; (func 8))
+  (export &quot;i32x4-hex-sep1&quot; (func 9))
+  (export &quot;i32x4-hex-sep2&quot; (func 10))
+  (export &quot;i64x2.test&quot; (func 11))
+  (export &quot;i64x2.smax&quot; (func 12))
+  (export &quot;i64x2.neg_smax&quot; (func 13))
+  (export &quot;i64x2.inc_smin&quot; (func 14))
+  (export &quot;i64x2.neg_zero&quot; (func 15))
+  (export &quot;i64x2.not_octal&quot; (func 16))
+  (export &quot;i64x2.plus_sign&quot; (func 17))
+  (export &quot;i64x2-dec-sep1&quot; (func 18))
+  (export &quot;i64x2-dec-sep2&quot; (func 19))
+  (export &quot;i64x2-hex-sep1&quot; (func 20))
+  (export &quot;i64x2-hex-sep2&quot; (func 21)))
+</code></pre>
+    </div>
+</body>
+
+</html>

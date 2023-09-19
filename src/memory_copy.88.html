@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asmcc memory_copy.88</title>
+
+    <link rel="stylesheet" href="//unpkg.com/@highlightjs/cdn-assets@11.7.0/styles/github.min.css">
+    <script src="//unpkg.com/@highlightjs/cdn-assets@11.7.0/highlight.min.js"></script>
+    <script>
+        hljs.configure({
+            noHighlightRe: /^do-not-highlightme$/i,
+        });
+    </script>
+    <script>hljs.highlightAll();</script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="/_vercel/insights/script.js"></script>
+</head>
+
+<body class="text-sm p-2">
+    <h1 class="text-2xl  w-full mb-4">Anaylzer: <a href="/memory_copy.88.wasm">memory_copy.88.wasm</a></h1>
+    <div class="flex justify-evenly">
+        <pre class="p-4 overflow-scroll border-2"><code>
+memory_copy.88.wasm:	file format wasm 0x1
+
+Sections:
+
+     Type start&#x3D;0x0000000a end&#x3D;0x0000000e (size&#x3D;0x00000004) count: 1
+ Function start&#x3D;0x00000010 end&#x3D;0x00000012 (size&#x3D;0x00000002) count: 1
+   Memory start&#x3D;0x00000014 end&#x3D;0x00000018 (size&#x3D;0x00000004) count: 1
+   Export start&#x3D;0x0000001a end&#x3D;0x00000022 (size&#x3D;0x00000008) count: 1
+     Code start&#x3D;0x00000024 end&#x3D;0x00000036 (size&#x3D;0x00000012) count: 1
+
+Section Details:
+
+Type[1]:
+ - type[0] () -&gt; nil
+Function[1]:
+ - func[0] sig&#x3D;0 &lt;test&gt;
+Memory[1]:
+ - memory[0] pages: initial&#x3D;1 max&#x3D;1
+Export[1]:
+ - func[0] &lt;test&gt; -&gt; &quot;test&quot;
+Code[1]:
+ - func[0] size&#x3D;16 &lt;test&gt;
+
+Contents of section Type:
+000000a: 0160 0000                                .&#x60;..
+
+Contents of section Function:
+0000010: 0100                                     ..
+
+Contents of section Memory:
+0000014: 0101 0101                                ....
+
+Contents of section Export:
+000001a: 0104 7465 7374 0000                      ..test..
+
+Contents of section Code:
+0000024: 0110 0041 8080 0141 807e 4181 02fc 0a00  ...A...A.~A.....
+0000034: 000b                                     ..
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2"><code>BeginModule(version: 1)
+  BeginTypeSection(4)
+    OnTypeCount(1)
+    OnFuncType(index: 0, params: [], results: [])
+  EndTypeSection
+  BeginFunctionSection(2)
+    OnFunctionCount(1)
+    OnFunction(index: 0, sig_index: 0)
+  EndFunctionSection
+  BeginMemorySection(4)
+    OnMemoryCount(1)
+    OnMemory(index: 0, initial: 1, max: 1)
+  EndMemorySection
+  BeginExportSection(8)
+    OnExportCount(1)
+    OnExport(index: 0, kind: func, item_index: 0, name: &quot;test&quot;)
+  EndExportSection
+  BeginCodeSection(18)
+    OnFunctionBodyCount(1)
+    BeginFunctionBody(0, size:16)
+    OnLocalDeclCount(0)
+    EndFunctionBody(0)
+  EndCodeSection
+EndModule
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2 do-not-highlightme"><code>00000000: 00 61 73 6D 01 00 00 00  .asm....
+00000008: 01 04 01 60 00 00 03 02  ...&#x60;....
+00000010: 01 00 05 04 01 01 01 01  ........
+00000018: 07 08 01 04 74 65 73 74  ....test
+00000020: 00 00 0A 12 01 10 00 41  .......A
+00000028: 80 80 01 41 80 7E 41 81  ...A.~A.
+00000030: 02 FC 0A 00 00 0B        ......
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2"><code>(module
+  (type (;0;) (func))
+  (func (;0;) (type 0)
+    i32.const 16384
+    i32.const -256
+    i32.const 257
+    memory.copy)
+  (memory (;0;) 1 1)
+  (export &quot;test&quot; (func 0)))
+</code></pre>
+    </div>
+</body>
+
+</html>

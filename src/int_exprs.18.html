@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asmcc int_exprs.18</title>
+
+    <link rel="stylesheet" href="//unpkg.com/@highlightjs/cdn-assets@11.7.0/styles/github.min.css">
+    <script src="//unpkg.com/@highlightjs/cdn-assets@11.7.0/highlight.min.js"></script>
+    <script>
+        hljs.configure({
+            noHighlightRe: /^do-not-highlightme$/i,
+        });
+    </script>
+    <script>hljs.highlightAll();</script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="/_vercel/insights/script.js"></script>
+</head>
+
+<body class="text-sm p-2">
+    <h1 class="text-2xl  w-full mb-4">Anaylzer: <a href="/int_exprs.18.wasm">int_exprs.18.wasm</a></h1>
+    <div class="flex justify-evenly">
+        <pre class="p-4 overflow-scroll border-2"><code>
+int_exprs.18.wasm:	file format wasm 0x1
+
+Sections:
+
+     Type start&#x3D;0x0000000a end&#x3D;0x00000015 (size&#x3D;0x0000000b) count: 2
+ Function start&#x3D;0x00000017 end&#x3D;0x0000001a (size&#x3D;0x00000003) count: 2
+   Export start&#x3D;0x0000001c end&#x3D;0x0000004b (size&#x3D;0x0000002f) count: 2
+     Code start&#x3D;0x0000004d end&#x3D;0x0000005e (size&#x3D;0x00000011) count: 2
+
+Section Details:
+
+Type[2]:
+ - type[0] (i32) -&gt; i32
+ - type[1] (i64) -&gt; i64
+Function[2]:
+ - func[0] sig&#x3D;0 &lt;i32.no_fold_div_neg1&gt;
+ - func[1] sig&#x3D;1 &lt;i64.no_fold_div_neg1&gt;
+Export[2]:
+ - func[0] &lt;i32.no_fold_div_neg1&gt; -&gt; &quot;i32.no_fold_div_neg1&quot;
+ - func[1] &lt;i64.no_fold_div_neg1&gt; -&gt; &quot;i64.no_fold_div_neg1&quot;
+Code[2]:
+ - func[0] size&#x3D;7 &lt;i32.no_fold_div_neg1&gt;
+ - func[1] size&#x3D;7 &lt;i64.no_fold_div_neg1&gt;
+
+Contents of section Type:
+000000a: 0260 017f 017f 6001 7e01 7e              .&#x60;....&#x60;.~.~
+
+Contents of section Function:
+0000017: 0200 01                                  ...
+
+Contents of section Export:
+000001c: 0214 6933 322e 6e6f 5f66 6f6c 645f 6469  ..i32.no_fold_di
+000002c: 765f 6e65 6731 0000 1469 3634 2e6e 6f5f  v_neg1...i64.no_
+000003c: 666f 6c64 5f64 6976 5f6e 6567 3100 01    fold_div_neg1..
+
+Contents of section Code:
+000004d: 0207 0020 0041 7f6d 0b07 0020 0042 7f7f  ... .A.m... .B..
+000005d: 0b                                       .
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2"><code>BeginModule(version: 1)
+  BeginTypeSection(11)
+    OnTypeCount(2)
+    OnFuncType(index: 0, params: [i32], results: [i32])
+    OnFuncType(index: 1, params: [i64], results: [i64])
+  EndTypeSection
+  BeginFunctionSection(3)
+    OnFunctionCount(2)
+    OnFunction(index: 0, sig_index: 0)
+    OnFunction(index: 1, sig_index: 1)
+  EndFunctionSection
+  BeginExportSection(47)
+    OnExportCount(2)
+    OnExport(index: 0, kind: func, item_index: 0, name: &quot;i32.no_fold_div_neg1&quot;)
+    OnExport(index: 1, kind: func, item_index: 1, name: &quot;i64.no_fold_div_neg1&quot;)
+  EndExportSection
+  BeginCodeSection(17)
+    OnFunctionBodyCount(2)
+    BeginFunctionBody(0, size:7)
+    OnLocalDeclCount(0)
+    EndFunctionBody(0)
+    BeginFunctionBody(1, size:7)
+    OnLocalDeclCount(0)
+    EndFunctionBody(1)
+  EndCodeSection
+EndModule
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2 do-not-highlightme"><code>00000000: 00 61 73 6D 01 00 00 00  .asm....
+00000008: 01 0B 02 60 01 7F 01 7F  ...&#x60;....
+00000010: 60 01 7E 01 7E 03 03 02  &#x60;.~.~...
+00000018: 00 01 07 2F 02 14 69 33  .../..i3
+00000020: 32 2E 6E 6F 5F 66 6F 6C  2.no_fol
+00000028: 64 5F 64 69 76 5F 6E 65  d_div_ne
+00000030: 67 31 00 00 14 69 36 34  g1...i64
+00000038: 2E 6E 6F 5F 66 6F 6C 64  .no_fold
+00000040: 5F 64 69 76 5F 6E 65 67  _div_neg
+00000048: 31 00 01 0A 11 02 07 00  1.......
+00000050: 20 00 41 7F 6D 0B 07 00   .A.m...
+00000058: 20 00 42 7F 7F 0B         .B...
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2"><code>(module
+  (type (;0;) (func (param i32) (result i32)))
+  (type (;1;) (func (param i64) (result i64)))
+  (func (;0;) (type 0) (param i32) (result i32)
+    local.get 0
+    i32.const -1
+    i32.div_s)
+  (func (;1;) (type 1) (param i64) (result i64)
+    local.get 0
+    i64.const -1
+    i64.div_s)
+  (export &quot;i32.no_fold_div_neg1&quot; (func 0))
+  (export &quot;i64.no_fold_div_neg1&quot; (func 1)))
+</code></pre>
+    </div>
+</body>
+
+</html>

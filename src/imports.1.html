@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asmcc imports.1</title>
+
+    <link rel="stylesheet" href="//unpkg.com/@highlightjs/cdn-assets@11.7.0/styles/github.min.css">
+    <script src="//unpkg.com/@highlightjs/cdn-assets@11.7.0/highlight.min.js"></script>
+    <script>
+        hljs.configure({
+            noHighlightRe: /^do-not-highlightme$/i,
+        });
+    </script>
+    <script>hljs.highlightAll();</script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="/_vercel/insights/script.js"></script>
+</head>
+
+<body class="text-sm p-2">
+    <h1 class="text-2xl  w-full mb-4">Anaylzer: <a href="/imports.1.wasm">imports.1.wasm</a></h1>
+    <div class="flex justify-evenly">
+        <pre class="p-4 overflow-scroll border-2"><code>
+imports.1.wasm:	file format wasm 0x1
+
+Sections:
+
+     Type start&#x3D;0x0000000a end&#x3D;0x0000002e (size&#x3D;0x00000024) count: 8
+   Import start&#x3D;0x00000031 end&#x3D;0x000001b4 (size&#x3D;0x00000183) count: 18
+ Function start&#x3D;0x000001b6 end&#x3D;0x000001b9 (size&#x3D;0x00000003) count: 2
+    Table start&#x3D;0x000001bb end&#x3D;0x000001c0 (size&#x3D;0x00000005) count: 1
+   Export start&#x3D;0x000001c2 end&#x3D;0x000001f5 (size&#x3D;0x00000033) count: 8
+     Elem start&#x3D;0x000001f7 end&#x3D;0x000001ff (size&#x3D;0x00000008) count: 1
+     Code start&#x3D;0x00000201 end&#x3D;0x00000269 (size&#x3D;0x00000068) count: 2
+
+Section Details:
+
+Type[8]:
+ - type[0] (i32) -&gt; nil
+ - type[1] (i64) -&gt; nil
+ - type[2] (f32) -&gt; nil
+ - type[3] (f64) -&gt; nil
+ - type[4] (i32) -&gt; nil
+ - type[5] (i32, f32) -&gt; nil
+ - type[6] (f64, f64) -&gt; nil
+ - type[7] (i64) -&gt; i64
+Import[18]:
+ - func[0] sig&#x3D;0 &lt;spectest.print_i32&gt; &lt;- spectest.print_i32
+ - func[1] sig&#x3D;1 &lt;spectest.print_i64&gt; &lt;- spectest.print_i64
+ - func[2] sig&#x3D;0 &lt;spectest.print_i32&gt; &lt;- spectest.print_i32
+ - func[3] sig&#x3D;1 &lt;spectest.print_i64&gt; &lt;- spectest.print_i64
+ - func[4] sig&#x3D;2 &lt;spectest.print_f32&gt; &lt;- spectest.print_f32
+ - func[5] sig&#x3D;3 &lt;spectest.print_f64&gt; &lt;- spectest.print_f64
+ - func[6] sig&#x3D;5 &lt;spectest.print_i32_f32&gt; &lt;- spectest.print_i32_f32
+ - func[7] sig&#x3D;6 &lt;spectest.print_f64_f64&gt; &lt;- spectest.print_f64_f64
+ - func[8] sig&#x3D;0 &lt;spectest.print_i32&gt; &lt;- spectest.print_i32
+ - func[9] sig&#x3D;3 &lt;spectest.print_f64&gt; &lt;- spectest.print_f64
+ - func[10] sig&#x3D;7 &lt;test.func-i64-&gt;i64&gt; &lt;- test.func-i64-&gt;i64
+ - func[11] sig&#x3D;0 &lt;p1&gt; &lt;- spectest.print_i32
+ - func[12] sig&#x3D;0 &lt;p2&gt; &lt;- spectest.print_i32
+ - func[13] sig&#x3D;0 &lt;p4&gt; &lt;- spectest.print_i32
+ - func[14] sig&#x3D;0 &lt;p5&gt; &lt;- spectest.print_i32
+ - func[15] sig&#x3D;0 &lt;p6&gt; &lt;- spectest.print_i32
+ - func[16] sig&#x3D;4 &lt;spectest.print_i32&gt; &lt;- spectest.print_i32
+ - func[17] sig&#x3D;4 &lt;spectest.print_i32&gt; &lt;- spectest.print_i32
+Function[2]:
+ - func[18] sig&#x3D;0 &lt;print32&gt;
+ - func[19] sig&#x3D;1 &lt;print64&gt;
+Table[1]:
+ - table[0] type&#x3D;funcref initial&#x3D;2 max&#x3D;2
+Export[8]:
+ - func[11] &lt;p1&gt; -&gt; &quot;p1&quot;
+ - func[12] &lt;p2&gt; -&gt; &quot;p2&quot;
+ - func[13] &lt;p4&gt; -&gt; &quot;p3&quot;
+ - func[13] &lt;p4&gt; -&gt; &quot;p4&quot;
+ - func[14] &lt;p5&gt; -&gt; &quot;p5&quot;
+ - func[15] &lt;p6&gt; -&gt; &quot;p6&quot;
+ - func[18] &lt;print32&gt; -&gt; &quot;print32&quot;
+ - func[19] &lt;print64&gt; -&gt; &quot;print64&quot;
+Elem[1]:
+ - segment[0] flags&#x3D;0 table&#x3D;0 count&#x3D;2 - init i32&#x3D;0
+  - elem[0] &#x3D; ref.func:2 &lt;spectest.print_i32&gt;
+  - elem[1] &#x3D; ref.func:5 &lt;spectest.print_f64&gt;
+Code[2]:
+ - func[18] size&#x3D;44 &lt;print32&gt;
+ - func[19] size&#x3D;57 &lt;print64&gt;
+
+Contents of section Type:
+000000a: 0860 017f 0060 017e 0060 017d 0060 017c  .&#x60;...&#x60;.~.&#x60;.}.&#x60;.|
+000001a: 0060 017f 0060 027f 7d00 6002 7c7c 0060  .&#x60;...&#x60;..}.&#x60;.||.&#x60;
+000002a: 017e 017e                                .~.~
+
+Contents of section Import:
+0000031: 1208 7370 6563 7465 7374 0970 7269 6e74  ..spectest.print
+0000041: 5f69 3332 0000 0873 7065 6374 6573 7409  _i32...spectest.
+0000051: 7072 696e 745f 6936 3400 0108 7370 6563  print_i64...spec
+0000061: 7465 7374 0970 7269 6e74 5f69 3332 0000  test.print_i32..
+0000071: 0873 7065 6374 6573 7409 7072 696e 745f  .spectest.print_
+0000081: 6936 3400 0108 7370 6563 7465 7374 0970  i64...spectest.p
+0000091: 7269 6e74 5f66 3332 0002 0873 7065 6374  rint_f32...spect
+00000a1: 6573 7409 7072 696e 745f 6636 3400 0308  est.print_f64...
+00000b1: 7370 6563 7465 7374 0d70 7269 6e74 5f69  spectest.print_i
+00000c1: 3332 5f66 3332 0005 0873 7065 6374 6573  32_f32...spectes
+00000d1: 740d 7072 696e 745f 6636 345f 6636 3400  t.print_f64_f64.
+00000e1: 0608 7370 6563 7465 7374 0970 7269 6e74  ..spectest.print
+00000f1: 5f69 3332 0000 0873 7065 6374 6573 7409  _i32...spectest.
+0000101: 7072 696e 745f 6636 3400 0304 7465 7374  print_f64...test
+0000111: 0d66 756e 632d 6936 342d 3e69 3634 0007  .func-i64-&gt;i64..
+0000121: 0873 7065 6374 6573 7409 7072 696e 745f  .spectest.print_
+0000131: 6933 3200 0008 7370 6563 7465 7374 0970  i32...spectest.p
+0000141: 7269 6e74 5f69 3332 0000 0873 7065 6374  rint_i32...spect
+0000151: 6573 7409 7072 696e 745f 6933 3200 0008  est.print_i32...
+0000161: 7370 6563 7465 7374 0970 7269 6e74 5f69  spectest.print_i
+0000171: 3332 0000 0873 7065 6374 6573 7409 7072  32...spectest.pr
+0000181: 696e 745f 6933 3200 0008 7370 6563 7465  int_i32...specte
+0000191: 7374 0970 7269 6e74 5f69 3332 0004 0873  st.print_i32...s
+00001a1: 7065 6374 6573 7409 7072 696e 745f 6933  pectest.print_i3
+00001b1: 3200 04                                  2..
+
+Contents of section Function:
+00001b6: 0200 01                                  ...
+
+Contents of section Table:
+00001bb: 0170 0102 02                             .p...
+
+Contents of section Export:
+00001c2: 0802 7031 000b 0270 3200 0c02 7033 000d  ..p1...p2...p3..
+00001d2: 0270 3400 0d02 7035 000e 0270 3600 0f07  .p4...p5...p6...
+00001e2: 7072 696e 7433 3200 1207 7072 696e 7436  print32...print6
+00001f2: 3400 13                                  4..
+
+Contents of section Elem:
+00001f7: 0100 4100 0b02 0205                      ..A.....
+
+Contents of section Code:
+0000201: 022c 0101 7d20 00b2 2101 2000 1000 2000  .,..} ..!. ... .
+0000211: 4101 6a43 0000 2842 1006 2000 1002 2000  A.jC..(B.. ... .
+0000221: 1008 2001 1004 2000 4100 1100 000b 3901  .. ... .A.....9.
+0000231: 017c 2000 100a b921 0120 0010 0120 0144  .| ....!. ... .D
+0000241: 0000 0000 0000 f03f a044 0000 0000 0080  .......?.D......
+0000251: 4a40 1007 2000 1003 2001 1005 2001 1009  J@.. ... ... ...
+0000261: 2001 4101 1103 000b                       .A.....
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2"><code>BeginModule(version: 1)
+  BeginTypeSection(36)
+    OnTypeCount(8)
+    OnFuncType(index: 0, params: [i32], results: [])
+    OnFuncType(index: 1, params: [i64], results: [])
+    OnFuncType(index: 2, params: [f32], results: [])
+    OnFuncType(index: 3, params: [f64], results: [])
+    OnFuncType(index: 4, params: [i32], results: [])
+    OnFuncType(index: 5, params: [i32, f32], results: [])
+    OnFuncType(index: 6, params: [f64, f64], results: [])
+    OnFuncType(index: 7, params: [i64], results: [i64])
+  EndTypeSection
+  BeginImportSection(387)
+    OnImportCount(18)
+    OnImport(index: 0, kind: func, module: &quot;spectest&quot;, field: &quot;print_i32&quot;)
+    OnImportFunc(import_index: 0, func_index: 0, sig_index: 0)
+    OnImport(index: 1, kind: func, module: &quot;spectest&quot;, field: &quot;print_i64&quot;)
+    OnImportFunc(import_index: 1, func_index: 1, sig_index: 1)
+    OnImport(index: 2, kind: func, module: &quot;spectest&quot;, field: &quot;print_i32&quot;)
+    OnImportFunc(import_index: 2, func_index: 2, sig_index: 0)
+    OnImport(index: 3, kind: func, module: &quot;spectest&quot;, field: &quot;print_i64&quot;)
+    OnImportFunc(import_index: 3, func_index: 3, sig_index: 1)
+    OnImport(index: 4, kind: func, module: &quot;spectest&quot;, field: &quot;print_f32&quot;)
+    OnImportFunc(import_index: 4, func_index: 4, sig_index: 2)
+    OnImport(index: 5, kind: func, module: &quot;spectest&quot;, field: &quot;print_f64&quot;)
+    OnImportFunc(import_index: 5, func_index: 5, sig_index: 3)
+    OnImport(index: 6, kind: func, module: &quot;spectest&quot;, field: &quot;print_i32_f32&quot;)
+    OnImportFunc(import_index: 6, func_index: 6, sig_index: 5)
+    OnImport(index: 7, kind: func, module: &quot;spectest&quot;, field: &quot;print_f64_f64&quot;)
+    OnImportFunc(import_index: 7, func_index: 7, sig_index: 6)
+    OnImport(index: 8, kind: func, module: &quot;spectest&quot;, field: &quot;print_i32&quot;)
+    OnImportFunc(import_index: 8, func_index: 8, sig_index: 0)
+    OnImport(index: 9, kind: func, module: &quot;spectest&quot;, field: &quot;print_f64&quot;)
+    OnImportFunc(import_index: 9, func_index: 9, sig_index: 3)
+    OnImport(index: 10, kind: func, module: &quot;test&quot;, field: &quot;func-i64-&gt;i64&quot;)
+    OnImportFunc(import_index: 10, func_index: 10, sig_index: 7)
+    OnImport(index: 11, kind: func, module: &quot;spectest&quot;, field: &quot;print_i32&quot;)
+    OnImportFunc(import_index: 11, func_index: 11, sig_index: 0)
+    OnImport(index: 12, kind: func, module: &quot;spectest&quot;, field: &quot;print_i32&quot;)
+    OnImportFunc(import_index: 12, func_index: 12, sig_index: 0)
+    OnImport(index: 13, kind: func, module: &quot;spectest&quot;, field: &quot;print_i32&quot;)
+    OnImportFunc(import_index: 13, func_index: 13, sig_index: 0)
+    OnImport(index: 14, kind: func, module: &quot;spectest&quot;, field: &quot;print_i32&quot;)
+    OnImportFunc(import_index: 14, func_index: 14, sig_index: 0)
+    OnImport(index: 15, kind: func, module: &quot;spectest&quot;, field: &quot;print_i32&quot;)
+    OnImportFunc(import_index: 15, func_index: 15, sig_index: 0)
+    OnImport(index: 16, kind: func, module: &quot;spectest&quot;, field: &quot;print_i32&quot;)
+    OnImportFunc(import_index: 16, func_index: 16, sig_index: 4)
+    OnImport(index: 17, kind: func, module: &quot;spectest&quot;, field: &quot;print_i32&quot;)
+    OnImportFunc(import_index: 17, func_index: 17, sig_index: 4)
+  EndImportSection
+  BeginFunctionSection(3)
+    OnFunctionCount(2)
+    OnFunction(index: 18, sig_index: 0)
+    OnFunction(index: 19, sig_index: 1)
+  EndFunctionSection
+  BeginTableSection(5)
+    OnTableCount(1)
+    OnTable(index: 0, elem_type: funcref, initial: 2, max: 2)
+  EndTableSection
+  BeginExportSection(51)
+    OnExportCount(8)
+    OnExport(index: 0, kind: func, item_index: 11, name: &quot;p1&quot;)
+    OnExport(index: 1, kind: func, item_index: 12, name: &quot;p2&quot;)
+    OnExport(index: 2, kind: func, item_index: 13, name: &quot;p3&quot;)
+    OnExport(index: 3, kind: func, item_index: 13, name: &quot;p4&quot;)
+    OnExport(index: 4, kind: func, item_index: 14, name: &quot;p5&quot;)
+    OnExport(index: 5, kind: func, item_index: 15, name: &quot;p6&quot;)
+    OnExport(index: 6, kind: func, item_index: 18, name: &quot;print32&quot;)
+    OnExport(index: 7, kind: func, item_index: 19, name: &quot;print64&quot;)
+  EndExportSection
+  BeginElemSection(8)
+    OnElemSegmentCount(1)
+    BeginElemSegment(index: 0, table_index: 0, flags: 0)
+    BeginElemSegmentInitExpr(0)
+    OnI32ConstExpr(0 (0x0))
+    OnEndExpr
+    EndElemSegmentInitExpr(0)
+    OnElemSegmentElemType(index: 0, type: funcref)
+    OnElemSegmentElemExprCount(index: 0, count: 2)
+    BeginElemExpr(elem_index: 0, expr_index: 0)
+    OnRefFuncExpr(2)
+    OnEndExpr
+    EndElemExpr(elem_index: 0, expr_index: 0)
+    BeginElemExpr(elem_index: 0, expr_index: 1)
+    OnRefFuncExpr(5)
+    OnEndExpr
+    EndElemExpr(elem_index: 0, expr_index: 1)
+    EndElemSegment(0)
+  EndElemSection
+  BeginCodeSection(104)
+    OnFunctionBodyCount(2)
+    BeginFunctionBody(18, size:44)
+    OnLocalDeclCount(1)
+    OnLocalDecl(index: 0, count: 1, type: f32)
+    EndFunctionBody(18)
+    BeginFunctionBody(19, size:57)
+    OnLocalDeclCount(1)
+    OnLocalDecl(index: 0, count: 1, type: f64)
+    EndFunctionBody(19)
+  EndCodeSection
+EndModule
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2 do-not-highlightme"><code>00000000: 00 61 73 6D 01 00 00 00  .asm....
+00000008: 01 24 08 60 01 7F 00 60  .$.&#x60;...&#x60;
+00000010: 01 7E 00 60 01 7D 00 60  .~.&#x60;.}.&#x60;
+00000018: 01 7C 00 60 01 7F 00 60  .|.&#x60;...&#x60;
+00000020: 02 7F 7D 00 60 02 7C 7C  ..}.&#x60;.||
+00000028: 00 60 01 7E 01 7E 02 83  .&#x60;.~.~..
+00000030: 03 12 08 73 70 65 63 74  ...spect
+00000038: 65 73 74 09 70 72 69 6E  est.prin
+00000040: 74 5F 69 33 32 00 00 08  t_i32...
+00000048: 73 70 65 63 74 65 73 74  spectest
+00000050: 09 70 72 69 6E 74 5F 69  .print_i
+00000058: 36 34 00 01 08 73 70 65  64...spe
+00000060: 63 74 65 73 74 09 70 72  ctest.pr
+00000068: 69 6E 74 5F 69 33 32 00  int_i32.
+00000070: 00 08 73 70 65 63 74 65  ..specte
+00000078: 73 74 09 70 72 69 6E 74  st.print
+00000080: 5F 69 36 34 00 01 08 73  _i64...s
+00000088: 70 65 63 74 65 73 74 09  pectest.
+00000090: 70 72 69 6E 74 5F 66 33  print_f3
+00000098: 32 00 02 08 73 70 65 63  2...spec
+000000a0: 74 65 73 74 09 70 72 69  test.pri
+000000a8: 6E 74 5F 66 36 34 00 03  nt_f64..
+000000b0: 08 73 70 65 63 74 65 73  .spectes
+000000b8: 74 0D 70 72 69 6E 74 5F  t.print_
+000000c0: 69 33 32 5F 66 33 32 00  i32_f32.
+000000c8: 05 08 73 70 65 63 74 65  ..specte
+000000d0: 73 74 0D 70 72 69 6E 74  st.print
+000000d8: 5F 66 36 34 5F 66 36 34  _f64_f64
+000000e0: 00 06 08 73 70 65 63 74  ...spect
+000000e8: 65 73 74 09 70 72 69 6E  est.prin
+000000f0: 74 5F 69 33 32 00 00 08  t_i32...
+000000f8: 73 70 65 63 74 65 73 74  spectest
+00000100: 09 70 72 69 6E 74 5F 66  .print_f
+00000108: 36 34 00 03 04 74 65 73  64...tes
+00000110: 74 0D 66 75 6E 63 2D 69  t.func-i
+00000118: 36 34 2D 3E 69 36 34 00  64-&gt;i64.
+00000120: 07 08 73 70 65 63 74 65  ..specte
+00000128: 73 74 09 70 72 69 6E 74  st.print
+00000130: 5F 69 33 32 00 00 08 73  _i32...s
+00000138: 70 65 63 74 65 73 74 09  pectest.
+00000140: 70 72 69 6E 74 5F 69 33  print_i3
+00000148: 32 00 00 08 73 70 65 63  2...spec
+00000150: 74 65 73 74 09 70 72 69  test.pri
+00000158: 6E 74 5F 69 33 32 00 00  nt_i32..
+00000160: 08 73 70 65 63 74 65 73  .spectes
+00000168: 74 09 70 72 69 6E 74 5F  t.print_
+00000170: 69 33 32 00 00 08 73 70  i32...sp
+00000178: 65 63 74 65 73 74 09 70  ectest.p
+00000180: 72 69 6E 74 5F 69 33 32  rint_i32
+00000188: 00 00 08 73 70 65 63 74  ...spect
+00000190: 65 73 74 09 70 72 69 6E  est.prin
+00000198: 74 5F 69 33 32 00 04 08  t_i32...
+000001a0: 73 70 65 63 74 65 73 74  spectest
+000001a8: 09 70 72 69 6E 74 5F 69  .print_i
+000001b0: 33 32 00 04 03 03 02 00  32......
+000001b8: 01 04 05 01 70 01 02 02  ....p...
+000001c0: 07 33 08 02 70 31 00 0B  .3..p1..
+000001c8: 02 70 32 00 0C 02 70 33  .p2...p3
+000001d0: 00 0D 02 70 34 00 0D 02  ...p4...
+000001d8: 70 35 00 0E 02 70 36 00  p5...p6.
+000001e0: 0F 07 70 72 69 6E 74 33  ..print3
+000001e8: 32 00 12 07 70 72 69 6E  2...prin
+000001f0: 74 36 34 00 13 09 08 01  t64.....
+000001f8: 00 41 00 0B 02 02 05 0A  .A......
+00000200: 68 02 2C 01 01 7D 20 00  h.,..} .
+00000208: B2 21 01 20 00 10 00 20  .!. ... 
+00000210: 00 41 01 6A 43 00 00 28  .A.jC..(
+00000218: 42 10 06 20 00 10 02 20  B.. ... 
+00000220: 00 10 08 20 01 10 04 20  ... ... 
+00000228: 00 41 00 11 00 00 0B 39  .A.....9
+00000230: 01 01 7C 20 00 10 0A B9  ..| ....
+00000238: 21 01 20 00 10 01 20 01  !. ... .
+00000240: 44 00 00 00 00 00 00 F0  D.......
+00000248: 3F A0 44 00 00 00 00 00  ?.D.....
+00000250: 80 4A 40 10 07 20 00 10  .J@.. ..
+00000258: 03 20 01 10 05 20 01 10  . ... ..
+00000260: 09 20 01 41 01 11 03 00  . .A....
+00000268: 0B                       .
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2"><code>(module
+  (type (;0;) (func (param i32)))
+  (type (;1;) (func (param i64)))
+  (type (;2;) (func (param f32)))
+  (type (;3;) (func (param f64)))
+  (type (;4;) (func (param i32)))
+  (type (;5;) (func (param i32 f32)))
+  (type (;6;) (func (param f64 f64)))
+  (type (;7;) (func (param i64) (result i64)))
+  (import &quot;spectest&quot; &quot;print_i32&quot; (func (;0;) (type 0)))
+  (import &quot;spectest&quot; &quot;print_i64&quot; (func (;1;) (type 1)))
+  (import &quot;spectest&quot; &quot;print_i32&quot; (func (;2;) (type 0)))
+  (import &quot;spectest&quot; &quot;print_i64&quot; (func (;3;) (type 1)))
+  (import &quot;spectest&quot; &quot;print_f32&quot; (func (;4;) (type 2)))
+  (import &quot;spectest&quot; &quot;print_f64&quot; (func (;5;) (type 3)))
+  (import &quot;spectest&quot; &quot;print_i32_f32&quot; (func (;6;) (type 5)))
+  (import &quot;spectest&quot; &quot;print_f64_f64&quot; (func (;7;) (type 6)))
+  (import &quot;spectest&quot; &quot;print_i32&quot; (func (;8;) (type 0)))
+  (import &quot;spectest&quot; &quot;print_f64&quot; (func (;9;) (type 3)))
+  (import &quot;test&quot; &quot;func-i64-&gt;i64&quot; (func (;10;) (type 7)))
+  (import &quot;spectest&quot; &quot;print_i32&quot; (func (;11;) (type 0)))
+  (import &quot;spectest&quot; &quot;print_i32&quot; (func (;12;) (type 0)))
+  (import &quot;spectest&quot; &quot;print_i32&quot; (func (;13;) (type 0)))
+  (import &quot;spectest&quot; &quot;print_i32&quot; (func (;14;) (type 0)))
+  (import &quot;spectest&quot; &quot;print_i32&quot; (func (;15;) (type 0)))
+  (import &quot;spectest&quot; &quot;print_i32&quot; (func (;16;) (type 4)))
+  (import &quot;spectest&quot; &quot;print_i32&quot; (func (;17;) (type 4)))
+  (func (;18;) (type 0) (param i32)
+    (local f32)
+    local.get 0
+    f32.convert_i32_s
+    local.set 1
+    local.get 0
+    call 0
+    local.get 0
+    i32.const 1
+    i32.add
+    f32.const 0x1.5p+5 (;&#x3D;42;)
+    call 6
+    local.get 0
+    call 2
+    local.get 0
+    call 8
+    local.get 1
+    call 4
+    local.get 0
+    i32.const 0
+    call_indirect (type 0))
+  (func (;19;) (type 1) (param i64)
+    (local f64)
+    local.get 0
+    call 10
+    f64.convert_i64_s
+    local.set 1
+    local.get 0
+    call 1
+    local.get 1
+    f64.const 0x1p+0 (;&#x3D;1;)
+    f64.add
+    f64.const 0x1.a8p+5 (;&#x3D;53;)
+    call 7
+    local.get 0
+    call 3
+    local.get 1
+    call 5
+    local.get 1
+    call 9
+    local.get 1
+    i32.const 1
+    call_indirect (type 3))
+  (table (;0;) 2 2 funcref)
+  (export &quot;p1&quot; (func 11))
+  (export &quot;p2&quot; (func 12))
+  (export &quot;p3&quot; (func 13))
+  (export &quot;p4&quot; (func 13))
+  (export &quot;p5&quot; (func 14))
+  (export &quot;p6&quot; (func 15))
+  (export &quot;print32&quot; (func 18))
+  (export &quot;print64&quot; (func 19))
+  (elem (;0;) (i32.const 0) func 2 5))
+</code></pre>
+    </div>
+</body>
+
+</html>

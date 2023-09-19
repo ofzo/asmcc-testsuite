@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asmcc binary-leb128.14</title>
+
+    <link rel="stylesheet" href="//unpkg.com/@highlightjs/cdn-assets@11.7.0/styles/github.min.css">
+    <script src="//unpkg.com/@highlightjs/cdn-assets@11.7.0/highlight.min.js"></script>
+    <script>
+        hljs.configure({
+            noHighlightRe: /^do-not-highlightme$/i,
+        });
+    </script>
+    <script>hljs.highlightAll();</script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="/_vercel/insights/script.js"></script>
+</head>
+
+<body class="text-sm p-2">
+    <h1 class="text-2xl  w-full mb-4">Anaylzer: <a href="/binary-leb128.14.wasm">binary-leb128.14.wasm</a></h1>
+    <div class="flex justify-evenly">
+        <pre class="p-4 overflow-scroll border-2"><code>
+binary-leb128.14.wasm:	file format wasm 0x1
+
+Sections:
+
+     Type start&#x3D;0x0000000a end&#x3D;0x0000000e (size&#x3D;0x00000004) count: 1
+ Function start&#x3D;0x00000010 end&#x3D;0x00000012 (size&#x3D;0x00000002) count: 1
+   Export start&#x3D;0x00000014 end&#x3D;0x0000001b (size&#x3D;0x00000007) count: 1
+     Code start&#x3D;0x0000001d end&#x3D;0x00000021 (size&#x3D;0x00000004) count: 1
+
+Section Details:
+
+Type[1]:
+ - type[0] () -&gt; nil
+Function[1]:
+ - func[0] sig&#x3D;0 &lt;f1&gt;
+Export[1]:
+ - func[0] &lt;f1&gt; -&gt; &quot;f1&quot;
+Code[1]:
+ - func[0] size&#x3D;2 &lt;f1&gt;
+
+Contents of section Type:
+000000a: 0160 0000                                .&#x60;..
+
+Contents of section Function:
+0000010: 0100                                     ..
+
+Contents of section Export:
+0000014: 0182 0066 3100 00                        ...f1..
+
+Contents of section Code:
+000001d: 0102 000b                                ....
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2"><code>BeginModule(version: 1)
+  BeginTypeSection(4)
+    OnTypeCount(1)
+    OnFuncType(index: 0, params: [], results: [])
+  EndTypeSection
+  BeginFunctionSection(2)
+    OnFunctionCount(1)
+    OnFunction(index: 0, sig_index: 0)
+  EndFunctionSection
+  BeginExportSection(7)
+    OnExportCount(1)
+    OnExport(index: 0, kind: func, item_index: 0, name: &quot;f1&quot;)
+  EndExportSection
+  BeginCodeSection(4)
+    OnFunctionBodyCount(1)
+    BeginFunctionBody(0, size:2)
+    OnLocalDeclCount(0)
+    EndFunctionBody(0)
+  EndCodeSection
+EndModule
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2 do-not-highlightme"><code>00000000: 00 61 73 6D 01 00 00 00  .asm....
+00000008: 01 04 01 60 00 00 03 02  ...&#x60;....
+00000010: 01 00 07 07 01 82 00 66  .......f
+00000018: 31 00 00 0A 04 01 02 00  1.......
+00000020: 0B                       .
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2"><code>(module
+  (type (;0;) (func))
+  (func (;0;) (type 0))
+  (export &quot;f1&quot; (func 0)))
+</code></pre>
+    </div>
+</body>
+
+</html>

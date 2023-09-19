@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asmcc elem.61</title>
+
+    <link rel="stylesheet" href="//unpkg.com/@highlightjs/cdn-assets@11.7.0/styles/github.min.css">
+    <script src="//unpkg.com/@highlightjs/cdn-assets@11.7.0/highlight.min.js"></script>
+    <script>
+        hljs.configure({
+            noHighlightRe: /^do-not-highlightme$/i,
+        });
+    </script>
+    <script>hljs.highlightAll();</script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="/_vercel/insights/script.js"></script>
+</head>
+
+<body class="text-sm p-2">
+    <h1 class="text-2xl  w-full mb-4">Anaylzer: <a href="/elem.61.wasm">elem.61.wasm</a></h1>
+    <div class="flex justify-evenly">
+        <pre class="p-4 overflow-scroll border-2"><code>
+elem.61.wasm:	file format wasm 0x1
+
+Sections:
+
+     Type start&#x3D;0x0000000a end&#x3D;0x0000000f (size&#x3D;0x00000005) count: 1
+   Import start&#x3D;0x00000011 end&#x3D;0x0000002b (size&#x3D;0x0000001a) count: 1
+ Function start&#x3D;0x0000002d end&#x3D;0x00000030 (size&#x3D;0x00000003) count: 2
+     Elem start&#x3D;0x00000032 end&#x3D;0x0000003f (size&#x3D;0x0000000d) count: 2
+     Code start&#x3D;0x00000041 end&#x3D;0x0000004e (size&#x3D;0x0000000d) count: 2
+
+Section Details:
+
+Type[1]:
+ - type[0] () -&gt; i32
+Import[1]:
+ - table[0] type&#x3D;funcref initial&#x3D;10 &lt;- module1.shared-table
+Function[2]:
+ - func[0] sig&#x3D;0
+ - func[1] sig&#x3D;0
+Elem[2]:
+ - segment[0] flags&#x3D;0 table&#x3D;0 count&#x3D;1 - init i32&#x3D;8
+  - elem[8] &#x3D; ref.func:0
+ - segment[1] flags&#x3D;0 table&#x3D;0 count&#x3D;1 - init i32&#x3D;9
+  - elem[9] &#x3D; ref.func:1
+Code[2]:
+ - func[0] size&#x3D;5
+ - func[1] size&#x3D;5
+
+Contents of section Type:
+000000a: 0160 0001 7f                             .&#x60;...
+
+Contents of section Import:
+0000011: 0107 6d6f 6475 6c65 310c 7368 6172 6564  ..module1.shared
+0000021: 2d74 6162 6c65 0170 000a                 -table.p..
+
+Contents of section Function:
+000002d: 0200 00                                  ...
+
+Contents of section Elem:
+0000032: 0200 4108 0b01 0000 4109 0b01 01         ..A.....A....
+
+Contents of section Code:
+0000041: 0205 0041 c500 0b05 0041 c600 0b         ...A.....A...
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2"><code>BeginModule(version: 1)
+  BeginTypeSection(5)
+    OnTypeCount(1)
+    OnFuncType(index: 0, params: [], results: [i32])
+  EndTypeSection
+  BeginImportSection(26)
+    OnImportCount(1)
+    OnImport(index: 0, kind: table, module: &quot;module1&quot;, field: &quot;shared-table&quot;)
+    OnImportTable(import_index: 0, table_index: 0, elem_type: funcref, initial: 10)
+  EndImportSection
+  BeginFunctionSection(3)
+    OnFunctionCount(2)
+    OnFunction(index: 0, sig_index: 0)
+    OnFunction(index: 1, sig_index: 0)
+  EndFunctionSection
+  BeginElemSection(13)
+    OnElemSegmentCount(2)
+    BeginElemSegment(index: 0, table_index: 0, flags: 0)
+    BeginElemSegmentInitExpr(0)
+    OnI32ConstExpr(8 (0x8))
+    OnEndExpr
+    EndElemSegmentInitExpr(0)
+    OnElemSegmentElemType(index: 0, type: funcref)
+    OnElemSegmentElemExprCount(index: 0, count: 1)
+    BeginElemExpr(elem_index: 0, expr_index: 0)
+    OnRefFuncExpr(0)
+    OnEndExpr
+    EndElemExpr(elem_index: 0, expr_index: 0)
+    EndElemSegment(0)
+    BeginElemSegment(index: 1, table_index: 0, flags: 0)
+    BeginElemSegmentInitExpr(1)
+    OnI32ConstExpr(9 (0x9))
+    OnEndExpr
+    EndElemSegmentInitExpr(1)
+    OnElemSegmentElemType(index: 1, type: funcref)
+    OnElemSegmentElemExprCount(index: 1, count: 1)
+    BeginElemExpr(elem_index: 1, expr_index: 0)
+    OnRefFuncExpr(1)
+    OnEndExpr
+    EndElemExpr(elem_index: 1, expr_index: 0)
+    EndElemSegment(1)
+  EndElemSection
+  BeginCodeSection(13)
+    OnFunctionBodyCount(2)
+    BeginFunctionBody(0, size:5)
+    OnLocalDeclCount(0)
+    EndFunctionBody(0)
+    BeginFunctionBody(1, size:5)
+    OnLocalDeclCount(0)
+    EndFunctionBody(1)
+  EndCodeSection
+EndModule
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2 do-not-highlightme"><code>00000000: 00 61 73 6D 01 00 00 00  .asm....
+00000008: 01 05 01 60 00 01 7F 02  ...&#x60;....
+00000010: 1A 01 07 6D 6F 64 75 6C  ...modul
+00000018: 65 31 0C 73 68 61 72 65  e1.share
+00000020: 64 2D 74 61 62 6C 65 01  d-table.
+00000028: 70 00 0A 03 03 02 00 00  p.......
+00000030: 09 0D 02 00 41 08 0B 01  ....A...
+00000038: 00 00 41 09 0B 01 01 0A  ..A.....
+00000040: 0D 02 05 00 41 C5 00 0B  ....A...
+00000048: 05 00 41 C6 00 0B        ..A...
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2"><code>(module
+  (type (;0;) (func (result i32)))
+  (import &quot;module1&quot; &quot;shared-table&quot; (table (;0;) 10 funcref))
+  (func (;0;) (type 0) (result i32)
+    i32.const 69)
+  (func (;1;) (type 0) (result i32)
+    i32.const 70)
+  (elem (;0;) (i32.const 8) func 0)
+  (elem (;1;) (i32.const 9) func 1))
+</code></pre>
+    </div>
+</body>
+
+</html>

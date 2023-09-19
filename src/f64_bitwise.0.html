@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asmcc f64_bitwise.0</title>
+
+    <link rel="stylesheet" href="//unpkg.com/@highlightjs/cdn-assets@11.7.0/styles/github.min.css">
+    <script src="//unpkg.com/@highlightjs/cdn-assets@11.7.0/highlight.min.js"></script>
+    <script>
+        hljs.configure({
+            noHighlightRe: /^do-not-highlightme$/i,
+        });
+    </script>
+    <script>hljs.highlightAll();</script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="/_vercel/insights/script.js"></script>
+</head>
+
+<body class="text-sm p-2">
+    <h1 class="text-2xl  w-full mb-4">Anaylzer: <a href="/f64_bitwise.0.wasm">f64_bitwise.0.wasm</a></h1>
+    <div class="flex justify-evenly">
+        <pre class="p-4 overflow-scroll border-2"><code>
+f64_bitwise.0.wasm:	file format wasm 0x1
+
+Sections:
+
+     Type start&#x3D;0x0000000a end&#x3D;0x00000016 (size&#x3D;0x0000000c) count: 2
+ Function start&#x3D;0x00000018 end&#x3D;0x0000001c (size&#x3D;0x00000004) count: 3
+   Export start&#x3D;0x0000001e end&#x3D;0x00000036 (size&#x3D;0x00000018) count: 3
+     Code start&#x3D;0x00000038 end&#x3D;0x0000004d (size&#x3D;0x00000015) count: 3
+
+Section Details:
+
+Type[2]:
+ - type[0] (f64) -&gt; f64
+ - type[1] (f64, f64) -&gt; f64
+Function[3]:
+ - func[0] sig&#x3D;0 &lt;abs&gt;
+ - func[1] sig&#x3D;0 &lt;neg&gt;
+ - func[2] sig&#x3D;1 &lt;copysign&gt;
+Export[3]:
+ - func[0] &lt;abs&gt; -&gt; &quot;abs&quot;
+ - func[1] &lt;neg&gt; -&gt; &quot;neg&quot;
+ - func[2] &lt;copysign&gt; -&gt; &quot;copysign&quot;
+Code[3]:
+ - func[0] size&#x3D;5 &lt;abs&gt;
+ - func[1] size&#x3D;5 &lt;neg&gt;
+ - func[2] size&#x3D;7 &lt;copysign&gt;
+
+Contents of section Type:
+000000a: 0260 017c 017c 6002 7c7c 017c            .&#x60;.|.|&#x60;.||.|
+
+Contents of section Function:
+0000018: 0300 0001                                ....
+
+Contents of section Export:
+000001e: 0303 6162 7300 0003 6e65 6700 0108 636f  ..abs...neg...co
+000002e: 7079 7369 676e 0002                      pysign..
+
+Contents of section Code:
+0000038: 0305 0020 0099 0b05 0020 009a 0b07 0020  ... ..... ..... 
+0000048: 0020 01a6 0b                             . ...
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2"><code>BeginModule(version: 1)
+  BeginTypeSection(12)
+    OnTypeCount(2)
+    OnFuncType(index: 0, params: [f64], results: [f64])
+    OnFuncType(index: 1, params: [f64, f64], results: [f64])
+  EndTypeSection
+  BeginFunctionSection(4)
+    OnFunctionCount(3)
+    OnFunction(index: 0, sig_index: 0)
+    OnFunction(index: 1, sig_index: 0)
+    OnFunction(index: 2, sig_index: 1)
+  EndFunctionSection
+  BeginExportSection(24)
+    OnExportCount(3)
+    OnExport(index: 0, kind: func, item_index: 0, name: &quot;abs&quot;)
+    OnExport(index: 1, kind: func, item_index: 1, name: &quot;neg&quot;)
+    OnExport(index: 2, kind: func, item_index: 2, name: &quot;copysign&quot;)
+  EndExportSection
+  BeginCodeSection(21)
+    OnFunctionBodyCount(3)
+    BeginFunctionBody(0, size:5)
+    OnLocalDeclCount(0)
+    EndFunctionBody(0)
+    BeginFunctionBody(1, size:5)
+    OnLocalDeclCount(0)
+    EndFunctionBody(1)
+    BeginFunctionBody(2, size:7)
+    OnLocalDeclCount(0)
+    EndFunctionBody(2)
+  EndCodeSection
+EndModule
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2 do-not-highlightme"><code>00000000: 00 61 73 6D 01 00 00 00  .asm....
+00000008: 01 0C 02 60 01 7C 01 7C  ...&#x60;.|.|
+00000010: 60 02 7C 7C 01 7C 03 04  &#x60;.||.|..
+00000018: 03 00 00 01 07 18 03 03  ........
+00000020: 61 62 73 00 00 03 6E 65  abs...ne
+00000028: 67 00 01 08 63 6F 70 79  g...copy
+00000030: 73 69 67 6E 00 02 0A 15  sign....
+00000038: 03 05 00 20 00 99 0B 05  ... ....
+00000040: 00 20 00 9A 0B 07 00 20  . ..... 
+00000048: 00 20 01 A6 0B           . ...
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2"><code>(module
+  (type (;0;) (func (param f64) (result f64)))
+  (type (;1;) (func (param f64 f64) (result f64)))
+  (func (;0;) (type 0) (param f64) (result f64)
+    local.get 0
+    f64.abs)
+  (func (;1;) (type 0) (param f64) (result f64)
+    local.get 0
+    f64.neg)
+  (func (;2;) (type 1) (param f64 f64) (result f64)
+    local.get 0
+    local.get 1
+    f64.copysign)
+  (export &quot;abs&quot; (func 0))
+  (export &quot;neg&quot; (func 1))
+  (export &quot;copysign&quot; (func 2)))
+</code></pre>
+    </div>
+</body>
+
+</html>

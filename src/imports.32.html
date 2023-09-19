@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asmcc imports.32</title>
+
+    <link rel="stylesheet" href="//unpkg.com/@highlightjs/cdn-assets@11.7.0/styles/github.min.css">
+    <script src="//unpkg.com/@highlightjs/cdn-assets@11.7.0/highlight.min.js"></script>
+    <script>
+        hljs.configure({
+            noHighlightRe: /^do-not-highlightme$/i,
+        });
+    </script>
+    <script>hljs.highlightAll();</script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="/_vercel/insights/script.js"></script>
+</head>
+
+<body class="text-sm p-2">
+    <h1 class="text-2xl  w-full mb-4">Anaylzer: <a href="/imports.32.wasm">imports.32.wasm</a></h1>
+    <div class="flex justify-evenly">
+        <pre class="p-4 overflow-scroll border-2"><code>
+imports.32.wasm:	file format wasm 0x1
+
+Sections:
+
+     Type start&#x3D;0x0000000a end&#x3D;0x0000000e (size&#x3D;0x00000004) count: 1
+   Import start&#x3D;0x00000010 end&#x3D;0x00000025 (size&#x3D;0x00000015) count: 1
+
+Section Details:
+
+Type[1]:
+ - type[0] () -&gt; nil
+Import[1]:
+ - func[0] sig&#x3D;0 &lt;test.memory-2-inf&gt; &lt;- test.memory-2-inf
+
+Contents of section Type:
+000000a: 0160 0000                                .&#x60;..
+
+Contents of section Import:
+0000010: 0104 7465 7374 0c6d 656d 6f72 792d 322d  ..test.memory-2-
+0000020: 696e 6600 00                             inf..
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2"><code>BeginModule(version: 1)
+  BeginTypeSection(4)
+    OnTypeCount(1)
+    OnFuncType(index: 0, params: [], results: [])
+  EndTypeSection
+  BeginImportSection(21)
+    OnImportCount(1)
+    OnImport(index: 0, kind: func, module: &quot;test&quot;, field: &quot;memory-2-inf&quot;)
+    OnImportFunc(import_index: 0, func_index: 0, sig_index: 0)
+  EndImportSection
+EndModule
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2 do-not-highlightme"><code>00000000: 00 61 73 6D 01 00 00 00  .asm....
+00000008: 01 04 01 60 00 00 02 15  ...&#x60;....
+00000010: 01 04 74 65 73 74 0C 6D  ..test.m
+00000018: 65 6D 6F 72 79 2D 32 2D  emory-2-
+00000020: 69 6E 66 00 00           inf..
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2"><code>(module
+  (type (;0;) (func))
+  (import &quot;test&quot; &quot;memory-2-inf&quot; (func (;0;) (type 0))))
+</code></pre>
+    </div>
+</body>
+
+</html>

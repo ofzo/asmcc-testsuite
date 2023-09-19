@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asmcc simd_bit_shift.1</title>
+
+    <link rel="stylesheet" href="//unpkg.com/@highlightjs/cdn-assets@11.7.0/styles/github.min.css">
+    <script src="//unpkg.com/@highlightjs/cdn-assets@11.7.0/highlight.min.js"></script>
+    <script>
+        hljs.configure({
+            noHighlightRe: /^do-not-highlightme$/i,
+        });
+    </script>
+    <script>hljs.highlightAll();</script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="/_vercel/insights/script.js"></script>
+</head>
+
+<body class="text-sm p-2">
+    <h1 class="text-2xl  w-full mb-4">Anaylzer: <a href="/simd_bit_shift.1.wasm">simd_bit_shift.1.wasm</a></h1>
+    <div class="flex justify-evenly">
+        <pre class="p-4 overflow-scroll border-2"><code>
+simd_bit_shift.1.wasm:	file format wasm 0x1
+
+Sections:
+
+     Type start&#x3D;0x0000000a end&#x3D;0x0000000e (size&#x3D;0x00000004) count: 1
+ Function start&#x3D;0x00000010 end&#x3D;0x00000029 (size&#x3D;0x00000019) count: 24
+   Memory start&#x3D;0x0000002b end&#x3D;0x0000002e (size&#x3D;0x00000003) count: 1
+   Export start&#x3D;0x00000031 end&#x3D;0x00000232 (size&#x3D;0x00000201) count: 24
+     Code start&#x3D;0x00000235 end&#x3D;0x00000476 (size&#x3D;0x00000241) count: 24
+
+Section Details:
+
+Type[1]:
+ - type[0] () -&gt; nil
+Function[24]:
+ - func[0] sig&#x3D;0 &lt;i8x16.shl-in-block&gt;
+ - func[1] sig&#x3D;0 &lt;i8x16.shr_s-in-block&gt;
+ - func[2] sig&#x3D;0 &lt;i8x16.shr_u-in-block&gt;
+ - func[3] sig&#x3D;0 &lt;i16x8.shl-in-block&gt;
+ - func[4] sig&#x3D;0 &lt;i16x8.shr_s-in-block&gt;
+ - func[5] sig&#x3D;0 &lt;i16x8.shr_u-in-block&gt;
+ - func[6] sig&#x3D;0 &lt;i32x4.shl-in-block&gt;
+ - func[7] sig&#x3D;0 &lt;i32x4.shr_s-in-block&gt;
+ - func[8] sig&#x3D;0 &lt;i32x4.shr_u-in-block&gt;
+ - func[9] sig&#x3D;0 &lt;i64x2.shl-in-block&gt;
+ - func[10] sig&#x3D;0 &lt;i64x2.shr_s-in-block&gt;
+ - func[11] sig&#x3D;0 &lt;i64x2.shr_u-in-block&gt;
+ - func[12] sig&#x3D;0 &lt;nested-i8x16.shl&gt;
+ - func[13] sig&#x3D;0 &lt;nested-i8x16.shr_s&gt;
+ - func[14] sig&#x3D;0 &lt;nested-i8x16.shr_u&gt;
+ - func[15] sig&#x3D;0 &lt;nested-i16x8.shl&gt;
+ - func[16] sig&#x3D;0 &lt;nested-i16x8.shr_s&gt;
+ - func[17] sig&#x3D;0 &lt;nested-i16x8.shr_u&gt;
+ - func[18] sig&#x3D;0 &lt;nested-i32x4.shl&gt;
+ - func[19] sig&#x3D;0 &lt;nested-i32x4.shr_s&gt;
+ - func[20] sig&#x3D;0 &lt;nested-i32x4.shr_u&gt;
+ - func[21] sig&#x3D;0 &lt;nested-i64x2.shl&gt;
+ - func[22] sig&#x3D;0 &lt;nested-i64x2.shr_s&gt;
+ - func[23] sig&#x3D;0 &lt;nested-i64x2.shr_u&gt;
+Memory[1]:
+ - memory[0] pages: initial&#x3D;1
+Export[24]:
+ - func[0] &lt;i8x16.shl-in-block&gt; -&gt; &quot;i8x16.shl-in-block&quot;
+ - func[1] &lt;i8x16.shr_s-in-block&gt; -&gt; &quot;i8x16.shr_s-in-block&quot;
+ - func[2] &lt;i8x16.shr_u-in-block&gt; -&gt; &quot;i8x16.shr_u-in-block&quot;
+ - func[3] &lt;i16x8.shl-in-block&gt; -&gt; &quot;i16x8.shl-in-block&quot;
+ - func[4] &lt;i16x8.shr_s-in-block&gt; -&gt; &quot;i16x8.shr_s-in-block&quot;
+ - func[5] &lt;i16x8.shr_u-in-block&gt; -&gt; &quot;i16x8.shr_u-in-block&quot;
+ - func[6] &lt;i32x4.shl-in-block&gt; -&gt; &quot;i32x4.shl-in-block&quot;
+ - func[7] &lt;i32x4.shr_s-in-block&gt; -&gt; &quot;i32x4.shr_s-in-block&quot;
+ - func[8] &lt;i32x4.shr_u-in-block&gt; -&gt; &quot;i32x4.shr_u-in-block&quot;
+ - func[9] &lt;i64x2.shl-in-block&gt; -&gt; &quot;i64x2.shl-in-block&quot;
+ - func[10] &lt;i64x2.shr_s-in-block&gt; -&gt; &quot;i64x2.shr_s-in-block&quot;
+ - func[11] &lt;i64x2.shr_u-in-block&gt; -&gt; &quot;i64x2.shr_u-in-block&quot;
+ - func[12] &lt;nested-i8x16.shl&gt; -&gt; &quot;nested-i8x16.shl&quot;
+ - func[13] &lt;nested-i8x16.shr_s&gt; -&gt; &quot;nested-i8x16.shr_s&quot;
+ - func[14] &lt;nested-i8x16.shr_u&gt; -&gt; &quot;nested-i8x16.shr_u&quot;
+ - func[15] &lt;nested-i16x8.shl&gt; -&gt; &quot;nested-i16x8.shl&quot;
+ - func[16] &lt;nested-i16x8.shr_s&gt; -&gt; &quot;nested-i16x8.shr_s&quot;
+ - func[17] &lt;nested-i16x8.shr_u&gt; -&gt; &quot;nested-i16x8.shr_u&quot;
+ - func[18] &lt;nested-i32x4.shl&gt; -&gt; &quot;nested-i32x4.shl&quot;
+ - func[19] &lt;nested-i32x4.shr_s&gt; -&gt; &quot;nested-i32x4.shr_s&quot;
+ - func[20] &lt;nested-i32x4.shr_u&gt; -&gt; &quot;nested-i32x4.shr_u&quot;
+ - func[21] &lt;nested-i64x2.shl&gt; -&gt; &quot;nested-i64x2.shl&quot;
+ - func[22] &lt;nested-i64x2.shr_s&gt; -&gt; &quot;nested-i64x2.shr_s&quot;
+ - func[23] &lt;nested-i64x2.shr_u&gt; -&gt; &quot;nested-i64x2.shr_u&quot;
+Code[24]:
+ - func[0] size&#x3D;22 &lt;i8x16.shl-in-block&gt;
+ - func[1] size&#x3D;22 &lt;i8x16.shr_s-in-block&gt;
+ - func[2] size&#x3D;22 &lt;i8x16.shr_u-in-block&gt;
+ - func[3] size&#x3D;23 &lt;i16x8.shl-in-block&gt;
+ - func[4] size&#x3D;23 &lt;i16x8.shr_s-in-block&gt;
+ - func[5] size&#x3D;23 &lt;i16x8.shr_u-in-block&gt;
+ - func[6] size&#x3D;23 &lt;i32x4.shl-in-block&gt;
+ - func[7] size&#x3D;23 &lt;i32x4.shr_s-in-block&gt;
+ - func[8] size&#x3D;23 &lt;i32x4.shr_u-in-block&gt;
+ - func[9] size&#x3D;23 &lt;i64x2.shl-in-block&gt;
+ - func[10] size&#x3D;23 &lt;i64x2.shr_s-in-block&gt;
+ - func[11] size&#x3D;23 &lt;i64x2.shr_u-in-block&gt;
+ - func[12] size&#x3D;21 &lt;nested-i8x16.shl&gt;
+ - func[13] size&#x3D;21 &lt;nested-i8x16.shr_s&gt;
+ - func[14] size&#x3D;21 &lt;nested-i8x16.shr_u&gt;
+ - func[15] size&#x3D;24 &lt;nested-i16x8.shl&gt;
+ - func[16] size&#x3D;24 &lt;nested-i16x8.shr_s&gt;
+ - func[17] size&#x3D;24 &lt;nested-i16x8.shr_u&gt;
+ - func[18] size&#x3D;24 &lt;nested-i32x4.shl&gt;
+ - func[19] size&#x3D;24 &lt;nested-i32x4.shr_s&gt;
+ - func[20] size&#x3D;24 &lt;nested-i32x4.shr_u&gt;
+ - func[21] size&#x3D;24 &lt;nested-i64x2.shl&gt;
+ - func[22] size&#x3D;24 &lt;nested-i64x2.shr_s&gt;
+ - func[23] size&#x3D;24 &lt;nested-i64x2.shr_u&gt;
+
+Contents of section Type:
+000000a: 0160 0000                                .&#x60;..
+
+Contents of section Function:
+0000010: 1800 0000 0000 0000 0000 0000 0000 0000  ................
+0000020: 0000 0000 0000 0000 00                   .........
+
+Contents of section Memory:
+000002b: 0100 01                                  ...
+
+Contents of section Export:
+0000031: 1812 6938 7831 362e 7368 6c2d 696e 2d62  ..i8x16.shl-in-b
+0000041: 6c6f 636b 0000 1469 3878 3136 2e73 6872  lock...i8x16.shr
+0000051: 5f73 2d69 6e2d 626c 6f63 6b00 0114 6938  _s-in-block...i8
+0000061: 7831 362e 7368 725f 752d 696e 2d62 6c6f  x16.shr_u-in-blo
+0000071: 636b 0002 1269 3136 7838 2e73 686c 2d69  ck...i16x8.shl-i
+0000081: 6e2d 626c 6f63 6b00 0314 6931 3678 382e  n-block...i16x8.
+0000091: 7368 725f 732d 696e 2d62 6c6f 636b 0004  shr_s-in-block..
+00000a1: 1469 3136 7838 2e73 6872 5f75 2d69 6e2d  .i16x8.shr_u-in-
+00000b1: 626c 6f63 6b00 0512 6933 3278 342e 7368  block...i32x4.sh
+00000c1: 6c2d 696e 2d62 6c6f 636b 0006 1469 3332  l-in-block...i32
+00000d1: 7834 2e73 6872 5f73 2d69 6e2d 626c 6f63  x4.shr_s-in-bloc
+00000e1: 6b00 0714 6933 3278 342e 7368 725f 752d  k...i32x4.shr_u-
+00000f1: 696e 2d62 6c6f 636b 0008 1269 3634 7832  in-block...i64x2
+0000101: 2e73 686c 2d69 6e2d 626c 6f63 6b00 0914  .shl-in-block...
+0000111: 6936 3478 322e 7368 725f 732d 696e 2d62  i64x2.shr_s-in-b
+0000121: 6c6f 636b 000a 1469 3634 7832 2e73 6872  lock...i64x2.shr
+0000131: 5f75 2d69 6e2d 626c 6f63 6b00 0b10 6e65  _u-in-block...ne
+0000141: 7374 6564 2d69 3878 3136 2e73 686c 000c  sted-i8x16.shl..
+0000151: 126e 6573 7465 642d 6938 7831 362e 7368  .nested-i8x16.sh
+0000161: 725f 7300 0d12 6e65 7374 6564 2d69 3878  r_s...nested-i8x
+0000171: 3136 2e73 6872 5f75 000e 106e 6573 7465  16.shr_u...neste
+0000181: 642d 6931 3678 382e 7368 6c00 0f12 6e65  d-i16x8.shl...ne
+0000191: 7374 6564 2d69 3136 7838 2e73 6872 5f73  sted-i16x8.shr_s
+00001a1: 0010 126e 6573 7465 642d 6931 3678 382e  ...nested-i16x8.
+00001b1: 7368 725f 7500 1110 6e65 7374 6564 2d69  shr_u...nested-i
+00001c1: 3332 7834 2e73 686c 0012 126e 6573 7465  32x4.shl...neste
+00001d1: 642d 6933 3278 342e 7368 725f 7300 1312  d-i32x4.shr_s...
+00001e1: 6e65 7374 6564 2d69 3332 7834 2e73 6872  nested-i32x4.shr
+00001f1: 5f75 0014 106e 6573 7465 642d 6936 3478  _u...nested-i64x
+0000201: 322e 7368 6c00 1512 6e65 7374 6564 2d69  2.shl...nested-i
+0000211: 3634 7832 2e73 6872 5f73 0016 126e 6573  64x2.shr_s...nes
+0000221: 7465 642d 6936 3478 322e 7368 725f 7500  ted-i64x2.shr_u.
+0000231: 17                                       .
+
+Contents of section Code:
+0000235: 1816 0002 4002 7b02 7b41 00fd 0004 000b  ....@.{.{A......
+0000245: 4101 fd6b 0b1a 0b0b 1600 0240 027b 027b  A..k.......@.{.{
+0000255: 4100 fd00 0400 0b41 01fd 6c0b 1a0b 0b16  A......A..l.....
+0000265: 0002 4002 7b02 7b41 00fd 0004 000b 4101  ..@.{.{A......A.
+0000275: fd6d 0b1a 0b0b 1700 0240 027b 027b 4100  .m.......@.{.{A.
+0000285: fd00 0400 0b41 01fd 8b01 0b1a 0b0b 1700  .....A..........
+0000295: 0240 027b 027b 4100 fd00 0400 0b41 01fd  .@.{.{A......A..
+00002a5: 8c01 0b1a 0b0b 1700 0240 027b 027b 4100  .........@.{.{A.
+00002b5: fd00 0400 0b41 01fd 8d01 0b1a 0b0b 1700  .....A..........
+00002c5: 0240 027b 027b 4100 fd00 0400 0b41 01fd  .@.{.{A......A..
+00002d5: ab01 0b1a 0b0b 1700 0240 027b 027b 4100  .........@.{.{A.
+00002e5: fd00 0400 0b41 01fd ac01 0b1a 0b0b 1700  .....A..........
+00002f5: 0240 027b 027b 4100 fd00 0400 0b41 01fd  .@.{.{A......A..
+0000305: ad01 0b1a 0b0b 1700 0240 027b 027b 4100  .........@.{.{A.
+0000315: fd00 0400 0b41 01fd cb01 0b1a 0b0b 1700  .....A..........
+0000325: 0240 027b 027b 4100 fd00 0400 0b41 01fd  .@.{.{A......A..
+0000335: cc01 0b1a 0b0b 1700 0240 027b 027b 4100  .........@.{.{A.
+0000345: fd00 0400 0b41 01fd cd01 0b1a 0b0b 1500  .....A..........
+0000355: 4100 fd00 0400 4101 fd6b 4101 fd6b 4101  A.....A..kA..kA.
+0000365: fd6b 1a0b 1500 4100 fd00 0400 4101 fd6c  .k....A.....A..l
+0000375: 4101 fd6c 4101 fd6c 1a0b 1500 4100 fd00  A..lA..l....A...
+0000385: 0400 4101 fd6d 4101 fd6d 4101 fd6d 1a0b  ..A..mA..mA..m..
+0000395: 1800 4100 fd00 0400 4101 fd8b 0141 01fd  ..A.....A....A..
+00003a5: 8b01 4101 fd8b 011a 0b18 0041 00fd 0004  ..A........A....
+00003b5: 0041 01fd 8c01 4101 fd8c 0141 01fd 8c01  .A....A....A....
+00003c5: 1a0b 1800 4100 fd00 0400 4101 fd8d 0141  ....A.....A....A
+00003d5: 01fd 8d01 4101 fd8d 011a 0b18 0041 00fd  ....A........A..
+00003e5: 0004 0041 01fd ab01 4101 fdab 0141 01fd  ...A....A....A..
+00003f5: ab01 1a0b 1800 4100 fd00 0400 4101 fdac  ......A.....A...
+0000405: 0141 01fd ac01 4101 fdac 011a 0b18 0041  .A....A........A
+0000415: 00fd 0004 0041 01fd ad01 4101 fdad 0141  .....A....A....A
+0000425: 01fd ad01 1a0b 1800 4100 fd00 0400 4101  ........A.....A.
+0000435: fdcb 0141 01fd cb01 4101 fdcb 011a 0b18  ...A....A.......
+0000445: 0041 00fd 0004 0041 01fd cc01 4101 fdcc  .A.....A....A...
+0000455: 0141 01fd cc01 1a0b 1800 4100 fd00 0400  .A........A.....
+0000465: 4101 fdcd 0141 01fd cd01 4101 fdcd 011a  A....A....A.....
+0000475: 0b                                       .
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2"><code>BeginModule(version: 1)
+  BeginTypeSection(4)
+    OnTypeCount(1)
+    OnFuncType(index: 0, params: [], results: [])
+  EndTypeSection
+  BeginFunctionSection(25)
+    OnFunctionCount(24)
+    OnFunction(index: 0, sig_index: 0)
+    OnFunction(index: 1, sig_index: 0)
+    OnFunction(index: 2, sig_index: 0)
+    OnFunction(index: 3, sig_index: 0)
+    OnFunction(index: 4, sig_index: 0)
+    OnFunction(index: 5, sig_index: 0)
+    OnFunction(index: 6, sig_index: 0)
+    OnFunction(index: 7, sig_index: 0)
+    OnFunction(index: 8, sig_index: 0)
+    OnFunction(index: 9, sig_index: 0)
+    OnFunction(index: 10, sig_index: 0)
+    OnFunction(index: 11, sig_index: 0)
+    OnFunction(index: 12, sig_index: 0)
+    OnFunction(index: 13, sig_index: 0)
+    OnFunction(index: 14, sig_index: 0)
+    OnFunction(index: 15, sig_index: 0)
+    OnFunction(index: 16, sig_index: 0)
+    OnFunction(index: 17, sig_index: 0)
+    OnFunction(index: 18, sig_index: 0)
+    OnFunction(index: 19, sig_index: 0)
+    OnFunction(index: 20, sig_index: 0)
+    OnFunction(index: 21, sig_index: 0)
+    OnFunction(index: 22, sig_index: 0)
+    OnFunction(index: 23, sig_index: 0)
+  EndFunctionSection
+  BeginMemorySection(3)
+    OnMemoryCount(1)
+    OnMemory(index: 0, initial: 1)
+  EndMemorySection
+  BeginExportSection(513)
+    OnExportCount(24)
+    OnExport(index: 0, kind: func, item_index: 0, name: &quot;i8x16.shl-in-block&quot;)
+    OnExport(index: 1, kind: func, item_index: 1, name: &quot;i8x16.shr_s-in-block&quot;)
+    OnExport(index: 2, kind: func, item_index: 2, name: &quot;i8x16.shr_u-in-block&quot;)
+    OnExport(index: 3, kind: func, item_index: 3, name: &quot;i16x8.shl-in-block&quot;)
+    OnExport(index: 4, kind: func, item_index: 4, name: &quot;i16x8.shr_s-in-block&quot;)
+    OnExport(index: 5, kind: func, item_index: 5, name: &quot;i16x8.shr_u-in-block&quot;)
+    OnExport(index: 6, kind: func, item_index: 6, name: &quot;i32x4.shl-in-block&quot;)
+    OnExport(index: 7, kind: func, item_index: 7, name: &quot;i32x4.shr_s-in-block&quot;)
+    OnExport(index: 8, kind: func, item_index: 8, name: &quot;i32x4.shr_u-in-block&quot;)
+    OnExport(index: 9, kind: func, item_index: 9, name: &quot;i64x2.shl-in-block&quot;)
+    OnExport(index: 10, kind: func, item_index: 10, name: &quot;i64x2.shr_s-in-block&quot;)
+    OnExport(index: 11, kind: func, item_index: 11, name: &quot;i64x2.shr_u-in-block&quot;)
+    OnExport(index: 12, kind: func, item_index: 12, name: &quot;nested-i8x16.shl&quot;)
+    OnExport(index: 13, kind: func, item_index: 13, name: &quot;nested-i8x16.shr_s&quot;)
+    OnExport(index: 14, kind: func, item_index: 14, name: &quot;nested-i8x16.shr_u&quot;)
+    OnExport(index: 15, kind: func, item_index: 15, name: &quot;nested-i16x8.shl&quot;)
+    OnExport(index: 16, kind: func, item_index: 16, name: &quot;nested-i16x8.shr_s&quot;)
+    OnExport(index: 17, kind: func, item_index: 17, name: &quot;nested-i16x8.shr_u&quot;)
+    OnExport(index: 18, kind: func, item_index: 18, name: &quot;nested-i32x4.shl&quot;)
+    OnExport(index: 19, kind: func, item_index: 19, name: &quot;nested-i32x4.shr_s&quot;)
+    OnExport(index: 20, kind: func, item_index: 20, name: &quot;nested-i32x4.shr_u&quot;)
+    OnExport(index: 21, kind: func, item_index: 21, name: &quot;nested-i64x2.shl&quot;)
+    OnExport(index: 22, kind: func, item_index: 22, name: &quot;nested-i64x2.shr_s&quot;)
+    OnExport(index: 23, kind: func, item_index: 23, name: &quot;nested-i64x2.shr_u&quot;)
+  EndExportSection
+  BeginCodeSection(577)
+    OnFunctionBodyCount(24)
+    BeginFunctionBody(0, size:22)
+    OnLocalDeclCount(0)
+    EndFunctionBody(0)
+    BeginFunctionBody(1, size:22)
+    OnLocalDeclCount(0)
+    EndFunctionBody(1)
+    BeginFunctionBody(2, size:22)
+    OnLocalDeclCount(0)
+    EndFunctionBody(2)
+    BeginFunctionBody(3, size:23)
+    OnLocalDeclCount(0)
+    EndFunctionBody(3)
+    BeginFunctionBody(4, size:23)
+    OnLocalDeclCount(0)
+    EndFunctionBody(4)
+    BeginFunctionBody(5, size:23)
+    OnLocalDeclCount(0)
+    EndFunctionBody(5)
+    BeginFunctionBody(6, size:23)
+    OnLocalDeclCount(0)
+    EndFunctionBody(6)
+    BeginFunctionBody(7, size:23)
+    OnLocalDeclCount(0)
+    EndFunctionBody(7)
+    BeginFunctionBody(8, size:23)
+    OnLocalDeclCount(0)
+    EndFunctionBody(8)
+    BeginFunctionBody(9, size:23)
+    OnLocalDeclCount(0)
+    EndFunctionBody(9)
+    BeginFunctionBody(10, size:23)
+    OnLocalDeclCount(0)
+    EndFunctionBody(10)
+    BeginFunctionBody(11, size:23)
+    OnLocalDeclCount(0)
+    EndFunctionBody(11)
+    BeginFunctionBody(12, size:21)
+    OnLocalDeclCount(0)
+    EndFunctionBody(12)
+    BeginFunctionBody(13, size:21)
+    OnLocalDeclCount(0)
+    EndFunctionBody(13)
+    BeginFunctionBody(14, size:21)
+    OnLocalDeclCount(0)
+    EndFunctionBody(14)
+    BeginFunctionBody(15, size:24)
+    OnLocalDeclCount(0)
+    EndFunctionBody(15)
+    BeginFunctionBody(16, size:24)
+    OnLocalDeclCount(0)
+    EndFunctionBody(16)
+    BeginFunctionBody(17, size:24)
+    OnLocalDeclCount(0)
+    EndFunctionBody(17)
+    BeginFunctionBody(18, size:24)
+    OnLocalDeclCount(0)
+    EndFunctionBody(18)
+    BeginFunctionBody(19, size:24)
+    OnLocalDeclCount(0)
+    EndFunctionBody(19)
+    BeginFunctionBody(20, size:24)
+    OnLocalDeclCount(0)
+    EndFunctionBody(20)
+    BeginFunctionBody(21, size:24)
+    OnLocalDeclCount(0)
+    EndFunctionBody(21)
+    BeginFunctionBody(22, size:24)
+    OnLocalDeclCount(0)
+    EndFunctionBody(22)
+    BeginFunctionBody(23, size:24)
+    OnLocalDeclCount(0)
+    EndFunctionBody(23)
+  EndCodeSection
+EndModule
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2 do-not-highlightme"><code>00000000: 00 61 73 6D 01 00 00 00  .asm....
+00000008: 01 04 01 60 00 00 03 19  ...&#x60;....
+00000010: 18 00 00 00 00 00 00 00  ........
+00000018: 00 00 00 00 00 00 00 00  ........
+00000020: 00 00 00 00 00 00 00 00  ........
+00000028: 00 05 03 01 00 01 07 81  ........
+00000030: 04 18 12 69 38 78 31 36  ...i8x16
+00000038: 2E 73 68 6C 2D 69 6E 2D  .shl-in-
+00000040: 62 6C 6F 63 6B 00 00 14  block...
+00000048: 69 38 78 31 36 2E 73 68  i8x16.sh
+00000050: 72 5F 73 2D 69 6E 2D 62  r_s-in-b
+00000058: 6C 6F 63 6B 00 01 14 69  lock...i
+00000060: 38 78 31 36 2E 73 68 72  8x16.shr
+00000068: 5F 75 2D 69 6E 2D 62 6C  _u-in-bl
+00000070: 6F 63 6B 00 02 12 69 31  ock...i1
+00000078: 36 78 38 2E 73 68 6C 2D  6x8.shl-
+00000080: 69 6E 2D 62 6C 6F 63 6B  in-block
+00000088: 00 03 14 69 31 36 78 38  ...i16x8
+00000090: 2E 73 68 72 5F 73 2D 69  .shr_s-i
+00000098: 6E 2D 62 6C 6F 63 6B 00  n-block.
+000000a0: 04 14 69 31 36 78 38 2E  ..i16x8.
+000000a8: 73 68 72 5F 75 2D 69 6E  shr_u-in
+000000b0: 2D 62 6C 6F 63 6B 00 05  -block..
+000000b8: 12 69 33 32 78 34 2E 73  .i32x4.s
+000000c0: 68 6C 2D 69 6E 2D 62 6C  hl-in-bl
+000000c8: 6F 63 6B 00 06 14 69 33  ock...i3
+000000d0: 32 78 34 2E 73 68 72 5F  2x4.shr_
+000000d8: 73 2D 69 6E 2D 62 6C 6F  s-in-blo
+000000e0: 63 6B 00 07 14 69 33 32  ck...i32
+000000e8: 78 34 2E 73 68 72 5F 75  x4.shr_u
+000000f0: 2D 69 6E 2D 62 6C 6F 63  -in-bloc
+000000f8: 6B 00 08 12 69 36 34 78  k...i64x
+00000100: 32 2E 73 68 6C 2D 69 6E  2.shl-in
+00000108: 2D 62 6C 6F 63 6B 00 09  -block..
+00000110: 14 69 36 34 78 32 2E 73  .i64x2.s
+00000118: 68 72 5F 73 2D 69 6E 2D  hr_s-in-
+00000120: 62 6C 6F 63 6B 00 0A 14  block...
+00000128: 69 36 34 78 32 2E 73 68  i64x2.sh
+00000130: 72 5F 75 2D 69 6E 2D 62  r_u-in-b
+00000138: 6C 6F 63 6B 00 0B 10 6E  lock...n
+00000140: 65 73 74 65 64 2D 69 38  ested-i8
+00000148: 78 31 36 2E 73 68 6C 00  x16.shl.
+00000150: 0C 12 6E 65 73 74 65 64  ..nested
+00000158: 2D 69 38 78 31 36 2E 73  -i8x16.s
+00000160: 68 72 5F 73 00 0D 12 6E  hr_s...n
+00000168: 65 73 74 65 64 2D 69 38  ested-i8
+00000170: 78 31 36 2E 73 68 72 5F  x16.shr_
+00000178: 75 00 0E 10 6E 65 73 74  u...nest
+00000180: 65 64 2D 69 31 36 78 38  ed-i16x8
+00000188: 2E 73 68 6C 00 0F 12 6E  .shl...n
+00000190: 65 73 74 65 64 2D 69 31  ested-i1
+00000198: 36 78 38 2E 73 68 72 5F  6x8.shr_
+000001a0: 73 00 10 12 6E 65 73 74  s...nest
+000001a8: 65 64 2D 69 31 36 78 38  ed-i16x8
+000001b0: 2E 73 68 72 5F 75 00 11  .shr_u..
+000001b8: 10 6E 65 73 74 65 64 2D  .nested-
+000001c0: 69 33 32 78 34 2E 73 68  i32x4.sh
+000001c8: 6C 00 12 12 6E 65 73 74  l...nest
+000001d0: 65 64 2D 69 33 32 78 34  ed-i32x4
+000001d8: 2E 73 68 72 5F 73 00 13  .shr_s..
+000001e0: 12 6E 65 73 74 65 64 2D  .nested-
+000001e8: 69 33 32 78 34 2E 73 68  i32x4.sh
+000001f0: 72 5F 75 00 14 10 6E 65  r_u...ne
+000001f8: 73 74 65 64 2D 69 36 34  sted-i64
+00000200: 78 32 2E 73 68 6C 00 15  x2.shl..
+00000208: 12 6E 65 73 74 65 64 2D  .nested-
+00000210: 69 36 34 78 32 2E 73 68  i64x2.sh
+00000218: 72 5F 73 00 16 12 6E 65  r_s...ne
+00000220: 73 74 65 64 2D 69 36 34  sted-i64
+00000228: 78 32 2E 73 68 72 5F 75  x2.shr_u
+00000230: 00 17 0A C1 04 18 16 00  ........
+00000238: 02 40 02 7B 02 7B 41 00  .@.{.{A.
+00000240: FD 00 04 00 0B 41 01 FD  .....A..
+00000248: 6B 0B 1A 0B 0B 16 00 02  k.......
+00000250: 40 02 7B 02 7B 41 00 FD  @.{.{A..
+00000258: 00 04 00 0B 41 01 FD 6C  ....A..l
+00000260: 0B 1A 0B 0B 16 00 02 40  .......@
+00000268: 02 7B 02 7B 41 00 FD 00  .{.{A...
+00000270: 04 00 0B 41 01 FD 6D 0B  ...A..m.
+00000278: 1A 0B 0B 17 00 02 40 02  ......@.
+00000280: 7B 02 7B 41 00 FD 00 04  {.{A....
+00000288: 00 0B 41 01 FD 8B 01 0B  ..A.....
+00000290: 1A 0B 0B 17 00 02 40 02  ......@.
+00000298: 7B 02 7B 41 00 FD 00 04  {.{A....
+000002a0: 00 0B 41 01 FD 8C 01 0B  ..A.....
+000002a8: 1A 0B 0B 17 00 02 40 02  ......@.
+000002b0: 7B 02 7B 41 00 FD 00 04  {.{A....
+000002b8: 00 0B 41 01 FD 8D 01 0B  ..A.....
+000002c0: 1A 0B 0B 17 00 02 40 02  ......@.
+000002c8: 7B 02 7B 41 00 FD 00 04  {.{A....
+000002d0: 00 0B 41 01 FD AB 01 0B  ..A.....
+000002d8: 1A 0B 0B 17 00 02 40 02  ......@.
+000002e0: 7B 02 7B 41 00 FD 00 04  {.{A....
+000002e8: 00 0B 41 01 FD AC 01 0B  ..A.....
+000002f0: 1A 0B 0B 17 00 02 40 02  ......@.
+000002f8: 7B 02 7B 41 00 FD 00 04  {.{A....
+00000300: 00 0B 41 01 FD AD 01 0B  ..A.....
+00000308: 1A 0B 0B 17 00 02 40 02  ......@.
+00000310: 7B 02 7B 41 00 FD 00 04  {.{A....
+00000318: 00 0B 41 01 FD CB 01 0B  ..A.....
+00000320: 1A 0B 0B 17 00 02 40 02  ......@.
+00000328: 7B 02 7B 41 00 FD 00 04  {.{A....
+00000330: 00 0B 41 01 FD CC 01 0B  ..A.....
+00000338: 1A 0B 0B 17 00 02 40 02  ......@.
+00000340: 7B 02 7B 41 00 FD 00 04  {.{A....
+00000348: 00 0B 41 01 FD CD 01 0B  ..A.....
+00000350: 1A 0B 0B 15 00 41 00 FD  .....A..
+00000358: 00 04 00 41 01 FD 6B 41  ...A..kA
+00000360: 01 FD 6B 41 01 FD 6B 1A  ..kA..k.
+00000368: 0B 15 00 41 00 FD 00 04  ...A....
+00000370: 00 41 01 FD 6C 41 01 FD  .A..lA..
+00000378: 6C 41 01 FD 6C 1A 0B 15  lA..l...
+00000380: 00 41 00 FD 00 04 00 41  .A.....A
+00000388: 01 FD 6D 41 01 FD 6D 41  ..mA..mA
+00000390: 01 FD 6D 1A 0B 18 00 41  ..m....A
+00000398: 00 FD 00 04 00 41 01 FD  .....A..
+000003a0: 8B 01 41 01 FD 8B 01 41  ..A....A
+000003a8: 01 FD 8B 01 1A 0B 18 00  ........
+000003b0: 41 00 FD 00 04 00 41 01  A.....A.
+000003b8: FD 8C 01 41 01 FD 8C 01  ...A....
+000003c0: 41 01 FD 8C 01 1A 0B 18  A.......
+000003c8: 00 41 00 FD 00 04 00 41  .A.....A
+000003d0: 01 FD 8D 01 41 01 FD 8D  ....A...
+000003d8: 01 41 01 FD 8D 01 1A 0B  .A......
+000003e0: 18 00 41 00 FD 00 04 00  ..A.....
+000003e8: 41 01 FD AB 01 41 01 FD  A....A..
+000003f0: AB 01 41 01 FD AB 01 1A  ..A.....
+000003f8: 0B 18 00 41 00 FD 00 04  ...A....
+00000400: 00 41 01 FD AC 01 41 01  .A....A.
+00000408: FD AC 01 41 01 FD AC 01  ...A....
+00000410: 1A 0B 18 00 41 00 FD 00  ....A...
+00000418: 04 00 41 01 FD AD 01 41  ..A....A
+00000420: 01 FD AD 01 41 01 FD AD  ....A...
+00000428: 01 1A 0B 18 00 41 00 FD  .....A..
+00000430: 00 04 00 41 01 FD CB 01  ...A....
+00000438: 41 01 FD CB 01 41 01 FD  A....A..
+00000440: CB 01 1A 0B 18 00 41 00  ......A.
+00000448: FD 00 04 00 41 01 FD CC  ....A...
+00000450: 01 41 01 FD CC 01 41 01  .A....A.
+00000458: FD CC 01 1A 0B 18 00 41  .......A
+00000460: 00 FD 00 04 00 41 01 FD  .....A..
+00000468: CD 01 41 01 FD CD 01 41  ..A....A
+00000470: 01 FD CD 01 1A 0B        ......
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2"><code>(module
+  (type (;0;) (func))
+  (func (;0;) (type 0)
+    block  ;; label &#x3D; @1
+      block (result v128)  ;; label &#x3D; @2
+        block (result v128)  ;; label &#x3D; @3
+          i32.const 0
+          v128.load
+        end
+        i32.const 1
+        i8x16.shl
+      end
+      drop
+    end)
+  (func (;1;) (type 0)
+    block  ;; label &#x3D; @1
+      block (result v128)  ;; label &#x3D; @2
+        block (result v128)  ;; label &#x3D; @3
+          i32.const 0
+          v128.load
+        end
+        i32.const 1
+        i8x16.shr_s
+      end
+      drop
+    end)
+  (func (;2;) (type 0)
+    block  ;; label &#x3D; @1
+      block (result v128)  ;; label &#x3D; @2
+        block (result v128)  ;; label &#x3D; @3
+          i32.const 0
+          v128.load
+        end
+        i32.const 1
+        i8x16.shr_u
+      end
+      drop
+    end)
+  (func (;3;) (type 0)
+    block  ;; label &#x3D; @1
+      block (result v128)  ;; label &#x3D; @2
+        block (result v128)  ;; label &#x3D; @3
+          i32.const 0
+          v128.load
+        end
+        i32.const 1
+        i16x8.shl
+      end
+      drop
+    end)
+  (func (;4;) (type 0)
+    block  ;; label &#x3D; @1
+      block (result v128)  ;; label &#x3D; @2
+        block (result v128)  ;; label &#x3D; @3
+          i32.const 0
+          v128.load
+        end
+        i32.const 1
+        i16x8.shr_s
+      end
+      drop
+    end)
+  (func (;5;) (type 0)
+    block  ;; label &#x3D; @1
+      block (result v128)  ;; label &#x3D; @2
+        block (result v128)  ;; label &#x3D; @3
+          i32.const 0
+          v128.load
+        end
+        i32.const 1
+        i16x8.shr_u
+      end
+      drop
+    end)
+  (func (;6;) (type 0)
+    block  ;; label &#x3D; @1
+      block (result v128)  ;; label &#x3D; @2
+        block (result v128)  ;; label &#x3D; @3
+          i32.const 0
+          v128.load
+        end
+        i32.const 1
+        i32x4.shl
+      end
+      drop
+    end)
+  (func (;7;) (type 0)
+    block  ;; label &#x3D; @1
+      block (result v128)  ;; label &#x3D; @2
+        block (result v128)  ;; label &#x3D; @3
+          i32.const 0
+          v128.load
+        end
+        i32.const 1
+        i32x4.shr_s
+      end
+      drop
+    end)
+  (func (;8;) (type 0)
+    block  ;; label &#x3D; @1
+      block (result v128)  ;; label &#x3D; @2
+        block (result v128)  ;; label &#x3D; @3
+          i32.const 0
+          v128.load
+        end
+        i32.const 1
+        i32x4.shr_u
+      end
+      drop
+    end)
+  (func (;9;) (type 0)
+    block  ;; label &#x3D; @1
+      block (result v128)  ;; label &#x3D; @2
+        block (result v128)  ;; label &#x3D; @3
+          i32.const 0
+          v128.load
+        end
+        i32.const 1
+        i64x2.shl
+      end
+      drop
+    end)
+  (func (;10;) (type 0)
+    block  ;; label &#x3D; @1
+      block (result v128)  ;; label &#x3D; @2
+        block (result v128)  ;; label &#x3D; @3
+          i32.const 0
+          v128.load
+        end
+        i32.const 1
+        i64x2.shr_s
+      end
+      drop
+    end)
+  (func (;11;) (type 0)
+    block  ;; label &#x3D; @1
+      block (result v128)  ;; label &#x3D; @2
+        block (result v128)  ;; label &#x3D; @3
+          i32.const 0
+          v128.load
+        end
+        i32.const 1
+        i64x2.shr_u
+      end
+      drop
+    end)
+  (func (;12;) (type 0)
+    i32.const 0
+    v128.load
+    i32.const 1
+    i8x16.shl
+    i32.const 1
+    i8x16.shl
+    i32.const 1
+    i8x16.shl
+    drop)
+  (func (;13;) (type 0)
+    i32.const 0
+    v128.load
+    i32.const 1
+    i8x16.shr_s
+    i32.const 1
+    i8x16.shr_s
+    i32.const 1
+    i8x16.shr_s
+    drop)
+  (func (;14;) (type 0)
+    i32.const 0
+    v128.load
+    i32.const 1
+    i8x16.shr_u
+    i32.const 1
+    i8x16.shr_u
+    i32.const 1
+    i8x16.shr_u
+    drop)
+  (func (;15;) (type 0)
+    i32.const 0
+    v128.load
+    i32.const 1
+    i16x8.shl
+    i32.const 1
+    i16x8.shl
+    i32.const 1
+    i16x8.shl
+    drop)
+  (func (;16;) (type 0)
+    i32.const 0
+    v128.load
+    i32.const 1
+    i16x8.shr_s
+    i32.const 1
+    i16x8.shr_s
+    i32.const 1
+    i16x8.shr_s
+    drop)
+  (func (;17;) (type 0)
+    i32.const 0
+    v128.load
+    i32.const 1
+    i16x8.shr_u
+    i32.const 1
+    i16x8.shr_u
+    i32.const 1
+    i16x8.shr_u
+    drop)
+  (func (;18;) (type 0)
+    i32.const 0
+    v128.load
+    i32.const 1
+    i32x4.shl
+    i32.const 1
+    i32x4.shl
+    i32.const 1
+    i32x4.shl
+    drop)
+  (func (;19;) (type 0)
+    i32.const 0
+    v128.load
+    i32.const 1
+    i32x4.shr_s
+    i32.const 1
+    i32x4.shr_s
+    i32.const 1
+    i32x4.shr_s
+    drop)
+  (func (;20;) (type 0)
+    i32.const 0
+    v128.load
+    i32.const 1
+    i32x4.shr_u
+    i32.const 1
+    i32x4.shr_u
+    i32.const 1
+    i32x4.shr_u
+    drop)
+  (func (;21;) (type 0)
+    i32.const 0
+    v128.load
+    i32.const 1
+    i64x2.shl
+    i32.const 1
+    i64x2.shl
+    i32.const 1
+    i64x2.shl
+    drop)
+  (func (;22;) (type 0)
+    i32.const 0
+    v128.load
+    i32.const 1
+    i64x2.shr_s
+    i32.const 1
+    i64x2.shr_s
+    i32.const 1
+    i64x2.shr_s
+    drop)
+  (func (;23;) (type 0)
+    i32.const 0
+    v128.load
+    i32.const 1
+    i64x2.shr_u
+    i32.const 1
+    i64x2.shr_u
+    i32.const 1
+    i64x2.shr_u
+    drop)
+  (memory (;0;) 1)
+  (export &quot;i8x16.shl-in-block&quot; (func 0))
+  (export &quot;i8x16.shr_s-in-block&quot; (func 1))
+  (export &quot;i8x16.shr_u-in-block&quot; (func 2))
+  (export &quot;i16x8.shl-in-block&quot; (func 3))
+  (export &quot;i16x8.shr_s-in-block&quot; (func 4))
+  (export &quot;i16x8.shr_u-in-block&quot; (func 5))
+  (export &quot;i32x4.shl-in-block&quot; (func 6))
+  (export &quot;i32x4.shr_s-in-block&quot; (func 7))
+  (export &quot;i32x4.shr_u-in-block&quot; (func 8))
+  (export &quot;i64x2.shl-in-block&quot; (func 9))
+  (export &quot;i64x2.shr_s-in-block&quot; (func 10))
+  (export &quot;i64x2.shr_u-in-block&quot; (func 11))
+  (export &quot;nested-i8x16.shl&quot; (func 12))
+  (export &quot;nested-i8x16.shr_s&quot; (func 13))
+  (export &quot;nested-i8x16.shr_u&quot; (func 14))
+  (export &quot;nested-i16x8.shl&quot; (func 15))
+  (export &quot;nested-i16x8.shr_s&quot; (func 16))
+  (export &quot;nested-i16x8.shr_u&quot; (func 17))
+  (export &quot;nested-i32x4.shl&quot; (func 18))
+  (export &quot;nested-i32x4.shr_s&quot; (func 19))
+  (export &quot;nested-i32x4.shr_u&quot; (func 20))
+  (export &quot;nested-i64x2.shl&quot; (func 21))
+  (export &quot;nested-i64x2.shr_s&quot; (func 22))
+  (export &quot;nested-i64x2.shr_u&quot; (func 23)))
+</code></pre>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asmcc simd_conversions.39</title>
+
+    <link rel="stylesheet" href="//unpkg.com/@highlightjs/cdn-assets@11.7.0/styles/github.min.css">
+    <script src="//unpkg.com/@highlightjs/cdn-assets@11.7.0/highlight.min.js"></script>
+    <script>
+        hljs.configure({
+            noHighlightRe: /^do-not-highlightme$/i,
+        });
+    </script>
+    <script>hljs.highlightAll();</script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="/_vercel/insights/script.js"></script>
+</head>
+
+<body class="text-sm p-2">
+    <h1 class="text-2xl  w-full mb-4">Anaylzer: <a href="/simd_conversions.39.wasm">simd_conversions.39.wasm</a></h1>
+    <div class="flex justify-evenly">
+        <pre class="p-4 overflow-scroll border-2"><code>
+simd_conversions.39.wasm:	file format wasm 0x1
+
+Sections:
+
+     Type start&#x3D;0x0000000a end&#x3D;0x00000011 (size&#x3D;0x00000007) count: 1
+ Function start&#x3D;0x00000013 end&#x3D;0x00000027 (size&#x3D;0x00000014) count: 19
+   Export start&#x3D;0x0000002a end&#x3D;0x00000257 (size&#x3D;0x0000022d) count: 19
+     Code start&#x3D;0x0000025a end&#x3D;0x0000034a (size&#x3D;0x000000f0) count: 19
+
+Section Details:
+
+Type[1]:
+ - type[0] (v128, v128) -&gt; v128
+Function[19]:
+ - func[0] sig&#x3D;0 &lt;f32x4_convert_i32x4_s_add&gt;
+ - func[1] sig&#x3D;0 &lt;f32x4_convert_i32x4_s_sub&gt;
+ - func[2] sig&#x3D;0 &lt;f32x4_convert_i32x4_u_mul&gt;
+ - func[3] sig&#x3D;0 &lt;i16x8_low_extend_narrow_ss&gt;
+ - func[4] sig&#x3D;0 &lt;i16x8_low_extend_narrow_su&gt;
+ - func[5] sig&#x3D;0 &lt;i16x8_high_extend_narrow_ss&gt;
+ - func[6] sig&#x3D;0 &lt;i16x8_high_extend_narrow_su&gt;
+ - func[7] sig&#x3D;0 &lt;i16x8_low_extend_narrow_uu&gt;
+ - func[8] sig&#x3D;0 &lt;i16x8_low_extend_narrow_us&gt;
+ - func[9] sig&#x3D;0 &lt;i16x8_high_extend_narrow_uu&gt;
+ - func[10] sig&#x3D;0 &lt;i16x8_high_extend_narrow_us&gt;
+ - func[11] sig&#x3D;0 &lt;i32x4_low_extend_narrow_ss&gt;
+ - func[12] sig&#x3D;0 &lt;i32x4_low_extend_narrow_su&gt;
+ - func[13] sig&#x3D;0 &lt;i32x4_high_extend_narrow_ss&gt;
+ - func[14] sig&#x3D;0 &lt;i32x4_high_extend_narrow_su&gt;
+ - func[15] sig&#x3D;0 &lt;i32x4_low_extend_narrow_uu&gt;
+ - func[16] sig&#x3D;0 &lt;i32x4_low_extend_narrow_us&gt;
+ - func[17] sig&#x3D;0 &lt;i32x4_high_extend_narrow_uu&gt;
+ - func[18] sig&#x3D;0 &lt;i32x4_high_extend_narrow_us&gt;
+Export[19]:
+ - func[0] &lt;f32x4_convert_i32x4_s_add&gt; -&gt; &quot;f32x4_convert_i32x4_s_add&quot;
+ - func[1] &lt;f32x4_convert_i32x4_s_sub&gt; -&gt; &quot;f32x4_convert_i32x4_s_sub&quot;
+ - func[2] &lt;f32x4_convert_i32x4_u_mul&gt; -&gt; &quot;f32x4_convert_i32x4_u_mul&quot;
+ - func[3] &lt;i16x8_low_extend_narrow_ss&gt; -&gt; &quot;i16x8_low_extend_narrow_ss&quot;
+ - func[4] &lt;i16x8_low_extend_narrow_su&gt; -&gt; &quot;i16x8_low_extend_narrow_su&quot;
+ - func[5] &lt;i16x8_high_extend_narrow_ss&gt; -&gt; &quot;i16x8_high_extend_narrow_ss&quot;
+ - func[6] &lt;i16x8_high_extend_narrow_su&gt; -&gt; &quot;i16x8_high_extend_narrow_su&quot;
+ - func[7] &lt;i16x8_low_extend_narrow_uu&gt; -&gt; &quot;i16x8_low_extend_narrow_uu&quot;
+ - func[8] &lt;i16x8_low_extend_narrow_us&gt; -&gt; &quot;i16x8_low_extend_narrow_us&quot;
+ - func[9] &lt;i16x8_high_extend_narrow_uu&gt; -&gt; &quot;i16x8_high_extend_narrow_uu&quot;
+ - func[10] &lt;i16x8_high_extend_narrow_us&gt; -&gt; &quot;i16x8_high_extend_narrow_us&quot;
+ - func[11] &lt;i32x4_low_extend_narrow_ss&gt; -&gt; &quot;i32x4_low_extend_narrow_ss&quot;
+ - func[12] &lt;i32x4_low_extend_narrow_su&gt; -&gt; &quot;i32x4_low_extend_narrow_su&quot;
+ - func[13] &lt;i32x4_high_extend_narrow_ss&gt; -&gt; &quot;i32x4_high_extend_narrow_ss&quot;
+ - func[14] &lt;i32x4_high_extend_narrow_su&gt; -&gt; &quot;i32x4_high_extend_narrow_su&quot;
+ - func[15] &lt;i32x4_low_extend_narrow_uu&gt; -&gt; &quot;i32x4_low_extend_narrow_uu&quot;
+ - func[16] &lt;i32x4_low_extend_narrow_us&gt; -&gt; &quot;i32x4_low_extend_narrow_us&quot;
+ - func[17] &lt;i32x4_high_extend_narrow_uu&gt; -&gt; &quot;i32x4_high_extend_narrow_uu&quot;
+ - func[18] &lt;i32x4_high_extend_narrow_us&gt; -&gt; &quot;i32x4_high_extend_narrow_us&quot;
+Code[19]:
+ - func[0] size&#x3D;12 &lt;f32x4_convert_i32x4_s_add&gt;
+ - func[1] size&#x3D;12 &lt;f32x4_convert_i32x4_s_sub&gt;
+ - func[2] size&#x3D;12 &lt;f32x4_convert_i32x4_u_mul&gt;
+ - func[3] size&#x3D;11 &lt;i16x8_low_extend_narrow_ss&gt;
+ - func[4] size&#x3D;11 &lt;i16x8_low_extend_narrow_su&gt;
+ - func[5] size&#x3D;11 &lt;i16x8_high_extend_narrow_ss&gt;
+ - func[6] size&#x3D;11 &lt;i16x8_high_extend_narrow_su&gt;
+ - func[7] size&#x3D;11 &lt;i16x8_low_extend_narrow_uu&gt;
+ - func[8] size&#x3D;11 &lt;i16x8_low_extend_narrow_us&gt;
+ - func[9] size&#x3D;11 &lt;i16x8_high_extend_narrow_uu&gt;
+ - func[10] size&#x3D;11 &lt;i16x8_high_extend_narrow_us&gt;
+ - func[11] size&#x3D;12 &lt;i32x4_low_extend_narrow_ss&gt;
+ - func[12] size&#x3D;12 &lt;i32x4_low_extend_narrow_su&gt;
+ - func[13] size&#x3D;12 &lt;i32x4_high_extend_narrow_ss&gt;
+ - func[14] size&#x3D;12 &lt;i32x4_high_extend_narrow_su&gt;
+ - func[15] size&#x3D;12 &lt;i32x4_low_extend_narrow_uu&gt;
+ - func[16] size&#x3D;12 &lt;i32x4_low_extend_narrow_us&gt;
+ - func[17] size&#x3D;12 &lt;i32x4_high_extend_narrow_uu&gt;
+ - func[18] size&#x3D;12 &lt;i32x4_high_extend_narrow_us&gt;
+
+Contents of section Type:
+000000a: 0160 027b 7b01 7b                        .&#x60;.{{.{
+
+Contents of section Function:
+0000013: 1300 0000 0000 0000 0000 0000 0000 0000  ................
+0000023: 0000 0000                                ....
+
+Contents of section Export:
+000002a: 1319 6633 3278 345f 636f 6e76 6572 745f  ..f32x4_convert_
+000003a: 6933 3278 345f 735f 6164 6400 0019 6633  i32x4_s_add...f3
+000004a: 3278 345f 636f 6e76 6572 745f 6933 3278  2x4_convert_i32x
+000005a: 345f 735f 7375 6200 0119 6633 3278 345f  4_s_sub...f32x4_
+000006a: 636f 6e76 6572 745f 6933 3278 345f 755f  convert_i32x4_u_
+000007a: 6d75 6c00 021a 6931 3678 385f 6c6f 775f  mul...i16x8_low_
+000008a: 6578 7465 6e64 5f6e 6172 726f 775f 7373  extend_narrow_ss
+000009a: 0003 1a69 3136 7838 5f6c 6f77 5f65 7874  ...i16x8_low_ext
+00000aa: 656e 645f 6e61 7272 6f77 5f73 7500 041b  end_narrow_su...
+00000ba: 6931 3678 385f 6869 6768 5f65 7874 656e  i16x8_high_exten
+00000ca: 645f 6e61 7272 6f77 5f73 7300 051b 6931  d_narrow_ss...i1
+00000da: 3678 385f 6869 6768 5f65 7874 656e 645f  6x8_high_extend_
+00000ea: 6e61 7272 6f77 5f73 7500 061a 6931 3678  narrow_su...i16x
+00000fa: 385f 6c6f 775f 6578 7465 6e64 5f6e 6172  8_low_extend_nar
+000010a: 726f 775f 7575 0007 1a69 3136 7838 5f6c  row_uu...i16x8_l
+000011a: 6f77 5f65 7874 656e 645f 6e61 7272 6f77  ow_extend_narrow
+000012a: 5f75 7300 081b 6931 3678 385f 6869 6768  _us...i16x8_high
+000013a: 5f65 7874 656e 645f 6e61 7272 6f77 5f75  _extend_narrow_u
+000014a: 7500 091b 6931 3678 385f 6869 6768 5f65  u...i16x8_high_e
+000015a: 7874 656e 645f 6e61 7272 6f77 5f75 7300  xtend_narrow_us.
+000016a: 0a1a 6933 3278 345f 6c6f 775f 6578 7465  ..i32x4_low_exte
+000017a: 6e64 5f6e 6172 726f 775f 7373 000b 1a69  nd_narrow_ss...i
+000018a: 3332 7834 5f6c 6f77 5f65 7874 656e 645f  32x4_low_extend_
+000019a: 6e61 7272 6f77 5f73 7500 0c1b 6933 3278  narrow_su...i32x
+00001aa: 345f 6869 6768 5f65 7874 656e 645f 6e61  4_high_extend_na
+00001ba: 7272 6f77 5f73 7300 0d1b 6933 3278 345f  rrow_ss...i32x4_
+00001ca: 6869 6768 5f65 7874 656e 645f 6e61 7272  high_extend_narr
+00001da: 6f77 5f73 7500 0e1a 6933 3278 345f 6c6f  ow_su...i32x4_lo
+00001ea: 775f 6578 7465 6e64 5f6e 6172 726f 775f  w_extend_narrow_
+00001fa: 7575 000f 1a69 3332 7834 5f6c 6f77 5f65  uu...i32x4_low_e
+000020a: 7874 656e 645f 6e61 7272 6f77 5f75 7300  xtend_narrow_us.
+000021a: 101b 6933 3278 345f 6869 6768 5f65 7874  ..i32x4_high_ext
+000022a: 656e 645f 6e61 7272 6f77 5f75 7500 111b  end_narrow_uu...
+000023a: 6933 3278 345f 6869 6768 5f65 7874 656e  i32x4_high_exten
+000024a: 645f 6e61 7272 6f77 5f75 7300 12         d_narrow_us..
+
+Contents of section Code:
+000025a: 130c 0020 0020 01fd ae01 fdfa 010b 0c00  ... . ..........
+000026a: 2000 2001 fdb1 01fd fa01 0b0c 0020 0020   . .......... . 
+000027a: 01fd b501 fdfb 010b 0b00 2000 2001 fd65  .......... . ..e
+000028a: fd87 010b 0b00 2000 2001 fd66 fd87 010b  ...... . ..f....
+000029a: 0b00 2000 2001 fd65 fd87 010b 0b00 2000  .. . ..e...... .
+00002aa: 2001 fd66 fd87 010b 0b00 2000 2001 fd66   ..f...... . ..f
+00002ba: fd89 010b 0b00 2000 2001 fd65 fd89 010b  ...... . ..e....
+00002ca: 0b00 2000 2001 fd66 fd89 010b 0b00 2000  .. . ..f...... .
+00002da: 2001 fd65 fd89 010b 0c00 2000 2001 fd85   ..e...... . ...
+00002ea: 01fd a701 0b0c 0020 0020 01fd 8601 fda7  ....... . ......
+00002fa: 010b 0c00 2000 2001 fd85 01fd a701 0b0c  .... . .........
+000030a: 0020 0020 01fd 8601 fda7 010b 0c00 2000  . . .......... .
+000031a: 2001 fd86 01fd a901 0b0c 0020 0020 01fd   .......... . ..
+000032a: 8501 fda9 010b 0c00 2000 2001 fd86 01fd  ........ . .....
+000033a: a901 0b0c 0020 0020 01fd 8501 fda9 010b  ..... . ........
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2"><code>BeginModule(version: 1)
+  BeginTypeSection(7)
+    OnTypeCount(1)
+    OnFuncType(index: 0, params: [v128, v128], results: [v128])
+  EndTypeSection
+  BeginFunctionSection(20)
+    OnFunctionCount(19)
+    OnFunction(index: 0, sig_index: 0)
+    OnFunction(index: 1, sig_index: 0)
+    OnFunction(index: 2, sig_index: 0)
+    OnFunction(index: 3, sig_index: 0)
+    OnFunction(index: 4, sig_index: 0)
+    OnFunction(index: 5, sig_index: 0)
+    OnFunction(index: 6, sig_index: 0)
+    OnFunction(index: 7, sig_index: 0)
+    OnFunction(index: 8, sig_index: 0)
+    OnFunction(index: 9, sig_index: 0)
+    OnFunction(index: 10, sig_index: 0)
+    OnFunction(index: 11, sig_index: 0)
+    OnFunction(index: 12, sig_index: 0)
+    OnFunction(index: 13, sig_index: 0)
+    OnFunction(index: 14, sig_index: 0)
+    OnFunction(index: 15, sig_index: 0)
+    OnFunction(index: 16, sig_index: 0)
+    OnFunction(index: 17, sig_index: 0)
+    OnFunction(index: 18, sig_index: 0)
+  EndFunctionSection
+  BeginExportSection(557)
+    OnExportCount(19)
+    OnExport(index: 0, kind: func, item_index: 0, name: &quot;f32x4_convert_i32x4_s_add&quot;)
+    OnExport(index: 1, kind: func, item_index: 1, name: &quot;f32x4_convert_i32x4_s_sub&quot;)
+    OnExport(index: 2, kind: func, item_index: 2, name: &quot;f32x4_convert_i32x4_u_mul&quot;)
+    OnExport(index: 3, kind: func, item_index: 3, name: &quot;i16x8_low_extend_narrow_ss&quot;)
+    OnExport(index: 4, kind: func, item_index: 4, name: &quot;i16x8_low_extend_narrow_su&quot;)
+    OnExport(index: 5, kind: func, item_index: 5, name: &quot;i16x8_high_extend_narrow_ss&quot;)
+    OnExport(index: 6, kind: func, item_index: 6, name: &quot;i16x8_high_extend_narrow_su&quot;)
+    OnExport(index: 7, kind: func, item_index: 7, name: &quot;i16x8_low_extend_narrow_uu&quot;)
+    OnExport(index: 8, kind: func, item_index: 8, name: &quot;i16x8_low_extend_narrow_us&quot;)
+    OnExport(index: 9, kind: func, item_index: 9, name: &quot;i16x8_high_extend_narrow_uu&quot;)
+    OnExport(index: 10, kind: func, item_index: 10, name: &quot;i16x8_high_extend_narrow_us&quot;)
+    OnExport(index: 11, kind: func, item_index: 11, name: &quot;i32x4_low_extend_narrow_ss&quot;)
+    OnExport(index: 12, kind: func, item_index: 12, name: &quot;i32x4_low_extend_narrow_su&quot;)
+    OnExport(index: 13, kind: func, item_index: 13, name: &quot;i32x4_high_extend_narrow_ss&quot;)
+    OnExport(index: 14, kind: func, item_index: 14, name: &quot;i32x4_high_extend_narrow_su&quot;)
+    OnExport(index: 15, kind: func, item_index: 15, name: &quot;i32x4_low_extend_narrow_uu&quot;)
+    OnExport(index: 16, kind: func, item_index: 16, name: &quot;i32x4_low_extend_narrow_us&quot;)
+    OnExport(index: 17, kind: func, item_index: 17, name: &quot;i32x4_high_extend_narrow_uu&quot;)
+    OnExport(index: 18, kind: func, item_index: 18, name: &quot;i32x4_high_extend_narrow_us&quot;)
+  EndExportSection
+  BeginCodeSection(240)
+    OnFunctionBodyCount(19)
+    BeginFunctionBody(0, size:12)
+    OnLocalDeclCount(0)
+    EndFunctionBody(0)
+    BeginFunctionBody(1, size:12)
+    OnLocalDeclCount(0)
+    EndFunctionBody(1)
+    BeginFunctionBody(2, size:12)
+    OnLocalDeclCount(0)
+    EndFunctionBody(2)
+    BeginFunctionBody(3, size:11)
+    OnLocalDeclCount(0)
+    EndFunctionBody(3)
+    BeginFunctionBody(4, size:11)
+    OnLocalDeclCount(0)
+    EndFunctionBody(4)
+    BeginFunctionBody(5, size:11)
+    OnLocalDeclCount(0)
+    EndFunctionBody(5)
+    BeginFunctionBody(6, size:11)
+    OnLocalDeclCount(0)
+    EndFunctionBody(6)
+    BeginFunctionBody(7, size:11)
+    OnLocalDeclCount(0)
+    EndFunctionBody(7)
+    BeginFunctionBody(8, size:11)
+    OnLocalDeclCount(0)
+    EndFunctionBody(8)
+    BeginFunctionBody(9, size:11)
+    OnLocalDeclCount(0)
+    EndFunctionBody(9)
+    BeginFunctionBody(10, size:11)
+    OnLocalDeclCount(0)
+    EndFunctionBody(10)
+    BeginFunctionBody(11, size:12)
+    OnLocalDeclCount(0)
+    EndFunctionBody(11)
+    BeginFunctionBody(12, size:12)
+    OnLocalDeclCount(0)
+    EndFunctionBody(12)
+    BeginFunctionBody(13, size:12)
+    OnLocalDeclCount(0)
+    EndFunctionBody(13)
+    BeginFunctionBody(14, size:12)
+    OnLocalDeclCount(0)
+    EndFunctionBody(14)
+    BeginFunctionBody(15, size:12)
+    OnLocalDeclCount(0)
+    EndFunctionBody(15)
+    BeginFunctionBody(16, size:12)
+    OnLocalDeclCount(0)
+    EndFunctionBody(16)
+    BeginFunctionBody(17, size:12)
+    OnLocalDeclCount(0)
+    EndFunctionBody(17)
+    BeginFunctionBody(18, size:12)
+    OnLocalDeclCount(0)
+    EndFunctionBody(18)
+  EndCodeSection
+EndModule
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2 do-not-highlightme"><code>00000000: 00 61 73 6D 01 00 00 00  .asm....
+00000008: 01 07 01 60 02 7B 7B 01  ...&#x60;.{{.
+00000010: 7B 03 14 13 00 00 00 00  {.......
+00000018: 00 00 00 00 00 00 00 00  ........
+00000020: 00 00 00 00 00 00 00 07  ........
+00000028: AD 04 13 19 66 33 32 78  ....f32x
+00000030: 34 5F 63 6F 6E 76 65 72  4_conver
+00000038: 74 5F 69 33 32 78 34 5F  t_i32x4_
+00000040: 73 5F 61 64 64 00 00 19  s_add...
+00000048: 66 33 32 78 34 5F 63 6F  f32x4_co
+00000050: 6E 76 65 72 74 5F 69 33  nvert_i3
+00000058: 32 78 34 5F 73 5F 73 75  2x4_s_su
+00000060: 62 00 01 19 66 33 32 78  b...f32x
+00000068: 34 5F 63 6F 6E 76 65 72  4_conver
+00000070: 74 5F 69 33 32 78 34 5F  t_i32x4_
+00000078: 75 5F 6D 75 6C 00 02 1A  u_mul...
+00000080: 69 31 36 78 38 5F 6C 6F  i16x8_lo
+00000088: 77 5F 65 78 74 65 6E 64  w_extend
+00000090: 5F 6E 61 72 72 6F 77 5F  _narrow_
+00000098: 73 73 00 03 1A 69 31 36  ss...i16
+000000a0: 78 38 5F 6C 6F 77 5F 65  x8_low_e
+000000a8: 78 74 65 6E 64 5F 6E 61  xtend_na
+000000b0: 72 72 6F 77 5F 73 75 00  rrow_su.
+000000b8: 04 1B 69 31 36 78 38 5F  ..i16x8_
+000000c0: 68 69 67 68 5F 65 78 74  high_ext
+000000c8: 65 6E 64 5F 6E 61 72 72  end_narr
+000000d0: 6F 77 5F 73 73 00 05 1B  ow_ss...
+000000d8: 69 31 36 78 38 5F 68 69  i16x8_hi
+000000e0: 67 68 5F 65 78 74 65 6E  gh_exten
+000000e8: 64 5F 6E 61 72 72 6F 77  d_narrow
+000000f0: 5F 73 75 00 06 1A 69 31  _su...i1
+000000f8: 36 78 38 5F 6C 6F 77 5F  6x8_low_
+00000100: 65 78 74 65 6E 64 5F 6E  extend_n
+00000108: 61 72 72 6F 77 5F 75 75  arrow_uu
+00000110: 00 07 1A 69 31 36 78 38  ...i16x8
+00000118: 5F 6C 6F 77 5F 65 78 74  _low_ext
+00000120: 65 6E 64 5F 6E 61 72 72  end_narr
+00000128: 6F 77 5F 75 73 00 08 1B  ow_us...
+00000130: 69 31 36 78 38 5F 68 69  i16x8_hi
+00000138: 67 68 5F 65 78 74 65 6E  gh_exten
+00000140: 64 5F 6E 61 72 72 6F 77  d_narrow
+00000148: 5F 75 75 00 09 1B 69 31  _uu...i1
+00000150: 36 78 38 5F 68 69 67 68  6x8_high
+00000158: 5F 65 78 74 65 6E 64 5F  _extend_
+00000160: 6E 61 72 72 6F 77 5F 75  narrow_u
+00000168: 73 00 0A 1A 69 33 32 78  s...i32x
+00000170: 34 5F 6C 6F 77 5F 65 78  4_low_ex
+00000178: 74 65 6E 64 5F 6E 61 72  tend_nar
+00000180: 72 6F 77 5F 73 73 00 0B  row_ss..
+00000188: 1A 69 33 32 78 34 5F 6C  .i32x4_l
+00000190: 6F 77 5F 65 78 74 65 6E  ow_exten
+00000198: 64 5F 6E 61 72 72 6F 77  d_narrow
+000001a0: 5F 73 75 00 0C 1B 69 33  _su...i3
+000001a8: 32 78 34 5F 68 69 67 68  2x4_high
+000001b0: 5F 65 78 74 65 6E 64 5F  _extend_
+000001b8: 6E 61 72 72 6F 77 5F 73  narrow_s
+000001c0: 73 00 0D 1B 69 33 32 78  s...i32x
+000001c8: 34 5F 68 69 67 68 5F 65  4_high_e
+000001d0: 78 74 65 6E 64 5F 6E 61  xtend_na
+000001d8: 72 72 6F 77 5F 73 75 00  rrow_su.
+000001e0: 0E 1A 69 33 32 78 34 5F  ..i32x4_
+000001e8: 6C 6F 77 5F 65 78 74 65  low_exte
+000001f0: 6E 64 5F 6E 61 72 72 6F  nd_narro
+000001f8: 77 5F 75 75 00 0F 1A 69  w_uu...i
+00000200: 33 32 78 34 5F 6C 6F 77  32x4_low
+00000208: 5F 65 78 74 65 6E 64 5F  _extend_
+00000210: 6E 61 72 72 6F 77 5F 75  narrow_u
+00000218: 73 00 10 1B 69 33 32 78  s...i32x
+00000220: 34 5F 68 69 67 68 5F 65  4_high_e
+00000228: 78 74 65 6E 64 5F 6E 61  xtend_na
+00000230: 72 72 6F 77 5F 75 75 00  rrow_uu.
+00000238: 11 1B 69 33 32 78 34 5F  ..i32x4_
+00000240: 68 69 67 68 5F 65 78 74  high_ext
+00000248: 65 6E 64 5F 6E 61 72 72  end_narr
+00000250: 6F 77 5F 75 73 00 12 0A  ow_us...
+00000258: F0 01 13 0C 00 20 00 20  ..... . 
+00000260: 01 FD AE 01 FD FA 01 0B  ........
+00000268: 0C 00 20 00 20 01 FD B1  .. . ...
+00000270: 01 FD FA 01 0B 0C 00 20  ....... 
+00000278: 00 20 01 FD B5 01 FD FB  . ......
+00000280: 01 0B 0B 00 20 00 20 01  .... . .
+00000288: FD 65 FD 87 01 0B 0B 00  .e......
+00000290: 20 00 20 01 FD 66 FD 87   . ..f..
+00000298: 01 0B 0B 00 20 00 20 01  .... . .
+000002a0: FD 65 FD 87 01 0B 0B 00  .e......
+000002a8: 20 00 20 01 FD 66 FD 87   . ..f..
+000002b0: 01 0B 0B 00 20 00 20 01  .... . .
+000002b8: FD 66 FD 89 01 0B 0B 00  .f......
+000002c0: 20 00 20 01 FD 65 FD 89   . ..e..
+000002c8: 01 0B 0B 00 20 00 20 01  .... . .
+000002d0: FD 66 FD 89 01 0B 0B 00  .f......
+000002d8: 20 00 20 01 FD 65 FD 89   . ..e..
+000002e0: 01 0B 0C 00 20 00 20 01  .... . .
+000002e8: FD 85 01 FD A7 01 0B 0C  ........
+000002f0: 00 20 00 20 01 FD 86 01  . . ....
+000002f8: FD A7 01 0B 0C 00 20 00  ...... .
+00000300: 20 01 FD 85 01 FD A7 01   .......
+00000308: 0B 0C 00 20 00 20 01 FD  ... . ..
+00000310: 86 01 FD A7 01 0B 0C 00  ........
+00000318: 20 00 20 01 FD 86 01 FD   . .....
+00000320: A9 01 0B 0C 00 20 00 20  ..... . 
+00000328: 01 FD 85 01 FD A9 01 0B  ........
+00000330: 0C 00 20 00 20 01 FD 86  .. . ...
+00000338: 01 FD A9 01 0B 0C 00 20  ....... 
+00000340: 00 20 01 FD 85 01 FD A9  . ......
+00000348: 01 0B                    ..
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2"><code>(module
+  (type (;0;) (func (param v128 v128) (result v128)))
+  (func (;0;) (type 0) (param v128 v128) (result v128)
+    local.get 0
+    local.get 1
+    i32x4.add
+    f32x4.convert_i32x4_s)
+  (func (;1;) (type 0) (param v128 v128) (result v128)
+    local.get 0
+    local.get 1
+    i32x4.sub
+    f32x4.convert_i32x4_s)
+  (func (;2;) (type 0) (param v128 v128) (result v128)
+    local.get 0
+    local.get 1
+    i32x4.mul
+    f32x4.convert_i32x4_u)
+  (func (;3;) (type 0) (param v128 v128) (result v128)
+    local.get 0
+    local.get 1
+    i8x16.narrow_i16x8_s
+    i16x8.extend_low_i8x16_s)
+  (func (;4;) (type 0) (param v128 v128) (result v128)
+    local.get 0
+    local.get 1
+    i8x16.narrow_i16x8_u
+    i16x8.extend_low_i8x16_s)
+  (func (;5;) (type 0) (param v128 v128) (result v128)
+    local.get 0
+    local.get 1
+    i8x16.narrow_i16x8_s
+    i16x8.extend_low_i8x16_s)
+  (func (;6;) (type 0) (param v128 v128) (result v128)
+    local.get 0
+    local.get 1
+    i8x16.narrow_i16x8_u
+    i16x8.extend_low_i8x16_s)
+  (func (;7;) (type 0) (param v128 v128) (result v128)
+    local.get 0
+    local.get 1
+    i8x16.narrow_i16x8_u
+    i16x8.extend_low_i8x16_u)
+  (func (;8;) (type 0) (param v128 v128) (result v128)
+    local.get 0
+    local.get 1
+    i8x16.narrow_i16x8_s
+    i16x8.extend_low_i8x16_u)
+  (func (;9;) (type 0) (param v128 v128) (result v128)
+    local.get 0
+    local.get 1
+    i8x16.narrow_i16x8_u
+    i16x8.extend_low_i8x16_u)
+  (func (;10;) (type 0) (param v128 v128) (result v128)
+    local.get 0
+    local.get 1
+    i8x16.narrow_i16x8_s
+    i16x8.extend_low_i8x16_u)
+  (func (;11;) (type 0) (param v128 v128) (result v128)
+    local.get 0
+    local.get 1
+    i16x8.narrow_i32x4_s
+    i32x4.extend_low_i16x8_s)
+  (func (;12;) (type 0) (param v128 v128) (result v128)
+    local.get 0
+    local.get 1
+    i16x8.narrow_i32x4_u
+    i32x4.extend_low_i16x8_s)
+  (func (;13;) (type 0) (param v128 v128) (result v128)
+    local.get 0
+    local.get 1
+    i16x8.narrow_i32x4_s
+    i32x4.extend_low_i16x8_s)
+  (func (;14;) (type 0) (param v128 v128) (result v128)
+    local.get 0
+    local.get 1
+    i16x8.narrow_i32x4_u
+    i32x4.extend_low_i16x8_s)
+  (func (;15;) (type 0) (param v128 v128) (result v128)
+    local.get 0
+    local.get 1
+    i16x8.narrow_i32x4_u
+    i32x4.extend_low_i16x8_u)
+  (func (;16;) (type 0) (param v128 v128) (result v128)
+    local.get 0
+    local.get 1
+    i16x8.narrow_i32x4_s
+    i32x4.extend_low_i16x8_u)
+  (func (;17;) (type 0) (param v128 v128) (result v128)
+    local.get 0
+    local.get 1
+    i16x8.narrow_i32x4_u
+    i32x4.extend_low_i16x8_u)
+  (func (;18;) (type 0) (param v128 v128) (result v128)
+    local.get 0
+    local.get 1
+    i16x8.narrow_i32x4_s
+    i32x4.extend_low_i16x8_u)
+  (export &quot;f32x4_convert_i32x4_s_add&quot; (func 0))
+  (export &quot;f32x4_convert_i32x4_s_sub&quot; (func 1))
+  (export &quot;f32x4_convert_i32x4_u_mul&quot; (func 2))
+  (export &quot;i16x8_low_extend_narrow_ss&quot; (func 3))
+  (export &quot;i16x8_low_extend_narrow_su&quot; (func 4))
+  (export &quot;i16x8_high_extend_narrow_ss&quot; (func 5))
+  (export &quot;i16x8_high_extend_narrow_su&quot; (func 6))
+  (export &quot;i16x8_low_extend_narrow_uu&quot; (func 7))
+  (export &quot;i16x8_low_extend_narrow_us&quot; (func 8))
+  (export &quot;i16x8_high_extend_narrow_uu&quot; (func 9))
+  (export &quot;i16x8_high_extend_narrow_us&quot; (func 10))
+  (export &quot;i32x4_low_extend_narrow_ss&quot; (func 11))
+  (export &quot;i32x4_low_extend_narrow_su&quot; (func 12))
+  (export &quot;i32x4_high_extend_narrow_ss&quot; (func 13))
+  (export &quot;i32x4_high_extend_narrow_su&quot; (func 14))
+  (export &quot;i32x4_low_extend_narrow_uu&quot; (func 15))
+  (export &quot;i32x4_low_extend_narrow_us&quot; (func 16))
+  (export &quot;i32x4_high_extend_narrow_uu&quot; (func 17))
+  (export &quot;i32x4_high_extend_narrow_us&quot; (func 18)))
+</code></pre>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asmcc simd_load_splat.1</title>
+
+    <link rel="stylesheet" href="//unpkg.com/@highlightjs/cdn-assets@11.7.0/styles/github.min.css">
+    <script src="//unpkg.com/@highlightjs/cdn-assets@11.7.0/highlight.min.js"></script>
+    <script>
+        hljs.configure({
+            noHighlightRe: /^do-not-highlightme$/i,
+        });
+    </script>
+    <script>hljs.highlightAll();</script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="/_vercel/insights/script.js"></script>
+</head>
+
+<body class="text-sm p-2">
+    <h1 class="text-2xl  w-full mb-4">Anaylzer: <a href="/simd_load_splat.1.wasm">simd_load_splat.1.wasm</a></h1>
+    <div class="flex justify-evenly">
+        <pre class="p-4 overflow-scroll border-2"><code>
+simd_load_splat.1.wasm:	file format wasm 0x1
+
+Sections:
+
+     Type start&#x3D;0x0000000a end&#x3D;0x00000013 (size&#x3D;0x00000009) count: 2
+ Function start&#x3D;0x00000015 end&#x3D;0x00000022 (size&#x3D;0x0000000d) count: 12
+   Memory start&#x3D;0x00000024 end&#x3D;0x00000027 (size&#x3D;0x00000003) count: 1
+   Export start&#x3D;0x0000002a end&#x3D;0x000001c8 (size&#x3D;0x0000019e) count: 12
+     Code start&#x3D;0x000001cb end&#x3D;0x00000270 (size&#x3D;0x000000a5) count: 12
+     Data start&#x3D;0x00000272 end&#x3D;0x00000283 (size&#x3D;0x00000011) count: 1
+
+Section Details:
+
+Type[2]:
+ - type[0] () -&gt; v128
+ - type[1] () -&gt; i32
+Function[12]:
+ - func[0] sig&#x3D;0 &lt;v128.load8_splat-in-block&gt;
+ - func[1] sig&#x3D;0 &lt;v128.load16_splat-in-block&gt;
+ - func[2] sig&#x3D;0 &lt;v128.load32_splat-in-block&gt;
+ - func[3] sig&#x3D;0 &lt;v128.load64_splat-in-block&gt;
+ - func[4] sig&#x3D;0 &lt;v128.load8_splat-as-br-value&gt;
+ - func[5] sig&#x3D;0 &lt;v128.load16_splat-as-br-value&gt;
+ - func[6] sig&#x3D;0 &lt;v128.load32_splat-as-br-value&gt;
+ - func[7] sig&#x3D;0 &lt;v128.load64_splat-as-br-value&gt;
+ - func[8] sig&#x3D;1 &lt;v128.load8_splat-extract_lane_s-operand&gt;
+ - func[9] sig&#x3D;1 &lt;v128.load16_splat-extract_lane_s-operand&gt;
+ - func[10] sig&#x3D;1 &lt;v128.load32_splat-extract_lane_s-operand&gt;
+ - func[11] sig&#x3D;1 &lt;v128.load64_splat-extract_lane_s-operand&gt;
+Memory[1]:
+ - memory[0] pages: initial&#x3D;1
+Export[12]:
+ - func[0] &lt;v128.load8_splat-in-block&gt; -&gt; &quot;v128.load8_splat-in-block&quot;
+ - func[1] &lt;v128.load16_splat-in-block&gt; -&gt; &quot;v128.load16_splat-in-block&quot;
+ - func[2] &lt;v128.load32_splat-in-block&gt; -&gt; &quot;v128.load32_splat-in-block&quot;
+ - func[3] &lt;v128.load64_splat-in-block&gt; -&gt; &quot;v128.load64_splat-in-block&quot;
+ - func[4] &lt;v128.load8_splat-as-br-value&gt; -&gt; &quot;v128.load8_splat-as-br-value&quot;
+ - func[5] &lt;v128.load16_splat-as-br-value&gt; -&gt; &quot;v128.load16_splat-as-br-value&quot;
+ - func[6] &lt;v128.load32_splat-as-br-value&gt; -&gt; &quot;v128.load32_splat-as-br-value&quot;
+ - func[7] &lt;v128.load64_splat-as-br-value&gt; -&gt; &quot;v128.load64_splat-as-br-value&quot;
+ - func[8] &lt;v128.load8_splat-extract_lane_s-operand&gt; -&gt; &quot;v128.load8_splat-extract_lane_s-operand&quot;
+ - func[9] &lt;v128.load16_splat-extract_lane_s-operand&gt; -&gt; &quot;v128.load16_splat-extract_lane_s-operand&quot;
+ - func[10] &lt;v128.load32_splat-extract_lane_s-operand&gt; -&gt; &quot;v128.load32_splat-extract_lane_s-operand&quot;
+ - func[11] &lt;v128.load64_splat-extract_lane_s-operand&gt; -&gt; &quot;v128.load64_splat-extract_lane_s-operand&quot;
+Code[12]:
+ - func[0] size&#x3D;14 &lt;v128.load8_splat-in-block&gt;
+ - func[1] size&#x3D;14 &lt;v128.load16_splat-in-block&gt;
+ - func[2] size&#x3D;14 &lt;v128.load32_splat-in-block&gt;
+ - func[3] size&#x3D;14 &lt;v128.load64_splat-in-block&gt;
+ - func[4] size&#x3D;13 &lt;v128.load8_splat-as-br-value&gt;
+ - func[5] size&#x3D;13 &lt;v128.load16_splat-as-br-value&gt;
+ - func[6] size&#x3D;13 &lt;v128.load32_splat-as-br-value&gt;
+ - func[7] size&#x3D;13 &lt;v128.load64_splat-as-br-value&gt;
+ - func[8] size&#x3D;11 &lt;v128.load8_splat-extract_lane_s-operand&gt;
+ - func[9] size&#x3D;11 &lt;v128.load16_splat-extract_lane_s-operand&gt;
+ - func[10] size&#x3D;11 &lt;v128.load32_splat-extract_lane_s-operand&gt;
+ - func[11] size&#x3D;11 &lt;v128.load64_splat-extract_lane_s-operand&gt;
+Data[1]:
+ - segment[0] memory&#x3D;0 size&#x3D;11 - init i32&#x3D;0
+  - 0000000: 0001 0203 0405 0607 0809 0a              ...........
+
+Contents of section Type:
+000000a: 0260 0001 7b60 0001 7f                   .&#x60;..{&#x60;...
+
+Contents of section Function:
+0000015: 0c00 0000 0000 0000 0001 0101 01         .............
+
+Contents of section Memory:
+0000024: 0100 01                                  ...
+
+Contents of section Export:
+000002a: 0c19 7631 3238 2e6c 6f61 6438 5f73 706c  ..v128.load8_spl
+000003a: 6174 2d69 6e2d 626c 6f63 6b00 001a 7631  at-in-block...v1
+000004a: 3238 2e6c 6f61 6431 365f 7370 6c61 742d  28.load16_splat-
+000005a: 696e 2d62 6c6f 636b 0001 1a76 3132 382e  in-block...v128.
+000006a: 6c6f 6164 3332 5f73 706c 6174 2d69 6e2d  load32_splat-in-
+000007a: 626c 6f63 6b00 021a 7631 3238 2e6c 6f61  block...v128.loa
+000008a: 6436 345f 7370 6c61 742d 696e 2d62 6c6f  d64_splat-in-blo
+000009a: 636b 0003 1c76 3132 382e 6c6f 6164 385f  ck...v128.load8_
+00000aa: 7370 6c61 742d 6173 2d62 722d 7661 6c75  splat-as-br-valu
+00000ba: 6500 041d 7631 3238 2e6c 6f61 6431 365f  e...v128.load16_
+00000ca: 7370 6c61 742d 6173 2d62 722d 7661 6c75  splat-as-br-valu
+00000da: 6500 051d 7631 3238 2e6c 6f61 6433 325f  e...v128.load32_
+00000ea: 7370 6c61 742d 6173 2d62 722d 7661 6c75  splat-as-br-valu
+00000fa: 6500 061d 7631 3238 2e6c 6f61 6436 345f  e...v128.load64_
+000010a: 7370 6c61 742d 6173 2d62 722d 7661 6c75  splat-as-br-valu
+000011a: 6500 0727 7631 3238 2e6c 6f61 6438 5f73  e..&#x27;v128.load8_s
+000012a: 706c 6174 2d65 7874 7261 6374 5f6c 616e  plat-extract_lan
+000013a: 655f 732d 6f70 6572 616e 6400 0828 7631  e_s-operand..(v1
+000014a: 3238 2e6c 6f61 6431 365f 7370 6c61 742d  28.load16_splat-
+000015a: 6578 7472 6163 745f 6c61 6e65 5f73 2d6f  extract_lane_s-o
+000016a: 7065 7261 6e64 0009 2876 3132 382e 6c6f  perand..(v128.lo
+000017a: 6164 3332 5f73 706c 6174 2d65 7874 7261  ad32_splat-extra
+000018a: 6374 5f6c 616e 655f 732d 6f70 6572 616e  ct_lane_s-operan
+000019a: 6400 0a28 7631 3238 2e6c 6f61 6436 345f  d..(v128.load64_
+00001aa: 7370 6c61 742d 6578 7472 6163 745f 6c61  splat-extract_la
+00001ba: 6e65 5f73 2d6f 7065 7261 6e64 000b       ne_s-operand..
+
+Contents of section Code:
+00001cb: 0c0e 0002 7b02 7b41 00fd 0700 000b 0b0b  ....{.{A........
+00001db: 0e00 027b 027b 4101 fd08 0100 0b0b 0b0e  ...{.{A.........
+00001eb: 0002 7b02 7b41 02fd 0902 000b 0b0b 0e00  ..{.{A..........
+00001fb: 027b 027b 4109 fd0a 0300 0b0b 0b0d 0002  .{.{A...........
+000020b: 7b41 03fd 0700 000c 000b 0b0d 0002 7b41  {A............{A
+000021b: 04fd 0801 000c 000b 0b0d 0002 7b41 05fd  ............{A..
+000022b: 0902 000c 000b 0b0d 0002 7b41 0afd 0a03  ..........{A....
+000023b: 000c 000b 0b0b 0041 06fd 0700 00fd 1500  .......A........
+000024b: 0b0b 0041 07fd 0801 00fd 1500 0b0b 0041  ...A...........A
+000025b: 08fd 0902 00fd 1500 0b0b 0041 0bfd 0a03  ...........A....
+000026b: 00fd 1500 0b                             .....
+
+Contents of section Data:
+0000272: 0100 4100 0b0b 0001 0203 0405 0607 0809  ..A.............
+0000282: 0a                                       .
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2"><code>BeginModule(version: 1)
+  BeginTypeSection(9)
+    OnTypeCount(2)
+    OnFuncType(index: 0, params: [], results: [v128])
+    OnFuncType(index: 1, params: [], results: [i32])
+  EndTypeSection
+  BeginFunctionSection(13)
+    OnFunctionCount(12)
+    OnFunction(index: 0, sig_index: 0)
+    OnFunction(index: 1, sig_index: 0)
+    OnFunction(index: 2, sig_index: 0)
+    OnFunction(index: 3, sig_index: 0)
+    OnFunction(index: 4, sig_index: 0)
+    OnFunction(index: 5, sig_index: 0)
+    OnFunction(index: 6, sig_index: 0)
+    OnFunction(index: 7, sig_index: 0)
+    OnFunction(index: 8, sig_index: 1)
+    OnFunction(index: 9, sig_index: 1)
+    OnFunction(index: 10, sig_index: 1)
+    OnFunction(index: 11, sig_index: 1)
+  EndFunctionSection
+  BeginMemorySection(3)
+    OnMemoryCount(1)
+    OnMemory(index: 0, initial: 1)
+  EndMemorySection
+  BeginExportSection(414)
+    OnExportCount(12)
+    OnExport(index: 0, kind: func, item_index: 0, name: &quot;v128.load8_splat-in-block&quot;)
+    OnExport(index: 1, kind: func, item_index: 1, name: &quot;v128.load16_splat-in-block&quot;)
+    OnExport(index: 2, kind: func, item_index: 2, name: &quot;v128.load32_splat-in-block&quot;)
+    OnExport(index: 3, kind: func, item_index: 3, name: &quot;v128.load64_splat-in-block&quot;)
+    OnExport(index: 4, kind: func, item_index: 4, name: &quot;v128.load8_splat-as-br-value&quot;)
+    OnExport(index: 5, kind: func, item_index: 5, name: &quot;v128.load16_splat-as-br-value&quot;)
+    OnExport(index: 6, kind: func, item_index: 6, name: &quot;v128.load32_splat-as-br-value&quot;)
+    OnExport(index: 7, kind: func, item_index: 7, name: &quot;v128.load64_splat-as-br-value&quot;)
+    OnExport(index: 8, kind: func, item_index: 8, name: &quot;v128.load8_splat-extract_lane_s-operand&quot;)
+    OnExport(index: 9, kind: func, item_index: 9, name: &quot;v128.load16_splat-extract_lane_s-operand&quot;)
+    OnExport(index: 10, kind: func, item_index: 10, name: &quot;v128.load32_splat-extract_lane_s-operand&quot;)
+    OnExport(index: 11, kind: func, item_index: 11, name: &quot;v128.load64_splat-extract_lane_s-operand&quot;)
+  EndExportSection
+  BeginCodeSection(165)
+    OnFunctionBodyCount(12)
+    BeginFunctionBody(0, size:14)
+    OnLocalDeclCount(0)
+    EndFunctionBody(0)
+    BeginFunctionBody(1, size:14)
+    OnLocalDeclCount(0)
+    EndFunctionBody(1)
+    BeginFunctionBody(2, size:14)
+    OnLocalDeclCount(0)
+    EndFunctionBody(2)
+    BeginFunctionBody(3, size:14)
+    OnLocalDeclCount(0)
+    EndFunctionBody(3)
+    BeginFunctionBody(4, size:13)
+    OnLocalDeclCount(0)
+    EndFunctionBody(4)
+    BeginFunctionBody(5, size:13)
+    OnLocalDeclCount(0)
+    EndFunctionBody(5)
+    BeginFunctionBody(6, size:13)
+    OnLocalDeclCount(0)
+    EndFunctionBody(6)
+    BeginFunctionBody(7, size:13)
+    OnLocalDeclCount(0)
+    EndFunctionBody(7)
+    BeginFunctionBody(8, size:11)
+    OnLocalDeclCount(0)
+    EndFunctionBody(8)
+    BeginFunctionBody(9, size:11)
+    OnLocalDeclCount(0)
+    EndFunctionBody(9)
+    BeginFunctionBody(10, size:11)
+    OnLocalDeclCount(0)
+    EndFunctionBody(10)
+    BeginFunctionBody(11, size:11)
+    OnLocalDeclCount(0)
+    EndFunctionBody(11)
+  EndCodeSection
+  BeginDataSection(17)
+    OnDataSegmentCount(1)
+    BeginDataSegment(index: 0, memory_index: 0, flags: 0)
+    BeginDataSegmentInitExpr(0)
+    OnI32ConstExpr(0 (0x0))
+    OnEndExpr
+    EndDataSegmentInitExpr(0)
+    OnDataSegmentData(index:0, size:11)
+    EndDataSegment(0)
+  EndDataSection
+EndModule
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2 do-not-highlightme"><code>00000000: 00 61 73 6D 01 00 00 00  .asm....
+00000008: 01 09 02 60 00 01 7B 60  ...&#x60;..{&#x60;
+00000010: 00 01 7F 03 0D 0C 00 00  ........
+00000018: 00 00 00 00 00 00 01 01  ........
+00000020: 01 01 05 03 01 00 01 07  ........
+00000028: 9E 03 0C 19 76 31 32 38  ....v128
+00000030: 2E 6C 6F 61 64 38 5F 73  .load8_s
+00000038: 70 6C 61 74 2D 69 6E 2D  plat-in-
+00000040: 62 6C 6F 63 6B 00 00 1A  block...
+00000048: 76 31 32 38 2E 6C 6F 61  v128.loa
+00000050: 64 31 36 5F 73 70 6C 61  d16_spla
+00000058: 74 2D 69 6E 2D 62 6C 6F  t-in-blo
+00000060: 63 6B 00 01 1A 76 31 32  ck...v12
+00000068: 38 2E 6C 6F 61 64 33 32  8.load32
+00000070: 5F 73 70 6C 61 74 2D 69  _splat-i
+00000078: 6E 2D 62 6C 6F 63 6B 00  n-block.
+00000080: 02 1A 76 31 32 38 2E 6C  ..v128.l
+00000088: 6F 61 64 36 34 5F 73 70  oad64_sp
+00000090: 6C 61 74 2D 69 6E 2D 62  lat-in-b
+00000098: 6C 6F 63 6B 00 03 1C 76  lock...v
+000000a0: 31 32 38 2E 6C 6F 61 64  128.load
+000000a8: 38 5F 73 70 6C 61 74 2D  8_splat-
+000000b0: 61 73 2D 62 72 2D 76 61  as-br-va
+000000b8: 6C 75 65 00 04 1D 76 31  lue...v1
+000000c0: 32 38 2E 6C 6F 61 64 31  28.load1
+000000c8: 36 5F 73 70 6C 61 74 2D  6_splat-
+000000d0: 61 73 2D 62 72 2D 76 61  as-br-va
+000000d8: 6C 75 65 00 05 1D 76 31  lue...v1
+000000e0: 32 38 2E 6C 6F 61 64 33  28.load3
+000000e8: 32 5F 73 70 6C 61 74 2D  2_splat-
+000000f0: 61 73 2D 62 72 2D 76 61  as-br-va
+000000f8: 6C 75 65 00 06 1D 76 31  lue...v1
+00000100: 32 38 2E 6C 6F 61 64 36  28.load6
+00000108: 34 5F 73 70 6C 61 74 2D  4_splat-
+00000110: 61 73 2D 62 72 2D 76 61  as-br-va
+00000118: 6C 75 65 00 07 27 76 31  lue..&#x27;v1
+00000120: 32 38 2E 6C 6F 61 64 38  28.load8
+00000128: 5F 73 70 6C 61 74 2D 65  _splat-e
+00000130: 78 74 72 61 63 74 5F 6C  xtract_l
+00000138: 61 6E 65 5F 73 2D 6F 70  ane_s-op
+00000140: 65 72 61 6E 64 00 08 28  erand..(
+00000148: 76 31 32 38 2E 6C 6F 61  v128.loa
+00000150: 64 31 36 5F 73 70 6C 61  d16_spla
+00000158: 74 2D 65 78 74 72 61 63  t-extrac
+00000160: 74 5F 6C 61 6E 65 5F 73  t_lane_s
+00000168: 2D 6F 70 65 72 61 6E 64  -operand
+00000170: 00 09 28 76 31 32 38 2E  ..(v128.
+00000178: 6C 6F 61 64 33 32 5F 73  load32_s
+00000180: 70 6C 61 74 2D 65 78 74  plat-ext
+00000188: 72 61 63 74 5F 6C 61 6E  ract_lan
+00000190: 65 5F 73 2D 6F 70 65 72  e_s-oper
+00000198: 61 6E 64 00 0A 28 76 31  and..(v1
+000001a0: 32 38 2E 6C 6F 61 64 36  28.load6
+000001a8: 34 5F 73 70 6C 61 74 2D  4_splat-
+000001b0: 65 78 74 72 61 63 74 5F  extract_
+000001b8: 6C 61 6E 65 5F 73 2D 6F  lane_s-o
+000001c0: 70 65 72 61 6E 64 00 0B  perand..
+000001c8: 0A A5 01 0C 0E 00 02 7B  .......{
+000001d0: 02 7B 41 00 FD 07 00 00  .{A.....
+000001d8: 0B 0B 0B 0E 00 02 7B 02  ......{.
+000001e0: 7B 41 01 FD 08 01 00 0B  {A......
+000001e8: 0B 0B 0E 00 02 7B 02 7B  .....{.{
+000001f0: 41 02 FD 09 02 00 0B 0B  A.......
+000001f8: 0B 0E 00 02 7B 02 7B 41  ....{.{A
+00000200: 09 FD 0A 03 00 0B 0B 0B  ........
+00000208: 0D 00 02 7B 41 03 FD 07  ...{A...
+00000210: 00 00 0C 00 0B 0B 0D 00  ........
+00000218: 02 7B 41 04 FD 08 01 00  .{A.....
+00000220: 0C 00 0B 0B 0D 00 02 7B  .......{
+00000228: 41 05 FD 09 02 00 0C 00  A.......
+00000230: 0B 0B 0D 00 02 7B 41 0A  .....{A.
+00000238: FD 0A 03 00 0C 00 0B 0B  ........
+00000240: 0B 00 41 06 FD 07 00 00  ..A.....
+00000248: FD 15 00 0B 0B 00 41 07  ......A.
+00000250: FD 08 01 00 FD 15 00 0B  ........
+00000258: 0B 00 41 08 FD 09 02 00  ..A.....
+00000260: FD 15 00 0B 0B 00 41 0B  ......A.
+00000268: FD 0A 03 00 FD 15 00 0B  ........
+00000270: 0B 11 01 00 41 00 0B 0B  ....A...
+00000278: 00 01 02 03 04 05 06 07  ........
+00000280: 08 09 0A                 ...
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2"><code>(module
+  (type (;0;) (func (result v128)))
+  (type (;1;) (func (result i32)))
+  (func (;0;) (type 0) (result v128)
+    block (result v128)  ;; label &#x3D; @1
+      block (result v128)  ;; label &#x3D; @2
+        i32.const 0
+        v128.load8_splat
+      end
+    end)
+  (func (;1;) (type 0) (result v128)
+    block (result v128)  ;; label &#x3D; @1
+      block (result v128)  ;; label &#x3D; @2
+        i32.const 1
+        v128.load16_splat
+      end
+    end)
+  (func (;2;) (type 0) (result v128)
+    block (result v128)  ;; label &#x3D; @1
+      block (result v128)  ;; label &#x3D; @2
+        i32.const 2
+        v128.load32_splat
+      end
+    end)
+  (func (;3;) (type 0) (result v128)
+    block (result v128)  ;; label &#x3D; @1
+      block (result v128)  ;; label &#x3D; @2
+        i32.const 9
+        v128.load64_splat
+      end
+    end)
+  (func (;4;) (type 0) (result v128)
+    block (result v128)  ;; label &#x3D; @1
+      i32.const 3
+      v128.load8_splat
+      br 0 (;@1;)
+    end)
+  (func (;5;) (type 0) (result v128)
+    block (result v128)  ;; label &#x3D; @1
+      i32.const 4
+      v128.load16_splat
+      br 0 (;@1;)
+    end)
+  (func (;6;) (type 0) (result v128)
+    block (result v128)  ;; label &#x3D; @1
+      i32.const 5
+      v128.load32_splat
+      br 0 (;@1;)
+    end)
+  (func (;7;) (type 0) (result v128)
+    block (result v128)  ;; label &#x3D; @1
+      i32.const 10
+      v128.load64_splat
+      br 0 (;@1;)
+    end)
+  (func (;8;) (type 1) (result i32)
+    i32.const 6
+    v128.load8_splat
+    i8x16.extract_lane_s 0)
+  (func (;9;) (type 1) (result i32)
+    i32.const 7
+    v128.load16_splat
+    i8x16.extract_lane_s 0)
+  (func (;10;) (type 1) (result i32)
+    i32.const 8
+    v128.load32_splat
+    i8x16.extract_lane_s 0)
+  (func (;11;) (type 1) (result i32)
+    i32.const 11
+    v128.load64_splat
+    i8x16.extract_lane_s 0)
+  (memory (;0;) 1)
+  (export &quot;v128.load8_splat-in-block&quot; (func 0))
+  (export &quot;v128.load16_splat-in-block&quot; (func 1))
+  (export &quot;v128.load32_splat-in-block&quot; (func 2))
+  (export &quot;v128.load64_splat-in-block&quot; (func 3))
+  (export &quot;v128.load8_splat-as-br-value&quot; (func 4))
+  (export &quot;v128.load16_splat-as-br-value&quot; (func 5))
+  (export &quot;v128.load32_splat-as-br-value&quot; (func 6))
+  (export &quot;v128.load64_splat-as-br-value&quot; (func 7))
+  (export &quot;v128.load8_splat-extract_lane_s-operand&quot; (func 8))
+  (export &quot;v128.load16_splat-extract_lane_s-operand&quot; (func 9))
+  (export &quot;v128.load32_splat-extract_lane_s-operand&quot; (func 10))
+  (export &quot;v128.load64_splat-extract_lane_s-operand&quot; (func 11))
+  (data (;0;) (i32.const 0) &quot;\00\01\02\03\04\05\06\07\08\09\0a&quot;))
+</code></pre>
+    </div>
+</body>
+
+</html>

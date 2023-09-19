@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asmcc simd_splat.20</title>
+
+    <link rel="stylesheet" href="//unpkg.com/@highlightjs/cdn-assets@11.7.0/styles/github.min.css">
+    <script src="//unpkg.com/@highlightjs/cdn-assets@11.7.0/highlight.min.js"></script>
+    <script>
+        hljs.configure({
+            noHighlightRe: /^do-not-highlightme$/i,
+        });
+    </script>
+    <script>hljs.highlightAll();</script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="/_vercel/insights/script.js"></script>
+</head>
+
+<body class="text-sm p-2">
+    <h1 class="text-2xl  w-full mb-4">Anaylzer: <a href="/simd_splat.20.wasm">simd_splat.20.wasm</a></h1>
+    <div class="flex justify-evenly">
+        <pre class="p-4 overflow-scroll border-2"><code>
+simd_splat.20.wasm:	file format wasm 0x1
+
+Sections:
+
+     Type start&#x3D;0x0000000a end&#x3D;0x0000001f (size&#x3D;0x00000015) count: 4
+ Function start&#x3D;0x00000021 end&#x3D;0x0000002a (size&#x3D;0x00000009) count: 8
+   Global start&#x3D;0x0000002c end&#x3D;0x00000042 (size&#x3D;0x00000016) count: 1
+   Export start&#x3D;0x00000045 end&#x3D;0x000000e4 (size&#x3D;0x0000009f) count: 8
+     Code start&#x3D;0x000000e6 end&#x3D;0x00000143 (size&#x3D;0x0000005d) count: 8
+
+Section Details:
+
+Type[4]:
+ - type[0] (i32) -&gt; v128
+ - type[1] (f32) -&gt; v128
+ - type[2] (i64) -&gt; v128
+ - type[3] (f64) -&gt; v128
+Function[8]:
+ - func[0] sig&#x3D;0 &lt;as-br-value1&gt;
+ - func[1] sig&#x3D;0 &lt;as-return-value1&gt;
+ - func[2] sig&#x3D;0 &lt;as-local_set-value1&gt;
+ - func[3] sig&#x3D;1 &lt;as-global_set-value1&gt;
+ - func[4] sig&#x3D;2 &lt;as-br-value2&gt;
+ - func[5] sig&#x3D;2 &lt;as-return-value2&gt;
+ - func[6] sig&#x3D;2 &lt;as-local_set-value2&gt;
+ - func[7] sig&#x3D;3 &lt;as-global_set-value2&gt;
+Global[1]:
+ - global[0] v128 mutable&#x3D;1 - init &lt;INVALID&gt;
+Export[8]:
+ - func[0] &lt;as-br-value1&gt; -&gt; &quot;as-br-value1&quot;
+ - func[1] &lt;as-return-value1&gt; -&gt; &quot;as-return-value1&quot;
+ - func[2] &lt;as-local_set-value1&gt; -&gt; &quot;as-local_set-value1&quot;
+ - func[3] &lt;as-global_set-value1&gt; -&gt; &quot;as-global_set-value1&quot;
+ - func[4] &lt;as-br-value2&gt; -&gt; &quot;as-br-value2&quot;
+ - func[5] &lt;as-return-value2&gt; -&gt; &quot;as-return-value2&quot;
+ - func[6] &lt;as-local_set-value2&gt; -&gt; &quot;as-local_set-value2&quot;
+ - func[7] &lt;as-global_set-value2&gt; -&gt; &quot;as-global_set-value2&quot;
+Code[8]:
+ - func[0] size&#x3D;11 &lt;as-br-value1&gt;
+ - func[1] size&#x3D;7 &lt;as-return-value1&gt;
+ - func[2] size&#x3D;13 &lt;as-local_set-value1&gt;
+ - func[3] size&#x3D;11 &lt;as-global_set-value1&gt;
+ - func[4] size&#x3D;11 &lt;as-br-value2&gt;
+ - func[5] size&#x3D;7 &lt;as-return-value2&gt;
+ - func[6] size&#x3D;13 &lt;as-local_set-value2&gt;
+ - func[7] size&#x3D;11 &lt;as-global_set-value2&gt;
+
+Contents of section Type:
+000000a: 0460 017f 017b 6001 7d01 7b60 017e 017b  .&#x60;...{&#x60;.}.{&#x60;.~.{
+000001a: 6001 7c01 7b                             &#x60;.|.{
+
+Contents of section Function:
+0000021: 0800 0000 0102 0202 03                   .........
+
+Contents of section Global:
+000002c: 017b 01fd 0c00 0000 0000 0000 0000 0000  .{..............
+000003c: 0000 0000 000b                           ......
+
+Contents of section Export:
+0000045: 080c 6173 2d62 722d 7661 6c75 6531 0000  ..as-br-value1..
+0000055: 1061 732d 7265 7475 726e 2d76 616c 7565  .as-return-value
+0000065: 3100 0113 6173 2d6c 6f63 616c 5f73 6574  1...as-local_set
+0000075: 2d76 616c 7565 3100 0214 6173 2d67 6c6f  -value1...as-glo
+0000085: 6261 6c5f 7365 742d 7661 6c75 6531 0003  bal_set-value1..
+0000095: 0c61 732d 6272 2d76 616c 7565 3200 0410  .as-br-value2...
+00000a5: 6173 2d72 6574 7572 6e2d 7661 6c75 6532  as-return-value2
+00000b5: 0005 1361 732d 6c6f 6361 6c5f 7365 742d  ...as-local_set-
+00000c5: 7661 6c75 6532 0006 1461 732d 676c 6f62  value2...as-glob
+00000d5: 616c 5f73 6574 2d76 616c 7565 3200 07    al_set-value2..
+
+Contents of section Code:
+00000e6: 080b 0002 7b20 00fd 0f0c 000b 0b07 0020  ....{ ......... 
+00000f6: 00fd 100f 0b0d 0101 7b20 00fd 1121 0120  ........{ ...!. 
+0000106: 010f 0b0b 0020 00fd 1324 0023 000f 0b0b  ..... ...$.#....
+0000116: 0002 7b20 00fd 120c 000b 0b07 0020 00fd  ..{ ......... ..
+0000126: 120f 0b0d 0101 7b20 00fd 1221 0120 010f  ......{ ...!. ..
+0000136: 0b0b 0020 00fd 1424 0023 000f 0b         ... ...$.#...
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2"><code>BeginModule(version: 1)
+  BeginTypeSection(21)
+    OnTypeCount(4)
+    OnFuncType(index: 0, params: [i32], results: [v128])
+    OnFuncType(index: 1, params: [f32], results: [v128])
+    OnFuncType(index: 2, params: [i64], results: [v128])
+    OnFuncType(index: 3, params: [f64], results: [v128])
+  EndTypeSection
+  BeginFunctionSection(9)
+    OnFunctionCount(8)
+    OnFunction(index: 0, sig_index: 0)
+    OnFunction(index: 1, sig_index: 0)
+    OnFunction(index: 2, sig_index: 0)
+    OnFunction(index: 3, sig_index: 1)
+    OnFunction(index: 4, sig_index: 2)
+    OnFunction(index: 5, sig_index: 2)
+    OnFunction(index: 6, sig_index: 2)
+    OnFunction(index: 7, sig_index: 3)
+  EndFunctionSection
+  BeginGlobalSection(22)
+    OnGlobalCount(1)
+    BeginGlobal(index: 0, type: v128, mutable: true)
+    BeginGlobalInitExpr(0)
+    OnV128ConstExpr(0x00000000 0x00000000 0x00000000 0x00000000)
+    OnEndExpr
+    EndGlobalInitExpr(0)
+    EndGlobal(0)
+  EndGlobalSection
+  BeginExportSection(159)
+    OnExportCount(8)
+    OnExport(index: 0, kind: func, item_index: 0, name: &quot;as-br-value1&quot;)
+    OnExport(index: 1, kind: func, item_index: 1, name: &quot;as-return-value1&quot;)
+    OnExport(index: 2, kind: func, item_index: 2, name: &quot;as-local_set-value1&quot;)
+    OnExport(index: 3, kind: func, item_index: 3, name: &quot;as-global_set-value1&quot;)
+    OnExport(index: 4, kind: func, item_index: 4, name: &quot;as-br-value2&quot;)
+    OnExport(index: 5, kind: func, item_index: 5, name: &quot;as-return-value2&quot;)
+    OnExport(index: 6, kind: func, item_index: 6, name: &quot;as-local_set-value2&quot;)
+    OnExport(index: 7, kind: func, item_index: 7, name: &quot;as-global_set-value2&quot;)
+  EndExportSection
+  BeginCodeSection(93)
+    OnFunctionBodyCount(8)
+    BeginFunctionBody(0, size:11)
+    OnLocalDeclCount(0)
+    EndFunctionBody(0)
+    BeginFunctionBody(1, size:7)
+    OnLocalDeclCount(0)
+    EndFunctionBody(1)
+    BeginFunctionBody(2, size:13)
+    OnLocalDeclCount(1)
+    OnLocalDecl(index: 0, count: 1, type: v128)
+    EndFunctionBody(2)
+    BeginFunctionBody(3, size:11)
+    OnLocalDeclCount(0)
+    EndFunctionBody(3)
+    BeginFunctionBody(4, size:11)
+    OnLocalDeclCount(0)
+    EndFunctionBody(4)
+    BeginFunctionBody(5, size:7)
+    OnLocalDeclCount(0)
+    EndFunctionBody(5)
+    BeginFunctionBody(6, size:13)
+    OnLocalDeclCount(1)
+    OnLocalDecl(index: 0, count: 1, type: v128)
+    EndFunctionBody(6)
+    BeginFunctionBody(7, size:11)
+    OnLocalDeclCount(0)
+    EndFunctionBody(7)
+  EndCodeSection
+EndModule
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2 do-not-highlightme"><code>00000000: 00 61 73 6D 01 00 00 00  .asm....
+00000008: 01 15 04 60 01 7F 01 7B  ...&#x60;...{
+00000010: 60 01 7D 01 7B 60 01 7E  &#x60;.}.{&#x60;.~
+00000018: 01 7B 60 01 7C 01 7B 03  .{&#x60;.|.{.
+00000020: 09 08 00 00 00 01 02 02  ........
+00000028: 02 03 06 16 01 7B 01 FD  .....{..
+00000030: 0C 00 00 00 00 00 00 00  ........
+00000038: 00 00 00 00 00 00 00 00  ........
+00000040: 00 0B 07 9F 01 08 0C 61  .......a
+00000048: 73 2D 62 72 2D 76 61 6C  s-br-val
+00000050: 75 65 31 00 00 10 61 73  ue1...as
+00000058: 2D 72 65 74 75 72 6E 2D  -return-
+00000060: 76 61 6C 75 65 31 00 01  value1..
+00000068: 13 61 73 2D 6C 6F 63 61  .as-loca
+00000070: 6C 5F 73 65 74 2D 76 61  l_set-va
+00000078: 6C 75 65 31 00 02 14 61  lue1...a
+00000080: 73 2D 67 6C 6F 62 61 6C  s-global
+00000088: 5F 73 65 74 2D 76 61 6C  _set-val
+00000090: 75 65 31 00 03 0C 61 73  ue1...as
+00000098: 2D 62 72 2D 76 61 6C 75  -br-valu
+000000a0: 65 32 00 04 10 61 73 2D  e2...as-
+000000a8: 72 65 74 75 72 6E 2D 76  return-v
+000000b0: 61 6C 75 65 32 00 05 13  alue2...
+000000b8: 61 73 2D 6C 6F 63 61 6C  as-local
+000000c0: 5F 73 65 74 2D 76 61 6C  _set-val
+000000c8: 75 65 32 00 06 14 61 73  ue2...as
+000000d0: 2D 67 6C 6F 62 61 6C 5F  -global_
+000000d8: 73 65 74 2D 76 61 6C 75  set-valu
+000000e0: 65 32 00 07 0A 5D 08 0B  e2...]..
+000000e8: 00 02 7B 20 00 FD 0F 0C  ..{ ....
+000000f0: 00 0B 0B 07 00 20 00 FD  ..... ..
+000000f8: 10 0F 0B 0D 01 01 7B 20  ......{ 
+00000100: 00 FD 11 21 01 20 01 0F  ...!. ..
+00000108: 0B 0B 00 20 00 FD 13 24  ... ...$
+00000110: 00 23 00 0F 0B 0B 00 02  .#......
+00000118: 7B 20 00 FD 12 0C 00 0B  { ......
+00000120: 0B 07 00 20 00 FD 12 0F  ... ....
+00000128: 0B 0D 01 01 7B 20 00 FD  ....{ ..
+00000130: 12 21 01 20 01 0F 0B 0B  .!. ....
+00000138: 00 20 00 FD 14 24 00 23  . ...$.#
+00000140: 00 0F 0B                 ...
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2"><code>(module
+  (type (;0;) (func (param i32) (result v128)))
+  (type (;1;) (func (param f32) (result v128)))
+  (type (;2;) (func (param i64) (result v128)))
+  (type (;3;) (func (param f64) (result v128)))
+  (func (;0;) (type 0) (param i32) (result v128)
+    block (result v128)  ;; label &#x3D; @1
+      local.get 0
+      i8x16.splat
+      br 0 (;@1;)
+    end)
+  (func (;1;) (type 0) (param i32) (result v128)
+    local.get 0
+    i16x8.splat
+    return)
+  (func (;2;) (type 0) (param i32) (result v128)
+    (local v128)
+    local.get 0
+    i32x4.splat
+    local.set 1
+    local.get 1
+    return)
+  (func (;3;) (type 1) (param f32) (result v128)
+    local.get 0
+    f32x4.splat
+    global.set 0
+    global.get 0
+    return)
+  (func (;4;) (type 2) (param i64) (result v128)
+    block (result v128)  ;; label &#x3D; @1
+      local.get 0
+      i64x2.splat
+      br 0 (;@1;)
+    end)
+  (func (;5;) (type 2) (param i64) (result v128)
+    local.get 0
+    i64x2.splat
+    return)
+  (func (;6;) (type 2) (param i64) (result v128)
+    (local v128)
+    local.get 0
+    i64x2.splat
+    local.set 1
+    local.get 1
+    return)
+  (func (;7;) (type 3) (param f64) (result v128)
+    local.get 0
+    f64x2.splat
+    global.set 0
+    global.get 0
+    return)
+  (global (;0;) (mut v128) (v128.const i32x4 0x00000000 0x00000000 0x00000000 0x00000000))
+  (export &quot;as-br-value1&quot; (func 0))
+  (export &quot;as-return-value1&quot; (func 1))
+  (export &quot;as-local_set-value1&quot; (func 2))
+  (export &quot;as-global_set-value1&quot; (func 3))
+  (export &quot;as-br-value2&quot; (func 4))
+  (export &quot;as-return-value2&quot; (func 5))
+  (export &quot;as-local_set-value2&quot; (func 6))
+  (export &quot;as-global_set-value2&quot; (func 7)))
+</code></pre>
+    </div>
+</body>
+
+</html>

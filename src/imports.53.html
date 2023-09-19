@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asmcc imports.53</title>
+
+    <link rel="stylesheet" href="//unpkg.com/@highlightjs/cdn-assets@11.7.0/styles/github.min.css">
+    <script src="//unpkg.com/@highlightjs/cdn-assets@11.7.0/highlight.min.js"></script>
+    <script>
+        hljs.configure({
+            noHighlightRe: /^do-not-highlightme$/i,
+        });
+    </script>
+    <script>hljs.highlightAll();</script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="/_vercel/insights/script.js"></script>
+</head>
+
+<body class="text-sm p-2">
+    <h1 class="text-2xl  w-full mb-4">Anaylzer: <a href="/imports.53.wasm">imports.53.wasm</a></h1>
+    <div class="flex justify-evenly">
+        <pre class="p-4 overflow-scroll border-2"><code>
+imports.53.wasm:	file format wasm 0x1
+
+Sections:
+
+   Import start&#x3D;0x0000000a end&#x3D;0x00000022 (size&#x3D;0x00000018) count: 1
+
+Section Details:
+
+Import[1]:
+ - global[0] i64 mutable&#x3D;0 &lt;- test.global-mut-i64
+
+Contents of section Import:
+000000a: 0104 7465 7374 0e67 6c6f 6261 6c2d 6d75  ..test.global-mu
+000001a: 742d 6936 3403 7e00                      t-i64.~.
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2"><code>BeginModule(version: 1)
+  BeginImportSection(24)
+    OnImportCount(1)
+    OnImport(index: 0, kind: global, module: &quot;test&quot;, field: &quot;global-mut-i64&quot;)
+    OnImportGlobal(import_index: 0, global_index: 0, type: i64, mutable: false)
+  EndImportSection
+EndModule
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2 do-not-highlightme"><code>00000000: 00 61 73 6D 01 00 00 00  .asm....
+00000008: 02 18 01 04 74 65 73 74  ....test
+00000010: 0E 67 6C 6F 62 61 6C 2D  .global-
+00000018: 6D 75 74 2D 69 36 34 03  mut-i64.
+00000020: 7E 00                    ~.
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2"><code>(module
+  (import &quot;test&quot; &quot;global-mut-i64&quot; (global (;0;) i64)))
+</code></pre>
+    </div>
+</body>
+
+</html>

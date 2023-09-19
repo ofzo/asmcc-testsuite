@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asmcc float_exprs.36</title>
+
+    <link rel="stylesheet" href="//unpkg.com/@highlightjs/cdn-assets@11.7.0/styles/github.min.css">
+    <script src="//unpkg.com/@highlightjs/cdn-assets@11.7.0/highlight.min.js"></script>
+    <script>
+        hljs.configure({
+            noHighlightRe: /^do-not-highlightme$/i,
+        });
+    </script>
+    <script>hljs.highlightAll();</script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="/_vercel/insights/script.js"></script>
+</head>
+
+<body class="text-sm p-2">
+    <h1 class="text-2xl  w-full mb-4">Anaylzer: <a href="/float_exprs.36.wasm">float_exprs.36.wasm</a></h1>
+    <div class="flex justify-evenly">
+        <pre class="p-4 overflow-scroll border-2"><code>
+float_exprs.36.wasm:	file format wasm 0x1
+
+Sections:
+
+     Type start&#x3D;0x0000000a end&#x3D;0x00000010 (size&#x3D;0x00000006) count: 1
+ Function start&#x3D;0x00000012 end&#x3D;0x00000014 (size&#x3D;0x00000002) count: 1
+   Export start&#x3D;0x00000016 end&#x3D;0x00000030 (size&#x3D;0x0000001a) count: 1
+     Code start&#x3D;0x00000032 end&#x3D;0x0000003a (size&#x3D;0x00000008) count: 1
+
+Section Details:
+
+Type[1]:
+ - type[0] (f32) -&gt; f32
+Function[1]:
+ - func[0] sig&#x3D;0 &lt;no_fold_promote_demote&gt;
+Export[1]:
+ - func[0] &lt;no_fold_promote_demote&gt; -&gt; &quot;no_fold_promote_demote&quot;
+Code[1]:
+ - func[0] size&#x3D;6 &lt;no_fold_promote_demote&gt;
+
+Contents of section Type:
+000000a: 0160 017d 017d                           .&#x60;.}.}
+
+Contents of section Function:
+0000012: 0100                                     ..
+
+Contents of section Export:
+0000016: 0116 6e6f 5f66 6f6c 645f 7072 6f6d 6f74  ..no_fold_promot
+0000026: 655f 6465 6d6f 7465 0000                 e_demote..
+
+Contents of section Code:
+0000032: 0106 0020 00bb b60b                      ... ....
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2"><code>BeginModule(version: 1)
+  BeginTypeSection(6)
+    OnTypeCount(1)
+    OnFuncType(index: 0, params: [f32], results: [f32])
+  EndTypeSection
+  BeginFunctionSection(2)
+    OnFunctionCount(1)
+    OnFunction(index: 0, sig_index: 0)
+  EndFunctionSection
+  BeginExportSection(26)
+    OnExportCount(1)
+    OnExport(index: 0, kind: func, item_index: 0, name: &quot;no_fold_promote_demote&quot;)
+  EndExportSection
+  BeginCodeSection(8)
+    OnFunctionBodyCount(1)
+    BeginFunctionBody(0, size:6)
+    OnLocalDeclCount(0)
+    EndFunctionBody(0)
+  EndCodeSection
+EndModule
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2 do-not-highlightme"><code>00000000: 00 61 73 6D 01 00 00 00  .asm....
+00000008: 01 06 01 60 01 7D 01 7D  ...&#x60;.}.}
+00000010: 03 02 01 00 07 1A 01 16  ........
+00000018: 6E 6F 5F 66 6F 6C 64 5F  no_fold_
+00000020: 70 72 6F 6D 6F 74 65 5F  promote_
+00000028: 64 65 6D 6F 74 65 00 00  demote..
+00000030: 0A 08 01 06 00 20 00 BB  ..... ..
+00000038: B6 0B                    ..
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2"><code>(module
+  (type (;0;) (func (param f32) (result f32)))
+  (func (;0;) (type 0) (param f32) (result f32)
+    local.get 0
+    f64.promote_f32
+    f32.demote_f64)
+  (export &quot;no_fold_promote_demote&quot; (func 0)))
+</code></pre>
+    </div>
+</body>
+
+</html>

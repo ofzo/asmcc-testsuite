@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asmcc data.4</title>
+
+    <link rel="stylesheet" href="//unpkg.com/@highlightjs/cdn-assets@11.7.0/styles/github.min.css">
+    <script src="//unpkg.com/@highlightjs/cdn-assets@11.7.0/highlight.min.js"></script>
+    <script>
+        hljs.configure({
+            noHighlightRe: /^do-not-highlightme$/i,
+        });
+    </script>
+    <script>hljs.highlightAll();</script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="/_vercel/insights/script.js"></script>
+</head>
+
+<body class="text-sm p-2">
+    <h1 class="text-2xl  w-full mb-4">Anaylzer: <a href="/data.4.wasm">data.4.wasm</a></h1>
+    <div class="flex justify-evenly">
+        <pre class="p-4 overflow-scroll border-2"><code>
+data.4.wasm:	file format wasm 0x1
+
+Sections:
+
+   Import start&#x3D;0x0000000a end&#x3D;0x0000001e (size&#x3D;0x00000014) count: 1
+     Data start&#x3D;0x00000020 end&#x3D;0x00000047 (size&#x3D;0x00000027) count: 6
+
+Section Details:
+
+Import[1]:
+ - memory[0] pages: initial&#x3D;1 &lt;- spectest.memory
+Data[6]:
+ - segment[0] memory&#x3D;0 size&#x3D;1 - init i32&#x3D;0
+  - 0000000: 61                                       a
+ - segment[1] memory&#x3D;0 size&#x3D;1 - init i32&#x3D;1
+  - 0000001: 62                                       b
+ - segment[2] memory&#x3D;0 size&#x3D;3 - init i32&#x3D;2
+  - 0000002: 6364 65                                  cde
+ - segment[3] memory&#x3D;0 size&#x3D;1 - init i32&#x3D;3
+  - 0000003: 66                                       f
+ - segment[4] memory&#x3D;0 size&#x3D;1 - init i32&#x3D;2
+  - 0000002: 67                                       g
+ - segment[5] memory&#x3D;0 size&#x3D;1 - init i32&#x3D;1
+  - 0000001: 68                                       h
+
+Contents of section Import:
+000000a: 0108 7370 6563 7465 7374 066d 656d 6f72  ..spectest.memor
+000001a: 7902 0001                                y...
+
+Contents of section Data:
+0000020: 0600 4100 0b01 6100 4101 0b01 6200 4102  ..A...a.A...b.A.
+0000030: 0b03 6364 6500 4103 0b01 6600 4102 0b01  ..cde.A...f.A...
+0000040: 6700 4101 0b01 68                        g.A...h
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2"><code>BeginModule(version: 1)
+  BeginImportSection(20)
+    OnImportCount(1)
+    OnImport(index: 0, kind: memory, module: &quot;spectest&quot;, field: &quot;memory&quot;)
+    OnImportMemory(import_index: 0, memory_index: 0, initial: 1)
+  EndImportSection
+  BeginDataSection(39)
+    OnDataSegmentCount(6)
+    BeginDataSegment(index: 0, memory_index: 0, flags: 0)
+    BeginDataSegmentInitExpr(0)
+    OnI32ConstExpr(0 (0x0))
+    OnEndExpr
+    EndDataSegmentInitExpr(0)
+    OnDataSegmentData(index:0, size:1)
+    EndDataSegment(0)
+    BeginDataSegment(index: 1, memory_index: 0, flags: 0)
+    BeginDataSegmentInitExpr(1)
+    OnI32ConstExpr(1 (0x1))
+    OnEndExpr
+    EndDataSegmentInitExpr(1)
+    OnDataSegmentData(index:1, size:1)
+    EndDataSegment(1)
+    BeginDataSegment(index: 2, memory_index: 0, flags: 0)
+    BeginDataSegmentInitExpr(2)
+    OnI32ConstExpr(2 (0x2))
+    OnEndExpr
+    EndDataSegmentInitExpr(2)
+    OnDataSegmentData(index:2, size:3)
+    EndDataSegment(2)
+    BeginDataSegment(index: 3, memory_index: 0, flags: 0)
+    BeginDataSegmentInitExpr(3)
+    OnI32ConstExpr(3 (0x3))
+    OnEndExpr
+    EndDataSegmentInitExpr(3)
+    OnDataSegmentData(index:3, size:1)
+    EndDataSegment(3)
+    BeginDataSegment(index: 4, memory_index: 0, flags: 0)
+    BeginDataSegmentInitExpr(4)
+    OnI32ConstExpr(2 (0x2))
+    OnEndExpr
+    EndDataSegmentInitExpr(4)
+    OnDataSegmentData(index:4, size:1)
+    EndDataSegment(4)
+    BeginDataSegment(index: 5, memory_index: 0, flags: 0)
+    BeginDataSegmentInitExpr(5)
+    OnI32ConstExpr(1 (0x1))
+    OnEndExpr
+    EndDataSegmentInitExpr(5)
+    OnDataSegmentData(index:5, size:1)
+    EndDataSegment(5)
+  EndDataSection
+EndModule
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2 do-not-highlightme"><code>00000000: 00 61 73 6D 01 00 00 00  .asm....
+00000008: 02 14 01 08 73 70 65 63  ....spec
+00000010: 74 65 73 74 06 6D 65 6D  test.mem
+00000018: 6F 72 79 02 00 01 0B 27  ory....&#x27;
+00000020: 06 00 41 00 0B 01 61 00  ..A...a.
+00000028: 41 01 0B 01 62 00 41 02  A...b.A.
+00000030: 0B 03 63 64 65 00 41 03  ..cde.A.
+00000038: 0B 01 66 00 41 02 0B 01  ..f.A...
+00000040: 67 00 41 01 0B 01 68     g.A...h
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2"><code>(module
+  (import &quot;spectest&quot; &quot;memory&quot; (memory (;0;) 1))
+  (data (;0;) (i32.const 0) &quot;a&quot;)
+  (data (;1;) (i32.const 1) &quot;b&quot;)
+  (data (;2;) (i32.const 2) &quot;cde&quot;)
+  (data (;3;) (i32.const 3) &quot;f&quot;)
+  (data (;4;) (i32.const 2) &quot;g&quot;)
+  (data (;5;) (i32.const 1) &quot;h&quot;))
+</code></pre>
+    </div>
+</body>
+
+</html>

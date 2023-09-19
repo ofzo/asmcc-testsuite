@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asmcc data.11</title>
+
+    <link rel="stylesheet" href="//unpkg.com/@highlightjs/cdn-assets@11.7.0/styles/github.min.css">
+    <script src="//unpkg.com/@highlightjs/cdn-assets@11.7.0/highlight.min.js"></script>
+    <script>
+        hljs.configure({
+            noHighlightRe: /^do-not-highlightme$/i,
+        });
+    </script>
+    <script>hljs.highlightAll();</script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="/_vercel/insights/script.js"></script>
+</head>
+
+<body class="text-sm p-2">
+    <h1 class="text-2xl  w-full mb-4">Anaylzer: <a href="/data.11.wasm">data.11.wasm</a></h1>
+    <div class="flex justify-evenly">
+        <pre class="p-4 overflow-scroll border-2"><code>
+data.11.wasm:	file format wasm 0x1
+
+Sections:
+
+   Memory start&#x3D;0x0000000a end&#x3D;0x0000000d (size&#x3D;0x00000003) count: 1
+     Data start&#x3D;0x0000000f end&#x3D;0x0000001e (size&#x3D;0x0000000f) count: 2
+
+Section Details:
+
+Memory[1]:
+ - memory[0] pages: initial&#x3D;1
+Data[2]:
+ - segment[0] memory&#x3D;0 size&#x3D;1 - init i32&#x3D;0
+  - 0000000: 61                                       a
+ - segment[1] memory&#x3D;0 size&#x3D;1 - init i32&#x3D;65535
+  - 000ffff: 62                                       b
+
+Contents of section Memory:
+000000a: 0100 01                                  ...
+
+Contents of section Data:
+000000f: 0200 4100 0b01 6100 41ff ff03 0b01 62    ..A...a.A.....b
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2"><code>BeginModule(version: 1)
+  BeginMemorySection(3)
+    OnMemoryCount(1)
+    OnMemory(index: 0, initial: 1)
+  EndMemorySection
+  BeginDataSection(15)
+    OnDataSegmentCount(2)
+    BeginDataSegment(index: 0, memory_index: 0, flags: 0)
+    BeginDataSegmentInitExpr(0)
+    OnI32ConstExpr(0 (0x0))
+    OnEndExpr
+    EndDataSegmentInitExpr(0)
+    OnDataSegmentData(index:0, size:1)
+    EndDataSegment(0)
+    BeginDataSegment(index: 1, memory_index: 0, flags: 0)
+    BeginDataSegmentInitExpr(1)
+    OnI32ConstExpr(65535 (0xffff))
+    OnEndExpr
+    EndDataSegmentInitExpr(1)
+    OnDataSegmentData(index:1, size:1)
+    EndDataSegment(1)
+  EndDataSection
+EndModule
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2 do-not-highlightme"><code>00000000: 00 61 73 6D 01 00 00 00  .asm....
+00000008: 05 03 01 00 01 0B 0F 02  ........
+00000010: 00 41 00 0B 01 61 00 41  .A...a.A
+00000018: FF FF 03 0B 01 62        .....b
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2"><code>(module
+  (memory (;0;) 1)
+  (data (;0;) (i32.const 0) &quot;a&quot;)
+  (data (;1;) (i32.const 65535) &quot;b&quot;))
+</code></pre>
+    </div>
+</body>
+
+</html>

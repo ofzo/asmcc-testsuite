@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asmcc endianness.0</title>
+
+    <link rel="stylesheet" href="//unpkg.com/@highlightjs/cdn-assets@11.7.0/styles/github.min.css">
+    <script src="//unpkg.com/@highlightjs/cdn-assets@11.7.0/highlight.min.js"></script>
+    <script>
+        hljs.configure({
+            noHighlightRe: /^do-not-highlightme$/i,
+        });
+    </script>
+    <script>hljs.highlightAll();</script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="/_vercel/insights/script.js"></script>
+</head>
+
+<body class="text-sm p-2">
+    <h1 class="text-2xl  w-full mb-4">Anaylzer: <a href="/endianness.0.wasm">endianness.0.wasm</a></h1>
+    <div class="flex justify-evenly">
+        <pre class="p-4 overflow-scroll border-2"><code>
+endianness.0.wasm:	file format wasm 0x1
+
+Sections:
+
+     Type start&#x3D;0x0000000a end&#x3D;0x0000002e (size&#x3D;0x00000024) count: 7
+ Function start&#x3D;0x00000030 end&#x3D;0x00000048 (size&#x3D;0x00000018) count: 23
+   Memory start&#x3D;0x0000004a end&#x3D;0x0000004d (size&#x3D;0x00000003) count: 1
+   Export start&#x3D;0x00000050 end&#x3D;0x00000131 (size&#x3D;0x000000e1) count: 17
+     Code start&#x3D;0x00000134 end&#x3D;0x000002aa (size&#x3D;0x00000176) count: 23
+
+Section Details:
+
+Type[7]:
+ - type[0] (i32, i32) -&gt; nil
+ - type[1] (i32, i64) -&gt; nil
+ - type[2] (i32) -&gt; i32
+ - type[3] (i32) -&gt; i64
+ - type[4] (i64) -&gt; i64
+ - type[5] (f32) -&gt; f32
+ - type[6] (f64) -&gt; f64
+Function[23]:
+ - func[0] sig&#x3D;0
+ - func[1] sig&#x3D;0
+ - func[2] sig&#x3D;1
+ - func[3] sig&#x3D;2
+ - func[4] sig&#x3D;2
+ - func[5] sig&#x3D;3
+ - func[6] sig&#x3D;2 &lt;i32_load16_s&gt;
+ - func[7] sig&#x3D;2 &lt;i32_load16_u&gt;
+ - func[8] sig&#x3D;2 &lt;i32_load&gt;
+ - func[9] sig&#x3D;4 &lt;i64_load16_s&gt;
+ - func[10] sig&#x3D;4 &lt;i64_load16_u&gt;
+ - func[11] sig&#x3D;4 &lt;i64_load32_s&gt;
+ - func[12] sig&#x3D;4 &lt;i64_load32_u&gt;
+ - func[13] sig&#x3D;4 &lt;i64_load&gt;
+ - func[14] sig&#x3D;5 &lt;f32_load&gt;
+ - func[15] sig&#x3D;6 &lt;f64_load&gt;
+ - func[16] sig&#x3D;2 &lt;i32_store16&gt;
+ - func[17] sig&#x3D;2 &lt;i32_store&gt;
+ - func[18] sig&#x3D;4 &lt;i64_store16&gt;
+ - func[19] sig&#x3D;4 &lt;i64_store32&gt;
+ - func[20] sig&#x3D;4 &lt;i64_store&gt;
+ - func[21] sig&#x3D;5 &lt;f32_store&gt;
+ - func[22] sig&#x3D;6 &lt;f64_store&gt;
+Memory[1]:
+ - memory[0] pages: initial&#x3D;1
+Export[17]:
+ - func[6] &lt;i32_load16_s&gt; -&gt; &quot;i32_load16_s&quot;
+ - func[7] &lt;i32_load16_u&gt; -&gt; &quot;i32_load16_u&quot;
+ - func[8] &lt;i32_load&gt; -&gt; &quot;i32_load&quot;
+ - func[9] &lt;i64_load16_s&gt; -&gt; &quot;i64_load16_s&quot;
+ - func[10] &lt;i64_load16_u&gt; -&gt; &quot;i64_load16_u&quot;
+ - func[11] &lt;i64_load32_s&gt; -&gt; &quot;i64_load32_s&quot;
+ - func[12] &lt;i64_load32_u&gt; -&gt; &quot;i64_load32_u&quot;
+ - func[13] &lt;i64_load&gt; -&gt; &quot;i64_load&quot;
+ - func[14] &lt;f32_load&gt; -&gt; &quot;f32_load&quot;
+ - func[15] &lt;f64_load&gt; -&gt; &quot;f64_load&quot;
+ - func[16] &lt;i32_store16&gt; -&gt; &quot;i32_store16&quot;
+ - func[17] &lt;i32_store&gt; -&gt; &quot;i32_store&quot;
+ - func[18] &lt;i64_store16&gt; -&gt; &quot;i64_store16&quot;
+ - func[19] &lt;i64_store32&gt; -&gt; &quot;i64_store32&quot;
+ - func[20] &lt;i64_store&gt; -&gt; &quot;i64_store&quot;
+ - func[21] &lt;f32_store&gt; -&gt; &quot;f32_store&quot;
+ - func[22] &lt;f64_store&gt; -&gt; &quot;f64_store&quot;
+Code[23]:
+ - func[0] size&#x3D;22
+ - func[1] size&#x3D;20
+ - func[2] size&#x3D;22
+ - func[3] size&#x3D;19
+ - func[4] size&#x3D;17
+ - func[5] size&#x3D;19
+ - func[6] size&#x3D;13 &lt;i32_load16_s&gt;
+ - func[7] size&#x3D;13 &lt;i32_load16_u&gt;
+ - func[8] size&#x3D;13 &lt;i32_load&gt;
+ - func[9] size&#x3D;14 &lt;i64_load16_s&gt;
+ - func[10] size&#x3D;14 &lt;i64_load16_u&gt;
+ - func[11] size&#x3D;14 &lt;i64_load32_s&gt;
+ - func[12] size&#x3D;14 &lt;i64_load32_u&gt;
+ - func[13] size&#x3D;13 &lt;i64_load&gt;
+ - func[14] size&#x3D;14 &lt;f32_load&gt;
+ - func[15] size&#x3D;14 &lt;f64_load&gt;
+ - func[16] size&#x3D;13 &lt;i32_store16&gt;
+ - func[17] size&#x3D;13 &lt;i32_store&gt;
+ - func[18] size&#x3D;14 &lt;i64_store16&gt;
+ - func[19] size&#x3D;14 &lt;i64_store32&gt;
+ - func[20] size&#x3D;13 &lt;i64_store&gt;
+ - func[21] size&#x3D;14 &lt;f32_store&gt;
+ - func[22] size&#x3D;14 &lt;f64_store&gt;
+
+Contents of section Type:
+000000a: 0760 027f 7f00 6002 7f7e 0060 017f 017f  .&#x60;....&#x60;..~.&#x60;....
+000001a: 6001 7f01 7e60 017e 017e 6001 7d01 7d60  &#x60;...~&#x60;.~.~&#x60;.}.}&#x60;
+000002a: 017c 017c                                .|.|
+
+Contents of section Function:
+0000030: 1700 0001 0202 0302 0202 0404 0404 0405  ................
+0000040: 0602 0204 0404 0506                      ........
+
+Contents of section Memory:
+000004a: 0100 01                                  ...
+
+Contents of section Export:
+0000050: 110c 6933 325f 6c6f 6164 3136 5f73 0006  ..i32_load16_s..
+0000060: 0c69 3332 5f6c 6f61 6431 365f 7500 0708  .i32_load16_u...
+0000070: 6933 325f 6c6f 6164 0008 0c69 3634 5f6c  i32_load...i64_l
+0000080: 6f61 6431 365f 7300 090c 6936 345f 6c6f  oad16_s...i64_lo
+0000090: 6164 3136 5f75 000a 0c69 3634 5f6c 6f61  ad16_u...i64_loa
+00000a0: 6433 325f 7300 0b0c 6936 345f 6c6f 6164  d32_s...i64_load
+00000b0: 3332 5f75 000c 0869 3634 5f6c 6f61 6400  32_u...i64_load.
+00000c0: 0d08 6633 325f 6c6f 6164 000e 0866 3634  ..f32_load...f64
+00000d0: 5f6c 6f61 6400 0f0b 6933 325f 7374 6f72  _load...i32_stor
+00000e0: 6531 3600 1009 6933 325f 7374 6f72 6500  e16...i32_store.
+00000f0: 110b 6936 345f 7374 6f72 6531 3600 120b  ..i64_store16...
+0000100: 6936 345f 7374 6f72 6533 3200 1309 6936  i64_store32...i6
+0000110: 345f 7374 6f72 6500 1409 6633 325f 7374  4_store...f32_st
+0000120: 6f72 6500 1509 6636 345f 7374 6f72 6500  ore...f64_store.
+0000130: 16                                       .
+
+Contents of section Code:
+0000134: 1716 0020 0020 013a 0000 2000 4101 6a20  ... . .:.. .A.j 
+0000144: 0141 0876 3a00 000b 1400 2000 2001 1000  .A.v:..... . ...
+0000154: 2000 4102 6a20 0141 1076 1000 0b16 0020   .A.j .A.v..... 
+0000164: 0020 01a7 1001 2000 4104 6a20 0142 2088  . .... .A.j .B .
+0000174: a710 010b 1300 2000 2d00 0020 0041 016a  ...... .-.. .A.j
+0000184: 2d00 0041 0874 720b 1100 2000 1003 2000  -..A.tr... ... .
+0000194: 4102 6a10 0341 1074 720b 1300 2000 1004  A.j..A.tr... ...
+00001a4: ad20 0041 046a 1004 ad42 2086 840b 0d00  . .A.j...B .....
+00001b4: 4100 2000 1000 4100 2e01 000b 0d00 4100  A. ...A.......A.
+00001c4: 2000 1000 4100 2f01 000b 0d00 4100 2000   ...A./.....A. .
+00001d4: 1001 4100 2802 000b 0e00 4100 2000 a710  ..A.(.....A. ...
+00001e4: 0041 0032 0100 0b0e 0041 0020 00a7 1000  .A.2.....A. ....
+00001f4: 4100 3301 000b 0e00 4100 2000 a710 0141  A.3.....A. ....A
+0000204: 0034 0200 0b0e 0041 0020 00a7 1001 4100  .4.....A. ....A.
+0000214: 3502 000b 0d00 4100 2000 1002 4100 2903  5.....A. ...A.).
+0000224: 000b 0e00 4100 2000 bc10 0141 002a 0200  ....A. ....A.*..
+0000234: 0b0e 0041 0020 00bd 1002 4100 2b03 000b  ...A. ....A.+...
+0000244: 0d00 4100 2000 3b01 0041 0010 030b 0d00  ..A. .;..A......
+0000254: 4100 2000 3602 0041 0010 040b 0e00 4100  A. .6..A......A.
+0000264: 2000 3d01 0041 0010 03ad 0b0e 0041 0020   .&#x3D;..A.......A. 
+0000274: 003e 0200 4100 1004 ad0b 0d00 4100 2000  .&gt;..A.......A. .
+0000284: 3703 0041 0010 050b 0e00 4100 2000 3802  7..A......A. .8.
+0000294: 0041 0010 04be 0b0e 0041 0020 0039 0300  .A.......A. .9..
+00002a4: 4100 1005 bf0b                           A.....
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2"><code>BeginModule(version: 1)
+  BeginTypeSection(36)
+    OnTypeCount(7)
+    OnFuncType(index: 0, params: [i32, i32], results: [])
+    OnFuncType(index: 1, params: [i32, i64], results: [])
+    OnFuncType(index: 2, params: [i32], results: [i32])
+    OnFuncType(index: 3, params: [i32], results: [i64])
+    OnFuncType(index: 4, params: [i64], results: [i64])
+    OnFuncType(index: 5, params: [f32], results: [f32])
+    OnFuncType(index: 6, params: [f64], results: [f64])
+  EndTypeSection
+  BeginFunctionSection(24)
+    OnFunctionCount(23)
+    OnFunction(index: 0, sig_index: 0)
+    OnFunction(index: 1, sig_index: 0)
+    OnFunction(index: 2, sig_index: 1)
+    OnFunction(index: 3, sig_index: 2)
+    OnFunction(index: 4, sig_index: 2)
+    OnFunction(index: 5, sig_index: 3)
+    OnFunction(index: 6, sig_index: 2)
+    OnFunction(index: 7, sig_index: 2)
+    OnFunction(index: 8, sig_index: 2)
+    OnFunction(index: 9, sig_index: 4)
+    OnFunction(index: 10, sig_index: 4)
+    OnFunction(index: 11, sig_index: 4)
+    OnFunction(index: 12, sig_index: 4)
+    OnFunction(index: 13, sig_index: 4)
+    OnFunction(index: 14, sig_index: 5)
+    OnFunction(index: 15, sig_index: 6)
+    OnFunction(index: 16, sig_index: 2)
+    OnFunction(index: 17, sig_index: 2)
+    OnFunction(index: 18, sig_index: 4)
+    OnFunction(index: 19, sig_index: 4)
+    OnFunction(index: 20, sig_index: 4)
+    OnFunction(index: 21, sig_index: 5)
+    OnFunction(index: 22, sig_index: 6)
+  EndFunctionSection
+  BeginMemorySection(3)
+    OnMemoryCount(1)
+    OnMemory(index: 0, initial: 1)
+  EndMemorySection
+  BeginExportSection(225)
+    OnExportCount(17)
+    OnExport(index: 0, kind: func, item_index: 6, name: &quot;i32_load16_s&quot;)
+    OnExport(index: 1, kind: func, item_index: 7, name: &quot;i32_load16_u&quot;)
+    OnExport(index: 2, kind: func, item_index: 8, name: &quot;i32_load&quot;)
+    OnExport(index: 3, kind: func, item_index: 9, name: &quot;i64_load16_s&quot;)
+    OnExport(index: 4, kind: func, item_index: 10, name: &quot;i64_load16_u&quot;)
+    OnExport(index: 5, kind: func, item_index: 11, name: &quot;i64_load32_s&quot;)
+    OnExport(index: 6, kind: func, item_index: 12, name: &quot;i64_load32_u&quot;)
+    OnExport(index: 7, kind: func, item_index: 13, name: &quot;i64_load&quot;)
+    OnExport(index: 8, kind: func, item_index: 14, name: &quot;f32_load&quot;)
+    OnExport(index: 9, kind: func, item_index: 15, name: &quot;f64_load&quot;)
+    OnExport(index: 10, kind: func, item_index: 16, name: &quot;i32_store16&quot;)
+    OnExport(index: 11, kind: func, item_index: 17, name: &quot;i32_store&quot;)
+    OnExport(index: 12, kind: func, item_index: 18, name: &quot;i64_store16&quot;)
+    OnExport(index: 13, kind: func, item_index: 19, name: &quot;i64_store32&quot;)
+    OnExport(index: 14, kind: func, item_index: 20, name: &quot;i64_store&quot;)
+    OnExport(index: 15, kind: func, item_index: 21, name: &quot;f32_store&quot;)
+    OnExport(index: 16, kind: func, item_index: 22, name: &quot;f64_store&quot;)
+  EndExportSection
+  BeginCodeSection(374)
+    OnFunctionBodyCount(23)
+    BeginFunctionBody(0, size:22)
+    OnLocalDeclCount(0)
+    EndFunctionBody(0)
+    BeginFunctionBody(1, size:20)
+    OnLocalDeclCount(0)
+    EndFunctionBody(1)
+    BeginFunctionBody(2, size:22)
+    OnLocalDeclCount(0)
+    EndFunctionBody(2)
+    BeginFunctionBody(3, size:19)
+    OnLocalDeclCount(0)
+    EndFunctionBody(3)
+    BeginFunctionBody(4, size:17)
+    OnLocalDeclCount(0)
+    EndFunctionBody(4)
+    BeginFunctionBody(5, size:19)
+    OnLocalDeclCount(0)
+    EndFunctionBody(5)
+    BeginFunctionBody(6, size:13)
+    OnLocalDeclCount(0)
+    EndFunctionBody(6)
+    BeginFunctionBody(7, size:13)
+    OnLocalDeclCount(0)
+    EndFunctionBody(7)
+    BeginFunctionBody(8, size:13)
+    OnLocalDeclCount(0)
+    EndFunctionBody(8)
+    BeginFunctionBody(9, size:14)
+    OnLocalDeclCount(0)
+    EndFunctionBody(9)
+    BeginFunctionBody(10, size:14)
+    OnLocalDeclCount(0)
+    EndFunctionBody(10)
+    BeginFunctionBody(11, size:14)
+    OnLocalDeclCount(0)
+    EndFunctionBody(11)
+    BeginFunctionBody(12, size:14)
+    OnLocalDeclCount(0)
+    EndFunctionBody(12)
+    BeginFunctionBody(13, size:13)
+    OnLocalDeclCount(0)
+    EndFunctionBody(13)
+    BeginFunctionBody(14, size:14)
+    OnLocalDeclCount(0)
+    EndFunctionBody(14)
+    BeginFunctionBody(15, size:14)
+    OnLocalDeclCount(0)
+    EndFunctionBody(15)
+    BeginFunctionBody(16, size:13)
+    OnLocalDeclCount(0)
+    EndFunctionBody(16)
+    BeginFunctionBody(17, size:13)
+    OnLocalDeclCount(0)
+    EndFunctionBody(17)
+    BeginFunctionBody(18, size:14)
+    OnLocalDeclCount(0)
+    EndFunctionBody(18)
+    BeginFunctionBody(19, size:14)
+    OnLocalDeclCount(0)
+    EndFunctionBody(19)
+    BeginFunctionBody(20, size:13)
+    OnLocalDeclCount(0)
+    EndFunctionBody(20)
+    BeginFunctionBody(21, size:14)
+    OnLocalDeclCount(0)
+    EndFunctionBody(21)
+    BeginFunctionBody(22, size:14)
+    OnLocalDeclCount(0)
+    EndFunctionBody(22)
+  EndCodeSection
+EndModule
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2 do-not-highlightme"><code>00000000: 00 61 73 6D 01 00 00 00  .asm....
+00000008: 01 24 07 60 02 7F 7F 00  .$.&#x60;....
+00000010: 60 02 7F 7E 00 60 01 7F  &#x60;..~.&#x60;..
+00000018: 01 7F 60 01 7F 01 7E 60  ..&#x60;...~&#x60;
+00000020: 01 7E 01 7E 60 01 7D 01  .~.~&#x60;.}.
+00000028: 7D 60 01 7C 01 7C 03 18  }&#x60;.|.|..
+00000030: 17 00 00 01 02 02 03 02  ........
+00000038: 02 02 04 04 04 04 04 05  ........
+00000040: 06 02 02 04 04 04 05 06  ........
+00000048: 05 03 01 00 01 07 E1 01  ........
+00000050: 11 0C 69 33 32 5F 6C 6F  ..i32_lo
+00000058: 61 64 31 36 5F 73 00 06  ad16_s..
+00000060: 0C 69 33 32 5F 6C 6F 61  .i32_loa
+00000068: 64 31 36 5F 75 00 07 08  d16_u...
+00000070: 69 33 32 5F 6C 6F 61 64  i32_load
+00000078: 00 08 0C 69 36 34 5F 6C  ...i64_l
+00000080: 6F 61 64 31 36 5F 73 00  oad16_s.
+00000088: 09 0C 69 36 34 5F 6C 6F  ..i64_lo
+00000090: 61 64 31 36 5F 75 00 0A  ad16_u..
+00000098: 0C 69 36 34 5F 6C 6F 61  .i64_loa
+000000a0: 64 33 32 5F 73 00 0B 0C  d32_s...
+000000a8: 69 36 34 5F 6C 6F 61 64  i64_load
+000000b0: 33 32 5F 75 00 0C 08 69  32_u...i
+000000b8: 36 34 5F 6C 6F 61 64 00  64_load.
+000000c0: 0D 08 66 33 32 5F 6C 6F  ..f32_lo
+000000c8: 61 64 00 0E 08 66 36 34  ad...f64
+000000d0: 5F 6C 6F 61 64 00 0F 0B  _load...
+000000d8: 69 33 32 5F 73 74 6F 72  i32_stor
+000000e0: 65 31 36 00 10 09 69 33  e16...i3
+000000e8: 32 5F 73 74 6F 72 65 00  2_store.
+000000f0: 11 0B 69 36 34 5F 73 74  ..i64_st
+000000f8: 6F 72 65 31 36 00 12 0B  ore16...
+00000100: 69 36 34 5F 73 74 6F 72  i64_stor
+00000108: 65 33 32 00 13 09 69 36  e32...i6
+00000110: 34 5F 73 74 6F 72 65 00  4_store.
+00000118: 14 09 66 33 32 5F 73 74  ..f32_st
+00000120: 6F 72 65 00 15 09 66 36  ore...f6
+00000128: 34 5F 73 74 6F 72 65 00  4_store.
+00000130: 16 0A F6 02 17 16 00 20  ....... 
+00000138: 00 20 01 3A 00 00 20 00  . .:.. .
+00000140: 41 01 6A 20 01 41 08 76  A.j .A.v
+00000148: 3A 00 00 0B 14 00 20 00  :..... .
+00000150: 20 01 10 00 20 00 41 02   ... .A.
+00000158: 6A 20 01 41 10 76 10 00  j .A.v..
+00000160: 0B 16 00 20 00 20 01 A7  ... . ..
+00000168: 10 01 20 00 41 04 6A 20  .. .A.j 
+00000170: 01 42 20 88 A7 10 01 0B  .B .....
+00000178: 13 00 20 00 2D 00 00 20  .. .-.. 
+00000180: 00 41 01 6A 2D 00 00 41  .A.j-..A
+00000188: 08 74 72 0B 11 00 20 00  .tr... .
+00000190: 10 03 20 00 41 02 6A 10  .. .A.j.
+00000198: 03 41 10 74 72 0B 13 00  .A.tr...
+000001a0: 20 00 10 04 AD 20 00 41   .... .A
+000001a8: 04 6A 10 04 AD 42 20 86  .j...B .
+000001b0: 84 0B 0D 00 41 00 20 00  ....A. .
+000001b8: 10 00 41 00 2E 01 00 0B  ..A.....
+000001c0: 0D 00 41 00 20 00 10 00  ..A. ...
+000001c8: 41 00 2F 01 00 0B 0D 00  A./.....
+000001d0: 41 00 20 00 10 01 41 00  A. ...A.
+000001d8: 28 02 00 0B 0E 00 41 00  (.....A.
+000001e0: 20 00 A7 10 00 41 00 32   ....A.2
+000001e8: 01 00 0B 0E 00 41 00 20  .....A. 
+000001f0: 00 A7 10 00 41 00 33 01  ....A.3.
+000001f8: 00 0B 0E 00 41 00 20 00  ....A. .
+00000200: A7 10 01 41 00 34 02 00  ...A.4..
+00000208: 0B 0E 00 41 00 20 00 A7  ...A. ..
+00000210: 10 01 41 00 35 02 00 0B  ..A.5...
+00000218: 0D 00 41 00 20 00 10 02  ..A. ...
+00000220: 41 00 29 03 00 0B 0E 00  A.).....
+00000228: 41 00 20 00 BC 10 01 41  A. ....A
+00000230: 00 2A 02 00 0B 0E 00 41  .*.....A
+00000238: 00 20 00 BD 10 02 41 00  . ....A.
+00000240: 2B 03 00 0B 0D 00 41 00  +.....A.
+00000248: 20 00 3B 01 00 41 00 10   .;..A..
+00000250: 03 0B 0D 00 41 00 20 00  ....A. .
+00000258: 36 02 00 41 00 10 04 0B  6..A....
+00000260: 0E 00 41 00 20 00 3D 01  ..A. .&#x3D;.
+00000268: 00 41 00 10 03 AD 0B 0E  .A......
+00000270: 00 41 00 20 00 3E 02 00  .A. .&gt;..
+00000278: 41 00 10 04 AD 0B 0D 00  A.......
+00000280: 41 00 20 00 37 03 00 41  A. .7..A
+00000288: 00 10 05 0B 0E 00 41 00  ......A.
+00000290: 20 00 38 02 00 41 00 10   .8..A..
+00000298: 04 BE 0B 0E 00 41 00 20  .....A. 
+000002a0: 00 39 03 00 41 00 10 05  .9..A...
+000002a8: BF 0B                    ..
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2"><code>(module
+  (type (;0;) (func (param i32 i32)))
+  (type (;1;) (func (param i32 i64)))
+  (type (;2;) (func (param i32) (result i32)))
+  (type (;3;) (func (param i32) (result i64)))
+  (type (;4;) (func (param i64) (result i64)))
+  (type (;5;) (func (param f32) (result f32)))
+  (type (;6;) (func (param f64) (result f64)))
+  (func (;0;) (type 0) (param i32 i32)
+    local.get 0
+    local.get 1
+    i32.store8
+    local.get 0
+    i32.const 1
+    i32.add
+    local.get 1
+    i32.const 8
+    i32.shr_u
+    i32.store8)
+  (func (;1;) (type 0) (param i32 i32)
+    local.get 0
+    local.get 1
+    call 0
+    local.get 0
+    i32.const 2
+    i32.add
+    local.get 1
+    i32.const 16
+    i32.shr_u
+    call 0)
+  (func (;2;) (type 1) (param i32 i64)
+    local.get 0
+    local.get 1
+    i32.wrap_i64
+    call 1
+    local.get 0
+    i32.const 4
+    i32.add
+    local.get 1
+    i64.const 32
+    i64.shr_u
+    i32.wrap_i64
+    call 1)
+  (func (;3;) (type 2) (param i32) (result i32)
+    local.get 0
+    i32.load8_u
+    local.get 0
+    i32.const 1
+    i32.add
+    i32.load8_u
+    i32.const 8
+    i32.shl
+    i32.or)
+  (func (;4;) (type 2) (param i32) (result i32)
+    local.get 0
+    call 3
+    local.get 0
+    i32.const 2
+    i32.add
+    call 3
+    i32.const 16
+    i32.shl
+    i32.or)
+  (func (;5;) (type 3) (param i32) (result i64)
+    local.get 0
+    call 4
+    i64.extend_i32_u
+    local.get 0
+    i32.const 4
+    i32.add
+    call 4
+    i64.extend_i32_u
+    i64.const 32
+    i64.shl
+    i64.or)
+  (func (;6;) (type 2) (param i32) (result i32)
+    i32.const 0
+    local.get 0
+    call 0
+    i32.const 0
+    i32.load16_s)
+  (func (;7;) (type 2) (param i32) (result i32)
+    i32.const 0
+    local.get 0
+    call 0
+    i32.const 0
+    i32.load16_u)
+  (func (;8;) (type 2) (param i32) (result i32)
+    i32.const 0
+    local.get 0
+    call 1
+    i32.const 0
+    i32.load)
+  (func (;9;) (type 4) (param i64) (result i64)
+    i32.const 0
+    local.get 0
+    i32.wrap_i64
+    call 0
+    i32.const 0
+    i64.load16_s)
+  (func (;10;) (type 4) (param i64) (result i64)
+    i32.const 0
+    local.get 0
+    i32.wrap_i64
+    call 0
+    i32.const 0
+    i64.load16_u)
+  (func (;11;) (type 4) (param i64) (result i64)
+    i32.const 0
+    local.get 0
+    i32.wrap_i64
+    call 1
+    i32.const 0
+    i64.load32_s)
+  (func (;12;) (type 4) (param i64) (result i64)
+    i32.const 0
+    local.get 0
+    i32.wrap_i64
+    call 1
+    i32.const 0
+    i64.load32_u)
+  (func (;13;) (type 4) (param i64) (result i64)
+    i32.const 0
+    local.get 0
+    call 2
+    i32.const 0
+    i64.load)
+  (func (;14;) (type 5) (param f32) (result f32)
+    i32.const 0
+    local.get 0
+    i32.reinterpret_f32
+    call 1
+    i32.const 0
+    f32.load)
+  (func (;15;) (type 6) (param f64) (result f64)
+    i32.const 0
+    local.get 0
+    i64.reinterpret_f64
+    call 2
+    i32.const 0
+    f64.load)
+  (func (;16;) (type 2) (param i32) (result i32)
+    i32.const 0
+    local.get 0
+    i32.store16
+    i32.const 0
+    call 3)
+  (func (;17;) (type 2) (param i32) (result i32)
+    i32.const 0
+    local.get 0
+    i32.store
+    i32.const 0
+    call 4)
+  (func (;18;) (type 4) (param i64) (result i64)
+    i32.const 0
+    local.get 0
+    i64.store16
+    i32.const 0
+    call 3
+    i64.extend_i32_u)
+  (func (;19;) (type 4) (param i64) (result i64)
+    i32.const 0
+    local.get 0
+    i64.store32
+    i32.const 0
+    call 4
+    i64.extend_i32_u)
+  (func (;20;) (type 4) (param i64) (result i64)
+    i32.const 0
+    local.get 0
+    i64.store
+    i32.const 0
+    call 5)
+  (func (;21;) (type 5) (param f32) (result f32)
+    i32.const 0
+    local.get 0
+    f32.store
+    i32.const 0
+    call 4
+    f32.reinterpret_i32)
+  (func (;22;) (type 6) (param f64) (result f64)
+    i32.const 0
+    local.get 0
+    f64.store
+    i32.const 0
+    call 5
+    f64.reinterpret_i64)
+  (memory (;0;) 1)
+  (export &quot;i32_load16_s&quot; (func 6))
+  (export &quot;i32_load16_u&quot; (func 7))
+  (export &quot;i32_load&quot; (func 8))
+  (export &quot;i64_load16_s&quot; (func 9))
+  (export &quot;i64_load16_u&quot; (func 10))
+  (export &quot;i64_load32_s&quot; (func 11))
+  (export &quot;i64_load32_u&quot; (func 12))
+  (export &quot;i64_load&quot; (func 13))
+  (export &quot;f32_load&quot; (func 14))
+  (export &quot;f64_load&quot; (func 15))
+  (export &quot;i32_store16&quot; (func 16))
+  (export &quot;i32_store&quot; (func 17))
+  (export &quot;i64_store16&quot; (func 18))
+  (export &quot;i64_store32&quot; (func 19))
+  (export &quot;i64_store&quot; (func 20))
+  (export &quot;f32_store&quot; (func 21))
+  (export &quot;f64_store&quot; (func 22)))
+</code></pre>
+    </div>
+</body>
+
+</html>

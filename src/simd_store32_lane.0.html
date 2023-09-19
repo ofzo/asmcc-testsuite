@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asmcc simd_store32_lane.0</title>
+
+    <link rel="stylesheet" href="//unpkg.com/@highlightjs/cdn-assets@11.7.0/styles/github.min.css">
+    <script src="//unpkg.com/@highlightjs/cdn-assets@11.7.0/highlight.min.js"></script>
+    <script>
+        hljs.configure({
+            noHighlightRe: /^do-not-highlightme$/i,
+        });
+    </script>
+    <script>hljs.highlightAll();</script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="/_vercel/insights/script.js"></script>
+</head>
+
+<body class="text-sm p-2">
+    <h1 class="text-2xl  w-full mb-4">Anaylzer: <a href="/simd_store32_lane.0.wasm">simd_store32_lane.0.wasm</a></h1>
+    <div class="flex justify-evenly">
+        <pre class="p-4 overflow-scroll border-2"><code>
+simd_store32_lane.0.wasm:	file format wasm 0x1
+
+Sections:
+
+     Type start&#x3D;0x0000000a end&#x3D;0x00000016 (size&#x3D;0x0000000c) count: 2
+ Function start&#x3D;0x00000018 end&#x3D;0x0000002d (size&#x3D;0x00000015) count: 20
+   Memory start&#x3D;0x0000002f end&#x3D;0x00000032 (size&#x3D;0x00000003) count: 1
+   Global start&#x3D;0x00000034 end&#x3D;0x0000004a (size&#x3D;0x00000016) count: 1
+   Export start&#x3D;0x0000004d end&#x3D;0x0000028a (size&#x3D;0x0000023d) count: 20
+     Code start&#x3D;0x0000028d end&#x3D;0x000004fa (size&#x3D;0x0000026d) count: 20
+
+Section Details:
+
+Type[2]:
+ - type[0] (i32, v128) -&gt; i64
+ - type[1] (v128) -&gt; i64
+Function[20]:
+ - func[0] sig&#x3D;0 &lt;v128.store32_lane_0&gt;
+ - func[1] sig&#x3D;0 &lt;v128.store32_lane_1&gt;
+ - func[2] sig&#x3D;0 &lt;v128.store32_lane_2&gt;
+ - func[3] sig&#x3D;0 &lt;v128.store32_lane_3&gt;
+ - func[4] sig&#x3D;1 &lt;v128.store32_lane_0_offset_0&gt;
+ - func[5] sig&#x3D;1 &lt;v128.store32_lane_1_offset_1&gt;
+ - func[6] sig&#x3D;1 &lt;v128.store32_lane_2_offset_2&gt;
+ - func[7] sig&#x3D;1 &lt;v128.store32_lane_3_offset_3&gt;
+ - func[8] sig&#x3D;0 &lt;v128.store32_lane_0_align_1&gt;
+ - func[9] sig&#x3D;0 &lt;v128.store32_lane_0_align_2&gt;
+ - func[10] sig&#x3D;0 &lt;v128.store32_lane_0_align_4&gt;
+ - func[11] sig&#x3D;0 &lt;v128.store32_lane_1_align_1&gt;
+ - func[12] sig&#x3D;0 &lt;v128.store32_lane_1_align_2&gt;
+ - func[13] sig&#x3D;0 &lt;v128.store32_lane_1_align_4&gt;
+ - func[14] sig&#x3D;0 &lt;v128.store32_lane_2_align_1&gt;
+ - func[15] sig&#x3D;0 &lt;v128.store32_lane_2_align_2&gt;
+ - func[16] sig&#x3D;0 &lt;v128.store32_lane_2_align_4&gt;
+ - func[17] sig&#x3D;0 &lt;v128.store32_lane_3_align_1&gt;
+ - func[18] sig&#x3D;0 &lt;v128.store32_lane_3_align_2&gt;
+ - func[19] sig&#x3D;0 &lt;v128.store32_lane_3_align_4&gt;
+Memory[1]:
+ - memory[0] pages: initial&#x3D;1
+Global[1]:
+ - global[0] v128 mutable&#x3D;1 - init &lt;INVALID&gt;
+Export[20]:
+ - func[0] &lt;v128.store32_lane_0&gt; -&gt; &quot;v128.store32_lane_0&quot;
+ - func[1] &lt;v128.store32_lane_1&gt; -&gt; &quot;v128.store32_lane_1&quot;
+ - func[2] &lt;v128.store32_lane_2&gt; -&gt; &quot;v128.store32_lane_2&quot;
+ - func[3] &lt;v128.store32_lane_3&gt; -&gt; &quot;v128.store32_lane_3&quot;
+ - func[4] &lt;v128.store32_lane_0_offset_0&gt; -&gt; &quot;v128.store32_lane_0_offset_0&quot;
+ - func[5] &lt;v128.store32_lane_1_offset_1&gt; -&gt; &quot;v128.store32_lane_1_offset_1&quot;
+ - func[6] &lt;v128.store32_lane_2_offset_2&gt; -&gt; &quot;v128.store32_lane_2_offset_2&quot;
+ - func[7] &lt;v128.store32_lane_3_offset_3&gt; -&gt; &quot;v128.store32_lane_3_offset_3&quot;
+ - func[8] &lt;v128.store32_lane_0_align_1&gt; -&gt; &quot;v128.store32_lane_0_align_1&quot;
+ - func[9] &lt;v128.store32_lane_0_align_2&gt; -&gt; &quot;v128.store32_lane_0_align_2&quot;
+ - func[10] &lt;v128.store32_lane_0_align_4&gt; -&gt; &quot;v128.store32_lane_0_align_4&quot;
+ - func[11] &lt;v128.store32_lane_1_align_1&gt; -&gt; &quot;v128.store32_lane_1_align_1&quot;
+ - func[12] &lt;v128.store32_lane_1_align_2&gt; -&gt; &quot;v128.store32_lane_1_align_2&quot;
+ - func[13] &lt;v128.store32_lane_1_align_4&gt; -&gt; &quot;v128.store32_lane_1_align_4&quot;
+ - func[14] &lt;v128.store32_lane_2_align_1&gt; -&gt; &quot;v128.store32_lane_2_align_1&quot;
+ - func[15] &lt;v128.store32_lane_2_align_2&gt; -&gt; &quot;v128.store32_lane_2_align_2&quot;
+ - func[16] &lt;v128.store32_lane_2_align_4&gt; -&gt; &quot;v128.store32_lane_2_align_4&quot;
+ - func[17] &lt;v128.store32_lane_3_align_1&gt; -&gt; &quot;v128.store32_lane_3_align_1&quot;
+ - func[18] &lt;v128.store32_lane_3_align_2&gt; -&gt; &quot;v128.store32_lane_3_align_2&quot;
+ - func[19] &lt;v128.store32_lane_3_align_4&gt; -&gt; &quot;v128.store32_lane_3_align_4&quot;
+Code[20]:
+ - func[0] size&#x3D;30 &lt;v128.store32_lane_0&gt;
+ - func[1] size&#x3D;30 &lt;v128.store32_lane_1&gt;
+ - func[2] size&#x3D;30 &lt;v128.store32_lane_2&gt;
+ - func[3] size&#x3D;30 &lt;v128.store32_lane_3&gt;
+ - func[4] size&#x3D;30 &lt;v128.store32_lane_0_offset_0&gt;
+ - func[5] size&#x3D;30 &lt;v128.store32_lane_1_offset_1&gt;
+ - func[6] size&#x3D;30 &lt;v128.store32_lane_2_offset_2&gt;
+ - func[7] size&#x3D;30 &lt;v128.store32_lane_3_offset_3&gt;
+ - func[8] size&#x3D;30 &lt;v128.store32_lane_0_align_1&gt;
+ - func[9] size&#x3D;30 &lt;v128.store32_lane_0_align_2&gt;
+ - func[10] size&#x3D;30 &lt;v128.store32_lane_0_align_4&gt;
+ - func[11] size&#x3D;30 &lt;v128.store32_lane_1_align_1&gt;
+ - func[12] size&#x3D;30 &lt;v128.store32_lane_1_align_2&gt;
+ - func[13] size&#x3D;30 &lt;v128.store32_lane_1_align_4&gt;
+ - func[14] size&#x3D;30 &lt;v128.store32_lane_2_align_1&gt;
+ - func[15] size&#x3D;30 &lt;v128.store32_lane_2_align_2&gt;
+ - func[16] size&#x3D;30 &lt;v128.store32_lane_2_align_4&gt;
+ - func[17] size&#x3D;30 &lt;v128.store32_lane_3_align_1&gt;
+ - func[18] size&#x3D;30 &lt;v128.store32_lane_3_align_2&gt;
+ - func[19] size&#x3D;30 &lt;v128.store32_lane_3_align_4&gt;
+
+Contents of section Type:
+000000a: 0260 027f 7b01 7e60 017b 017e            .&#x60;..{.~&#x60;.{.~
+
+Contents of section Function:
+0000018: 1400 0000 0001 0101 0100 0000 0000 0000  ................
+0000028: 0000 0000 00                             .....
+
+Contents of section Memory:
+000002f: 0100 01                                  ...
+
+Contents of section Global:
+0000034: 017b 01fd 0c00 0000 0000 0000 0000 0000  .{..............
+0000044: 0000 0000 000b                           ......
+
+Contents of section Export:
+000004d: 1413 7631 3238 2e73 746f 7265 3332 5f6c  ..v128.store32_l
+000005d: 616e 655f 3000 0013 7631 3238 2e73 746f  ane_0...v128.sto
+000006d: 7265 3332 5f6c 616e 655f 3100 0113 7631  re32_lane_1...v1
+000007d: 3238 2e73 746f 7265 3332 5f6c 616e 655f  28.store32_lane_
+000008d: 3200 0213 7631 3238 2e73 746f 7265 3332  2...v128.store32
+000009d: 5f6c 616e 655f 3300 031c 7631 3238 2e73  _lane_3...v128.s
+00000ad: 746f 7265 3332 5f6c 616e 655f 305f 6f66  tore32_lane_0_of
+00000bd: 6673 6574 5f30 0004 1c76 3132 382e 7374  fset_0...v128.st
+00000cd: 6f72 6533 325f 6c61 6e65 5f31 5f6f 6666  ore32_lane_1_off
+00000dd: 7365 745f 3100 051c 7631 3238 2e73 746f  set_1...v128.sto
+00000ed: 7265 3332 5f6c 616e 655f 325f 6f66 6673  re32_lane_2_offs
+00000fd: 6574 5f32 0006 1c76 3132 382e 7374 6f72  et_2...v128.stor
+000010d: 6533 325f 6c61 6e65 5f33 5f6f 6666 7365  e32_lane_3_offse
+000011d: 745f 3300 071b 7631 3238 2e73 746f 7265  t_3...v128.store
+000012d: 3332 5f6c 616e 655f 305f 616c 6967 6e5f  32_lane_0_align_
+000013d: 3100 081b 7631 3238 2e73 746f 7265 3332  1...v128.store32
+000014d: 5f6c 616e 655f 305f 616c 6967 6e5f 3200  _lane_0_align_2.
+000015d: 091b 7631 3238 2e73 746f 7265 3332 5f6c  ..v128.store32_l
+000016d: 616e 655f 305f 616c 6967 6e5f 3400 0a1b  ane_0_align_4...
+000017d: 7631 3238 2e73 746f 7265 3332 5f6c 616e  v128.store32_lan
+000018d: 655f 315f 616c 6967 6e5f 3100 0b1b 7631  e_1_align_1...v1
+000019d: 3238 2e73 746f 7265 3332 5f6c 616e 655f  28.store32_lane_
+00001ad: 315f 616c 6967 6e5f 3200 0c1b 7631 3238  1_align_2...v128
+00001bd: 2e73 746f 7265 3332 5f6c 616e 655f 315f  .store32_lane_1_
+00001cd: 616c 6967 6e5f 3400 0d1b 7631 3238 2e73  align_4...v128.s
+00001dd: 746f 7265 3332 5f6c 616e 655f 325f 616c  tore32_lane_2_al
+00001ed: 6967 6e5f 3100 0e1b 7631 3238 2e73 746f  ign_1...v128.sto
+00001fd: 7265 3332 5f6c 616e 655f 325f 616c 6967  re32_lane_2_alig
+000020d: 6e5f 3200 0f1b 7631 3238 2e73 746f 7265  n_2...v128.store
+000021d: 3332 5f6c 616e 655f 325f 616c 6967 6e5f  32_lane_2_align_
+000022d: 3400 101b 7631 3238 2e73 746f 7265 3332  4...v128.store32
+000023d: 5f6c 616e 655f 335f 616c 6967 6e5f 3100  _lane_3_align_1.
+000024d: 111b 7631 3238 2e73 746f 7265 3332 5f6c  ..v128.store32_l
+000025d: 616e 655f 335f 616c 6967 6e5f 3200 121b  ane_3_align_2...
+000026d: 7631 3238 2e73 746f 7265 3332 5f6c 616e  v128.store32_lan
+000027d: 655f 335f 616c 6967 6e5f 3400 13         e_3_align_4..
+
+Contents of section Code:
+000028d: 141e 0101 7e20 0020 01fd 5a02 0000 2000  ....~ . ..Z... .
+000029d: 2903 0021 0220 0023 00fd 0b04 0020 020b  )..!. .#..... ..
+00002ad: 1e01 017e 2000 2001 fd5a 0200 0120 0029  ...~ . ..Z... .)
+00002bd: 0300 2102 2000 2300 fd0b 0400 2002 0b1e  ..!. .#..... ...
+00002cd: 0101 7e20 0020 01fd 5a02 0002 2000 2903  ..~ . ..Z... .).
+00002dd: 0021 0220 0023 00fd 0b04 0020 020b 1e01  .!. .#..... ....
+00002ed: 017e 2000 2001 fd5a 0200 0320 0029 0300  .~ . ..Z... .)..
+00002fd: 2102 2000 2300 fd0b 0400 2002 0b1e 0101  !. .#..... .....
+000030d: 7e41 0020 00fd 5a02 0000 4100 2903 0021  ~A. ..Z...A.)..!
+000031d: 0141 0023 00fd 0b04 0020 010b 1e01 017e  .A.#..... .....~
+000032d: 4100 2000 fd5a 0201 0141 0029 0301 2101  A. ..Z...A.)..!.
+000033d: 4100 2300 fd0b 0401 2001 0b1e 0101 7e41  A.#..... .....~A
+000034d: 0020 00fd 5a02 0202 4100 2903 0221 0141  . ..Z...A.)..!.A
+000035d: 0023 00fd 0b04 0220 010b 1e01 017e 4100  .#..... .....~A.
+000036d: 2000 fd5a 0203 0341 0029 0303 2101 4100   ..Z...A.)..!.A.
+000037d: 2300 fd0b 0403 2001 0b1e 0101 7e20 0020  #..... .....~ . 
+000038d: 01fd 5a00 0000 2000 2903 0021 0241 0023  ..Z... .)..!.A.#
+000039d: 00fd 0b04 0020 020b 1e01 017e 2000 2001  ..... .....~ . .
+00003ad: fd5a 0100 0020 0029 0300 2102 4100 2300  .Z... .)..!.A.#.
+00003bd: fd0b 0400 2002 0b1e 0101 7e20 0020 01fd  .... .....~ . ..
+00003cd: 5a02 0000 2000 2903 0021 0241 0023 00fd  Z... .)..!.A.#..
+00003dd: 0b04 0020 020b 1e01 017e 2000 2001 fd5a  ... .....~ . ..Z
+00003ed: 0000 0120 0029 0300 2102 4100 2300 fd0b  ... .)..!.A.#...
+00003fd: 0401 2002 0b1e 0101 7e20 0020 01fd 5a01  .. .....~ . ..Z.
+000040d: 0001 2000 2903 0021 0241 0023 00fd 0b04  .. .)..!.A.#....
+000041d: 0120 020b 1e01 017e 2000 2001 fd5a 0200  . .....~ . ..Z..
+000042d: 0120 0029 0300 2102 4100 2300 fd0b 0401  . .)..!.A.#.....
+000043d: 2002 0b1e 0101 7e20 0020 01fd 5a00 0002   .....~ . ..Z...
+000044d: 2000 2903 0021 0241 0023 00fd 0b04 0220   .)..!.A.#..... 
+000045d: 020b 1e01 017e 2000 2001 fd5a 0100 0220  .....~ . ..Z... 
+000046d: 0029 0300 2102 4100 2300 fd0b 0402 2002  .)..!.A.#..... .
+000047d: 0b1e 0101 7e20 0020 01fd 5a02 0002 2000  ....~ . ..Z... .
+000048d: 2903 0021 0241 0023 00fd 0b04 0220 020b  )..!.A.#..... ..
+000049d: 1e01 017e 2000 2001 fd5a 0000 0320 0029  ...~ . ..Z... .)
+00004ad: 0300 2102 4100 2300 fd0b 0403 2002 0b1e  ..!.A.#..... ...
+00004bd: 0101 7e20 0020 01fd 5a01 0003 2000 2903  ..~ . ..Z... .).
+00004cd: 0021 0241 0023 00fd 0b04 0320 020b 1e01  .!.A.#..... ....
+00004dd: 017e 2000 2001 fd5a 0200 0320 0029 0300  .~ . ..Z... .)..
+00004ed: 2102 4100 2300 fd0b 0403 2002 0b         !.A.#..... ..
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2"><code>BeginModule(version: 1)
+  BeginTypeSection(12)
+    OnTypeCount(2)
+    OnFuncType(index: 0, params: [i32, v128], results: [i64])
+    OnFuncType(index: 1, params: [v128], results: [i64])
+  EndTypeSection
+  BeginFunctionSection(21)
+    OnFunctionCount(20)
+    OnFunction(index: 0, sig_index: 0)
+    OnFunction(index: 1, sig_index: 0)
+    OnFunction(index: 2, sig_index: 0)
+    OnFunction(index: 3, sig_index: 0)
+    OnFunction(index: 4, sig_index: 1)
+    OnFunction(index: 5, sig_index: 1)
+    OnFunction(index: 6, sig_index: 1)
+    OnFunction(index: 7, sig_index: 1)
+    OnFunction(index: 8, sig_index: 0)
+    OnFunction(index: 9, sig_index: 0)
+    OnFunction(index: 10, sig_index: 0)
+    OnFunction(index: 11, sig_index: 0)
+    OnFunction(index: 12, sig_index: 0)
+    OnFunction(index: 13, sig_index: 0)
+    OnFunction(index: 14, sig_index: 0)
+    OnFunction(index: 15, sig_index: 0)
+    OnFunction(index: 16, sig_index: 0)
+    OnFunction(index: 17, sig_index: 0)
+    OnFunction(index: 18, sig_index: 0)
+    OnFunction(index: 19, sig_index: 0)
+  EndFunctionSection
+  BeginMemorySection(3)
+    OnMemoryCount(1)
+    OnMemory(index: 0, initial: 1)
+  EndMemorySection
+  BeginGlobalSection(22)
+    OnGlobalCount(1)
+    BeginGlobal(index: 0, type: v128, mutable: true)
+    BeginGlobalInitExpr(0)
+    OnV128ConstExpr(0x00000000 0x00000000 0x00000000 0x00000000)
+    OnEndExpr
+    EndGlobalInitExpr(0)
+    EndGlobal(0)
+  EndGlobalSection
+  BeginExportSection(573)
+    OnExportCount(20)
+    OnExport(index: 0, kind: func, item_index: 0, name: &quot;v128.store32_lane_0&quot;)
+    OnExport(index: 1, kind: func, item_index: 1, name: &quot;v128.store32_lane_1&quot;)
+    OnExport(index: 2, kind: func, item_index: 2, name: &quot;v128.store32_lane_2&quot;)
+    OnExport(index: 3, kind: func, item_index: 3, name: &quot;v128.store32_lane_3&quot;)
+    OnExport(index: 4, kind: func, item_index: 4, name: &quot;v128.store32_lane_0_offset_0&quot;)
+    OnExport(index: 5, kind: func, item_index: 5, name: &quot;v128.store32_lane_1_offset_1&quot;)
+    OnExport(index: 6, kind: func, item_index: 6, name: &quot;v128.store32_lane_2_offset_2&quot;)
+    OnExport(index: 7, kind: func, item_index: 7, name: &quot;v128.store32_lane_3_offset_3&quot;)
+    OnExport(index: 8, kind: func, item_index: 8, name: &quot;v128.store32_lane_0_align_1&quot;)
+    OnExport(index: 9, kind: func, item_index: 9, name: &quot;v128.store32_lane_0_align_2&quot;)
+    OnExport(index: 10, kind: func, item_index: 10, name: &quot;v128.store32_lane_0_align_4&quot;)
+    OnExport(index: 11, kind: func, item_index: 11, name: &quot;v128.store32_lane_1_align_1&quot;)
+    OnExport(index: 12, kind: func, item_index: 12, name: &quot;v128.store32_lane_1_align_2&quot;)
+    OnExport(index: 13, kind: func, item_index: 13, name: &quot;v128.store32_lane_1_align_4&quot;)
+    OnExport(index: 14, kind: func, item_index: 14, name: &quot;v128.store32_lane_2_align_1&quot;)
+    OnExport(index: 15, kind: func, item_index: 15, name: &quot;v128.store32_lane_2_align_2&quot;)
+    OnExport(index: 16, kind: func, item_index: 16, name: &quot;v128.store32_lane_2_align_4&quot;)
+    OnExport(index: 17, kind: func, item_index: 17, name: &quot;v128.store32_lane_3_align_1&quot;)
+    OnExport(index: 18, kind: func, item_index: 18, name: &quot;v128.store32_lane_3_align_2&quot;)
+    OnExport(index: 19, kind: func, item_index: 19, name: &quot;v128.store32_lane_3_align_4&quot;)
+  EndExportSection
+  BeginCodeSection(621)
+    OnFunctionBodyCount(20)
+    BeginFunctionBody(0, size:30)
+    OnLocalDeclCount(1)
+    OnLocalDecl(index: 0, count: 1, type: i64)
+    EndFunctionBody(0)
+    BeginFunctionBody(1, size:30)
+    OnLocalDeclCount(1)
+    OnLocalDecl(index: 0, count: 1, type: i64)
+    EndFunctionBody(1)
+    BeginFunctionBody(2, size:30)
+    OnLocalDeclCount(1)
+    OnLocalDecl(index: 0, count: 1, type: i64)
+    EndFunctionBody(2)
+    BeginFunctionBody(3, size:30)
+    OnLocalDeclCount(1)
+    OnLocalDecl(index: 0, count: 1, type: i64)
+    EndFunctionBody(3)
+    BeginFunctionBody(4, size:30)
+    OnLocalDeclCount(1)
+    OnLocalDecl(index: 0, count: 1, type: i64)
+    EndFunctionBody(4)
+    BeginFunctionBody(5, size:30)
+    OnLocalDeclCount(1)
+    OnLocalDecl(index: 0, count: 1, type: i64)
+    EndFunctionBody(5)
+    BeginFunctionBody(6, size:30)
+    OnLocalDeclCount(1)
+    OnLocalDecl(index: 0, count: 1, type: i64)
+    EndFunctionBody(6)
+    BeginFunctionBody(7, size:30)
+    OnLocalDeclCount(1)
+    OnLocalDecl(index: 0, count: 1, type: i64)
+    EndFunctionBody(7)
+    BeginFunctionBody(8, size:30)
+    OnLocalDeclCount(1)
+    OnLocalDecl(index: 0, count: 1, type: i64)
+    EndFunctionBody(8)
+    BeginFunctionBody(9, size:30)
+    OnLocalDeclCount(1)
+    OnLocalDecl(index: 0, count: 1, type: i64)
+    EndFunctionBody(9)
+    BeginFunctionBody(10, size:30)
+    OnLocalDeclCount(1)
+    OnLocalDecl(index: 0, count: 1, type: i64)
+    EndFunctionBody(10)
+    BeginFunctionBody(11, size:30)
+    OnLocalDeclCount(1)
+    OnLocalDecl(index: 0, count: 1, type: i64)
+    EndFunctionBody(11)
+    BeginFunctionBody(12, size:30)
+    OnLocalDeclCount(1)
+    OnLocalDecl(index: 0, count: 1, type: i64)
+    EndFunctionBody(12)
+    BeginFunctionBody(13, size:30)
+    OnLocalDeclCount(1)
+    OnLocalDecl(index: 0, count: 1, type: i64)
+    EndFunctionBody(13)
+    BeginFunctionBody(14, size:30)
+    OnLocalDeclCount(1)
+    OnLocalDecl(index: 0, count: 1, type: i64)
+    EndFunctionBody(14)
+    BeginFunctionBody(15, size:30)
+    OnLocalDeclCount(1)
+    OnLocalDecl(index: 0, count: 1, type: i64)
+    EndFunctionBody(15)
+    BeginFunctionBody(16, size:30)
+    OnLocalDeclCount(1)
+    OnLocalDecl(index: 0, count: 1, type: i64)
+    EndFunctionBody(16)
+    BeginFunctionBody(17, size:30)
+    OnLocalDeclCount(1)
+    OnLocalDecl(index: 0, count: 1, type: i64)
+    EndFunctionBody(17)
+    BeginFunctionBody(18, size:30)
+    OnLocalDeclCount(1)
+    OnLocalDecl(index: 0, count: 1, type: i64)
+    EndFunctionBody(18)
+    BeginFunctionBody(19, size:30)
+    OnLocalDeclCount(1)
+    OnLocalDecl(index: 0, count: 1, type: i64)
+    EndFunctionBody(19)
+  EndCodeSection
+EndModule
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2 do-not-highlightme"><code>00000000: 00 61 73 6D 01 00 00 00  .asm....
+00000008: 01 0C 02 60 02 7F 7B 01  ...&#x60;..{.
+00000010: 7E 60 01 7B 01 7E 03 15  ~&#x60;.{.~..
+00000018: 14 00 00 00 00 01 01 01  ........
+00000020: 01 00 00 00 00 00 00 00  ........
+00000028: 00 00 00 00 00 05 03 01  ........
+00000030: 00 01 06 16 01 7B 01 FD  .....{..
+00000038: 0C 00 00 00 00 00 00 00  ........
+00000040: 00 00 00 00 00 00 00 00  ........
+00000048: 00 0B 07 BD 04 14 13 76  .......v
+00000050: 31 32 38 2E 73 74 6F 72  128.stor
+00000058: 65 33 32 5F 6C 61 6E 65  e32_lane
+00000060: 5F 30 00 00 13 76 31 32  _0...v12
+00000068: 38 2E 73 74 6F 72 65 33  8.store3
+00000070: 32 5F 6C 61 6E 65 5F 31  2_lane_1
+00000078: 00 01 13 76 31 32 38 2E  ...v128.
+00000080: 73 74 6F 72 65 33 32 5F  store32_
+00000088: 6C 61 6E 65 5F 32 00 02  lane_2..
+00000090: 13 76 31 32 38 2E 73 74  .v128.st
+00000098: 6F 72 65 33 32 5F 6C 61  ore32_la
+000000a0: 6E 65 5F 33 00 03 1C 76  ne_3...v
+000000a8: 31 32 38 2E 73 74 6F 72  128.stor
+000000b0: 65 33 32 5F 6C 61 6E 65  e32_lane
+000000b8: 5F 30 5F 6F 66 66 73 65  _0_offse
+000000c0: 74 5F 30 00 04 1C 76 31  t_0...v1
+000000c8: 32 38 2E 73 74 6F 72 65  28.store
+000000d0: 33 32 5F 6C 61 6E 65 5F  32_lane_
+000000d8: 31 5F 6F 66 66 73 65 74  1_offset
+000000e0: 5F 31 00 05 1C 76 31 32  _1...v12
+000000e8: 38 2E 73 74 6F 72 65 33  8.store3
+000000f0: 32 5F 6C 61 6E 65 5F 32  2_lane_2
+000000f8: 5F 6F 66 66 73 65 74 5F  _offset_
+00000100: 32 00 06 1C 76 31 32 38  2...v128
+00000108: 2E 73 74 6F 72 65 33 32  .store32
+00000110: 5F 6C 61 6E 65 5F 33 5F  _lane_3_
+00000118: 6F 66 66 73 65 74 5F 33  offset_3
+00000120: 00 07 1B 76 31 32 38 2E  ...v128.
+00000128: 73 74 6F 72 65 33 32 5F  store32_
+00000130: 6C 61 6E 65 5F 30 5F 61  lane_0_a
+00000138: 6C 69 67 6E 5F 31 00 08  lign_1..
+00000140: 1B 76 31 32 38 2E 73 74  .v128.st
+00000148: 6F 72 65 33 32 5F 6C 61  ore32_la
+00000150: 6E 65 5F 30 5F 61 6C 69  ne_0_ali
+00000158: 67 6E 5F 32 00 09 1B 76  gn_2...v
+00000160: 31 32 38 2E 73 74 6F 72  128.stor
+00000168: 65 33 32 5F 6C 61 6E 65  e32_lane
+00000170: 5F 30 5F 61 6C 69 67 6E  _0_align
+00000178: 5F 34 00 0A 1B 76 31 32  _4...v12
+00000180: 38 2E 73 74 6F 72 65 33  8.store3
+00000188: 32 5F 6C 61 6E 65 5F 31  2_lane_1
+00000190: 5F 61 6C 69 67 6E 5F 31  _align_1
+00000198: 00 0B 1B 76 31 32 38 2E  ...v128.
+000001a0: 73 74 6F 72 65 33 32 5F  store32_
+000001a8: 6C 61 6E 65 5F 31 5F 61  lane_1_a
+000001b0: 6C 69 67 6E 5F 32 00 0C  lign_2..
+000001b8: 1B 76 31 32 38 2E 73 74  .v128.st
+000001c0: 6F 72 65 33 32 5F 6C 61  ore32_la
+000001c8: 6E 65 5F 31 5F 61 6C 69  ne_1_ali
+000001d0: 67 6E 5F 34 00 0D 1B 76  gn_4...v
+000001d8: 31 32 38 2E 73 74 6F 72  128.stor
+000001e0: 65 33 32 5F 6C 61 6E 65  e32_lane
+000001e8: 5F 32 5F 61 6C 69 67 6E  _2_align
+000001f0: 5F 31 00 0E 1B 76 31 32  _1...v12
+000001f8: 38 2E 73 74 6F 72 65 33  8.store3
+00000200: 32 5F 6C 61 6E 65 5F 32  2_lane_2
+00000208: 5F 61 6C 69 67 6E 5F 32  _align_2
+00000210: 00 0F 1B 76 31 32 38 2E  ...v128.
+00000218: 73 74 6F 72 65 33 32 5F  store32_
+00000220: 6C 61 6E 65 5F 32 5F 61  lane_2_a
+00000228: 6C 69 67 6E 5F 34 00 10  lign_4..
+00000230: 1B 76 31 32 38 2E 73 74  .v128.st
+00000238: 6F 72 65 33 32 5F 6C 61  ore32_la
+00000240: 6E 65 5F 33 5F 61 6C 69  ne_3_ali
+00000248: 67 6E 5F 31 00 11 1B 76  gn_1...v
+00000250: 31 32 38 2E 73 74 6F 72  128.stor
+00000258: 65 33 32 5F 6C 61 6E 65  e32_lane
+00000260: 5F 33 5F 61 6C 69 67 6E  _3_align
+00000268: 5F 32 00 12 1B 76 31 32  _2...v12
+00000270: 38 2E 73 74 6F 72 65 33  8.store3
+00000278: 32 5F 6C 61 6E 65 5F 33  2_lane_3
+00000280: 5F 61 6C 69 67 6E 5F 34  _align_4
+00000288: 00 13 0A ED 04 14 1E 01  ........
+00000290: 01 7E 20 00 20 01 FD 5A  .~ . ..Z
+00000298: 02 00 00 20 00 29 03 00  ... .)..
+000002a0: 21 02 20 00 23 00 FD 0B  !. .#...
+000002a8: 04 00 20 02 0B 1E 01 01  .. .....
+000002b0: 7E 20 00 20 01 FD 5A 02  ~ . ..Z.
+000002b8: 00 01 20 00 29 03 00 21  .. .)..!
+000002c0: 02 20 00 23 00 FD 0B 04  . .#....
+000002c8: 00 20 02 0B 1E 01 01 7E  . .....~
+000002d0: 20 00 20 01 FD 5A 02 00   . ..Z..
+000002d8: 02 20 00 29 03 00 21 02  . .)..!.
+000002e0: 20 00 23 00 FD 0B 04 00   .#.....
+000002e8: 20 02 0B 1E 01 01 7E 20   .....~ 
+000002f0: 00 20 01 FD 5A 02 00 03  . ..Z...
+000002f8: 20 00 29 03 00 21 02 20   .)..!. 
+00000300: 00 23 00 FD 0B 04 00 20  .#..... 
+00000308: 02 0B 1E 01 01 7E 41 00  .....~A.
+00000310: 20 00 FD 5A 02 00 00 41   ..Z...A
+00000318: 00 29 03 00 21 01 41 00  .)..!.A.
+00000320: 23 00 FD 0B 04 00 20 01  #..... .
+00000328: 0B 1E 01 01 7E 41 00 20  ....~A. 
+00000330: 00 FD 5A 02 01 01 41 00  ..Z...A.
+00000338: 29 03 01 21 01 41 00 23  )..!.A.#
+00000340: 00 FD 0B 04 01 20 01 0B  ..... ..
+00000348: 1E 01 01 7E 41 00 20 00  ...~A. .
+00000350: FD 5A 02 02 02 41 00 29  .Z...A.)
+00000358: 03 02 21 01 41 00 23 00  ..!.A.#.
+00000360: FD 0B 04 02 20 01 0B 1E  .... ...
+00000368: 01 01 7E 41 00 20 00 FD  ..~A. ..
+00000370: 5A 02 03 03 41 00 29 03  Z...A.).
+00000378: 03 21 01 41 00 23 00 FD  .!.A.#..
+00000380: 0B 04 03 20 01 0B 1E 01  ... ....
+00000388: 01 7E 20 00 20 01 FD 5A  .~ . ..Z
+00000390: 00 00 00 20 00 29 03 00  ... .)..
+00000398: 21 02 41 00 23 00 FD 0B  !.A.#...
+000003a0: 04 00 20 02 0B 1E 01 01  .. .....
+000003a8: 7E 20 00 20 01 FD 5A 01  ~ . ..Z.
+000003b0: 00 00 20 00 29 03 00 21  .. .)..!
+000003b8: 02 41 00 23 00 FD 0B 04  .A.#....
+000003c0: 00 20 02 0B 1E 01 01 7E  . .....~
+000003c8: 20 00 20 01 FD 5A 02 00   . ..Z..
+000003d0: 00 20 00 29 03 00 21 02  . .)..!.
+000003d8: 41 00 23 00 FD 0B 04 00  A.#.....
+000003e0: 20 02 0B 1E 01 01 7E 20   .....~ 
+000003e8: 00 20 01 FD 5A 00 00 01  . ..Z...
+000003f0: 20 00 29 03 00 21 02 41   .)..!.A
+000003f8: 00 23 00 FD 0B 04 01 20  .#..... 
+00000400: 02 0B 1E 01 01 7E 20 00  .....~ .
+00000408: 20 01 FD 5A 01 00 01 20   ..Z... 
+00000410: 00 29 03 00 21 02 41 00  .)..!.A.
+00000418: 23 00 FD 0B 04 01 20 02  #..... .
+00000420: 0B 1E 01 01 7E 20 00 20  ....~ . 
+00000428: 01 FD 5A 02 00 01 20 00  ..Z... .
+00000430: 29 03 00 21 02 41 00 23  )..!.A.#
+00000438: 00 FD 0B 04 01 20 02 0B  ..... ..
+00000440: 1E 01 01 7E 20 00 20 01  ...~ . .
+00000448: FD 5A 00 00 02 20 00 29  .Z... .)
+00000450: 03 00 21 02 41 00 23 00  ..!.A.#.
+00000458: FD 0B 04 02 20 02 0B 1E  .... ...
+00000460: 01 01 7E 20 00 20 01 FD  ..~ . ..
+00000468: 5A 01 00 02 20 00 29 03  Z... .).
+00000470: 00 21 02 41 00 23 00 FD  .!.A.#..
+00000478: 0B 04 02 20 02 0B 1E 01  ... ....
+00000480: 01 7E 20 00 20 01 FD 5A  .~ . ..Z
+00000488: 02 00 02 20 00 29 03 00  ... .)..
+00000490: 21 02 41 00 23 00 FD 0B  !.A.#...
+00000498: 04 02 20 02 0B 1E 01 01  .. .....
+000004a0: 7E 20 00 20 01 FD 5A 00  ~ . ..Z.
+000004a8: 00 03 20 00 29 03 00 21  .. .)..!
+000004b0: 02 41 00 23 00 FD 0B 04  .A.#....
+000004b8: 03 20 02 0B 1E 01 01 7E  . .....~
+000004c0: 20 00 20 01 FD 5A 01 00   . ..Z..
+000004c8: 03 20 00 29 03 00 21 02  . .)..!.
+000004d0: 41 00 23 00 FD 0B 04 03  A.#.....
+000004d8: 20 02 0B 1E 01 01 7E 20   .....~ 
+000004e0: 00 20 01 FD 5A 02 00 03  . ..Z...
+000004e8: 20 00 29 03 00 21 02 41   .)..!.A
+000004f0: 00 23 00 FD 0B 04 03 20  .#..... 
+000004f8: 02 0B                    ..
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2"><code>(module
+  (type (;0;) (func (param i32 v128) (result i64)))
+  (type (;1;) (func (param v128) (result i64)))
+  (func (;0;) (type 0) (param i32 v128) (result i64)
+    (local i64)
+    local.get 0
+    local.get 1
+    v128.store32_lane 0
+    local.get 0
+    i64.load
+    local.set 2
+    local.get 0
+    global.get 0
+    v128.store
+    local.get 2)
+  (func (;1;) (type 0) (param i32 v128) (result i64)
+    (local i64)
+    local.get 0
+    local.get 1
+    v128.store32_lane 1
+    local.get 0
+    i64.load
+    local.set 2
+    local.get 0
+    global.get 0
+    v128.store
+    local.get 2)
+  (func (;2;) (type 0) (param i32 v128) (result i64)
+    (local i64)
+    local.get 0
+    local.get 1
+    v128.store32_lane 2
+    local.get 0
+    i64.load
+    local.set 2
+    local.get 0
+    global.get 0
+    v128.store
+    local.get 2)
+  (func (;3;) (type 0) (param i32 v128) (result i64)
+    (local i64)
+    local.get 0
+    local.get 1
+    v128.store32_lane 3
+    local.get 0
+    i64.load
+    local.set 2
+    local.get 0
+    global.get 0
+    v128.store
+    local.get 2)
+  (func (;4;) (type 1) (param v128) (result i64)
+    (local i64)
+    i32.const 0
+    local.get 0
+    v128.store32_lane 0
+    i32.const 0
+    i64.load
+    local.set 1
+    i32.const 0
+    global.get 0
+    v128.store
+    local.get 1)
+  (func (;5;) (type 1) (param v128) (result i64)
+    (local i64)
+    i32.const 0
+    local.get 0
+    v128.store32_lane offset&#x3D;1 1
+    i32.const 0
+    i64.load offset&#x3D;1
+    local.set 1
+    i32.const 0
+    global.get 0
+    v128.store offset&#x3D;1
+    local.get 1)
+  (func (;6;) (type 1) (param v128) (result i64)
+    (local i64)
+    i32.const 0
+    local.get 0
+    v128.store32_lane offset&#x3D;2 2
+    i32.const 0
+    i64.load offset&#x3D;2
+    local.set 1
+    i32.const 0
+    global.get 0
+    v128.store offset&#x3D;2
+    local.get 1)
+  (func (;7;) (type 1) (param v128) (result i64)
+    (local i64)
+    i32.const 0
+    local.get 0
+    v128.store32_lane offset&#x3D;3 3
+    i32.const 0
+    i64.load offset&#x3D;3
+    local.set 1
+    i32.const 0
+    global.get 0
+    v128.store offset&#x3D;3
+    local.get 1)
+  (func (;8;) (type 0) (param i32 v128) (result i64)
+    (local i64)
+    local.get 0
+    local.get 1
+    v128.store32_lane align&#x3D;1 0
+    local.get 0
+    i64.load
+    local.set 2
+    i32.const 0
+    global.get 0
+    v128.store
+    local.get 2)
+  (func (;9;) (type 0) (param i32 v128) (result i64)
+    (local i64)
+    local.get 0
+    local.get 1
+    v128.store32_lane align&#x3D;2 0
+    local.get 0
+    i64.load
+    local.set 2
+    i32.const 0
+    global.get 0
+    v128.store
+    local.get 2)
+  (func (;10;) (type 0) (param i32 v128) (result i64)
+    (local i64)
+    local.get 0
+    local.get 1
+    v128.store32_lane 0
+    local.get 0
+    i64.load
+    local.set 2
+    i32.const 0
+    global.get 0
+    v128.store
+    local.get 2)
+  (func (;11;) (type 0) (param i32 v128) (result i64)
+    (local i64)
+    local.get 0
+    local.get 1
+    v128.store32_lane align&#x3D;1 1
+    local.get 0
+    i64.load
+    local.set 2
+    i32.const 0
+    global.get 0
+    v128.store offset&#x3D;1
+    local.get 2)
+  (func (;12;) (type 0) (param i32 v128) (result i64)
+    (local i64)
+    local.get 0
+    local.get 1
+    v128.store32_lane align&#x3D;2 1
+    local.get 0
+    i64.load
+    local.set 2
+    i32.const 0
+    global.get 0
+    v128.store offset&#x3D;1
+    local.get 2)
+  (func (;13;) (type 0) (param i32 v128) (result i64)
+    (local i64)
+    local.get 0
+    local.get 1
+    v128.store32_lane 1
+    local.get 0
+    i64.load
+    local.set 2
+    i32.const 0
+    global.get 0
+    v128.store offset&#x3D;1
+    local.get 2)
+  (func (;14;) (type 0) (param i32 v128) (result i64)
+    (local i64)
+    local.get 0
+    local.get 1
+    v128.store32_lane align&#x3D;1 2
+    local.get 0
+    i64.load
+    local.set 2
+    i32.const 0
+    global.get 0
+    v128.store offset&#x3D;2
+    local.get 2)
+  (func (;15;) (type 0) (param i32 v128) (result i64)
+    (local i64)
+    local.get 0
+    local.get 1
+    v128.store32_lane align&#x3D;2 2
+    local.get 0
+    i64.load
+    local.set 2
+    i32.const 0
+    global.get 0
+    v128.store offset&#x3D;2
+    local.get 2)
+  (func (;16;) (type 0) (param i32 v128) (result i64)
+    (local i64)
+    local.get 0
+    local.get 1
+    v128.store32_lane 2
+    local.get 0
+    i64.load
+    local.set 2
+    i32.const 0
+    global.get 0
+    v128.store offset&#x3D;2
+    local.get 2)
+  (func (;17;) (type 0) (param i32 v128) (result i64)
+    (local i64)
+    local.get 0
+    local.get 1
+    v128.store32_lane align&#x3D;1 3
+    local.get 0
+    i64.load
+    local.set 2
+    i32.const 0
+    global.get 0
+    v128.store offset&#x3D;3
+    local.get 2)
+  (func (;18;) (type 0) (param i32 v128) (result i64)
+    (local i64)
+    local.get 0
+    local.get 1
+    v128.store32_lane align&#x3D;2 3
+    local.get 0
+    i64.load
+    local.set 2
+    i32.const 0
+    global.get 0
+    v128.store offset&#x3D;3
+    local.get 2)
+  (func (;19;) (type 0) (param i32 v128) (result i64)
+    (local i64)
+    local.get 0
+    local.get 1
+    v128.store32_lane 3
+    local.get 0
+    i64.load
+    local.set 2
+    i32.const 0
+    global.get 0
+    v128.store offset&#x3D;3
+    local.get 2)
+  (memory (;0;) 1)
+  (global (;0;) (mut v128) (v128.const i32x4 0x00000000 0x00000000 0x00000000 0x00000000))
+  (export &quot;v128.store32_lane_0&quot; (func 0))
+  (export &quot;v128.store32_lane_1&quot; (func 1))
+  (export &quot;v128.store32_lane_2&quot; (func 2))
+  (export &quot;v128.store32_lane_3&quot; (func 3))
+  (export &quot;v128.store32_lane_0_offset_0&quot; (func 4))
+  (export &quot;v128.store32_lane_1_offset_1&quot; (func 5))
+  (export &quot;v128.store32_lane_2_offset_2&quot; (func 6))
+  (export &quot;v128.store32_lane_3_offset_3&quot; (func 7))
+  (export &quot;v128.store32_lane_0_align_1&quot; (func 8))
+  (export &quot;v128.store32_lane_0_align_2&quot; (func 9))
+  (export &quot;v128.store32_lane_0_align_4&quot; (func 10))
+  (export &quot;v128.store32_lane_1_align_1&quot; (func 11))
+  (export &quot;v128.store32_lane_1_align_2&quot; (func 12))
+  (export &quot;v128.store32_lane_1_align_4&quot; (func 13))
+  (export &quot;v128.store32_lane_2_align_1&quot; (func 14))
+  (export &quot;v128.store32_lane_2_align_2&quot; (func 15))
+  (export &quot;v128.store32_lane_2_align_4&quot; (func 16))
+  (export &quot;v128.store32_lane_3_align_1&quot; (func 17))
+  (export &quot;v128.store32_lane_3_align_2&quot; (func 18))
+  (export &quot;v128.store32_lane_3_align_4&quot; (func 19)))
+</code></pre>
+    </div>
+</body>
+
+</html>

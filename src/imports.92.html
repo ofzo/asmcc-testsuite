@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asmcc imports.92</title>
+
+    <link rel="stylesheet" href="//unpkg.com/@highlightjs/cdn-assets@11.7.0/styles/github.min.css">
+    <script src="//unpkg.com/@highlightjs/cdn-assets@11.7.0/highlight.min.js"></script>
+    <script>
+        hljs.configure({
+            noHighlightRe: /^do-not-highlightme$/i,
+        });
+    </script>
+    <script>hljs.highlightAll();</script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="/_vercel/insights/script.js"></script>
+</head>
+
+<body class="text-sm p-2">
+    <h1 class="text-2xl  w-full mb-4">Anaylzer: <a href="/imports.92.wasm">imports.92.wasm</a></h1>
+    <div class="flex justify-evenly">
+        <pre class="p-4 overflow-scroll border-2"><code>
+imports.92.wasm:	file format wasm 0x1
+
+Sections:
+
+   Import start&#x3D;0x0000000a end&#x3D;0x0000001f (size&#x3D;0x00000015) count: 1
+
+Section Details:
+
+Import[1]:
+ - table[0] type&#x3D;funcref initial&#x3D;10 &lt;- test.global-i32
+
+Contents of section Import:
+000000a: 0104 7465 7374 0a67 6c6f 6261 6c2d 6933  ..test.global-i3
+000001a: 3201 7000 0a                             2.p..
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2"><code>BeginModule(version: 1)
+  BeginImportSection(21)
+    OnImportCount(1)
+    OnImport(index: 0, kind: table, module: &quot;test&quot;, field: &quot;global-i32&quot;)
+    OnImportTable(import_index: 0, table_index: 0, elem_type: funcref, initial: 10)
+  EndImportSection
+EndModule
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2 do-not-highlightme"><code>00000000: 00 61 73 6D 01 00 00 00  .asm....
+00000008: 02 15 01 04 74 65 73 74  ....test
+00000010: 0A 67 6C 6F 62 61 6C 2D  .global-
+00000018: 69 33 32 01 70 00 0A     i32.p..
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2"><code>(module
+  (import &quot;test&quot; &quot;global-i32&quot; (table (;0;) 10 funcref)))
+</code></pre>
+    </div>
+</body>
+
+</html>

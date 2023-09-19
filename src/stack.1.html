@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asmcc stack.1</title>
+
+    <link rel="stylesheet" href="//unpkg.com/@highlightjs/cdn-assets@11.7.0/styles/github.min.css">
+    <script src="//unpkg.com/@highlightjs/cdn-assets@11.7.0/highlight.min.js"></script>
+    <script>
+        hljs.configure({
+            noHighlightRe: /^do-not-highlightme$/i,
+        });
+    </script>
+    <script>hljs.highlightAll();</script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="/_vercel/insights/script.js"></script>
+</head>
+
+<body class="text-sm p-2">
+    <h1 class="text-2xl  w-full mb-4">Anaylzer: <a href="/stack.1.wasm">stack.1.wasm</a></h1>
+    <div class="flex justify-evenly">
+        <pre class="p-4 overflow-scroll border-2"><code>
+stack.1.wasm:	file format wasm 0x1
+
+Sections:
+
+     Type start&#x3D;0x0000000a end&#x3D;0x00000016 (size&#x3D;0x0000000c) count: 3
+ Function start&#x3D;0x00000018 end&#x3D;0x0000001a (size&#x3D;0x00000002) count: 1
+    Table start&#x3D;0x0000001c end&#x3D;0x00000020 (size&#x3D;0x00000004) count: 1
+     Code start&#x3D;0x00000023 end&#x3D;0x000001d7 (size&#x3D;0x000001b4) count: 1
+
+Section Details:
+
+Type[3]:
+ - type[0] () -&gt; nil
+ - type[1] (i32) -&gt; nil
+ - type[2] () -&gt; i32
+Function[1]:
+ - func[0] sig&#x3D;0
+Table[1]:
+ - table[0] type&#x3D;funcref initial&#x3D;1
+Code[1]:
+ - func[0] size&#x3D;433
+
+Contents of section Type:
+000000a: 0360 0000 6001 7f00 6000 017f            .&#x60;..&#x60;...&#x60;...
+
+Contents of section Function:
+0000018: 0100                                     ..
+
+Contents of section Table:
+000001c: 0170 0001                                .p..
+
+Contents of section Code:
+0000023: 01b1 0300 0240 4100 1100 000b 0340 4100  .....@A......@A.
+0000033: 1100 000b 4100 0440 4100 1100 000b 4100  ....A..@A.....A.
+0000043: 0440 4100 1100 0005 4100 1100 000b 0240  .@A.....A......@
+0000053: 4100 1100 000b 0340 4100 1100 000b 4100  A......@A.....A.
+0000063: 0440 4100 1100 000b 4100 0440 4100 1100  .@A.....A..@A...
+0000073: 0005 4100 1100 000b 0240 4100 4100 1101  ..A......@A.A...
+0000083: 000b 0340 4100 4100 1101 000b 4100 0440  ...@A.A.....A..@
+0000093: 4100 4100 1101 000b 4100 0440 4100 4100  A.A.....A..@A.A.
+00000a3: 1101 0005 4100 4100 1101 000b 027f 4100  ....A.A.......A.
+00000b3: 1102 000b 1a03 7f41 0011 0200 0b1a 4100  .......A......A.
+00000c3: 047f 4100 1102 0005 4100 1102 000b 1a02  ..A.....A.......
+00000d3: 4041 0011 0000 0b03 4041 0011 0000 0b41  @A......@A.....A
+00000e3: 0004 4041 0011 0000 0b41 0004 4041 0011  ..@A.....A..@A..
+00000f3: 0000 0541 0011 0000 0b02 4041 0011 0000  ...A......@A....
+0000103: 0b03 4041 0011 0000 0b41 0004 4041 0011  ..@A.....A..@A..
+0000113: 0000 0b41 0004 4041 0011 0000 0541 0011  ...A..@A.....A..
+0000123: 0000 0b02 4041 0011 0000 0b03 4041 0011  ....@A......@A..
+0000133: 0000 0b41 0004 4041 0011 0000 0b41 0004  ...A..@A.....A..
+0000143: 4041 0011 0000 0541 0011 0000 0b02 4041  @A.....A......@A
+0000153: 0041 0011 0100 0b03 4041 0041 0011 0100  .A......@A.A....
+0000163: 0b41 0004 4041 0041 0011 0100 0b41 0004  .A..@A.A.....A..
+0000173: 4041 0041 0011 0100 0541 0041 0011 0100  @A.A.....A.A....
+0000183: 0b02 7f41 0011 0200 0b1a 037f 4100 1102  ...A........A...
+0000193: 000b 1a41 0004 7f41 0011 0200 0541 0011  ...A...A.....A..
+00001a3: 0200 0b1a 0240 4100 1100 000b 0340 4100  .....@A......@A.
+00001b3: 1100 000b 4100 0440 4100 1100 000b 4100  ....A..@A.....A.
+00001c3: 0440 4100 1100 0005 4100 1100 000b 4100  .@A.....A.....A.
+00001d3: 1100 000b                                ....
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2"><code>BeginModule(version: 1)
+  BeginTypeSection(12)
+    OnTypeCount(3)
+    OnFuncType(index: 0, params: [], results: [])
+    OnFuncType(index: 1, params: [i32], results: [])
+    OnFuncType(index: 2, params: [], results: [i32])
+  EndTypeSection
+  BeginFunctionSection(2)
+    OnFunctionCount(1)
+    OnFunction(index: 0, sig_index: 0)
+  EndFunctionSection
+  BeginTableSection(4)
+    OnTableCount(1)
+    OnTable(index: 0, elem_type: funcref, initial: 1)
+  EndTableSection
+  BeginCodeSection(436)
+    OnFunctionBodyCount(1)
+    BeginFunctionBody(0, size:433)
+    OnLocalDeclCount(0)
+    EndFunctionBody(0)
+  EndCodeSection
+EndModule
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2 do-not-highlightme"><code>00000000: 00 61 73 6D 01 00 00 00  .asm....
+00000008: 01 0C 03 60 00 00 60 01  ...&#x60;..&#x60;.
+00000010: 7F 00 60 00 01 7F 03 02  ..&#x60;.....
+00000018: 01 00 04 04 01 70 00 01  .....p..
+00000020: 0A B4 03 01 B1 03 00 02  ........
+00000028: 40 41 00 11 00 00 0B 03  @A......
+00000030: 40 41 00 11 00 00 0B 41  @A.....A
+00000038: 00 04 40 41 00 11 00 00  ..@A....
+00000040: 0B 41 00 04 40 41 00 11  .A..@A..
+00000048: 00 00 05 41 00 11 00 00  ...A....
+00000050: 0B 02 40 41 00 11 00 00  ..@A....
+00000058: 0B 03 40 41 00 11 00 00  ..@A....
+00000060: 0B 41 00 04 40 41 00 11  .A..@A..
+00000068: 00 00 0B 41 00 04 40 41  ...A..@A
+00000070: 00 11 00 00 05 41 00 11  .....A..
+00000078: 00 00 0B 02 40 41 00 41  ....@A.A
+00000080: 00 11 01 00 0B 03 40 41  ......@A
+00000088: 00 41 00 11 01 00 0B 41  .A.....A
+00000090: 00 04 40 41 00 41 00 11  ..@A.A..
+00000098: 01 00 0B 41 00 04 40 41  ...A..@A
+000000a0: 00 41 00 11 01 00 05 41  .A.....A
+000000a8: 00 41 00 11 01 00 0B 02  .A......
+000000b0: 7F 41 00 11 02 00 0B 1A  .A......
+000000b8: 03 7F 41 00 11 02 00 0B  ..A.....
+000000c0: 1A 41 00 04 7F 41 00 11  .A...A..
+000000c8: 02 00 05 41 00 11 02 00  ...A....
+000000d0: 0B 1A 02 40 41 00 11 00  ...@A...
+000000d8: 00 0B 03 40 41 00 11 00  ...@A...
+000000e0: 00 0B 41 00 04 40 41 00  ..A..@A.
+000000e8: 11 00 00 0B 41 00 04 40  ....A..@
+000000f0: 41 00 11 00 00 05 41 00  A.....A.
+000000f8: 11 00 00 0B 02 40 41 00  .....@A.
+00000100: 11 00 00 0B 03 40 41 00  .....@A.
+00000108: 11 00 00 0B 41 00 04 40  ....A..@
+00000110: 41 00 11 00 00 0B 41 00  A.....A.
+00000118: 04 40 41 00 11 00 00 05  .@A.....
+00000120: 41 00 11 00 00 0B 02 40  A......@
+00000128: 41 00 11 00 00 0B 03 40  A......@
+00000130: 41 00 11 00 00 0B 41 00  A.....A.
+00000138: 04 40 41 00 11 00 00 0B  .@A.....
+00000140: 41 00 04 40 41 00 11 00  A..@A...
+00000148: 00 05 41 00 11 00 00 0B  ..A.....
+00000150: 02 40 41 00 41 00 11 01  .@A.A...
+00000158: 00 0B 03 40 41 00 41 00  ...@A.A.
+00000160: 11 01 00 0B 41 00 04 40  ....A..@
+00000168: 41 00 41 00 11 01 00 0B  A.A.....
+00000170: 41 00 04 40 41 00 41 00  A..@A.A.
+00000178: 11 01 00 05 41 00 41 00  ....A.A.
+00000180: 11 01 00 0B 02 7F 41 00  ......A.
+00000188: 11 02 00 0B 1A 03 7F 41  .......A
+00000190: 00 11 02 00 0B 1A 41 00  ......A.
+00000198: 04 7F 41 00 11 02 00 05  ..A.....
+000001a0: 41 00 11 02 00 0B 1A 02  A.......
+000001a8: 40 41 00 11 00 00 0B 03  @A......
+000001b0: 40 41 00 11 00 00 0B 41  @A.....A
+000001b8: 00 04 40 41 00 11 00 00  ..@A....
+000001c0: 0B 41 00 04 40 41 00 11  .A..@A..
+000001c8: 00 00 05 41 00 11 00 00  ...A....
+000001d0: 0B 41 00 11 00 00 0B     .A.....
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2"><code>(module
+  (type (;0;) (func))
+  (type (;1;) (func (param i32)))
+  (type (;2;) (func (result i32)))
+  (func (;0;) (type 0)
+    block  ;; label &#x3D; @1
+      i32.const 0
+      call_indirect (type 0)
+    end
+    loop  ;; label &#x3D; @1
+      i32.const 0
+      call_indirect (type 0)
+    end
+    i32.const 0
+    if  ;; label &#x3D; @1
+      i32.const 0
+      call_indirect (type 0)
+    end
+    i32.const 0
+    if  ;; label &#x3D; @1
+      i32.const 0
+      call_indirect (type 0)
+    else
+      i32.const 0
+      call_indirect (type 0)
+    end
+    block  ;; label &#x3D; @1
+      i32.const 0
+      call_indirect (type 0)
+    end
+    loop  ;; label &#x3D; @1
+      i32.const 0
+      call_indirect (type 0)
+    end
+    i32.const 0
+    if  ;; label &#x3D; @1
+      i32.const 0
+      call_indirect (type 0)
+    end
+    i32.const 0
+    if  ;; label &#x3D; @1
+      i32.const 0
+      call_indirect (type 0)
+    else
+      i32.const 0
+      call_indirect (type 0)
+    end
+    block  ;; label &#x3D; @1
+      i32.const 0
+      i32.const 0
+      call_indirect (type 1)
+    end
+    loop  ;; label &#x3D; @1
+      i32.const 0
+      i32.const 0
+      call_indirect (type 1)
+    end
+    i32.const 0
+    if  ;; label &#x3D; @1
+      i32.const 0
+      i32.const 0
+      call_indirect (type 1)
+    end
+    i32.const 0
+    if  ;; label &#x3D; @1
+      i32.const 0
+      i32.const 0
+      call_indirect (type 1)
+    else
+      i32.const 0
+      i32.const 0
+      call_indirect (type 1)
+    end
+    block (result i32)  ;; label &#x3D; @1
+      i32.const 0
+      call_indirect (type 2)
+    end
+    drop
+    loop (result i32)  ;; label &#x3D; @1
+      i32.const 0
+      call_indirect (type 2)
+    end
+    drop
+    i32.const 0
+    if (result i32)  ;; label &#x3D; @1
+      i32.const 0
+      call_indirect (type 2)
+    else
+      i32.const 0
+      call_indirect (type 2)
+    end
+    drop
+    block  ;; label &#x3D; @1
+      i32.const 0
+      call_indirect (type 0)
+    end
+    loop  ;; label &#x3D; @1
+      i32.const 0
+      call_indirect (type 0)
+    end
+    i32.const 0
+    if  ;; label &#x3D; @1
+      i32.const 0
+      call_indirect (type 0)
+    end
+    i32.const 0
+    if  ;; label &#x3D; @1
+      i32.const 0
+      call_indirect (type 0)
+    else
+      i32.const 0
+      call_indirect (type 0)
+    end
+    block  ;; label &#x3D; @1
+      i32.const 0
+      call_indirect (type 0)
+    end
+    loop  ;; label &#x3D; @1
+      i32.const 0
+      call_indirect (type 0)
+    end
+    i32.const 0
+    if  ;; label &#x3D; @1
+      i32.const 0
+      call_indirect (type 0)
+    end
+    i32.const 0
+    if  ;; label &#x3D; @1
+      i32.const 0
+      call_indirect (type 0)
+    else
+      i32.const 0
+      call_indirect (type 0)
+    end
+    block  ;; label &#x3D; @1
+      i32.const 0
+      call_indirect (type 0)
+    end
+    loop  ;; label &#x3D; @1
+      i32.const 0
+      call_indirect (type 0)
+    end
+    i32.const 0
+    if  ;; label &#x3D; @1
+      i32.const 0
+      call_indirect (type 0)
+    end
+    i32.const 0
+    if  ;; label &#x3D; @1
+      i32.const 0
+      call_indirect (type 0)
+    else
+      i32.const 0
+      call_indirect (type 0)
+    end
+    block  ;; label &#x3D; @1
+      i32.const 0
+      i32.const 0
+      call_indirect (type 1)
+    end
+    loop  ;; label &#x3D; @1
+      i32.const 0
+      i32.const 0
+      call_indirect (type 1)
+    end
+    i32.const 0
+    if  ;; label &#x3D; @1
+      i32.const 0
+      i32.const 0
+      call_indirect (type 1)
+    end
+    i32.const 0
+    if  ;; label &#x3D; @1
+      i32.const 0
+      i32.const 0
+      call_indirect (type 1)
+    else
+      i32.const 0
+      i32.const 0
+      call_indirect (type 1)
+    end
+    block (result i32)  ;; label &#x3D; @1
+      i32.const 0
+      call_indirect (type 2)
+    end
+    drop
+    loop (result i32)  ;; label &#x3D; @1
+      i32.const 0
+      call_indirect (type 2)
+    end
+    drop
+    i32.const 0
+    if (result i32)  ;; label &#x3D; @1
+      i32.const 0
+      call_indirect (type 2)
+    else
+      i32.const 0
+      call_indirect (type 2)
+    end
+    drop
+    block  ;; label &#x3D; @1
+      i32.const 0
+      call_indirect (type 0)
+    end
+    loop  ;; label &#x3D; @1
+      i32.const 0
+      call_indirect (type 0)
+    end
+    i32.const 0
+    if  ;; label &#x3D; @1
+      i32.const 0
+      call_indirect (type 0)
+    end
+    i32.const 0
+    if  ;; label &#x3D; @1
+      i32.const 0
+      call_indirect (type 0)
+    else
+      i32.const 0
+      call_indirect (type 0)
+    end
+    i32.const 0
+    call_indirect (type 0))
+  (table (;0;) 1 funcref))
+</code></pre>
+    </div>
+</body>
+
+</html>

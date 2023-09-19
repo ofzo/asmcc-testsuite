@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asmcc traps.3</title>
+
+    <link rel="stylesheet" href="//unpkg.com/@highlightjs/cdn-assets@11.7.0/styles/github.min.css">
+    <script src="//unpkg.com/@highlightjs/cdn-assets@11.7.0/highlight.min.js"></script>
+    <script>
+        hljs.configure({
+            noHighlightRe: /^do-not-highlightme$/i,
+        });
+    </script>
+    <script>hljs.highlightAll();</script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="/_vercel/insights/script.js"></script>
+</head>
+
+<body class="text-sm p-2">
+    <h1 class="text-2xl  w-full mb-4">Anaylzer: <a href="/traps.3.wasm">traps.3.wasm</a></h1>
+    <div class="flex justify-evenly">
+        <pre class="p-4 overflow-scroll border-2"><code>
+traps.3.wasm:	file format wasm 0x1
+
+Sections:
+
+     Type start&#x3D;0x0000000a end&#x3D;0x0000000f (size&#x3D;0x00000005) count: 1
+ Function start&#x3D;0x00000011 end&#x3D;0x00000020 (size&#x3D;0x0000000f) count: 14
+   Memory start&#x3D;0x00000022 end&#x3D;0x00000025 (size&#x3D;0x00000003) count: 1
+   Export start&#x3D;0x00000028 end&#x3D;0x00000149 (size&#x3D;0x00000121) count: 14
+     Code start&#x3D;0x0000014b end&#x3D;0x000001ca (size&#x3D;0x0000007f) count: 14
+
+Section Details:
+
+Type[1]:
+ - type[0] (i32) -&gt; nil
+Function[14]:
+ - func[0] sig&#x3D;0 &lt;no_dce.i32.load&gt;
+ - func[1] sig&#x3D;0 &lt;no_dce.i32.load16_s&gt;
+ - func[2] sig&#x3D;0 &lt;no_dce.i32.load16_u&gt;
+ - func[3] sig&#x3D;0 &lt;no_dce.i32.load8_s&gt;
+ - func[4] sig&#x3D;0 &lt;no_dce.i32.load8_u&gt;
+ - func[5] sig&#x3D;0 &lt;no_dce.i64.load&gt;
+ - func[6] sig&#x3D;0 &lt;no_dce.i64.load32_s&gt;
+ - func[7] sig&#x3D;0 &lt;no_dce.i64.load32_u&gt;
+ - func[8] sig&#x3D;0 &lt;no_dce.i64.load16_s&gt;
+ - func[9] sig&#x3D;0 &lt;no_dce.i64.load16_u&gt;
+ - func[10] sig&#x3D;0 &lt;no_dce.i64.load8_s&gt;
+ - func[11] sig&#x3D;0 &lt;no_dce.i64.load8_u&gt;
+ - func[12] sig&#x3D;0 &lt;no_dce.f32.load&gt;
+ - func[13] sig&#x3D;0 &lt;no_dce.f64.load&gt;
+Memory[1]:
+ - memory[0] pages: initial&#x3D;1
+Export[14]:
+ - func[0] &lt;no_dce.i32.load&gt; -&gt; &quot;no_dce.i32.load&quot;
+ - func[1] &lt;no_dce.i32.load16_s&gt; -&gt; &quot;no_dce.i32.load16_s&quot;
+ - func[2] &lt;no_dce.i32.load16_u&gt; -&gt; &quot;no_dce.i32.load16_u&quot;
+ - func[3] &lt;no_dce.i32.load8_s&gt; -&gt; &quot;no_dce.i32.load8_s&quot;
+ - func[4] &lt;no_dce.i32.load8_u&gt; -&gt; &quot;no_dce.i32.load8_u&quot;
+ - func[5] &lt;no_dce.i64.load&gt; -&gt; &quot;no_dce.i64.load&quot;
+ - func[6] &lt;no_dce.i64.load32_s&gt; -&gt; &quot;no_dce.i64.load32_s&quot;
+ - func[7] &lt;no_dce.i64.load32_u&gt; -&gt; &quot;no_dce.i64.load32_u&quot;
+ - func[8] &lt;no_dce.i64.load16_s&gt; -&gt; &quot;no_dce.i64.load16_s&quot;
+ - func[9] &lt;no_dce.i64.load16_u&gt; -&gt; &quot;no_dce.i64.load16_u&quot;
+ - func[10] &lt;no_dce.i64.load8_s&gt; -&gt; &quot;no_dce.i64.load8_s&quot;
+ - func[11] &lt;no_dce.i64.load8_u&gt; -&gt; &quot;no_dce.i64.load8_u&quot;
+ - func[12] &lt;no_dce.f32.load&gt; -&gt; &quot;no_dce.f32.load&quot;
+ - func[13] &lt;no_dce.f64.load&gt; -&gt; &quot;no_dce.f64.load&quot;
+Code[14]:
+ - func[0] size&#x3D;8 &lt;no_dce.i32.load&gt;
+ - func[1] size&#x3D;8 &lt;no_dce.i32.load16_s&gt;
+ - func[2] size&#x3D;8 &lt;no_dce.i32.load16_u&gt;
+ - func[3] size&#x3D;8 &lt;no_dce.i32.load8_s&gt;
+ - func[4] size&#x3D;8 &lt;no_dce.i32.load8_u&gt;
+ - func[5] size&#x3D;8 &lt;no_dce.i64.load&gt;
+ - func[6] size&#x3D;8 &lt;no_dce.i64.load32_s&gt;
+ - func[7] size&#x3D;8 &lt;no_dce.i64.load32_u&gt;
+ - func[8] size&#x3D;8 &lt;no_dce.i64.load16_s&gt;
+ - func[9] size&#x3D;8 &lt;no_dce.i64.load16_u&gt;
+ - func[10] size&#x3D;8 &lt;no_dce.i64.load8_s&gt;
+ - func[11] size&#x3D;8 &lt;no_dce.i64.load8_u&gt;
+ - func[12] size&#x3D;8 &lt;no_dce.f32.load&gt;
+ - func[13] size&#x3D;8 &lt;no_dce.f64.load&gt;
+
+Contents of section Type:
+000000a: 0160 017f 00                             .&#x60;...
+
+Contents of section Function:
+0000011: 0e00 0000 0000 0000 0000 0000 0000 00    ...............
+
+Contents of section Memory:
+0000022: 0100 01                                  ...
+
+Contents of section Export:
+0000028: 0e0f 6e6f 5f64 6365 2e69 3332 2e6c 6f61  ..no_dce.i32.loa
+0000038: 6400 0013 6e6f 5f64 6365 2e69 3332 2e6c  d...no_dce.i32.l
+0000048: 6f61 6431 365f 7300 0113 6e6f 5f64 6365  oad16_s...no_dce
+0000058: 2e69 3332 2e6c 6f61 6431 365f 7500 0212  .i32.load16_u...
+0000068: 6e6f 5f64 6365 2e69 3332 2e6c 6f61 6438  no_dce.i32.load8
+0000078: 5f73 0003 126e 6f5f 6463 652e 6933 322e  _s...no_dce.i32.
+0000088: 6c6f 6164 385f 7500 040f 6e6f 5f64 6365  load8_u...no_dce
+0000098: 2e69 3634 2e6c 6f61 6400 0513 6e6f 5f64  .i64.load...no_d
+00000a8: 6365 2e69 3634 2e6c 6f61 6433 325f 7300  ce.i64.load32_s.
+00000b8: 0613 6e6f 5f64 6365 2e69 3634 2e6c 6f61  ..no_dce.i64.loa
+00000c8: 6433 325f 7500 0713 6e6f 5f64 6365 2e69  d32_u...no_dce.i
+00000d8: 3634 2e6c 6f61 6431 365f 7300 0813 6e6f  64.load16_s...no
+00000e8: 5f64 6365 2e69 3634 2e6c 6f61 6431 365f  _dce.i64.load16_
+00000f8: 7500 0912 6e6f 5f64 6365 2e69 3634 2e6c  u...no_dce.i64.l
+0000108: 6f61 6438 5f73 000a 126e 6f5f 6463 652e  oad8_s...no_dce.
+0000118: 6936 342e 6c6f 6164 385f 7500 0b0f 6e6f  i64.load8_u...no
+0000128: 5f64 6365 2e66 3332 2e6c 6f61 6400 0c0f  _dce.f32.load...
+0000138: 6e6f 5f64 6365 2e66 3634 2e6c 6f61 6400  no_dce.f64.load.
+0000148: 0d                                       .
+
+Contents of section Code:
+000014b: 0e08 0020 0028 0200 1a0b 0800 2000 2e01  ... .(...... ...
+000015b: 001a 0b08 0020 002f 0100 1a0b 0800 2000  ..... ./...... .
+000016b: 2c00 001a 0b08 0020 002d 0000 1a0b 0800  ,...... .-......
+000017b: 2000 2903 001a 0b08 0020 0034 0200 1a0b   .)...... .4....
+000018b: 0800 2000 3502 001a 0b08 0020 0032 0100  .. .5...... .2..
+000019b: 1a0b 0800 2000 3301 001a 0b08 0020 0030  .... .3...... .0
+00001ab: 0000 1a0b 0800 2000 3100 001a 0b08 0020  ...... .1...... 
+00001bb: 002a 0200 1a0b 0800 2000 2b03 001a 0b    .*...... .+....
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2"><code>BeginModule(version: 1)
+  BeginTypeSection(5)
+    OnTypeCount(1)
+    OnFuncType(index: 0, params: [i32], results: [])
+  EndTypeSection
+  BeginFunctionSection(15)
+    OnFunctionCount(14)
+    OnFunction(index: 0, sig_index: 0)
+    OnFunction(index: 1, sig_index: 0)
+    OnFunction(index: 2, sig_index: 0)
+    OnFunction(index: 3, sig_index: 0)
+    OnFunction(index: 4, sig_index: 0)
+    OnFunction(index: 5, sig_index: 0)
+    OnFunction(index: 6, sig_index: 0)
+    OnFunction(index: 7, sig_index: 0)
+    OnFunction(index: 8, sig_index: 0)
+    OnFunction(index: 9, sig_index: 0)
+    OnFunction(index: 10, sig_index: 0)
+    OnFunction(index: 11, sig_index: 0)
+    OnFunction(index: 12, sig_index: 0)
+    OnFunction(index: 13, sig_index: 0)
+  EndFunctionSection
+  BeginMemorySection(3)
+    OnMemoryCount(1)
+    OnMemory(index: 0, initial: 1)
+  EndMemorySection
+  BeginExportSection(289)
+    OnExportCount(14)
+    OnExport(index: 0, kind: func, item_index: 0, name: &quot;no_dce.i32.load&quot;)
+    OnExport(index: 1, kind: func, item_index: 1, name: &quot;no_dce.i32.load16_s&quot;)
+    OnExport(index: 2, kind: func, item_index: 2, name: &quot;no_dce.i32.load16_u&quot;)
+    OnExport(index: 3, kind: func, item_index: 3, name: &quot;no_dce.i32.load8_s&quot;)
+    OnExport(index: 4, kind: func, item_index: 4, name: &quot;no_dce.i32.load8_u&quot;)
+    OnExport(index: 5, kind: func, item_index: 5, name: &quot;no_dce.i64.load&quot;)
+    OnExport(index: 6, kind: func, item_index: 6, name: &quot;no_dce.i64.load32_s&quot;)
+    OnExport(index: 7, kind: func, item_index: 7, name: &quot;no_dce.i64.load32_u&quot;)
+    OnExport(index: 8, kind: func, item_index: 8, name: &quot;no_dce.i64.load16_s&quot;)
+    OnExport(index: 9, kind: func, item_index: 9, name: &quot;no_dce.i64.load16_u&quot;)
+    OnExport(index: 10, kind: func, item_index: 10, name: &quot;no_dce.i64.load8_s&quot;)
+    OnExport(index: 11, kind: func, item_index: 11, name: &quot;no_dce.i64.load8_u&quot;)
+    OnExport(index: 12, kind: func, item_index: 12, name: &quot;no_dce.f32.load&quot;)
+    OnExport(index: 13, kind: func, item_index: 13, name: &quot;no_dce.f64.load&quot;)
+  EndExportSection
+  BeginCodeSection(127)
+    OnFunctionBodyCount(14)
+    BeginFunctionBody(0, size:8)
+    OnLocalDeclCount(0)
+    EndFunctionBody(0)
+    BeginFunctionBody(1, size:8)
+    OnLocalDeclCount(0)
+    EndFunctionBody(1)
+    BeginFunctionBody(2, size:8)
+    OnLocalDeclCount(0)
+    EndFunctionBody(2)
+    BeginFunctionBody(3, size:8)
+    OnLocalDeclCount(0)
+    EndFunctionBody(3)
+    BeginFunctionBody(4, size:8)
+    OnLocalDeclCount(0)
+    EndFunctionBody(4)
+    BeginFunctionBody(5, size:8)
+    OnLocalDeclCount(0)
+    EndFunctionBody(5)
+    BeginFunctionBody(6, size:8)
+    OnLocalDeclCount(0)
+    EndFunctionBody(6)
+    BeginFunctionBody(7, size:8)
+    OnLocalDeclCount(0)
+    EndFunctionBody(7)
+    BeginFunctionBody(8, size:8)
+    OnLocalDeclCount(0)
+    EndFunctionBody(8)
+    BeginFunctionBody(9, size:8)
+    OnLocalDeclCount(0)
+    EndFunctionBody(9)
+    BeginFunctionBody(10, size:8)
+    OnLocalDeclCount(0)
+    EndFunctionBody(10)
+    BeginFunctionBody(11, size:8)
+    OnLocalDeclCount(0)
+    EndFunctionBody(11)
+    BeginFunctionBody(12, size:8)
+    OnLocalDeclCount(0)
+    EndFunctionBody(12)
+    BeginFunctionBody(13, size:8)
+    OnLocalDeclCount(0)
+    EndFunctionBody(13)
+  EndCodeSection
+EndModule
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2 do-not-highlightme"><code>00000000: 00 61 73 6D 01 00 00 00  .asm....
+00000008: 01 05 01 60 01 7F 00 03  ...&#x60;....
+00000010: 0F 0E 00 00 00 00 00 00  ........
+00000018: 00 00 00 00 00 00 00 00  ........
+00000020: 05 03 01 00 01 07 A1 02  ........
+00000028: 0E 0F 6E 6F 5F 64 63 65  ..no_dce
+00000030: 2E 69 33 32 2E 6C 6F 61  .i32.loa
+00000038: 64 00 00 13 6E 6F 5F 64  d...no_d
+00000040: 63 65 2E 69 33 32 2E 6C  ce.i32.l
+00000048: 6F 61 64 31 36 5F 73 00  oad16_s.
+00000050: 01 13 6E 6F 5F 64 63 65  ..no_dce
+00000058: 2E 69 33 32 2E 6C 6F 61  .i32.loa
+00000060: 64 31 36 5F 75 00 02 12  d16_u...
+00000068: 6E 6F 5F 64 63 65 2E 69  no_dce.i
+00000070: 33 32 2E 6C 6F 61 64 38  32.load8
+00000078: 5F 73 00 03 12 6E 6F 5F  _s...no_
+00000080: 64 63 65 2E 69 33 32 2E  dce.i32.
+00000088: 6C 6F 61 64 38 5F 75 00  load8_u.
+00000090: 04 0F 6E 6F 5F 64 63 65  ..no_dce
+00000098: 2E 69 36 34 2E 6C 6F 61  .i64.loa
+000000a0: 64 00 05 13 6E 6F 5F 64  d...no_d
+000000a8: 63 65 2E 69 36 34 2E 6C  ce.i64.l
+000000b0: 6F 61 64 33 32 5F 73 00  oad32_s.
+000000b8: 06 13 6E 6F 5F 64 63 65  ..no_dce
+000000c0: 2E 69 36 34 2E 6C 6F 61  .i64.loa
+000000c8: 64 33 32 5F 75 00 07 13  d32_u...
+000000d0: 6E 6F 5F 64 63 65 2E 69  no_dce.i
+000000d8: 36 34 2E 6C 6F 61 64 31  64.load1
+000000e0: 36 5F 73 00 08 13 6E 6F  6_s...no
+000000e8: 5F 64 63 65 2E 69 36 34  _dce.i64
+000000f0: 2E 6C 6F 61 64 31 36 5F  .load16_
+000000f8: 75 00 09 12 6E 6F 5F 64  u...no_d
+00000100: 63 65 2E 69 36 34 2E 6C  ce.i64.l
+00000108: 6F 61 64 38 5F 73 00 0A  oad8_s..
+00000110: 12 6E 6F 5F 64 63 65 2E  .no_dce.
+00000118: 69 36 34 2E 6C 6F 61 64  i64.load
+00000120: 38 5F 75 00 0B 0F 6E 6F  8_u...no
+00000128: 5F 64 63 65 2E 66 33 32  _dce.f32
+00000130: 2E 6C 6F 61 64 00 0C 0F  .load...
+00000138: 6E 6F 5F 64 63 65 2E 66  no_dce.f
+00000140: 36 34 2E 6C 6F 61 64 00  64.load.
+00000148: 0D 0A 7F 0E 08 00 20 00  ...... .
+00000150: 28 02 00 1A 0B 08 00 20  (...... 
+00000158: 00 2E 01 00 1A 0B 08 00  ........
+00000160: 20 00 2F 01 00 1A 0B 08   ./.....
+00000168: 00 20 00 2C 00 00 1A 0B  . .,....
+00000170: 08 00 20 00 2D 00 00 1A  .. .-...
+00000178: 0B 08 00 20 00 29 03 00  ... .)..
+00000180: 1A 0B 08 00 20 00 34 02  .... .4.
+00000188: 00 1A 0B 08 00 20 00 35  ..... .5
+00000190: 02 00 1A 0B 08 00 20 00  ...... .
+00000198: 32 01 00 1A 0B 08 00 20  2...... 
+000001a0: 00 33 01 00 1A 0B 08 00  .3......
+000001a8: 20 00 30 00 00 1A 0B 08   .0.....
+000001b0: 00 20 00 31 00 00 1A 0B  . .1....
+000001b8: 08 00 20 00 2A 02 00 1A  .. .*...
+000001c0: 0B 08 00 20 00 2B 03 00  ... .+..
+000001c8: 1A 0B                    ..
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2"><code>(module
+  (type (;0;) (func (param i32)))
+  (func (;0;) (type 0) (param i32)
+    local.get 0
+    i32.load
+    drop)
+  (func (;1;) (type 0) (param i32)
+    local.get 0
+    i32.load16_s
+    drop)
+  (func (;2;) (type 0) (param i32)
+    local.get 0
+    i32.load16_u
+    drop)
+  (func (;3;) (type 0) (param i32)
+    local.get 0
+    i32.load8_s
+    drop)
+  (func (;4;) (type 0) (param i32)
+    local.get 0
+    i32.load8_u
+    drop)
+  (func (;5;) (type 0) (param i32)
+    local.get 0
+    i64.load
+    drop)
+  (func (;6;) (type 0) (param i32)
+    local.get 0
+    i64.load32_s
+    drop)
+  (func (;7;) (type 0) (param i32)
+    local.get 0
+    i64.load32_u
+    drop)
+  (func (;8;) (type 0) (param i32)
+    local.get 0
+    i64.load16_s
+    drop)
+  (func (;9;) (type 0) (param i32)
+    local.get 0
+    i64.load16_u
+    drop)
+  (func (;10;) (type 0) (param i32)
+    local.get 0
+    i64.load8_s
+    drop)
+  (func (;11;) (type 0) (param i32)
+    local.get 0
+    i64.load8_u
+    drop)
+  (func (;12;) (type 0) (param i32)
+    local.get 0
+    f32.load
+    drop)
+  (func (;13;) (type 0) (param i32)
+    local.get 0
+    f64.load
+    drop)
+  (memory (;0;) 1)
+  (export &quot;no_dce.i32.load&quot; (func 0))
+  (export &quot;no_dce.i32.load16_s&quot; (func 1))
+  (export &quot;no_dce.i32.load16_u&quot; (func 2))
+  (export &quot;no_dce.i32.load8_s&quot; (func 3))
+  (export &quot;no_dce.i32.load8_u&quot; (func 4))
+  (export &quot;no_dce.i64.load&quot; (func 5))
+  (export &quot;no_dce.i64.load32_s&quot; (func 6))
+  (export &quot;no_dce.i64.load32_u&quot; (func 7))
+  (export &quot;no_dce.i64.load16_s&quot; (func 8))
+  (export &quot;no_dce.i64.load16_u&quot; (func 9))
+  (export &quot;no_dce.i64.load8_s&quot; (func 10))
+  (export &quot;no_dce.i64.load8_u&quot; (func 11))
+  (export &quot;no_dce.f32.load&quot; (func 12))
+  (export &quot;no_dce.f64.load&quot; (func 13)))
+</code></pre>
+    </div>
+</body>
+
+</html>

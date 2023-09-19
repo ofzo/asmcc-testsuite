@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asmcc memory.5</title>
+
+    <link rel="stylesheet" href="//unpkg.com/@highlightjs/cdn-assets@11.7.0/styles/github.min.css">
+    <script src="//unpkg.com/@highlightjs/cdn-assets@11.7.0/highlight.min.js"></script>
+    <script>
+        hljs.configure({
+            noHighlightRe: /^do-not-highlightme$/i,
+        });
+    </script>
+    <script>hljs.highlightAll();</script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="/_vercel/insights/script.js"></script>
+</head>
+
+<body class="text-sm p-2">
+    <h1 class="text-2xl  w-full mb-4">Anaylzer: <a href="/memory.5.wasm">memory.5.wasm</a></h1>
+    <div class="flex justify-evenly">
+        <pre class="p-4 overflow-scroll border-2"><code>
+memory.5.wasm:	file format wasm 0x1
+
+Sections:
+
+   Memory start&#x3D;0x0000000a end&#x3D;0x00000010 (size&#x3D;0x00000006) count: 1
+
+Section Details:
+
+Memory[1]:
+ - memory[0] pages: initial&#x3D;0 max&#x3D;65536
+
+Contents of section Memory:
+000000a: 0101 0080 8004                           ......
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2"><code>BeginModule(version: 1)
+  BeginMemorySection(6)
+    OnMemoryCount(1)
+    OnMemory(index: 0, initial: 0, max: 65536)
+  EndMemorySection
+EndModule
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2 do-not-highlightme"><code>00000000: 00 61 73 6D 01 00 00 00  .asm....
+00000008: 05 06 01 01 00 80 80 04  ........
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2"><code>(module
+  (memory (;0;) 0 65536))
+</code></pre>
+    </div>
+</body>
+
+</html>

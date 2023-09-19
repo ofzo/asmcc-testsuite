@@ -1,0 +1,1773 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asmcc call.0</title>
+
+    <link rel="stylesheet" href="//unpkg.com/@highlightjs/cdn-assets@11.7.0/styles/github.min.css">
+    <script src="//unpkg.com/@highlightjs/cdn-assets@11.7.0/highlight.min.js"></script>
+    <script>
+        hljs.configure({
+            noHighlightRe: /^do-not-highlightme$/i,
+        });
+    </script>
+    <script>hljs.highlightAll();</script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="/_vercel/insights/script.js"></script>
+</head>
+
+<body class="text-sm p-2">
+    <h1 class="text-2xl  w-full mb-4">Anaylzer: <a href="/call.0.wasm">call.0.wasm</a></h1>
+    <div class="flex justify-evenly">
+        <pre class="p-4 overflow-scroll border-2"><code>
+call.0.wasm:	file format wasm 0x1
+
+Sections:
+
+     Type start&#x3D;0x0000000b end&#x3D;0x000000f4 (size&#x3D;0x000000e9) count: 25
+ Function start&#x3D;0x000000f6 end&#x3D;0x00000145 (size&#x3D;0x0000004f) count: 78
+    Table start&#x3D;0x00000147 end&#x3D;0x0000014c (size&#x3D;0x00000005) count: 1
+   Memory start&#x3D;0x0000014e end&#x3D;0x00000151 (size&#x3D;0x00000003) count: 1
+   Global start&#x3D;0x00000153 end&#x3D;0x00000159 (size&#x3D;0x00000006) count: 1
+   Export start&#x3D;0x0000015c end&#x3D;0x00000526 (size&#x3D;0x000003ca) count: 56
+     Elem start&#x3D;0x00000528 end&#x3D;0x0000052f (size&#x3D;0x00000007) count: 1
+     Code start&#x3D;0x00000532 end&#x3D;0x00000a28 (size&#x3D;0x000004f6) count: 78
+
+Section Details:
+
+Type[25]:
+ - type[0] (i32, i32) -&gt; i32
+ - type[1] () -&gt; i32
+ - type[2] () -&gt; i64
+ - type[3] () -&gt; f32
+ - type[4] () -&gt; f64
+ - type[5] () -&gt; (i32, i64)
+ - type[6] (i32) -&gt; i32
+ - type[7] (i64) -&gt; i64
+ - type[8] (f32) -&gt; f32
+ - type[9] (f64) -&gt; f64
+ - type[10] (i32, f64) -&gt; (i32, f64)
+ - type[11] (i32, i32) -&gt; (i32, i32)
+ - type[12] (f32, f64) -&gt; (f64, f32)
+ - type[13] (f64, i32) -&gt; (i32, f64)
+ - type[14] (f32, i32) -&gt; i32
+ - type[15] (i32, i64) -&gt; i64
+ - type[16] (f64, f32) -&gt; f32
+ - type[17] (i64, f64) -&gt; f64
+ - type[18] () -&gt; (i32, f64)
+ - type[19] () -&gt; (i32, i32)
+ - type[20] () -&gt; (f64, f32)
+ - type[21] (i64, i64) -&gt; i64
+ - type[22] (i64) -&gt; i32
+ - type[23] () -&gt; nil
+ - type[24] (f32, i32, i32, f64, f32, f32, f32, f64, f32, i32, i32, f32, f64, i64, i64, i32, i64, i64, f32, i64, i64, i64, i32, f32, f32, f32, f64, f32, i32, i64, f32, f64, f64, f32, i32, f32, f32, f64, i64, f64, i32, i64, f32, f64, i32, i32, i32, i64, f64, i32, i64, i64, f64, f64, f64, f64, f64, f64, i32, f32, f64, f64, i32, i64, f32, f32, f32, i32, f64, f64, f64, f64, f64, f32, i64, i64, i32, i32, i32, f32, f64, i32, i64, f32, f32, f32, i32, i32, f32, f64, i64, f32, f64, f32, f32, f32, i32, f32, i64, i32) -&gt; i32
+Function[78]:
+ - func[0] sig&#x3D;1
+ - func[1] sig&#x3D;2
+ - func[2] sig&#x3D;3
+ - func[3] sig&#x3D;4
+ - func[4] sig&#x3D;5
+ - func[5] sig&#x3D;6
+ - func[6] sig&#x3D;7
+ - func[7] sig&#x3D;8
+ - func[8] sig&#x3D;9
+ - func[9] sig&#x3D;10
+ - func[10] sig&#x3D;11
+ - func[11] sig&#x3D;12
+ - func[12] sig&#x3D;13
+ - func[13] sig&#x3D;14
+ - func[14] sig&#x3D;15
+ - func[15] sig&#x3D;16
+ - func[16] sig&#x3D;17
+ - func[17] sig&#x3D;1 &lt;type-i32&gt;
+ - func[18] sig&#x3D;2 &lt;type-i64&gt;
+ - func[19] sig&#x3D;3 &lt;type-f32&gt;
+ - func[20] sig&#x3D;4 &lt;type-f64&gt;
+ - func[21] sig&#x3D;5 &lt;type-i32-i64&gt;
+ - func[22] sig&#x3D;1 &lt;type-first-i32&gt;
+ - func[23] sig&#x3D;2 &lt;type-first-i64&gt;
+ - func[24] sig&#x3D;3 &lt;type-first-f32&gt;
+ - func[25] sig&#x3D;4 &lt;type-first-f64&gt;
+ - func[26] sig&#x3D;1 &lt;type-second-i32&gt;
+ - func[27] sig&#x3D;2 &lt;type-second-i64&gt;
+ - func[28] sig&#x3D;3 &lt;type-second-f32&gt;
+ - func[29] sig&#x3D;4 &lt;type-second-f64&gt;
+ - func[30] sig&#x3D;18 &lt;type-all-i32-f64&gt;
+ - func[31] sig&#x3D;19 &lt;type-all-i32-i32&gt;
+ - func[32] sig&#x3D;20 &lt;type-all-f32-f64&gt;
+ - func[33] sig&#x3D;18 &lt;type-all-f64-i32&gt;
+ - func[34] sig&#x3D;1 &lt;as-binary-all-operands&gt;
+ - func[35] sig&#x3D;1 &lt;as-mixed-operands&gt;
+ - func[36] sig&#x3D;19 &lt;as-call-all-operands&gt;
+ - func[37] sig&#x3D;7 &lt;fac&gt;
+ - func[38] sig&#x3D;21 &lt;fac-acc&gt;
+ - func[39] sig&#x3D;7 &lt;fib&gt;
+ - func[40] sig&#x3D;22 &lt;even&gt;
+ - func[41] sig&#x3D;22 &lt;odd&gt;
+ - func[42] sig&#x3D;23 &lt;runaway&gt;
+ - func[43] sig&#x3D;23 &lt;mutual-runaway&gt;
+ - func[44] sig&#x3D;23
+ - func[45] sig&#x3D;1 &lt;as-select-first&gt;
+ - func[46] sig&#x3D;1 &lt;as-select-mid&gt;
+ - func[47] sig&#x3D;1 &lt;as-select-last&gt;
+ - func[48] sig&#x3D;1 &lt;as-if-condition&gt;
+ - func[49] sig&#x3D;1 &lt;as-br_if-first&gt;
+ - func[50] sig&#x3D;1 &lt;as-br_if-last&gt;
+ - func[51] sig&#x3D;1 &lt;as-br_table-first&gt;
+ - func[52] sig&#x3D;1 &lt;as-br_table-last&gt;
+ - func[53] sig&#x3D;0
+ - func[54] sig&#x3D;1 &lt;as-call_indirect-first&gt;
+ - func[55] sig&#x3D;1 &lt;as-call_indirect-mid&gt;
+ - func[56] sig&#x3D;1 &lt;as-call_indirect-last&gt;
+ - func[57] sig&#x3D;23 &lt;as-store-first&gt;
+ - func[58] sig&#x3D;23 &lt;as-store-last&gt;
+ - func[59] sig&#x3D;1 &lt;as-memory.grow-value&gt;
+ - func[60] sig&#x3D;1 &lt;as-return-value&gt;
+ - func[61] sig&#x3D;23 &lt;as-drop-operand&gt;
+ - func[62] sig&#x3D;1 &lt;as-br-value&gt;
+ - func[63] sig&#x3D;1 &lt;as-local.set-value&gt;
+ - func[64] sig&#x3D;1 &lt;as-local.tee-value&gt;
+ - func[65] sig&#x3D;1 &lt;as-global.set-value&gt;
+ - func[66] sig&#x3D;1 &lt;as-load-operand&gt;
+ - func[67] sig&#x3D;6
+ - func[68] sig&#x3D;8
+ - func[69] sig&#x3D;3 &lt;as-unary-operand&gt;
+ - func[70] sig&#x3D;1 &lt;as-binary-left&gt;
+ - func[71] sig&#x3D;1 &lt;as-binary-right&gt;
+ - func[72] sig&#x3D;1 &lt;as-test-operand&gt;
+ - func[73] sig&#x3D;1 &lt;as-compare-left&gt;
+ - func[74] sig&#x3D;1 &lt;as-compare-right&gt;
+ - func[75] sig&#x3D;2 &lt;as-convert-operand&gt;
+ - func[76] sig&#x3D;24
+ - func[77] sig&#x3D;6 &lt;return-from-long-argument-list&gt;
+Table[1]:
+ - table[0] type&#x3D;funcref initial&#x3D;1 max&#x3D;1
+Memory[1]:
+ - memory[0] pages: initial&#x3D;1
+Global[1]:
+ - global[0] i32 mutable&#x3D;1 - init i32&#x3D;10
+Export[56]:
+ - func[17] &lt;type-i32&gt; -&gt; &quot;type-i32&quot;
+ - func[18] &lt;type-i64&gt; -&gt; &quot;type-i64&quot;
+ - func[19] &lt;type-f32&gt; -&gt; &quot;type-f32&quot;
+ - func[20] &lt;type-f64&gt; -&gt; &quot;type-f64&quot;
+ - func[21] &lt;type-i32-i64&gt; -&gt; &quot;type-i32-i64&quot;
+ - func[22] &lt;type-first-i32&gt; -&gt; &quot;type-first-i32&quot;
+ - func[23] &lt;type-first-i64&gt; -&gt; &quot;type-first-i64&quot;
+ - func[24] &lt;type-first-f32&gt; -&gt; &quot;type-first-f32&quot;
+ - func[25] &lt;type-first-f64&gt; -&gt; &quot;type-first-f64&quot;
+ - func[26] &lt;type-second-i32&gt; -&gt; &quot;type-second-i32&quot;
+ - func[27] &lt;type-second-i64&gt; -&gt; &quot;type-second-i64&quot;
+ - func[28] &lt;type-second-f32&gt; -&gt; &quot;type-second-f32&quot;
+ - func[29] &lt;type-second-f64&gt; -&gt; &quot;type-second-f64&quot;
+ - func[30] &lt;type-all-i32-f64&gt; -&gt; &quot;type-all-i32-f64&quot;
+ - func[31] &lt;type-all-i32-i32&gt; -&gt; &quot;type-all-i32-i32&quot;
+ - func[32] &lt;type-all-f32-f64&gt; -&gt; &quot;type-all-f32-f64&quot;
+ - func[33] &lt;type-all-f64-i32&gt; -&gt; &quot;type-all-f64-i32&quot;
+ - func[34] &lt;as-binary-all-operands&gt; -&gt; &quot;as-binary-all-operands&quot;
+ - func[35] &lt;as-mixed-operands&gt; -&gt; &quot;as-mixed-operands&quot;
+ - func[36] &lt;as-call-all-operands&gt; -&gt; &quot;as-call-all-operands&quot;
+ - func[37] &lt;fac&gt; -&gt; &quot;fac&quot;
+ - func[38] &lt;fac-acc&gt; -&gt; &quot;fac-acc&quot;
+ - func[39] &lt;fib&gt; -&gt; &quot;fib&quot;
+ - func[40] &lt;even&gt; -&gt; &quot;even&quot;
+ - func[41] &lt;odd&gt; -&gt; &quot;odd&quot;
+ - func[42] &lt;runaway&gt; -&gt; &quot;runaway&quot;
+ - func[43] &lt;mutual-runaway&gt; -&gt; &quot;mutual-runaway&quot;
+ - func[45] &lt;as-select-first&gt; -&gt; &quot;as-select-first&quot;
+ - func[46] &lt;as-select-mid&gt; -&gt; &quot;as-select-mid&quot;
+ - func[47] &lt;as-select-last&gt; -&gt; &quot;as-select-last&quot;
+ - func[48] &lt;as-if-condition&gt; -&gt; &quot;as-if-condition&quot;
+ - func[49] &lt;as-br_if-first&gt; -&gt; &quot;as-br_if-first&quot;
+ - func[50] &lt;as-br_if-last&gt; -&gt; &quot;as-br_if-last&quot;
+ - func[51] &lt;as-br_table-first&gt; -&gt; &quot;as-br_table-first&quot;
+ - func[52] &lt;as-br_table-last&gt; -&gt; &quot;as-br_table-last&quot;
+ - func[54] &lt;as-call_indirect-first&gt; -&gt; &quot;as-call_indirect-first&quot;
+ - func[55] &lt;as-call_indirect-mid&gt; -&gt; &quot;as-call_indirect-mid&quot;
+ - func[56] &lt;as-call_indirect-last&gt; -&gt; &quot;as-call_indirect-last&quot;
+ - func[57] &lt;as-store-first&gt; -&gt; &quot;as-store-first&quot;
+ - func[58] &lt;as-store-last&gt; -&gt; &quot;as-store-last&quot;
+ - func[59] &lt;as-memory.grow-value&gt; -&gt; &quot;as-memory.grow-value&quot;
+ - func[60] &lt;as-return-value&gt; -&gt; &quot;as-return-value&quot;
+ - func[61] &lt;as-drop-operand&gt; -&gt; &quot;as-drop-operand&quot;
+ - func[62] &lt;as-br-value&gt; -&gt; &quot;as-br-value&quot;
+ - func[63] &lt;as-local.set-value&gt; -&gt; &quot;as-local.set-value&quot;
+ - func[64] &lt;as-local.tee-value&gt; -&gt; &quot;as-local.tee-value&quot;
+ - func[65] &lt;as-global.set-value&gt; -&gt; &quot;as-global.set-value&quot;
+ - func[66] &lt;as-load-operand&gt; -&gt; &quot;as-load-operand&quot;
+ - func[69] &lt;as-unary-operand&gt; -&gt; &quot;as-unary-operand&quot;
+ - func[70] &lt;as-binary-left&gt; -&gt; &quot;as-binary-left&quot;
+ - func[71] &lt;as-binary-right&gt; -&gt; &quot;as-binary-right&quot;
+ - func[72] &lt;as-test-operand&gt; -&gt; &quot;as-test-operand&quot;
+ - func[73] &lt;as-compare-left&gt; -&gt; &quot;as-compare-left&quot;
+ - func[74] &lt;as-compare-right&gt; -&gt; &quot;as-compare-right&quot;
+ - func[75] &lt;as-convert-operand&gt; -&gt; &quot;as-convert-operand&quot;
+ - func[77] &lt;return-from-long-argument-list&gt; -&gt; &quot;return-from-long-argument-list&quot;
+Elem[1]:
+ - segment[0] flags&#x3D;0 table&#x3D;0 count&#x3D;1 - init i32&#x3D;0
+  - elem[0] &#x3D; ref.func:53
+Code[78]:
+ - func[0] size&#x3D;5
+ - func[1] size&#x3D;5
+ - func[2] size&#x3D;7
+ - func[3] size&#x3D;11
+ - func[4] size&#x3D;8
+ - func[5] size&#x3D;4
+ - func[6] size&#x3D;4
+ - func[7] size&#x3D;4
+ - func[8] size&#x3D;4
+ - func[9] size&#x3D;6
+ - func[10] size&#x3D;6
+ - func[11] size&#x3D;6
+ - func[12] size&#x3D;6
+ - func[13] size&#x3D;4
+ - func[14] size&#x3D;4
+ - func[15] size&#x3D;4
+ - func[16] size&#x3D;4
+ - func[17] size&#x3D;4 &lt;type-i32&gt;
+ - func[18] size&#x3D;4 &lt;type-i64&gt;
+ - func[19] size&#x3D;4 &lt;type-f32&gt;
+ - func[20] size&#x3D;4 &lt;type-f64&gt;
+ - func[21] size&#x3D;4 &lt;type-i32-i64&gt;
+ - func[22] size&#x3D;6 &lt;type-first-i32&gt;
+ - func[23] size&#x3D;7 &lt;type-first-i64&gt;
+ - func[24] size&#x3D;9 &lt;type-first-f32&gt;
+ - func[25] size&#x3D;13 &lt;type-first-f64&gt;
+ - func[26] size&#x3D;11 &lt;type-second-i32&gt;
+ - func[27] size&#x3D;9 &lt;type-second-i64&gt;
+ - func[28] size&#x3D;18 &lt;type-second-f32&gt;
+ - func[29] size&#x3D;16 &lt;type-second-f64&gt;
+ - func[30] size&#x3D;15 &lt;type-all-i32-f64&gt;
+ - func[31] size&#x3D;8 &lt;type-all-i32-i32&gt;
+ - func[32] size&#x3D;18 &lt;type-all-f32-f64&gt;
+ - func[33] size&#x3D;15 &lt;type-all-f64-i32&gt;
+ - func[34] size&#x3D;9 &lt;as-binary-all-operands&gt;
+ - func[35] size&#x3D;12 &lt;as-mixed-operands&gt;
+ - func[36] size&#x3D;10 &lt;as-call-all-operands&gt;
+ - func[37] size&#x3D;21 &lt;fac&gt;
+ - func[38] size&#x3D;23 &lt;fac-acc&gt;
+ - func[39] size&#x3D;28 &lt;fib&gt;
+ - func[40] size&#x3D;18 &lt;even&gt;
+ - func[41] size&#x3D;19 &lt;odd&gt;
+ - func[42] size&#x3D;4 &lt;runaway&gt;
+ - func[43] size&#x3D;4 &lt;mutual-runaway&gt;
+ - func[44] size&#x3D;4
+ - func[45] size&#x3D;9 &lt;as-select-first&gt;
+ - func[46] size&#x3D;9 &lt;as-select-mid&gt;
+ - func[47] size&#x3D;9 &lt;as-select-last&gt;
+ - func[48] size&#x3D;12 &lt;as-if-condition&gt;
+ - func[49] size&#x3D;11 &lt;as-br_if-first&gt;
+ - func[50] size&#x3D;11 &lt;as-br_if-last&gt;
+ - func[51] size&#x3D;13 &lt;as-br_table-first&gt;
+ - func[52] size&#x3D;13 &lt;as-br_table-last&gt;
+ - func[53] size&#x3D;4
+ - func[54] size&#x3D;14 &lt;as-call_indirect-first&gt;
+ - func[55] size&#x3D;14 &lt;as-call_indirect-mid&gt;
+ - func[56] size&#x3D;14 &lt;as-call_indirect-last&gt;
+ - func[57] size&#x3D;9 &lt;as-store-first&gt;
+ - func[58] size&#x3D;9 &lt;as-store-last&gt;
+ - func[59] size&#x3D;6 &lt;as-memory.grow-value&gt;
+ - func[60] size&#x3D;5 &lt;as-return-value&gt;
+ - func[61] size&#x3D;5 &lt;as-drop-operand&gt;
+ - func[62] size&#x3D;9 &lt;as-br-value&gt;
+ - func[63] size&#x3D;10 &lt;as-local.set-value&gt;
+ - func[64] size&#x3D;8 &lt;as-local.tee-value&gt;
+ - func[65] size&#x3D;8 &lt;as-global.set-value&gt;
+ - func[66] size&#x3D;7 &lt;as-load-operand&gt;
+ - func[67] size&#x3D;4
+ - func[68] size&#x3D;4
+ - func[69] size&#x3D;13 &lt;as-unary-operand&gt;
+ - func[70] size&#x3D;12 &lt;as-binary-left&gt;
+ - func[71] size&#x3D;12 &lt;as-binary-right&gt;
+ - func[72] size&#x3D;10 &lt;as-test-operand&gt;
+ - func[73] size&#x3D;12 &lt;as-compare-left&gt;
+ - func[74] size&#x3D;12 &lt;as-compare-right&gt;
+ - func[75] size&#x3D;10 &lt;as-convert-operand&gt;
+ - func[76] size&#x3D;4
+ - func[77] size&#x3D;479 &lt;return-from-long-argument-list&gt;
+
+Contents of section Type:
+000000b: 1960 027f 7f01 7f60 0001 7f60 0001 7e60  .&#x60;.....&#x60;...&#x60;..~&#x60;
+000001b: 0001 7d60 0001 7c60 0002 7f7e 6001 7f01  ..}&#x60;..|&#x60;...~&#x60;...
+000002b: 7f60 017e 017e 6001 7d01 7d60 017c 017c  .&#x60;.~.~&#x60;.}.}&#x60;.|.|
+000003b: 6002 7f7c 027f 7c60 027f 7f02 7f7f 6002  &#x60;..|..|&#x60;......&#x60;.
+000004b: 7d7c 027c 7d60 027c 7f02 7f7c 6002 7d7f  }|.|}&#x60;.|...|&#x60;.}.
+000005b: 017f 6002 7f7e 017e 6002 7c7d 017d 6002  ..&#x60;..~.~&#x60;.|}.}&#x60;.
+000006b: 7e7c 017c 6000 027f 7c60 0002 7f7f 6000  ~|.|&#x60;...|&#x60;....&#x60;.
+000007b: 027c 7d60 027e 7e01 7e60 017e 017f 6000  .|}&#x60;.~~.~&#x60;.~..&#x60;.
+000008b: 0060 647d 7f7f 7c7d 7d7d 7c7d 7f7f 7d7c  .&#x60;d}..|}}}|}..}|
+000009b: 7e7e 7f7e 7e7d 7e7e 7e7f 7d7d 7d7c 7d7f  ~~.~~}~~~.}}}|}.
+00000ab: 7e7d 7c7c 7d7f 7d7d 7c7e 7c7f 7e7d 7c7f  ~}||}.}}|~|.~}|.
+00000bb: 7f7f 7e7c 7f7e 7e7c 7c7c 7c7c 7c7f 7d7c  ..~|.~~||||||.}|
+00000cb: 7c7f 7e7d 7d7d 7f7c 7c7c 7c7c 7d7e 7e7f  |.~}}}.|||||}~~.
+00000db: 7f7f 7d7c 7f7e 7d7d 7d7f 7f7d 7c7e 7d7c  ..}|.~}}}..}|~}|
+00000eb: 7d7d 7d7f 7d7e 7f01 7f                   }}}.}~...
+
+Contents of section Function:
+00000f6: 4e01 0203 0405 0607 0809 0a0b 0c0d 0e0f  N...............
+0000106: 1011 0102 0304 0501 0203 0401 0203 0412  ................
+0000116: 1314 1201 0113 0715 0716 1617 1717 0101  ................
+0000126: 0101 0101 0101 0001 0101 1717 0101 1701  ................
+0000136: 0101 0101 0608 0301 0101 0101 0218 06    ...............
+
+Contents of section Table:
+0000147: 0170 0101 01                             .p...
+
+Contents of section Memory:
+000014e: 0100 01                                  ...
+
+Contents of section Global:
+0000153: 017f 0141 0a0b                           ...A..
+
+Contents of section Export:
+000015c: 3808 7479 7065 2d69 3332 0011 0874 7970  8.type-i32...typ
+000016c: 652d 6936 3400 1208 7479 7065 2d66 3332  e-i64...type-f32
+000017c: 0013 0874 7970 652d 6636 3400 140c 7479  ...type-f64...ty
+000018c: 7065 2d69 3332 2d69 3634 0015 0e74 7970  pe-i32-i64...typ
+000019c: 652d 6669 7273 742d 6933 3200 160e 7479  e-first-i32...ty
+00001ac: 7065 2d66 6972 7374 2d69 3634 0017 0e74  pe-first-i64...t
+00001bc: 7970 652d 6669 7273 742d 6633 3200 180e  ype-first-f32...
+00001cc: 7479 7065 2d66 6972 7374 2d66 3634 0019  type-first-f64..
+00001dc: 0f74 7970 652d 7365 636f 6e64 2d69 3332  .type-second-i32
+00001ec: 001a 0f74 7970 652d 7365 636f 6e64 2d69  ...type-second-i
+00001fc: 3634 001b 0f74 7970 652d 7365 636f 6e64  64...type-second
+000020c: 2d66 3332 001c 0f74 7970 652d 7365 636f  -f32...type-seco
+000021c: 6e64 2d66 3634 001d 1074 7970 652d 616c  nd-f64...type-al
+000022c: 6c2d 6933 322d 6636 3400 1e10 7479 7065  l-i32-f64...type
+000023c: 2d61 6c6c 2d69 3332 2d69 3332 001f 1074  -all-i32-i32...t
+000024c: 7970 652d 616c 6c2d 6633 322d 6636 3400  ype-all-f32-f64.
+000025c: 2010 7479 7065 2d61 6c6c 2d66 3634 2d69   .type-all-f64-i
+000026c: 3332 0021 1661 732d 6269 6e61 7279 2d61  32.!.as-binary-a
+000027c: 6c6c 2d6f 7065 7261 6e64 7300 2211 6173  ll-operands.&quot;.as
+000028c: 2d6d 6978 6564 2d6f 7065 7261 6e64 7300  -mixed-operands.
+000029c: 2314 6173 2d63 616c 6c2d 616c 6c2d 6f70  #.as-call-all-op
+00002ac: 6572 616e 6473 0024 0366 6163 0025 0766  erands.$.fac.%.f
+00002bc: 6163 2d61 6363 0026 0366 6962 0027 0465  ac-acc.&amp;.fib.&#x27;.e
+00002cc: 7665 6e00 2803 6f64 6400 2907 7275 6e61  ven.(.odd.).runa
+00002dc: 7761 7900 2a0e 6d75 7475 616c 2d72 756e  way.*.mutual-run
+00002ec: 6177 6179 002b 0f61 732d 7365 6c65 6374  away.+.as-select
+00002fc: 2d66 6972 7374 002d 0d61 732d 7365 6c65  -first.-.as-sele
+000030c: 6374 2d6d 6964 002e 0e61 732d 7365 6c65  ct-mid...as-sele
+000031c: 6374 2d6c 6173 7400 2f0f 6173 2d69 662d  ct-last./.as-if-
+000032c: 636f 6e64 6974 696f 6e00 300e 6173 2d62  condition.0.as-b
+000033c: 725f 6966 2d66 6972 7374 0031 0d61 732d  r_if-first.1.as-
+000034c: 6272 5f69 662d 6c61 7374 0032 1161 732d  br_if-last.2.as-
+000035c: 6272 5f74 6162 6c65 2d66 6972 7374 0033  br_table-first.3
+000036c: 1061 732d 6272 5f74 6162 6c65 2d6c 6173  .as-br_table-las
+000037c: 7400 3416 6173 2d63 616c 6c5f 696e 6469  t.4.as-call_indi
+000038c: 7265 6374 2d66 6972 7374 0036 1461 732d  rect-first.6.as-
+000039c: 6361 6c6c 5f69 6e64 6972 6563 742d 6d69  call_indirect-mi
+00003ac: 6400 3715 6173 2d63 616c 6c5f 696e 6469  d.7.as-call_indi
+00003bc: 7265 6374 2d6c 6173 7400 380e 6173 2d73  rect-last.8.as-s
+00003cc: 746f 7265 2d66 6972 7374 0039 0d61 732d  tore-first.9.as-
+00003dc: 7374 6f72 652d 6c61 7374 003a 1461 732d  store-last.:.as-
+00003ec: 6d65 6d6f 7279 2e67 726f 772d 7661 6c75  memory.grow-valu
+00003fc: 6500 3b0f 6173 2d72 6574 7572 6e2d 7661  e.;.as-return-va
+000040c: 6c75 6500 3c0f 6173 2d64 726f 702d 6f70  lue.&lt;.as-drop-op
+000041c: 6572 616e 6400 3d0b 6173 2d62 722d 7661  erand.&#x3D;.as-br-va
+000042c: 6c75 6500 3e12 6173 2d6c 6f63 616c 2e73  lue.&gt;.as-local.s
+000043c: 6574 2d76 616c 7565 003f 1261 732d 6c6f  et-value.?.as-lo
+000044c: 6361 6c2e 7465 652d 7661 6c75 6500 4013  cal.tee-value.@.
+000045c: 6173 2d67 6c6f 6261 6c2e 7365 742d 7661  as-global.set-va
+000046c: 6c75 6500 410f 6173 2d6c 6f61 642d 6f70  lue.A.as-load-op
+000047c: 6572 616e 6400 4210 6173 2d75 6e61 7279  erand.B.as-unary
+000048c: 2d6f 7065 7261 6e64 0045 0e61 732d 6269  -operand.E.as-bi
+000049c: 6e61 7279 2d6c 6566 7400 460f 6173 2d62  nary-left.F.as-b
+00004ac: 696e 6172 792d 7269 6768 7400 470f 6173  inary-right.G.as
+00004bc: 2d74 6573 742d 6f70 6572 616e 6400 480f  -test-operand.H.
+00004cc: 6173 2d63 6f6d 7061 7265 2d6c 6566 7400  as-compare-left.
+00004dc: 4910 6173 2d63 6f6d 7061 7265 2d72 6967  I.as-compare-rig
+00004ec: 6874 004a 1261 732d 636f 6e76 6572 742d  ht.J.as-convert-
+00004fc: 6f70 6572 616e 6400 4b1e 7265 7475 726e  operand.K.return
+000050c: 2d66 726f 6d2d 6c6f 6e67 2d61 7267 756d  -from-long-argum
+000051c: 656e 742d 6c69 7374 004d                 ent-list.M
+
+Contents of section Elem:
+0000528: 0100 4100 0b01 35                        ..A...5
+
+Contents of section Code:
+0000532: 4e05 0041 b202 0b05 0042 e402 0b07 0043  N..A.....B.....C
+0000542: 0020 7345 0b0b 0044 0000 0000 00c8 ae40  . sE...D.......@
+0000552: 0b08 0041 b202 42e4 020b 0400 2000 0b04  ...A..B..... ...
+0000562: 0020 000b 0400 2000 0b04 0020 000b 0600  . .... .... ....
+0000572: 2000 2001 0b06 0020 0120 000b 0600 2001   . .... . .... .
+0000582: 2000 0b06 0020 0120 000b 0400 2001 0b04   .... . .... ...
+0000592: 0020 010b 0400 2001 0b04 0020 010b 0400  . .... .... ....
+00005a2: 1000 0b04 0010 010b 0400 1002 0b04 0010  ................
+00005b2: 030b 0400 1004 0b06 0041 2010 050b 0700  .........A .....
+00005c2: 42c0 0010 060b 0900 43c3 f5a8 3f10 070b  B.......C...?...
+00005d2: 0d00 443d 0ad7 a370 3dfa 3f10 080b 0b00  ..D&#x3D;...p&#x3D;.?.....
+00005e2: 4366 6600 4241 2010 0d0b 0900 4120 42c0  Cff.BA .....A B.
+00005f2: 0010 0e0b 1200 4400 0000 0000 0050 4043  ......D......P@C
+0000602: 0000 0042 100f 0b10 0042 c000 4466 6666  ...B.....B..Dfff
+0000612: 6666 0650 4010 100b 0f00 4120 443d 0ad7  ff.P@.....A D&#x3D;..
+0000622: a370 3dfa 3f10 090b 0800 4101 4102 100a  .p&#x3D;.?.....A.A...
+0000632: 0b12 0043 0000 803f 4400 0000 0000 0000  ...C...?D.......
+0000642: 4010 0b0b 0f00 4400 0000 0000 00f0 3f41  @.....D.......?A
+0000652: 0210 0c0b 0900 4103 4104 100a 6a0b 0c00  ......A.A...j...
+0000662: 4103 4104 100a 4105 6a6c 0b0a 0041 0341  A.A...A.jl...A.A
+0000672: 0410 0a10 0a0b 1500 2000 5004 7e42 0105  ........ .P.~B..
+0000682: 2000 2000 4201 7d10 257e 0b0b 1700 2000   . .B.}.%~.... .
+0000692: 5004 7e20 0105 2000 4201 7d20 0020 017e  P.~ .. .B.} . .~
+00006a2: 1026 0b0b 1c00 2000 4201 5804 7e42 0105  .&amp;.... .B.X.~B..
+00006b2: 2000 4202 7d10 2720 0042 017d 1027 7c0b   .B.}.&#x27; .B.}.&#x27;|.
+00006c2: 0b12 0020 0050 047f 412c 0520 0042 017d  ... .P..A,. .B.}
+00006d2: 1029 0b0b 1300 2000 5004 7f41 e300 0520  .).... .P..A... 
+00006e2: 0042 017d 1028 0b0b 0400 102a 0b04 0010  .B.}.(.....*....
+00006f2: 2c0b 0400 102b 0b09 0010 0041 0241 031b  ,....+.....A.A..
+0000702: 0b09 0041 0210 0041 031b 0b09 0041 0241  ...A...A.....A.A
+0000712: 0310 001b 0b0c 0010 0004 7f41 0105 4102  ...........A..A.
+0000722: 0b0b 0b00 027f 1000 4102 0d00 0b0b 0b00  ........A.......
+0000732: 027f 4102 1000 0d00 0b0b 0d00 027f 1000  ..A.............
+0000742: 4102 0e01 0000 0b0b 0d00 027f 4102 1000  A...........A...
+0000752: 0e01 0000 0b0b 0400 2000 0b0e 0002 7f10  ........ .......
+0000762: 0041 0241 0011 0000 0b0b 0e00 027f 4102  .A.A..........A.
+0000772: 1000 4100 1100 000b 0b0e 0002 7f41 0141  ..A..........A.A
+0000782: 0210 0011 0000 0b0b 0900 1000 4101 3602  ............A.6.
+0000792: 000b 0900 410a 1000 3602 000b 0600 1000  ....A...6.......
+00007a2: 4000 0b05 0010 000f 0b05 0010 001a 0b09  @...............
+00007b2: 0002 7f10 000c 000b 0b0a 0101 7f10 0021  ...............!
+00007c2: 0020 000b 0801 017f 1000 2200 0b08 0010  . ........&quot;.....
+00007d2: 0024 0023 000b 0700 1000 2802 000b 0400  .$.#......(.....
+00007e2: 2000 0b04 0020 000b 0d00 027d 4300 0000   .... .....}C...
+00007f2: 0010 4491 0b0b 0c00 027f 4101 1043 410a  ..D.......A..CA.
+0000802: 6a0b 0b0c 0002 7f41 0a41 0110 436b 0b0b  j......A.A..Ck..
+0000812: 0a00 027f 4101 1043 450b 0b0c 0002 7f41  ....A..CE......A
+0000822: 0110 4341 0a4d 0b0b 0c00 027f 410a 4101  ..CA.M......A.A.
+0000832: 1043 470b 0b0a 0002 7e41 0110 43ac 0b0b  .CG.....~A..C...
+0000842: 0400 2063 0bdf 0300 4300 0000 0041 0041  .. c....C....A.A
+0000852: 0044 0000 0000 0000 0000 4300 0000 0043  .D........C....C
+0000862: 0000 0000 4300 0000 0044 0000 0000 0000  ....C....D......
+0000872: 0000 4300 0000 0041 0041 0043 0000 0000  ..C....A.A.C....
+0000882: 4400 0000 0000 0000 0042 0042 0041 0042  D........B.B.A.B
+0000892: 0042 0043 0000 0000 4200 4200 4200 4100  .B.C....B.B.B.A.
+00008a2: 4300 0000 0043 0000 0000 4300 0000 0044  C....C....C....D
+00008b2: 0000 0000 0000 0000 4300 0000 0041 0042  ........C....A.B
+00008c2: 0043 0000 0000 4400 0000 0000 0000 0044  .C....D........D
+00008d2: 0000 0000 0000 0000 4300 0000 0041 0043  ........C....A.C
+00008e2: 0000 0000 4300 0000 0044 0000 0000 0000  ....C....D......
+00008f2: 0000 4200 4400 0000 0000 0000 0041 0042  ..B.D........A.B
+0000902: 0043 0000 0000 4400 0000 0000 0000 0041  .C....D........A
+0000912: 0041 0041 0042 0044 0000 0000 0000 0000  .A.A.B.D........
+0000922: 4100 4200 4200 4400 0000 0000 0000 0044  A.B.B.D........D
+0000932: 0000 0000 0000 0000 4400 0000 0000 0000  ........D.......
+0000942: 0044 0000 0000 0000 0000 4400 0000 0000  .D........D.....
+0000952: 0000 0044 0000 0000 0000 0000 4100 4300  ...D........A.C.
+0000962: 0000 0044 0000 0000 0000 0000 4400 0000  ...D........D...
+0000972: 0000 0000 0041 0042 0043 0000 0000 4300  .....A.B.C....C.
+0000982: 0000 0043 0000 0000 4100 4400 0000 0000  ...C....A.D.....
+0000992: 0000 0044 0000 0000 0000 0000 4400 0000  ...D........D...
+00009a2: 0000 0000 0044 0000 0000 0000 0000 4400  .....D........D.
+00009b2: 0000 0000 0000 0043 0000 0000 4200 4200  .......C....B.B.
+00009c2: 4100 4100 4100 4300 0000 0044 0000 0000  A.A.A.C....D....
+00009d2: 0000 0000 4100 4200 4300 0000 0043 0000  ....A.B.C....C..
+00009e2: 0000 4300 0000 0041 0041 0043 0000 0000  ..C....A.A.C....
+00009f2: 4400 0000 0000 0000 0042 0043 0000 0000  D........B.C....
+0000a02: 4400 0000 0000 0000 0043 0000 0000 4300  D........C....C.
+0000a12: 0000 0043 0000 0000 4100 4300 0000 0042  ...C....A.C....B
+0000a22: 0020 0010 4c0b                           . ..L.
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2"><code>BeginModule(version: 1)
+  BeginTypeSection(233)
+    OnTypeCount(25)
+    OnFuncType(index: 0, params: [i32, i32], results: [i32])
+    OnFuncType(index: 1, params: [], results: [i32])
+    OnFuncType(index: 2, params: [], results: [i64])
+    OnFuncType(index: 3, params: [], results: [f32])
+    OnFuncType(index: 4, params: [], results: [f64])
+    OnFuncType(index: 5, params: [], results: [i32, i64])
+    OnFuncType(index: 6, params: [i32], results: [i32])
+    OnFuncType(index: 7, params: [i64], results: [i64])
+    OnFuncType(index: 8, params: [f32], results: [f32])
+    OnFuncType(index: 9, params: [f64], results: [f64])
+    OnFuncType(index: 10, params: [i32, f64], results: [i32, f64])
+    OnFuncType(index: 11, params: [i32, i32], results: [i32, i32])
+    OnFuncType(index: 12, params: [f32, f64], results: [f64, f32])
+    OnFuncType(index: 13, params: [f64, i32], results: [i32, f64])
+    OnFuncType(index: 14, params: [f32, i32], results: [i32])
+    OnFuncType(index: 15, params: [i32, i64], results: [i64])
+    OnFuncType(index: 16, params: [f64, f32], results: [f32])
+    OnFuncType(index: 17, params: [i64, f64], results: [f64])
+    OnFuncType(index: 18, params: [], results: [i32, f64])
+    OnFuncType(index: 19, params: [], results: [i32, i32])
+    OnFuncType(index: 20, params: [], results: [f64, f32])
+    OnFuncType(index: 21, params: [i64, i64], results: [i64])
+    OnFuncType(index: 22, params: [i64], results: [i32])
+    OnFuncType(index: 23, params: [], results: [])
+    OnFuncType(index: 24, params: [f32, i32, i32, f64, f32, f32, f32, f64, f32, i32, i32, f32, f64, i64, i64, i32, i64, i64, f32, i64, i64, i64, i32, f32, f32, f32, f64, f32, i32, i64, f32, f64, f64, f32, i32, f32, f32, f64, i64, f64, i32, i64, f32, f64, i32, i32, i32, i64, f64, i32, i64, i64, f64, f64, f64, f64, f64, f64, i32, f32, f64, f64, i32, i64, f32, f32, f32, i32, f64, f64, f64, f64, f64, f32, i64, i64, i32, i32, i32, f32, f64, i32, i64, f32, f32, f32, i32, i32, f32, f64, i64, f32, f64, f32, f32, f32, i32, f32, i64, i32], results: [i32])
+  EndTypeSection
+  BeginFunctionSection(79)
+    OnFunctionCount(78)
+    OnFunction(index: 0, sig_index: 1)
+    OnFunction(index: 1, sig_index: 2)
+    OnFunction(index: 2, sig_index: 3)
+    OnFunction(index: 3, sig_index: 4)
+    OnFunction(index: 4, sig_index: 5)
+    OnFunction(index: 5, sig_index: 6)
+    OnFunction(index: 6, sig_index: 7)
+    OnFunction(index: 7, sig_index: 8)
+    OnFunction(index: 8, sig_index: 9)
+    OnFunction(index: 9, sig_index: 10)
+    OnFunction(index: 10, sig_index: 11)
+    OnFunction(index: 11, sig_index: 12)
+    OnFunction(index: 12, sig_index: 13)
+    OnFunction(index: 13, sig_index: 14)
+    OnFunction(index: 14, sig_index: 15)
+    OnFunction(index: 15, sig_index: 16)
+    OnFunction(index: 16, sig_index: 17)
+    OnFunction(index: 17, sig_index: 1)
+    OnFunction(index: 18, sig_index: 2)
+    OnFunction(index: 19, sig_index: 3)
+    OnFunction(index: 20, sig_index: 4)
+    OnFunction(index: 21, sig_index: 5)
+    OnFunction(index: 22, sig_index: 1)
+    OnFunction(index: 23, sig_index: 2)
+    OnFunction(index: 24, sig_index: 3)
+    OnFunction(index: 25, sig_index: 4)
+    OnFunction(index: 26, sig_index: 1)
+    OnFunction(index: 27, sig_index: 2)
+    OnFunction(index: 28, sig_index: 3)
+    OnFunction(index: 29, sig_index: 4)
+    OnFunction(index: 30, sig_index: 18)
+    OnFunction(index: 31, sig_index: 19)
+    OnFunction(index: 32, sig_index: 20)
+    OnFunction(index: 33, sig_index: 18)
+    OnFunction(index: 34, sig_index: 1)
+    OnFunction(index: 35, sig_index: 1)
+    OnFunction(index: 36, sig_index: 19)
+    OnFunction(index: 37, sig_index: 7)
+    OnFunction(index: 38, sig_index: 21)
+    OnFunction(index: 39, sig_index: 7)
+    OnFunction(index: 40, sig_index: 22)
+    OnFunction(index: 41, sig_index: 22)
+    OnFunction(index: 42, sig_index: 23)
+    OnFunction(index: 43, sig_index: 23)
+    OnFunction(index: 44, sig_index: 23)
+    OnFunction(index: 45, sig_index: 1)
+    OnFunction(index: 46, sig_index: 1)
+    OnFunction(index: 47, sig_index: 1)
+    OnFunction(index: 48, sig_index: 1)
+    OnFunction(index: 49, sig_index: 1)
+    OnFunction(index: 50, sig_index: 1)
+    OnFunction(index: 51, sig_index: 1)
+    OnFunction(index: 52, sig_index: 1)
+    OnFunction(index: 53, sig_index: 0)
+    OnFunction(index: 54, sig_index: 1)
+    OnFunction(index: 55, sig_index: 1)
+    OnFunction(index: 56, sig_index: 1)
+    OnFunction(index: 57, sig_index: 23)
+    OnFunction(index: 58, sig_index: 23)
+    OnFunction(index: 59, sig_index: 1)
+    OnFunction(index: 60, sig_index: 1)
+    OnFunction(index: 61, sig_index: 23)
+    OnFunction(index: 62, sig_index: 1)
+    OnFunction(index: 63, sig_index: 1)
+    OnFunction(index: 64, sig_index: 1)
+    OnFunction(index: 65, sig_index: 1)
+    OnFunction(index: 66, sig_index: 1)
+    OnFunction(index: 67, sig_index: 6)
+    OnFunction(index: 68, sig_index: 8)
+    OnFunction(index: 69, sig_index: 3)
+    OnFunction(index: 70, sig_index: 1)
+    OnFunction(index: 71, sig_index: 1)
+    OnFunction(index: 72, sig_index: 1)
+    OnFunction(index: 73, sig_index: 1)
+    OnFunction(index: 74, sig_index: 1)
+    OnFunction(index: 75, sig_index: 2)
+    OnFunction(index: 76, sig_index: 24)
+    OnFunction(index: 77, sig_index: 6)
+  EndFunctionSection
+  BeginTableSection(5)
+    OnTableCount(1)
+    OnTable(index: 0, elem_type: funcref, initial: 1, max: 1)
+  EndTableSection
+  BeginMemorySection(3)
+    OnMemoryCount(1)
+    OnMemory(index: 0, initial: 1)
+  EndMemorySection
+  BeginGlobalSection(6)
+    OnGlobalCount(1)
+    BeginGlobal(index: 0, type: i32, mutable: true)
+    BeginGlobalInitExpr(0)
+    OnI32ConstExpr(10 (0xa))
+    OnEndExpr
+    EndGlobalInitExpr(0)
+    EndGlobal(0)
+  EndGlobalSection
+  BeginExportSection(970)
+    OnExportCount(56)
+    OnExport(index: 0, kind: func, item_index: 17, name: &quot;type-i32&quot;)
+    OnExport(index: 1, kind: func, item_index: 18, name: &quot;type-i64&quot;)
+    OnExport(index: 2, kind: func, item_index: 19, name: &quot;type-f32&quot;)
+    OnExport(index: 3, kind: func, item_index: 20, name: &quot;type-f64&quot;)
+    OnExport(index: 4, kind: func, item_index: 21, name: &quot;type-i32-i64&quot;)
+    OnExport(index: 5, kind: func, item_index: 22, name: &quot;type-first-i32&quot;)
+    OnExport(index: 6, kind: func, item_index: 23, name: &quot;type-first-i64&quot;)
+    OnExport(index: 7, kind: func, item_index: 24, name: &quot;type-first-f32&quot;)
+    OnExport(index: 8, kind: func, item_index: 25, name: &quot;type-first-f64&quot;)
+    OnExport(index: 9, kind: func, item_index: 26, name: &quot;type-second-i32&quot;)
+    OnExport(index: 10, kind: func, item_index: 27, name: &quot;type-second-i64&quot;)
+    OnExport(index: 11, kind: func, item_index: 28, name: &quot;type-second-f32&quot;)
+    OnExport(index: 12, kind: func, item_index: 29, name: &quot;type-second-f64&quot;)
+    OnExport(index: 13, kind: func, item_index: 30, name: &quot;type-all-i32-f64&quot;)
+    OnExport(index: 14, kind: func, item_index: 31, name: &quot;type-all-i32-i32&quot;)
+    OnExport(index: 15, kind: func, item_index: 32, name: &quot;type-all-f32-f64&quot;)
+    OnExport(index: 16, kind: func, item_index: 33, name: &quot;type-all-f64-i32&quot;)
+    OnExport(index: 17, kind: func, item_index: 34, name: &quot;as-binary-all-operands&quot;)
+    OnExport(index: 18, kind: func, item_index: 35, name: &quot;as-mixed-operands&quot;)
+    OnExport(index: 19, kind: func, item_index: 36, name: &quot;as-call-all-operands&quot;)
+    OnExport(index: 20, kind: func, item_index: 37, name: &quot;fac&quot;)
+    OnExport(index: 21, kind: func, item_index: 38, name: &quot;fac-acc&quot;)
+    OnExport(index: 22, kind: func, item_index: 39, name: &quot;fib&quot;)
+    OnExport(index: 23, kind: func, item_index: 40, name: &quot;even&quot;)
+    OnExport(index: 24, kind: func, item_index: 41, name: &quot;odd&quot;)
+    OnExport(index: 25, kind: func, item_index: 42, name: &quot;runaway&quot;)
+    OnExport(index: 26, kind: func, item_index: 43, name: &quot;mutual-runaway&quot;)
+    OnExport(index: 27, kind: func, item_index: 45, name: &quot;as-select-first&quot;)
+    OnExport(index: 28, kind: func, item_index: 46, name: &quot;as-select-mid&quot;)
+    OnExport(index: 29, kind: func, item_index: 47, name: &quot;as-select-last&quot;)
+    OnExport(index: 30, kind: func, item_index: 48, name: &quot;as-if-condition&quot;)
+    OnExport(index: 31, kind: func, item_index: 49, name: &quot;as-br_if-first&quot;)
+    OnExport(index: 32, kind: func, item_index: 50, name: &quot;as-br_if-last&quot;)
+    OnExport(index: 33, kind: func, item_index: 51, name: &quot;as-br_table-first&quot;)
+    OnExport(index: 34, kind: func, item_index: 52, name: &quot;as-br_table-last&quot;)
+    OnExport(index: 35, kind: func, item_index: 54, name: &quot;as-call_indirect-first&quot;)
+    OnExport(index: 36, kind: func, item_index: 55, name: &quot;as-call_indirect-mid&quot;)
+    OnExport(index: 37, kind: func, item_index: 56, name: &quot;as-call_indirect-last&quot;)
+    OnExport(index: 38, kind: func, item_index: 57, name: &quot;as-store-first&quot;)
+    OnExport(index: 39, kind: func, item_index: 58, name: &quot;as-store-last&quot;)
+    OnExport(index: 40, kind: func, item_index: 59, name: &quot;as-memory.grow-value&quot;)
+    OnExport(index: 41, kind: func, item_index: 60, name: &quot;as-return-value&quot;)
+    OnExport(index: 42, kind: func, item_index: 61, name: &quot;as-drop-operand&quot;)
+    OnExport(index: 43, kind: func, item_index: 62, name: &quot;as-br-value&quot;)
+    OnExport(index: 44, kind: func, item_index: 63, name: &quot;as-local.set-value&quot;)
+    OnExport(index: 45, kind: func, item_index: 64, name: &quot;as-local.tee-value&quot;)
+    OnExport(index: 46, kind: func, item_index: 65, name: &quot;as-global.set-value&quot;)
+    OnExport(index: 47, kind: func, item_index: 66, name: &quot;as-load-operand&quot;)
+    OnExport(index: 48, kind: func, item_index: 69, name: &quot;as-unary-operand&quot;)
+    OnExport(index: 49, kind: func, item_index: 70, name: &quot;as-binary-left&quot;)
+    OnExport(index: 50, kind: func, item_index: 71, name: &quot;as-binary-right&quot;)
+    OnExport(index: 51, kind: func, item_index: 72, name: &quot;as-test-operand&quot;)
+    OnExport(index: 52, kind: func, item_index: 73, name: &quot;as-compare-left&quot;)
+    OnExport(index: 53, kind: func, item_index: 74, name: &quot;as-compare-right&quot;)
+    OnExport(index: 54, kind: func, item_index: 75, name: &quot;as-convert-operand&quot;)
+    OnExport(index: 55, kind: func, item_index: 77, name: &quot;return-from-long-argument-list&quot;)
+  EndExportSection
+  BeginElemSection(7)
+    OnElemSegmentCount(1)
+    BeginElemSegment(index: 0, table_index: 0, flags: 0)
+    BeginElemSegmentInitExpr(0)
+    OnI32ConstExpr(0 (0x0))
+    OnEndExpr
+    EndElemSegmentInitExpr(0)
+    OnElemSegmentElemType(index: 0, type: funcref)
+    OnElemSegmentElemExprCount(index: 0, count: 1)
+    BeginElemExpr(elem_index: 0, expr_index: 0)
+    OnRefFuncExpr(53)
+    OnEndExpr
+    EndElemExpr(elem_index: 0, expr_index: 0)
+    EndElemSegment(0)
+  EndElemSection
+  BeginCodeSection(1270)
+    OnFunctionBodyCount(78)
+    BeginFunctionBody(0, size:5)
+    OnLocalDeclCount(0)
+    EndFunctionBody(0)
+    BeginFunctionBody(1, size:5)
+    OnLocalDeclCount(0)
+    EndFunctionBody(1)
+    BeginFunctionBody(2, size:7)
+    OnLocalDeclCount(0)
+    EndFunctionBody(2)
+    BeginFunctionBody(3, size:11)
+    OnLocalDeclCount(0)
+    EndFunctionBody(3)
+    BeginFunctionBody(4, size:8)
+    OnLocalDeclCount(0)
+    EndFunctionBody(4)
+    BeginFunctionBody(5, size:4)
+    OnLocalDeclCount(0)
+    EndFunctionBody(5)
+    BeginFunctionBody(6, size:4)
+    OnLocalDeclCount(0)
+    EndFunctionBody(6)
+    BeginFunctionBody(7, size:4)
+    OnLocalDeclCount(0)
+    EndFunctionBody(7)
+    BeginFunctionBody(8, size:4)
+    OnLocalDeclCount(0)
+    EndFunctionBody(8)
+    BeginFunctionBody(9, size:6)
+    OnLocalDeclCount(0)
+    EndFunctionBody(9)
+    BeginFunctionBody(10, size:6)
+    OnLocalDeclCount(0)
+    EndFunctionBody(10)
+    BeginFunctionBody(11, size:6)
+    OnLocalDeclCount(0)
+    EndFunctionBody(11)
+    BeginFunctionBody(12, size:6)
+    OnLocalDeclCount(0)
+    EndFunctionBody(12)
+    BeginFunctionBody(13, size:4)
+    OnLocalDeclCount(0)
+    EndFunctionBody(13)
+    BeginFunctionBody(14, size:4)
+    OnLocalDeclCount(0)
+    EndFunctionBody(14)
+    BeginFunctionBody(15, size:4)
+    OnLocalDeclCount(0)
+    EndFunctionBody(15)
+    BeginFunctionBody(16, size:4)
+    OnLocalDeclCount(0)
+    EndFunctionBody(16)
+    BeginFunctionBody(17, size:4)
+    OnLocalDeclCount(0)
+    EndFunctionBody(17)
+    BeginFunctionBody(18, size:4)
+    OnLocalDeclCount(0)
+    EndFunctionBody(18)
+    BeginFunctionBody(19, size:4)
+    OnLocalDeclCount(0)
+    EndFunctionBody(19)
+    BeginFunctionBody(20, size:4)
+    OnLocalDeclCount(0)
+    EndFunctionBody(20)
+    BeginFunctionBody(21, size:4)
+    OnLocalDeclCount(0)
+    EndFunctionBody(21)
+    BeginFunctionBody(22, size:6)
+    OnLocalDeclCount(0)
+    EndFunctionBody(22)
+    BeginFunctionBody(23, size:7)
+    OnLocalDeclCount(0)
+    EndFunctionBody(23)
+    BeginFunctionBody(24, size:9)
+    OnLocalDeclCount(0)
+    EndFunctionBody(24)
+    BeginFunctionBody(25, size:13)
+    OnLocalDeclCount(0)
+    EndFunctionBody(25)
+    BeginFunctionBody(26, size:11)
+    OnLocalDeclCount(0)
+    EndFunctionBody(26)
+    BeginFunctionBody(27, size:9)
+    OnLocalDeclCount(0)
+    EndFunctionBody(27)
+    BeginFunctionBody(28, size:18)
+    OnLocalDeclCount(0)
+    EndFunctionBody(28)
+    BeginFunctionBody(29, size:16)
+    OnLocalDeclCount(0)
+    EndFunctionBody(29)
+    BeginFunctionBody(30, size:15)
+    OnLocalDeclCount(0)
+    EndFunctionBody(30)
+    BeginFunctionBody(31, size:8)
+    OnLocalDeclCount(0)
+    EndFunctionBody(31)
+    BeginFunctionBody(32, size:18)
+    OnLocalDeclCount(0)
+    EndFunctionBody(32)
+    BeginFunctionBody(33, size:15)
+    OnLocalDeclCount(0)
+    EndFunctionBody(33)
+    BeginFunctionBody(34, size:9)
+    OnLocalDeclCount(0)
+    EndFunctionBody(34)
+    BeginFunctionBody(35, size:12)
+    OnLocalDeclCount(0)
+    EndFunctionBody(35)
+    BeginFunctionBody(36, size:10)
+    OnLocalDeclCount(0)
+    EndFunctionBody(36)
+    BeginFunctionBody(37, size:21)
+    OnLocalDeclCount(0)
+    EndFunctionBody(37)
+    BeginFunctionBody(38, size:23)
+    OnLocalDeclCount(0)
+    EndFunctionBody(38)
+    BeginFunctionBody(39, size:28)
+    OnLocalDeclCount(0)
+    EndFunctionBody(39)
+    BeginFunctionBody(40, size:18)
+    OnLocalDeclCount(0)
+    EndFunctionBody(40)
+    BeginFunctionBody(41, size:19)
+    OnLocalDeclCount(0)
+    EndFunctionBody(41)
+    BeginFunctionBody(42, size:4)
+    OnLocalDeclCount(0)
+    EndFunctionBody(42)
+    BeginFunctionBody(43, size:4)
+    OnLocalDeclCount(0)
+    EndFunctionBody(43)
+    BeginFunctionBody(44, size:4)
+    OnLocalDeclCount(0)
+    EndFunctionBody(44)
+    BeginFunctionBody(45, size:9)
+    OnLocalDeclCount(0)
+    EndFunctionBody(45)
+    BeginFunctionBody(46, size:9)
+    OnLocalDeclCount(0)
+    EndFunctionBody(46)
+    BeginFunctionBody(47, size:9)
+    OnLocalDeclCount(0)
+    EndFunctionBody(47)
+    BeginFunctionBody(48, size:12)
+    OnLocalDeclCount(0)
+    EndFunctionBody(48)
+    BeginFunctionBody(49, size:11)
+    OnLocalDeclCount(0)
+    EndFunctionBody(49)
+    BeginFunctionBody(50, size:11)
+    OnLocalDeclCount(0)
+    EndFunctionBody(50)
+    BeginFunctionBody(51, size:13)
+    OnLocalDeclCount(0)
+    EndFunctionBody(51)
+    BeginFunctionBody(52, size:13)
+    OnLocalDeclCount(0)
+    EndFunctionBody(52)
+    BeginFunctionBody(53, size:4)
+    OnLocalDeclCount(0)
+    EndFunctionBody(53)
+    BeginFunctionBody(54, size:14)
+    OnLocalDeclCount(0)
+    EndFunctionBody(54)
+    BeginFunctionBody(55, size:14)
+    OnLocalDeclCount(0)
+    EndFunctionBody(55)
+    BeginFunctionBody(56, size:14)
+    OnLocalDeclCount(0)
+    EndFunctionBody(56)
+    BeginFunctionBody(57, size:9)
+    OnLocalDeclCount(0)
+    EndFunctionBody(57)
+    BeginFunctionBody(58, size:9)
+    OnLocalDeclCount(0)
+    EndFunctionBody(58)
+    BeginFunctionBody(59, size:6)
+    OnLocalDeclCount(0)
+    EndFunctionBody(59)
+    BeginFunctionBody(60, size:5)
+    OnLocalDeclCount(0)
+    EndFunctionBody(60)
+    BeginFunctionBody(61, size:5)
+    OnLocalDeclCount(0)
+    EndFunctionBody(61)
+    BeginFunctionBody(62, size:9)
+    OnLocalDeclCount(0)
+    EndFunctionBody(62)
+    BeginFunctionBody(63, size:10)
+    OnLocalDeclCount(1)
+    OnLocalDecl(index: 0, count: 1, type: i32)
+    EndFunctionBody(63)
+    BeginFunctionBody(64, size:8)
+    OnLocalDeclCount(1)
+    OnLocalDecl(index: 0, count: 1, type: i32)
+    EndFunctionBody(64)
+    BeginFunctionBody(65, size:8)
+    OnLocalDeclCount(0)
+    EndFunctionBody(65)
+    BeginFunctionBody(66, size:7)
+    OnLocalDeclCount(0)
+    EndFunctionBody(66)
+    BeginFunctionBody(67, size:4)
+    OnLocalDeclCount(0)
+    EndFunctionBody(67)
+    BeginFunctionBody(68, size:4)
+    OnLocalDeclCount(0)
+    EndFunctionBody(68)
+    BeginFunctionBody(69, size:13)
+    OnLocalDeclCount(0)
+    EndFunctionBody(69)
+    BeginFunctionBody(70, size:12)
+    OnLocalDeclCount(0)
+    EndFunctionBody(70)
+    BeginFunctionBody(71, size:12)
+    OnLocalDeclCount(0)
+    EndFunctionBody(71)
+    BeginFunctionBody(72, size:10)
+    OnLocalDeclCount(0)
+    EndFunctionBody(72)
+    BeginFunctionBody(73, size:12)
+    OnLocalDeclCount(0)
+    EndFunctionBody(73)
+    BeginFunctionBody(74, size:12)
+    OnLocalDeclCount(0)
+    EndFunctionBody(74)
+    BeginFunctionBody(75, size:10)
+    OnLocalDeclCount(0)
+    EndFunctionBody(75)
+    BeginFunctionBody(76, size:4)
+    OnLocalDeclCount(0)
+    EndFunctionBody(76)
+    BeginFunctionBody(77, size:479)
+    OnLocalDeclCount(0)
+    EndFunctionBody(77)
+  EndCodeSection
+EndModule
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2 do-not-highlightme"><code>00000000: 00 61 73 6D 01 00 00 00  .asm....
+00000008: 01 E9 01 19 60 02 7F 7F  ....&#x60;...
+00000010: 01 7F 60 00 01 7F 60 00  ..&#x60;...&#x60;.
+00000018: 01 7E 60 00 01 7D 60 00  .~&#x60;..}&#x60;.
+00000020: 01 7C 60 00 02 7F 7E 60  .|&#x60;...~&#x60;
+00000028: 01 7F 01 7F 60 01 7E 01  ....&#x60;.~.
+00000030: 7E 60 01 7D 01 7D 60 01  ~&#x60;.}.}&#x60;.
+00000038: 7C 01 7C 60 02 7F 7C 02  |.|&#x60;..|.
+00000040: 7F 7C 60 02 7F 7F 02 7F  .|&#x60;.....
+00000048: 7F 60 02 7D 7C 02 7C 7D  .&#x60;.}|.|}
+00000050: 60 02 7C 7F 02 7F 7C 60  &#x60;.|...|&#x60;
+00000058: 02 7D 7F 01 7F 60 02 7F  .}...&#x60;..
+00000060: 7E 01 7E 60 02 7C 7D 01  ~.~&#x60;.|}.
+00000068: 7D 60 02 7E 7C 01 7C 60  }&#x60;.~|.|&#x60;
+00000070: 00 02 7F 7C 60 00 02 7F  ...|&#x60;...
+00000078: 7F 60 00 02 7C 7D 60 02  .&#x60;..|}&#x60;.
+00000080: 7E 7E 01 7E 60 01 7E 01  ~~.~&#x60;.~.
+00000088: 7F 60 00 00 60 64 7D 7F  .&#x60;..&#x60;d}.
+00000090: 7F 7C 7D 7D 7D 7C 7D 7F  .|}}}|}.
+00000098: 7F 7D 7C 7E 7E 7F 7E 7E  .}|~~.~~
+000000a0: 7D 7E 7E 7E 7F 7D 7D 7D  }~~~.}}}
+000000a8: 7C 7D 7F 7E 7D 7C 7C 7D  |}.~}||}
+000000b0: 7F 7D 7D 7C 7E 7C 7F 7E  .}}|~|.~
+000000b8: 7D 7C 7F 7F 7F 7E 7C 7F  }|...~|.
+000000c0: 7E 7E 7C 7C 7C 7C 7C 7C  ~~||||||
+000000c8: 7F 7D 7C 7C 7F 7E 7D 7D  .}||.~}}
+000000d0: 7D 7F 7C 7C 7C 7C 7C 7D  }.|||||}
+000000d8: 7E 7E 7F 7F 7F 7D 7C 7F  ~~...}|.
+000000e0: 7E 7D 7D 7D 7F 7F 7D 7C  ~}}}..}|
+000000e8: 7E 7D 7C 7D 7D 7D 7F 7D  ~}|}}}.}
+000000f0: 7E 7F 01 7F 03 4F 4E 01  ~....ON.
+000000f8: 02 03 04 05 06 07 08 09  ........
+00000100: 0A 0B 0C 0D 0E 0F 10 11  ........
+00000108: 01 02 03 04 05 01 02 03  ........
+00000110: 04 01 02 03 04 12 13 14  ........
+00000118: 12 01 01 13 07 15 07 16  ........
+00000120: 16 17 17 17 01 01 01 01  ........
+00000128: 01 01 01 01 00 01 01 01  ........
+00000130: 17 17 01 01 17 01 01 01  ........
+00000138: 01 01 06 08 03 01 01 01  ........
+00000140: 01 01 02 18 06 04 05 01  ........
+00000148: 70 01 01 01 05 03 01 00  p.......
+00000150: 01 06 06 01 7F 01 41 0A  ......A.
+00000158: 0B 07 CA 07 38 08 74 79  ....8.ty
+00000160: 70 65 2D 69 33 32 00 11  pe-i32..
+00000168: 08 74 79 70 65 2D 69 36  .type-i6
+00000170: 34 00 12 08 74 79 70 65  4...type
+00000178: 2D 66 33 32 00 13 08 74  -f32...t
+00000180: 79 70 65 2D 66 36 34 00  ype-f64.
+00000188: 14 0C 74 79 70 65 2D 69  ..type-i
+00000190: 33 32 2D 69 36 34 00 15  32-i64..
+00000198: 0E 74 79 70 65 2D 66 69  .type-fi
+000001a0: 72 73 74 2D 69 33 32 00  rst-i32.
+000001a8: 16 0E 74 79 70 65 2D 66  ..type-f
+000001b0: 69 72 73 74 2D 69 36 34  irst-i64
+000001b8: 00 17 0E 74 79 70 65 2D  ...type-
+000001c0: 66 69 72 73 74 2D 66 33  first-f3
+000001c8: 32 00 18 0E 74 79 70 65  2...type
+000001d0: 2D 66 69 72 73 74 2D 66  -first-f
+000001d8: 36 34 00 19 0F 74 79 70  64...typ
+000001e0: 65 2D 73 65 63 6F 6E 64  e-second
+000001e8: 2D 69 33 32 00 1A 0F 74  -i32...t
+000001f0: 79 70 65 2D 73 65 63 6F  ype-seco
+000001f8: 6E 64 2D 69 36 34 00 1B  nd-i64..
+00000200: 0F 74 79 70 65 2D 73 65  .type-se
+00000208: 63 6F 6E 64 2D 66 33 32  cond-f32
+00000210: 00 1C 0F 74 79 70 65 2D  ...type-
+00000218: 73 65 63 6F 6E 64 2D 66  second-f
+00000220: 36 34 00 1D 10 74 79 70  64...typ
+00000228: 65 2D 61 6C 6C 2D 69 33  e-all-i3
+00000230: 32 2D 66 36 34 00 1E 10  2-f64...
+00000238: 74 79 70 65 2D 61 6C 6C  type-all
+00000240: 2D 69 33 32 2D 69 33 32  -i32-i32
+00000248: 00 1F 10 74 79 70 65 2D  ...type-
+00000250: 61 6C 6C 2D 66 33 32 2D  all-f32-
+00000258: 66 36 34 00 20 10 74 79  f64. .ty
+00000260: 70 65 2D 61 6C 6C 2D 66  pe-all-f
+00000268: 36 34 2D 69 33 32 00 21  64-i32.!
+00000270: 16 61 73 2D 62 69 6E 61  .as-bina
+00000278: 72 79 2D 61 6C 6C 2D 6F  ry-all-o
+00000280: 70 65 72 61 6E 64 73 00  perands.
+00000288: 22 11 61 73 2D 6D 69 78  &quot;.as-mix
+00000290: 65 64 2D 6F 70 65 72 61  ed-opera
+00000298: 6E 64 73 00 23 14 61 73  nds.#.as
+000002a0: 2D 63 61 6C 6C 2D 61 6C  -call-al
+000002a8: 6C 2D 6F 70 65 72 61 6E  l-operan
+000002b0: 64 73 00 24 03 66 61 63  ds.$.fac
+000002b8: 00 25 07 66 61 63 2D 61  .%.fac-a
+000002c0: 63 63 00 26 03 66 69 62  cc.&amp;.fib
+000002c8: 00 27 04 65 76 65 6E 00  .&#x27;.even.
+000002d0: 28 03 6F 64 64 00 29 07  (.odd.).
+000002d8: 72 75 6E 61 77 61 79 00  runaway.
+000002e0: 2A 0E 6D 75 74 75 61 6C  *.mutual
+000002e8: 2D 72 75 6E 61 77 61 79  -runaway
+000002f0: 00 2B 0F 61 73 2D 73 65  .+.as-se
+000002f8: 6C 65 63 74 2D 66 69 72  lect-fir
+00000300: 73 74 00 2D 0D 61 73 2D  st.-.as-
+00000308: 73 65 6C 65 63 74 2D 6D  select-m
+00000310: 69 64 00 2E 0E 61 73 2D  id...as-
+00000318: 73 65 6C 65 63 74 2D 6C  select-l
+00000320: 61 73 74 00 2F 0F 61 73  ast./.as
+00000328: 2D 69 66 2D 63 6F 6E 64  -if-cond
+00000330: 69 74 69 6F 6E 00 30 0E  ition.0.
+00000338: 61 73 2D 62 72 5F 69 66  as-br_if
+00000340: 2D 66 69 72 73 74 00 31  -first.1
+00000348: 0D 61 73 2D 62 72 5F 69  .as-br_i
+00000350: 66 2D 6C 61 73 74 00 32  f-last.2
+00000358: 11 61 73 2D 62 72 5F 74  .as-br_t
+00000360: 61 62 6C 65 2D 66 69 72  able-fir
+00000368: 73 74 00 33 10 61 73 2D  st.3.as-
+00000370: 62 72 5F 74 61 62 6C 65  br_table
+00000378: 2D 6C 61 73 74 00 34 16  -last.4.
+00000380: 61 73 2D 63 61 6C 6C 5F  as-call_
+00000388: 69 6E 64 69 72 65 63 74  indirect
+00000390: 2D 66 69 72 73 74 00 36  -first.6
+00000398: 14 61 73 2D 63 61 6C 6C  .as-call
+000003a0: 5F 69 6E 64 69 72 65 63  _indirec
+000003a8: 74 2D 6D 69 64 00 37 15  t-mid.7.
+000003b0: 61 73 2D 63 61 6C 6C 5F  as-call_
+000003b8: 69 6E 64 69 72 65 63 74  indirect
+000003c0: 2D 6C 61 73 74 00 38 0E  -last.8.
+000003c8: 61 73 2D 73 74 6F 72 65  as-store
+000003d0: 2D 66 69 72 73 74 00 39  -first.9
+000003d8: 0D 61 73 2D 73 74 6F 72  .as-stor
+000003e0: 65 2D 6C 61 73 74 00 3A  e-last.:
+000003e8: 14 61 73 2D 6D 65 6D 6F  .as-memo
+000003f0: 72 79 2E 67 72 6F 77 2D  ry.grow-
+000003f8: 76 61 6C 75 65 00 3B 0F  value.;.
+00000400: 61 73 2D 72 65 74 75 72  as-retur
+00000408: 6E 2D 76 61 6C 75 65 00  n-value.
+00000410: 3C 0F 61 73 2D 64 72 6F  &lt;.as-dro
+00000418: 70 2D 6F 70 65 72 61 6E  p-operan
+00000420: 64 00 3D 0B 61 73 2D 62  d.&#x3D;.as-b
+00000428: 72 2D 76 61 6C 75 65 00  r-value.
+00000430: 3E 12 61 73 2D 6C 6F 63  &gt;.as-loc
+00000438: 61 6C 2E 73 65 74 2D 76  al.set-v
+00000440: 61 6C 75 65 00 3F 12 61  alue.?.a
+00000448: 73 2D 6C 6F 63 61 6C 2E  s-local.
+00000450: 74 65 65 2D 76 61 6C 75  tee-valu
+00000458: 65 00 40 13 61 73 2D 67  e.@.as-g
+00000460: 6C 6F 62 61 6C 2E 73 65  lobal.se
+00000468: 74 2D 76 61 6C 75 65 00  t-value.
+00000470: 41 0F 61 73 2D 6C 6F 61  A.as-loa
+00000478: 64 2D 6F 70 65 72 61 6E  d-operan
+00000480: 64 00 42 10 61 73 2D 75  d.B.as-u
+00000488: 6E 61 72 79 2D 6F 70 65  nary-ope
+00000490: 72 61 6E 64 00 45 0E 61  rand.E.a
+00000498: 73 2D 62 69 6E 61 72 79  s-binary
+000004a0: 2D 6C 65 66 74 00 46 0F  -left.F.
+000004a8: 61 73 2D 62 69 6E 61 72  as-binar
+000004b0: 79 2D 72 69 67 68 74 00  y-right.
+000004b8: 47 0F 61 73 2D 74 65 73  G.as-tes
+000004c0: 74 2D 6F 70 65 72 61 6E  t-operan
+000004c8: 64 00 48 0F 61 73 2D 63  d.H.as-c
+000004d0: 6F 6D 70 61 72 65 2D 6C  ompare-l
+000004d8: 65 66 74 00 49 10 61 73  eft.I.as
+000004e0: 2D 63 6F 6D 70 61 72 65  -compare
+000004e8: 2D 72 69 67 68 74 00 4A  -right.J
+000004f0: 12 61 73 2D 63 6F 6E 76  .as-conv
+000004f8: 65 72 74 2D 6F 70 65 72  ert-oper
+00000500: 61 6E 64 00 4B 1E 72 65  and.K.re
+00000508: 74 75 72 6E 2D 66 72 6F  turn-fro
+00000510: 6D 2D 6C 6F 6E 67 2D 61  m-long-a
+00000518: 72 67 75 6D 65 6E 74 2D  rgument-
+00000520: 6C 69 73 74 00 4D 09 07  list.M..
+00000528: 01 00 41 00 0B 01 35 0A  ..A...5.
+00000530: F6 09 4E 05 00 41 B2 02  ..N..A..
+00000538: 0B 05 00 42 E4 02 0B 07  ...B....
+00000540: 00 43 00 20 73 45 0B 0B  .C. sE..
+00000548: 00 44 00 00 00 00 00 C8  .D......
+00000550: AE 40 0B 08 00 41 B2 02  .@...A..
+00000558: 42 E4 02 0B 04 00 20 00  B..... .
+00000560: 0B 04 00 20 00 0B 04 00  ... ....
+00000568: 20 00 0B 04 00 20 00 0B   .... ..
+00000570: 06 00 20 00 20 01 0B 06  .. . ...
+00000578: 00 20 01 20 00 0B 06 00  . . ....
+00000580: 20 01 20 00 0B 06 00 20   . .... 
+00000588: 01 20 00 0B 04 00 20 01  . .... .
+00000590: 0B 04 00 20 01 0B 04 00  ... ....
+00000598: 20 01 0B 04 00 20 01 0B   .... ..
+000005a0: 04 00 10 00 0B 04 00 10  ........
+000005a8: 01 0B 04 00 10 02 0B 04  ........
+000005b0: 00 10 03 0B 04 00 10 04  ........
+000005b8: 0B 06 00 41 20 10 05 0B  ...A ...
+000005c0: 07 00 42 C0 00 10 06 0B  ..B.....
+000005c8: 09 00 43 C3 F5 A8 3F 10  ..C...?.
+000005d0: 07 0B 0D 00 44 3D 0A D7  ....D&#x3D;..
+000005d8: A3 70 3D FA 3F 10 08 0B  .p&#x3D;.?...
+000005e0: 0B 00 43 66 66 00 42 41  ..Cff.BA
+000005e8: 20 10 0D 0B 09 00 41 20   .....A 
+000005f0: 42 C0 00 10 0E 0B 12 00  B.......
+000005f8: 44 00 00 00 00 00 00 50  D......P
+00000600: 40 43 00 00 00 42 10 0F  @C...B..
+00000608: 0B 10 00 42 C0 00 44 66  ...B..Df
+00000610: 66 66 66 66 06 50 40 10  ffff.P@.
+00000618: 10 0B 0F 00 41 20 44 3D  ....A D&#x3D;
+00000620: 0A D7 A3 70 3D FA 3F 10  ...p&#x3D;.?.
+00000628: 09 0B 08 00 41 01 41 02  ....A.A.
+00000630: 10 0A 0B 12 00 43 00 00  .....C..
+00000638: 80 3F 44 00 00 00 00 00  .?D.....
+00000640: 00 00 40 10 0B 0B 0F 00  ..@.....
+00000648: 44 00 00 00 00 00 00 F0  D.......
+00000650: 3F 41 02 10 0C 0B 09 00  ?A......
+00000658: 41 03 41 04 10 0A 6A 0B  A.A...j.
+00000660: 0C 00 41 03 41 04 10 0A  ..A.A...
+00000668: 41 05 6A 6C 0B 0A 00 41  A.jl...A
+00000670: 03 41 04 10 0A 10 0A 0B  .A......
+00000678: 15 00 20 00 50 04 7E 42  .. .P.~B
+00000680: 01 05 20 00 20 00 42 01  .. . .B.
+00000688: 7D 10 25 7E 0B 0B 17 00  }.%~....
+00000690: 20 00 50 04 7E 20 01 05   .P.~ ..
+00000698: 20 00 42 01 7D 20 00 20   .B.} . 
+000006a0: 01 7E 10 26 0B 0B 1C 00  .~.&amp;....
+000006a8: 20 00 42 01 58 04 7E 42   .B.X.~B
+000006b0: 01 05 20 00 42 02 7D 10  .. .B.}.
+000006b8: 27 20 00 42 01 7D 10 27  &#x27; .B.}.&#x27;
+000006c0: 7C 0B 0B 12 00 20 00 50  |.... .P
+000006c8: 04 7F 41 2C 05 20 00 42  ..A,. .B
+000006d0: 01 7D 10 29 0B 0B 13 00  .}.)....
+000006d8: 20 00 50 04 7F 41 E3 00   .P..A..
+000006e0: 05 20 00 42 01 7D 10 28  . .B.}.(
+000006e8: 0B 0B 04 00 10 2A 0B 04  .....*..
+000006f0: 00 10 2C 0B 04 00 10 2B  ..,....+
+000006f8: 0B 09 00 10 00 41 02 41  .....A.A
+00000700: 03 1B 0B 09 00 41 02 10  .....A..
+00000708: 00 41 03 1B 0B 09 00 41  .A.....A
+00000710: 02 41 03 10 00 1B 0B 0C  .A......
+00000718: 00 10 00 04 7F 41 01 05  .....A..
+00000720: 41 02 0B 0B 0B 00 02 7F  A.......
+00000728: 10 00 41 02 0D 00 0B 0B  ..A.....
+00000730: 0B 00 02 7F 41 02 10 00  ....A...
+00000738: 0D 00 0B 0B 0D 00 02 7F  ........
+00000740: 10 00 41 02 0E 01 00 00  ..A.....
+00000748: 0B 0B 0D 00 02 7F 41 02  ......A.
+00000750: 10 00 0E 01 00 00 0B 0B  ........
+00000758: 04 00 20 00 0B 0E 00 02  .. .....
+00000760: 7F 10 00 41 02 41 00 11  ...A.A..
+00000768: 00 00 0B 0B 0E 00 02 7F  ........
+00000770: 41 02 10 00 41 00 11 00  A...A...
+00000778: 00 0B 0B 0E 00 02 7F 41  .......A
+00000780: 01 41 02 10 00 11 00 00  .A......
+00000788: 0B 0B 09 00 10 00 41 01  ......A.
+00000790: 36 02 00 0B 09 00 41 0A  6.....A.
+00000798: 10 00 36 02 00 0B 06 00  ..6.....
+000007a0: 10 00 40 00 0B 05 00 10  ..@.....
+000007a8: 00 0F 0B 05 00 10 00 1A  ........
+000007b0: 0B 09 00 02 7F 10 00 0C  ........
+000007b8: 00 0B 0B 0A 01 01 7F 10  ........
+000007c0: 00 21 00 20 00 0B 08 01  .!. ....
+000007c8: 01 7F 10 00 22 00 0B 08  ....&quot;...
+000007d0: 00 10 00 24 00 23 00 0B  ...$.#..
+000007d8: 07 00 10 00 28 02 00 0B  ....(...
+000007e0: 04 00 20 00 0B 04 00 20  .. .... 
+000007e8: 00 0B 0D 00 02 7D 43 00  .....}C.
+000007f0: 00 00 00 10 44 91 0B 0B  ....D...
+000007f8: 0C 00 02 7F 41 01 10 43  ....A..C
+00000800: 41 0A 6A 0B 0B 0C 00 02  A.j.....
+00000808: 7F 41 0A 41 01 10 43 6B  .A.A..Ck
+00000810: 0B 0B 0A 00 02 7F 41 01  ......A.
+00000818: 10 43 45 0B 0B 0C 00 02  .CE.....
+00000820: 7F 41 01 10 43 41 0A 4D  .A..CA.M
+00000828: 0B 0B 0C 00 02 7F 41 0A  ......A.
+00000830: 41 01 10 43 47 0B 0B 0A  A..CG...
+00000838: 00 02 7E 41 01 10 43 AC  ..~A..C.
+00000840: 0B 0B 04 00 20 63 0B DF  .... c..
+00000848: 03 00 43 00 00 00 00 41  ..C....A
+00000850: 00 41 00 44 00 00 00 00  .A.D....
+00000858: 00 00 00 00 43 00 00 00  ....C...
+00000860: 00 43 00 00 00 00 43 00  .C....C.
+00000868: 00 00 00 44 00 00 00 00  ...D....
+00000870: 00 00 00 00 43 00 00 00  ....C...
+00000878: 00 41 00 41 00 43 00 00  .A.A.C..
+00000880: 00 00 44 00 00 00 00 00  ..D.....
+00000888: 00 00 00 42 00 42 00 41  ...B.B.A
+00000890: 00 42 00 42 00 43 00 00  .B.B.C..
+00000898: 00 00 42 00 42 00 42 00  ..B.B.B.
+000008a0: 41 00 43 00 00 00 00 43  A.C....C
+000008a8: 00 00 00 00 43 00 00 00  ....C...
+000008b0: 00 44 00 00 00 00 00 00  .D......
+000008b8: 00 00 43 00 00 00 00 41  ..C....A
+000008c0: 00 42 00 43 00 00 00 00  .B.C....
+000008c8: 44 00 00 00 00 00 00 00  D.......
+000008d0: 00 44 00 00 00 00 00 00  .D......
+000008d8: 00 00 43 00 00 00 00 41  ..C....A
+000008e0: 00 43 00 00 00 00 43 00  .C....C.
+000008e8: 00 00 00 44 00 00 00 00  ...D....
+000008f0: 00 00 00 00 42 00 44 00  ....B.D.
+000008f8: 00 00 00 00 00 00 00 41  .......A
+00000900: 00 42 00 43 00 00 00 00  .B.C....
+00000908: 44 00 00 00 00 00 00 00  D.......
+00000910: 00 41 00 41 00 41 00 42  .A.A.A.B
+00000918: 00 44 00 00 00 00 00 00  .D......
+00000920: 00 00 41 00 42 00 42 00  ..A.B.B.
+00000928: 44 00 00 00 00 00 00 00  D.......
+00000930: 00 44 00 00 00 00 00 00  .D......
+00000938: 00 00 44 00 00 00 00 00  ..D.....
+00000940: 00 00 00 44 00 00 00 00  ...D....
+00000948: 00 00 00 00 44 00 00 00  ....D...
+00000950: 00 00 00 00 00 44 00 00  .....D..
+00000958: 00 00 00 00 00 00 41 00  ......A.
+00000960: 43 00 00 00 00 44 00 00  C....D..
+00000968: 00 00 00 00 00 00 44 00  ......D.
+00000970: 00 00 00 00 00 00 00 41  .......A
+00000978: 00 42 00 43 00 00 00 00  .B.C....
+00000980: 43 00 00 00 00 43 00 00  C....C..
+00000988: 00 00 41 00 44 00 00 00  ..A.D...
+00000990: 00 00 00 00 00 44 00 00  .....D..
+00000998: 00 00 00 00 00 00 44 00  ......D.
+000009a0: 00 00 00 00 00 00 00 44  .......D
+000009a8: 00 00 00 00 00 00 00 00  ........
+000009b0: 44 00 00 00 00 00 00 00  D.......
+000009b8: 00 43 00 00 00 00 42 00  .C....B.
+000009c0: 42 00 41 00 41 00 41 00  B.A.A.A.
+000009c8: 43 00 00 00 00 44 00 00  C....D..
+000009d0: 00 00 00 00 00 00 41 00  ......A.
+000009d8: 42 00 43 00 00 00 00 43  B.C....C
+000009e0: 00 00 00 00 43 00 00 00  ....C...
+000009e8: 00 41 00 41 00 43 00 00  .A.A.C..
+000009f0: 00 00 44 00 00 00 00 00  ..D.....
+000009f8: 00 00 00 42 00 43 00 00  ...B.C..
+00000a00: 00 00 44 00 00 00 00 00  ..D.....
+00000a08: 00 00 00 43 00 00 00 00  ...C....
+00000a10: 43 00 00 00 00 43 00 00  C....C..
+00000a18: 00 00 41 00 43 00 00 00  ..A.C...
+00000a20: 00 42 00 20 00 10 4C 0B  .B. ..L.
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2"><code>(module
+  (type (;0;) (func (param i32 i32) (result i32)))
+  (type (;1;) (func (result i32)))
+  (type (;2;) (func (result i64)))
+  (type (;3;) (func (result f32)))
+  (type (;4;) (func (result f64)))
+  (type (;5;) (func (result i32 i64)))
+  (type (;6;) (func (param i32) (result i32)))
+  (type (;7;) (func (param i64) (result i64)))
+  (type (;8;) (func (param f32) (result f32)))
+  (type (;9;) (func (param f64) (result f64)))
+  (type (;10;) (func (param i32 f64) (result i32 f64)))
+  (type (;11;) (func (param i32 i32) (result i32 i32)))
+  (type (;12;) (func (param f32 f64) (result f64 f32)))
+  (type (;13;) (func (param f64 i32) (result i32 f64)))
+  (type (;14;) (func (param f32 i32) (result i32)))
+  (type (;15;) (func (param i32 i64) (result i64)))
+  (type (;16;) (func (param f64 f32) (result f32)))
+  (type (;17;) (func (param i64 f64) (result f64)))
+  (type (;18;) (func (result i32 f64)))
+  (type (;19;) (func (result i32 i32)))
+  (type (;20;) (func (result f64 f32)))
+  (type (;21;) (func (param i64 i64) (result i64)))
+  (type (;22;) (func (param i64) (result i32)))
+  (type (;23;) (func))
+  (type (;24;) (func (param f32 i32 i32 f64 f32 f32 f32 f64 f32 i32 i32 f32 f64 i64 i64 i32 i64 i64 f32 i64 i64 i64 i32 f32 f32 f32 f64 f32 i32 i64 f32 f64 f64 f32 i32 f32 f32 f64 i64 f64 i32 i64 f32 f64 i32 i32 i32 i64 f64 i32 i64 i64 f64 f64 f64 f64 f64 f64 i32 f32 f64 f64 i32 i64 f32 f32 f32 i32 f64 f64 f64 f64 f64 f32 i64 i64 i32 i32 i32 f32 f64 i32 i64 f32 f32 f32 i32 i32 f32 f64 i64 f32 f64 f32 f32 f32 i32 f32 i64 i32) (result i32)))
+  (func (;0;) (type 1) (result i32)
+    i32.const 306)
+  (func (;1;) (type 2) (result i64)
+    i64.const 356)
+  (func (;2;) (type 3) (result f32)
+    f32.const 0x1.e64p+11 (;&#x3D;3890;))
+  (func (;3;) (type 4) (result f64)
+    f64.const 0x1.ec8p+11 (;&#x3D;3940;))
+  (func (;4;) (type 5) (result i32 i64)
+    i32.const 306
+    i64.const 356)
+  (func (;5;) (type 6) (param i32) (result i32)
+    local.get 0)
+  (func (;6;) (type 7) (param i64) (result i64)
+    local.get 0)
+  (func (;7;) (type 8) (param f32) (result f32)
+    local.get 0)
+  (func (;8;) (type 9) (param f64) (result f64)
+    local.get 0)
+  (func (;9;) (type 10) (param i32 f64) (result i32 f64)
+    local.get 0
+    local.get 1)
+  (func (;10;) (type 11) (param i32 i32) (result i32 i32)
+    local.get 1
+    local.get 0)
+  (func (;11;) (type 12) (param f32 f64) (result f64 f32)
+    local.get 1
+    local.get 0)
+  (func (;12;) (type 13) (param f64 i32) (result i32 f64)
+    local.get 1
+    local.get 0)
+  (func (;13;) (type 14) (param f32 i32) (result i32)
+    local.get 1)
+  (func (;14;) (type 15) (param i32 i64) (result i64)
+    local.get 1)
+  (func (;15;) (type 16) (param f64 f32) (result f32)
+    local.get 1)
+  (func (;16;) (type 17) (param i64 f64) (result f64)
+    local.get 1)
+  (func (;17;) (type 1) (result i32)
+    call 0)
+  (func (;18;) (type 2) (result i64)
+    call 1)
+  (func (;19;) (type 3) (result f32)
+    call 2)
+  (func (;20;) (type 4) (result f64)
+    call 3)
+  (func (;21;) (type 5) (result i32 i64)
+    call 4)
+  (func (;22;) (type 1) (result i32)
+    i32.const 32
+    call 5)
+  (func (;23;) (type 2) (result i64)
+    i64.const 64
+    call 6)
+  (func (;24;) (type 3) (result f32)
+    f32.const 0x1.51eb86p+0 (;&#x3D;1.32;)
+    call 7)
+  (func (;25;) (type 4) (result f64)
+    f64.const 0x1.a3d70a3d70a3dp+0 (;&#x3D;1.64;)
+    call 8)
+  (func (;26;) (type 1) (result i32)
+    f32.const 0x1.00ccccp+5 (;&#x3D;32.1;)
+    i32.const 32
+    call 13)
+  (func (;27;) (type 2) (result i64)
+    i32.const 32
+    i64.const 64
+    call 14)
+  (func (;28;) (type 3) (result f32)
+    f64.const 0x1p+6 (;&#x3D;64;)
+    f32.const 0x1p+5 (;&#x3D;32;)
+    call 15)
+  (func (;29;) (type 4) (result f64)
+    i64.const 64
+    f64.const 0x1.0066666666666p+6 (;&#x3D;64.1;)
+    call 16)
+  (func (;30;) (type 18) (result i32 f64)
+    i32.const 32
+    f64.const 0x1.a3d70a3d70a3dp+0 (;&#x3D;1.64;)
+    call 9)
+  (func (;31;) (type 19) (result i32 i32)
+    i32.const 1
+    i32.const 2
+    call 10)
+  (func (;32;) (type 20) (result f64 f32)
+    f32.const 0x1p+0 (;&#x3D;1;)
+    f64.const 0x1p+1 (;&#x3D;2;)
+    call 11)
+  (func (;33;) (type 18) (result i32 f64)
+    f64.const 0x1p+0 (;&#x3D;1;)
+    i32.const 2
+    call 12)
+  (func (;34;) (type 1) (result i32)
+    i32.const 3
+    i32.const 4
+    call 10
+    i32.add)
+  (func (;35;) (type 1) (result i32)
+    i32.const 3
+    i32.const 4
+    call 10
+    i32.const 5
+    i32.add
+    i32.mul)
+  (func (;36;) (type 19) (result i32 i32)
+    i32.const 3
+    i32.const 4
+    call 10
+    call 10)
+  (func (;37;) (type 7) (param i64) (result i64)
+    local.get 0
+    i64.eqz
+    if (result i64)  ;; label &#x3D; @1
+      i64.const 1
+    else
+      local.get 0
+      local.get 0
+      i64.const 1
+      i64.sub
+      call 37
+      i64.mul
+    end)
+  (func (;38;) (type 21) (param i64 i64) (result i64)
+    local.get 0
+    i64.eqz
+    if (result i64)  ;; label &#x3D; @1
+      local.get 1
+    else
+      local.get 0
+      i64.const 1
+      i64.sub
+      local.get 0
+      local.get 1
+      i64.mul
+      call 38
+    end)
+  (func (;39;) (type 7) (param i64) (result i64)
+    local.get 0
+    i64.const 1
+    i64.le_u
+    if (result i64)  ;; label &#x3D; @1
+      i64.const 1
+    else
+      local.get 0
+      i64.const 2
+      i64.sub
+      call 39
+      local.get 0
+      i64.const 1
+      i64.sub
+      call 39
+      i64.add
+    end)
+  (func (;40;) (type 22) (param i64) (result i32)
+    local.get 0
+    i64.eqz
+    if (result i32)  ;; label &#x3D; @1
+      i32.const 44
+    else
+      local.get 0
+      i64.const 1
+      i64.sub
+      call 41
+    end)
+  (func (;41;) (type 22) (param i64) (result i32)
+    local.get 0
+    i64.eqz
+    if (result i32)  ;; label &#x3D; @1
+      i32.const 99
+    else
+      local.get 0
+      i64.const 1
+      i64.sub
+      call 40
+    end)
+  (func (;42;) (type 23)
+    call 42)
+  (func (;43;) (type 23)
+    call 44)
+  (func (;44;) (type 23)
+    call 43)
+  (func (;45;) (type 1) (result i32)
+    call 0
+    i32.const 2
+    i32.const 3
+    select)
+  (func (;46;) (type 1) (result i32)
+    i32.const 2
+    call 0
+    i32.const 3
+    select)
+  (func (;47;) (type 1) (result i32)
+    i32.const 2
+    i32.const 3
+    call 0
+    select)
+  (func (;48;) (type 1) (result i32)
+    call 0
+    if (result i32)  ;; label &#x3D; @1
+      i32.const 1
+    else
+      i32.const 2
+    end)
+  (func (;49;) (type 1) (result i32)
+    block (result i32)  ;; label &#x3D; @1
+      call 0
+      i32.const 2
+      br_if 0 (;@1;)
+    end)
+  (func (;50;) (type 1) (result i32)
+    block (result i32)  ;; label &#x3D; @1
+      i32.const 2
+      call 0
+      br_if 0 (;@1;)
+    end)
+  (func (;51;) (type 1) (result i32)
+    block (result i32)  ;; label &#x3D; @1
+      call 0
+      i32.const 2
+      br_table 0 (;@1;) 0 (;@1;)
+    end)
+  (func (;52;) (type 1) (result i32)
+    block (result i32)  ;; label &#x3D; @1
+      i32.const 2
+      call 0
+      br_table 0 (;@1;) 0 (;@1;)
+    end)
+  (func (;53;) (type 0) (param i32 i32) (result i32)
+    local.get 0)
+  (func (;54;) (type 1) (result i32)
+    block (result i32)  ;; label &#x3D; @1
+      call 0
+      i32.const 2
+      i32.const 0
+      call_indirect (type 0)
+    end)
+  (func (;55;) (type 1) (result i32)
+    block (result i32)  ;; label &#x3D; @1
+      i32.const 2
+      call 0
+      i32.const 0
+      call_indirect (type 0)
+    end)
+  (func (;56;) (type 1) (result i32)
+    block (result i32)  ;; label &#x3D; @1
+      i32.const 1
+      i32.const 2
+      call 0
+      call_indirect (type 0)
+    end)
+  (func (;57;) (type 23)
+    call 0
+    i32.const 1
+    i32.store)
+  (func (;58;) (type 23)
+    i32.const 10
+    call 0
+    i32.store)
+  (func (;59;) (type 1) (result i32)
+    call 0
+    memory.grow)
+  (func (;60;) (type 1) (result i32)
+    call 0
+    return)
+  (func (;61;) (type 23)
+    call 0
+    drop)
+  (func (;62;) (type 1) (result i32)
+    block (result i32)  ;; label &#x3D; @1
+      call 0
+      br 0 (;@1;)
+    end)
+  (func (;63;) (type 1) (result i32)
+    (local i32)
+    call 0
+    local.set 0
+    local.get 0)
+  (func (;64;) (type 1) (result i32)
+    (local i32)
+    call 0
+    local.tee 0)
+  (func (;65;) (type 1) (result i32)
+    call 0
+    global.set 0
+    global.get 0)
+  (func (;66;) (type 1) (result i32)
+    call 0
+    i32.load)
+  (func (;67;) (type 6) (param i32) (result i32)
+    local.get 0)
+  (func (;68;) (type 8) (param f32) (result f32)
+    local.get 0)
+  (func (;69;) (type 3) (result f32)
+    block (result f32)  ;; label &#x3D; @1
+      f32.const 0x0p+0 (;&#x3D;0;)
+      call 68
+      f32.sqrt
+    end)
+  (func (;70;) (type 1) (result i32)
+    block (result i32)  ;; label &#x3D; @1
+      i32.const 1
+      call 67
+      i32.const 10
+      i32.add
+    end)
+  (func (;71;) (type 1) (result i32)
+    block (result i32)  ;; label &#x3D; @1
+      i32.const 10
+      i32.const 1
+      call 67
+      i32.sub
+    end)
+  (func (;72;) (type 1) (result i32)
+    block (result i32)  ;; label &#x3D; @1
+      i32.const 1
+      call 67
+      i32.eqz
+    end)
+  (func (;73;) (type 1) (result i32)
+    block (result i32)  ;; label &#x3D; @1
+      i32.const 1
+      call 67
+      i32.const 10
+      i32.le_u
+    end)
+  (func (;74;) (type 1) (result i32)
+    block (result i32)  ;; label &#x3D; @1
+      i32.const 10
+      i32.const 1
+      call 67
+      i32.ne
+    end)
+  (func (;75;) (type 2) (result i64)
+    block (result i64)  ;; label &#x3D; @1
+      i32.const 1
+      call 67
+      i64.extend_i32_s
+    end)
+  (func (;76;) (type 24) (param f32 i32 i32 f64 f32 f32 f32 f64 f32 i32 i32 f32 f64 i64 i64 i32 i64 i64 f32 i64 i64 i64 i32 f32 f32 f32 f64 f32 i32 i64 f32 f64 f64 f32 i32 f32 f32 f64 i64 f64 i32 i64 f32 f64 i32 i32 i32 i64 f64 i32 i64 i64 f64 f64 f64 f64 f64 f64 i32 f32 f64 f64 i32 i64 f32 f32 f32 i32 f64 f64 f64 f64 f64 f32 i64 i64 i32 i32 i32 f32 f64 i32 i64 f32 f32 f32 i32 i32 f32 f64 i64 f32 f64 f32 f32 f32 i32 f32 i64 i32) (result i32)
+    local.get 99)
+  (func (;77;) (type 6) (param i32) (result i32)
+    f32.const 0x0p+0 (;&#x3D;0;)
+    i32.const 0
+    i32.const 0
+    f64.const 0x0p+0 (;&#x3D;0;)
+    f32.const 0x0p+0 (;&#x3D;0;)
+    f32.const 0x0p+0 (;&#x3D;0;)
+    f32.const 0x0p+0 (;&#x3D;0;)
+    f64.const 0x0p+0 (;&#x3D;0;)
+    f32.const 0x0p+0 (;&#x3D;0;)
+    i32.const 0
+    i32.const 0
+    f32.const 0x0p+0 (;&#x3D;0;)
+    f64.const 0x0p+0 (;&#x3D;0;)
+    i64.const 0
+    i64.const 0
+    i32.const 0
+    i64.const 0
+    i64.const 0
+    f32.const 0x0p+0 (;&#x3D;0;)
+    i64.const 0
+    i64.const 0
+    i64.const 0
+    i32.const 0
+    f32.const 0x0p+0 (;&#x3D;0;)
+    f32.const 0x0p+0 (;&#x3D;0;)
+    f32.const 0x0p+0 (;&#x3D;0;)
+    f64.const 0x0p+0 (;&#x3D;0;)
+    f32.const 0x0p+0 (;&#x3D;0;)
+    i32.const 0
+    i64.const 0
+    f32.const 0x0p+0 (;&#x3D;0;)
+    f64.const 0x0p+0 (;&#x3D;0;)
+    f64.const 0x0p+0 (;&#x3D;0;)
+    f32.const 0x0p+0 (;&#x3D;0;)
+    i32.const 0
+    f32.const 0x0p+0 (;&#x3D;0;)
+    f32.const 0x0p+0 (;&#x3D;0;)
+    f64.const 0x0p+0 (;&#x3D;0;)
+    i64.const 0
+    f64.const 0x0p+0 (;&#x3D;0;)
+    i32.const 0
+    i64.const 0
+    f32.const 0x0p+0 (;&#x3D;0;)
+    f64.const 0x0p+0 (;&#x3D;0;)
+    i32.const 0
+    i32.const 0
+    i32.const 0
+    i64.const 0
+    f64.const 0x0p+0 (;&#x3D;0;)
+    i32.const 0
+    i64.const 0
+    i64.const 0
+    f64.const 0x0p+0 (;&#x3D;0;)
+    f64.const 0x0p+0 (;&#x3D;0;)
+    f64.const 0x0p+0 (;&#x3D;0;)
+    f64.const 0x0p+0 (;&#x3D;0;)
+    f64.const 0x0p+0 (;&#x3D;0;)
+    f64.const 0x0p+0 (;&#x3D;0;)
+    i32.const 0
+    f32.const 0x0p+0 (;&#x3D;0;)
+    f64.const 0x0p+0 (;&#x3D;0;)
+    f64.const 0x0p+0 (;&#x3D;0;)
+    i32.const 0
+    i64.const 0
+    f32.const 0x0p+0 (;&#x3D;0;)
+    f32.const 0x0p+0 (;&#x3D;0;)
+    f32.const 0x0p+0 (;&#x3D;0;)
+    i32.const 0
+    f64.const 0x0p+0 (;&#x3D;0;)
+    f64.const 0x0p+0 (;&#x3D;0;)
+    f64.const 0x0p+0 (;&#x3D;0;)
+    f64.const 0x0p+0 (;&#x3D;0;)
+    f64.const 0x0p+0 (;&#x3D;0;)
+    f32.const 0x0p+0 (;&#x3D;0;)
+    i64.const 0
+    i64.const 0
+    i32.const 0
+    i32.const 0
+    i32.const 0
+    f32.const 0x0p+0 (;&#x3D;0;)
+    f64.const 0x0p+0 (;&#x3D;0;)
+    i32.const 0
+    i64.const 0
+    f32.const 0x0p+0 (;&#x3D;0;)
+    f32.const 0x0p+0 (;&#x3D;0;)
+    f32.const 0x0p+0 (;&#x3D;0;)
+    i32.const 0
+    i32.const 0
+    f32.const 0x0p+0 (;&#x3D;0;)
+    f64.const 0x0p+0 (;&#x3D;0;)
+    i64.const 0
+    f32.const 0x0p+0 (;&#x3D;0;)
+    f64.const 0x0p+0 (;&#x3D;0;)
+    f32.const 0x0p+0 (;&#x3D;0;)
+    f32.const 0x0p+0 (;&#x3D;0;)
+    f32.const 0x0p+0 (;&#x3D;0;)
+    i32.const 0
+    f32.const 0x0p+0 (;&#x3D;0;)
+    i64.const 0
+    local.get 0
+    call 76)
+  (table (;0;) 1 1 funcref)
+  (memory (;0;) 1)
+  (global (;0;) (mut i32) (i32.const 10))
+  (export &quot;type-i32&quot; (func 17))
+  (export &quot;type-i64&quot; (func 18))
+  (export &quot;type-f32&quot; (func 19))
+  (export &quot;type-f64&quot; (func 20))
+  (export &quot;type-i32-i64&quot; (func 21))
+  (export &quot;type-first-i32&quot; (func 22))
+  (export &quot;type-first-i64&quot; (func 23))
+  (export &quot;type-first-f32&quot; (func 24))
+  (export &quot;type-first-f64&quot; (func 25))
+  (export &quot;type-second-i32&quot; (func 26))
+  (export &quot;type-second-i64&quot; (func 27))
+  (export &quot;type-second-f32&quot; (func 28))
+  (export &quot;type-second-f64&quot; (func 29))
+  (export &quot;type-all-i32-f64&quot; (func 30))
+  (export &quot;type-all-i32-i32&quot; (func 31))
+  (export &quot;type-all-f32-f64&quot; (func 32))
+  (export &quot;type-all-f64-i32&quot; (func 33))
+  (export &quot;as-binary-all-operands&quot; (func 34))
+  (export &quot;as-mixed-operands&quot; (func 35))
+  (export &quot;as-call-all-operands&quot; (func 36))
+  (export &quot;fac&quot; (func 37))
+  (export &quot;fac-acc&quot; (func 38))
+  (export &quot;fib&quot; (func 39))
+  (export &quot;even&quot; (func 40))
+  (export &quot;odd&quot; (func 41))
+  (export &quot;runaway&quot; (func 42))
+  (export &quot;mutual-runaway&quot; (func 43))
+  (export &quot;as-select-first&quot; (func 45))
+  (export &quot;as-select-mid&quot; (func 46))
+  (export &quot;as-select-last&quot; (func 47))
+  (export &quot;as-if-condition&quot; (func 48))
+  (export &quot;as-br_if-first&quot; (func 49))
+  (export &quot;as-br_if-last&quot; (func 50))
+  (export &quot;as-br_table-first&quot; (func 51))
+  (export &quot;as-br_table-last&quot; (func 52))
+  (export &quot;as-call_indirect-first&quot; (func 54))
+  (export &quot;as-call_indirect-mid&quot; (func 55))
+  (export &quot;as-call_indirect-last&quot; (func 56))
+  (export &quot;as-store-first&quot; (func 57))
+  (export &quot;as-store-last&quot; (func 58))
+  (export &quot;as-memory.grow-value&quot; (func 59))
+  (export &quot;as-return-value&quot; (func 60))
+  (export &quot;as-drop-operand&quot; (func 61))
+  (export &quot;as-br-value&quot; (func 62))
+  (export &quot;as-local.set-value&quot; (func 63))
+  (export &quot;as-local.tee-value&quot; (func 64))
+  (export &quot;as-global.set-value&quot; (func 65))
+  (export &quot;as-load-operand&quot; (func 66))
+  (export &quot;as-unary-operand&quot; (func 69))
+  (export &quot;as-binary-left&quot; (func 70))
+  (export &quot;as-binary-right&quot; (func 71))
+  (export &quot;as-test-operand&quot; (func 72))
+  (export &quot;as-compare-left&quot; (func 73))
+  (export &quot;as-compare-right&quot; (func 74))
+  (export &quot;as-convert-operand&quot; (func 75))
+  (export &quot;return-from-long-argument-list&quot; (func 77))
+  (elem (;0;) (i32.const 0) func 53))
+</code></pre>
+    </div>
+</body>
+
+</html>

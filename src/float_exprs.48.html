@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asmcc float_exprs.48</title>
+
+    <link rel="stylesheet" href="//unpkg.com/@highlightjs/cdn-assets@11.7.0/styles/github.min.css">
+    <script src="//unpkg.com/@highlightjs/cdn-assets@11.7.0/highlight.min.js"></script>
+    <script>
+        hljs.configure({
+            noHighlightRe: /^do-not-highlightme$/i,
+        });
+    </script>
+    <script>hljs.highlightAll();</script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="/_vercel/insights/script.js"></script>
+</head>
+
+<body class="text-sm p-2">
+    <h1 class="text-2xl  w-full mb-4">Anaylzer: <a href="/float_exprs.48.wasm">float_exprs.48.wasm</a></h1>
+    <div class="flex justify-evenly">
+        <pre class="p-4 overflow-scroll border-2"><code>
+float_exprs.48.wasm:	file format wasm 0x1
+
+Sections:
+
+     Type start&#x3D;0x0000000a end&#x3D;0x0000000f (size&#x3D;0x00000005) count: 1
+ Function start&#x3D;0x00000011 end&#x3D;0x00000013 (size&#x3D;0x00000002) count: 1
+   Export start&#x3D;0x00000015 end&#x3D;0x00000022 (size&#x3D;0x0000000d) count: 1
+     Code start&#x3D;0x00000024 end&#x3D;0x0000006e (size&#x3D;0x0000004a) count: 1
+
+Section Details:
+
+Type[1]:
+ - type[0] () -&gt; f32
+Function[1]:
+ - func[0] sig&#x3D;0 &lt;calculate&gt;
+Export[1]:
+ - func[0] &lt;calculate&gt; -&gt; &quot;calculate&quot;
+Code[1]:
+ - func[0] size&#x3D;72 &lt;calculate&gt;
+
+Contents of section Type:
+000000a: 0160 0001 7d                             .&#x60;..}
+
+Contents of section Function:
+0000011: 0100                                     ..
+
+Contents of section Export:
+0000015: 0109 6361 6c63 756c 6174 6500 00         ..calculate..
+
+Contents of section Code:
+0000024: 0148 0105 7d43 0040 1c43 2100 4355 5550  .H..}C.@.C!.CUUP
+0000034: 4321 0143 15c7 e33f 2102 2001 8c20 0094  C!.C...?!. .. ..
+0000044: 2000 2002 9420 0193 9521 0320 018c 2000   . .. ...!. .. .
+0000054: 9420 0020 0294 2001 9395 2104 0240 2003  . . .. ...!..@ .
+0000064: 2004 5b0d 0000 0b20 040b                  .[.... ..
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2"><code>BeginModule(version: 1)
+  BeginTypeSection(5)
+    OnTypeCount(1)
+    OnFuncType(index: 0, params: [], results: [f32])
+  EndTypeSection
+  BeginFunctionSection(2)
+    OnFunctionCount(1)
+    OnFunction(index: 0, sig_index: 0)
+  EndFunctionSection
+  BeginExportSection(13)
+    OnExportCount(1)
+    OnExport(index: 0, kind: func, item_index: 0, name: &quot;calculate&quot;)
+  EndExportSection
+  BeginCodeSection(74)
+    OnFunctionBodyCount(1)
+    BeginFunctionBody(0, size:72)
+    OnLocalDeclCount(1)
+    OnLocalDecl(index: 0, count: 5, type: f32)
+    EndFunctionBody(0)
+  EndCodeSection
+EndModule
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2 do-not-highlightme"><code>00000000: 00 61 73 6D 01 00 00 00  .asm....
+00000008: 01 05 01 60 00 01 7D 03  ...&#x60;..}.
+00000010: 02 01 00 07 0D 01 09 63  .......c
+00000018: 61 6C 63 75 6C 61 74 65  alculate
+00000020: 00 00 0A 4A 01 48 01 05  ...J.H..
+00000028: 7D 43 00 40 1C 43 21 00  }C.@.C!.
+00000030: 43 55 55 50 43 21 01 43  CUUPC!.C
+00000038: 15 C7 E3 3F 21 02 20 01  ...?!. .
+00000040: 8C 20 00 94 20 00 20 02  . .. . .
+00000048: 94 20 01 93 95 21 03 20  . ...!. 
+00000050: 01 8C 20 00 94 20 00 20  .. .. . 
+00000058: 02 94 20 01 93 95 21 04  .. ...!.
+00000060: 02 40 20 03 20 04 5B 0D  .@ . .[.
+00000068: 00 00 0B 20 04 0B        ... ..
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2"><code>(module
+  (type (;0;) (func (result f32)))
+  (func (;0;) (type 0) (result f32)
+    (local f32 f32 f32 f32 f32)
+    f32.const 0x1.388p+7 (;&#x3D;156.25;)
+    local.set 0
+    f32.const 0x1.a0aaaap+7 (;&#x3D;208.333;)
+    local.set 1
+    f32.const 0x1.c78e2ap+0 (;&#x3D;1.77951;)
+    local.set 2
+    local.get 1
+    f32.neg
+    local.get 0
+    f32.mul
+    local.get 0
+    local.get 2
+    f32.mul
+    local.get 1
+    f32.sub
+    f32.div
+    local.set 3
+    local.get 1
+    f32.neg
+    local.get 0
+    f32.mul
+    local.get 0
+    local.get 2
+    f32.mul
+    local.get 1
+    f32.sub
+    f32.div
+    local.set 4
+    block  ;; label &#x3D; @1
+      local.get 3
+      local.get 4
+      f32.eq
+      br_if 0 (;@1;)
+      unreachable
+    end
+    local.get 4)
+  (export &quot;calculate&quot; (func 0)))
+</code></pre>
+    </div>
+</body>
+
+</html>

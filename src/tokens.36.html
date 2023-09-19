@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asmcc tokens.36</title>
+
+    <link rel="stylesheet" href="//unpkg.com/@highlightjs/cdn-assets@11.7.0/styles/github.min.css">
+    <script src="//unpkg.com/@highlightjs/cdn-assets@11.7.0/highlight.min.js"></script>
+    <script>
+        hljs.configure({
+            noHighlightRe: /^do-not-highlightme$/i,
+        });
+    </script>
+    <script>hljs.highlightAll();</script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="/_vercel/insights/script.js"></script>
+</head>
+
+<body class="text-sm p-2">
+    <h1 class="text-2xl  w-full mb-4">Anaylzer: <a href="/tokens.36.wasm">tokens.36.wasm</a></h1>
+    <div class="flex justify-evenly">
+        <pre class="p-4 overflow-scroll border-2"><code>
+tokens.36.wasm:	file format wasm 0x1
+
+Sections:
+
+     Data start&#x3D;0x0000000a end&#x3D;0x00000014 (size&#x3D;0x0000000a) count: 1
+
+Section Details:
+
+Data[1]:
+ - segment[0] passive size&#x3D;7
+  - 0000000: 20ef 989a ef92 a9                         ......
+
+Contents of section Data:
+000000a: 0101 0720 ef98 9aef 92a9                 ... ......
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2"><code>BeginModule(version: 1)
+  BeginDataSection(10)
+    OnDataSegmentCount(1)
+    BeginDataSegment(index: 0, memory_index: 0, flags: 1)
+    OnDataSegmentData(index:0, size:7)
+    EndDataSegment(0)
+  EndDataSection
+EndModule
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2 do-not-highlightme"><code>00000000: 00 61 73 6D 01 00 00 00  .asm....
+00000008: 0B 0A 01 01 07 20 EF 98  ..... ..
+00000010: 9A EF 92 A9              ....
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2"><code>(module
+  (data (;0;) &quot; \ef\98\9a\ef\92\a9&quot;))
+</code></pre>
+    </div>
+</body>
+
+</html>

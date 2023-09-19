@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asmcc linking.25</title>
+
+    <link rel="stylesheet" href="//unpkg.com/@highlightjs/cdn-assets@11.7.0/styles/github.min.css">
+    <script src="//unpkg.com/@highlightjs/cdn-assets@11.7.0/highlight.min.js"></script>
+    <script>
+        hljs.configure({
+            noHighlightRe: /^do-not-highlightme$/i,
+        });
+    </script>
+    <script>hljs.highlightAll();</script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="/_vercel/insights/script.js"></script>
+</head>
+
+<body class="text-sm p-2">
+    <h1 class="text-2xl  w-full mb-4">Anaylzer: <a href="/linking.25.wasm">linking.25.wasm</a></h1>
+    <div class="flex justify-evenly">
+        <pre class="p-4 overflow-scroll border-2"><code>
+linking.25.wasm:	file format wasm 0x1
+
+Sections:
+
+    Table start&#x3D;0x0000000a end&#x3D;0x00000011 (size&#x3D;0x00000007) count: 2
+   Export start&#x3D;0x00000013 end&#x3D;0x00000028 (size&#x3D;0x00000015) count: 2
+
+Section Details:
+
+Table[2]:
+ - table[0] type&#x3D;funcref initial&#x3D;1
+ - table[1] type&#x3D;externref initial&#x3D;1
+Export[2]:
+ - table[0] -&gt; &quot;t-func&quot;
+ - table[1] -&gt; &quot;t-extern&quot;
+
+Contents of section Table:
+000000a: 0270 0001 6f00 01                        .p..o..
+
+Contents of section Export:
+0000013: 0206 742d 6675 6e63 0100 0874 2d65 7874  ..t-func...t-ext
+0000023: 6572 6e01 01                             ern..
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2"><code>BeginModule(version: 1)
+  BeginTableSection(7)
+    OnTableCount(2)
+    OnTable(index: 0, elem_type: funcref, initial: 1)
+    OnTable(index: 1, elem_type: externref, initial: 1)
+  EndTableSection
+  BeginExportSection(21)
+    OnExportCount(2)
+    OnExport(index: 0, kind: table, item_index: 0, name: &quot;t-func&quot;)
+    OnExport(index: 1, kind: table, item_index: 1, name: &quot;t-extern&quot;)
+  EndExportSection
+EndModule
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2 do-not-highlightme"><code>00000000: 00 61 73 6D 01 00 00 00  .asm....
+00000008: 04 07 02 70 00 01 6F 00  ...p..o.
+00000010: 01 07 15 02 06 74 2D 66  .....t-f
+00000018: 75 6E 63 01 00 08 74 2D  unc...t-
+00000020: 65 78 74 65 72 6E 01 01  extern..
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2"><code>(module
+  (table (;0;) 1 funcref)
+  (table (;1;) 1 externref)
+  (export &quot;t-func&quot; (table 0))
+  (export &quot;t-extern&quot; (table 1)))
+</code></pre>
+    </div>
+</body>
+
+</html>

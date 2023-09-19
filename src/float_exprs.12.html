@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asmcc float_exprs.12</title>
+
+    <link rel="stylesheet" href="//unpkg.com/@highlightjs/cdn-assets@11.7.0/styles/github.min.css">
+    <script src="//unpkg.com/@highlightjs/cdn-assets@11.7.0/highlight.min.js"></script>
+    <script>
+        hljs.configure({
+            noHighlightRe: /^do-not-highlightme$/i,
+        });
+    </script>
+    <script>hljs.highlightAll();</script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="/_vercel/insights/script.js"></script>
+</head>
+
+<body class="text-sm p-2">
+    <h1 class="text-2xl  w-full mb-4">Anaylzer: <a href="/float_exprs.12.wasm">float_exprs.12.wasm</a></h1>
+    <div class="flex justify-evenly">
+        <pre class="p-4 overflow-scroll border-2"><code>
+float_exprs.12.wasm:	file format wasm 0x1
+
+Sections:
+
+     Type start&#x3D;0x0000000a end&#x3D;0x00000015 (size&#x3D;0x0000000b) count: 2
+ Function start&#x3D;0x00000017 end&#x3D;0x0000001a (size&#x3D;0x00000003) count: 2
+   Export start&#x3D;0x0000001c end&#x3D;0x00000049 (size&#x3D;0x0000002d) count: 2
+     Code start&#x3D;0x0000004b end&#x3D;0x0000005c (size&#x3D;0x00000011) count: 2
+
+Section Details:
+
+Type[2]:
+ - type[0] (f32) -&gt; i32
+ - type[1] (f64) -&gt; i32
+Function[2]:
+ - func[0] sig&#x3D;0 &lt;f32.no_fold_eq_self&gt;
+ - func[1] sig&#x3D;1 &lt;f64.no_fold_eq_self&gt;
+Export[2]:
+ - func[0] &lt;f32.no_fold_eq_self&gt; -&gt; &quot;f32.no_fold_eq_self&quot;
+ - func[1] &lt;f64.no_fold_eq_self&gt; -&gt; &quot;f64.no_fold_eq_self&quot;
+Code[2]:
+ - func[0] size&#x3D;7 &lt;f32.no_fold_eq_self&gt;
+ - func[1] size&#x3D;7 &lt;f64.no_fold_eq_self&gt;
+
+Contents of section Type:
+000000a: 0260 017d 017f 6001 7c01 7f              .&#x60;.}..&#x60;.|..
+
+Contents of section Function:
+0000017: 0200 01                                  ...
+
+Contents of section Export:
+000001c: 0213 6633 322e 6e6f 5f66 6f6c 645f 6571  ..f32.no_fold_eq
+000002c: 5f73 656c 6600 0013 6636 342e 6e6f 5f66  _self...f64.no_f
+000003c: 6f6c 645f 6571 5f73 656c 6600 01         old_eq_self..
+
+Contents of section Code:
+000004b: 0207 0020 0020 005b 0b07 0020 0020 0061  ... . .[... . .a
+000005b: 0b                                       .
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2"><code>BeginModule(version: 1)
+  BeginTypeSection(11)
+    OnTypeCount(2)
+    OnFuncType(index: 0, params: [f32], results: [i32])
+    OnFuncType(index: 1, params: [f64], results: [i32])
+  EndTypeSection
+  BeginFunctionSection(3)
+    OnFunctionCount(2)
+    OnFunction(index: 0, sig_index: 0)
+    OnFunction(index: 1, sig_index: 1)
+  EndFunctionSection
+  BeginExportSection(45)
+    OnExportCount(2)
+    OnExport(index: 0, kind: func, item_index: 0, name: &quot;f32.no_fold_eq_self&quot;)
+    OnExport(index: 1, kind: func, item_index: 1, name: &quot;f64.no_fold_eq_self&quot;)
+  EndExportSection
+  BeginCodeSection(17)
+    OnFunctionBodyCount(2)
+    BeginFunctionBody(0, size:7)
+    OnLocalDeclCount(0)
+    EndFunctionBody(0)
+    BeginFunctionBody(1, size:7)
+    OnLocalDeclCount(0)
+    EndFunctionBody(1)
+  EndCodeSection
+EndModule
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2 do-not-highlightme"><code>00000000: 00 61 73 6D 01 00 00 00  .asm....
+00000008: 01 0B 02 60 01 7D 01 7F  ...&#x60;.}..
+00000010: 60 01 7C 01 7F 03 03 02  &#x60;.|.....
+00000018: 00 01 07 2D 02 13 66 33  ...-..f3
+00000020: 32 2E 6E 6F 5F 66 6F 6C  2.no_fol
+00000028: 64 5F 65 71 5F 73 65 6C  d_eq_sel
+00000030: 66 00 00 13 66 36 34 2E  f...f64.
+00000038: 6E 6F 5F 66 6F 6C 64 5F  no_fold_
+00000040: 65 71 5F 73 65 6C 66 00  eq_self.
+00000048: 01 0A 11 02 07 00 20 00  ...... .
+00000050: 20 00 5B 0B 07 00 20 00   .[... .
+00000058: 20 00 61 0B               .a.
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2"><code>(module
+  (type (;0;) (func (param f32) (result i32)))
+  (type (;1;) (func (param f64) (result i32)))
+  (func (;0;) (type 0) (param f32) (result i32)
+    local.get 0
+    local.get 0
+    f32.eq)
+  (func (;1;) (type 1) (param f64) (result i32)
+    local.get 0
+    local.get 0
+    f64.eq)
+  (export &quot;f32.no_fold_eq_self&quot; (func 0))
+  (export &quot;f64.no_fold_eq_self&quot; (func 1)))
+</code></pre>
+    </div>
+</body>
+
+</html>

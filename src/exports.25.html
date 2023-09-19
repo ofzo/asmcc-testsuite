@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asmcc exports.25</title>
+
+    <link rel="stylesheet" href="//unpkg.com/@highlightjs/cdn-assets@11.7.0/styles/github.min.css">
+    <script src="//unpkg.com/@highlightjs/cdn-assets@11.7.0/highlight.min.js"></script>
+    <script>
+        hljs.configure({
+            noHighlightRe: /^do-not-highlightme$/i,
+        });
+    </script>
+    <script>hljs.highlightAll();</script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="/_vercel/insights/script.js"></script>
+</head>
+
+<body class="text-sm p-2">
+    <h1 class="text-2xl  w-full mb-4">Anaylzer: <a href="/exports.25.wasm">exports.25.wasm</a></h1>
+    <div class="flex justify-evenly">
+        <pre class="p-4 overflow-scroll border-2"><code>
+exports.25.wasm:	file format wasm 0x1
+
+Sections:
+
+   Global start&#x3D;0x0000000a end&#x3D;0x00000015 (size&#x3D;0x0000000b) count: 2
+   Export start&#x3D;0x00000017 end&#x3D;0x00000020 (size&#x3D;0x00000009) count: 2
+
+Section Details:
+
+Global[2]:
+ - global[0] i32 mutable&#x3D;0 &lt;a&gt; - init i32&#x3D;0
+ - global[1] i32 mutable&#x3D;0 &lt;b&gt; - init i32&#x3D;0
+Export[2]:
+ - global[0] -&gt; &quot;a&quot;
+ - global[1] -&gt; &quot;b&quot;
+
+Contents of section Global:
+000000a: 027f 0041 000b 7f00 4100 0b              ...A....A..
+
+Contents of section Export:
+0000017: 0201 6103 0001 6203 01                   ..a...b..
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2"><code>BeginModule(version: 1)
+  BeginGlobalSection(11)
+    OnGlobalCount(2)
+    BeginGlobal(index: 0, type: i32, mutable: false)
+    BeginGlobalInitExpr(0)
+    OnI32ConstExpr(0 (0x0))
+    OnEndExpr
+    EndGlobalInitExpr(0)
+    EndGlobal(0)
+    BeginGlobal(index: 1, type: i32, mutable: false)
+    BeginGlobalInitExpr(1)
+    OnI32ConstExpr(0 (0x0))
+    OnEndExpr
+    EndGlobalInitExpr(1)
+    EndGlobal(1)
+  EndGlobalSection
+  BeginExportSection(9)
+    OnExportCount(2)
+    OnExport(index: 0, kind: global, item_index: 0, name: &quot;a&quot;)
+    OnExport(index: 1, kind: global, item_index: 1, name: &quot;b&quot;)
+  EndExportSection
+EndModule
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2 do-not-highlightme"><code>00000000: 00 61 73 6D 01 00 00 00  .asm....
+00000008: 06 0B 02 7F 00 41 00 0B  .....A..
+00000010: 7F 00 41 00 0B 07 09 02  ..A.....
+00000018: 01 61 03 00 01 62 03 01  .a...b..
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2"><code>(module
+  (global (;0;) i32 (i32.const 0))
+  (global (;1;) i32 (i32.const 0))
+  (export &quot;a&quot; (global 0))
+  (export &quot;b&quot; (global 1)))
+</code></pre>
+    </div>
+</body>
+
+</html>

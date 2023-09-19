@@ -1,0 +1,1378 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asmcc return.0</title>
+
+    <link rel="stylesheet" href="//unpkg.com/@highlightjs/cdn-assets@11.7.0/styles/github.min.css">
+    <script src="//unpkg.com/@highlightjs/cdn-assets@11.7.0/highlight.min.js"></script>
+    <script>
+        hljs.configure({
+            noHighlightRe: /^do-not-highlightme$/i,
+        });
+    </script>
+    <script>hljs.highlightAll();</script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="/_vercel/insights/script.js"></script>
+</head>
+
+<body class="text-sm p-2">
+    <h1 class="text-2xl  w-full mb-4">Anaylzer: <a href="/return.0.wasm">return.0.wasm</a></h1>
+    <div class="flex justify-evenly">
+        <pre class="p-4 overflow-scroll border-2"><code>
+return.0.wasm:	file format wasm 0x1
+
+Sections:
+
+     Type start&#x3D;0x0000000a end&#x3D;0x0000002b (size&#x3D;0x00000021) count: 7
+ Function start&#x3D;0x0000002d end&#x3D;0x0000006b (size&#x3D;0x0000003e) count: 61
+    Table start&#x3D;0x0000006d end&#x3D;0x00000072 (size&#x3D;0x00000005) count: 1
+   Memory start&#x3D;0x00000074 end&#x3D;0x00000077 (size&#x3D;0x00000003) count: 1
+   Global start&#x3D;0x00000079 end&#x3D;0x0000007f (size&#x3D;0x00000006) count: 1
+   Export start&#x3D;0x00000082 end&#x3D;0x0000047a (size&#x3D;0x000003f8) count: 59
+     Elem start&#x3D;0x0000047c end&#x3D;0x00000483 (size&#x3D;0x00000007) count: 1
+     Code start&#x3D;0x00000486 end&#x3D;0x0000072f (size&#x3D;0x000002a9) count: 61
+
+Section Details:
+
+Type[7]:
+ - type[0] (i32, i32, i32) -&gt; i32
+ - type[1] () -&gt; nil
+ - type[2] () -&gt; i32
+ - type[3] () -&gt; i64
+ - type[4] () -&gt; f32
+ - type[5] () -&gt; f64
+ - type[6] (i32, i32) -&gt; i32
+Function[61]:
+ - func[0] sig&#x3D;1
+ - func[1] sig&#x3D;1 &lt;type-i32&gt;
+ - func[2] sig&#x3D;1 &lt;type-i64&gt;
+ - func[3] sig&#x3D;1 &lt;type-f32&gt;
+ - func[4] sig&#x3D;1 &lt;type-f64&gt;
+ - func[5] sig&#x3D;2 &lt;type-i32-value&gt;
+ - func[6] sig&#x3D;3 &lt;type-i64-value&gt;
+ - func[7] sig&#x3D;4 &lt;type-f32-value&gt;
+ - func[8] sig&#x3D;5 &lt;type-f64-value&gt;
+ - func[9] sig&#x3D;1 &lt;nullary&gt;
+ - func[10] sig&#x3D;5 &lt;unary&gt;
+ - func[11] sig&#x3D;2 &lt;as-func-first&gt;
+ - func[12] sig&#x3D;2 &lt;as-func-mid&gt;
+ - func[13] sig&#x3D;1 &lt;as-func-last&gt;
+ - func[14] sig&#x3D;2 &lt;as-func-value&gt;
+ - func[15] sig&#x3D;1 &lt;as-block-first&gt;
+ - func[16] sig&#x3D;1 &lt;as-block-mid&gt;
+ - func[17] sig&#x3D;1 &lt;as-block-last&gt;
+ - func[18] sig&#x3D;2 &lt;as-block-value&gt;
+ - func[19] sig&#x3D;2 &lt;as-loop-first&gt;
+ - func[20] sig&#x3D;2 &lt;as-loop-mid&gt;
+ - func[21] sig&#x3D;2 &lt;as-loop-last&gt;
+ - func[22] sig&#x3D;2 &lt;as-br-value&gt;
+ - func[23] sig&#x3D;1 &lt;as-br_if-cond&gt;
+ - func[24] sig&#x3D;2 &lt;as-br_if-value&gt;
+ - func[25] sig&#x3D;2 &lt;as-br_if-value-cond&gt;
+ - func[26] sig&#x3D;3 &lt;as-br_table-index&gt;
+ - func[27] sig&#x3D;2 &lt;as-br_table-value&gt;
+ - func[28] sig&#x3D;2 &lt;as-br_table-value-index&gt;
+ - func[29] sig&#x3D;3 &lt;as-return-value&gt;
+ - func[30] sig&#x3D;2 &lt;as-if-cond&gt;
+ - func[31] sig&#x3D;6 &lt;as-if-then&gt;
+ - func[32] sig&#x3D;6 &lt;as-if-else&gt;
+ - func[33] sig&#x3D;6 &lt;as-select-first&gt;
+ - func[34] sig&#x3D;6 &lt;as-select-second&gt;
+ - func[35] sig&#x3D;2 &lt;as-select-cond&gt;
+ - func[36] sig&#x3D;0
+ - func[37] sig&#x3D;2 &lt;as-call-first&gt;
+ - func[38] sig&#x3D;2 &lt;as-call-mid&gt;
+ - func[39] sig&#x3D;2 &lt;as-call-last&gt;
+ - func[40] sig&#x3D;2 &lt;as-call_indirect-func&gt;
+ - func[41] sig&#x3D;2 &lt;as-call_indirect-first&gt;
+ - func[42] sig&#x3D;2 &lt;as-call_indirect-mid&gt;
+ - func[43] sig&#x3D;2 &lt;as-call_indirect-last&gt;
+ - func[44] sig&#x3D;2 &lt;as-local.set-value&gt;
+ - func[45] sig&#x3D;2 &lt;as-local.tee-value&gt;
+ - func[46] sig&#x3D;2 &lt;as-global.set-value&gt;
+ - func[47] sig&#x3D;4 &lt;as-load-address&gt;
+ - func[48] sig&#x3D;3 &lt;as-loadN-address&gt;
+ - func[49] sig&#x3D;2 &lt;as-store-address&gt;
+ - func[50] sig&#x3D;2 &lt;as-store-value&gt;
+ - func[51] sig&#x3D;2 &lt;as-storeN-address&gt;
+ - func[52] sig&#x3D;2 &lt;as-storeN-value&gt;
+ - func[53] sig&#x3D;4 &lt;as-unary-operand&gt;
+ - func[54] sig&#x3D;2 &lt;as-binary-left&gt;
+ - func[55] sig&#x3D;3 &lt;as-binary-right&gt;
+ - func[56] sig&#x3D;2 &lt;as-test-operand&gt;
+ - func[57] sig&#x3D;2 &lt;as-compare-left&gt;
+ - func[58] sig&#x3D;2 &lt;as-compare-right&gt;
+ - func[59] sig&#x3D;2 &lt;as-convert-operand&gt;
+ - func[60] sig&#x3D;2 &lt;as-memory.grow-size&gt;
+Table[1]:
+ - table[0] type&#x3D;funcref initial&#x3D;1 max&#x3D;1
+Memory[1]:
+ - memory[0] pages: initial&#x3D;1
+Global[1]:
+ - global[0] i32 mutable&#x3D;1 - init i32&#x3D;0
+Export[59]:
+ - func[1] &lt;type-i32&gt; -&gt; &quot;type-i32&quot;
+ - func[2] &lt;type-i64&gt; -&gt; &quot;type-i64&quot;
+ - func[3] &lt;type-f32&gt; -&gt; &quot;type-f32&quot;
+ - func[4] &lt;type-f64&gt; -&gt; &quot;type-f64&quot;
+ - func[5] &lt;type-i32-value&gt; -&gt; &quot;type-i32-value&quot;
+ - func[6] &lt;type-i64-value&gt; -&gt; &quot;type-i64-value&quot;
+ - func[7] &lt;type-f32-value&gt; -&gt; &quot;type-f32-value&quot;
+ - func[8] &lt;type-f64-value&gt; -&gt; &quot;type-f64-value&quot;
+ - func[9] &lt;nullary&gt; -&gt; &quot;nullary&quot;
+ - func[10] &lt;unary&gt; -&gt; &quot;unary&quot;
+ - func[11] &lt;as-func-first&gt; -&gt; &quot;as-func-first&quot;
+ - func[12] &lt;as-func-mid&gt; -&gt; &quot;as-func-mid&quot;
+ - func[13] &lt;as-func-last&gt; -&gt; &quot;as-func-last&quot;
+ - func[14] &lt;as-func-value&gt; -&gt; &quot;as-func-value&quot;
+ - func[15] &lt;as-block-first&gt; -&gt; &quot;as-block-first&quot;
+ - func[16] &lt;as-block-mid&gt; -&gt; &quot;as-block-mid&quot;
+ - func[17] &lt;as-block-last&gt; -&gt; &quot;as-block-last&quot;
+ - func[18] &lt;as-block-value&gt; -&gt; &quot;as-block-value&quot;
+ - func[19] &lt;as-loop-first&gt; -&gt; &quot;as-loop-first&quot;
+ - func[20] &lt;as-loop-mid&gt; -&gt; &quot;as-loop-mid&quot;
+ - func[21] &lt;as-loop-last&gt; -&gt; &quot;as-loop-last&quot;
+ - func[22] &lt;as-br-value&gt; -&gt; &quot;as-br-value&quot;
+ - func[23] &lt;as-br_if-cond&gt; -&gt; &quot;as-br_if-cond&quot;
+ - func[24] &lt;as-br_if-value&gt; -&gt; &quot;as-br_if-value&quot;
+ - func[25] &lt;as-br_if-value-cond&gt; -&gt; &quot;as-br_if-value-cond&quot;
+ - func[26] &lt;as-br_table-index&gt; -&gt; &quot;as-br_table-index&quot;
+ - func[27] &lt;as-br_table-value&gt; -&gt; &quot;as-br_table-value&quot;
+ - func[28] &lt;as-br_table-value-index&gt; -&gt; &quot;as-br_table-value-index&quot;
+ - func[29] &lt;as-return-value&gt; -&gt; &quot;as-return-value&quot;
+ - func[30] &lt;as-if-cond&gt; -&gt; &quot;as-if-cond&quot;
+ - func[31] &lt;as-if-then&gt; -&gt; &quot;as-if-then&quot;
+ - func[32] &lt;as-if-else&gt; -&gt; &quot;as-if-else&quot;
+ - func[33] &lt;as-select-first&gt; -&gt; &quot;as-select-first&quot;
+ - func[34] &lt;as-select-second&gt; -&gt; &quot;as-select-second&quot;
+ - func[35] &lt;as-select-cond&gt; -&gt; &quot;as-select-cond&quot;
+ - func[37] &lt;as-call-first&gt; -&gt; &quot;as-call-first&quot;
+ - func[38] &lt;as-call-mid&gt; -&gt; &quot;as-call-mid&quot;
+ - func[39] &lt;as-call-last&gt; -&gt; &quot;as-call-last&quot;
+ - func[40] &lt;as-call_indirect-func&gt; -&gt; &quot;as-call_indirect-func&quot;
+ - func[41] &lt;as-call_indirect-first&gt; -&gt; &quot;as-call_indirect-first&quot;
+ - func[42] &lt;as-call_indirect-mid&gt; -&gt; &quot;as-call_indirect-mid&quot;
+ - func[43] &lt;as-call_indirect-last&gt; -&gt; &quot;as-call_indirect-last&quot;
+ - func[44] &lt;as-local.set-value&gt; -&gt; &quot;as-local.set-value&quot;
+ - func[45] &lt;as-local.tee-value&gt; -&gt; &quot;as-local.tee-value&quot;
+ - func[46] &lt;as-global.set-value&gt; -&gt; &quot;as-global.set-value&quot;
+ - func[47] &lt;as-load-address&gt; -&gt; &quot;as-load-address&quot;
+ - func[48] &lt;as-loadN-address&gt; -&gt; &quot;as-loadN-address&quot;
+ - func[49] &lt;as-store-address&gt; -&gt; &quot;as-store-address&quot;
+ - func[50] &lt;as-store-value&gt; -&gt; &quot;as-store-value&quot;
+ - func[51] &lt;as-storeN-address&gt; -&gt; &quot;as-storeN-address&quot;
+ - func[52] &lt;as-storeN-value&gt; -&gt; &quot;as-storeN-value&quot;
+ - func[53] &lt;as-unary-operand&gt; -&gt; &quot;as-unary-operand&quot;
+ - func[54] &lt;as-binary-left&gt; -&gt; &quot;as-binary-left&quot;
+ - func[55] &lt;as-binary-right&gt; -&gt; &quot;as-binary-right&quot;
+ - func[56] &lt;as-test-operand&gt; -&gt; &quot;as-test-operand&quot;
+ - func[57] &lt;as-compare-left&gt; -&gt; &quot;as-compare-left&quot;
+ - func[58] &lt;as-compare-right&gt; -&gt; &quot;as-compare-right&quot;
+ - func[59] &lt;as-convert-operand&gt; -&gt; &quot;as-convert-operand&quot;
+ - func[60] &lt;as-memory.grow-size&gt; -&gt; &quot;as-memory.grow-size&quot;
+Elem[1]:
+ - segment[0] flags&#x3D;0 table&#x3D;0 count&#x3D;1 - init i32&#x3D;0
+  - elem[0] &#x3D; ref.func:36
+Code[61]:
+ - func[0] size&#x3D;2
+ - func[1] size&#x3D;5 &lt;type-i32&gt;
+ - func[2] size&#x3D;5 &lt;type-i64&gt;
+ - func[3] size&#x3D;5 &lt;type-f32&gt;
+ - func[4] size&#x3D;5 &lt;type-f64&gt;
+ - func[5] size&#x3D;9 &lt;type-i32-value&gt;
+ - func[6] size&#x3D;9 &lt;type-i64-value&gt;
+ - func[7] size&#x3D;12 &lt;type-f32-value&gt;
+ - func[8] size&#x3D;16 &lt;type-f64-value&gt;
+ - func[9] size&#x3D;3 &lt;nullary&gt;
+ - func[10] size&#x3D;12 &lt;unary&gt;
+ - func[11] size&#x3D;7 &lt;as-func-first&gt;
+ - func[12] size&#x3D;9 &lt;as-func-mid&gt;
+ - func[13] size&#x3D;6 &lt;as-func-last&gt;
+ - func[14] size&#x3D;8 &lt;as-func-value&gt;
+ - func[15] size&#x3D;8 &lt;as-block-first&gt;
+ - func[16] size&#x3D;10 &lt;as-block-mid&gt;
+ - func[17] size&#x3D;9 &lt;as-block-last&gt;
+ - func[18] size&#x3D;11 &lt;as-block-value&gt;
+ - func[19] size&#x3D;10 &lt;as-loop-first&gt;
+ - func[20] size&#x3D;12 &lt;as-loop-mid&gt;
+ - func[21] size&#x3D;11 &lt;as-loop-last&gt;
+ - func[22] size&#x3D;10 &lt;as-br-value&gt;
+ - func[23] size&#x3D;8 &lt;as-br_if-cond&gt;
+ - func[24] size&#x3D;15 &lt;as-br_if-value&gt;
+ - func[25] size&#x3D;15 &lt;as-br_if-value-cond&gt;
+ - func[26] size&#x3D;15 &lt;as-br_table-index&gt;
+ - func[27] size&#x3D;17 &lt;as-br_table-value&gt;
+ - func[28] size&#x3D;16 &lt;as-br_table-value-index&gt;
+ - func[29] size&#x3D;6 &lt;as-return-value&gt;
+ - func[30] size&#x3D;13 &lt;as-if-cond&gt;
+ - func[31] size&#x3D;13 &lt;as-if-then&gt;
+ - func[32] size&#x3D;13 &lt;as-if-else&gt;
+ - func[33] size&#x3D;10 &lt;as-select-first&gt;
+ - func[34] size&#x3D;10 &lt;as-select-second&gt;
+ - func[35] size&#x3D;10 &lt;as-select-cond&gt;
+ - func[36] size&#x3D;4
+ - func[37] size&#x3D;11 &lt;as-call-first&gt;
+ - func[38] size&#x3D;11 &lt;as-call-mid&gt;
+ - func[39] size&#x3D;11 &lt;as-call-last&gt;
+ - func[40] size&#x3D;14 &lt;as-call_indirect-func&gt;
+ - func[41] size&#x3D;14 &lt;as-call_indirect-first&gt;
+ - func[42] size&#x3D;14 &lt;as-call_indirect-mid&gt;
+ - func[43] size&#x3D;14 &lt;as-call_indirect-last&gt;
+ - func[44] size&#x3D;11 &lt;as-local.set-value&gt;
+ - func[45] size&#x3D;9 &lt;as-local.tee-value&gt;
+ - func[46] size&#x3D;7 &lt;as-global.set-value&gt;
+ - func[47] size&#x3D;11 &lt;as-load-address&gt;
+ - func[48] size&#x3D;8 &lt;as-loadN-address&gt;
+ - func[49] size&#x3D;19 &lt;as-store-address&gt;
+ - func[50] size&#x3D;12 &lt;as-store-value&gt;
+ - func[51] size&#x3D;12 &lt;as-storeN-address&gt;
+ - func[52] size&#x3D;12 &lt;as-storeN-value&gt;
+ - func[53] size&#x3D;9 &lt;as-unary-operand&gt;
+ - func[54] size&#x3D;8 &lt;as-binary-left&gt;
+ - func[55] size&#x3D;8 &lt;as-binary-right&gt;
+ - func[56] size&#x3D;6 &lt;as-test-operand&gt;
+ - func[57] size&#x3D;15 &lt;as-compare-left&gt;
+ - func[58] size&#x3D;11 &lt;as-compare-right&gt;
+ - func[59] size&#x3D;6 &lt;as-convert-operand&gt;
+ - func[60] size&#x3D;7 &lt;as-memory.grow-size&gt;
+
+Contents of section Type:
+000000a: 0760 037f 7f7f 017f 6000 0060 0001 7f60  .&#x60;......&#x60;..&#x60;...&#x60;
+000001a: 0001 7e60 0001 7d60 0001 7c60 027f 7f01  ..~&#x60;..}&#x60;..|&#x60;....
+000002a: 7f                                       .
+
+Contents of section Function:
+000002d: 3d01 0101 0101 0203 0405 0105 0202 0102  &#x3D;...............
+000003d: 0101 0102 0202 0202 0102 0203 0202 0302  ................
+000004d: 0606 0606 0200 0202 0202 0202 0202 0202  ................
+000005d: 0403 0202 0202 0402 0302 0202 0202       ..............
+
+Contents of section Table:
+000006d: 0170 0101 01                             .p...
+
+Contents of section Memory:
+0000074: 0100 01                                  ...
+
+Contents of section Global:
+0000079: 017f 0141 000b                           ...A..
+
+Contents of section Export:
+0000082: 3b08 7479 7065 2d69 3332 0001 0874 7970  ;.type-i32...typ
+0000092: 652d 6936 3400 0208 7479 7065 2d66 3332  e-i64...type-f32
+00000a2: 0003 0874 7970 652d 6636 3400 040e 7479  ...type-f64...ty
+00000b2: 7065 2d69 3332 2d76 616c 7565 0005 0e74  pe-i32-value...t
+00000c2: 7970 652d 6936 342d 7661 6c75 6500 060e  ype-i64-value...
+00000d2: 7479 7065 2d66 3332 2d76 616c 7565 0007  type-f32-value..
+00000e2: 0e74 7970 652d 6636 342d 7661 6c75 6500  .type-f64-value.
+00000f2: 0807 6e75 6c6c 6172 7900 0905 756e 6172  ..nullary...unar
+0000102: 7900 0a0d 6173 2d66 756e 632d 6669 7273  y...as-func-firs
+0000112: 7400 0b0b 6173 2d66 756e 632d 6d69 6400  t...as-func-mid.
+0000122: 0c0c 6173 2d66 756e 632d 6c61 7374 000d  ..as-func-last..
+0000132: 0d61 732d 6675 6e63 2d76 616c 7565 000e  .as-func-value..
+0000142: 0e61 732d 626c 6f63 6b2d 6669 7273 7400  .as-block-first.
+0000152: 0f0c 6173 2d62 6c6f 636b 2d6d 6964 0010  ..as-block-mid..
+0000162: 0d61 732d 626c 6f63 6b2d 6c61 7374 0011  .as-block-last..
+0000172: 0e61 732d 626c 6f63 6b2d 7661 6c75 6500  .as-block-value.
+0000182: 120d 6173 2d6c 6f6f 702d 6669 7273 7400  ..as-loop-first.
+0000192: 130b 6173 2d6c 6f6f 702d 6d69 6400 140c  ..as-loop-mid...
+00001a2: 6173 2d6c 6f6f 702d 6c61 7374 0015 0b61  as-loop-last...a
+00001b2: 732d 6272 2d76 616c 7565 0016 0d61 732d  s-br-value...as-
+00001c2: 6272 5f69 662d 636f 6e64 0017 0e61 732d  br_if-cond...as-
+00001d2: 6272 5f69 662d 7661 6c75 6500 1813 6173  br_if-value...as
+00001e2: 2d62 725f 6966 2d76 616c 7565 2d63 6f6e  -br_if-value-con
+00001f2: 6400 1911 6173 2d62 725f 7461 626c 652d  d...as-br_table-
+0000202: 696e 6465 7800 1a11 6173 2d62 725f 7461  index...as-br_ta
+0000212: 626c 652d 7661 6c75 6500 1b17 6173 2d62  ble-value...as-b
+0000222: 725f 7461 626c 652d 7661 6c75 652d 696e  r_table-value-in
+0000232: 6465 7800 1c0f 6173 2d72 6574 7572 6e2d  dex...as-return-
+0000242: 7661 6c75 6500 1d0a 6173 2d69 662d 636f  value...as-if-co
+0000252: 6e64 001e 0a61 732d 6966 2d74 6865 6e00  nd...as-if-then.
+0000262: 1f0a 6173 2d69 662d 656c 7365 0020 0f61  ..as-if-else. .a
+0000272: 732d 7365 6c65 6374 2d66 6972 7374 0021  s-select-first.!
+0000282: 1061 732d 7365 6c65 6374 2d73 6563 6f6e  .as-select-secon
+0000292: 6400 220e 6173 2d73 656c 6563 742d 636f  d.&quot;.as-select-co
+00002a2: 6e64 0023 0d61 732d 6361 6c6c 2d66 6972  nd.#.as-call-fir
+00002b2: 7374 0025 0b61 732d 6361 6c6c 2d6d 6964  st.%.as-call-mid
+00002c2: 0026 0c61 732d 6361 6c6c 2d6c 6173 7400  .&amp;.as-call-last.
+00002d2: 2715 6173 2d63 616c 6c5f 696e 6469 7265  &#x27;.as-call_indire
+00002e2: 6374 2d66 756e 6300 2816 6173 2d63 616c  ct-func.(.as-cal
+00002f2: 6c5f 696e 6469 7265 6374 2d66 6972 7374  l_indirect-first
+0000302: 0029 1461 732d 6361 6c6c 5f69 6e64 6972  .).as-call_indir
+0000312: 6563 742d 6d69 6400 2a15 6173 2d63 616c  ect-mid.*.as-cal
+0000322: 6c5f 696e 6469 7265 6374 2d6c 6173 7400  l_indirect-last.
+0000332: 2b12 6173 2d6c 6f63 616c 2e73 6574 2d76  +.as-local.set-v
+0000342: 616c 7565 002c 1261 732d 6c6f 6361 6c2e  alue.,.as-local.
+0000352: 7465 652d 7661 6c75 6500 2d13 6173 2d67  tee-value.-.as-g
+0000362: 6c6f 6261 6c2e 7365 742d 7661 6c75 6500  lobal.set-value.
+0000372: 2e0f 6173 2d6c 6f61 642d 6164 6472 6573  ..as-load-addres
+0000382: 7300 2f10 6173 2d6c 6f61 644e 2d61 6464  s./.as-loadN-add
+0000392: 7265 7373 0030 1061 732d 7374 6f72 652d  ress.0.as-store-
+00003a2: 6164 6472 6573 7300 310e 6173 2d73 746f  address.1.as-sto
+00003b2: 7265 2d76 616c 7565 0032 1161 732d 7374  re-value.2.as-st
+00003c2: 6f72 654e 2d61 6464 7265 7373 0033 0f61  oreN-address.3.a
+00003d2: 732d 7374 6f72 654e 2d76 616c 7565 0034  s-storeN-value.4
+00003e2: 1061 732d 756e 6172 792d 6f70 6572 616e  .as-unary-operan
+00003f2: 6400 350e 6173 2d62 696e 6172 792d 6c65  d.5.as-binary-le
+0000402: 6674 0036 0f61 732d 6269 6e61 7279 2d72  ft.6.as-binary-r
+0000412: 6967 6874 0037 0f61 732d 7465 7374 2d6f  ight.7.as-test-o
+0000422: 7065 7261 6e64 0038 0f61 732d 636f 6d70  perand.8.as-comp
+0000432: 6172 652d 6c65 6674 0039 1061 732d 636f  are-left.9.as-co
+0000442: 6d70 6172 652d 7269 6768 7400 3a12 6173  mpare-right.:.as
+0000452: 2d63 6f6e 7665 7274 2d6f 7065 7261 6e64  -convert-operand
+0000462: 003b 1361 732d 6d65 6d6f 7279 2e67 726f  .;.as-memory.gro
+0000472: 772d 7369 7a65 003c                      w-size.&lt;
+
+Contents of section Elem:
+000047c: 0100 4100 0b01 24                        ..A...$
+
+Contents of section Code:
+0000486: 3d02 000b 0500 0f68 1a0b 0500 0f7a 1a0b  &#x3D;......h.....z..
+0000496: 0500 0f8c 1a0b 0500 0f9a 1a0b 0900 027f  ................
+00004a6: 4101 0f68 0b0b 0900 027e 4202 0f7a 0b0b  A..h.....~B..z..
+00004b6: 0c00 027d 4300 0040 400f 8c0b 0b10 0002  ...}C..@@.......
+00004c6: 7c44 0000 0000 0000 1040 0f9a 0b0b 0300  |D.......@......
+00004d6: 0f0b 0c00 4400 0000 0000 0008 400f 0b07  ....D.......@...
+00004e6: 0041 010f 4102 0b09 0010 0041 020f 4103  .A..A......A..A.
+00004f6: 0b06 0001 1000 0f0b 0800 0110 0041 030f  .............A..
+0000506: 0b08 0002 400f 1000 0b0b 0a00 0240 1000  ....@........@..
+0000516: 0f10 000b 0b09 0002 4001 1000 0f0b 0b0b  ........@.......
+0000526: 0002 7f01 1000 4102 0f0b 0b0a 0003 7f41  ......A........A
+0000536: 030f 4102 0b0b 0c00 037f 1000 4104 0f41  ..A.........A..A
+0000546: 020b 0b0b 0003 7f01 1000 4105 0f0b 0b0a  ..........A.....
+0000556: 0002 7f41 090f 0c00 0b0b 0800 0240 0f0d  ...A.........@..
+0000566: 000b 0b0f 0002 7f41 080f 4101 0d00 1a41  .......A..A....A
+0000576: 070b 0b0f 0002 7f41 0641 090f 0d00 1a41  .......A.A.....A
+0000586: 070b 0b0f 0002 4042 090f 0e02 0000 000b  ......@B........
+0000596: 427f 0b11 0002 7f41 0a0f 4101 0e02 0000  B......A..A.....
+00005a6: 0041 070b 0b10 0002 7f41 0641 0b0f 0e01  .A.......A.A....
+00005b6: 0000 4107 0b0b 0600 4207 0f0f 0b0d 0041  ..A.....B......A
+00005c6: 020f 047f 4100 0541 010b 0b0d 0020 0004  ....A..A..... ..
+00005d6: 7f41 030f 0520 010b 0b0d 0020 0004 7f20  .A... ..... ... 
+00005e6: 0105 4104 0f0b 0b0a 0041 050f 2000 2001  ..A......A.. . .
+00005f6: 1b0b 0a00 2000 4106 0f20 011b 0b0a 0041  .... .A.. .....A
+0000606: 0041 0141 070f 1b0b 0400 417f 0b0b 0041  .A.A......A....A
+0000616: 0c0f 4102 4103 1024 0b0b 0041 0141 0d0f  ..A.A..$...A.A..
+0000626: 4103 1024 0b0b 0041 0141 0241 0e0f 1024  A..$...A.A.A...$
+0000636: 0b0e 0041 140f 4101 4102 4103 1100 000b  ...A..A.A.A.....
+0000646: 0e00 4100 4115 0f41 0241 0311 0000 0b0e  ..A.A..A.A......
+0000656: 0041 0041 0141 160f 4103 1100 000b 0e00  .A.A.A..A.......
+0000666: 4100 4101 4102 4117 0f11 0000 0b0b 0101  A.A.A.A.........
+0000676: 7d41 110f 2100 417f 0b09 0101 7f41 010f  }A..!.A......A..
+0000686: 2200 0b07 0041 010f 2400 0b0b 0043 9a99  &quot;....A..$....C..
+0000696: d93f 0f2a 0200 0b08 0042 1e0f 3000 000b  .?.*.....B..0...
+00006a6: 1300 411e 0f44 0000 0000 0000 1c40 3903  ..A..D.......@9.
+00006b6: 0041 7f0b 0c00 4102 411f 0f37 0300 417f  .A....A.A..7..A.
+00006c6: 0b0c 0041 200f 4107 3a00 0041 7f0b 0c00  ...A .A.:..A....
+00006d6: 4102 4121 0f3d 0100 417f 0b09 0043 9a99  A.A!.&#x3D;..A....C..
+00006e6: 5940 0f8c 0b08 0041 030f 410a 6a0b 0800  Y@.....A..A.j...
+00006f6: 420a 422d 0f7d 0b06 0041 2c0f 450b 0f00  B.B-.}...A,.E...
+0000706: 412b 0f44 0000 0000 0000 2440 650b 0b00  A+.D......$@e...
+0000716: 4300 0020 4141 2a0f 5c0b 0600 4129 0fa7  C.. AA*.\...A)..
+0000726: 0b07 0041 280f 4000 0b                   ...A(.@..
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2"><code>BeginModule(version: 1)
+  BeginTypeSection(33)
+    OnTypeCount(7)
+    OnFuncType(index: 0, params: [i32, i32, i32], results: [i32])
+    OnFuncType(index: 1, params: [], results: [])
+    OnFuncType(index: 2, params: [], results: [i32])
+    OnFuncType(index: 3, params: [], results: [i64])
+    OnFuncType(index: 4, params: [], results: [f32])
+    OnFuncType(index: 5, params: [], results: [f64])
+    OnFuncType(index: 6, params: [i32, i32], results: [i32])
+  EndTypeSection
+  BeginFunctionSection(62)
+    OnFunctionCount(61)
+    OnFunction(index: 0, sig_index: 1)
+    OnFunction(index: 1, sig_index: 1)
+    OnFunction(index: 2, sig_index: 1)
+    OnFunction(index: 3, sig_index: 1)
+    OnFunction(index: 4, sig_index: 1)
+    OnFunction(index: 5, sig_index: 2)
+    OnFunction(index: 6, sig_index: 3)
+    OnFunction(index: 7, sig_index: 4)
+    OnFunction(index: 8, sig_index: 5)
+    OnFunction(index: 9, sig_index: 1)
+    OnFunction(index: 10, sig_index: 5)
+    OnFunction(index: 11, sig_index: 2)
+    OnFunction(index: 12, sig_index: 2)
+    OnFunction(index: 13, sig_index: 1)
+    OnFunction(index: 14, sig_index: 2)
+    OnFunction(index: 15, sig_index: 1)
+    OnFunction(index: 16, sig_index: 1)
+    OnFunction(index: 17, sig_index: 1)
+    OnFunction(index: 18, sig_index: 2)
+    OnFunction(index: 19, sig_index: 2)
+    OnFunction(index: 20, sig_index: 2)
+    OnFunction(index: 21, sig_index: 2)
+    OnFunction(index: 22, sig_index: 2)
+    OnFunction(index: 23, sig_index: 1)
+    OnFunction(index: 24, sig_index: 2)
+    OnFunction(index: 25, sig_index: 2)
+    OnFunction(index: 26, sig_index: 3)
+    OnFunction(index: 27, sig_index: 2)
+    OnFunction(index: 28, sig_index: 2)
+    OnFunction(index: 29, sig_index: 3)
+    OnFunction(index: 30, sig_index: 2)
+    OnFunction(index: 31, sig_index: 6)
+    OnFunction(index: 32, sig_index: 6)
+    OnFunction(index: 33, sig_index: 6)
+    OnFunction(index: 34, sig_index: 6)
+    OnFunction(index: 35, sig_index: 2)
+    OnFunction(index: 36, sig_index: 0)
+    OnFunction(index: 37, sig_index: 2)
+    OnFunction(index: 38, sig_index: 2)
+    OnFunction(index: 39, sig_index: 2)
+    OnFunction(index: 40, sig_index: 2)
+    OnFunction(index: 41, sig_index: 2)
+    OnFunction(index: 42, sig_index: 2)
+    OnFunction(index: 43, sig_index: 2)
+    OnFunction(index: 44, sig_index: 2)
+    OnFunction(index: 45, sig_index: 2)
+    OnFunction(index: 46, sig_index: 2)
+    OnFunction(index: 47, sig_index: 4)
+    OnFunction(index: 48, sig_index: 3)
+    OnFunction(index: 49, sig_index: 2)
+    OnFunction(index: 50, sig_index: 2)
+    OnFunction(index: 51, sig_index: 2)
+    OnFunction(index: 52, sig_index: 2)
+    OnFunction(index: 53, sig_index: 4)
+    OnFunction(index: 54, sig_index: 2)
+    OnFunction(index: 55, sig_index: 3)
+    OnFunction(index: 56, sig_index: 2)
+    OnFunction(index: 57, sig_index: 2)
+    OnFunction(index: 58, sig_index: 2)
+    OnFunction(index: 59, sig_index: 2)
+    OnFunction(index: 60, sig_index: 2)
+  EndFunctionSection
+  BeginTableSection(5)
+    OnTableCount(1)
+    OnTable(index: 0, elem_type: funcref, initial: 1, max: 1)
+  EndTableSection
+  BeginMemorySection(3)
+    OnMemoryCount(1)
+    OnMemory(index: 0, initial: 1)
+  EndMemorySection
+  BeginGlobalSection(6)
+    OnGlobalCount(1)
+    BeginGlobal(index: 0, type: i32, mutable: true)
+    BeginGlobalInitExpr(0)
+    OnI32ConstExpr(0 (0x0))
+    OnEndExpr
+    EndGlobalInitExpr(0)
+    EndGlobal(0)
+  EndGlobalSection
+  BeginExportSection(1016)
+    OnExportCount(59)
+    OnExport(index: 0, kind: func, item_index: 1, name: &quot;type-i32&quot;)
+    OnExport(index: 1, kind: func, item_index: 2, name: &quot;type-i64&quot;)
+    OnExport(index: 2, kind: func, item_index: 3, name: &quot;type-f32&quot;)
+    OnExport(index: 3, kind: func, item_index: 4, name: &quot;type-f64&quot;)
+    OnExport(index: 4, kind: func, item_index: 5, name: &quot;type-i32-value&quot;)
+    OnExport(index: 5, kind: func, item_index: 6, name: &quot;type-i64-value&quot;)
+    OnExport(index: 6, kind: func, item_index: 7, name: &quot;type-f32-value&quot;)
+    OnExport(index: 7, kind: func, item_index: 8, name: &quot;type-f64-value&quot;)
+    OnExport(index: 8, kind: func, item_index: 9, name: &quot;nullary&quot;)
+    OnExport(index: 9, kind: func, item_index: 10, name: &quot;unary&quot;)
+    OnExport(index: 10, kind: func, item_index: 11, name: &quot;as-func-first&quot;)
+    OnExport(index: 11, kind: func, item_index: 12, name: &quot;as-func-mid&quot;)
+    OnExport(index: 12, kind: func, item_index: 13, name: &quot;as-func-last&quot;)
+    OnExport(index: 13, kind: func, item_index: 14, name: &quot;as-func-value&quot;)
+    OnExport(index: 14, kind: func, item_index: 15, name: &quot;as-block-first&quot;)
+    OnExport(index: 15, kind: func, item_index: 16, name: &quot;as-block-mid&quot;)
+    OnExport(index: 16, kind: func, item_index: 17, name: &quot;as-block-last&quot;)
+    OnExport(index: 17, kind: func, item_index: 18, name: &quot;as-block-value&quot;)
+    OnExport(index: 18, kind: func, item_index: 19, name: &quot;as-loop-first&quot;)
+    OnExport(index: 19, kind: func, item_index: 20, name: &quot;as-loop-mid&quot;)
+    OnExport(index: 20, kind: func, item_index: 21, name: &quot;as-loop-last&quot;)
+    OnExport(index: 21, kind: func, item_index: 22, name: &quot;as-br-value&quot;)
+    OnExport(index: 22, kind: func, item_index: 23, name: &quot;as-br_if-cond&quot;)
+    OnExport(index: 23, kind: func, item_index: 24, name: &quot;as-br_if-value&quot;)
+    OnExport(index: 24, kind: func, item_index: 25, name: &quot;as-br_if-value-cond&quot;)
+    OnExport(index: 25, kind: func, item_index: 26, name: &quot;as-br_table-index&quot;)
+    OnExport(index: 26, kind: func, item_index: 27, name: &quot;as-br_table-value&quot;)
+    OnExport(index: 27, kind: func, item_index: 28, name: &quot;as-br_table-value-index&quot;)
+    OnExport(index: 28, kind: func, item_index: 29, name: &quot;as-return-value&quot;)
+    OnExport(index: 29, kind: func, item_index: 30, name: &quot;as-if-cond&quot;)
+    OnExport(index: 30, kind: func, item_index: 31, name: &quot;as-if-then&quot;)
+    OnExport(index: 31, kind: func, item_index: 32, name: &quot;as-if-else&quot;)
+    OnExport(index: 32, kind: func, item_index: 33, name: &quot;as-select-first&quot;)
+    OnExport(index: 33, kind: func, item_index: 34, name: &quot;as-select-second&quot;)
+    OnExport(index: 34, kind: func, item_index: 35, name: &quot;as-select-cond&quot;)
+    OnExport(index: 35, kind: func, item_index: 37, name: &quot;as-call-first&quot;)
+    OnExport(index: 36, kind: func, item_index: 38, name: &quot;as-call-mid&quot;)
+    OnExport(index: 37, kind: func, item_index: 39, name: &quot;as-call-last&quot;)
+    OnExport(index: 38, kind: func, item_index: 40, name: &quot;as-call_indirect-func&quot;)
+    OnExport(index: 39, kind: func, item_index: 41, name: &quot;as-call_indirect-first&quot;)
+    OnExport(index: 40, kind: func, item_index: 42, name: &quot;as-call_indirect-mid&quot;)
+    OnExport(index: 41, kind: func, item_index: 43, name: &quot;as-call_indirect-last&quot;)
+    OnExport(index: 42, kind: func, item_index: 44, name: &quot;as-local.set-value&quot;)
+    OnExport(index: 43, kind: func, item_index: 45, name: &quot;as-local.tee-value&quot;)
+    OnExport(index: 44, kind: func, item_index: 46, name: &quot;as-global.set-value&quot;)
+    OnExport(index: 45, kind: func, item_index: 47, name: &quot;as-load-address&quot;)
+    OnExport(index: 46, kind: func, item_index: 48, name: &quot;as-loadN-address&quot;)
+    OnExport(index: 47, kind: func, item_index: 49, name: &quot;as-store-address&quot;)
+    OnExport(index: 48, kind: func, item_index: 50, name: &quot;as-store-value&quot;)
+    OnExport(index: 49, kind: func, item_index: 51, name: &quot;as-storeN-address&quot;)
+    OnExport(index: 50, kind: func, item_index: 52, name: &quot;as-storeN-value&quot;)
+    OnExport(index: 51, kind: func, item_index: 53, name: &quot;as-unary-operand&quot;)
+    OnExport(index: 52, kind: func, item_index: 54, name: &quot;as-binary-left&quot;)
+    OnExport(index: 53, kind: func, item_index: 55, name: &quot;as-binary-right&quot;)
+    OnExport(index: 54, kind: func, item_index: 56, name: &quot;as-test-operand&quot;)
+    OnExport(index: 55, kind: func, item_index: 57, name: &quot;as-compare-left&quot;)
+    OnExport(index: 56, kind: func, item_index: 58, name: &quot;as-compare-right&quot;)
+    OnExport(index: 57, kind: func, item_index: 59, name: &quot;as-convert-operand&quot;)
+    OnExport(index: 58, kind: func, item_index: 60, name: &quot;as-memory.grow-size&quot;)
+  EndExportSection
+  BeginElemSection(7)
+    OnElemSegmentCount(1)
+    BeginElemSegment(index: 0, table_index: 0, flags: 0)
+    BeginElemSegmentInitExpr(0)
+    OnI32ConstExpr(0 (0x0))
+    OnEndExpr
+    EndElemSegmentInitExpr(0)
+    OnElemSegmentElemType(index: 0, type: funcref)
+    OnElemSegmentElemExprCount(index: 0, count: 1)
+    BeginElemExpr(elem_index: 0, expr_index: 0)
+    OnRefFuncExpr(36)
+    OnEndExpr
+    EndElemExpr(elem_index: 0, expr_index: 0)
+    EndElemSegment(0)
+  EndElemSection
+  BeginCodeSection(681)
+    OnFunctionBodyCount(61)
+    BeginFunctionBody(0, size:2)
+    OnLocalDeclCount(0)
+    EndFunctionBody(0)
+    BeginFunctionBody(1, size:5)
+    OnLocalDeclCount(0)
+    EndFunctionBody(1)
+    BeginFunctionBody(2, size:5)
+    OnLocalDeclCount(0)
+    EndFunctionBody(2)
+    BeginFunctionBody(3, size:5)
+    OnLocalDeclCount(0)
+    EndFunctionBody(3)
+    BeginFunctionBody(4, size:5)
+    OnLocalDeclCount(0)
+    EndFunctionBody(4)
+    BeginFunctionBody(5, size:9)
+    OnLocalDeclCount(0)
+    EndFunctionBody(5)
+    BeginFunctionBody(6, size:9)
+    OnLocalDeclCount(0)
+    EndFunctionBody(6)
+    BeginFunctionBody(7, size:12)
+    OnLocalDeclCount(0)
+    EndFunctionBody(7)
+    BeginFunctionBody(8, size:16)
+    OnLocalDeclCount(0)
+    EndFunctionBody(8)
+    BeginFunctionBody(9, size:3)
+    OnLocalDeclCount(0)
+    EndFunctionBody(9)
+    BeginFunctionBody(10, size:12)
+    OnLocalDeclCount(0)
+    EndFunctionBody(10)
+    BeginFunctionBody(11, size:7)
+    OnLocalDeclCount(0)
+    EndFunctionBody(11)
+    BeginFunctionBody(12, size:9)
+    OnLocalDeclCount(0)
+    EndFunctionBody(12)
+    BeginFunctionBody(13, size:6)
+    OnLocalDeclCount(0)
+    EndFunctionBody(13)
+    BeginFunctionBody(14, size:8)
+    OnLocalDeclCount(0)
+    EndFunctionBody(14)
+    BeginFunctionBody(15, size:8)
+    OnLocalDeclCount(0)
+    EndFunctionBody(15)
+    BeginFunctionBody(16, size:10)
+    OnLocalDeclCount(0)
+    EndFunctionBody(16)
+    BeginFunctionBody(17, size:9)
+    OnLocalDeclCount(0)
+    EndFunctionBody(17)
+    BeginFunctionBody(18, size:11)
+    OnLocalDeclCount(0)
+    EndFunctionBody(18)
+    BeginFunctionBody(19, size:10)
+    OnLocalDeclCount(0)
+    EndFunctionBody(19)
+    BeginFunctionBody(20, size:12)
+    OnLocalDeclCount(0)
+    EndFunctionBody(20)
+    BeginFunctionBody(21, size:11)
+    OnLocalDeclCount(0)
+    EndFunctionBody(21)
+    BeginFunctionBody(22, size:10)
+    OnLocalDeclCount(0)
+    EndFunctionBody(22)
+    BeginFunctionBody(23, size:8)
+    OnLocalDeclCount(0)
+    EndFunctionBody(23)
+    BeginFunctionBody(24, size:15)
+    OnLocalDeclCount(0)
+    EndFunctionBody(24)
+    BeginFunctionBody(25, size:15)
+    OnLocalDeclCount(0)
+    EndFunctionBody(25)
+    BeginFunctionBody(26, size:15)
+    OnLocalDeclCount(0)
+    EndFunctionBody(26)
+    BeginFunctionBody(27, size:17)
+    OnLocalDeclCount(0)
+    EndFunctionBody(27)
+    BeginFunctionBody(28, size:16)
+    OnLocalDeclCount(0)
+    EndFunctionBody(28)
+    BeginFunctionBody(29, size:6)
+    OnLocalDeclCount(0)
+    EndFunctionBody(29)
+    BeginFunctionBody(30, size:13)
+    OnLocalDeclCount(0)
+    EndFunctionBody(30)
+    BeginFunctionBody(31, size:13)
+    OnLocalDeclCount(0)
+    EndFunctionBody(31)
+    BeginFunctionBody(32, size:13)
+    OnLocalDeclCount(0)
+    EndFunctionBody(32)
+    BeginFunctionBody(33, size:10)
+    OnLocalDeclCount(0)
+    EndFunctionBody(33)
+    BeginFunctionBody(34, size:10)
+    OnLocalDeclCount(0)
+    EndFunctionBody(34)
+    BeginFunctionBody(35, size:10)
+    OnLocalDeclCount(0)
+    EndFunctionBody(35)
+    BeginFunctionBody(36, size:4)
+    OnLocalDeclCount(0)
+    EndFunctionBody(36)
+    BeginFunctionBody(37, size:11)
+    OnLocalDeclCount(0)
+    EndFunctionBody(37)
+    BeginFunctionBody(38, size:11)
+    OnLocalDeclCount(0)
+    EndFunctionBody(38)
+    BeginFunctionBody(39, size:11)
+    OnLocalDeclCount(0)
+    EndFunctionBody(39)
+    BeginFunctionBody(40, size:14)
+    OnLocalDeclCount(0)
+    EndFunctionBody(40)
+    BeginFunctionBody(41, size:14)
+    OnLocalDeclCount(0)
+    EndFunctionBody(41)
+    BeginFunctionBody(42, size:14)
+    OnLocalDeclCount(0)
+    EndFunctionBody(42)
+    BeginFunctionBody(43, size:14)
+    OnLocalDeclCount(0)
+    EndFunctionBody(43)
+    BeginFunctionBody(44, size:11)
+    OnLocalDeclCount(1)
+    OnLocalDecl(index: 0, count: 1, type: f32)
+    EndFunctionBody(44)
+    BeginFunctionBody(45, size:9)
+    OnLocalDeclCount(1)
+    OnLocalDecl(index: 0, count: 1, type: i32)
+    EndFunctionBody(45)
+    BeginFunctionBody(46, size:7)
+    OnLocalDeclCount(0)
+    EndFunctionBody(46)
+    BeginFunctionBody(47, size:11)
+    OnLocalDeclCount(0)
+    EndFunctionBody(47)
+    BeginFunctionBody(48, size:8)
+    OnLocalDeclCount(0)
+    EndFunctionBody(48)
+    BeginFunctionBody(49, size:19)
+    OnLocalDeclCount(0)
+    EndFunctionBody(49)
+    BeginFunctionBody(50, size:12)
+    OnLocalDeclCount(0)
+    EndFunctionBody(50)
+    BeginFunctionBody(51, size:12)
+    OnLocalDeclCount(0)
+    EndFunctionBody(51)
+    BeginFunctionBody(52, size:12)
+    OnLocalDeclCount(0)
+    EndFunctionBody(52)
+    BeginFunctionBody(53, size:9)
+    OnLocalDeclCount(0)
+    EndFunctionBody(53)
+    BeginFunctionBody(54, size:8)
+    OnLocalDeclCount(0)
+    EndFunctionBody(54)
+    BeginFunctionBody(55, size:8)
+    OnLocalDeclCount(0)
+    EndFunctionBody(55)
+    BeginFunctionBody(56, size:6)
+    OnLocalDeclCount(0)
+    EndFunctionBody(56)
+    BeginFunctionBody(57, size:15)
+    OnLocalDeclCount(0)
+    EndFunctionBody(57)
+    BeginFunctionBody(58, size:11)
+    OnLocalDeclCount(0)
+    EndFunctionBody(58)
+    BeginFunctionBody(59, size:6)
+    OnLocalDeclCount(0)
+    EndFunctionBody(59)
+    BeginFunctionBody(60, size:7)
+    OnLocalDeclCount(0)
+    EndFunctionBody(60)
+  EndCodeSection
+EndModule
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2 do-not-highlightme"><code>00000000: 00 61 73 6D 01 00 00 00  .asm....
+00000008: 01 21 07 60 03 7F 7F 7F  .!.&#x60;....
+00000010: 01 7F 60 00 00 60 00 01  ..&#x60;..&#x60;..
+00000018: 7F 60 00 01 7E 60 00 01  .&#x60;..~&#x60;..
+00000020: 7D 60 00 01 7C 60 02 7F  }&#x60;..|&#x60;..
+00000028: 7F 01 7F 03 3E 3D 01 01  ....&gt;&#x3D;..
+00000030: 01 01 01 02 03 04 05 01  ........
+00000038: 05 02 02 01 02 01 01 01  ........
+00000040: 02 02 02 02 02 01 02 02  ........
+00000048: 03 02 02 03 02 06 06 06  ........
+00000050: 06 02 00 02 02 02 02 02  ........
+00000058: 02 02 02 02 02 04 03 02  ........
+00000060: 02 02 02 04 02 03 02 02  ........
+00000068: 02 02 02 04 05 01 70 01  ......p.
+00000070: 01 01 05 03 01 00 01 06  ........
+00000078: 06 01 7F 01 41 00 0B 07  ....A...
+00000080: F8 07 3B 08 74 79 70 65  ..;.type
+00000088: 2D 69 33 32 00 01 08 74  -i32...t
+00000090: 79 70 65 2D 69 36 34 00  ype-i64.
+00000098: 02 08 74 79 70 65 2D 66  ..type-f
+000000a0: 33 32 00 03 08 74 79 70  32...typ
+000000a8: 65 2D 66 36 34 00 04 0E  e-f64...
+000000b0: 74 79 70 65 2D 69 33 32  type-i32
+000000b8: 2D 76 61 6C 75 65 00 05  -value..
+000000c0: 0E 74 79 70 65 2D 69 36  .type-i6
+000000c8: 34 2D 76 61 6C 75 65 00  4-value.
+000000d0: 06 0E 74 79 70 65 2D 66  ..type-f
+000000d8: 33 32 2D 76 61 6C 75 65  32-value
+000000e0: 00 07 0E 74 79 70 65 2D  ...type-
+000000e8: 66 36 34 2D 76 61 6C 75  f64-valu
+000000f0: 65 00 08 07 6E 75 6C 6C  e...null
+000000f8: 61 72 79 00 09 05 75 6E  ary...un
+00000100: 61 72 79 00 0A 0D 61 73  ary...as
+00000108: 2D 66 75 6E 63 2D 66 69  -func-fi
+00000110: 72 73 74 00 0B 0B 61 73  rst...as
+00000118: 2D 66 75 6E 63 2D 6D 69  -func-mi
+00000120: 64 00 0C 0C 61 73 2D 66  d...as-f
+00000128: 75 6E 63 2D 6C 61 73 74  unc-last
+00000130: 00 0D 0D 61 73 2D 66 75  ...as-fu
+00000138: 6E 63 2D 76 61 6C 75 65  nc-value
+00000140: 00 0E 0E 61 73 2D 62 6C  ...as-bl
+00000148: 6F 63 6B 2D 66 69 72 73  ock-firs
+00000150: 74 00 0F 0C 61 73 2D 62  t...as-b
+00000158: 6C 6F 63 6B 2D 6D 69 64  lock-mid
+00000160: 00 10 0D 61 73 2D 62 6C  ...as-bl
+00000168: 6F 63 6B 2D 6C 61 73 74  ock-last
+00000170: 00 11 0E 61 73 2D 62 6C  ...as-bl
+00000178: 6F 63 6B 2D 76 61 6C 75  ock-valu
+00000180: 65 00 12 0D 61 73 2D 6C  e...as-l
+00000188: 6F 6F 70 2D 66 69 72 73  oop-firs
+00000190: 74 00 13 0B 61 73 2D 6C  t...as-l
+00000198: 6F 6F 70 2D 6D 69 64 00  oop-mid.
+000001a0: 14 0C 61 73 2D 6C 6F 6F  ..as-loo
+000001a8: 70 2D 6C 61 73 74 00 15  p-last..
+000001b0: 0B 61 73 2D 62 72 2D 76  .as-br-v
+000001b8: 61 6C 75 65 00 16 0D 61  alue...a
+000001c0: 73 2D 62 72 5F 69 66 2D  s-br_if-
+000001c8: 63 6F 6E 64 00 17 0E 61  cond...a
+000001d0: 73 2D 62 72 5F 69 66 2D  s-br_if-
+000001d8: 76 61 6C 75 65 00 18 13  value...
+000001e0: 61 73 2D 62 72 5F 69 66  as-br_if
+000001e8: 2D 76 61 6C 75 65 2D 63  -value-c
+000001f0: 6F 6E 64 00 19 11 61 73  ond...as
+000001f8: 2D 62 72 5F 74 61 62 6C  -br_tabl
+00000200: 65 2D 69 6E 64 65 78 00  e-index.
+00000208: 1A 11 61 73 2D 62 72 5F  ..as-br_
+00000210: 74 61 62 6C 65 2D 76 61  table-va
+00000218: 6C 75 65 00 1B 17 61 73  lue...as
+00000220: 2D 62 72 5F 74 61 62 6C  -br_tabl
+00000228: 65 2D 76 61 6C 75 65 2D  e-value-
+00000230: 69 6E 64 65 78 00 1C 0F  index...
+00000238: 61 73 2D 72 65 74 75 72  as-retur
+00000240: 6E 2D 76 61 6C 75 65 00  n-value.
+00000248: 1D 0A 61 73 2D 69 66 2D  ..as-if-
+00000250: 63 6F 6E 64 00 1E 0A 61  cond...a
+00000258: 73 2D 69 66 2D 74 68 65  s-if-the
+00000260: 6E 00 1F 0A 61 73 2D 69  n...as-i
+00000268: 66 2D 65 6C 73 65 00 20  f-else. 
+00000270: 0F 61 73 2D 73 65 6C 65  .as-sele
+00000278: 63 74 2D 66 69 72 73 74  ct-first
+00000280: 00 21 10 61 73 2D 73 65  .!.as-se
+00000288: 6C 65 63 74 2D 73 65 63  lect-sec
+00000290: 6F 6E 64 00 22 0E 61 73  ond.&quot;.as
+00000298: 2D 73 65 6C 65 63 74 2D  -select-
+000002a0: 63 6F 6E 64 00 23 0D 61  cond.#.a
+000002a8: 73 2D 63 61 6C 6C 2D 66  s-call-f
+000002b0: 69 72 73 74 00 25 0B 61  irst.%.a
+000002b8: 73 2D 63 61 6C 6C 2D 6D  s-call-m
+000002c0: 69 64 00 26 0C 61 73 2D  id.&amp;.as-
+000002c8: 63 61 6C 6C 2D 6C 61 73  call-las
+000002d0: 74 00 27 15 61 73 2D 63  t.&#x27;.as-c
+000002d8: 61 6C 6C 5F 69 6E 64 69  all_indi
+000002e0: 72 65 63 74 2D 66 75 6E  rect-fun
+000002e8: 63 00 28 16 61 73 2D 63  c.(.as-c
+000002f0: 61 6C 6C 5F 69 6E 64 69  all_indi
+000002f8: 72 65 63 74 2D 66 69 72  rect-fir
+00000300: 73 74 00 29 14 61 73 2D  st.).as-
+00000308: 63 61 6C 6C 5F 69 6E 64  call_ind
+00000310: 69 72 65 63 74 2D 6D 69  irect-mi
+00000318: 64 00 2A 15 61 73 2D 63  d.*.as-c
+00000320: 61 6C 6C 5F 69 6E 64 69  all_indi
+00000328: 72 65 63 74 2D 6C 61 73  rect-las
+00000330: 74 00 2B 12 61 73 2D 6C  t.+.as-l
+00000338: 6F 63 61 6C 2E 73 65 74  ocal.set
+00000340: 2D 76 61 6C 75 65 00 2C  -value.,
+00000348: 12 61 73 2D 6C 6F 63 61  .as-loca
+00000350: 6C 2E 74 65 65 2D 76 61  l.tee-va
+00000358: 6C 75 65 00 2D 13 61 73  lue.-.as
+00000360: 2D 67 6C 6F 62 61 6C 2E  -global.
+00000368: 73 65 74 2D 76 61 6C 75  set-valu
+00000370: 65 00 2E 0F 61 73 2D 6C  e...as-l
+00000378: 6F 61 64 2D 61 64 64 72  oad-addr
+00000380: 65 73 73 00 2F 10 61 73  ess./.as
+00000388: 2D 6C 6F 61 64 4E 2D 61  -loadN-a
+00000390: 64 64 72 65 73 73 00 30  ddress.0
+00000398: 10 61 73 2D 73 74 6F 72  .as-stor
+000003a0: 65 2D 61 64 64 72 65 73  e-addres
+000003a8: 73 00 31 0E 61 73 2D 73  s.1.as-s
+000003b0: 74 6F 72 65 2D 76 61 6C  tore-val
+000003b8: 75 65 00 32 11 61 73 2D  ue.2.as-
+000003c0: 73 74 6F 72 65 4E 2D 61  storeN-a
+000003c8: 64 64 72 65 73 73 00 33  ddress.3
+000003d0: 0F 61 73 2D 73 74 6F 72  .as-stor
+000003d8: 65 4E 2D 76 61 6C 75 65  eN-value
+000003e0: 00 34 10 61 73 2D 75 6E  .4.as-un
+000003e8: 61 72 79 2D 6F 70 65 72  ary-oper
+000003f0: 61 6E 64 00 35 0E 61 73  and.5.as
+000003f8: 2D 62 69 6E 61 72 79 2D  -binary-
+00000400: 6C 65 66 74 00 36 0F 61  left.6.a
+00000408: 73 2D 62 69 6E 61 72 79  s-binary
+00000410: 2D 72 69 67 68 74 00 37  -right.7
+00000418: 0F 61 73 2D 74 65 73 74  .as-test
+00000420: 2D 6F 70 65 72 61 6E 64  -operand
+00000428: 00 38 0F 61 73 2D 63 6F  .8.as-co
+00000430: 6D 70 61 72 65 2D 6C 65  mpare-le
+00000438: 66 74 00 39 10 61 73 2D  ft.9.as-
+00000440: 63 6F 6D 70 61 72 65 2D  compare-
+00000448: 72 69 67 68 74 00 3A 12  right.:.
+00000450: 61 73 2D 63 6F 6E 76 65  as-conve
+00000458: 72 74 2D 6F 70 65 72 61  rt-opera
+00000460: 6E 64 00 3B 13 61 73 2D  nd.;.as-
+00000468: 6D 65 6D 6F 72 79 2E 67  memory.g
+00000470: 72 6F 77 2D 73 69 7A 65  row-size
+00000478: 00 3C 09 07 01 00 41 00  .&lt;....A.
+00000480: 0B 01 24 0A A9 05 3D 02  ..$...&#x3D;.
+00000488: 00 0B 05 00 0F 68 1A 0B  .....h..
+00000490: 05 00 0F 7A 1A 0B 05 00  ...z....
+00000498: 0F 8C 1A 0B 05 00 0F 9A  ........
+000004a0: 1A 0B 09 00 02 7F 41 01  ......A.
+000004a8: 0F 68 0B 0B 09 00 02 7E  .h.....~
+000004b0: 42 02 0F 7A 0B 0B 0C 00  B..z....
+000004b8: 02 7D 43 00 00 40 40 0F  .}C..@@.
+000004c0: 8C 0B 0B 10 00 02 7C 44  ......|D
+000004c8: 00 00 00 00 00 00 10 40  .......@
+000004d0: 0F 9A 0B 0B 03 00 0F 0B  ........
+000004d8: 0C 00 44 00 00 00 00 00  ..D.....
+000004e0: 00 08 40 0F 0B 07 00 41  ..@....A
+000004e8: 01 0F 41 02 0B 09 00 10  ..A.....
+000004f0: 00 41 02 0F 41 03 0B 06  .A..A...
+000004f8: 00 01 10 00 0F 0B 08 00  ........
+00000500: 01 10 00 41 03 0F 0B 08  ...A....
+00000508: 00 02 40 0F 10 00 0B 0B  ..@.....
+00000510: 0A 00 02 40 10 00 0F 10  ...@....
+00000518: 00 0B 0B 09 00 02 40 01  ......@.
+00000520: 10 00 0F 0B 0B 0B 00 02  ........
+00000528: 7F 01 10 00 41 02 0F 0B  ....A...
+00000530: 0B 0A 00 03 7F 41 03 0F  .....A..
+00000538: 41 02 0B 0B 0C 00 03 7F  A.......
+00000540: 10 00 41 04 0F 41 02 0B  ..A..A..
+00000548: 0B 0B 00 03 7F 01 10 00  ........
+00000550: 41 05 0F 0B 0B 0A 00 02  A.......
+00000558: 7F 41 09 0F 0C 00 0B 0B  .A......
+00000560: 08 00 02 40 0F 0D 00 0B  ...@....
+00000568: 0B 0F 00 02 7F 41 08 0F  .....A..
+00000570: 41 01 0D 00 1A 41 07 0B  A....A..
+00000578: 0B 0F 00 02 7F 41 06 41  .....A.A
+00000580: 09 0F 0D 00 1A 41 07 0B  .....A..
+00000588: 0B 0F 00 02 40 42 09 0F  ....@B..
+00000590: 0E 02 00 00 00 0B 42 7F  ......B.
+00000598: 0B 11 00 02 7F 41 0A 0F  .....A..
+000005a0: 41 01 0E 02 00 00 00 41  A......A
+000005a8: 07 0B 0B 10 00 02 7F 41  .......A
+000005b0: 06 41 0B 0F 0E 01 00 00  .A......
+000005b8: 41 07 0B 0B 06 00 42 07  A.....B.
+000005c0: 0F 0F 0B 0D 00 41 02 0F  .....A..
+000005c8: 04 7F 41 00 05 41 01 0B  ..A..A..
+000005d0: 0B 0D 00 20 00 04 7F 41  ... ...A
+000005d8: 03 0F 05 20 01 0B 0B 0D  ... ....
+000005e0: 00 20 00 04 7F 20 01 05  . ... ..
+000005e8: 41 04 0F 0B 0B 0A 00 41  A......A
+000005f0: 05 0F 20 00 20 01 1B 0B  .. . ...
+000005f8: 0A 00 20 00 41 06 0F 20  .. .A.. 
+00000600: 01 1B 0B 0A 00 41 00 41  .....A.A
+00000608: 01 41 07 0F 1B 0B 04 00  .A......
+00000610: 41 7F 0B 0B 00 41 0C 0F  A....A..
+00000618: 41 02 41 03 10 24 0B 0B  A.A..$..
+00000620: 00 41 01 41 0D 0F 41 03  .A.A..A.
+00000628: 10 24 0B 0B 00 41 01 41  .$...A.A
+00000630: 02 41 0E 0F 10 24 0B 0E  .A...$..
+00000638: 00 41 14 0F 41 01 41 02  .A..A.A.
+00000640: 41 03 11 00 00 0B 0E 00  A.......
+00000648: 41 00 41 15 0F 41 02 41  A.A..A.A
+00000650: 03 11 00 00 0B 0E 00 41  .......A
+00000658: 00 41 01 41 16 0F 41 03  .A.A..A.
+00000660: 11 00 00 0B 0E 00 41 00  ......A.
+00000668: 41 01 41 02 41 17 0F 11  A.A.A...
+00000670: 00 00 0B 0B 01 01 7D 41  ......}A
+00000678: 11 0F 21 00 41 7F 0B 09  ..!.A...
+00000680: 01 01 7F 41 01 0F 22 00  ...A..&quot;.
+00000688: 0B 07 00 41 01 0F 24 00  ...A..$.
+00000690: 0B 0B 00 43 9A 99 D9 3F  ...C...?
+00000698: 0F 2A 02 00 0B 08 00 42  .*.....B
+000006a0: 1E 0F 30 00 00 0B 13 00  ..0.....
+000006a8: 41 1E 0F 44 00 00 00 00  A..D....
+000006b0: 00 00 1C 40 39 03 00 41  ...@9..A
+000006b8: 7F 0B 0C 00 41 02 41 1F  ....A.A.
+000006c0: 0F 37 03 00 41 7F 0B 0C  .7..A...
+000006c8: 00 41 20 0F 41 07 3A 00  .A .A.:.
+000006d0: 00 41 7F 0B 0C 00 41 02  .A....A.
+000006d8: 41 21 0F 3D 01 00 41 7F  A!.&#x3D;..A.
+000006e0: 0B 09 00 43 9A 99 59 40  ...C..Y@
+000006e8: 0F 8C 0B 08 00 41 03 0F  .....A..
+000006f0: 41 0A 6A 0B 08 00 42 0A  A.j...B.
+000006f8: 42 2D 0F 7D 0B 06 00 41  B-.}...A
+00000700: 2C 0F 45 0B 0F 00 41 2B  ,.E...A+
+00000708: 0F 44 00 00 00 00 00 00  .D......
+00000710: 24 40 65 0B 0B 00 43 00  $@e...C.
+00000718: 00 20 41 41 2A 0F 5C 0B  . AA*.\.
+00000720: 06 00 41 29 0F A7 0B 07  ..A)....
+00000728: 00 41 28 0F 40 00 0B     .A(.@..
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2"><code>(module
+  (type (;0;) (func (param i32 i32 i32) (result i32)))
+  (type (;1;) (func))
+  (type (;2;) (func (result i32)))
+  (type (;3;) (func (result i64)))
+  (type (;4;) (func (result f32)))
+  (type (;5;) (func (result f64)))
+  (type (;6;) (func (param i32 i32) (result i32)))
+  (func (;0;) (type 1))
+  (func (;1;) (type 1)
+    return
+    i32.ctz
+    drop)
+  (func (;2;) (type 1)
+    return
+    i64.ctz
+    drop)
+  (func (;3;) (type 1)
+    return
+    f32.neg
+    drop)
+  (func (;4;) (type 1)
+    return
+    f64.neg
+    drop)
+  (func (;5;) (type 2) (result i32)
+    block (result i32)  ;; label &#x3D; @1
+      i32.const 1
+      return
+      i32.ctz
+    end)
+  (func (;6;) (type 3) (result i64)
+    block (result i64)  ;; label &#x3D; @1
+      i64.const 2
+      return
+      i64.ctz
+    end)
+  (func (;7;) (type 4) (result f32)
+    block (result f32)  ;; label &#x3D; @1
+      f32.const 0x1.8p+1 (;&#x3D;3;)
+      return
+      f32.neg
+    end)
+  (func (;8;) (type 5) (result f64)
+    block (result f64)  ;; label &#x3D; @1
+      f64.const 0x1p+2 (;&#x3D;4;)
+      return
+      f64.neg
+    end)
+  (func (;9;) (type 1)
+    return)
+  (func (;10;) (type 5) (result f64)
+    f64.const 0x1.8p+1 (;&#x3D;3;)
+    return)
+  (func (;11;) (type 2) (result i32)
+    i32.const 1
+    return
+    i32.const 2)
+  (func (;12;) (type 2) (result i32)
+    call 0
+    i32.const 2
+    return
+    i32.const 3)
+  (func (;13;) (type 1)
+    nop
+    call 0
+    return)
+  (func (;14;) (type 2) (result i32)
+    nop
+    call 0
+    i32.const 3
+    return)
+  (func (;15;) (type 1)
+    block  ;; label &#x3D; @1
+      return
+      call 0
+    end)
+  (func (;16;) (type 1)
+    block  ;; label &#x3D; @1
+      call 0
+      return
+      call 0
+    end)
+  (func (;17;) (type 1)
+    block  ;; label &#x3D; @1
+      nop
+      call 0
+      return
+    end)
+  (func (;18;) (type 2) (result i32)
+    block (result i32)  ;; label &#x3D; @1
+      nop
+      call 0
+      i32.const 2
+      return
+    end)
+  (func (;19;) (type 2) (result i32)
+    loop (result i32)  ;; label &#x3D; @1
+      i32.const 3
+      return
+      i32.const 2
+    end)
+  (func (;20;) (type 2) (result i32)
+    loop (result i32)  ;; label &#x3D; @1
+      call 0
+      i32.const 4
+      return
+      i32.const 2
+    end)
+  (func (;21;) (type 2) (result i32)
+    loop (result i32)  ;; label &#x3D; @1
+      nop
+      call 0
+      i32.const 5
+      return
+    end)
+  (func (;22;) (type 2) (result i32)
+    block (result i32)  ;; label &#x3D; @1
+      i32.const 9
+      return
+      br 0 (;@1;)
+    end)
+  (func (;23;) (type 1)
+    block  ;; label &#x3D; @1
+      return
+      br_if 0 (;@1;)
+    end)
+  (func (;24;) (type 2) (result i32)
+    block (result i32)  ;; label &#x3D; @1
+      i32.const 8
+      return
+      i32.const 1
+      br_if 0 (;@1;)
+      drop
+      i32.const 7
+    end)
+  (func (;25;) (type 2) (result i32)
+    block (result i32)  ;; label &#x3D; @1
+      i32.const 6
+      i32.const 9
+      return
+      br_if 0 (;@1;)
+      drop
+      i32.const 7
+    end)
+  (func (;26;) (type 3) (result i64)
+    block  ;; label &#x3D; @1
+      i64.const 9
+      return
+      br_table 0 (;@1;) 0 (;@1;) 0 (;@1;)
+    end
+    i64.const -1)
+  (func (;27;) (type 2) (result i32)
+    block (result i32)  ;; label &#x3D; @1
+      i32.const 10
+      return
+      i32.const 1
+      br_table 0 (;@1;) 0 (;@1;) 0 (;@1;)
+      i32.const 7
+    end)
+  (func (;28;) (type 2) (result i32)
+    block (result i32)  ;; label &#x3D; @1
+      i32.const 6
+      i32.const 11
+      return
+      br_table 0 (;@1;) 0 (;@1;)
+      i32.const 7
+    end)
+  (func (;29;) (type 3) (result i64)
+    i64.const 7
+    return
+    return)
+  (func (;30;) (type 2) (result i32)
+    i32.const 2
+    return
+    if (result i32)  ;; label &#x3D; @1
+      i32.const 0
+    else
+      i32.const 1
+    end)
+  (func (;31;) (type 6) (param i32 i32) (result i32)
+    local.get 0
+    if (result i32)  ;; label &#x3D; @1
+      i32.const 3
+      return
+    else
+      local.get 1
+    end)
+  (func (;32;) (type 6) (param i32 i32) (result i32)
+    local.get 0
+    if (result i32)  ;; label &#x3D; @1
+      local.get 1
+    else
+      i32.const 4
+      return
+    end)
+  (func (;33;) (type 6) (param i32 i32) (result i32)
+    i32.const 5
+    return
+    local.get 0
+    local.get 1
+    select)
+  (func (;34;) (type 6) (param i32 i32) (result i32)
+    local.get 0
+    i32.const 6
+    return
+    local.get 1
+    select)
+  (func (;35;) (type 2) (result i32)
+    i32.const 0
+    i32.const 1
+    i32.const 7
+    return
+    select)
+  (func (;36;) (type 0) (param i32 i32 i32) (result i32)
+    i32.const -1)
+  (func (;37;) (type 2) (result i32)
+    i32.const 12
+    return
+    i32.const 2
+    i32.const 3
+    call 36)
+  (func (;38;) (type 2) (result i32)
+    i32.const 1
+    i32.const 13
+    return
+    i32.const 3
+    call 36)
+  (func (;39;) (type 2) (result i32)
+    i32.const 1
+    i32.const 2
+    i32.const 14
+    return
+    call 36)
+  (func (;40;) (type 2) (result i32)
+    i32.const 20
+    return
+    i32.const 1
+    i32.const 2
+    i32.const 3
+    call_indirect (type 0))
+  (func (;41;) (type 2) (result i32)
+    i32.const 0
+    i32.const 21
+    return
+    i32.const 2
+    i32.const 3
+    call_indirect (type 0))
+  (func (;42;) (type 2) (result i32)
+    i32.const 0
+    i32.const 1
+    i32.const 22
+    return
+    i32.const 3
+    call_indirect (type 0))
+  (func (;43;) (type 2) (result i32)
+    i32.const 0
+    i32.const 1
+    i32.const 2
+    i32.const 23
+    return
+    call_indirect (type 0))
+  (func (;44;) (type 2) (result i32)
+    (local f32)
+    i32.const 17
+    return
+    local.set 0
+    i32.const -1)
+  (func (;45;) (type 2) (result i32)
+    (local i32)
+    i32.const 1
+    return
+    local.tee 0)
+  (func (;46;) (type 2) (result i32)
+    i32.const 1
+    return
+    global.set 0)
+  (func (;47;) (type 4) (result f32)
+    f32.const 0x1.b33334p+0 (;&#x3D;1.7;)
+    return
+    f32.load)
+  (func (;48;) (type 3) (result i64)
+    i64.const 30
+    return
+    i64.load8_s)
+  (func (;49;) (type 2) (result i32)
+    i32.const 30
+    return
+    f64.const 0x1.cp+2 (;&#x3D;7;)
+    f64.store
+    i32.const -1)
+  (func (;50;) (type 2) (result i32)
+    i32.const 2
+    i32.const 31
+    return
+    i64.store
+    i32.const -1)
+  (func (;51;) (type 2) (result i32)
+    i32.const 32
+    return
+    i32.const 7
+    i32.store8
+    i32.const -1)
+  (func (;52;) (type 2) (result i32)
+    i32.const 2
+    i32.const 33
+    return
+    i64.store16
+    i32.const -1)
+  (func (;53;) (type 4) (result f32)
+    f32.const 0x1.b33334p+1 (;&#x3D;3.4;)
+    return
+    f32.neg)
+  (func (;54;) (type 2) (result i32)
+    i32.const 3
+    return
+    i32.const 10
+    i32.add)
+  (func (;55;) (type 3) (result i64)
+    i64.const 10
+    i64.const 45
+    return
+    i64.sub)
+  (func (;56;) (type 2) (result i32)
+    i32.const 44
+    return
+    i32.eqz)
+  (func (;57;) (type 2) (result i32)
+    i32.const 43
+    return
+    f64.const 0x1.4p+3 (;&#x3D;10;)
+    f64.le)
+  (func (;58;) (type 2) (result i32)
+    f32.const 0x1.4p+3 (;&#x3D;10;)
+    i32.const 42
+    return
+    f32.ne)
+  (func (;59;) (type 2) (result i32)
+    i32.const 41
+    return
+    i32.wrap_i64)
+  (func (;60;) (type 2) (result i32)
+    i32.const 40
+    return
+    memory.grow)
+  (table (;0;) 1 1 funcref)
+  (memory (;0;) 1)
+  (global (;0;) (mut i32) (i32.const 0))
+  (export &quot;type-i32&quot; (func 1))
+  (export &quot;type-i64&quot; (func 2))
+  (export &quot;type-f32&quot; (func 3))
+  (export &quot;type-f64&quot; (func 4))
+  (export &quot;type-i32-value&quot; (func 5))
+  (export &quot;type-i64-value&quot; (func 6))
+  (export &quot;type-f32-value&quot; (func 7))
+  (export &quot;type-f64-value&quot; (func 8))
+  (export &quot;nullary&quot; (func 9))
+  (export &quot;unary&quot; (func 10))
+  (export &quot;as-func-first&quot; (func 11))
+  (export &quot;as-func-mid&quot; (func 12))
+  (export &quot;as-func-last&quot; (func 13))
+  (export &quot;as-func-value&quot; (func 14))
+  (export &quot;as-block-first&quot; (func 15))
+  (export &quot;as-block-mid&quot; (func 16))
+  (export &quot;as-block-last&quot; (func 17))
+  (export &quot;as-block-value&quot; (func 18))
+  (export &quot;as-loop-first&quot; (func 19))
+  (export &quot;as-loop-mid&quot; (func 20))
+  (export &quot;as-loop-last&quot; (func 21))
+  (export &quot;as-br-value&quot; (func 22))
+  (export &quot;as-br_if-cond&quot; (func 23))
+  (export &quot;as-br_if-value&quot; (func 24))
+  (export &quot;as-br_if-value-cond&quot; (func 25))
+  (export &quot;as-br_table-index&quot; (func 26))
+  (export &quot;as-br_table-value&quot; (func 27))
+  (export &quot;as-br_table-value-index&quot; (func 28))
+  (export &quot;as-return-value&quot; (func 29))
+  (export &quot;as-if-cond&quot; (func 30))
+  (export &quot;as-if-then&quot; (func 31))
+  (export &quot;as-if-else&quot; (func 32))
+  (export &quot;as-select-first&quot; (func 33))
+  (export &quot;as-select-second&quot; (func 34))
+  (export &quot;as-select-cond&quot; (func 35))
+  (export &quot;as-call-first&quot; (func 37))
+  (export &quot;as-call-mid&quot; (func 38))
+  (export &quot;as-call-last&quot; (func 39))
+  (export &quot;as-call_indirect-func&quot; (func 40))
+  (export &quot;as-call_indirect-first&quot; (func 41))
+  (export &quot;as-call_indirect-mid&quot; (func 42))
+  (export &quot;as-call_indirect-last&quot; (func 43))
+  (export &quot;as-local.set-value&quot; (func 44))
+  (export &quot;as-local.tee-value&quot; (func 45))
+  (export &quot;as-global.set-value&quot; (func 46))
+  (export &quot;as-load-address&quot; (func 47))
+  (export &quot;as-loadN-address&quot; (func 48))
+  (export &quot;as-store-address&quot; (func 49))
+  (export &quot;as-store-value&quot; (func 50))
+  (export &quot;as-storeN-address&quot; (func 51))
+  (export &quot;as-storeN-value&quot; (func 52))
+  (export &quot;as-unary-operand&quot; (func 53))
+  (export &quot;as-binary-left&quot; (func 54))
+  (export &quot;as-binary-right&quot; (func 55))
+  (export &quot;as-test-operand&quot; (func 56))
+  (export &quot;as-compare-left&quot; (func 57))
+  (export &quot;as-compare-right&quot; (func 58))
+  (export &quot;as-convert-operand&quot; (func 59))
+  (export &quot;as-memory.grow-size&quot; (func 60))
+  (elem (;0;) (i32.const 0) func 36))
+</code></pre>
+    </div>
+</body>
+
+</html>

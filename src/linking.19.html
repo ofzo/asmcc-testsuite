@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asmcc linking.19</title>
+
+    <link rel="stylesheet" href="//unpkg.com/@highlightjs/cdn-assets@11.7.0/styles/github.min.css">
+    <script src="//unpkg.com/@highlightjs/cdn-assets@11.7.0/highlight.min.js"></script>
+    <script>
+        hljs.configure({
+            noHighlightRe: /^do-not-highlightme$/i,
+        });
+    </script>
+    <script>hljs.highlightAll();</script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="/_vercel/insights/script.js"></script>
+</head>
+
+<body class="text-sm p-2">
+    <h1 class="text-2xl  w-full mb-4">Anaylzer: <a href="/linking.19.wasm">linking.19.wasm</a></h1>
+    <div class="flex justify-evenly">
+        <pre class="p-4 overflow-scroll border-2"><code>
+linking.19.wasm:	file format wasm 0x1
+
+Sections:
+
+   Global start&#x3D;0x0000000a end&#x3D;0x00000010 (size&#x3D;0x00000006) count: 1
+   Export start&#x3D;0x00000012 end&#x3D;0x00000017 (size&#x3D;0x00000005) count: 1
+
+Section Details:
+
+Global[1]:
+ - global[0] i32 mutable&#x3D;0 &lt;g&gt; - init i32&#x3D;5
+Export[1]:
+ - global[0] -&gt; &quot;g&quot;
+
+Contents of section Global:
+000000a: 017f 0041 050b                           ...A..
+
+Contents of section Export:
+0000012: 0101 6703 00                             ..g..
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2"><code>BeginModule(version: 1)
+  BeginGlobalSection(6)
+    OnGlobalCount(1)
+    BeginGlobal(index: 0, type: i32, mutable: false)
+    BeginGlobalInitExpr(0)
+    OnI32ConstExpr(5 (0x5))
+    OnEndExpr
+    EndGlobalInitExpr(0)
+    EndGlobal(0)
+  EndGlobalSection
+  BeginExportSection(5)
+    OnExportCount(1)
+    OnExport(index: 0, kind: global, item_index: 0, name: &quot;g&quot;)
+  EndExportSection
+EndModule
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2 do-not-highlightme"><code>00000000: 00 61 73 6D 01 00 00 00  .asm....
+00000008: 06 06 01 7F 00 41 05 0B  .....A..
+00000010: 07 05 01 01 67 03 00     ....g..
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2"><code>(module
+  (global (;0;) i32 (i32.const 5))
+  (export &quot;g&quot; (global 0)))
+</code></pre>
+    </div>
+</body>
+
+</html>

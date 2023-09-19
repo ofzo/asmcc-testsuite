@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asmcc binary.69</title>
+
+    <link rel="stylesheet" href="//unpkg.com/@highlightjs/cdn-assets@11.7.0/styles/github.min.css">
+    <script src="//unpkg.com/@highlightjs/cdn-assets@11.7.0/highlight.min.js"></script>
+    <script>
+        hljs.configure({
+            noHighlightRe: /^do-not-highlightme$/i,
+        });
+    </script>
+    <script>hljs.highlightAll();</script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="/_vercel/insights/script.js"></script>
+</head>
+
+<body class="text-sm p-2">
+    <h1 class="text-2xl  w-full mb-4">Anaylzer: <a href="/binary.69.wasm">binary.69.wasm</a></h1>
+    <div class="flex justify-evenly">
+        <pre class="p-4 overflow-scroll border-2"><code>
+binary.69.wasm:	file format wasm 0x1
+
+Sections:
+
+     Type start&#x3D;0x0000000a end&#x3D;0x0000000e (size&#x3D;0x00000004) count: 1
+ Function start&#x3D;0x00000010 end&#x3D;0x00000012 (size&#x3D;0x00000002) count: 1
+    Table start&#x3D;0x00000014 end&#x3D;0x00000018 (size&#x3D;0x00000004) count: 1
+   Memory start&#x3D;0x0000001a end&#x3D;0x0000001d (size&#x3D;0x00000003) count: 1
+     Elem start&#x3D;0x0000001f end&#x3D;0x00000026 (size&#x3D;0x00000007) count: 1
+     Code start&#x3D;0x00000028 end&#x3D;0x0000002c (size&#x3D;0x00000004) count: 1
+
+Section Details:
+
+Type[1]:
+ - type[0] () -&gt; nil
+Function[1]:
+ - func[0] sig&#x3D;0
+Table[1]:
+ - table[0] type&#x3D;funcref initial&#x3D;0
+Memory[1]:
+ - memory[0] pages: initial&#x3D;0
+Elem[1]:
+ - segment[0] flags&#x3D;5 table&#x3D;0 count&#x3D;1
+  - elem[0] &#x3D; ref.null funcref
+Code[1]:
+ - func[0] size&#x3D;2
+
+Contents of section Type:
+000000a: 0160 0000                                .&#x60;..
+
+Contents of section Function:
+0000010: 0100                                     ..
+
+Contents of section Table:
+0000014: 0170 0000                                .p..
+
+Contents of section Memory:
+000001a: 0100 00                                  ...
+
+Contents of section Elem:
+000001f: 0105 7001 d070 0b                        ..p..p.
+
+Contents of section Code:
+0000028: 0102 000b                                ....
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2"><code>BeginModule(version: 1)
+  BeginTypeSection(4)
+    OnTypeCount(1)
+    OnFuncType(index: 0, params: [], results: [])
+  EndTypeSection
+  BeginFunctionSection(2)
+    OnFunctionCount(1)
+    OnFunction(index: 0, sig_index: 0)
+  EndFunctionSection
+  BeginTableSection(4)
+    OnTableCount(1)
+    OnTable(index: 0, elem_type: funcref, initial: 0)
+  EndTableSection
+  BeginMemorySection(3)
+    OnMemoryCount(1)
+    OnMemory(index: 0, initial: 0)
+  EndMemorySection
+  BeginElemSection(7)
+    OnElemSegmentCount(1)
+    BeginElemSegment(index: 0, table_index: 0, flags: 5)
+    OnElemSegmentElemType(index: 0, type: funcref)
+    OnElemSegmentElemExprCount(index: 0, count: 1)
+    BeginElemExpr(elem_index: 0, expr_index: 0)
+    OnRefNullExpr(funcref)
+    OnEndExpr
+    EndElemExpr(elem_index: 0, expr_index: 0)
+    EndElemSegment(0)
+  EndElemSection
+  BeginCodeSection(4)
+    OnFunctionBodyCount(1)
+    BeginFunctionBody(0, size:2)
+    OnLocalDeclCount(0)
+    EndFunctionBody(0)
+  EndCodeSection
+EndModule
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2 do-not-highlightme"><code>00000000: 00 61 73 6D 01 00 00 00  .asm....
+00000008: 01 04 01 60 00 00 03 02  ...&#x60;....
+00000010: 01 00 04 04 01 70 00 00  .....p..
+00000018: 05 03 01 00 00 09 07 01  ........
+00000020: 05 70 01 D0 70 0B 0A 04  .p..p...
+00000028: 01 02 00 0B              ....
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2"><code>(module
+  (type (;0;) (func))
+  (func (;0;) (type 0))
+  (table (;0;) 0 funcref)
+  (memory (;0;) 0)
+  (elem (;0;) funcref (ref.null func)))
+</code></pre>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asmcc float_exprs.95</title>
+
+    <link rel="stylesheet" href="//unpkg.com/@highlightjs/cdn-assets@11.7.0/styles/github.min.css">
+    <script src="//unpkg.com/@highlightjs/cdn-assets@11.7.0/highlight.min.js"></script>
+    <script>
+        hljs.configure({
+            noHighlightRe: /^do-not-highlightme$/i,
+        });
+    </script>
+    <script>hljs.highlightAll();</script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="/_vercel/insights/script.js"></script>
+</head>
+
+<body class="text-sm p-2">
+    <h1 class="text-2xl  w-full mb-4">Anaylzer: <a href="/float_exprs.95.wasm">float_exprs.95.wasm</a></h1>
+    <div class="flex justify-evenly">
+        <pre class="p-4 overflow-scroll border-2"><code>
+float_exprs.95.wasm:	file format wasm 0x1
+
+Sections:
+
+     Type start&#x3D;0x0000000a end&#x3D;0x00000017 (size&#x3D;0x0000000d) count: 2
+ Function start&#x3D;0x00000019 end&#x3D;0x0000001c (size&#x3D;0x00000003) count: 2
+   Export start&#x3D;0x0000001e end&#x3D;0x0000005b (size&#x3D;0x0000003d) count: 2
+     Code start&#x3D;0x0000005d end&#x3D;0x00000092 (size&#x3D;0x00000035) count: 2
+
+Section Details:
+
+Type[2]:
+ - type[0] (f32, f32) -&gt; f32
+ - type[1] (f64, f64) -&gt; f64
+Function[2]:
+ - func[0] sig&#x3D;0 &lt;f32.no_fold_conditional_inc&gt;
+ - func[1] sig&#x3D;1 &lt;f64.no_fold_conditional_inc&gt;
+Export[2]:
+ - func[0] &lt;f32.no_fold_conditional_inc&gt; -&gt; &quot;f32.no_fold_conditional_inc&quot;
+ - func[1] &lt;f64.no_fold_conditional_inc&gt; -&gt; &quot;f64.no_fold_conditional_inc&quot;
+Code[2]:
+ - func[0] size&#x3D;21 &lt;f32.no_fold_conditional_inc&gt;
+ - func[1] size&#x3D;29 &lt;f64.no_fold_conditional_inc&gt;
+
+Contents of section Type:
+000000a: 0260 027d 7d01 7d60 027c 7c01 7c         .&#x60;.}}.}&#x60;.||.|
+
+Contents of section Function:
+0000019: 0200 01                                  ...
+
+Contents of section Export:
+000001e: 021b 6633 322e 6e6f 5f66 6f6c 645f 636f  ..f32.no_fold_co
+000002e: 6e64 6974 696f 6e61 6c5f 696e 6300 001b  nditional_inc...
+000003e: 6636 342e 6e6f 5f66 6f6c 645f 636f 6e64  f64.no_fold_cond
+000004e: 6974 696f 6e61 6c5f 696e 6300 01         itional_inc..
+
+Contents of section Code:
+000005d: 0215 0020 0020 0043 0000 803f 9220 0143  ... . .C...?. .C
+000006d: 0000 0000 5d1b 0b1d 0020 0020 0044 0000  ....].... . .D..
+000007d: 0000 0000 f03f a020 0144 0000 0000 0000  .....?. .D......
+000008d: 0000 631b 0b                             ..c..
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2"><code>BeginModule(version: 1)
+  BeginTypeSection(13)
+    OnTypeCount(2)
+    OnFuncType(index: 0, params: [f32, f32], results: [f32])
+    OnFuncType(index: 1, params: [f64, f64], results: [f64])
+  EndTypeSection
+  BeginFunctionSection(3)
+    OnFunctionCount(2)
+    OnFunction(index: 0, sig_index: 0)
+    OnFunction(index: 1, sig_index: 1)
+  EndFunctionSection
+  BeginExportSection(61)
+    OnExportCount(2)
+    OnExport(index: 0, kind: func, item_index: 0, name: &quot;f32.no_fold_conditional_inc&quot;)
+    OnExport(index: 1, kind: func, item_index: 1, name: &quot;f64.no_fold_conditional_inc&quot;)
+  EndExportSection
+  BeginCodeSection(53)
+    OnFunctionBodyCount(2)
+    BeginFunctionBody(0, size:21)
+    OnLocalDeclCount(0)
+    EndFunctionBody(0)
+    BeginFunctionBody(1, size:29)
+    OnLocalDeclCount(0)
+    EndFunctionBody(1)
+  EndCodeSection
+EndModule
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2 do-not-highlightme"><code>00000000: 00 61 73 6D 01 00 00 00  .asm....
+00000008: 01 0D 02 60 02 7D 7D 01  ...&#x60;.}}.
+00000010: 7D 60 02 7C 7C 01 7C 03  }&#x60;.||.|.
+00000018: 03 02 00 01 07 3D 02 1B  .....&#x3D;..
+00000020: 66 33 32 2E 6E 6F 5F 66  f32.no_f
+00000028: 6F 6C 64 5F 63 6F 6E 64  old_cond
+00000030: 69 74 69 6F 6E 61 6C 5F  itional_
+00000038: 69 6E 63 00 00 1B 66 36  inc...f6
+00000040: 34 2E 6E 6F 5F 66 6F 6C  4.no_fol
+00000048: 64 5F 63 6F 6E 64 69 74  d_condit
+00000050: 69 6F 6E 61 6C 5F 69 6E  ional_in
+00000058: 63 00 01 0A 35 02 15 00  c...5...
+00000060: 20 00 20 00 43 00 00 80   . .C...
+00000068: 3F 92 20 01 43 00 00 00  ?. .C...
+00000070: 00 5D 1B 0B 1D 00 20 00  .].... .
+00000078: 20 00 44 00 00 00 00 00   .D.....
+00000080: 00 F0 3F A0 20 01 44 00  ..?. .D.
+00000088: 00 00 00 00 00 00 00 63  .......c
+00000090: 1B 0B                    ..
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2"><code>(module
+  (type (;0;) (func (param f32 f32) (result f32)))
+  (type (;1;) (func (param f64 f64) (result f64)))
+  (func (;0;) (type 0) (param f32 f32) (result f32)
+    local.get 0
+    local.get 0
+    f32.const 0x1p+0 (;&#x3D;1;)
+    f32.add
+    local.get 1
+    f32.const 0x0p+0 (;&#x3D;0;)
+    f32.lt
+    select)
+  (func (;1;) (type 1) (param f64 f64) (result f64)
+    local.get 0
+    local.get 0
+    f64.const 0x1p+0 (;&#x3D;1;)
+    f64.add
+    local.get 1
+    f64.const 0x0p+0 (;&#x3D;0;)
+    f64.lt
+    select)
+  (export &quot;f32.no_fold_conditional_inc&quot; (func 0))
+  (export &quot;f64.no_fold_conditional_inc&quot; (func 1)))
+</code></pre>
+    </div>
+</body>
+
+</html>

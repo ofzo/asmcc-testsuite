@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asmcc data.21</title>
+
+    <link rel="stylesheet" href="//unpkg.com/@highlightjs/cdn-assets@11.7.0/styles/github.min.css">
+    <script src="//unpkg.com/@highlightjs/cdn-assets@11.7.0/highlight.min.js"></script>
+    <script>
+        hljs.configure({
+            noHighlightRe: /^do-not-highlightme$/i,
+        });
+    </script>
+    <script>hljs.highlightAll();</script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="/_vercel/insights/script.js"></script>
+</head>
+
+<body class="text-sm p-2">
+    <h1 class="text-2xl  w-full mb-4">Anaylzer: <a href="/data.21.wasm">data.21.wasm</a></h1>
+    <div class="flex justify-evenly">
+        <pre class="p-4 overflow-scroll border-2"><code>
+data.21.wasm:	file format wasm 0x1
+
+Sections:
+
+   Import start&#x3D;0x0000000a end&#x3D;0x0000001e (size&#x3D;0x00000014) count: 1
+     Data start&#x3D;0x00000020 end&#x3D;0x00000027 (size&#x3D;0x00000007) count: 1
+
+Section Details:
+
+Import[1]:
+ - memory[0] pages: initial&#x3D;0 &lt;- spectest.memory
+Data[1]:
+ - segment[0] memory&#x3D;0 size&#x3D;1 - init i32&#x3D;0
+  - 0000000: 61                                       a
+
+Contents of section Import:
+000000a: 0108 7370 6563 7465 7374 066d 656d 6f72  ..spectest.memor
+000001a: 7902 0000                                y...
+
+Contents of section Data:
+0000020: 0100 4100 0b01 61                        ..A...a
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2"><code>BeginModule(version: 1)
+  BeginImportSection(20)
+    OnImportCount(1)
+    OnImport(index: 0, kind: memory, module: &quot;spectest&quot;, field: &quot;memory&quot;)
+    OnImportMemory(import_index: 0, memory_index: 0, initial: 0)
+  EndImportSection
+  BeginDataSection(7)
+    OnDataSegmentCount(1)
+    BeginDataSegment(index: 0, memory_index: 0, flags: 0)
+    BeginDataSegmentInitExpr(0)
+    OnI32ConstExpr(0 (0x0))
+    OnEndExpr
+    EndDataSegmentInitExpr(0)
+    OnDataSegmentData(index:0, size:1)
+    EndDataSegment(0)
+  EndDataSection
+EndModule
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2 do-not-highlightme"><code>00000000: 00 61 73 6D 01 00 00 00  .asm....
+00000008: 02 14 01 08 73 70 65 63  ....spec
+00000010: 74 65 73 74 06 6D 65 6D  test.mem
+00000018: 6F 72 79 02 00 00 0B 07  ory.....
+00000020: 01 00 41 00 0B 01 61     ..A...a
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2"><code>(module
+  (import &quot;spectest&quot; &quot;memory&quot; (memory (;0;) 0))
+  (data (;0;) (i32.const 0) &quot;a&quot;))
+</code></pre>
+    </div>
+</body>
+
+</html>

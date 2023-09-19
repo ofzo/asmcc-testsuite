@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asmcc float_misc.0</title>
+
+    <link rel="stylesheet" href="//unpkg.com/@highlightjs/cdn-assets@11.7.0/styles/github.min.css">
+    <script src="//unpkg.com/@highlightjs/cdn-assets@11.7.0/highlight.min.js"></script>
+    <script>
+        hljs.configure({
+            noHighlightRe: /^do-not-highlightme$/i,
+        });
+    </script>
+    <script>hljs.highlightAll();</script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="/_vercel/insights/script.js"></script>
+</head>
+
+<body class="text-sm p-2">
+    <h1 class="text-2xl  w-full mb-4">Anaylzer: <a href="/float_misc.0.wasm">float_misc.0.wasm</a></h1>
+    <div class="flex justify-evenly">
+        <pre class="p-4 overflow-scroll border-2"><code>
+float_misc.0.wasm:	file format wasm 0x1
+
+Sections:
+
+     Type start&#x3D;0x0000000a end&#x3D;0x00000021 (size&#x3D;0x00000017) count: 4
+ Function start&#x3D;0x00000023 end&#x3D;0x00000040 (size&#x3D;0x0000001d) count: 28
+   Export start&#x3D;0x00000043 end&#x3D;0x0000017a (size&#x3D;0x00000137) count: 28
+     Code start&#x3D;0x0000017d end&#x3D;0x00000242 (size&#x3D;0x000000c5) count: 28
+
+Section Details:
+
+Type[4]:
+ - type[0] (f32, f32) -&gt; f32
+ - type[1] (f32) -&gt; f32
+ - type[2] (f64, f64) -&gt; f64
+ - type[3] (f64) -&gt; f64
+Function[28]:
+ - func[0] sig&#x3D;0 &lt;f32.add&gt;
+ - func[1] sig&#x3D;0 &lt;f32.sub&gt;
+ - func[2] sig&#x3D;0 &lt;f32.mul&gt;
+ - func[3] sig&#x3D;0 &lt;f32.div&gt;
+ - func[4] sig&#x3D;1 &lt;f32.sqrt&gt;
+ - func[5] sig&#x3D;1 &lt;f32.abs&gt;
+ - func[6] sig&#x3D;1 &lt;f32.neg&gt;
+ - func[7] sig&#x3D;0 &lt;f32.copysign&gt;
+ - func[8] sig&#x3D;1 &lt;f32.ceil&gt;
+ - func[9] sig&#x3D;1 &lt;f32.floor&gt;
+ - func[10] sig&#x3D;1 &lt;f32.trunc&gt;
+ - func[11] sig&#x3D;1 &lt;f32.nearest&gt;
+ - func[12] sig&#x3D;0 &lt;f32.min&gt;
+ - func[13] sig&#x3D;0 &lt;f32.max&gt;
+ - func[14] sig&#x3D;2 &lt;f64.add&gt;
+ - func[15] sig&#x3D;2 &lt;f64.sub&gt;
+ - func[16] sig&#x3D;2 &lt;f64.mul&gt;
+ - func[17] sig&#x3D;2 &lt;f64.div&gt;
+ - func[18] sig&#x3D;3 &lt;f64.sqrt&gt;
+ - func[19] sig&#x3D;3 &lt;f64.abs&gt;
+ - func[20] sig&#x3D;3 &lt;f64.neg&gt;
+ - func[21] sig&#x3D;2 &lt;f64.copysign&gt;
+ - func[22] sig&#x3D;3 &lt;f64.ceil&gt;
+ - func[23] sig&#x3D;3 &lt;f64.floor&gt;
+ - func[24] sig&#x3D;3 &lt;f64.trunc&gt;
+ - func[25] sig&#x3D;3 &lt;f64.nearest&gt;
+ - func[26] sig&#x3D;2 &lt;f64.min&gt;
+ - func[27] sig&#x3D;2 &lt;f64.max&gt;
+Export[28]:
+ - func[0] &lt;f32.add&gt; -&gt; &quot;f32.add&quot;
+ - func[1] &lt;f32.sub&gt; -&gt; &quot;f32.sub&quot;
+ - func[2] &lt;f32.mul&gt; -&gt; &quot;f32.mul&quot;
+ - func[3] &lt;f32.div&gt; -&gt; &quot;f32.div&quot;
+ - func[4] &lt;f32.sqrt&gt; -&gt; &quot;f32.sqrt&quot;
+ - func[5] &lt;f32.abs&gt; -&gt; &quot;f32.abs&quot;
+ - func[6] &lt;f32.neg&gt; -&gt; &quot;f32.neg&quot;
+ - func[7] &lt;f32.copysign&gt; -&gt; &quot;f32.copysign&quot;
+ - func[8] &lt;f32.ceil&gt; -&gt; &quot;f32.ceil&quot;
+ - func[9] &lt;f32.floor&gt; -&gt; &quot;f32.floor&quot;
+ - func[10] &lt;f32.trunc&gt; -&gt; &quot;f32.trunc&quot;
+ - func[11] &lt;f32.nearest&gt; -&gt; &quot;f32.nearest&quot;
+ - func[12] &lt;f32.min&gt; -&gt; &quot;f32.min&quot;
+ - func[13] &lt;f32.max&gt; -&gt; &quot;f32.max&quot;
+ - func[14] &lt;f64.add&gt; -&gt; &quot;f64.add&quot;
+ - func[15] &lt;f64.sub&gt; -&gt; &quot;f64.sub&quot;
+ - func[16] &lt;f64.mul&gt; -&gt; &quot;f64.mul&quot;
+ - func[17] &lt;f64.div&gt; -&gt; &quot;f64.div&quot;
+ - func[18] &lt;f64.sqrt&gt; -&gt; &quot;f64.sqrt&quot;
+ - func[19] &lt;f64.abs&gt; -&gt; &quot;f64.abs&quot;
+ - func[20] &lt;f64.neg&gt; -&gt; &quot;f64.neg&quot;
+ - func[21] &lt;f64.copysign&gt; -&gt; &quot;f64.copysign&quot;
+ - func[22] &lt;f64.ceil&gt; -&gt; &quot;f64.ceil&quot;
+ - func[23] &lt;f64.floor&gt; -&gt; &quot;f64.floor&quot;
+ - func[24] &lt;f64.trunc&gt; -&gt; &quot;f64.trunc&quot;
+ - func[25] &lt;f64.nearest&gt; -&gt; &quot;f64.nearest&quot;
+ - func[26] &lt;f64.min&gt; -&gt; &quot;f64.min&quot;
+ - func[27] &lt;f64.max&gt; -&gt; &quot;f64.max&quot;
+Code[28]:
+ - func[0] size&#x3D;7 &lt;f32.add&gt;
+ - func[1] size&#x3D;7 &lt;f32.sub&gt;
+ - func[2] size&#x3D;7 &lt;f32.mul&gt;
+ - func[3] size&#x3D;7 &lt;f32.div&gt;
+ - func[4] size&#x3D;5 &lt;f32.sqrt&gt;
+ - func[5] size&#x3D;5 &lt;f32.abs&gt;
+ - func[6] size&#x3D;5 &lt;f32.neg&gt;
+ - func[7] size&#x3D;7 &lt;f32.copysign&gt;
+ - func[8] size&#x3D;5 &lt;f32.ceil&gt;
+ - func[9] size&#x3D;5 &lt;f32.floor&gt;
+ - func[10] size&#x3D;5 &lt;f32.trunc&gt;
+ - func[11] size&#x3D;5 &lt;f32.nearest&gt;
+ - func[12] size&#x3D;7 &lt;f32.min&gt;
+ - func[13] size&#x3D;7 &lt;f32.max&gt;
+ - func[14] size&#x3D;7 &lt;f64.add&gt;
+ - func[15] size&#x3D;7 &lt;f64.sub&gt;
+ - func[16] size&#x3D;7 &lt;f64.mul&gt;
+ - func[17] size&#x3D;7 &lt;f64.div&gt;
+ - func[18] size&#x3D;5 &lt;f64.sqrt&gt;
+ - func[19] size&#x3D;5 &lt;f64.abs&gt;
+ - func[20] size&#x3D;5 &lt;f64.neg&gt;
+ - func[21] size&#x3D;7 &lt;f64.copysign&gt;
+ - func[22] size&#x3D;5 &lt;f64.ceil&gt;
+ - func[23] size&#x3D;5 &lt;f64.floor&gt;
+ - func[24] size&#x3D;5 &lt;f64.trunc&gt;
+ - func[25] size&#x3D;5 &lt;f64.nearest&gt;
+ - func[26] size&#x3D;7 &lt;f64.min&gt;
+ - func[27] size&#x3D;7 &lt;f64.max&gt;
+
+Contents of section Type:
+000000a: 0460 027d 7d01 7d60 017d 017d 6002 7c7c  .&#x60;.}}.}&#x60;.}.}&#x60;.||
+000001a: 017c 6001 7c01 7c                        .|&#x60;.|.|
+
+Contents of section Function:
+0000023: 1c00 0000 0001 0101 0001 0101 0100 0002  ................
+0000033: 0202 0203 0303 0203 0303 0302 02         .............
+
+Contents of section Export:
+0000043: 1c07 6633 322e 6164 6400 0007 6633 322e  ..f32.add...f32.
+0000053: 7375 6200 0107 6633 322e 6d75 6c00 0207  sub...f32.mul...
+0000063: 6633 322e 6469 7600 0308 6633 322e 7371  f32.div...f32.sq
+0000073: 7274 0004 0766 3332 2e61 6273 0005 0766  rt...f32.abs...f
+0000083: 3332 2e6e 6567 0006 0c66 3332 2e63 6f70  32.neg...f32.cop
+0000093: 7973 6967 6e00 0708 6633 322e 6365 696c  ysign...f32.ceil
+00000a3: 0008 0966 3332 2e66 6c6f 6f72 0009 0966  ...f32.floor...f
+00000b3: 3332 2e74 7275 6e63 000a 0b66 3332 2e6e  32.trunc...f32.n
+00000c3: 6561 7265 7374 000b 0766 3332 2e6d 696e  earest...f32.min
+00000d3: 000c 0766 3332 2e6d 6178 000d 0766 3634  ...f32.max...f64
+00000e3: 2e61 6464 000e 0766 3634 2e73 7562 000f  .add...f64.sub..
+00000f3: 0766 3634 2e6d 756c 0010 0766 3634 2e64  .f64.mul...f64.d
+0000103: 6976 0011 0866 3634 2e73 7172 7400 1207  iv...f64.sqrt...
+0000113: 6636 342e 6162 7300 1307 6636 342e 6e65  f64.abs...f64.ne
+0000123: 6700 140c 6636 342e 636f 7079 7369 676e  g...f64.copysign
+0000133: 0015 0866 3634 2e63 6569 6c00 1609 6636  ...f64.ceil...f6
+0000143: 342e 666c 6f6f 7200 1709 6636 342e 7472  4.floor...f64.tr
+0000153: 756e 6300 180b 6636 342e 6e65 6172 6573  unc...f64.neares
+0000163: 7400 1907 6636 342e 6d69 6e00 1a07 6636  t...f64.min...f6
+0000173: 342e 6d61 7800 1b                        4.max..
+
+Contents of section Code:
+000017d: 1c07 0020 0020 0192 0b07 0020 0020 0193  ... . ..... . ..
+000018d: 0b07 0020 0020 0194 0b07 0020 0020 0195  ... . ..... . ..
+000019d: 0b05 0020 0091 0b05 0020 008b 0b05 0020  ... ..... ..... 
+00001ad: 008c 0b07 0020 0020 0198 0b05 0020 008d  ..... . ..... ..
+00001bd: 0b05 0020 008e 0b05 0020 008f 0b05 0020  ... ..... ..... 
+00001cd: 0090 0b07 0020 0020 0196 0b07 0020 0020  ..... . ..... . 
+00001dd: 0197 0b07 0020 0020 01a0 0b07 0020 0020  ..... . ..... . 
+00001ed: 01a1 0b07 0020 0020 01a2 0b07 0020 0020  ..... . ..... . 
+00001fd: 01a3 0b05 0020 009f 0b05 0020 0099 0b05  ..... ..... ....
+000020d: 0020 009a 0b07 0020 0020 01a6 0b05 0020  . ..... . ..... 
+000021d: 009b 0b05 0020 009c 0b05 0020 009d 0b05  ..... ..... ....
+000022d: 0020 009e 0b07 0020 0020 01a4 0b07 0020  . ..... . ..... 
+000023d: 0020 01a5 0b                             . ...
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2"><code>BeginModule(version: 1)
+  BeginTypeSection(23)
+    OnTypeCount(4)
+    OnFuncType(index: 0, params: [f32, f32], results: [f32])
+    OnFuncType(index: 1, params: [f32], results: [f32])
+    OnFuncType(index: 2, params: [f64, f64], results: [f64])
+    OnFuncType(index: 3, params: [f64], results: [f64])
+  EndTypeSection
+  BeginFunctionSection(29)
+    OnFunctionCount(28)
+    OnFunction(index: 0, sig_index: 0)
+    OnFunction(index: 1, sig_index: 0)
+    OnFunction(index: 2, sig_index: 0)
+    OnFunction(index: 3, sig_index: 0)
+    OnFunction(index: 4, sig_index: 1)
+    OnFunction(index: 5, sig_index: 1)
+    OnFunction(index: 6, sig_index: 1)
+    OnFunction(index: 7, sig_index: 0)
+    OnFunction(index: 8, sig_index: 1)
+    OnFunction(index: 9, sig_index: 1)
+    OnFunction(index: 10, sig_index: 1)
+    OnFunction(index: 11, sig_index: 1)
+    OnFunction(index: 12, sig_index: 0)
+    OnFunction(index: 13, sig_index: 0)
+    OnFunction(index: 14, sig_index: 2)
+    OnFunction(index: 15, sig_index: 2)
+    OnFunction(index: 16, sig_index: 2)
+    OnFunction(index: 17, sig_index: 2)
+    OnFunction(index: 18, sig_index: 3)
+    OnFunction(index: 19, sig_index: 3)
+    OnFunction(index: 20, sig_index: 3)
+    OnFunction(index: 21, sig_index: 2)
+    OnFunction(index: 22, sig_index: 3)
+    OnFunction(index: 23, sig_index: 3)
+    OnFunction(index: 24, sig_index: 3)
+    OnFunction(index: 25, sig_index: 3)
+    OnFunction(index: 26, sig_index: 2)
+    OnFunction(index: 27, sig_index: 2)
+  EndFunctionSection
+  BeginExportSection(311)
+    OnExportCount(28)
+    OnExport(index: 0, kind: func, item_index: 0, name: &quot;f32.add&quot;)
+    OnExport(index: 1, kind: func, item_index: 1, name: &quot;f32.sub&quot;)
+    OnExport(index: 2, kind: func, item_index: 2, name: &quot;f32.mul&quot;)
+    OnExport(index: 3, kind: func, item_index: 3, name: &quot;f32.div&quot;)
+    OnExport(index: 4, kind: func, item_index: 4, name: &quot;f32.sqrt&quot;)
+    OnExport(index: 5, kind: func, item_index: 5, name: &quot;f32.abs&quot;)
+    OnExport(index: 6, kind: func, item_index: 6, name: &quot;f32.neg&quot;)
+    OnExport(index: 7, kind: func, item_index: 7, name: &quot;f32.copysign&quot;)
+    OnExport(index: 8, kind: func, item_index: 8, name: &quot;f32.ceil&quot;)
+    OnExport(index: 9, kind: func, item_index: 9, name: &quot;f32.floor&quot;)
+    OnExport(index: 10, kind: func, item_index: 10, name: &quot;f32.trunc&quot;)
+    OnExport(index: 11, kind: func, item_index: 11, name: &quot;f32.nearest&quot;)
+    OnExport(index: 12, kind: func, item_index: 12, name: &quot;f32.min&quot;)
+    OnExport(index: 13, kind: func, item_index: 13, name: &quot;f32.max&quot;)
+    OnExport(index: 14, kind: func, item_index: 14, name: &quot;f64.add&quot;)
+    OnExport(index: 15, kind: func, item_index: 15, name: &quot;f64.sub&quot;)
+    OnExport(index: 16, kind: func, item_index: 16, name: &quot;f64.mul&quot;)
+    OnExport(index: 17, kind: func, item_index: 17, name: &quot;f64.div&quot;)
+    OnExport(index: 18, kind: func, item_index: 18, name: &quot;f64.sqrt&quot;)
+    OnExport(index: 19, kind: func, item_index: 19, name: &quot;f64.abs&quot;)
+    OnExport(index: 20, kind: func, item_index: 20, name: &quot;f64.neg&quot;)
+    OnExport(index: 21, kind: func, item_index: 21, name: &quot;f64.copysign&quot;)
+    OnExport(index: 22, kind: func, item_index: 22, name: &quot;f64.ceil&quot;)
+    OnExport(index: 23, kind: func, item_index: 23, name: &quot;f64.floor&quot;)
+    OnExport(index: 24, kind: func, item_index: 24, name: &quot;f64.trunc&quot;)
+    OnExport(index: 25, kind: func, item_index: 25, name: &quot;f64.nearest&quot;)
+    OnExport(index: 26, kind: func, item_index: 26, name: &quot;f64.min&quot;)
+    OnExport(index: 27, kind: func, item_index: 27, name: &quot;f64.max&quot;)
+  EndExportSection
+  BeginCodeSection(197)
+    OnFunctionBodyCount(28)
+    BeginFunctionBody(0, size:7)
+    OnLocalDeclCount(0)
+    EndFunctionBody(0)
+    BeginFunctionBody(1, size:7)
+    OnLocalDeclCount(0)
+    EndFunctionBody(1)
+    BeginFunctionBody(2, size:7)
+    OnLocalDeclCount(0)
+    EndFunctionBody(2)
+    BeginFunctionBody(3, size:7)
+    OnLocalDeclCount(0)
+    EndFunctionBody(3)
+    BeginFunctionBody(4, size:5)
+    OnLocalDeclCount(0)
+    EndFunctionBody(4)
+    BeginFunctionBody(5, size:5)
+    OnLocalDeclCount(0)
+    EndFunctionBody(5)
+    BeginFunctionBody(6, size:5)
+    OnLocalDeclCount(0)
+    EndFunctionBody(6)
+    BeginFunctionBody(7, size:7)
+    OnLocalDeclCount(0)
+    EndFunctionBody(7)
+    BeginFunctionBody(8, size:5)
+    OnLocalDeclCount(0)
+    EndFunctionBody(8)
+    BeginFunctionBody(9, size:5)
+    OnLocalDeclCount(0)
+    EndFunctionBody(9)
+    BeginFunctionBody(10, size:5)
+    OnLocalDeclCount(0)
+    EndFunctionBody(10)
+    BeginFunctionBody(11, size:5)
+    OnLocalDeclCount(0)
+    EndFunctionBody(11)
+    BeginFunctionBody(12, size:7)
+    OnLocalDeclCount(0)
+    EndFunctionBody(12)
+    BeginFunctionBody(13, size:7)
+    OnLocalDeclCount(0)
+    EndFunctionBody(13)
+    BeginFunctionBody(14, size:7)
+    OnLocalDeclCount(0)
+    EndFunctionBody(14)
+    BeginFunctionBody(15, size:7)
+    OnLocalDeclCount(0)
+    EndFunctionBody(15)
+    BeginFunctionBody(16, size:7)
+    OnLocalDeclCount(0)
+    EndFunctionBody(16)
+    BeginFunctionBody(17, size:7)
+    OnLocalDeclCount(0)
+    EndFunctionBody(17)
+    BeginFunctionBody(18, size:5)
+    OnLocalDeclCount(0)
+    EndFunctionBody(18)
+    BeginFunctionBody(19, size:5)
+    OnLocalDeclCount(0)
+    EndFunctionBody(19)
+    BeginFunctionBody(20, size:5)
+    OnLocalDeclCount(0)
+    EndFunctionBody(20)
+    BeginFunctionBody(21, size:7)
+    OnLocalDeclCount(0)
+    EndFunctionBody(21)
+    BeginFunctionBody(22, size:5)
+    OnLocalDeclCount(0)
+    EndFunctionBody(22)
+    BeginFunctionBody(23, size:5)
+    OnLocalDeclCount(0)
+    EndFunctionBody(23)
+    BeginFunctionBody(24, size:5)
+    OnLocalDeclCount(0)
+    EndFunctionBody(24)
+    BeginFunctionBody(25, size:5)
+    OnLocalDeclCount(0)
+    EndFunctionBody(25)
+    BeginFunctionBody(26, size:7)
+    OnLocalDeclCount(0)
+    EndFunctionBody(26)
+    BeginFunctionBody(27, size:7)
+    OnLocalDeclCount(0)
+    EndFunctionBody(27)
+  EndCodeSection
+EndModule
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2 do-not-highlightme"><code>00000000: 00 61 73 6D 01 00 00 00  .asm....
+00000008: 01 17 04 60 02 7D 7D 01  ...&#x60;.}}.
+00000010: 7D 60 01 7D 01 7D 60 02  }&#x60;.}.}&#x60;.
+00000018: 7C 7C 01 7C 60 01 7C 01  ||.|&#x60;.|.
+00000020: 7C 03 1D 1C 00 00 00 00  |.......
+00000028: 01 01 01 00 01 01 01 01  ........
+00000030: 00 00 02 02 02 02 03 03  ........
+00000038: 03 02 03 03 03 03 02 02  ........
+00000040: 07 B7 02 1C 07 66 33 32  .....f32
+00000048: 2E 61 64 64 00 00 07 66  .add...f
+00000050: 33 32 2E 73 75 62 00 01  32.sub..
+00000058: 07 66 33 32 2E 6D 75 6C  .f32.mul
+00000060: 00 02 07 66 33 32 2E 64  ...f32.d
+00000068: 69 76 00 03 08 66 33 32  iv...f32
+00000070: 2E 73 71 72 74 00 04 07  .sqrt...
+00000078: 66 33 32 2E 61 62 73 00  f32.abs.
+00000080: 05 07 66 33 32 2E 6E 65  ..f32.ne
+00000088: 67 00 06 0C 66 33 32 2E  g...f32.
+00000090: 63 6F 70 79 73 69 67 6E  copysign
+00000098: 00 07 08 66 33 32 2E 63  ...f32.c
+000000a0: 65 69 6C 00 08 09 66 33  eil...f3
+000000a8: 32 2E 66 6C 6F 6F 72 00  2.floor.
+000000b0: 09 09 66 33 32 2E 74 72  ..f32.tr
+000000b8: 75 6E 63 00 0A 0B 66 33  unc...f3
+000000c0: 32 2E 6E 65 61 72 65 73  2.neares
+000000c8: 74 00 0B 07 66 33 32 2E  t...f32.
+000000d0: 6D 69 6E 00 0C 07 66 33  min...f3
+000000d8: 32 2E 6D 61 78 00 0D 07  2.max...
+000000e0: 66 36 34 2E 61 64 64 00  f64.add.
+000000e8: 0E 07 66 36 34 2E 73 75  ..f64.su
+000000f0: 62 00 0F 07 66 36 34 2E  b...f64.
+000000f8: 6D 75 6C 00 10 07 66 36  mul...f6
+00000100: 34 2E 64 69 76 00 11 08  4.div...
+00000108: 66 36 34 2E 73 71 72 74  f64.sqrt
+00000110: 00 12 07 66 36 34 2E 61  ...f64.a
+00000118: 62 73 00 13 07 66 36 34  bs...f64
+00000120: 2E 6E 65 67 00 14 0C 66  .neg...f
+00000128: 36 34 2E 63 6F 70 79 73  64.copys
+00000130: 69 67 6E 00 15 08 66 36  ign...f6
+00000138: 34 2E 63 65 69 6C 00 16  4.ceil..
+00000140: 09 66 36 34 2E 66 6C 6F  .f64.flo
+00000148: 6F 72 00 17 09 66 36 34  or...f64
+00000150: 2E 74 72 75 6E 63 00 18  .trunc..
+00000158: 0B 66 36 34 2E 6E 65 61  .f64.nea
+00000160: 72 65 73 74 00 19 07 66  rest...f
+00000168: 36 34 2E 6D 69 6E 00 1A  64.min..
+00000170: 07 66 36 34 2E 6D 61 78  .f64.max
+00000178: 00 1B 0A C5 01 1C 07 00  ........
+00000180: 20 00 20 01 92 0B 07 00   . .....
+00000188: 20 00 20 01 93 0B 07 00   . .....
+00000190: 20 00 20 01 94 0B 07 00   . .....
+00000198: 20 00 20 01 95 0B 05 00   . .....
+000001a0: 20 00 91 0B 05 00 20 00   ..... .
+000001a8: 8B 0B 05 00 20 00 8C 0B  .... ...
+000001b0: 07 00 20 00 20 01 98 0B  .. . ...
+000001b8: 05 00 20 00 8D 0B 05 00  .. .....
+000001c0: 20 00 8E 0B 05 00 20 00   ..... .
+000001c8: 8F 0B 05 00 20 00 90 0B  .... ...
+000001d0: 07 00 20 00 20 01 96 0B  .. . ...
+000001d8: 07 00 20 00 20 01 97 0B  .. . ...
+000001e0: 07 00 20 00 20 01 A0 0B  .. . ...
+000001e8: 07 00 20 00 20 01 A1 0B  .. . ...
+000001f0: 07 00 20 00 20 01 A2 0B  .. . ...
+000001f8: 07 00 20 00 20 01 A3 0B  .. . ...
+00000200: 05 00 20 00 9F 0B 05 00  .. .....
+00000208: 20 00 99 0B 05 00 20 00   ..... .
+00000210: 9A 0B 07 00 20 00 20 01  .... . .
+00000218: A6 0B 05 00 20 00 9B 0B  .... ...
+00000220: 05 00 20 00 9C 0B 05 00  .. .....
+00000228: 20 00 9D 0B 05 00 20 00   ..... .
+00000230: 9E 0B 07 00 20 00 20 01  .... . .
+00000238: A4 0B 07 00 20 00 20 01  .... . .
+00000240: A5 0B                    ..
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2"><code>(module
+  (type (;0;) (func (param f32 f32) (result f32)))
+  (type (;1;) (func (param f32) (result f32)))
+  (type (;2;) (func (param f64 f64) (result f64)))
+  (type (;3;) (func (param f64) (result f64)))
+  (func (;0;) (type 0) (param f32 f32) (result f32)
+    local.get 0
+    local.get 1
+    f32.add)
+  (func (;1;) (type 0) (param f32 f32) (result f32)
+    local.get 0
+    local.get 1
+    f32.sub)
+  (func (;2;) (type 0) (param f32 f32) (result f32)
+    local.get 0
+    local.get 1
+    f32.mul)
+  (func (;3;) (type 0) (param f32 f32) (result f32)
+    local.get 0
+    local.get 1
+    f32.div)
+  (func (;4;) (type 1) (param f32) (result f32)
+    local.get 0
+    f32.sqrt)
+  (func (;5;) (type 1) (param f32) (result f32)
+    local.get 0
+    f32.abs)
+  (func (;6;) (type 1) (param f32) (result f32)
+    local.get 0
+    f32.neg)
+  (func (;7;) (type 0) (param f32 f32) (result f32)
+    local.get 0
+    local.get 1
+    f32.copysign)
+  (func (;8;) (type 1) (param f32) (result f32)
+    local.get 0
+    f32.ceil)
+  (func (;9;) (type 1) (param f32) (result f32)
+    local.get 0
+    f32.floor)
+  (func (;10;) (type 1) (param f32) (result f32)
+    local.get 0
+    f32.trunc)
+  (func (;11;) (type 1) (param f32) (result f32)
+    local.get 0
+    f32.nearest)
+  (func (;12;) (type 0) (param f32 f32) (result f32)
+    local.get 0
+    local.get 1
+    f32.min)
+  (func (;13;) (type 0) (param f32 f32) (result f32)
+    local.get 0
+    local.get 1
+    f32.max)
+  (func (;14;) (type 2) (param f64 f64) (result f64)
+    local.get 0
+    local.get 1
+    f64.add)
+  (func (;15;) (type 2) (param f64 f64) (result f64)
+    local.get 0
+    local.get 1
+    f64.sub)
+  (func (;16;) (type 2) (param f64 f64) (result f64)
+    local.get 0
+    local.get 1
+    f64.mul)
+  (func (;17;) (type 2) (param f64 f64) (result f64)
+    local.get 0
+    local.get 1
+    f64.div)
+  (func (;18;) (type 3) (param f64) (result f64)
+    local.get 0
+    f64.sqrt)
+  (func (;19;) (type 3) (param f64) (result f64)
+    local.get 0
+    f64.abs)
+  (func (;20;) (type 3) (param f64) (result f64)
+    local.get 0
+    f64.neg)
+  (func (;21;) (type 2) (param f64 f64) (result f64)
+    local.get 0
+    local.get 1
+    f64.copysign)
+  (func (;22;) (type 3) (param f64) (result f64)
+    local.get 0
+    f64.ceil)
+  (func (;23;) (type 3) (param f64) (result f64)
+    local.get 0
+    f64.floor)
+  (func (;24;) (type 3) (param f64) (result f64)
+    local.get 0
+    f64.trunc)
+  (func (;25;) (type 3) (param f64) (result f64)
+    local.get 0
+    f64.nearest)
+  (func (;26;) (type 2) (param f64 f64) (result f64)
+    local.get 0
+    local.get 1
+    f64.min)
+  (func (;27;) (type 2) (param f64 f64) (result f64)
+    local.get 0
+    local.get 1
+    f64.max)
+  (export &quot;f32.add&quot; (func 0))
+  (export &quot;f32.sub&quot; (func 1))
+  (export &quot;f32.mul&quot; (func 2))
+  (export &quot;f32.div&quot; (func 3))
+  (export &quot;f32.sqrt&quot; (func 4))
+  (export &quot;f32.abs&quot; (func 5))
+  (export &quot;f32.neg&quot; (func 6))
+  (export &quot;f32.copysign&quot; (func 7))
+  (export &quot;f32.ceil&quot; (func 8))
+  (export &quot;f32.floor&quot; (func 9))
+  (export &quot;f32.trunc&quot; (func 10))
+  (export &quot;f32.nearest&quot; (func 11))
+  (export &quot;f32.min&quot; (func 12))
+  (export &quot;f32.max&quot; (func 13))
+  (export &quot;f64.add&quot; (func 14))
+  (export &quot;f64.sub&quot; (func 15))
+  (export &quot;f64.mul&quot; (func 16))
+  (export &quot;f64.div&quot; (func 17))
+  (export &quot;f64.sqrt&quot; (func 18))
+  (export &quot;f64.abs&quot; (func 19))
+  (export &quot;f64.neg&quot; (func 20))
+  (export &quot;f64.copysign&quot; (func 21))
+  (export &quot;f64.ceil&quot; (func 22))
+  (export &quot;f64.floor&quot; (func 23))
+  (export &quot;f64.trunc&quot; (func 24))
+  (export &quot;f64.nearest&quot; (func 25))
+  (export &quot;f64.min&quot; (func 26))
+  (export &quot;f64.max&quot; (func 27)))
+</code></pre>
+    </div>
+</body>
+
+</html>

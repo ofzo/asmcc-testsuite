@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asmcc simd_i64x2_arith2.3</title>
+
+    <link rel="stylesheet" href="//unpkg.com/@highlightjs/cdn-assets@11.7.0/styles/github.min.css">
+    <script src="//unpkg.com/@highlightjs/cdn-assets@11.7.0/highlight.min.js"></script>
+    <script>
+        hljs.configure({
+            noHighlightRe: /^do-not-highlightme$/i,
+        });
+    </script>
+    <script>hljs.highlightAll();</script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="/_vercel/insights/script.js"></script>
+</head>
+
+<body class="text-sm p-2">
+    <h1 class="text-2xl  w-full mb-4">Anaylzer: <a href="/simd_i64x2_arith2.3.wasm">simd_i64x2_arith2.3.wasm</a></h1>
+    <div class="flex justify-evenly">
+        <pre class="p-4 overflow-scroll border-2"><code>
+simd_i64x2_arith2.3.wasm:	file format wasm 0x1
+
+Sections:
+
+     Type start&#x3D;0x0000000a end&#x3D;0x00000010 (size&#x3D;0x00000006) count: 1
+ Function start&#x3D;0x00000012 end&#x3D;0x00000014 (size&#x3D;0x00000002) count: 1
+   Export start&#x3D;0x00000016 end&#x3D;0x0000002d (size&#x3D;0x00000017) count: 1
+     Code start&#x3D;0x0000002f end&#x3D;0x0000003b (size&#x3D;0x0000000c) count: 1
+
+Section Details:
+
+Type[1]:
+ - type[0] (v128) -&gt; v128
+Function[1]:
+ - func[0] sig&#x3D;0 &lt;i64x2.abs-i64x2.abs&gt;
+Export[1]:
+ - func[0] &lt;i64x2.abs-i64x2.abs&gt; -&gt; &quot;i64x2.abs-i64x2.abs&quot;
+Code[1]:
+ - func[0] size&#x3D;10 &lt;i64x2.abs-i64x2.abs&gt;
+
+Contents of section Type:
+000000a: 0160 017b 017b                           .&#x60;.{.{
+
+Contents of section Function:
+0000012: 0100                                     ..
+
+Contents of section Export:
+0000016: 0113 6936 3478 322e 6162 732d 6936 3478  ..i64x2.abs-i64x
+0000026: 322e 6162 7300 00                        2.abs..
+
+Contents of section Code:
+000002f: 010a 0020 00fd c001 fdc0 010b            ... ........
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2"><code>BeginModule(version: 1)
+  BeginTypeSection(6)
+    OnTypeCount(1)
+    OnFuncType(index: 0, params: [v128], results: [v128])
+  EndTypeSection
+  BeginFunctionSection(2)
+    OnFunctionCount(1)
+    OnFunction(index: 0, sig_index: 0)
+  EndFunctionSection
+  BeginExportSection(23)
+    OnExportCount(1)
+    OnExport(index: 0, kind: func, item_index: 0, name: &quot;i64x2.abs-i64x2.abs&quot;)
+  EndExportSection
+  BeginCodeSection(12)
+    OnFunctionBodyCount(1)
+    BeginFunctionBody(0, size:10)
+    OnLocalDeclCount(0)
+    EndFunctionBody(0)
+  EndCodeSection
+EndModule
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2 do-not-highlightme"><code>00000000: 00 61 73 6D 01 00 00 00  .asm....
+00000008: 01 06 01 60 01 7B 01 7B  ...&#x60;.{.{
+00000010: 03 02 01 00 07 17 01 13  ........
+00000018: 69 36 34 78 32 2E 61 62  i64x2.ab
+00000020: 73 2D 69 36 34 78 32 2E  s-i64x2.
+00000028: 61 62 73 00 00 0A 0C 01  abs.....
+00000030: 0A 00 20 00 FD C0 01 FD  .. .....
+00000038: C0 01 0B                 ...
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2"><code>(module
+  (type (;0;) (func (param v128) (result v128)))
+  (func (;0;) (type 0) (param v128) (result v128)
+    local.get 0
+    i64x2.abs
+    i64x2.abs)
+  (export &quot;i64x2.abs-i64x2.abs&quot; (func 0)))
+</code></pre>
+    </div>
+</body>
+
+</html>

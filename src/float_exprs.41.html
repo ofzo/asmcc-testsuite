@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asmcc float_exprs.41</title>
+
+    <link rel="stylesheet" href="//unpkg.com/@highlightjs/cdn-assets@11.7.0/styles/github.min.css">
+    <script src="//unpkg.com/@highlightjs/cdn-assets@11.7.0/highlight.min.js"></script>
+    <script>
+        hljs.configure({
+            noHighlightRe: /^do-not-highlightme$/i,
+        });
+    </script>
+    <script>hljs.highlightAll();</script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="/_vercel/insights/script.js"></script>
+</head>
+
+<body class="text-sm p-2">
+    <h1 class="text-2xl  w-full mb-4">Anaylzer: <a href="/float_exprs.41.wasm">float_exprs.41.wasm</a></h1>
+    <div class="flex justify-evenly">
+        <pre class="p-4 overflow-scroll border-2"><code>
+float_exprs.41.wasm:	file format wasm 0x1
+
+Sections:
+
+     Type start&#x3D;0x0000000a end&#x3D;0x00000015 (size&#x3D;0x0000000b) count: 2
+ Function start&#x3D;0x00000017 end&#x3D;0x0000001b (size&#x3D;0x00000004) count: 3
+   Memory start&#x3D;0x0000001d end&#x3D;0x00000021 (size&#x3D;0x00000004) count: 1
+   Export start&#x3D;0x00000023 end&#x3D;0x00000039 (size&#x3D;0x00000016) count: 3
+     Code start&#x3D;0x0000003b end&#x3D;0x00000074 (size&#x3D;0x00000039) count: 3
+
+Section Details:
+
+Type[2]:
+ - type[0] (i32, f64) -&gt; nil
+ - type[1] (i32) -&gt; f64
+Function[3]:
+ - func[0] sig&#x3D;0 &lt;init&gt;
+ - func[1] sig&#x3D;0 &lt;run&gt;
+ - func[2] sig&#x3D;1 &lt;check&gt;
+Memory[1]:
+ - memory[0] pages: initial&#x3D;1 max&#x3D;1
+Export[3]:
+ - func[0] &lt;init&gt; -&gt; &quot;init&quot;
+ - func[1] &lt;run&gt; -&gt; &quot;run&quot;
+ - func[2] &lt;check&gt; -&gt; &quot;check&quot;
+Code[3]:
+ - func[0] size&#x3D;9 &lt;init&gt;
+ - func[1] size&#x3D;37 &lt;run&gt;
+ - func[2] size&#x3D;7 &lt;check&gt;
+
+Contents of section Type:
+000000a: 0260 027f 7c00 6001 7f01 7c              .&#x60;..|.&#x60;...|
+
+Contents of section Function:
+0000017: 0300 0001                                ....
+
+Contents of section Memory:
+000001d: 0101 0101                                ....
+
+Contents of section Export:
+0000023: 0304 696e 6974 0000 0372 756e 0001 0563  ..init...run...c
+0000033: 6865 636b 0002                           heck..
+
+Contents of section Code:
+000003b: 0309 0020 0020 0139 0300 0b25 0101 7f02  ... . .9...%....
+000004b: 4003 4020 0220 022b 0300 2001 a339 0300  @.@ . .+.. ..9..
+000005b: 2002 4108 6a21 0220 0220 0049 0d00 0b0b   .A.j!. . .I....
+000006b: 0b07 0020 002b 0300 0b                   ... .+...
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2"><code>BeginModule(version: 1)
+  BeginTypeSection(11)
+    OnTypeCount(2)
+    OnFuncType(index: 0, params: [i32, f64], results: [])
+    OnFuncType(index: 1, params: [i32], results: [f64])
+  EndTypeSection
+  BeginFunctionSection(4)
+    OnFunctionCount(3)
+    OnFunction(index: 0, sig_index: 0)
+    OnFunction(index: 1, sig_index: 0)
+    OnFunction(index: 2, sig_index: 1)
+  EndFunctionSection
+  BeginMemorySection(4)
+    OnMemoryCount(1)
+    OnMemory(index: 0, initial: 1, max: 1)
+  EndMemorySection
+  BeginExportSection(22)
+    OnExportCount(3)
+    OnExport(index: 0, kind: func, item_index: 0, name: &quot;init&quot;)
+    OnExport(index: 1, kind: func, item_index: 1, name: &quot;run&quot;)
+    OnExport(index: 2, kind: func, item_index: 2, name: &quot;check&quot;)
+  EndExportSection
+  BeginCodeSection(57)
+    OnFunctionBodyCount(3)
+    BeginFunctionBody(0, size:9)
+    OnLocalDeclCount(0)
+    EndFunctionBody(0)
+    BeginFunctionBody(1, size:37)
+    OnLocalDeclCount(1)
+    OnLocalDecl(index: 0, count: 1, type: i32)
+    EndFunctionBody(1)
+    BeginFunctionBody(2, size:7)
+    OnLocalDeclCount(0)
+    EndFunctionBody(2)
+  EndCodeSection
+EndModule
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2 do-not-highlightme"><code>00000000: 00 61 73 6D 01 00 00 00  .asm....
+00000008: 01 0B 02 60 02 7F 7C 00  ...&#x60;..|.
+00000010: 60 01 7F 01 7C 03 04 03  &#x60;...|...
+00000018: 00 00 01 05 04 01 01 01  ........
+00000020: 01 07 16 03 04 69 6E 69  .....ini
+00000028: 74 00 00 03 72 75 6E 00  t...run.
+00000030: 01 05 63 68 65 63 6B 00  ..check.
+00000038: 02 0A 39 03 09 00 20 00  ..9... .
+00000040: 20 01 39 03 00 0B 25 01   .9...%.
+00000048: 01 7F 02 40 03 40 20 02  ...@.@ .
+00000050: 20 02 2B 03 00 20 01 A3   .+.. ..
+00000058: 39 03 00 20 02 41 08 6A  9.. .A.j
+00000060: 21 02 20 02 20 00 49 0D  !. . .I.
+00000068: 00 0B 0B 0B 07 00 20 00  ...... .
+00000070: 2B 03 00 0B              +...
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2"><code>(module
+  (type (;0;) (func (param i32 f64)))
+  (type (;1;) (func (param i32) (result f64)))
+  (func (;0;) (type 0) (param i32 f64)
+    local.get 0
+    local.get 1
+    f64.store)
+  (func (;1;) (type 0) (param i32 f64)
+    (local i32)
+    block  ;; label &#x3D; @1
+      loop  ;; label &#x3D; @2
+        local.get 2
+        local.get 2
+        f64.load
+        local.get 1
+        f64.div
+        f64.store
+        local.get 2
+        i32.const 8
+        i32.add
+        local.set 2
+        local.get 2
+        local.get 0
+        i32.lt_u
+        br_if 0 (;@2;)
+      end
+    end)
+  (func (;2;) (type 1) (param i32) (result f64)
+    local.get 0
+    f64.load)
+  (memory (;0;) 1 1)
+  (export &quot;init&quot; (func 0))
+  (export &quot;run&quot; (func 1))
+  (export &quot;check&quot; (func 2)))
+</code></pre>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asmcc simd_i16x8_extadd_pairwise_i8x16.0</title>
+
+    <link rel="stylesheet" href="//unpkg.com/@highlightjs/cdn-assets@11.7.0/styles/github.min.css">
+    <script src="//unpkg.com/@highlightjs/cdn-assets@11.7.0/highlight.min.js"></script>
+    <script>
+        hljs.configure({
+            noHighlightRe: /^do-not-highlightme$/i,
+        });
+    </script>
+    <script>hljs.highlightAll();</script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="/_vercel/insights/script.js"></script>
+</head>
+
+<body class="text-sm p-2">
+    <h1 class="text-2xl  w-full mb-4">Anaylzer: <a href="/simd_i16x8_extadd_pairwise_i8x16.0.wasm">simd_i16x8_extadd_pairwise_i8x16.0.wasm</a></h1>
+    <div class="flex justify-evenly">
+        <pre class="p-4 overflow-scroll border-2"><code>
+simd_i16x8_extadd_pairwise_i8x16.0.wasm:	file format wasm 0x1
+
+Sections:
+
+     Type start&#x3D;0x0000000a end&#x3D;0x00000010 (size&#x3D;0x00000006) count: 1
+ Function start&#x3D;0x00000012 end&#x3D;0x00000015 (size&#x3D;0x00000003) count: 2
+   Export start&#x3D;0x00000017 end&#x3D;0x00000058 (size&#x3D;0x00000041) count: 2
+     Code start&#x3D;0x0000005a end&#x3D;0x00000069 (size&#x3D;0x0000000f) count: 2
+
+Section Details:
+
+Type[1]:
+ - type[0] (v128) -&gt; v128
+Function[2]:
+ - func[0] sig&#x3D;0 &lt;i16x8.extadd_pairwise_i8x16_s&gt;
+ - func[1] sig&#x3D;0 &lt;i16x8.extadd_pairwise_i8x16_u&gt;
+Export[2]:
+ - func[0] &lt;i16x8.extadd_pairwise_i8x16_s&gt; -&gt; &quot;i16x8.extadd_pairwise_i8x16_s&quot;
+ - func[1] &lt;i16x8.extadd_pairwise_i8x16_u&gt; -&gt; &quot;i16x8.extadd_pairwise_i8x16_u&quot;
+Code[2]:
+ - func[0] size&#x3D;6 &lt;i16x8.extadd_pairwise_i8x16_s&gt;
+ - func[1] size&#x3D;6 &lt;i16x8.extadd_pairwise_i8x16_u&gt;
+
+Contents of section Type:
+000000a: 0160 017b 017b                           .&#x60;.{.{
+
+Contents of section Function:
+0000012: 0200 00                                  ...
+
+Contents of section Export:
+0000017: 021d 6931 3678 382e 6578 7461 6464 5f70  ..i16x8.extadd_p
+0000027: 6169 7277 6973 655f 6938 7831 365f 7300  airwise_i8x16_s.
+0000037: 001d 6931 3678 382e 6578 7461 6464 5f70  ..i16x8.extadd_p
+0000047: 6169 7277 6973 655f 6938 7831 365f 7500  airwise_i8x16_u.
+0000057: 01                                       .
+
+Contents of section Code:
+000005a: 0206 0020 00fd 7c0b 0600 2000 fd7d 0b    ... ..|... ..}.
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2"><code>BeginModule(version: 1)
+  BeginTypeSection(6)
+    OnTypeCount(1)
+    OnFuncType(index: 0, params: [v128], results: [v128])
+  EndTypeSection
+  BeginFunctionSection(3)
+    OnFunctionCount(2)
+    OnFunction(index: 0, sig_index: 0)
+    OnFunction(index: 1, sig_index: 0)
+  EndFunctionSection
+  BeginExportSection(65)
+    OnExportCount(2)
+    OnExport(index: 0, kind: func, item_index: 0, name: &quot;i16x8.extadd_pairwise_i8x16_s&quot;)
+    OnExport(index: 1, kind: func, item_index: 1, name: &quot;i16x8.extadd_pairwise_i8x16_u&quot;)
+  EndExportSection
+  BeginCodeSection(15)
+    OnFunctionBodyCount(2)
+    BeginFunctionBody(0, size:6)
+    OnLocalDeclCount(0)
+    EndFunctionBody(0)
+    BeginFunctionBody(1, size:6)
+    OnLocalDeclCount(0)
+    EndFunctionBody(1)
+  EndCodeSection
+EndModule
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2 do-not-highlightme"><code>00000000: 00 61 73 6D 01 00 00 00  .asm....
+00000008: 01 06 01 60 01 7B 01 7B  ...&#x60;.{.{
+00000010: 03 03 02 00 00 07 41 02  ......A.
+00000018: 1D 69 31 36 78 38 2E 65  .i16x8.e
+00000020: 78 74 61 64 64 5F 70 61  xtadd_pa
+00000028: 69 72 77 69 73 65 5F 69  irwise_i
+00000030: 38 78 31 36 5F 73 00 00  8x16_s..
+00000038: 1D 69 31 36 78 38 2E 65  .i16x8.e
+00000040: 78 74 61 64 64 5F 70 61  xtadd_pa
+00000048: 69 72 77 69 73 65 5F 69  irwise_i
+00000050: 38 78 31 36 5F 75 00 01  8x16_u..
+00000058: 0A 0F 02 06 00 20 00 FD  ..... ..
+00000060: 7C 0B 06 00 20 00 FD 7D  |... ..}
+00000068: 0B                       .
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2"><code>(module
+  (type (;0;) (func (param v128) (result v128)))
+  (func (;0;) (type 0) (param v128) (result v128)
+    local.get 0
+    i16x8.extadd_pairwise_i8x16_s)
+  (func (;1;) (type 0) (param v128) (result v128)
+    local.get 0
+    i16x8.extadd_pairwise_i8x16_u)
+  (export &quot;i16x8.extadd_pairwise_i8x16_s&quot; (func 0))
+  (export &quot;i16x8.extadd_pairwise_i8x16_u&quot; (func 1)))
+</code></pre>
+    </div>
+</body>
+
+</html>

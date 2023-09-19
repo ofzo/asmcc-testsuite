@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asmcc simd_lane.137</title>
+
+    <link rel="stylesheet" href="//unpkg.com/@highlightjs/cdn-assets@11.7.0/styles/github.min.css">
+    <script src="//unpkg.com/@highlightjs/cdn-assets@11.7.0/highlight.min.js"></script>
+    <script>
+        hljs.configure({
+            noHighlightRe: /^do-not-highlightme$/i,
+        });
+    </script>
+    <script>hljs.highlightAll();</script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="/_vercel/insights/script.js"></script>
+</head>
+
+<body class="text-sm p-2">
+    <h1 class="text-2xl  w-full mb-4">Anaylzer: <a href="/simd_lane.137.wasm">simd_lane.137.wasm</a></h1>
+    <div class="flex justify-evenly">
+        <pre class="p-4 overflow-scroll border-2"><code>
+simd_lane.137.wasm:	file format wasm 0x1
+
+Sections:
+
+     Type start&#x3D;0x0000000a end&#x3D;0x00000038 (size&#x3D;0x0000002e) count: 7
+ Function start&#x3D;0x0000003a end&#x3D;0x0000004d (size&#x3D;0x00000013) count: 18
+   Export start&#x3D;0x00000050 end&#x3D;0x000001e8 (size&#x3D;0x00000198) count: 18
+     Code start&#x3D;0x000001eb end&#x3D;0x000002ed (size&#x3D;0x00000102) count: 18
+
+Section Details:
+
+Type[7]:
+ - type[0] (v128, v128) -&gt; v128
+ - type[1] (v128, i32) -&gt; i32
+ - type[2] (v128, f32) -&gt; f32
+ - type[3] (v128, i64) -&gt; i64
+ - type[4] (v128, f64) -&gt; f64
+ - type[5] (v128, i32, v128) -&gt; v128
+ - type[6] (v128, i32, v128, i32) -&gt; v128
+Function[18]:
+ - func[0] sig&#x3D;0 &lt;i8x16_extract_lane_s&gt;
+ - func[1] sig&#x3D;0 &lt;i8x16_extract_lane_u&gt;
+ - func[2] sig&#x3D;0 &lt;i16x8_extract_lane_s&gt;
+ - func[3] sig&#x3D;0 &lt;i16x8_extract_lane_u&gt;
+ - func[4] sig&#x3D;0 &lt;i32x4_extract_lane&gt;
+ - func[5] sig&#x3D;0 &lt;f32x4_extract_lane&gt;
+ - func[6] sig&#x3D;0 &lt;i64x2_extract_lane&gt;
+ - func[7] sig&#x3D;0 &lt;f64x2_extract_lane&gt;
+ - func[8] sig&#x3D;1 &lt;i8x16_replace_lane-s&gt;
+ - func[9] sig&#x3D;1 &lt;i8x16_replace_lane-u&gt;
+ - func[10] sig&#x3D;1 &lt;i16x8_replace_lane-s&gt;
+ - func[11] sig&#x3D;1 &lt;i16x8_replace_lane-u&gt;
+ - func[12] sig&#x3D;1 &lt;i32x4_replace_lane&gt;
+ - func[13] sig&#x3D;2 &lt;f32x4_replace_lane&gt;
+ - func[14] sig&#x3D;3 &lt;i64x2_replace_lane&gt;
+ - func[15] sig&#x3D;4 &lt;f64x2_replace_lane&gt;
+ - func[16] sig&#x3D;5 &lt;as-v8x16_swizzle-operand&gt;
+ - func[17] sig&#x3D;6 &lt;as-v8x16_shuffle-operands&gt;
+Export[18]:
+ - func[0] &lt;i8x16_extract_lane_s&gt; -&gt; &quot;i8x16_extract_lane_s&quot;
+ - func[1] &lt;i8x16_extract_lane_u&gt; -&gt; &quot;i8x16_extract_lane_u&quot;
+ - func[2] &lt;i16x8_extract_lane_s&gt; -&gt; &quot;i16x8_extract_lane_s&quot;
+ - func[3] &lt;i16x8_extract_lane_u&gt; -&gt; &quot;i16x8_extract_lane_u&quot;
+ - func[4] &lt;i32x4_extract_lane&gt; -&gt; &quot;i32x4_extract_lane&quot;
+ - func[5] &lt;f32x4_extract_lane&gt; -&gt; &quot;f32x4_extract_lane&quot;
+ - func[6] &lt;i64x2_extract_lane&gt; -&gt; &quot;i64x2_extract_lane&quot;
+ - func[7] &lt;f64x2_extract_lane&gt; -&gt; &quot;f64x2_extract_lane&quot;
+ - func[8] &lt;i8x16_replace_lane-s&gt; -&gt; &quot;i8x16_replace_lane-s&quot;
+ - func[9] &lt;i8x16_replace_lane-u&gt; -&gt; &quot;i8x16_replace_lane-u&quot;
+ - func[10] &lt;i16x8_replace_lane-s&gt; -&gt; &quot;i16x8_replace_lane-s&quot;
+ - func[11] &lt;i16x8_replace_lane-u&gt; -&gt; &quot;i16x8_replace_lane-u&quot;
+ - func[12] &lt;i32x4_replace_lane&gt; -&gt; &quot;i32x4_replace_lane&quot;
+ - func[13] &lt;f32x4_replace_lane&gt; -&gt; &quot;f32x4_replace_lane&quot;
+ - func[14] &lt;i64x2_replace_lane&gt; -&gt; &quot;i64x2_replace_lane&quot;
+ - func[15] &lt;f64x2_replace_lane&gt; -&gt; &quot;f64x2_replace_lane&quot;
+ - func[16] &lt;as-v8x16_swizzle-operand&gt; -&gt; &quot;as-v8x16_swizzle-operand&quot;
+ - func[17] &lt;as-v8x16_shuffle-operands&gt; -&gt; &quot;as-v8x16_shuffle-operands&quot;
+Code[18]:
+ - func[0] size&#x3D;12 &lt;i8x16_extract_lane_s&gt;
+ - func[1] size&#x3D;12 &lt;i8x16_extract_lane_u&gt;
+ - func[2] size&#x3D;12 &lt;i16x8_extract_lane_s&gt;
+ - func[3] size&#x3D;12 &lt;i16x8_extract_lane_u&gt;
+ - func[4] size&#x3D;12 &lt;i32x4_extract_lane&gt;
+ - func[5] size&#x3D;12 &lt;f32x4_extract_lane&gt;
+ - func[6] size&#x3D;12 &lt;i64x2_extract_lane&gt;
+ - func[7] size&#x3D;12 &lt;f64x2_extract_lane&gt;
+ - func[8] size&#x3D;12 &lt;i8x16_replace_lane-s&gt;
+ - func[9] size&#x3D;12 &lt;i8x16_replace_lane-u&gt;
+ - func[10] size&#x3D;12 &lt;i16x8_replace_lane-s&gt;
+ - func[11] size&#x3D;12 &lt;i16x8_replace_lane-u&gt;
+ - func[12] size&#x3D;12 &lt;i32x4_replace_lane&gt;
+ - func[13] size&#x3D;12 &lt;f32x4_replace_lane&gt;
+ - func[14] size&#x3D;12 &lt;i64x2_replace_lane&gt;
+ - func[15] size&#x3D;12 &lt;f64x2_replace_lane&gt;
+ - func[16] size&#x3D;13 &lt;as-v8x16_swizzle-operand&gt;
+ - func[17] size&#x3D;34 &lt;as-v8x16_shuffle-operands&gt;
+
+Contents of section Type:
+000000a: 0760 027b 7b01 7b60 027b 7f01 7f60 027b  .&#x60;.{{.{&#x60;.{...&#x60;.{
+000001a: 7d01 7d60 027b 7e01 7e60 027b 7c01 7c60  }.}&#x60;.{~.~&#x60;.{|.|&#x60;
+000002a: 037b 7f7b 017b 6004 7b7f 7b7f 017b       .{.{.{&#x60;.{.{..{
+
+Contents of section Function:
+000003a: 1200 0000 0000 0000 0001 0101 0101 0203  ................
+000004a: 0405 06                                  ...
+
+Contents of section Export:
+0000050: 1214 6938 7831 365f 6578 7472 6163 745f  ..i8x16_extract_
+0000060: 6c61 6e65 5f73 0000 1469 3878 3136 5f65  lane_s...i8x16_e
+0000070: 7874 7261 6374 5f6c 616e 655f 7500 0114  xtract_lane_u...
+0000080: 6931 3678 385f 6578 7472 6163 745f 6c61  i16x8_extract_la
+0000090: 6e65 5f73 0002 1469 3136 7838 5f65 7874  ne_s...i16x8_ext
+00000a0: 7261 6374 5f6c 616e 655f 7500 0312 6933  ract_lane_u...i3
+00000b0: 3278 345f 6578 7472 6163 745f 6c61 6e65  2x4_extract_lane
+00000c0: 0004 1266 3332 7834 5f65 7874 7261 6374  ...f32x4_extract
+00000d0: 5f6c 616e 6500 0512 6936 3478 325f 6578  _lane...i64x2_ex
+00000e0: 7472 6163 745f 6c61 6e65 0006 1266 3634  tract_lane...f64
+00000f0: 7832 5f65 7874 7261 6374 5f6c 616e 6500  x2_extract_lane.
+0000100: 0714 6938 7831 365f 7265 706c 6163 655f  ..i8x16_replace_
+0000110: 6c61 6e65 2d73 0008 1469 3878 3136 5f72  lane-s...i8x16_r
+0000120: 6570 6c61 6365 5f6c 616e 652d 7500 0914  eplace_lane-u...
+0000130: 6931 3678 385f 7265 706c 6163 655f 6c61  i16x8_replace_la
+0000140: 6e65 2d73 000a 1469 3136 7838 5f72 6570  ne-s...i16x8_rep
+0000150: 6c61 6365 5f6c 616e 652d 7500 0b12 6933  lace_lane-u...i3
+0000160: 3278 345f 7265 706c 6163 655f 6c61 6e65  2x4_replace_lane
+0000170: 000c 1266 3332 7834 5f72 6570 6c61 6365  ...f32x4_replace
+0000180: 5f6c 616e 6500 0d12 6936 3478 325f 7265  _lane...i64x2_re
+0000190: 706c 6163 655f 6c61 6e65 000e 1266 3634  place_lane...f64
+00001a0: 7832 5f72 6570 6c61 6365 5f6c 616e 6500  x2_replace_lane.
+00001b0: 0f18 6173 2d76 3878 3136 5f73 7769 7a7a  ..as-v8x16_swizz
+00001c0: 6c65 2d6f 7065 7261 6e64 0010 1961 732d  le-operand...as-
+00001d0: 7638 7831 365f 7368 7566 666c 652d 6f70  v8x16_shuffle-op
+00001e0: 6572 616e 6473 0011                      erands..
+
+Contents of section Code:
+00001eb: 120c 0020 0020 01fd 1500 fd17 000b 0c00  ... . ..........
+00001fb: 2000 2001 fd16 00fd 1700 0b0c 0020 0020   . .......... . 
+000020b: 01fd 1800 fd1a 000b 0c00 2000 2001 fd19  .......... . ...
+000021b: 00fd 1a00 0b0c 0020 0020 01fd 1b00 fd1c  ....... . ......
+000022b: 000b 0c00 2000 2001 fd1b 00fd 1c00 0b0c  .... . .........
+000023b: 0020 0020 01fd 1d00 fd1e 000b 0c00 2000  . . .......... .
+000024b: 2001 fd21 00fd 2200 0b0c 0020 0020 01fd   ..!..&quot;.... . ..
+000025b: 170f fd15 0f0b 0c00 2000 2001 fd17 0ffd  ........ . .....
+000026b: 160f 0b0c 0020 0020 01fd 1a07 fd18 070b  ..... . ........
+000027b: 0c00 2000 2001 fd1a 07fd 1907 0b0c 0020  .. . .......... 
+000028b: 0020 01fd 1c03 fd1b 030b 0c00 2000 2001  . .......... . .
+000029b: fd20 03fd 1f03 0b0c 0020 0020 01fd 1e01  . ....... . ....
+00002ab: fd1d 010b 0c00 2000 2001 fd22 01fd 2101  ...... . ..&quot;..!.
+00002bb: 0b0d 0020 0020 01fd 1700 2002 fd0e 0b22  ... . .... ....&quot;
+00002cb: 0020 0020 01fd 1700 2002 2003 fd17 0ffd  . . .... . .....
+00002db: 0d10 0112 0314 0516 0718 091a 0b1c 0d1e  ................
+00002eb: 0f0b                                     ..
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2"><code>BeginModule(version: 1)
+  BeginTypeSection(46)
+    OnTypeCount(7)
+    OnFuncType(index: 0, params: [v128, v128], results: [v128])
+    OnFuncType(index: 1, params: [v128, i32], results: [i32])
+    OnFuncType(index: 2, params: [v128, f32], results: [f32])
+    OnFuncType(index: 3, params: [v128, i64], results: [i64])
+    OnFuncType(index: 4, params: [v128, f64], results: [f64])
+    OnFuncType(index: 5, params: [v128, i32, v128], results: [v128])
+    OnFuncType(index: 6, params: [v128, i32, v128, i32], results: [v128])
+  EndTypeSection
+  BeginFunctionSection(19)
+    OnFunctionCount(18)
+    OnFunction(index: 0, sig_index: 0)
+    OnFunction(index: 1, sig_index: 0)
+    OnFunction(index: 2, sig_index: 0)
+    OnFunction(index: 3, sig_index: 0)
+    OnFunction(index: 4, sig_index: 0)
+    OnFunction(index: 5, sig_index: 0)
+    OnFunction(index: 6, sig_index: 0)
+    OnFunction(index: 7, sig_index: 0)
+    OnFunction(index: 8, sig_index: 1)
+    OnFunction(index: 9, sig_index: 1)
+    OnFunction(index: 10, sig_index: 1)
+    OnFunction(index: 11, sig_index: 1)
+    OnFunction(index: 12, sig_index: 1)
+    OnFunction(index: 13, sig_index: 2)
+    OnFunction(index: 14, sig_index: 3)
+    OnFunction(index: 15, sig_index: 4)
+    OnFunction(index: 16, sig_index: 5)
+    OnFunction(index: 17, sig_index: 6)
+  EndFunctionSection
+  BeginExportSection(408)
+    OnExportCount(18)
+    OnExport(index: 0, kind: func, item_index: 0, name: &quot;i8x16_extract_lane_s&quot;)
+    OnExport(index: 1, kind: func, item_index: 1, name: &quot;i8x16_extract_lane_u&quot;)
+    OnExport(index: 2, kind: func, item_index: 2, name: &quot;i16x8_extract_lane_s&quot;)
+    OnExport(index: 3, kind: func, item_index: 3, name: &quot;i16x8_extract_lane_u&quot;)
+    OnExport(index: 4, kind: func, item_index: 4, name: &quot;i32x4_extract_lane&quot;)
+    OnExport(index: 5, kind: func, item_index: 5, name: &quot;f32x4_extract_lane&quot;)
+    OnExport(index: 6, kind: func, item_index: 6, name: &quot;i64x2_extract_lane&quot;)
+    OnExport(index: 7, kind: func, item_index: 7, name: &quot;f64x2_extract_lane&quot;)
+    OnExport(index: 8, kind: func, item_index: 8, name: &quot;i8x16_replace_lane-s&quot;)
+    OnExport(index: 9, kind: func, item_index: 9, name: &quot;i8x16_replace_lane-u&quot;)
+    OnExport(index: 10, kind: func, item_index: 10, name: &quot;i16x8_replace_lane-s&quot;)
+    OnExport(index: 11, kind: func, item_index: 11, name: &quot;i16x8_replace_lane-u&quot;)
+    OnExport(index: 12, kind: func, item_index: 12, name: &quot;i32x4_replace_lane&quot;)
+    OnExport(index: 13, kind: func, item_index: 13, name: &quot;f32x4_replace_lane&quot;)
+    OnExport(index: 14, kind: func, item_index: 14, name: &quot;i64x2_replace_lane&quot;)
+    OnExport(index: 15, kind: func, item_index: 15, name: &quot;f64x2_replace_lane&quot;)
+    OnExport(index: 16, kind: func, item_index: 16, name: &quot;as-v8x16_swizzle-operand&quot;)
+    OnExport(index: 17, kind: func, item_index: 17, name: &quot;as-v8x16_shuffle-operands&quot;)
+  EndExportSection
+  BeginCodeSection(258)
+    OnFunctionBodyCount(18)
+    BeginFunctionBody(0, size:12)
+    OnLocalDeclCount(0)
+    EndFunctionBody(0)
+    BeginFunctionBody(1, size:12)
+    OnLocalDeclCount(0)
+    EndFunctionBody(1)
+    BeginFunctionBody(2, size:12)
+    OnLocalDeclCount(0)
+    EndFunctionBody(2)
+    BeginFunctionBody(3, size:12)
+    OnLocalDeclCount(0)
+    EndFunctionBody(3)
+    BeginFunctionBody(4, size:12)
+    OnLocalDeclCount(0)
+    EndFunctionBody(4)
+    BeginFunctionBody(5, size:12)
+    OnLocalDeclCount(0)
+    EndFunctionBody(5)
+    BeginFunctionBody(6, size:12)
+    OnLocalDeclCount(0)
+    EndFunctionBody(6)
+    BeginFunctionBody(7, size:12)
+    OnLocalDeclCount(0)
+    EndFunctionBody(7)
+    BeginFunctionBody(8, size:12)
+    OnLocalDeclCount(0)
+    EndFunctionBody(8)
+    BeginFunctionBody(9, size:12)
+    OnLocalDeclCount(0)
+    EndFunctionBody(9)
+    BeginFunctionBody(10, size:12)
+    OnLocalDeclCount(0)
+    EndFunctionBody(10)
+    BeginFunctionBody(11, size:12)
+    OnLocalDeclCount(0)
+    EndFunctionBody(11)
+    BeginFunctionBody(12, size:12)
+    OnLocalDeclCount(0)
+    EndFunctionBody(12)
+    BeginFunctionBody(13, size:12)
+    OnLocalDeclCount(0)
+    EndFunctionBody(13)
+    BeginFunctionBody(14, size:12)
+    OnLocalDeclCount(0)
+    EndFunctionBody(14)
+    BeginFunctionBody(15, size:12)
+    OnLocalDeclCount(0)
+    EndFunctionBody(15)
+    BeginFunctionBody(16, size:13)
+    OnLocalDeclCount(0)
+    EndFunctionBody(16)
+    BeginFunctionBody(17, size:34)
+    OnLocalDeclCount(0)
+    EndFunctionBody(17)
+  EndCodeSection
+EndModule
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2 do-not-highlightme"><code>00000000: 00 61 73 6D 01 00 00 00  .asm....
+00000008: 01 2E 07 60 02 7B 7B 01  ...&#x60;.{{.
+00000010: 7B 60 02 7B 7F 01 7F 60  {&#x60;.{...&#x60;
+00000018: 02 7B 7D 01 7D 60 02 7B  .{}.}&#x60;.{
+00000020: 7E 01 7E 60 02 7B 7C 01  ~.~&#x60;.{|.
+00000028: 7C 60 03 7B 7F 7B 01 7B  |&#x60;.{.{.{
+00000030: 60 04 7B 7F 7B 7F 01 7B  &#x60;.{.{..{
+00000038: 03 13 12 00 00 00 00 00  ........
+00000040: 00 00 00 01 01 01 01 01  ........
+00000048: 02 03 04 05 06 07 98 03  ........
+00000050: 12 14 69 38 78 31 36 5F  ..i8x16_
+00000058: 65 78 74 72 61 63 74 5F  extract_
+00000060: 6C 61 6E 65 5F 73 00 00  lane_s..
+00000068: 14 69 38 78 31 36 5F 65  .i8x16_e
+00000070: 78 74 72 61 63 74 5F 6C  xtract_l
+00000078: 61 6E 65 5F 75 00 01 14  ane_u...
+00000080: 69 31 36 78 38 5F 65 78  i16x8_ex
+00000088: 74 72 61 63 74 5F 6C 61  tract_la
+00000090: 6E 65 5F 73 00 02 14 69  ne_s...i
+00000098: 31 36 78 38 5F 65 78 74  16x8_ext
+000000a0: 72 61 63 74 5F 6C 61 6E  ract_lan
+000000a8: 65 5F 75 00 03 12 69 33  e_u...i3
+000000b0: 32 78 34 5F 65 78 74 72  2x4_extr
+000000b8: 61 63 74 5F 6C 61 6E 65  act_lane
+000000c0: 00 04 12 66 33 32 78 34  ...f32x4
+000000c8: 5F 65 78 74 72 61 63 74  _extract
+000000d0: 5F 6C 61 6E 65 00 05 12  _lane...
+000000d8: 69 36 34 78 32 5F 65 78  i64x2_ex
+000000e0: 74 72 61 63 74 5F 6C 61  tract_la
+000000e8: 6E 65 00 06 12 66 36 34  ne...f64
+000000f0: 78 32 5F 65 78 74 72 61  x2_extra
+000000f8: 63 74 5F 6C 61 6E 65 00  ct_lane.
+00000100: 07 14 69 38 78 31 36 5F  ..i8x16_
+00000108: 72 65 70 6C 61 63 65 5F  replace_
+00000110: 6C 61 6E 65 2D 73 00 08  lane-s..
+00000118: 14 69 38 78 31 36 5F 72  .i8x16_r
+00000120: 65 70 6C 61 63 65 5F 6C  eplace_l
+00000128: 61 6E 65 2D 75 00 09 14  ane-u...
+00000130: 69 31 36 78 38 5F 72 65  i16x8_re
+00000138: 70 6C 61 63 65 5F 6C 61  place_la
+00000140: 6E 65 2D 73 00 0A 14 69  ne-s...i
+00000148: 31 36 78 38 5F 72 65 70  16x8_rep
+00000150: 6C 61 63 65 5F 6C 61 6E  lace_lan
+00000158: 65 2D 75 00 0B 12 69 33  e-u...i3
+00000160: 32 78 34 5F 72 65 70 6C  2x4_repl
+00000168: 61 63 65 5F 6C 61 6E 65  ace_lane
+00000170: 00 0C 12 66 33 32 78 34  ...f32x4
+00000178: 5F 72 65 70 6C 61 63 65  _replace
+00000180: 5F 6C 61 6E 65 00 0D 12  _lane...
+00000188: 69 36 34 78 32 5F 72 65  i64x2_re
+00000190: 70 6C 61 63 65 5F 6C 61  place_la
+00000198: 6E 65 00 0E 12 66 36 34  ne...f64
+000001a0: 78 32 5F 72 65 70 6C 61  x2_repla
+000001a8: 63 65 5F 6C 61 6E 65 00  ce_lane.
+000001b0: 0F 18 61 73 2D 76 38 78  ..as-v8x
+000001b8: 31 36 5F 73 77 69 7A 7A  16_swizz
+000001c0: 6C 65 2D 6F 70 65 72 61  le-opera
+000001c8: 6E 64 00 10 19 61 73 2D  nd...as-
+000001d0: 76 38 78 31 36 5F 73 68  v8x16_sh
+000001d8: 75 66 66 6C 65 2D 6F 70  uffle-op
+000001e0: 65 72 61 6E 64 73 00 11  erands..
+000001e8: 0A 82 02 12 0C 00 20 00  ...... .
+000001f0: 20 01 FD 15 00 FD 17 00   .......
+000001f8: 0B 0C 00 20 00 20 01 FD  ... . ..
+00000200: 16 00 FD 17 00 0B 0C 00  ........
+00000208: 20 00 20 01 FD 18 00 FD   . .....
+00000210: 1A 00 0B 0C 00 20 00 20  ..... . 
+00000218: 01 FD 19 00 FD 1A 00 0B  ........
+00000220: 0C 00 20 00 20 01 FD 1B  .. . ...
+00000228: 00 FD 1C 00 0B 0C 00 20  ....... 
+00000230: 00 20 01 FD 1B 00 FD 1C  . ......
+00000238: 00 0B 0C 00 20 00 20 01  .... . .
+00000240: FD 1D 00 FD 1E 00 0B 0C  ........
+00000248: 00 20 00 20 01 FD 21 00  . . ..!.
+00000250: FD 22 00 0B 0C 00 20 00  .&quot;.... .
+00000258: 20 01 FD 17 0F FD 15 0F   .......
+00000260: 0B 0C 00 20 00 20 01 FD  ... . ..
+00000268: 17 0F FD 16 0F 0B 0C 00  ........
+00000270: 20 00 20 01 FD 1A 07 FD   . .....
+00000278: 18 07 0B 0C 00 20 00 20  ..... . 
+00000280: 01 FD 1A 07 FD 19 07 0B  ........
+00000288: 0C 00 20 00 20 01 FD 1C  .. . ...
+00000290: 03 FD 1B 03 0B 0C 00 20  ....... 
+00000298: 00 20 01 FD 20 03 FD 1F  . .. ...
+000002a0: 03 0B 0C 00 20 00 20 01  .... . .
+000002a8: FD 1E 01 FD 1D 01 0B 0C  ........
+000002b0: 00 20 00 20 01 FD 22 01  . . ..&quot;.
+000002b8: FD 21 01 0B 0D 00 20 00  .!.... .
+000002c0: 20 01 FD 17 00 20 02 FD   .... ..
+000002c8: 0E 0B 22 00 20 00 20 01  ..&quot;. . .
+000002d0: FD 17 00 20 02 20 03 FD  ... . ..
+000002d8: 17 0F FD 0D 10 01 12 03  ........
+000002e0: 14 05 16 07 18 09 1A 0B  ........
+000002e8: 1C 0D 1E 0F 0B           .....
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2"><code>(module
+  (type (;0;) (func (param v128 v128) (result v128)))
+  (type (;1;) (func (param v128 i32) (result i32)))
+  (type (;2;) (func (param v128 f32) (result f32)))
+  (type (;3;) (func (param v128 i64) (result i64)))
+  (type (;4;) (func (param v128 f64) (result f64)))
+  (type (;5;) (func (param v128 i32 v128) (result v128)))
+  (type (;6;) (func (param v128 i32 v128 i32) (result v128)))
+  (func (;0;) (type 0) (param v128 v128) (result v128)
+    local.get 0
+    local.get 1
+    i8x16.extract_lane_s 0
+    i8x16.replace_lane 0)
+  (func (;1;) (type 0) (param v128 v128) (result v128)
+    local.get 0
+    local.get 1
+    i8x16.extract_lane_u 0
+    i8x16.replace_lane 0)
+  (func (;2;) (type 0) (param v128 v128) (result v128)
+    local.get 0
+    local.get 1
+    i16x8.extract_lane_s 0
+    i16x8.replace_lane 0)
+  (func (;3;) (type 0) (param v128 v128) (result v128)
+    local.get 0
+    local.get 1
+    i16x8.extract_lane_u 0
+    i16x8.replace_lane 0)
+  (func (;4;) (type 0) (param v128 v128) (result v128)
+    local.get 0
+    local.get 1
+    i32x4.extract_lane 0
+    i32x4.replace_lane 0)
+  (func (;5;) (type 0) (param v128 v128) (result v128)
+    local.get 0
+    local.get 1
+    i32x4.extract_lane 0
+    i32x4.replace_lane 0)
+  (func (;6;) (type 0) (param v128 v128) (result v128)
+    local.get 0
+    local.get 1
+    i64x2.extract_lane 0
+    i64x2.replace_lane 0)
+  (func (;7;) (type 0) (param v128 v128) (result v128)
+    local.get 0
+    local.get 1
+    f64x2.extract_lane 0
+    f64x2.replace_lane 0)
+  (func (;8;) (type 1) (param v128 i32) (result i32)
+    local.get 0
+    local.get 1
+    i8x16.replace_lane 15
+    i8x16.extract_lane_s 15)
+  (func (;9;) (type 1) (param v128 i32) (result i32)
+    local.get 0
+    local.get 1
+    i8x16.replace_lane 15
+    i8x16.extract_lane_u 15)
+  (func (;10;) (type 1) (param v128 i32) (result i32)
+    local.get 0
+    local.get 1
+    i16x8.replace_lane 7
+    i16x8.extract_lane_s 7)
+  (func (;11;) (type 1) (param v128 i32) (result i32)
+    local.get 0
+    local.get 1
+    i16x8.replace_lane 7
+    i16x8.extract_lane_u 7)
+  (func (;12;) (type 1) (param v128 i32) (result i32)
+    local.get 0
+    local.get 1
+    i32x4.replace_lane 3
+    i32x4.extract_lane 3)
+  (func (;13;) (type 2) (param v128 f32) (result f32)
+    local.get 0
+    local.get 1
+    f32x4.replace_lane 3
+    f32x4.extract_lane 3)
+  (func (;14;) (type 3) (param v128 i64) (result i64)
+    local.get 0
+    local.get 1
+    i64x2.replace_lane 1
+    i64x2.extract_lane 1)
+  (func (;15;) (type 4) (param v128 f64) (result f64)
+    local.get 0
+    local.get 1
+    f64x2.replace_lane 1
+    f64x2.extract_lane 1)
+  (func (;16;) (type 5) (param v128 i32 v128) (result v128)
+    local.get 0
+    local.get 1
+    i8x16.replace_lane 0
+    local.get 2
+    i8x16.swizzle)
+  (func (;17;) (type 6) (param v128 i32 v128 i32) (result v128)
+    local.get 0
+    local.get 1
+    i8x16.replace_lane 0
+    local.get 2
+    local.get 3
+    i8x16.replace_lane 15
+    i8x16.shuffle 16 1 18 3 20 5 22 7 24 9 26 11 28 13 30 15)
+  (export &quot;i8x16_extract_lane_s&quot; (func 0))
+  (export &quot;i8x16_extract_lane_u&quot; (func 1))
+  (export &quot;i16x8_extract_lane_s&quot; (func 2))
+  (export &quot;i16x8_extract_lane_u&quot; (func 3))
+  (export &quot;i32x4_extract_lane&quot; (func 4))
+  (export &quot;f32x4_extract_lane&quot; (func 5))
+  (export &quot;i64x2_extract_lane&quot; (func 6))
+  (export &quot;f64x2_extract_lane&quot; (func 7))
+  (export &quot;i8x16_replace_lane-s&quot; (func 8))
+  (export &quot;i8x16_replace_lane-u&quot; (func 9))
+  (export &quot;i16x8_replace_lane-s&quot; (func 10))
+  (export &quot;i16x8_replace_lane-u&quot; (func 11))
+  (export &quot;i32x4_replace_lane&quot; (func 12))
+  (export &quot;f32x4_replace_lane&quot; (func 13))
+  (export &quot;i64x2_replace_lane&quot; (func 14))
+  (export &quot;f64x2_replace_lane&quot; (func 15))
+  (export &quot;as-v8x16_swizzle-operand&quot; (func 16))
+  (export &quot;as-v8x16_shuffle-operands&quot; (func 17)))
+</code></pre>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asmcc memory_fill.4</title>
+
+    <link rel="stylesheet" href="//unpkg.com/@highlightjs/cdn-assets@11.7.0/styles/github.min.css">
+    <script src="//unpkg.com/@highlightjs/cdn-assets@11.7.0/highlight.min.js"></script>
+    <script>
+        hljs.configure({
+            noHighlightRe: /^do-not-highlightme$/i,
+        });
+    </script>
+    <script>hljs.highlightAll();</script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="/_vercel/insights/script.js"></script>
+</head>
+
+<body class="text-sm p-2">
+    <h1 class="text-2xl  w-full mb-4">Anaylzer: <a href="/memory_fill.4.wasm">memory_fill.4.wasm</a></h1>
+    <div class="flex justify-evenly">
+        <pre class="p-4 overflow-scroll border-2"><code>
+memory_fill.4.wasm:	file format wasm 0x1
+
+Sections:
+
+     Type start&#x3D;0x0000000a end&#x3D;0x00000015 (size&#x3D;0x0000000b) count: 2
+ Function start&#x3D;0x00000017 end&#x3D;0x0000001a (size&#x3D;0x00000003) count: 2
+   Memory start&#x3D;0x0000001c end&#x3D;0x00000020 (size&#x3D;0x00000004) count: 1
+   Export start&#x3D;0x00000022 end&#x3D;0x00000037 (size&#x3D;0x00000015) count: 2
+     Code start&#x3D;0x00000039 end&#x3D;0x00000071 (size&#x3D;0x00000038) count: 2
+
+Section Details:
+
+Type[2]:
+ - type[0] (i32, i32, i32) -&gt; i32
+ - type[1] () -&gt; nil
+Function[2]:
+ - func[0] sig&#x3D;0 &lt;checkRange&gt;
+ - func[1] sig&#x3D;1 &lt;test&gt;
+Memory[1]:
+ - memory[0] pages: initial&#x3D;1 max&#x3D;1
+Export[2]:
+ - func[0] &lt;checkRange&gt; -&gt; &quot;checkRange&quot;
+ - func[1] &lt;test&gt; -&gt; &quot;test&quot;
+Code[2]:
+ - func[0] size&#x3D;39 &lt;checkRange&gt;
+ - func[1] size&#x3D;14 &lt;test&gt;
+
+Contents of section Type:
+000000a: 0260 037f 7f7f 017f 6000 00              .&#x60;......&#x60;..
+
+Contents of section Function:
+0000017: 0200 01                                  ...
+
+Contents of section Memory:
+000001c: 0101 0101                                ....
+
+Contents of section Export:
+0000022: 020a 6368 6563 6b52 616e 6765 0000 0474  ..checkRange...t
+0000032: 6573 7400 01                             est..
+
+Contents of section Code:
+0000039: 0227 0003 4020 0020 0146 0440 417f 0f0b  .&#x27;..@ . .F.@A...
+0000049: 2000 2d00 0020 0246 0440 2000 4101 6a21   .-.. .F.@ .A.j!
+0000059: 000c 010b 0b20 000f 0b0e 0041 8080 0441  ..... .....A...A
+0000069: d500 4100 fc0b 000b                      ..A.....
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2"><code>BeginModule(version: 1)
+  BeginTypeSection(11)
+    OnTypeCount(2)
+    OnFuncType(index: 0, params: [i32, i32, i32], results: [i32])
+    OnFuncType(index: 1, params: [], results: [])
+  EndTypeSection
+  BeginFunctionSection(3)
+    OnFunctionCount(2)
+    OnFunction(index: 0, sig_index: 0)
+    OnFunction(index: 1, sig_index: 1)
+  EndFunctionSection
+  BeginMemorySection(4)
+    OnMemoryCount(1)
+    OnMemory(index: 0, initial: 1, max: 1)
+  EndMemorySection
+  BeginExportSection(21)
+    OnExportCount(2)
+    OnExport(index: 0, kind: func, item_index: 0, name: &quot;checkRange&quot;)
+    OnExport(index: 1, kind: func, item_index: 1, name: &quot;test&quot;)
+  EndExportSection
+  BeginCodeSection(56)
+    OnFunctionBodyCount(2)
+    BeginFunctionBody(0, size:39)
+    OnLocalDeclCount(0)
+    EndFunctionBody(0)
+    BeginFunctionBody(1, size:14)
+    OnLocalDeclCount(0)
+    EndFunctionBody(1)
+  EndCodeSection
+EndModule
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2 do-not-highlightme"><code>00000000: 00 61 73 6D 01 00 00 00  .asm....
+00000008: 01 0B 02 60 03 7F 7F 7F  ...&#x60;....
+00000010: 01 7F 60 00 00 03 03 02  ..&#x60;.....
+00000018: 00 01 05 04 01 01 01 01  ........
+00000020: 07 15 02 0A 63 68 65 63  ....chec
+00000028: 6B 52 61 6E 67 65 00 00  kRange..
+00000030: 04 74 65 73 74 00 01 0A  .test...
+00000038: 38 02 27 00 03 40 20 00  8.&#x27;..@ .
+00000040: 20 01 46 04 40 41 7F 0F   .F.@A..
+00000048: 0B 20 00 2D 00 00 20 02  . .-.. .
+00000050: 46 04 40 20 00 41 01 6A  F.@ .A.j
+00000058: 21 00 0C 01 0B 0B 20 00  !..... .
+00000060: 0F 0B 0E 00 41 80 80 04  ....A...
+00000068: 41 D5 00 41 00 FC 0B 00  A..A....
+00000070: 0B                       .
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2"><code>(module
+  (type (;0;) (func (param i32 i32 i32) (result i32)))
+  (type (;1;) (func))
+  (func (;0;) (type 0) (param i32 i32 i32) (result i32)
+    loop  ;; label &#x3D; @1
+      local.get 0
+      local.get 1
+      i32.eq
+      if  ;; label &#x3D; @2
+        i32.const -1
+        return
+      end
+      local.get 0
+      i32.load8_u
+      local.get 2
+      i32.eq
+      if  ;; label &#x3D; @2
+        local.get 0
+        i32.const 1
+        i32.add
+        local.set 0
+        br 1 (;@1;)
+      end
+    end
+    local.get 0
+    return)
+  (func (;1;) (type 1)
+    i32.const 65536
+    i32.const 85
+    i32.const 0
+    memory.fill)
+  (memory (;0;) 1 1)
+  (export &quot;checkRange&quot; (func 0))
+  (export &quot;test&quot; (func 1)))
+</code></pre>
+    </div>
+</body>
+
+</html>

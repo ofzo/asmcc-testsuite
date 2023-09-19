@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asmcc elem.15</title>
+
+    <link rel="stylesheet" href="//unpkg.com/@highlightjs/cdn-assets@11.7.0/styles/github.min.css">
+    <script src="//unpkg.com/@highlightjs/cdn-assets@11.7.0/highlight.min.js"></script>
+    <script>
+        hljs.configure({
+            noHighlightRe: /^do-not-highlightme$/i,
+        });
+    </script>
+    <script>hljs.highlightAll();</script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="/_vercel/insights/script.js"></script>
+</head>
+
+<body class="text-sm p-2">
+    <h1 class="text-2xl  w-full mb-4">Anaylzer: <a href="/elem.15.wasm">elem.15.wasm</a></h1>
+    <div class="flex justify-evenly">
+        <pre class="p-4 overflow-scroll border-2"><code>
+elem.15.wasm:	file format wasm 0x1
+
+Sections:
+
+   Import start&#x3D;0x0000000a end&#x3D;0x0000001e (size&#x3D;0x00000014) count: 1
+     Elem start&#x3D;0x00000020 end&#x3D;0x00000026 (size&#x3D;0x00000006) count: 1
+
+Section Details:
+
+Import[1]:
+ - table[0] type&#x3D;funcref initial&#x3D;0 &lt;- spectest.table
+Elem[1]:
+ - segment[0] flags&#x3D;0 table&#x3D;0 count&#x3D;0 - init i32&#x3D;0
+
+Contents of section Import:
+000000a: 0108 7370 6563 7465 7374 0574 6162 6c65  ..spectest.table
+000001a: 0170 0000                                .p..
+
+Contents of section Elem:
+0000020: 0100 4100 0b00                           ..A...
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2"><code>BeginModule(version: 1)
+  BeginImportSection(20)
+    OnImportCount(1)
+    OnImport(index: 0, kind: table, module: &quot;spectest&quot;, field: &quot;table&quot;)
+    OnImportTable(import_index: 0, table_index: 0, elem_type: funcref, initial: 0)
+  EndImportSection
+  BeginElemSection(6)
+    OnElemSegmentCount(1)
+    BeginElemSegment(index: 0, table_index: 0, flags: 0)
+    BeginElemSegmentInitExpr(0)
+    OnI32ConstExpr(0 (0x0))
+    OnEndExpr
+    EndElemSegmentInitExpr(0)
+    OnElemSegmentElemType(index: 0, type: funcref)
+    OnElemSegmentElemExprCount(index: 0, count: 0)
+    EndElemSegment(0)
+  EndElemSection
+EndModule
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2 do-not-highlightme"><code>00000000: 00 61 73 6D 01 00 00 00  .asm....
+00000008: 02 14 01 08 73 70 65 63  ....spec
+00000010: 74 65 73 74 05 74 61 62  test.tab
+00000018: 6C 65 01 70 00 00 09 06  le.p....
+00000020: 01 00 41 00 0B 00        ..A...
+</code></pre>
+        <pre class="p-4 overflow-scroll border-2"><code>(module
+  (import &quot;spectest&quot; &quot;table&quot; (table (;0;) 0 funcref))
+  (elem (;0;) (i32.const 0) func))
+</code></pre>
+    </div>
+</body>
+
+</html>
